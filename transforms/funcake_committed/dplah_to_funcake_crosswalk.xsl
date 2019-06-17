@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Funcake name: 'DPLAH to Funnel Cake crosswalk'
+    Use: Run as first transformation-->
 <xsl:stylesheet version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
