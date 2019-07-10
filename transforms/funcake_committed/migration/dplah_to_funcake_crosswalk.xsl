@@ -112,7 +112,7 @@
         <xsl:for-each select="dc:rights">
             <xsl:choose>
                 <!-- Rights URI -->
-                <xsl:when test="contains(.,'rightsstatements.org') or contains(.,'creativecommons.org')">
+                <xsl:when test="starts-with(.,'http://rightsstatements.org/vocab/') or starts-with(.,'http://creativecommons.org/licenses/')">
                 <edm:rights><xsl:value-of select="."/></edm:rights>
             </xsl:when>
                 <!-- Rights -->
