@@ -20,6 +20,7 @@
     "oai_dc|dc_dcterms|isReplacedBy": "dcterms_isReplacedBy",
     "oai_dc|dc_dcterms|replaces": "dcterms_replaces",
     "oai_dc|dc_dcterms|rightsholder": "dcterms_rightsholder",
+    "oai_dc|dc_dcterms|source": "dcterms_source",
     "oai_dc|dc_dcterms|subject": "dcterms_subject",
     "oai_dc|dc_edm|hasType": "edm_hasType",
     "oai_dc|dc_dcterms|temporal": "dcterms_temporal",
