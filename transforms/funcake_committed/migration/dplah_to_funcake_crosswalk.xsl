@@ -137,7 +137,7 @@
                 <edm:isShownAt><xsl:value-of select="."/></edm:isShownAt>
             </xsl:for-each>
             <!-- Preview -->
-            <xsl:for-each select="dc:identifier[position()=last()]">
+            <xsl:for-each select="dc:identifier[position()=last() and position()>2]">
                 <edm:preview><xsl:value-of select="."/></edm:preview>
             </xsl:for-each>
             <!-- Collection -->
