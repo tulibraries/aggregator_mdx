@@ -87,10 +87,10 @@
     
     <xsl:when test="matches(.,'(^text.*$)','i')"><dcterms:type>Text</dcterms:type></xsl:when>
     <xsl:when test="matches(.,'(^image.*$)','i')"><dcterms:type>Image</dcterms:type></xsl:when>
-    <xsl:when test="matches(.,'^(stillimage.*$|still\simage.*$)','i')"><dcterms:type>Image</dcterms:type></xsl:when>
-<xsl:when test="matches(.,'^(movingimage.*$|moving\simage.*$)','i')"><dcterms:type>Moving Image</dcterms:type></xsl:when>
+    <xsl:when test="matches(.,'^(movingimage.*$|moving\simage.*$)','i')"><dcterms:type>Moving Image</dcterms:type></xsl:when>
     <xsl:when test="matches(.,'^(sound.*$)','i')"><dcterms:type>Sound</dcterms:type></xsl:when>
-    
+    <xsl:when test="matches(.,'^(physicalobject.*$|physical\sobject.*$)','i')"><dcterms:type>Physical Object</dcterms:type></xsl:when>
+    <xsl:when test="matches(.,'^(interactiveresource.*$|interactive\sresource.*$)','i')"><dcterms:type>Interactive Resource</dcterms:type></xsl:when>
     <!-- Format -->
     <xsl:otherwise>
         <dcterms:format><xsl:value-of select="."/></dcterms:format>
