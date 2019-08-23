@@ -13,6 +13,7 @@
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
     <xsl:include href="temple.xsl"/>
+    <xsl:include href="remediation_filter.xsl"/>
 
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
@@ -20,13 +21,7 @@
     <!-- do not map records marked deleted -->
     <xsl:template match="//oai:record/oai:header[@status = 'deleted']"/>
 
-    <!-- do not map records containing a filtered out identifier -->
-    <xsl:variable name="filterids" as="element()*">
-        <Item>P288153B</Item>
-        <Item>P133108</Item>
-    </xsl:variable>
-
-    <!-- base record. Matches each OAI feed record that is mapped. -->
+    <!-- base record. Matches each OAI feed record that is mapped. Filters out records with dc:identifier values contained in remediation_filter.xsl -->
     <xsl:template match="//oai_qdc:qualifieddc[not(dc:identifier[string() = $filterids])]">
         <oai_dc:dc>
             <!-- Title -->

@@ -12,8 +12,9 @@
     xmlns:oclc="http://purl.org/oclc/terms/"
     version="2.0">
 
-    <!-- lookup table for filtering out records not to be transformed -->
-    <xsl:param name="filterOut">
-        <padig:identifier>collection</padig:identifier>
-    </xsl:param>
+    <!-- do not map records containing a filtered out identifier -->
+    <xsl:variable name="filterids" as="element()*">
+        <Item>P288153B</Item>
+        <Item>P133108</Item>
+    </xsl:variable>
 </xsl:stylesheet>
