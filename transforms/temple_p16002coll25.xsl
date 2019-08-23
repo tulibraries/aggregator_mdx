@@ -5,9 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:dpla="http://dpla"
+    xmlns:dpla="http://dp.la/about/map/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    xmlns:nhdl="http://github.com/cmharlow/nhdl-mdx/"
     xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
     xmlns:oclcterms="http://purl.org/oclc/terms/"
     xmlns:oai="http://www.openarchives.org/OAI/2.0/"
@@ -15,6 +14,7 @@
     xmlns:oclc="http://purl.org/oclc/terms/"
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
+    xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
@@ -32,23 +32,45 @@
 
     <!-- base record. Matches each OAI feed record that is mapped. Filters out records with dc:identifier values contained in remediation_filter.xsl -->
     <xsl:template match="//oai_qdc:qualifieddc[not(dc:identifier[string() = $filterids])]">
-        <oai_dc:dc xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-            xmlns:dcterms="http://purl.org/dc/terms/"
-            xmlns:dpla="http://dpla"
-            xmlns:edm="http://www.europeana.eu/schemas/edm/"
-            xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:oai-pmh="http://www.openarchives.org/OAI/2.0/"
-            xmlns:schema="http://schema.org">
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:dpla="http://dp.la/about/map/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+            xmlns:oclc="http://purl.org/oclc/terms/"
+            xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+            xmlns:oclcterms="http://purl.org/oclc/terms/"
+            xmlns:schema="http://schema.org" >
+            
             <!-- will match specific templates that relevant for p16002coll25. -->
             <xsl:apply-templates />
-
+            
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <dcterms:isPartOf>Temple ContentDM Test Collection</dcterms:isPartOf>
-            <!-- Provider -->
+            <xsl:call-template name="dataProvider"/>
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
+    </xsl:template>
+    
+    <!-- CONTENTDM-DC2MARC21SLIM-SPECIFIC TEMPLATES -->
+    
+    <!-- Type -->
+    <xsl:template match="dc:type">
+        <xsl:call-template name="type_template">
+            <xsl:with-param name="string" select="." />
+            <xsl:with-param name="delimiter" select="';'" />
+        </xsl:call-template>
+    </xsl:template>
+    
+    <!-- File format -->
+    <xsl:template match="dc:format">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:format">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
