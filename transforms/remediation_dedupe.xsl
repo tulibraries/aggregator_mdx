@@ -5,10 +5,10 @@
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
     <xsl:template match="@*|node()">
-        <xsl:if test="not(node()) or not(preceding-sibling::node()[.=string(current())])">
+        <xsl:if test="not(node()) or not(deep-equal(., preceding-sibling::node()[1]))">
             <xsl:copy>
                 <xsl:apply-templates select="@*|node()"/>
             </xsl:copy>
         </xsl:if>
-    </xsl:template>  
+    </xsl:template>
 </xsl:stylesheet>

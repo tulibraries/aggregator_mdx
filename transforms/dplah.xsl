@@ -9,13 +9,19 @@
     xmlns:dpla="http://dp.la/about/map/"
     xmlns:schema="http://schema.org"
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
-    <xsl:output method="xml" indent="yes" encoding="UTF-8" />
+    <xsl:output method="xml" indent="yes" encoding="UTF-8" indent="yes" />
     <xsl:strip-space elements="*"/>
-    
-    <!-- run against aggregator_mdx/fixtures/dplahoutputsample.xml -->
-    
+
+    <!-- includes transform file that does DCMI Types, DPLA-recommended Getty AAT subset, Lexvo Language Codes, and Limited Geonames reconciliation. -->
+    <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
+    <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
+    <xsl:include href="remediation_dedupe.xsl"/>
+
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text()|@*"/>
+
+    <!-- base record. Matches each OAI feed record that is mapped. -->
+    <xsl:template match="//oai:record/oai:header[@status = 'deleted']" />
     <xsl:template match="//oai_dc:dc">
         <oai_dc:dc>
             <!-- Title -->
@@ -81,10 +87,10 @@
                 <dcterms:language><xsl:value-of select="."/></dcterms:language>
             </xsl:for-each>
             <!-- Type -->
-            
+
             <xsl:for-each select="dc:type">
 <xsl:choose>
-    
+
     <xsl:when test="matches(.,'(^text.*$)','i')"><dcterms:type>Text</dcterms:type></xsl:when>
     <xsl:when test="matches(.,'(^image.*$)','i')"><dcterms:type>Image</dcterms:type></xsl:when>
     <xsl:when test="matches(.,'^(movingimage.*$|moving\simage.*$)','i')"><dcterms:type>Moving Image</dcterms:type></xsl:when>
@@ -158,11 +164,11 @@
             <edm:provider>PA Digital</edm:provider>
         </oai_dc:dc>
     </xsl:template>
-    
+
     <xsl:template name="subj_template">
         <xsl:param name="string" />
         <xsl:param name="delimiter" />
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($string, $delimiter)">
@@ -170,7 +176,7 @@
                 <dcterms:subject>
                     <xsl:value-of select="substring-before($string, $delimiter)" />
                 </dcterms:subject>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="subj_template">
                     <xsl:with-param name="string" select="$newstem" />
@@ -184,11 +190,11 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template name="type_template">
         <xsl:param name="string" />
         <xsl:param name="delimiter" />
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($string, $delimiter)">
@@ -196,7 +202,7 @@
                 <dcterms:type>
                     <xsl:value-of select="substring-before($string, $delimiter)" />
                 </dcterms:type>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="type_template">
                     <xsl:with-param name="string" select="$newstem" />
@@ -210,11 +216,11 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template name="lang_template">
         <xsl:param name="string" />
         <xsl:param name="delimiter" />
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($string, $delimiter)">
@@ -222,7 +228,7 @@
                 <dcterms:language>
                     <xsl:value-of select="substring-before($string, $delimiter)" />
                 </dcterms:language>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="lang_template">
                     <xsl:with-param name="string" select="$newstem" />
