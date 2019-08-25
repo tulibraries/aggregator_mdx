@@ -2,6 +2,10 @@
 services:
   - docker
 
+install:
+  - make up
+  - docker-compose run --user='root' --entrypoint chown /transforms -R xspec:xspec .
+
 script:
   - make test
 

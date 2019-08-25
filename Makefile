@@ -5,8 +5,9 @@ up: down
 
 test: up
 	@echo "Building xspec containers, networks, volumes"
-	docker-compose run xspec "/transforms/dplah.xspec"
-	docker-compose run xspec "/transforms/remediations/dedupe.xspec"
+	for xspectest in $(shell find transforms -type f -name '*.xspec'); do \
+		docker-compose run xspec "/$$xspectest" ; \
+	done
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
