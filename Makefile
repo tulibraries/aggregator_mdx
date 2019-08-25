@@ -5,9 +5,15 @@ up: down
 
 test: up
 	@echo "Building xspec containers, networks, volumes"
-	for file in $(shell find transforms -type f -name '*.xspec'); do \
-		echo "Testing " $$file ; \
-		docker-compose run xspec /$$file ; \
+	for xspectest in $(shell find transforms -type f -name '*.xspec'); do \
+		docker-compose run xspec "/$$xspectest"  &> result.log ; \
+		if grep -q ".*failed:\s[1-9]" result.log || grep -q -E "\*+\sError\s(running|compiling)\sthe\stest\ssuite" result.log ; \
+			then \
+				echo "FAILED: $xspectest"; echo "---------- result.log"; \
+				cat result.log; echo "----------"; \
+				exit 1; \
+			else echo "OK: $xspectest"; \
+		fi; \
 	done
 
 stop:

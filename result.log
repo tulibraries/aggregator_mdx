@@ -1,0 +1,13 @@
+Saxon script not found, invoking JVM directly instead.
+
+Error: File not found.
+
+Usage: xspec [-t|-q|-c|-j|-h] filename [coverage]
+
+  filename   the XSpec document
+  -t         test an XSLT stylesheet (the default)
+  -q         test an XQuery module (mutually exclusive with -t)
+  -c         output test coverage report
+  -j         output JUnit report
+  -h         display this help message
+  coverage   deprecated, use -c instead
