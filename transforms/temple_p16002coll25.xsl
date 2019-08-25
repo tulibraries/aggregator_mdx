@@ -22,11 +22,11 @@
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
     <xsl:include href="temple.xsl"/>
-    <xsl:include href="remediation_filter.xsl"/>
+    <xsl:include href="remediations/filter.xsl"/>
 
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
-    
+
     <!-- drop records that are marked DELETED -->
     <xsl:template match="//oai:record/oai:header[@status = 'deleted']" />
 
@@ -44,19 +44,19 @@
             xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
             xmlns:oclcterms="http://purl.org/oclc/terms/"
             xmlns:schema="http://schema.org" >
-            
+
             <!-- will match specific templates that relevant for p16002coll25. -->
             <xsl:apply-templates />
-            
+
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <dcterms:isPartOf>Temple ContentDM Test Collection</dcterms:isPartOf>
             <xsl:call-template name="dataProvider"/>
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
     </xsl:template>
-    
+
     <!-- CONTENTDM-DC2MARC21SLIM-SPECIFIC TEMPLATES -->
-    
+
     <!-- Type -->
     <xsl:template match="dc:type">
         <xsl:call-template name="type_template">
@@ -64,7 +64,7 @@
             <xsl:with-param name="delimiter" select="';'" />
         </xsl:call-template>
     </xsl:template>
-    
+
     <!-- File format -->
     <xsl:template match="dc:format">
         <xsl:if test="normalize-space(.)!=''">

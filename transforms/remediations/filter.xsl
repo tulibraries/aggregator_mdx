@@ -14,7 +14,9 @@
 
     <!-- do not map records containing a filtered out identifier -->
     <xsl:variable name="filterids" as="element()*">
-        <Item>P288153B</Item>
+        <Item>test-filter-record-1</Item>
+        <Item>test-filter-record-2</Item>
+        <Item>P133108</Item>
         <Item>P133108</Item>
     </xsl:variable>
 </xsl:stylesheet>

@@ -3,9 +3,10 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
   <responseDate>2015-10-11T00:35:52Z</responseDate>
+  <request></request>
   <ListRecords>
     <record>
-      <header>
+      <header status="deleted">
         <identifier>oai:libcollab.temple.edu:fedora-system:ContentModel-3.0</identifier>
         <datestamp>2008-07-02T05:09:44Z</datestamp>
       </header>
@@ -14,7 +15,7 @@
           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-          <dc:title>Content Model Object for Content Model Objects</dc:title>
+          <dc:title>TEST DELETED: Content Model Object for Content Model Objects</dc:title>
           <dc:identifier>fedora-system:ContentModel-3.0</dc:identifier>
         </oai_dc:dc>
 

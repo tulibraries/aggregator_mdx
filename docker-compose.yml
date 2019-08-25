@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  xspec:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./transforms:/input

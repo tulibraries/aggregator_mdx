@@ -18,11 +18,11 @@
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
-    
+
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
-    <xsl:include href="remediation_lookup.xsl"/>
-    
+    <xsl:include href="remediations/lookup.xsl"/>
+
     <!-- Title -->
     <xsl:template match="dc:title[1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -31,7 +31,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Alternative titles -->
     <xsl:template match="dc:title[position() > 1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -40,7 +40,7 @@
             </dcterms:alternative>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="dcterms:alternative">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:alternative">
@@ -48,7 +48,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
- 
+
     <!-- Creator -->
     <xsl:template match="dc:creator">
         <xsl:if test="normalize-space(.)!=''">
@@ -57,7 +57,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Source; will need to fix this after dplah migration -->
     <xsl:template match="dc:source[position() > 1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -66,7 +66,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Publisher -->
     <xsl:template match="dc:publisher">
         <xsl:if test="normalize-space(.)!=''">
@@ -75,7 +75,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Description -->
     <xsl:template match="dc:description">
         <xsl:if test="normalize-space(.)!=''">
@@ -84,7 +84,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Place -->
     <xsl:template match="dc:coverage">
         <xsl:if test="normalize-space(.)!=''">
@@ -93,7 +93,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Place -->
     <xsl:template match="dcterms:spatial">
         <xsl:if test="normalize-space(.)!=''">
@@ -102,7 +102,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Temporal coverage -->
     <xsl:template match="dcterms:temporal">
         <xsl:if test="normalize-space(.)!=''">
@@ -111,7 +111,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Extent -->
     <xsl:template match="dcterms:extent">
         <xsl:if test="normalize-space(.)!=''">
@@ -120,7 +120,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Date -->
     <xsl:template match="dc:date">
         <xsl:if test="normalize-space(.)!=''">
@@ -129,7 +129,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Subject -->
     <xsl:template match="dc:subject">
         <xsl:call-template name="subj_template">
@@ -137,7 +137,7 @@
             <xsl:with-param name="delimiter" select="';'"/>
         </xsl:call-template>
     </xsl:template>
-    
+
     <!-- Language -->
     <xsl:template match="dc:language">
         <xsl:if test="normalize-space(.)!=''">
@@ -146,9 +146,9 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Language (Remediated) -->
-    <!-- 
+    <!--
     <xsl:template match="dc:language">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:variable name="langterm" select="normalize-space(lower-case(.))"/>
@@ -160,7 +160,7 @@
         </xsl:if>
     </xsl:template>
      -->
-    
+
     <!-- Relation -->
     <xsl:template match="dc:relation[position() > 1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -169,7 +169,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Relation -->
     <xsl:template match="dc:isPartOf">
         <xsl:if test="normalize-space(.)!=''">
@@ -178,7 +178,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Replaced by -->
     <xsl:template match="dcterms:isReplacedBy">
         <xsl:if test="normalize-space(.)!=''">
@@ -187,7 +187,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Replaces -->
     <xsl:template match="dcterms:replaces">
         <xsl:if test="normalize-space(.)!=''">
@@ -196,7 +196,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Rights -->
     <xsl:template match="dc:rights">
         <xsl:choose>
@@ -219,7 +219,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- Rights holder -->
     <xsl:template match="dcterms:rightsholder">
         <xsl:if test="normalize-space(.)!=''">
@@ -228,7 +228,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Identifier -->
     <xsl:template match="dc:identifier[1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -237,7 +237,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- URL -->
     <xsl:template match="dc:identifier[2]">
         <xsl:if test="normalize-space(.)!=''">
@@ -246,7 +246,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Preview -->
     <xsl:template match="dc:identifier[position() = last() and position() > 2]">
         <xsl:if test="normalize-space(.)!=''">
@@ -255,7 +255,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Collection -->
     <xsl:template match="dc:relation[position() = 1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -264,7 +264,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
- 
+
     <!-- Intermediate provider -->
     <xsl:template match="dc:source">
         <xsl:if test="normalize-space(.)!=''">
@@ -275,26 +275,26 @@
     </xsl:template>
 
     <!-- NAMED TEMPLATES -->
-    
+
     <!-- Contributing institution (Hard-coded 'Temple University') -->
     <xsl:template name="dataProvider">
         <xsl:element name="edm:dataProvider">
             <xsl:value-of><xsl:text>Temple University</xsl:text></xsl:value-of>
-        </xsl:element>  
+        </xsl:element>
     </xsl:template>
-    
+
     <!-- Hub -->
     <xsl:template name="hub">
         <xsl:element name="edm:provider">
             <xsl:value-of>PA Digital</xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- Subject -->
     <xsl:template name="subj_template">
         <xsl:param name="string"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($string, $delimiter)">
