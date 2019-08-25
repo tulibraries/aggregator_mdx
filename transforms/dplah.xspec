@@ -59,7 +59,7 @@
     </x:context>
     <x:expect label="1 record remains" test="count(oai_dc:dc) = 1"/>
     <x:expect label="OAI Record Identifier of 1 Record is record-that-should-be-kept"
-      test="oai_dc:dc/dcterms:identifier = 'record-that-should-be-kept'" />
+      test="oai_dc:dc/dcterms:identifier = 'record-that-should-be'" />
   </x:scenario>
 
   <x:scenario label="Records with Filtered Identifiers are Skipped">
