@@ -27,8 +27,8 @@
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
 
-    <!-- drop records that are marked DELETED -->
-    <xsl:template match="//oai:record/oai:header[@status = 'deleted']" />
+    <!-- drop records where the OAI header is marked as 'deleted' -->
+    <xsl:template match="//oai:record[oai:header[@status='deleted']]/*"/>
 
     <!-- base record. Matches each OAI feed record that is mapped. Filters out records with dc:identifier values contained in remediation_filter.xsl -->
     <xsl:template match="//oai_qdc:qualifieddc[not(dc:identifier[string() = $filterids])]">

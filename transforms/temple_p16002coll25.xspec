@@ -28,11 +28,7 @@
           <setSpec>TEST1</setSpec>
         </oai:header>
         <metadata>
-          <oai_qdc:qualifieddc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
-              http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
-              xmlns="http://purl.org/dc/elements/1.1/"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <oai_qdc:qualifieddc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <title>Champaign County, Illinois</title>
             <creator>United States. Agricultureal Adjustment Administration</creator>
             <identifier>record-that-should-be-ignored</identifier>
@@ -45,11 +41,7 @@
           <setSpec>TEST2</setSpec>
         </oai:header>
         <metadata>
-          <oai_qdc:qualifieddc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
-                    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
-                    xmlns="http://purl.org/dc/elements/1.1/"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <oai_qdc:qualifieddc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
       		  <title>Champaign County, Illinois</title>
       		  <creator>United States. Agricultureal Adjustment Administration</creator>
             <identifier>record-that-should-be-kept</identifier>
