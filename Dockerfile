@@ -13,7 +13,7 @@ RUN curl -fSL -o xspec-${XSPEC_VERSION}.tar.gz https://github.com/xspec/xspec/ar
 	mv /xspec-${XSPEC_VERSION} /xspec && \
 	rm xspec-${XSPEC_VERSION}.tar.gz
 ENV XSPEC_HOME /xspec
-RUN mkdir -p /input
+RUN mkdir -p /transforms
 
 WORKDIR /xspec
 
