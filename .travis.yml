@@ -7,10 +7,10 @@ install:
   - docker-compose run --user='root' --entrypoint chown xspec -R xspec:xspec /transforms
 
 script:
-  - make test
+  - make test-travis
 
 after_success:
-  - true
+  - make down
 
 before_deploy:
   - true

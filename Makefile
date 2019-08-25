@@ -4,10 +4,14 @@ up: down
 	docker-compose up --build -d
 
 test: up
-	@echo "Building xspec containers, networks, volumes"
+	@echo "Testing transforms/*.xspec with Docker"
 	for xspectest in $(shell find transforms -type f -name '*.xspec'); do \
 		docker-compose run xspec "/$$xspectest" ; \
 	done
+
+test-travis:
+	@echo "Travis testing transforms/*.xspec with Docker & shell scripts"
+	bash .travis/run-tests.sh
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
