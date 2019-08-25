@@ -4,7 +4,7 @@ services:
 
 install:
   - make up
-  - docker-compose run --user='root' --entrypoint chown /transforms -R xspec:xspec .
+  - docker-compose run --user='root' --entrypoint chown xspec -R xspec:xspec /transforms
 
 script:
   - make test
