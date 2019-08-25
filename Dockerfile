@@ -29,7 +29,8 @@ ENV SAXON_CP /xspec/saxon/saxon9he.jar
 # use non-privileged user to run xspec
 RUN groupadd -r xspec && \
     useradd -s /bin/bash -r -g xspec xspec && \
- 	chown xspec:xspec -R /xspec
+ 	chown xspec:xspec -R /xspec && \
+	chown xspec:xspec -R /transforms
 USER xspec
 
 ENTRYPOINT ["/xspec/bin/xspec.sh"]
