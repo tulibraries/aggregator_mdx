@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <x:description
+  xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  stylesheet="dedupe.xsl">
+
+    <!--
+       Testing that elements are deduplicated when field & value match.
+   -->
+   <x:scenario label="Testing deduping elements">
+      <x:scenario label="When encountering parentheses">
+          <x:context>
+             <dc>
+               <source>New York Times</source>
+               <creator>Philadelphia Inquirer</creator>
+               <creator>Philadelphia Evening Bulletin</creator>
+               <publisher>Philadelphia Evening Bulletin</publisher>
+               <publisher>Philadelphia Evening Bulletin</publisher>
+             </dc>
+          </x:context>
+          <x:expect label="4 phrases should remain (source, creator x2, publisher)"
+                    test="count(dc/*) = 4"/>
+          <x:expect label="These are the unique elements and values remaining">
+            <dc>
+              <source>New York Times</source>
+              <creator>Philadelphia Inquirer</creator>
+              <creator>Philadelphia Evening Bulletin</creator>
+              <publisher>Philadelphia Evening Bulletin</publisher>
+            </dc>
+          </x:expect>
+      </x:scenario>
+   </x:scenario>
+</x:description>
