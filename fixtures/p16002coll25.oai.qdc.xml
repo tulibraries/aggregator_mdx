@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2015-10-11T00:35:52Z</responseDate>
+    <request></request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/0</identifier>
+                <datestamp>2015-08-27</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Celebration at Independence Hall</dc:title>
+                    <dc:subject>Statues; Airships; Tower clocks; Bells, Towers; Historic buildings;
+                        Independence Hall (Philadelphia, Pa.); United States Navy;</dc:subject>
+                    <dc:description>Photo shows pennants and streamers hanging from clock and bell
+                        tower of Independence Hall and Commodore John Barry monument. There is a
+                        tent and loud speaker system immediately in front of Independence Hall
+                        entrance. Note dirigible in left upper quadrant of photo.</dc:description>
+                    <dc:creator>pdcp_noharvest</dc:creator>
+                    <dc:publisher>Philadelphia Evening Bulletin</dc:publisher>
+                    <dc:publisher>Philadelphia Evening Bulletin</dc:publisher>
+                    <dc:creator>Philadelphia Evening Bulletin</dc:creator>
+                    <dc:date>1924</dc:date>
+                    <dc:type>image</dc:type>
+                    <dc:format>image/jp2</dc:format>
+                    <dc:identifier>P288153B</dc:identifier>
+                    <dc:coverage>Philadelphia (Pa.);Independence National Historical Park
+                        (Philadelphia, Pa.)</dc:coverage>
+                    <dc:rights>This material is made available for private study, scholarship, and
+                        research use. For access to the original, contact: Temple University
+                        Libraries. Special Collections Research Center, scrc@temple.edu,
+                        215-204-8257.</dc:rights>
+                    <dcterms:created>1924</dcterms:created>
+                    <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park
+                        (Philadelphia, Pa.)</dcterms:spatial>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Test coverage spatial.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/1</identifier>
+                <datestamp>2016-01-05</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>&quot;Dignity for gay catholics&quot;</dc:title>
+                    <dc:subject>Gay rights; Civil rights; Demonstrations; Catholics; Civic Center
+                        (Philadelphia, Pa.);</dc:subject>
+                    <dc:description>Dignity Philadelphia mass for gay and lesbian catholics at the
+                        Civic Center.</dc:description>
+                    <dc:creator>Owens, William</dc:creator>
+                    <dc:publisher>Philadelphia Evening Bulletin</dc:publisher>
+                    <dc:date>1976-08-03</dc:date>
+                    <dc:type>image</dc:type>
+                    <dc:format>image/jp2</dc:format>
+                    <dc:identifier>P133108</dc:identifier>
+                    <dc:coverage>Civic Center (Philadelphia, Pa.);</dc:coverage>
+                    <dcterms:created>1976-08-03</dcterms:created>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/1</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/6</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Pearl Harbor</dc:title>
+                    <dc:subject>Children's television programs--United States; Children's television
+                        programs--United States--Bibliography; Children's Web sites;</dc:subject>
+                    <dc:description>KIDSNET educational brochure about Pearl Harbor</dc:description>
+                    <dc:creator>KIDSNET (Organization)</dc:creator>
+                    <dc:date>1991</dc:date>
+                    <dc:type>text</dc:type>
+                    <dc:format>image/jp2</dc:format>
+                    <dc:identifier>MKIDSX036</dc:identifier>
+                    <dc:language>eng</dc:language>
+                    <dc:rights>Permission is granted to reproduce these guides for educational
+                        purposes. For additional information about reproduction and use, please
+                        contact Temple University Libraries, Special Collections Research Center,
+                        scrc@temple.edu, 215-204-8257.</dc:rights>
+                    <dcterms:created>1991</dcterms:created>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Test language code.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/6</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/11</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Letter of 1866 April 30</dc:title>
+                    <dc:subject>African American fathers; Fathers and daughters; African American
+                        businesspeople; African American abolitionists;Anderson, Caroline Still,
+                        1848-1911 [recipient]; Cassey, Joseph, 1789-1848;</dc:subject>
+                    <dc:description>William Still writes a letter to his daughter, Caroline, who is
+                        away at school, in response to her letter telling him of her difficulty with
+                        her mathematical studies and suggesting the whole family move to Oberlin.
+                        Still tells her she should learn the rules of Math as he wants to set her up
+                        in a shop when she graduates, and he will stay in Philadelphia as he has
+                        just bought two properties and has other business ventures.</dc:description>
+                    <dc:creator>Still, William, 1821-1902</dc:creator>
+                    <dc:date>1866-04-30</dc:date>
+                    <dc:type>text;</dc:type>
+                    <dc:format>image/jp2;</dc:format>
+                    <dc:identifier>BMS010X0028</dc:identifier>
+                    <dc:language>English</dc:language>
+                    <dc:coverage>Lombard Street (Philadelphia, Pa.); Oberlin (Ohio);</dc:coverage>
+                    <dc:rights>Public domain</dc:rights>
+                    <dcterms:created>1866-04-30</dcterms:created>
+                    <dcterms:spatial>Lombard Street (Philadelphia, Pa.); Oberlin
+                        (Ohio);</dcterms:spatial>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Test coverage spatial, language.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/11</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/12</identifier>
+                <datestamp>2016-02-04</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Ella Fitzgerald</dc:title>
+                    <dc:subject>African American jazz musicians; Fitzgerald, Ella</dc:subject>
+                    <dc:description>Ella Fitzgerald (1917-1996), also known as “Lady Ella” and the
+                        “First Lady of Song.”, as early as the age of 17 performed songs by Connee
+                        Boswell to win “Amateur Night” at Harlem New York’s Apollo Theatre. After
+                        four years as a singer in Chick Webb’s Orchestra, Fitzgerald in 1939 took on
+                        the leadership of the band, and it was renamed Ella and her Famous
+                        Orchestra. The band recorded together until 1942 when Fitzgerald began her
+                        solo career. For her jazz vocals she won 13 Grammy awards including the
+                        coveted Best Female Vocalist category for three years in a
+                        row.</dc:description>
+                    <dc:creator>Mosley, John W.</dc:creator>
+                    <dc:type>banana;peach</dc:type>
+                    <dc:format>image/jp2;</dc:format>
+                    <dc:identifier>BPA001X1819380000051</dc:identifier>
+                    <dc:relation>John W. Mosley Photograph Collection</dc:relation>
+                    <dc:rights>This material is subject to copyright law and is made available for
+                        private study, scholarship, and research purposes only. For access to the
+                        original or a high resolution reproduction, and for permission to publish,
+                        please contact Temple University Libraries, the Charles L. Blockson
+                        Afro-American Collection (blockson@temple.edu; 215-204-6632)</dc:rights>
+                    <dcterms:license>This material is subject to copyright law and is made available
+                        for private study, scholarship, and research purposes only. For access to
+                        the original or a high resolution reproduction, and for permission to
+                        publish, please contact Temple University Libraries, the Charles L. Blockson
+                        Afro-American Collection (blockson@temple.edu;
+                        215-204-6632)</dcterms:license>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Testing circa date</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/12</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/33</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Wise Acres 1914 March</dc:title>
+                    <dc:subject>Temple University--School of Environmental
+                        Design--Students--Periodicals; Temple University--School of Environmental
+                        Design--Students--Yearbooks;Horticulture Students--Periodicals</dc:subject>
+                    <dc:description>Yearbook of the Pennsylvania School of Horticulture for Women
+                        Vol. I No. 1</dc:description>
+                    <dc:date>1914-03</dc:date>
+                    <dc:type>text</dc:type>
+                    <dc:format>image/jp2;</dc:format>
+                    <dc:identifier>HPSHWX1914MAR</dc:identifier>
+                    <dc:rights>This material is subject to copyright law and is made available for
+                        private study, scholarship, and research purposes only. For access to the
+                        original or a high resolution reproduction, and for permission to publish,
+                        please contact Temple University Libraries, Special Collection Research
+                        Center, scrc@temple.edu, 215-204-8257.</dc:rights>
+                    <dcterms:accessRights>This material is subject to copyright law and is made
+                        available for private study, scholarship, and research purposes only. For
+                        access to the original or a high resolution reproduction, and for permission
+                        to publish, please contact Temple University Libraries, Special Collection
+                        Research Center, scrc@temple.edu, 215-204-8257.</dcterms:accessRights>
+                    <dcterms:license>Public domain</dcterms:license>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Test local rights and DPLA rights.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/33</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/34</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Micky Dolenz of the Monkees with the Temple owl mascot and a Temple
+                        University football player</dc:title>
+                    <dc:subject>Football players;Mascots;Musicians; Dolenz, Mickey;</dc:subject>
+                    <dc:description>Micky Dolenz identified from other photos of the Monkees rock
+                        group. The Monkees played a concert at a Temple University football game.
+                        The date of the concert/football game was found to be 1986 through research
+                        in newspaper databases.</dc:description>
+                    <dc:date>circa=1986</dc:date>
+                    <dc:type>image;</dc:type>
+                    <dc:format>image/jp2;</dc:format>
+                    <dc:identifier>TPFX010000168</dc:identifier>
+                    <dc:coverage>1985-1987</dc:coverage>
+                    <dcterms:license>pdcp_noharvest</dcterms:license>
+                    <dcterms:temporal>1985-1987</dcterms:temporal>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Circa date. Test coverage-temporal and range in
+                        coverage.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/34</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/35</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Russell Conwell and others at the dedication of Conwell
+                        Hall</dc:title>
+                    <dc:subject>Conwell, Russell Herman, 1843-1925; Penniman, Josiah Harmar,
+                        1868-1941; Tomkins, Floyd W. (Floyd Williams), 1850-1932; Beury, Charles
+                        Ezra, 1879-1953; Carnell, Laura, 1867-1929;Krusen, Wilmer</dc:subject>
+                    <dc:description>&quot;Participants in the dedication of Conwell Hall in January
+                        of 1924 included (from the left) Josiah Penniman, President of the
+                        University of Pennsylvania; the Rev. Floyd Tomkins, rector of Holy Trinity
+                        Protestant Episcopal Church; President Conwell; Charles E. Beury, Trustee
+                        and Chairman of the Building Committee; Laura Carnell, Associate President;
+                        Wilmer Krusen, Vice President of the University and Philadelphia's Director
+                        of Health.&quot;</dc:description>
+                    <dc:date>1924-01-23</dc:date>
+                    <dc:type>image;</dc:type>
+                    <dc:format>image/jp2;</dc:format>
+                    <dc:identifier>TPFPX032Z201410000143</dc:identifier>
+                    <dc:rights>This material is subject to copyright law and is made available for
+                        private study, scholarship, and research purposes only. For access to the
+                        original or a high resolution reproduction, and for permission to publish,
+                        please contact Temple University Libraries, Special Collections Research
+                        Center, scrc@temple.edu, 215-204-8257.</dc:rights>
+                    <dcterms:accessRights>This material is subject to copyright law and is made
+                        available for private study, scholarship, and research purposes only. For
+                        access to the original or a high resolution reproduction, and for permission
+                        to publish, please contact Temple University Libraries, Special Collections
+                        Research Center, scrc@temple.edu, 215-204-8257.</dcterms:accessRights>
+                    <dcterms:license>Public domain</dcterms:license>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Test local rights and DPLA rights.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/35</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/36</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Girl on tricycle in front of 6223 Spruce Street.</dc:title>
+                    <dc:subject>children;bicycles;transportation</dc:subject>
+                    <dc:description>Girl on tricycle in front of 6223 Spruce
+                        Street.</dc:description>
+                    <dc:creator>Neff, Abe</dc:creator>
+                    <dc:date>circa=1932</dc:date>
+                    <dc:type>image;</dc:type>
+                    <dc:format>image/jp2</dc:format>
+                    <dc:identifier>JPHOTOL_ABE NEFF.51</dc:identifier>
+                    <dc:source>Abe Neff</dc:source>
+                    <dc:relation>Philadelphia Jewish Archives Photographs, Temple University
+                        Libraries</dc:relation>
+                    <dc:rights>This material is subject to copyright law and is made available for
+                        private study, scholarship, and research purposes only. For access to the
+                        original or a high resolution reproduction, and for permission to publish,
+                        please contact Temple University Libraries, Special Collections Research
+                        Center, scrc@temple.edu, 215-204-8257.</dc:rights>
+                    <dcterms:provenance>Neff Family</dcterms:provenance>
+                    <dcterms:license>This material is subject to copyright law and is made available
+                        for private study, scholarship, and research purposes only. For access to
+                        the original or a high resolution reproduction, and for permission to
+                        publish, please contact Temple University Libraries, the Charles L. Blockson
+                        Afro-American Collection (blockson@temple.edu;
+                        215-204-6632)</dcterms:license>
+                    <dcterms:temporal>1931-1933</dcterms:temporal>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Testing source field for mapping to contributing
+                        institution.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/36</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/37</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Foster Home for Hebrew Orphans. Nurse weighing an infant.</dc:title>
+                    <dc:subject>foster homes;nurses;children;orphans;child welfare;Foster Home for
+                        Hebrew Orphans</dc:subject>
+                    <dc:description>Foster Home for Hebrew Orphans. Nurse weighing an
+                        infant.</dc:description>
+                    <dc:creator>Neff, Abe</dc:creator>
+                    <dc:date>circa=1930</dc:date>
+                    <dc:type>image;</dc:type>
+                    <dc:format>image/jp2</dc:format>
+                    <dc:identifier>JPHOTOL_CWA-FHHOII.1</dc:identifier>
+                    <dc:source>Association for Jewish Children</dc:source>
+                    <dc:relation>Philadelphia Jewish Archives Photographs, Temple University
+                        Libraries</dc:relation>
+                    <dcterms:provenance>Association for Jewish Children</dcterms:provenance>
+                    <dcterms:license>This material is subject to copyright law and is made available
+                        for private study, scholarship, and research purposes only. For access to
+                        the original or a high resolution reproduction, and for permission to
+                        publish, please contact Temple University Libraries, the Charles L. Blockson
+                        Afro-American Collection (blockson@temple.edu;
+                        215-204-6632)</dcterms:license>
+                    <dcterms:temporal>1929-1931</dcterms:temporal>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Testing source field for mapping to contributing institution,
+                        circa date, temporal coverage.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/37</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/38</identifier>
+                <datestamp>2015-07-29</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Hebrew Sunday School Society; Fairmount Park; dancing the
+                        Hora</dc:title>
+                    <dc:subject>dance;girls, Hebrew Sunday School Society;Fairmount Park
+                        (Philadelphia, Pa.)</dc:subject>
+                    <dc:description>Girls from Hebrew Sunday School Society dancing the hora in
+                        Fairmount Park</dc:description>
+                    <dc:source>Hebrew Sunday School Society Records</dc:source>
+                    <dc:relation>Philadelphia Jewish Archives Photographs, Temple University
+                        Libraries</dc:relation>
+                    <dcterms:license>This material is subject to copyright law and is made available
+                        for private study, scholarship, and research purposes only. For access to
+                        the original or a high resolution reproduction, and for permission to
+                        publish, please contact Temple University Libraries, the Charles L. Blockson
+                        Afro-American Collection (blockson@temple.edu;
+                        215-204-6632)</dcterms:license>
+                    <dcterms:spatial>Fairmount Park (Philadelphia, Pa.)</dcterms:spatial>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Testing source, coverage-spatial</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/38</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/39</identifier>
+                <datestamp>2015-09-04</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Yiddish broadside for meeting of United Push Cart Peddlers
+                        Association</dc:title>
+                    <dc:subject>United Push Cart Peddlers Association;commerce;health
+                        insurance</dc:subject>
+                    <dc:description>Yiddish broadside notifies the association &quot;dear
+                        brothers&quot; of a meeting to discuss the financing of the society's
+                        sickness benefits.</dc:description>
+                    <dc:creator>United Push Cart Peddlers Association</dc:creator>
+                    <dc:publisher>Test Publisher</dc:publisher>
+                    <dc:date>circa=1922</dc:date>
+                    <dc:type>broadside</dc:type>
+                    <dc:format>image/jp2</dc:format>
+                    <dc:identifier>JPHOTOL_PUSHCARTASSN</dc:identifier>
+                    <dc:source>United Push Cart Peddlers Association Papers</dc:source>
+                    <dc:language>yid</dc:language>
+                    <dc:relation>United Push Cart Peddlers Association Papers</dc:relation>
+                    <dcterms:accessRights>This material is subject to copyright law and is made
+                        available for private study, scholarship, and research purposes only. For
+                        access to the original or a high resolution reproduction, and for permission
+                        to publish, please contact Temple University Libraries, Special Collection
+                        Research Center, scrc@temple.edu, 215-204-8257.
+                        pdcp_noharvest</dcterms:accessRights>
+                    <dcterms:license>Public domain</dcterms:license>
+                    <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+                    <dcterms:temporal>1920-1923</dcterms:temporal>
+                    <dc:description>This is a test record from the PDCP Metadata Team. Please do not
+                        reference this item for research. Thank you.</dc:description>
+                    <dc:description>Test language, temporal coverage, date, local rights and DPLA
+                        rights.</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/39</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:digital.library.temple.edu:p16002coll25/40</identifier>
+                <datestamp>2016-02-04</datestamp>
+                <setSpec>p16002coll25</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Scan like a boss</dc:title>
+                    <dc:subject>memes</dc:subject>
+                    <dc:description>Test record to test 2 Type fields that need to map to same DCMI
+                        type. Test non-DCMI date.</dc:description>
+                    <dc:type>apple;orange;banana;</dc:type>
+                    <dc:format>image/jp2;</dc:format>
+                    <dc:source>Doreva</dc:source>
+                    <dc:description>Test record, not for research purpose</dc:description>
+                    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/40</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
