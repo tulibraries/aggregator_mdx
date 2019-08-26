@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  xspec:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./transforms:/transforms
+      - ./validations:/validations
