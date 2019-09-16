@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Funcake name: 'Temple ContentDM'
-    Use: Imported by Temple ContentDM Collection-level Transforms for Shared Templates.-->
+
+<!-- Funcake name: 'Historic Pittsburgh transform' -->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -32,7 +33,7 @@
     <xsl:template match="//oai:record[oai:header[@status='deleted']]/*"/>
     
     <!-- base record. Matches each OAI feed record that is mapped. Filters out records with dc:identifier values contained in remediation_filter.xsl -->
-    <xsl:template match="//oai_dc:dc[not(dc:identifier[string() = $filterids])]">
+    <xsl:template match="//oai_dc:dc[not(dc:relation[string()= 'pdcp_noharvest'])]">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:dcterms="http://purl.org/dc/terms/"
@@ -50,10 +51,12 @@
             <xsl:apply-templates />
             
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
+			<xsl:call-template name="intprovider"/>
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
     </xsl:template>
-    
+   
+<!--   
     <xsl:template match="//setSpec">
         <xsl:if test="normalize-space(lower-case(.))">
             <xsl:variable name="setID" select="normalize-space(lower-case(.))"/>
@@ -64,7 +67,8 @@
             </xsl:if>
         </xsl:if>
     </xsl:template>
-    
+-->
+
      <!-- Title -->
     <xsl:template match="dc:title">
         <xsl:if test="normalize-space(.)!=''">
@@ -136,7 +140,7 @@
                 <!-- Format -->
                 <xsl:otherwise>
                     <dcterms:format>
-                        <xsl:value-of select="."/>
+                        <xsl:value-of select="normalize-space(.)"/>
                     </dcterms:format>
                 </xsl:otherwise>
             </xsl:choose>
@@ -322,6 +326,13 @@
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:if>
+    </xsl:template>
+	
+	<!-- Intermediate provider -->
+	<xsl:template name="intprovider">
+		<xsl:element name="dpla:intermediateProvider">
+            <xsl:value-of>Historic Pittsburgh</xsl:value-of>
+        </xsl:element>
     </xsl:template>
     
      <!-- Hub -->
