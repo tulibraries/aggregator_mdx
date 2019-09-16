@@ -6,11 +6,9 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:dpla="http://dp.la/about/map/"
-    xmlns:padig="http://padigital.org/ns"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    
     xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-    
+    xmlns:padig="http://padigitial.org/ns/"
     xmlns:oclcterms="http://purl.org/oclc/terms/"
     xmlns:oai="http://www.openarchives.org/OAI/2.0/"
     xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
@@ -25,6 +23,47 @@
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
     
     <xsl:include href="remediations/lookup.xsl"/>
+    <xsl:include href="remediations/filter.xsl"/>
+        
+    <!-- drop nodes we don't care about, namely, header values -->
+    <xsl:template match="text() | @*"/>
+    
+    <!-- drop records where the OAI header is marked as 'deleted' -->
+    <xsl:template match="//oai:record[oai:header[@status='deleted']]/*"/>
+    
+    <!-- base record. Matches each OAI feed record that is mapped. Filters out records with dc:identifier values contained in remediation_filter.xsl -->
+    <xsl:template match="//oai_dc:dc[not(dc:identifier[string() = $filterids])]">
+        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:dpla="http://dp.la/about/map/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+            xmlns:oclc="http://purl.org/oclc/terms/"
+            xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+            xmlns:oclcterms="http://purl.org/oclc/terms/"
+            xmlns:schema="http://schema.org" >
+            
+            <!-- will match specific templates that relevant for dplah. -->
+            <xsl:apply-templates />
+            
+            <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
+            <xsl:call-template name="hub"/>
+        </oai_dc:dc>
+    </xsl:template>
+    
+    <xsl:template match="//setSpec">
+        <xsl:if test="normalize-space(lower-case(.))">
+            <xsl:variable name="setID" select="normalize-space(lower-case(.))"/>
+            <xsl:if test="$setID = $setSpecList/padig:set">
+                <xsl:element name="dcterms:isPartOf">
+                    <xsl:value-of select="$setSpecList/padig:set[. = $setID]/@string"/>
+                </xsl:element>
+            </xsl:if>
+        </xsl:if>
+    </xsl:template>
     
      <!-- Title -->
     <xsl:template match="dc:title">
@@ -34,6 +73,29 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+
+    <xsl:template match="dc:contributor">
+        <xsl:variable name="contributingInst" select='substring-before(.," (depositor)")'/>
+        <xsl:if test="normalize-space(.)!=''">
+        <xsl:choose>
+            <xsl:when test="ends-with(., '(depositor)')">
+                <xsl:element name="edm:dataProvider">
+                        <xsl:value-of select="$contributingInst"/>
+                    </xsl:element>
+            </xsl:when>
+            
+            <!-- Rights -->
+            <xsl:otherwise>
+                <xsl:if test="normalize-space(.)!=''">
+                    <xsl:element name="dcterms:contributor">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
+        </xsl:if>
+    </xsl:template>
+    
 
      <!-- Alternative titles -->
      <xsl:template match="dcterms:alternative">
@@ -180,33 +242,10 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- Language (Remediated) -->
-    <!--
-    <xsl:template match="dc:language">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:variable name="langterm" select="normalize-space(lower-case(.))"/>
-            <xsl:if test="$langterm = $lexvoLang/padig:language">
-                <xsl:element name="dcterms:language">
-                    <xsl:value-of select="$lexvoLang/padig:language[. = $langterm]/@string"/>
-                </xsl:element>
-            </xsl:if>
-        </xsl:if>
-    </xsl:template>
-     -->
-
      <!-- Relation -->
     <xsl:template match="dc:relation">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:relation">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-        </xsl:if>
-    </xsl:template>
-
-     <!-- isPartOf -->
-    <xsl:template match="dcterms:isPartOf">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:element name="dcterms:isPartOf">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:if>
@@ -263,7 +302,7 @@
     </xsl:template>
 
      <!-- Identifier -->
-    <xsl:template match="dc:identifier[1]">
+    <xsl:template match="dc:identifier">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:identifier">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -271,43 +310,19 @@
         </xsl:if>
     </xsl:template>
 
-    <!--Create $baseURL and $objID; uncomment after migration -->
-    <xsl:template match="dc:identifier[2]">
-        <xsl:variable name="objID" select='substring-after(.,"/cdm/ref/")'/>
-        <xsl:variable name="baseURL" select='substring-before(.,"/cdm/ref/")'/>
+
+    <!-- Thumbnail URL -->
+    <xsl:template match="dc:identifier.thumbnail">
+        <xsl:variable name="ObjURL" select='substring-before(.,"/datastream/TN/view/")'/>
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:if test="$baseURL = $oaiUrl/padig:url">
-                <xsl:element name="edm:dataProvider">
-                    <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
-                </xsl:element>
-            </xsl:if>
-        </xsl:if>
-    </xsl:template>
-            <!-- Contributing Institution -->
-            
-            <!-- URL
             <xsl:element name="edm:isShownAt">
-                <xsl:value-of select="$baseURL"/> <xsl:text>/cdm/ref/</xsl:text><xsl:value-of select="$objID"/>
+                <xsl:value-of select="$ObjURL"/>
             </xsl:element>
-            
-            Thumbnail
             <xsl:element name="edm:preview">
-                <xsl:value-of select="$baseURL"/> <xsl:text>/utils/getthumbnail/</xsl:text><xsl:value-of select="$objID"/>
+                <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    -->
-
-
-     <!-- NAMED TEMPLATES -->
-
-     <!-- Contributing institution (Hard-coded)
-    <xsl:template name="dataProvider">
-        <xsl:element name="edm:dataProvider">
-            <xsl:value-of><xsl:text>INSERT CONTRIBUTING INSTITUTION HERE</xsl:text></xsl:value-of>
-        </xsl:element>
-    </xsl:template>
-    -->
     
      <!-- Hub -->
     <xsl:template name="hub">

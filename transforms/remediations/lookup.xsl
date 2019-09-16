@@ -75,6 +75,15 @@
         <padig:type string="yearbooks" uri="http://vocab.getty.edu/aat/300026646">yearbooks</padig:type>
     </xsl:param>
 
+    <!-- lookup table for Contributing Institutions/OAI base URLs -->
+    <xsl:param name="oaiUrl">    
+        <padig:url string="Temple University" url="http://digital.library.temple.edu">http://digital.library.temple.edu</padig:url>
+    </xsl:param>
+    
+    <xsl:param name="setSpecList">
+        <padig:set string="Pittsburgh City Photographer Collection">pitt_collection.72</padig:set>
+    </xsl:param>
+    
     <!-- lookup table for recommended Lexvo Languages terms/URIs -->
     <xsl:param name="lexvoLang">
       <padig:language string="aar" uri="http://lexvo.org/id/iso639-3/aar">aar</padig:language>

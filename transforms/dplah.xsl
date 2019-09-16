@@ -6,6 +6,7 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:dpla="http://dp.la/about/map/"
+    xmlns:padig="http://padigital.org/ns"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
     xmlns:oclcterms="http://purl.org/oclc/terms/"
@@ -55,7 +56,25 @@
 
      <!-- DPLAH-SPECIFIC TEMPLATES -->
 
-     <!-- Contributor -->
+    <!-- Title -->
+    <xsl:template match="dc:title[1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:title">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- Alternative titles -->
+    <xsl:template match="dc:title[position() > 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <dcterms:alternative>
+                <xsl:value-of select="normalize-space(.)"/>
+            </dcterms:alternative>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- Contributor -->
     <xsl:template match="dc:contributor[position() != last()]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:contributor">
@@ -64,7 +83,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Contributing institution from contributor -->
+     <!-- Contributing institution from contributor
     <xsl:template match="dc:contributor[position() = last()]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="edm:dataProvider">
@@ -72,39 +91,8 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-
-     <!-- Type -->
-    <xsl:template match="dc:type">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:choose>
-                <xsl:when test="matches(., '(^text.*$)', 'i')">
-                    <dcterms:type>Text</dcterms:type>
-                </xsl:when>
-                <xsl:when test="matches(., '(^image.*$)', 'i')">
-                    <dcterms:type>Image</dcterms:type>
-                </xsl:when>
-                <xsl:when test="matches(., '^(movingimage.*$|moving\simage.*$)', 'i')">
-                    <dcterms:type>Moving Image</dcterms:type>
-                </xsl:when>
-                <xsl:when test="matches(., '^(sound.*$)', 'i')">
-                    <dcterms:type>Sound</dcterms:type>
-                </xsl:when>
-                <xsl:when test="matches(., '^(physicalobject.*$|physical\sobject.*$)', 'i')">
-                    <dcterms:type>Physical Object</dcterms:type>
-                </xsl:when>
-                <xsl:when
-                    test="matches(., '^(interactiveresource.*$|interactive\sresource.*$)', 'i')">
-                    <dcterms:type>Interactive Resource</dcterms:type>
-                </xsl:when>
-                <!-- Format -->
-                <xsl:otherwise>
-                    <dcterms:format>
-                        <xsl:value-of select="."/>
-                    </dcterms:format>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:if>
-    </xsl:template>
+    -->
+     
 
      <!-- File format -->
     <xsl:template match="dc:format">
@@ -114,4 +102,52 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+
+    <!-- Relation -->
+    <xsl:template match="dc:relation[position() > 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:relation">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- Collection -->
+    <xsl:template match="dc:relation[position() = 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:isPartOf">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- Intermediate provider -->
+    <xsl:template match="dc:source[position() = 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dpla:intermediateProvider">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- URL 
+    <xsl:template match="dc:identifier[2]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="edm:isShownAt">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    
+    <!- Preview
+    <xsl:template match="dc:identifier[position() = last() and position() > 2]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="edm:preview">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    -->
 </xsl:stylesheet>
+
+
