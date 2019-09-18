@@ -2,26 +2,26 @@
 <!-- Funcake name: 'Historic Pittsburgh' -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:dpla="http://dp.la/about/map/" 
+    xmlns:dpla="http://dp.la/about/map/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-    xmlns:padig="http://padigitial.org/ns/" 
+    xmlns:padig="http://padigitial.org/ns/"
     xmlns:oclcterms="http://purl.org/oclc/terms/"
     xmlns:oai="http://www.openarchives.org/OAI/2.0/"
     xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-    xmlns:oclc="http://purl.org/oclc/terms/" 
+    xmlns:oclc="http://purl.org/oclc/terms/"
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-    xmlns:schema="http://schema.org" 
+    xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services" version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
 
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
-    
+
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
-    
+
     <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/lookup.xsl"/>
     <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/filter.xsl"/>
 
@@ -69,7 +69,7 @@
     </xsl:template>
 
     <!-- Title -->
-    <xsl:template match="dc:title">
+    <xsl:template match="dc:title[1]">
         <xsl:if test="normalize-space(.) != ''">
             <xsl:element name="dcterms:title">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -80,6 +80,8 @@
     <xsl:template match="dc:contributor">
         <xsl:variable name="contributingInst" select='substring-before(., " (depositor)")'/>
         <xsl:if test="normalize-space(.) != ''">
+
+   <!-- Contributing Institution -->
             <xsl:choose>
                 <xsl:when test="ends-with(., '(depositor)')">
                     <xsl:element name="edm:dataProvider">
@@ -87,7 +89,7 @@
                     </xsl:element>
                 </xsl:when>
 
-                <!-- Rights -->
+   <!-- Contributor -->
                 <xsl:otherwise>
                     <xsl:if test="normalize-space(.) != ''">
                         <xsl:element name="dcterms:contributor">
@@ -106,6 +108,14 @@
             <xsl:element name="dcterms:alternative">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="dc:title[position() > 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <dcterms:alternative>
+                <xsl:value-of select="normalize-space(.)"/>
+            </dcterms:alternative>
         </xsl:if>
     </xsl:template>
 
@@ -154,7 +164,7 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- Source; uncomment when not used by DPLAH crosswalk -->
+    <!-- Source -->
     <xsl:template match="dc:source">
         <xsl:if test="normalize-space(.) != ''">
             <xsl:element name="dcterms:source">
@@ -162,7 +172,6 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-
 
     <!-- Publisher -->
     <xsl:template match="dc:publisher">
@@ -283,7 +292,7 @@
                     </xsl:element>
                 </xsl:if>
             </xsl:when>
-            <!-- Rights -->
+            <!-- Rights text -->
             <xsl:otherwise>
                 <xsl:if test="normalize-space(.) != ''">
                     <xsl:element name="dcterms:rights">
