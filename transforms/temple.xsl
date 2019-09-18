@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Funcake name: 'Temple ContentDM'
+<!--Funcake name: 'Temple'
     Use: Imported by Temple ContentDM Collection-level Transforms for Shared Templates.-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,9 +8,7 @@
     xmlns:dpla="http://dp.la/about/map/"
     xmlns:padig="http://padigital.org/ns"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    
     xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-    
     xmlns:oclcterms="http://purl.org/oclc/terms/"
     xmlns:oai="http://www.openarchives.org/OAI/2.0/"
     xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
@@ -71,7 +69,8 @@
                     test="matches(., '^(stillimage.*$|still\simage.*$)', 'i')">
                     <dcterms:type>Still Image</dcterms:type>
                 </xsl:when>
-                <!-- Format -->
+                
+    <!-- Format -->
                 <xsl:otherwise>
                     <dcterms:format>
                         <xsl:value-of select="."/>
@@ -90,7 +89,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Source; uncomment when not used by DPLAH crosswalk -->
+     <!-- Source; uncomment when not used by DPLAH crosswalk 
     <xsl:template match="dc:source">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:source">
@@ -98,7 +97,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+    -->
 
      <!-- Publisher -->
     <xsl:template match="dc:publisher">
@@ -194,7 +193,7 @@
     </xsl:template>
      -->
 
-     <!-- Relation -->
+     <!-- Relation; uncomment after migration
     <xsl:template match="dc:relation">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:relation">
@@ -202,7 +201,8 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-
+    -->
+    
      <!-- isPartOf -->
     <xsl:template match="dcterms:isPartOf">
         <xsl:if test="normalize-space(.)!=''">
@@ -235,14 +235,14 @@
         <xsl:choose>
             <!-- Rights URI -->
             <xsl:when
-                test="starts-with(., 'http://rightsstatements.org/vocab/') or starts-with(., 'http://creativecommons.org/licenses/')">
+                test="starts-with(., 'http://rightsstatements.org/vocab/') or starts-with(., 'http://creativecommons.org/') or starts-with(., 'https://creativecommons.org/')">
                 <xsl:if test="normalize-space(.)!=''">
                     <xsl:element name="edm:rights">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:if>
             </xsl:when>
-            <!-- Rights -->
+            <!-- Rights text -->
             <xsl:otherwise>
                 <xsl:if test="normalize-space(.)!=''">
                     <xsl:element name="dcterms:rights">
@@ -262,7 +262,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Identifier -->
+     <!-- Identifier; uncomment after migration
     <xsl:template match="dc:identifier[1]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:identifier">
@@ -270,11 +270,14 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+    -->
 
-    <!--Create $baseURL and $objID; uncomment after migration -->
+    <!-- Create $baseURL and $objID; uncomment after migration
     <xsl:template match="dc:identifier[2]">
         <xsl:variable name="objID" select='substring-after(.,"/cdm/ref/")'/>
         <xsl:variable name="baseURL" select='substring-before(.,"/cdm/ref/")'/>
+     -->
+        <!-- Contributing Institution
         <xsl:if test="normalize-space(.)!=''">
             <xsl:if test="$baseURL = $oaiUrl/padig:url">
                 <xsl:element name="edm:dataProvider">
@@ -283,25 +286,26 @@
             </xsl:if>
         </xsl:if>
     </xsl:template>
-            <!-- Contributing Institution -->
-            
-            <!-- URL
+     -->
+    
+        <!-- URL
             <xsl:element name="edm:isShownAt">
                 <xsl:value-of select="$baseURL"/> <xsl:text>/cdm/ref/</xsl:text><xsl:value-of select="$objID"/>
             </xsl:element>
+        -->
             
-            Thumbnail
+        <!-- Thumbnail
             <xsl:element name="edm:preview">
                 <xsl:value-of select="$baseURL"/> <xsl:text>/utils/getthumbnail/</xsl:text><xsl:value-of select="$objID"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    -->
+        -->
 
 
      <!-- NAMED TEMPLATES -->
 
-     <!-- Contributing institution (Hard-coded)
+     <!-- Contributing institution (Hard-coded); should be able to remove if lookup works
     <xsl:template name="dataProvider">
         <xsl:element name="edm:dataProvider">
             <xsl:value-of><xsl:text>INSERT CONTRIBUTING INSTITUTION HERE</xsl:text></xsl:value-of>

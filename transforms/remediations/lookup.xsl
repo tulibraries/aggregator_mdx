@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Funnelcake name: Lookup -->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -77,9 +79,39 @@
 
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">    
-        <padig:url string="Temple University" url="http://digital.library.temple.edu">http://digital.library.temple.edu</padig:url>
+		<padig:url string="Lehigh University">http://cdm.lib.lehigh.edu/</padig:url>
+		<padig:url string="La Salle University">http://cdm15860.contentdm.oclc.org/</padig:url>
+		<padig:url string="Pennsylvania State University">http://digital.libraries.psu.edu/</padig:url>
+		<padig:url string="Temple University">http://digital.library.temple.edu/</padig:url>
+		<padig:url string="University of Pennsylvania">http://digital.library.upenn.edu/</padig:url>
+		<padig:url string="Villanova University">http://digital.library.villanova.edu/</padig:url>
+		<padig:url string="Jefferson - East Falls">http://digitalcollections.philau.edu/</padig:url>
+		<padig:url string="La Salle University">http://digitalcommons.lasalle.edu/</padig:url>
+		<padig:url string="Philadelphia College of Osteopathic Medicine">http://digitalcommons.pcom.edu/</padig:url>
+		<padig:url string="Ursinus College">http://digitalcommons.ursinus.edu/</padig:url>
+		<padig:url string="University of Scranton">http://digitalservices.scranton.edu/</padig:url>
+		<padig:url string="Widener Univeristy">http://digitalwolfgram.widener.edu/</padig:url>
+		<padig:url string="University of Pennsylvania">http://dla.library.upenn.edu/dla/</padig:url>
+		<padig:url string="Thomas Jefferson University">http://jdc.jefferson.edu/</padig:url>
+		<padig:url string="Susquehanna University">http://pahistoryharvest.com/</padig:url>
+		<padig:url string="Pennsylvania State Archives">http://psa.powerlibrary.org/</padig:url>
+		<padig:url string="Historical Medical Library of The College of Physicians of Philadelphia">http://www.cppdigitallibrary.org/</padig:url>
+		<padig:url string="Presbyterian Historical Society">https://digital.history.pcusa.org/</padig:url>
+		<padig:url string="The Library Company of Philadelphia">https://digital.librarycompany.org/</padig:url>
+		<padig:url string="Science History Institute">https://digital.sciencehistory.org/</padig:url>
+		<padig:url string="American Philosophical Society">https://diglib.amphilsoc.org/</padig:url>
     </xsl:param>
     
+	<!-- lookup table for Intermediate Providers/OAI base URLs -->
+	<xsl:param name="oaiUrlInt">
+		<padig:url string="Keystone Library Network">http://cdm17189.contentdm.oclc.org/</padig:url>
+		<padig:url string="Lackawanna Valley Digital Archives">http://content.lackawannadigitalarchives.org/</padig:url>
+		<padig:url string="Keystone Library Network">http://digital.klnpa.org/</padig:url>
+		<padig:url string="POWER Library as sponsor and HSLC as maintainer">http://digitalcollections.powerlibrary.org/</padig:url>
+		<padig:url string="Historic Pittsburgh">http://historicpittsburgh.org/</padig:url>
+	</xsl:param>
+	
+	<!-- lookup table for setSpec -->	
     <xsl:param name="setSpecList">
 		<padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
 		<padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
