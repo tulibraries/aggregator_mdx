@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron"
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:edm="http://www.europeana.eu/schemas/edm/">
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
     <ns prefix="dcterms" uri="http://purl.org/dc/terms/"/>
     <ns prefix="edm" uri="http://www.europeana.eu/schemas/edm/"/>
+    <ns prefix="oai_dc" uri="http://www.openarchives.org/OAI/2.0/oai_dc/"/>
     <!-- Required Fields -->
-    <pattern>
+    <pattern id="RequiredElementsPattern">
         <title>Required PA Digital Elements</title>
-        <rule context="record">
-            <assert test="dcterms:title">There must be a title</assert>
-            <assert test="dcterms:rights or edm:rights">There must be a rights statement</assert>
-            <assert test="edm:isShownAt">There must be a trackback URL</assert>
-            <assert test="edm:preview">There must be a thumbnail URL</assert>
+        <rule context="oai_dc:dc">
+            <assert test="dcterms:title" id="Required1" role="error">There must be a title</assert>
+            <assert test="dcterms:rights or edm:rights" id="Required2" role="error">There must be a rights statement</assert>
+            <assert test="edm:isShownAt" id="Required3" role="error">There must be a trackback URL</assert>
+            <assert test="edm:preview" id="Required4" role="error">There must be a thumbnail URL</assert>
         </rule>
     </pattern>
-    <pattern>
+    <pattern id="TitleElementPattern">
         <title>Additional Title Requirements</title>
-        <rule context="record/dcterms:title">
-            <assert test="normalize-space(.)">The title element must contain text</assert>
+        <rule context="oai_dc:dc/dcterms:title">
+            <assert test="normalize-space(.)" id="Title1" role="error">The title element must contain text</assert>
         </rule>
-    </pattern>  
-    <pattern>
+    </pattern>
+    <pattern id="ItemURLElementPattern">
         <title>Additional Trackback URL Requirements</title>
-        <rule context="record/edm:isShownAt">
-            <assert test="normalize-space(.)">The trackback URL must contain text</assert>
+        <rule context="oai_dc:dc/edm:isShownAt">
+            <assert test="normalize-space(.)" id="ItemURL1" role="error">The trackback URL must contain text</assert>
         </rule>
-    </pattern>  
-    <pattern>
+    </pattern>
+    <pattern id="ThumbnailURLElementPattern">
         <title>Additional Thumbnail URL Requirements</title>
-        <rule context="record/edm:preview">
-            <assert test="normalize-space(.)">The thumbnail URL must contain text</assert>
+        <rule context="oai_dc:dc/edm:preview">
+            <assert test="normalize-space(.)" id="ThumbnailURL1" role="error">The thumbnail URL must contain text</assert>
         </rule>
     </pattern>
-    <pattern>
+    <pattern id="DCTRightsElementPattern">
         <title>Additional Rights Requirements</title>
-        <rule context="record/dcterms:rights">
-            <assert test="normalize-space(.)">dcterms:rights must contain text</assert>
+        <rule context="oai_dc:dc/dcterms:rights">
+            <assert test="normalize-space(.)" id="DCTRights1" role="error">dcterms:rights must contain text</assert>
         </rule>
     </pattern>
-    <pattern>
+    <pattern id="EDMRightsElementPattern">
         <title>Additional Rights Requirements</title>
-        <rule context="record/edm:rights">
-            <assert test="normalize-space(.)">edm:rights must contain text</assert>
+        <rule context="oai_dc:dc/edm:rights">
+            <assert test="normalize-space(.)" id="EDMRights1" role="error">edm:rights must contain text</assert>
         </rule>
     </pattern>
 </schema>

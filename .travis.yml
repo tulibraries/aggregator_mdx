@@ -1,0 +1,34 @@
+---
+services:
+  - docker
+
+install:
+  - make up
+  - docker-compose run --user='root' --entrypoint chown xspec -R xspec:xspec /transforms
+  - docker-compose run --user='root' --entrypoint chown xspec -R xspec:xspec /validations
+
+script:
+  - make test-travis
+
+after_success:
+  - make down
+
+before_deploy:
+  - true
+
+# deploy:
+#   - provider: script
+#     script: bash .travis/deploy-dev.sh
+#     on:
+#       branch: dev
+#   - provider: script
+#     script: bash .travis/deploy-prod.sh
+#     on:
+#       branch:
+#         - master
+
+notifications:
+  slack:
+    rooms:
+      - secure: "AFcpS9RNjQPEciTsUTPA6NBNxI+5wD58Lwa14Zeg75fRJipcvkwSLpBq9DlnQQeOJx8vwEYf1H7Gu4BHHX9ZofBw08WggqOdSe/K7mSq7Bx7DHfgJA0K+nzSfbXCYA8KJ/SbaeLD4TNLSs8s04vGhXRjzDTQPJ/IxufPVj3VDRjq3OmFIWi4bOHOCWML1jJ2C1a7dKlYxRKe2KDOxm/kVMi5QUCovVxndiDeOlxlhQ9o7etZb7kA/uP4Yhi7E8xMbfWuzba/nXnNAHb3pnV+RRsu9YkT7tVzk8kZ5Wfm+cgKRsnE3Q5mEt+UnZcLbDcByNzPXF5aoB8YvQumsOeq5+ZTfrozpq0H/ivb+HwDZ3ScSxJKxAOqGGj+5GFqEX9YaTrY3ok3mjbaW8G/zpKXXZgPR8PjaDTD1Qkbi0dSUbNpMuugi1IcP/mBG5O190a0NFs95WLoB8CSTfKRBReqU1bUSttnLexjRgE3yZWk6Dh3L6AcQtPLcDLQ4ec33vMjYG/Tvtv4c5uMVgFLX6qjqGmaAWo4DGU5cWyQyNBSlZjWdwgdnMxDGF8bmKx4VMyygjN07ybl9ERlmxjYx0NYCe6zHhelkwlDal1ZPKzMAC2z4x5JJaw6ggODUFnv6vQpsewU24SrQAxFUOWYqV3hEE2gyhF6XU1DvytxSYW4qfg="
+      - secure: "ktf9IVP4NaM8/r4QEf0x+mK+QhAdaDiQxA8WoIsbmKiR/DbN9vfT76Ax14r4MvAnLWc/XLNYHT873doQ1Y7oFBEB3SwUzDnSIHT/ndHD+qDIlnxTmS74hjSBRWlc5lzRFDOmxA6wui3yOeQ4SHQ2xlz103e+f7zVvdjmaS98tm76WrfNbF4Hl+JBpYvCURYp4TCsZIZK9GJWXLUymBkkFn5dl6HiHQVoubLG/m9UcxQ0+r2ICQNLCygpftLdBR03O/oFaq9i5HcgiWiGl2TfBw4SSjIx+uhNRWYq/Okor+zuDklfIVk25iyJpgA1UfbX5gakFJqqH0QG7eYiLhIkr6DnTPmapBtG3wKj3us5xMCkaWasbTKZ3SM6gAvdjlkXCD54XlDkfZsKvG3iJOwxvCCgAKkolz6QF4/isPxujkTFlrgtLkHx2w+VShkuEKtYxPjvEPEQ3DWTfi5h7lIUMl/DfieJZoQBFRD6+ApYNnauPsTB96+9q1qKH0DXfVjtwTmVA3OsZVDxAiZDGI0WIn/jHgsk/Ixkz00C6ts8qdlEbrfLWBnIsu2vvoC7YEowBQ1T76WHx6buj+4DbfY/rdSuhYw3K94Rlb8yh2/obC/nRK6lR/gQqCU2w3UHqKj5la+K7Qoixa9RhP/fIvhh419h8w84fZl6poCQH204nQI="
