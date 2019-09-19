@@ -55,7 +55,7 @@
                     <xsl:value-of>Historic Pittsburgh</xsl:value-of>
             </xsl:element>
             <xsl:element name="edm:dataProvider">
-                <xsl:value-of>Univeristy of Pittsburgh</xsl:value-of>
+                <xsl:value-of>University of Pittsburgh</xsl:value-of>
             </xsl:element>
             
         </oai_dc:dc>
