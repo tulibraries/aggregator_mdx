@@ -48,7 +48,7 @@
              <!-- will match specific templates that relevant for dplah. -->
             <xsl:apply-templates />
 
-             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
+            <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <xsl:call-template name="hub"/>
             <xsl:element name="dcterms:isPartOf"><xsl:value-of>Fur Trader's Journal</xsl:value-of></xsl:element>
             <xsl:element name="dpla:intermediateProvider">
