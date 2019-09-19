@@ -14,6 +14,7 @@
             <assert test="dcterms:rights or edm:rights" id="Required2" role="error">There must be a rights statement</assert>
             <assert test="edm:isShownAt" id="Required3" role="error">There must be a trackback URL</assert>
             <assert test="edm:preview" id="Required4" role="error">There must be a thumbnail URL</assert>
+            <assert test="edm:dataProvider" id="Required5" role="error">There must be a contributing institution</assert>
         </rule>
     </pattern>
     <pattern id="TitleElementPattern">
@@ -44,6 +45,12 @@
         <title>Additional Rights Requirements</title>
         <rule context="oai_dc:dc/edm:rights">
             <assert test="normalize-space(.)" id="EDMRights1" role="error">edm:rights must contain text</assert>
+        </rule>
+    </pattern>
+    <pattern id="EDMDataProviderElementPattern">
+        <title>Additional Contributing Institution Requirements</title>
+        <rule context="oai_dc:dc/edm:dataProvider">
+            <assert test="normalize-space(.)" id="EDMDp1" role="error">edm:dataProvider must contain text</assert>
         </rule>
     </pattern>
 </schema>
