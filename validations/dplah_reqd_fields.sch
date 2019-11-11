@@ -27,4 +27,16 @@
           <assert test="normalize-space(.)">The rights property must contain text</assert>
         </rule>
       </pattern>
+      <pattern id="RelNoHarvest">
+          <title>Additional Metadata Requirements</title>
+          <rule context="oai_dc:dc/dc:relation">
+              <assert test="normalize-space(.) != 'pdcp_noharvest'" id="NoHarvest1" role="error">The relation element must not contain stopword</assert>
+          </rule>
+      </pattern>
+      <pattern id="RightsNoHarvest">
+          <title>Additional Metadata Requirements</title>
+          <rule context="oai_dc:dc/dc:rights">
+              <assert test="normalize-space(.) != 'pdcp_noharvest'" id="NoHarvest1" role="error">The rights element must not contain stopword</assert>
+          </rule>
+      </pattern>
 </schema>
