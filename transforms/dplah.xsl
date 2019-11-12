@@ -19,7 +19,7 @@
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
 
-     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
+    <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
     <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/temple.xsl"/>
     <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/filter.xsl"/>
@@ -63,7 +63,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Alternative titles -->
     <xsl:template match="dc:title[position() > 1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -72,7 +72,7 @@
             </dcterms:alternative>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Contributor -->
     <xsl:template match="dc:contributor[position() != last()]">
         <xsl:if test="normalize-space(.)!=''">
@@ -82,7 +82,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Contributing institution from contributor
+     <!-- Contributing institution from contributor -->
     <xsl:template match="dc:contributor[position() = last()]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="edm:dataProvider">
@@ -90,13 +90,21 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    -->
-     
+
 
      <!-- File format -->
     <xsl:template match="dc:format">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="schema:fileFormat">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- Identifier because Temple.xsl broken -->
+    <xsl:template match="dc:identifier[1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:identifier">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:if>
@@ -129,7 +137,7 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- URL 
+    <!-- URL
     <xsl:template match="dc:identifier[2]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="edm:isShownAt">
@@ -137,7 +145,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!- Preview
     <xsl:template match="dc:identifier[position() = last() and position() > 2]">
         <xsl:if test="normalize-space(.)!=''">
@@ -148,5 +156,3 @@
     </xsl:template>
     -->
 </xsl:stylesheet>
-
-

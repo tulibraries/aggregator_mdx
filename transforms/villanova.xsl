@@ -17,16 +17,16 @@
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
-    
+
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
-    
+
     <!-- drop records where the OAI header is marked as 'deleted' -->
     <xsl:template match="//oai:record[oai:header[@status='deleted']]/*"/>
-    
+
     <!-- base record. Matches each OAI feed record that is mapped. Filters out records with dc:identifier values contained in remediation_filter.xsl -->
     <xsl:template match="//oai_dc:dc[not(dc:relation[string()= 'pdcp_noharvest'])]">
-        <oai_dc:dc 
+        <oai_dc:dc
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:dcterms="http://purl.org/dc/terms/"
@@ -39,17 +39,17 @@
             xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
             xmlns:oclcterms="http://purl.org/oclc/terms/"
             xmlns:schema="http://schema.org" >
-            
+
             <!-- will match specific templates that relevant for dplah. -->
             <xsl:apply-templates />
-            
+
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <xsl:call-template name="collectionName"/>
             <xsl:call-template name="dataProvider"/>
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
     </xsl:template>
-    
+
      <!-- Title -->
     <xsl:template match="dc:title">
         <xsl:if test="normalize-space(.)!=''">
@@ -179,22 +179,21 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
-    <!-- Contributing Institution -->
 
+    <!-- Contributing Institution -->
     <xsl:template name="dataProvider">
         <xsl:element name="edm:dataProvider">
             <xsl:value-of><xsl:text>Villanova University</xsl:text></xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- Collection name -->
     <xsl:template name="collectionName">
         <xsl:element name="dcterms:isPartOf">
             <xsl:value-of><xsl:text>Villanova University Digital Collections</xsl:text></xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
      <!-- Hub -->
     <xsl:template name="hub">
         <xsl:element name="edm:provider">
