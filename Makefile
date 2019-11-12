@@ -3,14 +3,23 @@ up: down
 	docker-compose pull
 	docker-compose up --build -d
 
-test: up
-	@echo "Testing transforms/*.xspec with Docker"
-	for xspectest in $(shell find transforms -type f -name '*.xspec'); do \
-		docker-compose run xspec "/$$xspectest" ; \
+saxon: up
+	@echo "Running saxon cli"
+	docker-compose run saxon -s:${s} -xsl:${xsl} -o:${o}
+
+test: up test-sch test-xslt
+	@echo "Testing xslt and schematron with Docker"
+
+test-sch: up
+	@echo "Testing schematron with Docker"
+	for xspectest in $(shell ls tests/schematron/*.xspec); do \
+		docker-compose run xspec -s "$$xspectest" ; \
 	done
-	@echo "Testing validations/*.xspec with Docker"
-	for xspectest in $(shell find validations -type f -name '*.xspec'); do \
-		docker-compose run xspec -s "/$$xspectest" ; \
+
+test-xslt: up
+	@echo "Testing xslt with Docker"
+	for xspectest in $(shell ls tests/xslt/*.xspec); do \
+		docker-compose run xspec "$$xspectest" ; \
 	done
 
 test-travis:

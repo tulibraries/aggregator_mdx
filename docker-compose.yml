@@ -1,10 +1,15 @@
 version: '3'
 
 services:
+  saxon:
+    build:
+      context: .
+      dockerfile: .docker/saxon/Dockerfile
+    volumes:
+      - .:/aggregator_mdx
   xspec:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: .docker/test/Dockerfile
     volumes:
-      - ./transforms:/transforms
-      - ./validations:/validations
+      - .:/aggregator_mdx

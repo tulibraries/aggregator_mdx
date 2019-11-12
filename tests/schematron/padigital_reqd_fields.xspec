@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
-  schematron="padigital_reqd_fields.sch">
+  schematron="../../validations/padigital_reqd_fields.sch">
 
   <x:scenario label="RequiredElementsPattern">
     <x:scenario label="valid: dct:rights">

@@ -2,7 +2,7 @@
 
  <x:description
   xmlns:x="http://www.jenitennison.com/xslt/xspec"
-  stylesheet="dedupe.xsl">
+  stylesheet="../../transforms/remediations/dedupe.xsl">
 
     <!--
        Testing that elements are deduplicated when field & value match.
