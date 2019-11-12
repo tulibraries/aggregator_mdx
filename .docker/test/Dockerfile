@@ -9,7 +9,7 @@ RUN mkdir -p /saxon && \
 	echo ${SAXON_DOWNLOAD_SHA1} ${SAXON_CP} | sha1sum -c - && \
 	chmod +x ${SAXON_CP}
 
-# install XSpec
+### install XSpec
 ENV XSPEC_VERSION=1.3.0
 ENV XSPEC_HOME /xspec
 RUN curl -fSL -o xspec-${XSPEC_VERSION}.tar.gz https://github.com/xspec/xspec/archive/v${XSPEC_VERSION}.tar.gz && \
@@ -17,7 +17,10 @@ RUN curl -fSL -o xspec-${XSPEC_VERSION}.tar.gz https://github.com/xspec/xspec/ar
 	mv /xspec-${XSPEC_VERSION} /xspec && \
 	rm xspec-${XSPEC_VERSION}.tar.gz
 
-# entrypoint
+### copy over files, only used in CI/CD
+COPY . /aggregator_mdx
+
+### entrypoint
 WORKDIR /aggregator_mdx
 ENTRYPOINT ["/xspec/bin/xspec.sh"]
 CMD ["-h"]

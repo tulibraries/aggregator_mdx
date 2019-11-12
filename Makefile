@@ -16,15 +16,16 @@ test-sch: up
 		docker-compose run xspec -s "$$xspectest" ; \
 	done
 
-test-xslt: up
+test-xslt:
 	@echo "Testing xslt with Docker"
 	for xspectest in $(shell ls tests/xslt/*.xspec); do \
 		docker-compose run xspec "$$xspectest" ; \
 	done
 
-test-travis:
-	@echo "Travis testing *.xspec with Docker & shell scripts"
-	bash .travis/run-tests.sh
+test-ci:
+	@echo "CI/CD testing *.xspec with Docker & shell scripts"
+	docker build -t xspec -f .docker/test/Dockerfile .
+	bash .circleci/tests.sh
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
