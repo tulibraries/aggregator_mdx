@@ -15,7 +15,7 @@
   xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
   xmlns:schema="http://schema.org"
   xmlns:svcs="http://rdfs.org/sioc/services"
-  stylesheet="temple_p16002coll25.xsl">
+  stylesheet="../../transforms/temple_p16002coll25.xsl">
 
    <!--
   Testing Match Templates in DPLAH.xsl
