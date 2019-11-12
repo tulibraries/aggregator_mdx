@@ -13,32 +13,13 @@
             <assert test="dcterms:title" id="Required1" role="error">There must be a title</assert>
             <assert test="dcterms:rights or edm:rights" id="Required2" role="error">There must be a rights statement</assert>
             <assert test="edm:isShownAt" id="Required3" role="error">There must be a trackback URL</assert>
-            <assert test="edm:preview" id="Required4" role="error">There must be a thumbnail URL</assert>
-            <assert test="edm:dataProvider" id="Required5" role="error">There must be a contributing institution</assert>
+            <assert test="edm:dataProvider" id="Required4" role="error">There must be a contributing institution</assert>
         </rule>
     </pattern>
     <pattern id="TitleElementPattern">
         <title>Additional Title Requirements</title>
         <rule context="oai_dc:dc/dcterms:title">
             <assert test="normalize-space(.)" id="Title1" role="error">The title element must contain text</assert>
-        </rule>
-    </pattern>
-    <pattern id="ItemURLElementPattern">
-        <title>Additional Trackback URL Requirements</title>
-        <rule context="oai_dc:dc/edm:isShownAt">
-            <assert test="normalize-space(.)" id="ItemURL1" role="error">The trackback URL must contain text</assert>
-        </rule>
-    </pattern>
-    <pattern id="IsShownAtURLPattern">
-      <title>Additional URL Requirements</title>
-      <rule context="oai_dc:dc/edm:isShownAt">
-        <assert test="starts-with(normalize-space(.),'http')">edm:isShownAt must contain a URL</assert>
-      </rule>
-    </pattern>
-    <pattern id="ThumbnailURLElementPattern">
-        <title>Additional Thumbnail URL Requirements</title>
-        <rule context="oai_dc:dc/edm:preview">
-            <assert test="normalize-space(.)" id="ThumbnailURL1" role="error">The thumbnail URL must contain text</assert>
         </rule>
     </pattern>
     <pattern id="DCTRightsElementPattern">
@@ -51,6 +32,13 @@
         <title>Additional Rights Requirements</title>
         <rule context="oai_dc:dc/edm:rights">
             <assert test="normalize-space(.)" id="EDMRights1" role="error">edm:rights must contain text</assert>
+        </rule>
+    </pattern>
+    <pattern id="ItemURLElementPattern">
+        <title>Additional Trackback URL Requirements</title>
+        <rule context="oai_dc:dc/edm:isShownAt">
+            <assert test="normalize-space(.)" id="ItemURL1" role="error">The trackback URL must contain text</assert>
+            <assert test="starts-with(normalize-space(.),'http')">edm:isShownAt must contain a URL</assert>
         </rule>
     </pattern>
     <pattern id="EDMDataProviderElementPattern">
