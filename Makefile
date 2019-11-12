@@ -13,6 +13,7 @@ test: up test-sch test-xslt
 test-sch: up
 	@echo "Testing schematron with Docker"
 	for xspectest in $(shell ls tests/schematron/*.xspec); do \
+		echo "$$xspectest" ; \
 		docker-compose run xspec -s "$$xspectest" ; \
 	done
 
