@@ -1,3 +1,5 @@
 .git
 result.log
 xspec
+# Ignore Mac system files
+.DS_store
