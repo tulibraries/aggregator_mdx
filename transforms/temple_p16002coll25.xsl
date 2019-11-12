@@ -21,8 +21,8 @@
 
      <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/temple.xsl"/>
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/filter.xsl"/>
+    <xsl:include href="temple.xsl"/>
+    <xsl:include href="remediations/filter.xsl"/>
 
      <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
@@ -57,10 +57,26 @@
 
      <!-- CONTENTDM-DC2MARC21SLIM-SPECIFIC TEMPLATES -->
 
+     <!-- Contributing Institution -->
+     <xsl:template name="dataProvider">
+         <xsl:element name="edm:dataProvider">
+             <xsl:value-of><xsl:text>Villanova University</xsl:text></xsl:value-of>
+         </xsl:element>
+     </xsl:template>
+
+     <!-- Identifier because Temple.xsl broken -->
+     <xsl:template match="dc:identifier[1]">
+         <xsl:if test="normalize-space(.)!=''">
+             <xsl:element name="dcterms:identifier">
+                 <xsl:value-of select="normalize-space(.)"/>
+             </xsl:element>
+         </xsl:if>
+     </xsl:template>
+
      <!-- Type -->
     <xsl:template match="dc:type">
         <xsl:call-template name="type_template">
-            <xsl:with-param name="string" select="." />
+            <xsl:with-param name="stringz" select="." />
             <xsl:with-param name="delimiter" select="';'" />
         </xsl:call-template>
     </xsl:template>

@@ -20,6 +20,7 @@ test-sch: up
 test-xslt:
 	@echo "Testing xslt with Docker"
 	for xspectest in $(shell ls tests/xslt/*.xspec); do \
+		echo "$$xspectest" ; \
 		docker-compose run xspec "$$xspectest" ; \
 	done
 
