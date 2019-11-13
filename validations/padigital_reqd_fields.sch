@@ -38,7 +38,7 @@
         <title>Additional Trackback URL Requirements</title>
         <rule context="oai_dc:dc/edm:isShownAt">
             <assert test="normalize-space(.)" id="ItemURL1" role="error">The trackback URL must contain text</assert>
-            <assert test="starts-with(normalize-space(.),'http')">edm:isShownAt must contain a URL</assert>
+            <assert test="starts-with(normalize-space(.),'http')" id="ItemURL2" role="error">edm:isShownAt must contain a URL</assert>
         </rule>
     </pattern>
     <pattern id="EDMDataProviderElementPattern">
@@ -47,5 +47,4 @@
             <assert test="normalize-space(.)" id="EDMDp1" role="error">edm:dataProvider must contain text</assert>
         </rule>
     </pattern>
-
 </schema>
