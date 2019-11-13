@@ -1,13 +1,13 @@
-up: down
+build: down
 	@echo "Building xspec containers, networks, volumes"
 	docker-compose pull
 	docker-compose up --build -d
 
-saxon: up
+saxon: build
 	@echo "Running saxon cli"
 	docker-compose run saxon -s:${s} -xsl:${xsl} -o:${o}
 
-test: up test-sch test-xslt
+test: build test-sch test-xslt
 	@echo "Testing xslt and schematron with Docker"
 
 test-sch:

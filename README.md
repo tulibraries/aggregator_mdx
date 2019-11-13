@@ -14,39 +14,129 @@ The XSLT (all version 2) is written in 3 levels:
 
 To run one of the collection-specific XSLT, you need to have all 3 files in the same directory structure.
 
-#### Using XSLT in Combine
-Combine has specific hang-ups when using XSLT that imports other XSLT documents. See: https://combine.readthedocs.io/en/master/configuration.html?highlight=xslt#local-includes
-
-Basically, to load these XSLT documents into Combine, each document with an `xsl:include` requires a change in the file to either import a HTTP URL of the included files (like a raw document GitHub URL) or be changed in Combine to reference the auto-generated filepath for those included within Combine.
-
 ### Validations
-
-To be written up.
-
-### ES Mappers
 
 To be written up.
 
 ## Local Development & Testing
 
-Unit tests for the XSLT are written using [XSpec](https://github.com/xspec/xspec). This testing library requires both the Saxon processor & Java to be installed. See the [XSpec installation instructions](https://github.com/xspec/xspec/wiki/Installation-on-Mac-and-Linux#requirements) for more if you want to run locally; otherwise, follow these Docker local development and testing setup instructions:
+You can install and run the following commands locally without Docker & Docker-Compose; you'll need to follow the installation instructions for your system (installing a Saxon processer; Java; and [XSpec](https://github.com/xspec/xspec/wiki/Installation-on-Mac-and-Linux#requirements). We recommend installing [Docker](https://docs.docker.com/v17.09/engine/installation/) & [Docker-Compose](https://docs.docker.com/compose/install/) however, and our `make` commands only work in the Docker context.
+
+Before running any of the below `make` commands, you'll want to make sure Docker is running on your system and `docker-compose` is in your local PATH. To verify this, you can run the following:
+
+```
+$ docker -v
+Docker version 19.03.4, build 9013bf583a
+$ docker-compose -v
+docker-compose version 1.24.0, build 0aa59064
+```
+You just want both commands to return a version; the version and build numbers may vary from above, and that's okay.
+
+Additionally, you'll need this repository, `aggregator_mdx`, available locally, and you need to be in the top level of this repository. If you do not have this repository locally, you can run:
 
 ```
 $ git clone https://github.com/tulibraries/aggregator_mdx.git
 $ cd aggregator_mdx
-$ make test
-  [build output]
-  [test output]
 ```
 
-These commands run any `*.xspec` files found within the `transforms` or `validations` directories.
+### Running XSLT
 
-To add local tests, current practice is to create a similarly-named xspec file in the same directory as the file you are testing, then writing a test to confirm each case per validation rule, XSL matched template, or XSL named template. See the tutorial folder in [XSpec](https://github.com/xspec/xspec) for more help. Coverage is not currently calculated, but will be added in a future devOps rotation.
+To run XSLT against a XML document:
+1. Both the XSLT document(s) & the XML document need to be in this repository, e.g., in the `aggregator_mdx` directory or subdirectories.
+2. Run the following command to build a Saxon image with your local directories available to it, then to run the `fixtures/sample.xml` XML document against the `transforms/sample.xsl` XSLT & output the result to `sample-result.xml`:
 
-## Deployment to Combine
+```
+$ make s=fixtures/sample.xml xsl=transforms/sample.xsl o=sample-result.xml saxon
+```
 
-CI/CD for this repository is handled by Travis.
+All three arguments are required:
+- `s`: the source XML document you want to transform;
+- `xsl`: the XSLT document you want to apply to the XML;
+- `o`: the output document where the resulting XML is written.
 
-For CI, travis runs `make up` (building the same test infrastructure used above locally), then `make test-travis`. This is a modified version of `make tests`, so that failed tests actually return a non-0 code (and thus make the Travis build fail). You can see these commands in the `.travis.yml` file.
+### Running Schematron
 
-For CD, travis is planned to run scripts that will connect over SSH to the deployed infrastructure running Combine Docker, then run a load (create or update) command for every `*.xsl` file found within the `transforms` directory and every `*.sch` file found within the `validations` directory. This is waiting for code and infrastructure work on the Combine Docker projects.
+WIP. Requires a bit more work.
+
+### Writing XSpec Unit Tests
+
+Unit tests for the XSLT and Schematron documents are written using [XSpec](https://github.com/xspec/xspec). See their GitHub wiki for further examples and details on how to write and use these tests (for example, the XSpec tutorial folder in [XSpec](https://github.com/xspec/xspec)).
+
+To add tests:
+1. Create an xspec file within `tests` directory, putting XSLT test files in `tests/xslt/`, and Schematron test files in `tests/schematron/`. The test file should be the same exact name of the XSLT or Schematron file you're testing (e.g., `tests/schematron/padigital_reqd_fields.xspec` contains the tests for `validations/padigital_reqd_fields.sch`).
+2. Add the `x:description` root element, adding namespaces you'll be using in sample data & either a `schematron` or a `stylesheet` pointing to the .sch or .xsl file you're testing, e.g.:
+  ```
+  <?xml version="1.0" encoding="UTF-8"?>
+  <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../validations/padigital_reqd_fields.sch">
+  </x:description>
+  ```
+  or
+  ```
+  <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dpla="http://dp.la/about/map/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+    xmlns:oclcterms="http://purl.org/oclc/terms/"
+    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
+    xmlns:oclc="http://purl.org/oclc/terms/"
+    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+    xmlns:schema="http://schema.org"
+    xmlns:svcs="http://rdfs.org/sioc/services"
+    stylesheet="../../transforms/dplah.xsl">
+  </x:description>
+  ```
+2. Within the `x:description` parent node, write a test scenario (`x:scenario`) to test each case per validation rule, XSL matched template, or XSL named template. You can nest `x:scenario` elements as makes sense for what your testing (e.g., for the schematron tests, you could add a top-level scenario per pattern, then a child scenario within each for both checking valid XML passes and invalid XML returns the expected errors).
+3. Each XSpec test has sample XML ('fixtures') that is passed in and the result checked. This data is passed via `x:context` within each scenario. You can either put in the fixture XML directly in the `x:content` node in each `x:scenario`, or you can have `x:context` reference fixture files in `fixtures` via an `href` attribute and relative path to the file in the repository.
+
+When ready to check your test suite locally, you can run the tests as described below.
+
+### Running XSpec Unit Tests
+
+To run just the XSLT Unit tests (e.g. every `.xspec` file within `tests/xslt/`):
+
+```
+$ make test-xslt
+  [test filename]
+  [build output]
+  [test output]
+  [repeat the above for the next test file]
+```
+
+To run just the Schematron Unit tests (e.g. every `.xspec` file within `tests/schematron/`):
+
+```
+$ make test-sch
+  [test filename]
+  [build output]
+  [test output]
+  [repeat the above for the next test file]
+```
+
+To run all Unit tests (e.g. every `.xspec` file within `tests/schematron/` and within `tests/xslt/`)):
+
+```
+$ make test
+  [test filename]
+  [build output]
+  [test output]
+  [repeat the above for the next test file]
+```
+
+All of the above generate test reports in the relevant test directory, e.g. `tests/schematron/xspec` or `tests/schematron/xspec`. These are HTML and XML versions of the output, which can be helpful to review if debugging a failing test (just open the directory in your web browser via a local filepath). These are always ignored by git, so never checked into GitHub.
+
+## CI/CD
+
+[CircleCI](https://circleci.com/gh/tulibraries/aggregator_mdx) manages running CI/CD for this application. It does the following, using the same Docker images we use locally:
+- build the Docker image with the repository files from that commit copied over;
+- run a version of `make test` with a command to fail if `Error running the test suite` or `Error compiling the test suite` appears in the test output.
+- [WIP] runs a coverage check that for every `.sch` file in `validations/` and `.xsl` in `transforms/` has a test file `[same filename].xspec` in `tests/`. CI will fail if this coverage is less than 80%.
+
+## Deployment
+
+The transformation and validation tasks in Airflow pull the `master` branch of this repository; so deployment is via successful CI and merging of PRs into `master`.
