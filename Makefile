@@ -7,7 +7,7 @@ saxon: build
 	@echo "Running saxon cli"
 	docker-compose run saxon -s:${s} -xsl:${xsl} -o:${o}
 
-test: build test-sch test-xslt
+test: build test-sch test-xslt test-coverage
 	@echo "Testing xslt and schematron with Docker"
 
 test-sch:
@@ -24,10 +24,14 @@ test-xslt:
 		docker-compose run xspec "$$xspectest" ; \
 	done
 
-test-ci:
+test-ci: test-coverage
 	@echo "CI/CD testing *.xspec with Docker & shell scripts"
 	docker build -t xspec -f .docker/test/Dockerfile .
 	bash .circleci/tests.sh
+
+test-coverage:
+	@echo "Test Coverage being generated"
+	bash .circleci/coverage.sh
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
