@@ -29,7 +29,7 @@ schematron="../../validations/padigital_reqd_fields.sch">
         <x:expect-assert id="Required3"/>
       </x:scenario>
 
-      <x:scenario label="not valid: missing dataProvider">
+      <x:scenario label="not valid: missing data provider">
         <x:context href="../../fixtures/schematron/invalid_missing_dataprovider.xml"/>
         <x:expect-assert id="Required4"/>
       </x:scenario>
@@ -38,6 +38,7 @@ schematron="../../validations/padigital_reqd_fields.sch">
         <x:context href="../../fixtures/schematron/invalid_missing_multiple.xml"/>
         <x:expect-assert id="Required1"/>
         <x:expect-assert id="Required2"/>
+        <x:expect-assert id="Required3"/>
         <x:expect-assert id="Required4"/>
       </x:scenario>
     </x:scenario>
@@ -78,6 +79,41 @@ schematron="../../validations/padigital_reqd_fields.sch">
         <x:context href="../../fixtures/schematron/invalid_empty_isshownat2.xml"/>
         <x:expect-assert id="ItemURL1"/>
       </x:scenario>
+
+      <x:scenario label="not valid: isShownAt URL is not URL">
+        <x:context>
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title/>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell
+              tower of Independence Hall and Commodore John Barry monument. There is a tent and loud
+              speaker system immediately in front of Independence Hall entrance. Note dirigible in
+              left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia,
+              Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and
+              research use. For access to the original, contact: Temple University Libraries.
+              Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>This is not a URL</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Temple University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="ItemURL2"/>
+      </x:scenario>
     </x:scenario>
   </x:scenario>
 
@@ -88,12 +124,12 @@ schematron="../../validations/padigital_reqd_fields.sch">
     </x:scenario>
 
     <x:scenario label="not valid">
-      <x:scenario label="not valid: empty Data Provider 1">
+      <x:scenario label="not valid: empty edm:dataProvider 1">
         <x:context href="../../fixtures/schematron/invalid_empty_dataprovider1.xml"/>
         <x:expect-assert id="EDMDp1"/>
       </x:scenario>
 
-      <x:scenario label="not valid: empty Data Provider 2">
+      <x:scenario label="not valid: empty edm:dataProvider 2">
         <x:context href="../../fixtures/schematron/invalid_empty_dataprovider2.xml"/>
         <x:expect-assert id="EDMDp1"/>
       </x:scenario>
