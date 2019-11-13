@@ -10,7 +10,7 @@ saxon: up
 test: up test-sch test-xslt
 	@echo "Testing xslt and schematron with Docker"
 
-test-sch: up
+test-sch:
 	@echo "Testing schematron with Docker"
 	for xspectest in $(shell ls tests/schematron/*.xspec); do \
 		echo "$$xspectest" ; \
