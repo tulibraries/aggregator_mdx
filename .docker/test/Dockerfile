@@ -10,7 +10,7 @@ RUN mkdir -p /saxon && \
 	chmod +x ${SAXON_CP}
 
 ### install XSpec
-ENV XSPEC_VERSION=1.3.0
+ENV XSPEC_VERSION=1.4.0
 ENV XSPEC_HOME /xspec
 RUN curl -fSL -o xspec-${XSPEC_VERSION}.tar.gz https://github.com/xspec/xspec/archive/v${XSPEC_VERSION}.tar.gz && \
 	tar xvzf xspec-${XSPEC_VERSION}.tar.gz && \
