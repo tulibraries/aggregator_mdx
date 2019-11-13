@@ -9,7 +9,7 @@
     <ns prefix="edm" uri="http://www.europeana.eu/schemas/edm/"/>
     <ns prefix="oai_dc" uri="http://www.openarchives.org/OAI/2.0/oai_dc/"/>
 
-    <pattern>
+    <pattern id="NoHarvestPattern">
       <title>Check to invalidate HP Western PA Maps records</title>
       <rule context="oai_dc:dc/dcterms:isPartOf">
         <assert test="normalize-space(.)!='Western Pennsylvania Maps'">Records from the Western Pennsylvania Maps collection are invalid</assert>
