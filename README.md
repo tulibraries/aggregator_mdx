@@ -3,8 +3,6 @@ This repository contains metadata transformations, validations, Elasticsearch ma
 
 ### Transforms
 
-MY REALLY FUCKING AWESOME CHANGESjkdlf;asjfkdl;safjdskal
-
 The XSLT (all version 2) is written in 3 levels:
 
 - collection-specific XSLT (e.g. `transforms/temple_p16002coll25.xsl`): these are the files you actually run against the desired XML files. This imports the provider-specific XSLT (next).
