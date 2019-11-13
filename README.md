@@ -135,7 +135,7 @@ All of the above generate test reports in the relevant test directory, e.g. `tes
 [CircleCI](https://circleci.com/gh/tulibraries/aggregator_mdx) manages running CI/CD for this application. It does the following, using the same Docker images we use locally:
 - build the Docker image with the repository files from that commit copied over;
 - run a version of `make test` with a command to fail if `Error running the test suite` or `Error compiling the test suite` appears in the test output.
-- [WIP] runs a coverage check that for every `.sch` file in `validations/` and `.xsl` in `transforms/` has a test file `[same filename].xspec` in `tests/`. CI will fail if this coverage is less than 80%.
+- run a coverage check that for every `.sch` file in `validations/` and `.xsl` in `transforms/` has a test file `[same filename].xspec` in `tests/`. CI will fail if this coverage is less than 70%.
 
 ## Deployment
 
