@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../validations/padigital_missing_thumbnailURL.sch">
+  <x:scenario label="RequiredElementsPattern">
+    <x:scenario label="valid: edm:preview">
+      <x:context href="../../fixtures/schematron/valid_edm_preview.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid: missing edm:preview">
+      <x:context href="../../fixtures/schematron/invalid_missing_thumbnailURL.xml"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="ThumbnailURLElementPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_edm_preview_pattern.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty thumbnail 1">
+        <x:context href="../../fixtures/schematron/invalid_empty_thumbnailURL1.xml"/>
+        <x:expect-assert id="ThumbnailURL1"/>
+      </x:scenario>
+      <x:scenario label="not valid: empty thumbnail 2">
+        <x:context href="../../fixtures/schematron/invalid_empty_thumbnailURL2.xml"/>
+        <x:expect-assert id="ThumbnailURL1"/>
+      </x:scenario>
+    <x:scenario>
+  </x:scenario>
+</x:description>
