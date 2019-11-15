@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../validations/RemoveHPWesternPAMaps.sch">
+  <x:scenario label="NoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_HPWesternPAMaps.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_HPWesternPAMaps.xml"/>
+      <x:expect-assert id="NoHarvestPattern1"/>
+    <x:scenario>
+  </x:scenario>
+</x:description>

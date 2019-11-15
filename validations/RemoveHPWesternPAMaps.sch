@@ -12,7 +12,7 @@
     <pattern id="NoHarvestPattern">
       <title>Check to invalidate HP Western PA Maps records</title>
       <rule context="oai_dc:dc/dcterms:isPartOf">
-        <assert test="normalize-space(.)!='Western Pennsylvania Maps'">Records from the Western Pennsylvania Maps collection are invalid</assert>
+        <assert test="normalize-space(.)!='Western Pennsylvania Maps'" id="NoHarvestPattern1" role="error">Records from the Western Pennsylvania Maps collection are invalid</assert>
       </rule>
     </pattern>
 
