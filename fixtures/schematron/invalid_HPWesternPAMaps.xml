@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dpla="http://dp.la/about/map/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:oclc="http://purl.org/oclc/terms/" xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:schema="http://schema.org" xmlns:padig="http://padigitial.org/ns/" xmlns:svcs="http://rdfs.org/sioc/services">
+   <edm:isShownAt>oai:histpitt.library.pitt.edu:pitt_14warp17</edm:isShownAt>
+   <dcterms:isPartOf>Western Pennsylvania Maps</dcterms:isPartOf>
+   <dcterms:isPartOf>Warrantee Atlas of Allegheny County, Pennsylvania</dcterms:isPartOf>
+   <dcterms:title>Plate no. 17 - Baldwin and Lower St. Clair Townships</dcterms:title>
+   <dcterms:creator>Pennsylvania. Dept. of Internal Affairs.</dcterms:creator>
+   <dcterms:subject>Real property--Pennsylvania--Allegheny</dcterms:subject>
+   <dcterms:subject>County--Maps</dcterms:subject>
+   <dcterms:subject>Allegheny County (Pa.)--Maps.</dcterms:subject>
+   <dcterms:description>Warrantee atlas of Allegheny County, Pennsylvania : constructed from the records on file in the Department of Internal Affairs, and surveys made on the ground during 1909, 1910, 1912 under the direction of Henry Houck.</dcterms:description>
+   <dcterms:description>Baird, Thomas; Barr, Alexander; Bausman, Jacob; Bausman, Nicholas; Boggs, David; Bousman, Nicholas; Bradford, Chas. S.; Briggs, Thomas W.; Broddy, James; Butler, William; Calhoon, Noble; Calhoun, Noble; Carrothers, James; Carswell, James; Cool, Peter; Curry, Joseph; Curry, Robert; DePantreaux, Lucas; Devlin, Peter C.; Eidenmiller, Christian; Evault, Henry; Evault, Samuel; Ewalt, Saml.; Fetterman, Charles S.; Fowler, Alexander; Frew, John; Fry, William; Giffin, Hervey; Glass, Johnston; Glass, Samuel; Grieson, Marion; Hamilton , Jas.; Hamilton, James; Haymaker, Jacob; Hays, James H.; Henderson, William; Hulse, Richard; Iwrin, Richard; Johnson, James; Kennedy, David; Kinkead, John; Laughlin, James; Long, Joshua; Long, Thomas; Long , William; Lownsdale, Thomas; McCleland, James; McClurgh, Joseph; McDowell, Joseph; McGeehan, Brice; McKee, John; McKee, Robert; McKee, Robert Jr.; McKee, Robert Sr.; McLaughlin, William; Martin, James; Martin, William; Miller, Christoph ; Miller , Jacob; Moore, James B.; O' Neal, John; Ormsby, John; Ormsby, Oliver; Phillips, Wm.; Purviance, Robert; Purviance, Samuel; Rasher, John; Raul, John; Reed, John Jr.; Roberts, Jno.; Roberts, John; Runshaw, Edward; Rutherford, James; Scott, Abraham; Shaver, Henry; Singer, Casper; Small, Jno.; Smih, Charles; Spencer, Alice; Stewart, John; Stewart, William; Strawbridge, David; Thomas, Elim; Thompson, Robert; Travis, Jno.; Willock, John; Wilson, David M.; Wilson, John; Wilson, Robert; Young, Robert</dcterms:description>
+   <edm:dataProvider>University of Pittsburgh</edm:dataProvider>
+   <dcterms:date>1914-01-01</dcterms:date>
+   <dcterms:format>map</dcterms:format>
+   <dcterms:identifier>pitt:14warp17</dcterms:identifier>
+   <dcterms:identifier>pitt:&#160;14warp17</dcterms:identifier>
+   <dcterms:relation>Warrantee atlas of Allegheny County, Pennsylvania : constructed from the records on file in the Department of Internal Affairs, and surveys made on the ground during 1909, 1910, 1912</dcterms:relation>
+   <dcterms:rights>The copyright and related rights status of this Item has been reviewed by the organization that has made the Item available, but the organization was unable to make a conclusive determination as to the copyright status of the Item. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</dcterms:rights>
+   <edm:rights>http://rightsstatements.org/vocab/UND/1.0/</edm:rights>
+   <edm:preview>http://historicpittsburgh.org/islandora/object/pitt%3A14warp17/datastream/TN/view/Plate%20no.%2017%20%20-%20Baldwin%20and%20Lower%20St.%20Clair%20Townships.jpg</edm:preview>
+   <edm:isShownAt>http://historicpittsburgh.org/islandora/object/pitt%3A14warp17</edm:isShownAt>
+   <dpla:intermediateProvider>Historic Pittsburgh</dpla:intermediateProvider>
+   <edm:provider>PA Digital</edm:provider>
+</oai_dc:dc>
