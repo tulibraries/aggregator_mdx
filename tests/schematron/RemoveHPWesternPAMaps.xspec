@@ -9,6 +9,6 @@
     <x:scenario label="not valid">
       <x:context href="../../fixtures/schematron/invalid_HPWesternPAMaps.xml"/>
       <x:expect-assert id="NoHarvestPattern1"/>
-    <x:scenario>
+    </x:scenario>
   </x:scenario>
 </x:description>
