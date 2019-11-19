@@ -23,7 +23,7 @@ for file in validations/*.xsl ; do \
 done
 
 coverage=$(echo | awk -v count_exists=$count_exists -v count_total=$count_total '{print (count_exists / count_total)*100}')
-if (( $(echo "$coverage" | awk '{print ($1 < 71)}') )); then
+if (( $(echo "$coverage" | awk '{print ($1 < 31)}') )); then
   echo "Test coverage is too low: "
   echo $coverage
   exit 1
