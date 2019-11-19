@@ -28,3 +28,5 @@ if (( $(echo "$coverage" | awk '{print ($1 < 31)}') )); then
   echo $coverage
   exit 1
 fi
+echo "Test coverage is good: "
+echo $coverage
