@@ -73,7 +73,7 @@
     </x:scenario>
     <x:scenario label="not valid">
       <x:context href="../../fixtures/schematron/invalid_RightsNoHarvest.xml"/>
-      <x:expect-assert id="Rights1NoHarvest1"/>
+      <x:expect-assert id="RightsNoHarvest1"/>
     </x:scenario>
   </x:scenario>
 </x:description>

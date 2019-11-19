@@ -3,7 +3,7 @@
   schematron="../../validations/funcake_reqd_fields.sch">
 
   <x:scenario label="RequiredElementsPattern">
-    <x:scenario label="valid: dcterms:identifier"
+    <x:scenario label="valid: dcterms:identifier">
       <x:context>
         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
           xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
@@ -67,8 +67,8 @@
           <edm:provider>PA Digital</edm:provider>
         </oai_dc:dc>
       </x:context>
-      </x:scenario>
-    <x:expect-assert id="Required1"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
   </x:scenario>
 
   <x:scenario label="IdentifierElementPattern">

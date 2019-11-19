@@ -14,7 +14,7 @@
     <pattern id="IdentifierElementPattern">
         <title>Additional Identifier Requirements</title>
         <rule context="oai_dc:dc/dcterms:identifier">
-            <assert test="normalize-space(.)" id="Identifer1" role="error">The identifier element must contain text</assert>
+            <assert test="normalize-space(.)" id="Identifier1" role="error">The identifier element must contain text</assert>
         </rule>
     </pattern>
 </schema>
