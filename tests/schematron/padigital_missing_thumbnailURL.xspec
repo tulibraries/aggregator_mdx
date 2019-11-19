@@ -25,6 +25,6 @@
         <x:context href="../../fixtures/schematron/invalid_empty_thumbnailURL2.xml"/>
         <x:expect-assert id="ThumbnailURL1"/>
       </x:scenario>
-    <x:scenario>
+    </x:scenario>
   </x:scenario>
 </x:description>
