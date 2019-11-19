@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dpla="http://dp.la/about/map/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:oclc="http://purl.org/oclc/terms/" xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:schema="http://schema.org" xmlns:padig="http://padigitial.org/ns/" xmlns:svcs="http://rdfs.org/sioc/services">
+   <dcterms:title>NAACP Philadelphia Branch</dcterms:title>
+   <dcterms:creator>Mosley, John W.</dcterms:creator>
+   <dcterms:subject>Meetings</dcterms:subject>
+   <dcterms:subject>Portraits</dcterms:subject>
+   <dcterms:subject>National Association for the Advancement of Colored People</dcterms:subject>
+   <dcterms:description>Members of the NAACP Philadelphia Branch pose for a candid photograph.</dcterms:description>
+   <dcterms:publisher>Mosley</dcterms:publisher>
+   <edm:dataProvider>Temple University</edm:dataProvider>
+   <dcterms:date>1944</dcterms:date>
+   <dcterms:format>Photographs</dcterms:format>
+   <dcterms:type>Image</dcterms:type>
+   <schema:fileFormat>image/jp2</schema:fileFormat>
+   <dcterms:identifier>dplapa:TEMPLE_p15037coll10_77</dcterms:identifier>
+   <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll10/id/77</edm:isShownAt>
+   <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll10/id/77</edm:preview>
+   <dcterms:isPartOf>NAACP, Philadelphia Branch Photographs</dcterms:isPartOf>
+   <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+   <dcterms:rights>This material is subject to copyright law and is made available for private study, scholarship, and research purposes only. For access to the original or a high resolution reproduction, and for permission to publish, please contact Temple University Libraries, Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+   <edm:provider>PA Digital</edm:provider>
+</oai_dc:dc>
