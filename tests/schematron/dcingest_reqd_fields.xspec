@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../validations/dcingest_reqd_fields.sch">
+  <x:scenario label="RequiredElementsPattern">
+    <x:scenario label="valid: dc:title">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid: missing title">
+      <x:context href="../../fixtures/schematron/invalid_missing_dc_title.xml"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
+    <x:scenario label="valid: dc:rights>">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid: missing rights">
+      <x:context href="../../fixtures/schematron/invalid_missing_dc_rights.xml"/>
+      <x:expect-assert id="Required2"/>
+    </x:scenario>
+    <x:scenario label="not valid: missing multiple">
+      <x:context href="../../fixtures/schematron/invalid_missing_dc_multiple.xml"/>
+      <x:expect-assert id="Required1"/>
+      <x:expect-assert id="Required2"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="TitleElementPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty title 1">
+        <x:context href="../../fixtures/schematron/invalid_empty_dc_title1.xml"/>
+        <x:expect-assert id="Title1"/>
+      </x:scenario>
+      <x:scenario label="not valid: empty title 2">
+        <x:context href="../../fixtures/schematron/invalid_empty_dc_title2.xml"/>
+        <x:expect-assert id="Title1"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="RightsElementPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty rights 1">
+        <x:context href="../../fixtures/schematron/invalid_empty_dc_rights1.xml"/>
+        <x:expect-assert id="Rights1"/>
+      </x:scenario>
+      <x:scenario label="not valid: empty rights 2">
+        <x:context href="../../fixtures/schematron/invalid_empty_dc_rights2.xml"/>
+        <x:expect-assert id="Rights1"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="RelNoHarvest">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RelNoHarvest.xml"/>
+      <x:expect-assert id="RelNoHarvest1"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="RightsNoHarvest">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RightsNoHarvest.xml"/>
+      <x:expect-assert id="Rights1NoHarvest1"/>
+    </x:scenario>
+  </x:scenario>
+</x:description>
