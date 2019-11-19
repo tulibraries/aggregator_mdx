@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
-  schematron="../../validations/RemoveHPWesternPAMaps.sch">
+  schematron="../../validations/RemoveTempleU.sch">
   <x:scenario label="NoHarvestPattern">
     <x:scenario label="valid">
       <x:context href="../../fixtures/schematron/valid_RemoveTempleU.xml"/>
