@@ -24,7 +24,9 @@ test-xslt:
 		docker-compose run xspec "$$xspectest" ; \
 	done
 
-test-ci: test-coverage
+test-ci: test-bash test-coverage
+
+test-bash:
 	@echo "CI/CD testing *.xspec with Docker & shell scripts"
 	docker build -t xspec -f .docker/test/Dockerfile .
 	bash .circleci/tests.sh
