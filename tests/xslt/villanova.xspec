@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dpla="http://dp.la/about/map/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+    xmlns:oclcterms="http://purl.org/oclc/terms/"
+    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
+    xmlns:oclc="http://purl.org/oclc/terms/"
+    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+    xmlns:schema="http://schema.org"
+    xmlns:svcs="http://rdfs.org/sioc/services"
+    stylesheet="../../transforms/villanova.xsl">
+
+  <!-- Drop deleted records --> 
+  
+  <x:scenario label="OAI Deleted Records are Skipped">
+    <x:context>
+      <oai:record>
+        <oai:header status="deleted">
+          <identifier>oai:record-that-should-be-ignored</identifier>
+          <setSpec>TEST1</setSpec>
+        </oai:header>
+        <metadata>
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+            http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+            xmlns="http://purl.org/dc/elements/1.1/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+            <title>Champaign County, Illinois</title>
+            <creator>United States. Agricultureal Adjustment Administration</creator>
+            <identifier>record-that-should-be-ignored</identifier>
+          </oai_dc:dc>
+        </metadata>
+      </oai:record>
+      <oai:record>
+        <oai:header>
+          <identifier>oai:record-that-should-be-kept</identifier>
+          <setSpec>TEST2</setSpec>
+        </oai:header>
+        <metadata>
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+            http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+            xmlns="http://purl.org/dc/elements/1.1/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+            <title>Champaign County, Illinois</title>
+            <creator>United States. Agricultureal Adjustment Administration</creator>
+            <identifier>record-that-should-be-kept</identifier>
+          </oai_dc:dc>
+        </metadata>
+      </oai:record>
+    </x:context>
+    <x:expect label="1 record remains" test="count(oai_dc:dc) = 1"/>
+    <x:expect label="OAI Record Identifier of 1 Record is record-that-should-be-kept"
+      test="oai_dc:dc/edm:isShownAt = 'record-that-should-be-kept'" />
+  </x:scenario>
+  
+  <!-- Filtered Identifiers -->
+  <!-- Commented out until villanova.xsl is updated to include filters.xsl
+
+    <x:scenario label="Records with Filtered Identifiers are Skipped">
+    <x:context>
+      <oai:record>
+        <oai:header>
+          <identifier>oai:test-filter-record-1</identifier>
+          <setSpec>TEST1</setSpec>
+        </oai:header>
+        <metadata>
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+              http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+              xmlns="http://purl.org/dc/elements/1.1/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+            <title>Champaign County, Illinois</title>
+            <creator>United States. Agricultureal Adjustment Administration</creator>
+            <identifier>test-filter-record-1</identifier>
+          </oai_dc:dc>
+        </metadata>
+      </oai:record>
+      <oai:record>
+        <oai:header>
+          <identifier>oai:record-that-should-be-kept</identifier>
+          <setSpec>TEST2</setSpec>
+        </oai:header>
+        <metadata>
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+                    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                    xmlns="http://purl.org/dc/elements/1.1/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+            <title>Champaign County, Illinois</title>
+            <creator>United States. Agricultureal Adjustment Administration</creator>
+            <identifier>record-that-should-be-kept</identifier>
+          </oai_dc:dc>
+        </metadata>
+      </oai:record>
+      <oai:record>
+        <oai:header>
+          <identifier>oai:test-filter-record-2</identifier>
+          <setSpec>TEST3</setSpec>
+        </oai:header>
+        <metadata>
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+              http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+              xmlns="http://purl.org/dc/elements/1.1/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+            <title>Champaign County, Illinois</title>
+            <creator>United States. Agricultureal Adjustment Administration</creator>
+            <identifier>test-filter-record-2</identifier>
+          </oai_dc:dc>
+        </metadata>
+      </oai:record>
+    </x:context>
+    <x:expect label="1 record remains" test="count(oai_dc:dc) = 1"/>
+    <x:expect label="Record Identifier of Record is not one of filtered records"
+      test="oai_dc:dc/dcterms:identifier != 'test-filter-record-1'" />
+    <x:expect label="Record Identifier of Record is not one of filtered records"
+      test="oai_dc:dc/dcterms:identifier != 'test-filter-record-2'" />
+  </x:scenario>
+  -->
+    
+    <!-- Title -->
+    
+    <x:scenario label="dc:title is transformed to dcterms:title">
+        <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'Beadle monthly.'"/>
+    </x:scenario>
+    
+    <!-- Type (copied from dplah.xspec) -->
+    
+    <x:scenario label="dc:type values are matched and remediated for known strings">
+    <x:scenario label="Text Type Remediation">
+      <x:scenario label="Text Type Remediation: Starts with lowercase text">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>textual kittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: Starts with mixed case text">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>TEXTresource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: text exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>text</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: text exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>TEXT</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: ends with text becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>hello-text</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-text'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Image Type Remediation">
+      <x:scenario label="Image Type Remediation: Starts with lowercase image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>image of kittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: Starts with mixed case Image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>ImAgEresource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Image Remediation: image exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>image</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: image exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>IMAGE</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: ends with image becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>hello-image</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-image'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Moving Image Type Remediation">
+      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, no spaces movingimage">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>movingimagekittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, single-spaced moving image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>moving imagekittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Starts with mixed case moving image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>MOVING ImAgEresource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Remediation: Moving Image exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>moving image</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Moving Image exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>MOVING IMAGE</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: ends with Moving Image becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>hello-moving-image</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-moving-image'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Sound Type Remediation">
+      <x:scenario label="Sound Type Remediation: Starts with lowercase sound">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>sound of kittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Starts with mixed case sound">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>SoUnDresource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Sound exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>sound</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Sound exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>SOUND</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: ends with sound becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>hello-sound</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-sound'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Physical Object Type Remediation">
+      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, no spaces physicalobject">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>physicalobjectkittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, single-spaced Physical Object">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>physical object kittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Starts with mixed case Physical Object">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>PHYSical Objectresource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Remediation: Physical Object exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>physical object</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Physical Object exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>PHYSICAL OBJECT</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: ends with Physical Object becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>hello-physical-object</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-physical-object'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Interactive Resource Type Remediation">
+      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, no spaces interactiveresource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>interactiveresourcepuppies</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, single-spaced Interactive Resource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>interactive resource kittens</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Starts with mixed case Interactive Resource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>InterActive Resource resources</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Remediation: Interactive Resource exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>interactive resource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Interactive Resource exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>INTERACTIVE RESOURCE</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: ends with Interactive Resource becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <type>hello-interactive-resource</type>
+                <identifier>record-that-should-be-kept</identifier>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-interactive-resource'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+    
+    <!-- Creator -->
+    
+    <x:scenario label="dc:creator is transformed to dcterms:creator">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:creator is transformed to dcterms:creator" test="oai_dc:dc/dcterms:creator = 'Beadle, Barry.'"/>
+    </x:scenario>
+    
+    <!-- Publisher -->
+    
+    <x:scenario label="dc:publisher is transformed to dcterms:publisher">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:publisher is transformed to dcterms:publisher" test="oai_dc:dc/dcterms:publisher = 'New York : Beadle and Company'"/>
+    </x:scenario>
+    
+    <!-- Date -->
+    
+    <x:scenario label="dc:date is transformed to dcterms:date">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:date is transformed to dcterms:date" test="oai_dc:dc/dcterms:date = '1866'"/>
+    </x:scenario>
+    
+    <!-- Subject -->
+    
+    <x:scenario label="dc:subject is transformed to dcterms:subject">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:subject is transformed to dcterms:subject" test="oai_dc:dc/dcterms:subject = 'Popular literature -- Specimens.'"/>
+    </x:scenario>
+    
+    <!-- Language -->
+    
+    <x:scenario label="dc:language is transformed to dcterms:language">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:language is transformed to dcterms:language" test="oai_dc:dc/dcterms:language = 'English'"/>
+    </x:scenario>
+    
+    <!-- Rights -->
+    
+    <x:scenario label="rights processing">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'https://creativecommons.org/publicdomain/zero/1.0/'"/>
+        <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'Villanova Rights Statement'"/>
+    </x:scenario>
+    
+    <!-- Identifiers -->
+    
+    <x:scenario label="identifier processing">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dcterms:identifier is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'vudl:293113'"/>
+        <x:expect label="base URL is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digital.library.villanova.edu/Item/vudl:293113'"/>
+      <x:expect label="thumbnail URL is generated from identifier" test="oai_dc:dc/edm:preview = 'https://digital.library.villanova.edu/files/vudl:293113/THUMBNAIL'"></x:expect>
+    </x:scenario>
+    
+    <!-- Contributing Institution -->
+    
+    <x:scenario label="hard coded dataProvider">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="hard coded dataProvider" test="oai_dc:dc/edm:dataProvider = 'Villanova University'"/>
+    </x:scenario>
+    
+    <!-- Collection name -->
+    
+    <x:scenario label="hard coded collectionName">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="hard coded collectionName" test="oai_dc:dc/dcterms:isPartOf = 'Villanova University Digital Collections'" />
+    </x:scenario>
+    
+    <!-- Hub -->
+    
+    <x:scenario label="hard coded hub name">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"></x:expect>
+    </x:scenario>
+
+</x:description>
