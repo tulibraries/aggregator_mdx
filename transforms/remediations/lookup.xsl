@@ -5,15 +5,19 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dpla="http://dp.la/about/map/"
+    xmlns:padig="http://padigital.org/ns"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    xmlns:padig="http://padigitial.org/ns/"
     xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
     xmlns:oclcterms="http://purl.org/oclc/terms/"
     xmlns:oai="http://www.openarchives.org/OAI/2.0/"
     xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
     xmlns:oclc="http://purl.org/oclc/terms/"
+    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+    xmlns:schema="http://schema.org"
+    xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
-
+    
     <!-- lookup table for recommended DCMI Types terms/URIs -->
     <xsl:param name="dcmiType">
         <padig:type string="collection" uri="http://purl.org/dc/dcmitype/Collection">collection</padig:type>
