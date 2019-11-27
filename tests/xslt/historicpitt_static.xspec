@@ -15,9 +15,9 @@
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
     stylesheet="../../transforms/historicpitt_static.xsl">
-    
-    <!-- Drop deleted records --> 
-    
+
+    <!-- Drop deleted records -->
+
     <x:scenario label="OAI Deleted Records are Skipped">
         <x:context>
             <oai:record>
@@ -59,9 +59,9 @@
         <x:expect label="OAI Record Identifier of 1 Record is record-that-should-be-kept"
             test="oai_dc:dc/dcterms:identifier = 'record-that-should-be-kept'" />
     </x:scenario>
-    
+
     <!-- Filtered Identifiers -->
-        
+
     <x:scenario label="Records with Filtered Identifiers are Skipped">
     <x:context>
       <oai:record>
@@ -124,7 +124,7 @@
   </x:scenario>
 
     <!-- Title -->
-    
+
     <x:scenario label="dc:title processing">
         <x:context>
             <oai:record>
@@ -138,54 +138,54 @@
         </x:context>
         <x:expect label="1st dc.title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'First Title'"/>
         <x:expect label="2nd dc:title is transformed to dcterms:alternative" test="oai_dc:dc/dcterms:alternative = 'Second Title'"/>
-    </x:scenario>    
-    
+    </x:scenario>
+
     <!-- Relation -->
-    
+
     <x:scenario label="dc:relation is transformed to dcterms:relation">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
         <x:expect label="dc:relation is transformed to dcterms:relation" test="oai_dc:dc/dcterms:relation = 'Pittsburgh City Photographer Collection, 1901-2002'"/>
     </x:scenario>
-    
+
     <!-- Identifier -->
-    
+
     <x:scenario label="dc:identifier is transformed to dcterms:identifier">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
         <x:expect label="dc:identifer is transformed to dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'pitt:715.3420584.CP'"/>
     </x:scenario>
-    
+
     <!-- URL processing -->
-    
+
     <x:scenario label="dc:identifier.thumbnail is parsed into edm:isShownAt and edm:preview">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
         <x:expect label="edm:isShownAt is derived from thumbnail" test="oai_dc:dc/edm:isShownAt = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP'" />
         <x:expect label="dc:identifier.thumbnail is transformed to edm:preview" test="oai_dc:dc/edm:preview = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP/datastream/TN/view/Overbrook%20School.jpg'"/>
     </x:scenario>
-    
+
     <!-- Collection name -->
     <!-- Note issue with apostrophe in collection name -->
-    
+
     <x:scenario label="hard coded collection name">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
-        <x:expect label="hard coded collection name" test="oai_dc:dc/dcterms:isPartOf = 'Fur Trader\'s Journal'"/>
+        <x:expect label="hard coded collection name" test='oai_dc:dc/dcterms:isPartOf = "Fur Trader&apos;s Journal"'/>
     </x:scenario>
 
     <!-- Intermediate provider -->
-    
+
     <x:scenario label="hard coded intermediate provider">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
         <x:expect label="hard coded intermediate provider" test="oai_dc:dc/dpla:intermediateProvider= 'Historic Pittsburgh'"/>
     </x:scenario>
-    
+
     <!-- Data provider -->
-    
+
     <x:scenario label="hard coded data provider">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
         <x:expect label="hard coded dataprovider" test="oai_dc:dc/edm:dataProvider= 'University of Pittsburgh'"/>
     </x:scenario>
-    
+
     <!-- Hub -->
-    
+
     <x:scenario label="hard coded hub name">
         <x:context href="../../fixtures/historicpitt_test.oaidc_2.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
