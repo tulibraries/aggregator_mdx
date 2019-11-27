@@ -22,8 +22,8 @@
 
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
 
-    <xsl:include href="/home/combine/data/combine/transformations/lookup.xsl"/>
-    <xsl:include href="/home/combine/data/combine/transformations/filter.xsl"/>
+    <xsl:include href="remediations/lookup.xsl"/>
+    <xsl:include href="remediations/filter.xsl"/>
 
     <!-- drop nodes we don't care about (header values, records marked deleted, specific relation fields) -->
     <xsl:template match="text() | @*"/>
@@ -137,25 +137,25 @@
     <xsl:template match="Type">
         <xsl:if test="normalize-space(.) != ''">
             <xsl:choose>
-                <xsl:when test="matches(lowercase(.), '(^text.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '(^text.*$)', 'i')">
                     <dcterms:type>Text</dcterms:type>
                 </xsl:when>
-                <xsl:when test="matches(lowercase(.), '(^image.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '(^image.*$)', 'i')">
                     <dcterms:type>Image</dcterms:type>
                 </xsl:when>
-                <xsl:when test="matches(lowercase(.), '^(movingimage.*$|moving\simage.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '^(movingimage.*$|moving\simage.*$)', 'i')">
                     <dcterms:type>Moving Image</dcterms:type>
                 </xsl:when>
-                <xsl:when test="matches(lowercase(.), '^(sound.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '^(sound.*$)', 'i')">
                     <dcterms:type>Sound</dcterms:type>
                 </xsl:when>
-                <xsl:when test="matches(lowercase(.), '^(physicalobject.*$|physical\sobject.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '^(physicalobject.*$|physical\sobject.*$)', 'i')">
                     <dcterms:type>Physical Object</dcterms:type>
                 </xsl:when>
-                <xsl:when test="matches(lowercase(.), '^(interactiveresource.*$|interactive\sresource.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '^(interactiveresource.*$|interactive\sresource.*$)', 'i')">
                     <dcterms:type>Interactive Resource</dcterms:type>
                 </xsl:when>
-                <xsl:when test="matches(lowercase(.), '^(stillimage.*$|still\simage.*$)', 'i')">
+                <xsl:when test="matches(lower-case(.), '^(stillimage.*$|still\simage.*$)', 'i')">
                     <dcterms:type>Still Image</dcterms:type>
                 </xsl:when>
                 <!-- Format -->
@@ -187,7 +187,7 @@
     <!-- Rights -->
     <xsl:template name="static-rights-statement">
       <xsl:element name="dcterms:rights">
-        <xsl:value-of>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</xsl:value-of>
+        <xsl:value-of>High-resolution images from the Free Library of Philadelphia&apos;s collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</xsl:value-of>
       </xsl:element>
     </xsl:template>
 
