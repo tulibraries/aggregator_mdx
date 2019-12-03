@@ -678,7 +678,7 @@
      </x:scenario>
 
 <!-- Spatial (map and delimit) -->
-   <x:scenario label="dcterms:spatial maps to dcterms:apatial and delimits on semicolon">
+   <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
      <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
      <x:expect label="spatial is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -692,6 +692,7 @@
          <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
          <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
          <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+         <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
          <dcterms:publisher>Evening Bulletin</dcterms:publisher>
          <dcterms:temporal>20th century</dcterms:temporal>
          <dcterms:language>English</dcterms:language>
