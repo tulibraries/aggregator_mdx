@@ -24,53 +24,74 @@
 <!-- Title; add title[1] to xsl and then add test here -->
    <x:scenario label="dc:title becomes space-normalized dcterms:title">
     <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
-     <x:expect label="dc:title becomes dcterms:title)"
+     <x:expect label="dc:title becomes dcterms:title"
        test="oai_dc:dc/dcterms:title = 'A citizen gives his opinion on a proposed disco hall.'" />
    </x:scenario>
 
 <!-- Alternate title (map and delimit) -->
-   <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
-     <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
-     <x:expect label="alt title is mapped and delimited">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
-         <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
-         <dcterms:alternative>Here's another alt title</dcterms:alternative>
-         <dcterms:date>1978-07-25</dcterms:date>
-         <dcterms:creator>Schell, Albert F.</dcterms:creator>
-         <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
-         <dcterms:subject>Public Meetings</dcterms:subject>
-         <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
-         <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
-         <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-         <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
-         <dcterms:publisher>Evening Bulletin</dcterms:publisher>
-         <dcterms:temporal>20th century</dcterms:temporal>
-         <dcterms:language>English</dcterms:language>
-         <dcterms:language>french</dcterms:language>
-         <dcterms:language>Yiddish</dcterms:language>
-         <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
-         <dcterms:subject>DiLacqua, Peter</dcterms:subject>
-         <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
-         <schema:fileFormat>image/jp2</schema:fileFormat>
-         <dcterms:format>Photographs</dcterms:format>
-         <dcterms:type>Image</dcterms:type>
-         <dcterms:type>Still Image</dcterms:type>
-         <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
-         <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-         <dcterms:rights>This is a textual rights statement</dcterms:rights>
-         <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>P722002</dcterms:identifier>
-         <dcterms:identifier>Identifier</dcterms:identifier>
-         <edm:dataProvider>Temple University</edm:dataProvider>
-         <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-         <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-         <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-         <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
+   <x:scenario label="alternative titles map and delimit">
+    <x:scenario label="title not first maps to alttitle">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:title>First title</dc:title>
+              <dc:title>Alt title</dc:title>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="type and format are mapped and delimited">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:title>First title</dcterms:title>
+          <dcterms:alternative>Alt title</dcterms:alternative>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+      </x:scenario>
+      <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
+        <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
+        <x:expect label="alt title is mapped and delimited">
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
+            <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
+            <dcterms:alternative>Here's another alt title</dcterms:alternative>
+            <dcterms:date>1978-07-25</dcterms:date>
+            <dcterms:creator>Schell, Albert F.</dcterms:creator>
+            <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
+            <dcterms:subject>Public Meetings</dcterms:subject>
+           <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
+           <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
+           <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+           <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
+           <dcterms:publisher>Evening Bulletin</dcterms:publisher>
+           <dcterms:temporal>20th century</dcterms:temporal>
+           <dcterms:language>English</dcterms:language>
+           <dcterms:language>french</dcterms:language>
+           <dcterms:language>Yiddish</dcterms:language>
+           <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
+           <dcterms:subject>DiLacqua, Peter</dcterms:subject>
+           <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
+           <schema:fileFormat>image/jp2</schema:fileFormat>
+           <dcterms:format>Photographs</dcterms:format>
+           <dcterms:type>Image</dcterms:type>
+           <dcterms:type>Still Image</dcterms:type>
+           <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+           <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+           <dcterms:rights>This is a textual rights statement</dcterms:rights>
+           <dcterms:source>The repository is SCRC</dcterms:source>
+           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+           <dcterms:identifier>P722002</dcterms:identifier>
+           <dcterms:identifier>Identifier</dcterms:identifier>
+           <edm:dataProvider>Temple University</edm:dataProvider>
+           <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+           <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+           <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+           <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
    </x:scenario>
 
 <!-- Type and Format (map/parse, normalize, and delimit) -->
@@ -540,8 +561,36 @@
    </x:scenario>
  </x:scenario>
 
+<!-- File format (map and delimit) -->
+   <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
+     <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
+       <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
+       <x:expect label="dc:format becomes schema:fileFormat)"
+         test="oai_dc:dc/schema:fileFormat = 'image/jp2'" />
+     </x:scenario>
+     <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dc:format>Thing1;Thing2</dc:format>
+             </oai_qdc:qualifieddc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="format maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <schema:fileFormat>Thing1</schema:fileFormat>
+           <schema:fileFormat>Thing2</schema:fileFormat>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+
 <!-- Contributor (map and delimit) -->
-   <x:scenario label="dc:cotributor delimits, normalizes, and maps">
+   <x:scenario label="dc:contributor delimits, normalizes, and maps">
      <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
        <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
        <x:expect label="dc:contributor becomes dcterms:contributor)"
@@ -624,7 +673,7 @@
 <!-- Description (map) -->
      <x:scenario label="dc:description becomes space-normalized dcterms:description">
        <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
-       <x:expect label="dc:description becomes dcterms:description)"
+       <x:expect label="dc:description becomes dcterms:description"
          test="oai_dc:dc/dcterms:description = 'A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.'" />
      </x:scenario>
 
@@ -643,7 +692,6 @@
          <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
          <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
          <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-         <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
          <dcterms:publisher>Evening Bulletin</dcterms:publisher>
          <dcterms:temporal>20th century</dcterms:temporal>
          <dcterms:language>English</dcterms:language>

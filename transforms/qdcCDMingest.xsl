@@ -55,7 +55,7 @@
     </xsl:template>
 
      <!-- Title -->
-    <xsl:template match="dc:title">
+    <xsl:template match="dc:title[1]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:title">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -64,7 +64,15 @@
     </xsl:template>
 
      <!-- Alternative titles -->
-     <xsl:template match="dcterms:alternative">
+    <xsl:template match="dc:title[position() > 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:alternative">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="dcterms:alternative">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
