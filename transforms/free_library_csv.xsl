@@ -80,6 +80,15 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- File Format -->
+    <xsl:template match="Format">
+        <xsl:if test="normalize-space(.) != ''">
+            <xsl:element name="schema:fileFormat">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
     <!-- Identifier -->
     <xsl:template match="Item_No">
         <xsl:if test="normalize-space(.) != ''">

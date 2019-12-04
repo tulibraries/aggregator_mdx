@@ -92,7 +92,7 @@
         xmlns:svcs="http://rdfs.org/sioc/services">
         <dcterms:identifier>frk00001</dcterms:identifier>
         <dcterms:title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</dcterms:title>
-        <dcterms:title>Anonymous</dcterms:title>
+        <dcterms:creator>Anonymous</dcterms:creator>
         <dcterms:description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</dcterms:description>
         <dcterms:date>ca. 1825</dcterms:date>
         <schema:fileFormat>tif</schema:fileFormat>

@@ -1,18 +1,4 @@
 <collection dag-id="funcake_free_library_of_philadelphia" dag-timestamp="2019-11-27_16-54-14">
-  <record airflow-record-id="2">
-    <Item_No>frk00002</Item_No>
-    <Title>Birth and Baptismal Certificate (Geburts und Taufschein) for Johann Henrich Mes</Title>
-    <Creator>Karl E. Munch (1769-1833)</Creator>
-    <Description>Hand-drawn; hand-colored; hand-lettered. The main text is handwritten in German Fraktur and German script. Above and below the text are undulating vines with sheaves of grain protruding on each side. On the sides are rose stems and wreaths surrounding Biblical verses hand-written in Fraktur and German script. In the center are two clusters of various farm tools.</Description>
-    <Creation_Date>1799</Creation_Date>
-    <Format>tif</Format>
-    <Subject> Agriculture | Bible. N.T. Matthew | Bible. N.T. Timothy | Bible. O.T. Proverbs | Bible. O.T. Psalms | Biblical verses | Flowers | Fruit | Grains | Harrows | Ornaments | Plows | Roses | Scythes | Tools | Vines | Wreaths</Subject>
-    <Language>German</Language>
-    <Identifier>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00002</Identifier>
-    <Thumbnail>http://libwww.freelibrary.org/digicol/fraktur/frk00002t.jpg</Thumbnail>
-    <Type>Still Image</Type>
-    <Collection_Name>Fraktur</Collection_Name>
-  </record>
   <record airflow-record-id="1">
     <Item_No>frk00001</Item_No>
     <Title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</Title>
