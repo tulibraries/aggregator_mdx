@@ -41,7 +41,7 @@
           </metadata>
         </oai:record>
       </x:context>
-      <x:expect label="type and format are mapped and delimited">
+      <x:expect label="title not first maps">
         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <dcterms:title>First title</dcterms:title>
           <dcterms:alternative>Alt title</dcterms:alternative>
