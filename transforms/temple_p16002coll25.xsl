@@ -76,7 +76,7 @@
      <!-- Type -->
     <xsl:template match="dc:type">
         <xsl:call-template name="type_template">
-            <xsl:with-param name="stringz" select="." />
+            <xsl:with-param name="strings" select="." />
             <xsl:with-param name="delimiter" select="';'" />
         </xsl:call-template>
     </xsl:template>
