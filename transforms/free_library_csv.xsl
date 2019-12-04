@@ -37,7 +37,7 @@
 
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <xsl:call-template name="static-rights-statement"/>
-            <xsl:call-template name="intprovider"/>
+            <xsl:call-template name="dataprovider"/>
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
     </xsl:template>
@@ -101,7 +101,7 @@
     <!-- Subject -->
     <xsl:template match="Subject">
         <xsl:call-template name="subj_template">
-            <xsl:with-param name="stringz" select="."/>
+            <xsl:with-param name="strings" select="."/>
             <xsl:with-param name="delimiter" select="'|'"/>
         </xsl:call-template>
     </xsl:template>
@@ -168,11 +168,11 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- HISTORIC-PITTSBURGH-SPECIFIC NAMED TEMPLATES -->
+    <!-- NAMED TEMPLATES -->
 
-    <!-- Intermediate provider -->
-    <xsl:template name="intprovider">
-        <xsl:element name="dpla:intermediateProvider">
+    <!-- Contributing Institution -->
+    <xsl:template name="dataprovider">
+        <xsl:element name="edm:dataProvider">
             <xsl:value-of>Free Library of Philadelphia</xsl:value-of>
         </xsl:element>
     </xsl:template>
@@ -193,26 +193,26 @@
 
     <!-- Subject -->
     <xsl:template name="subj_template">
-        <xsl:param name="stringz"/>
+        <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
-            <xsl:when test="contains($stringz, $delimiter)">
-                <xsl:variable name="newstem" select="substring-after($stringz, $delimiter)"/>
+            <xsl:when test="contains($strings, $delimiter)">
+                <xsl:variable name="newstem" select="substring-after($strings, $delimiter)"/>
                 <dcterms:subject>
-                    <xsl:value-of select="substring-before($stringz, $delimiter)"/>
+                    <xsl:value-of select="normalize-space(substring-before($strings, $delimiter))"/>
                 </dcterms:subject>
 
                 <!--Need to do recursion-->
                 <xsl:call-template name="subj_template">
-                    <xsl:with-param name="stringz" select="$newstem"/>
-                    <xsl:with-param name="delimiter" select="';'"/>
+                    <xsl:with-param name="strings" select="$newstem"/>
+                    <xsl:with-param name="delimiter" select="'|'"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
                 <dcterms:subject>
-                    <xsl:value-of select="normalize-space($stringz)"/>
+                    <xsl:value-of select="normalize-space($strings)"/>
                 </dcterms:subject>
             </xsl:otherwise>
         </xsl:choose>
@@ -220,26 +220,26 @@
 
     <!-- Type -->
     <xsl:template name="type_template">
-        <xsl:param name="stringz"/>
+        <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
-            <xsl:when test="contains($stringz, $delimiter)">
-                <xsl:variable name="newstem" select="substring-after($stringz, $delimiter)"/>
+            <xsl:when test="contains($strings, $delimiter)">
+                <xsl:variable name="newstem" select="substring-after($strings, $delimiter)"/>
                 <dcterms:type>
-                    <xsl:value-of select="substring-before($stringz, $delimiter)"/>
+                    <xsl:value-of select="substring-before($strings, $delimiter)"/>
                 </dcterms:type>
 
                 <!--Need to do recursion-->
                 <xsl:call-template name="type_template">
-                    <xsl:with-param name="stringz" select="$newstem"/>
+                    <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="'; '"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
                 <dcterms:type>
-                    <xsl:value-of select="normalize-space($stringz)"/>
+                    <xsl:value-of select="normalize-space($strings)"/>
                 </dcterms:type>
             </xsl:otherwise>
         </xsl:choose>
@@ -247,26 +247,26 @@
 
     <!-- Language -->
     <xsl:template name="lang_template">
-        <xsl:param name="stringz"/>
+        <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
-            <xsl:when test="contains($stringz, $delimiter)">
-                <xsl:variable name="newstem" select="substring-after($stringz, $delimiter)"/>
+            <xsl:when test="contains($strings, $delimiter)">
+                <xsl:variable name="newstem" select="substring-after($strings, $delimiter)"/>
                 <dcterms:language>
-                    <xsl:value-of select="substring-before($stringz, $delimiter)"/>
+                    <xsl:value-of select="substring-before($strings, $delimiter)"/>
                 </dcterms:language>
 
                 <!--Need to do recursion-->
                 <xsl:call-template name="lang_template">
-                    <xsl:with-param name="stringz" select="$newstem"/>
+                    <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="'; '"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
                 <dcterms:language>
-                    <xsl:value-of select="normalize-space($stringz)"/>
+                    <xsl:value-of select="normalize-space($strings)"/>
                 </dcterms:language>
             </xsl:otherwise>
         </xsl:choose>
