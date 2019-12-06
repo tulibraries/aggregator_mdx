@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../validations/dplah_reqd_fields.sch">
+
+  <x:scenario label="RequiredElementsPattern">
+    <x:scenario label="valid: dct:rights">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_dct_rights.xml"/>
+      -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+          xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="valid: edm:rights">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_edm_rights.xml"/>
+      -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+          xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: missing title">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_missing_title.xml"/>
+        -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:subject> Airships</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Temple University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Required1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: missing dctrights and edm:rights">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_missing_rights.xml"/>
+        -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:subject> Airships</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:dataProvider>Temple University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Required2"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: missing item url">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_missing_item_url.xml"/>
+        -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:subject> Airships</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Temple University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Required3"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: missing data provider">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_missing_dataprovider.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:subject> Airships</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Required4"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: missing multiple">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_missing_multiple.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:subject> Airships</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Required1"/>
+        <x:expect-assert id="Required2"/>
+        <x:expect-assert id="Required3"/>
+        <x:expect-assert id="Required4"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+  <x:scenario label="TitleElementPattern">
+    <x:scenario label="valid">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_title_pattern.xml"/>
+        -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+          xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty title 1">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_title1.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title/>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Title1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: empty title 2">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_title2.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title></dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="Title1"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+  <x:scenario label="ItemURLElementPattern">
+    <x:scenario label="valid">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_item_url_pattern.xml"/>
+        -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+          xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty isShownAt URL 1">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_isshownat1.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt/>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="ItemURL1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: empty isShownAt URL 2">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_isshownat2.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt></edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="ItemURL1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: isShownAt URL is not URL">
+        <x:context>
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>This is not a URL</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="ItemURL2"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+  <x:scenario label="EDMDataProviderElementPattern">
+    <x:scenario label="valid">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_dataprovider_pattern.xml"/>
+        -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty edm:dataProvider 1">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_dataprovider1.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:edm="http://www.europeana.eu/schemas/edm/"
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+          xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider/>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="EDMDp1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: empty edm:dataProvider 2">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_dataprovider2.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider></edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="EDMDp1"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+  <x:scenario label="DCTRightsElementPattern">
+    <x:scenario label="valid">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_rights_pattern.xml"/>
+        -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:rights>This material is made available for private study, scholarship, and research use. For access to the original, contact: Temple University Libraries. Special Collections Research Center, scrc@temple.edu, 215-204-8257.</dcterms:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty dct:rights 1">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_rights1.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:edm="http://www.europeana.eu/schemas/edm/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+              xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>              
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights/>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="DCTRights1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: empty dct:rights 2">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_rights2.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:edm="http://www.europeana.eu/schemas/edm/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+              xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>              
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <dcterms:rights></dcterms:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="DCTRights1"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+  <x:scenario label="EDMRightsElementPattern">
+    <x:scenario label="valid">
+      <x:context>
+        <!--
+        <x:context href="../../fixtures/schematron/valid_edmrights_pattern.xml"/>
+        -->
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+            xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+          <dcterms:title>Celebration at Independence Hall</dcterms:title>
+          <dcterms:creator>pdcp_noharvest</dcterms:creator>
+          <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+          <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+          <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:date>1924</dcterms:date>
+          <dcterms:subject>Statues</dcterms:subject>
+          <dcterms:type>Image</dcterms:type>
+          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:identifier>P288153B</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+          <edm:dataProvider>Test University</edm:dataProvider>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:context>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <x:scenario label="not valid">
+      <x:scenario label="not valid: empty edm:rights 1">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_edmrights1.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:edm="http://www.europeana.eu/schemas/edm/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+              xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <edm:rights/>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="EDMRights1"/>
+      </x:scenario>
+
+      <x:scenario label="not valid: empty edm:rights 2">
+        <x:context>
+          <!--
+          <x:context href="../../fixtures/schematron/invalid_empty_edmrights2.xml"/>
+          -->
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:edm="http://www.europeana.eu/schemas/edm/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
+              xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
+            <dcterms:title>Celebration at Independence Hall</dcterms:title>
+            <dcterms:creator>pdcp_noharvest</dcterms:creator>
+            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
+            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
+            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
+            <dcterms:date>1924</dcterms:date>
+            <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:type>Image</dcterms:type>
+            <edm:rights></edm:rights>
+            <schema:fileFormat>image/jp2</schema:fileFormat>
+            <dcterms:identifier>P288153B</dcterms:identifier>
+            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
+            <edm:dataProvider>Test University</edm:dataProvider>              
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:context>
+        <x:expect-assert id="EDMRights1"/>
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+  
+  <!-- Remove selected collections and contributors from DPLAH following reprocessing -->
+  
+  <x:scenario label="HPWesternMapsNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_HPWesternPAMaps.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_HPWesternPAMaps.xml"/>
+      <x:expect-assert id="NoHarvestPattern1"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="TempleUNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveTempleU.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveTempleU.xml"/>
+      <x:expect-assert id="NoHarvestPattern2"/>
+    </x:scenario>
+  </x:scenario>
+  
+</x:description>
