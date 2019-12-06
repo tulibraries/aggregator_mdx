@@ -71,7 +71,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="dcterms:alternative">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
@@ -134,11 +134,10 @@
 
      <!-- Publisher -->
     <xsl:template match="dc:publisher">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="publ_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
+      <xsl:if test="normalize-space(.)!=''">
+          <xsl:element name="dcterms:publisher">
+              <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
         </xsl:if>
     </xsl:template>
 
