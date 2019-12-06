@@ -17,7 +17,7 @@
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
-    
+
     <!-- lookup table for recommended DCMI Types terms/URIs -->
     <xsl:param name="dcmiType">
         <padig:type string="collection" uri="http://purl.org/dc/dcmitype/Collection">collection</padig:type>
@@ -82,13 +82,13 @@
     </xsl:param>
 
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
-    <xsl:param name="oaiUrl">    
+    <xsl:param name="oaiUrl">
 		<padig:url string="Lehigh University">http://cdm.lib.lehigh.edu/</padig:url>
 		<padig:url string="La Salle University">http://cdm15860.contentdm.oclc.org/</padig:url>
 		<padig:url string="Pennsylvania State University">http://digital.libraries.psu.edu/</padig:url>
 		<padig:url string="Temple University">http://digital.library.temple.edu/</padig:url>
 		<padig:url string="University of Pennsylvania">http://digital.library.upenn.edu/</padig:url>
-		<padig:url string="Villanova University">http://digital.library.villanova.edu/</padig:url>
+		<padig:url string="Villanova University">https://digital.library.villanova.edu/</padig:url>
 		<padig:url string="Jefferson - East Falls">http://digitalcollections.philau.edu/</padig:url>
 		<padig:url string="La Salle University">http://digitalcommons.lasalle.edu/</padig:url>
 		<padig:url string="Philadelphia College of Osteopathic Medicine">http://digitalcommons.pcom.edu/</padig:url>
@@ -105,7 +105,7 @@
 		<padig:url string="Science History Institute">https://digital.sciencehistory.org/</padig:url>
 		<padig:url string="American Philosophical Society">https://diglib.amphilsoc.org/</padig:url>
     </xsl:param>
-    
+
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
 	<xsl:param name="oaiUrlInt">
 		<padig:url string="Keystone Library Network">http://cdm17189.contentdm.oclc.org/</padig:url>
@@ -114,8 +114,8 @@
 		<padig:url string="POWER Library as sponsor and HSLC as maintainer">http://digitalcollections.powerlibrary.org/</padig:url>
 		<padig:url string="Historic Pittsburgh">http://historicpittsburgh.org/</padig:url>
 	</xsl:param>
-	
-	<!-- lookup table for setSpec -->	
+
+	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
 		<padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
 		<padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
@@ -294,7 +294,7 @@
 		<padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
 		<padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
     </xsl:param>
-    
+
     <!-- lookup table for dplah language transforms -->
     <xsl:param name="dplahLang">
         <padig:language string="Afar">aar</padig:language>
@@ -784,7 +784,7 @@
         <padig:language string="Zulu">zul</padig:language>
         <padig:language string="Zuni">zun</padig:language>
     </xsl:param>
-    
+
     <!-- lookup table for recommended Lexvo Languages terms/URIs -->
     <xsl:param name="lexvoLang">
       <padig:lexlanguage string="aar" uri="http://lexvo.org/id/iso639-3/aar">aar</padig:lexlanguage>
