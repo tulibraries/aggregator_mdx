@@ -605,7 +605,8 @@
             <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
             <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
             <dcterms:date>1924</dcterms:date>
-            <dcterms:subject>Statues</dcterms:subject>              <dcterms:type>Image</dcterms:type>
+            <dcterms:subject>Statues</dcterms:subject>              
+            <dcterms:type>Image</dcterms:type>
             <dcterms:rights/>
             <schema:fileFormat>image/jp2</schema:fileFormat>
             <dcterms:identifier>P288153B</dcterms:identifier>
@@ -635,7 +636,8 @@
             <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
             <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
             <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
-            <dcterms:date>1924</dcterms:date>              <dcterms:subject>Statues</dcterms:subject>
+            <dcterms:date>1924</dcterms:date>              
+            <dcterms:subject>Statues</dcterms:subject>
             <dcterms:type>Image</dcterms:type>
             <dcterms:rights></dcterms:rights>
             <schema:fileFormat>image/jp2</schema:fileFormat>
