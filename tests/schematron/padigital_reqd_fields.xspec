@@ -781,6 +781,7 @@ schematron="../../validations/padigital_reqd_fields.sch">
         <x:expect-assert id="EDMRights1"/>
       </x:scenario>
     </x:scenario>
+  </x:scenario>
 
       <x:scenario label="IdentifierElementPattern">
         <x:scenario label="valid">
@@ -881,5 +882,4 @@ schematron="../../validations/padigital_reqd_fields.sch">
           </x:scenario>
         </x:scenario>
       </x:scenario>
-    </x:scenario>
 </x:description>
