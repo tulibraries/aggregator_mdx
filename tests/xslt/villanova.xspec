@@ -17,8 +17,8 @@
     xmlns:svcs="http://rdfs.org/sioc/services"
     stylesheet="../../transforms/villanova.xsl">
 
-  <!-- Drop deleted records -->
-
+  <!-- Drop deleted records --> 
+  
   <x:scenario label="OAI Deleted Records are Skipped">
     <x:context>
       <oai:record>
@@ -27,7 +27,11 @@
           <setSpec>TEST1</setSpec>
         </oai:header>
         <metadata>
-          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+            http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+            xmlns="http://purl.org/dc/elements/1.1/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <title>Champaign County, Illinois</title>
             <creator>United States. Agricultureal Adjustment Administration</creator>
             <identifier>record-that-should-be-ignored</identifier>
@@ -40,7 +44,11 @@
           <setSpec>TEST2</setSpec>
         </oai:header>
         <metadata>
-          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+            http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+            xmlns="http://purl.org/dc/elements/1.1/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <title>Champaign County, Illinois</title>
             <creator>United States. Agricultureal Adjustment Administration</creator>
             <identifier>record-that-should-be-kept</identifier>
@@ -52,7 +60,7 @@
     <x:expect label="OAI Record Identifier of 1 Record is record-that-should-be-kept"
       test="oai_dc:dc/edm:isShownAt = 'record-that-should-be-kept'" />
   </x:scenario>
-
+  
   <!-- Filtered Identifiers -->
   <!-- Commented out until villanova.xsl is updated to include filters.xsl
 
@@ -117,10 +125,10 @@
       test="oai_dc:dc/dcterms:identifier != 'test-filter-record-2'" />
   </x:scenario>
   -->
-
+    
     <!-- Title -->
-
-  <x:scenario label="dc:title and dcterms:alt is mapped">
+    
+  <x:scenario label="dc:title and dcterms:alt is mapped">  
   <x:scenario label="dc:title is transformed to dcterms:title">
         <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'Beadle monthly.'"/>
@@ -129,10 +137,10 @@
       <x:context>
         <oai:record>
           <metadata>
-            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <dc:title>Thing 1</dc:title>
               <dc:title>Thing 2</dc:title>
-            </oai_dc:dc>
+            </oai_qdc:qualifieddc>
           </metadata>
         </oai:record>
       </x:context>
@@ -146,9 +154,9 @@
       </x:expect>
     </x:scenario>
   </x:scenario>
-
+ 
     <!-- Type (copied from dplah.xspec) -->
-
+    
     <x:scenario label="dc:type values are matched and remediated for known strings">
     <x:scenario label="Text Type Remediation">
       <x:scenario label="Text Type Remediation: Starts with lowercase text">
@@ -598,10 +606,10 @@
       </x:scenario>
     </x:scenario>
   </x:scenario>
-
+    
     <!-- Creator -->
-
-    <x:scenario label="creator maps and delimits">
+    
+    <x:scenario label="creator maps and delimits">    
       <x:scenario label="dc:creator is transformed to dcterms:creator">
         <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
           <x:expect label="dc:creator is transformed to dcterms:creator" test="oai_dc:dc/dcterms:creator = 'Beadle, Barry.'"/>
@@ -610,9 +618,9 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:creator>Thing 1;Thing 2</dc:creator>
-              </oai_dc:dc>
+              </oai_qdc:qualifieddc>
             </metadata>
           </oai:record>
         </x:context>
@@ -626,17 +634,17 @@
         </x:expect>
       </x:scenario>
      </x:scenario>
-
+    
     <!-- Publisher -->
-
+    
     <x:scenario label="dc:publisher is transformed to dcterms:publisher">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:publisher is transformed to dcterms:publisher" test="oai_dc:dc/dcterms:publisher = 'New York : Beadle and Company'"/>
     </x:scenario>
-
+    
     <!-- Date -->
-
-  <x:scenario label="date maps and delimits">
+    
+  <x:scenario label="date maps and delimits">  
   <x:scenario label="dc:date is transformed to dcterms:date">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:date is transformed to dcterms:date" test="oai_dc:dc/dcterms:date = '1866'"/>
@@ -645,9 +653,9 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:date>Thing 1;Thing 2</dc:date>
-              </oai_dc:dc>
+              </oai_qdc:qualifieddc>
             </metadata>
           </oai:record>
         </x:context>
@@ -661,9 +669,9 @@
         </x:expect>
       </x:scenario>
     </x:scenario>
-
+    
     <!-- Subject -->
-
+    
     <x:scenario label="subject maps and delimits">
      <x:scenario label="dc:subject is transformed to dcterms:subject">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
@@ -673,9 +681,9 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:subject>Thing 1;Thing 2</dc:subject>
-              </oai_dc:dc>
+              </oai_qdc:qualifieddc>
             </metadata>
           </oai:record>
         </x:context>
@@ -689,9 +697,9 @@
         </x:expect>
       </x:scenario>
     </x:scenario>
-
+    
     <!-- Language -->
-
+    
     <x:scenario label="language maps and delimits">
      <x:scenario label="dc:language is transformed to dcterms:language">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
@@ -701,9 +709,9 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:language>eng;french;yid</dc:language>
-              </oai_dc:dc>
+              </oai_qdc:qualifieddc>
             </metadata>
           </oai:record>
         </x:context>
@@ -718,18 +726,18 @@
         </x:expect>
       </x:scenario>
     </x:scenario>
-
+    
     <!-- Rights -->
-
+    
     <x:scenario label="rights processing">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'https://creativecommons.org/publicdomain/zero/1.0/'"/>
         <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'Villanova Rights Statement'"/>
     </x:scenario>
-
-
+      
+    
     <!-- Identifiers -->
-
+    
     <x:scenario label="identifier processing">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dcterms:identifier is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'vudl:293113'"/>
@@ -737,23 +745,23 @@
       <x:expect label="thumbnail URL is generated from identifier" test="oai_dc:dc/edm:preview = 'https://digital.library.villanova.edu/files/vudl:293113/THUMBNAIL'"/>
       <x:expect label="iiif manifest generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'https://digital.library.villanova.edu/Item/vudl:293113/Manifest'"/>
     </x:scenario>
-
+    
     <!-- Contributing Institution -->
-
+    
     <x:scenario label="remediated dataProvider">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="remediated dataProvider" test="oai_dc:dc/edm:dataProvider = 'Villanova University'"/>
     </x:scenario>
-
+    
     <!-- Collection name -->
-
+    
     <x:scenario label="hard coded collectionName">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="hard coded collectionName" test="oai_dc:dc/dcterms:isPartOf = 'Villanova University Digital Collections'" />
     </x:scenario>
-
+    
     <!-- Hub -->
-
+    
     <x:scenario label="hard coded hub name">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"></x:expect>
