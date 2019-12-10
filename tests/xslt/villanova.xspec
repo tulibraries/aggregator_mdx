@@ -128,33 +128,11 @@
     
     <!-- Title -->
     
-  <x:scenario label="dc:title and dcterms:alt is mapped">  
-  <x:scenario label="dc:title is transformed to dcterms:title">
+    <x:scenario label="dc:title is transformed to dcterms:title">
         <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'Beadle monthly.'"/>
     </x:scenario>
-    <x:scenario label="title not 1 maps to alt title">
-      <x:context>
-        <oai:record>
-          <metadata>
-            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-              <dc:title>Thing 1</dc:title>
-              <dc:title>Thing 2</dc:title>
-            </oai_qdc:qualifieddc>
-          </metadata>
-        </oai:record>
-      </x:context>
-      <x:expect label="title not 1 maps to alt title">
-        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <dcterms:title>Thing 1</dcterms:title>
-          <dcterms:alternative>Thing 2</dcterms:alternative>
-          <dcterms:isPartOf>Villanova University Digital Collections</dcterms:isPartOf>
-          <edm:provider>PA Digital</edm:provider>
-        </oai_dc:dc>
-      </x:expect>
-    </x:scenario>
-  </x:scenario>
- 
+    
     <!-- Type (copied from dplah.xspec) -->
     
     <x:scenario label="dc:type values are matched and remediated for known strings">
@@ -609,31 +587,10 @@
     
     <!-- Creator -->
     
-    <x:scenario label="creator maps and delimits">    
-      <x:scenario label="dc:creator is transformed to dcterms:creator">
-        <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
-          <x:expect label="dc:creator is transformed to dcterms:creator" test="oai_dc:dc/dcterms:creator = 'Beadle, Barry.'"/>
-      </x:scenario>
-      <x:scenario label="creator delimits">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dc:creator>Thing 1;Thing 2</dc:creator>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="creator maps and delimits">
-          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <dcterms:creator>Thing 1</dcterms:creator>
-            <dcterms:creator>Thing 2</dcterms:creator>
-            <dcterms:isPartOf>Villanova University Digital Collections</dcterms:isPartOf>
-            <edm:provider>PA Digital</edm:provider>
-          </oai_dc:dc>
-        </x:expect>
-      </x:scenario>
-     </x:scenario>
+    <x:scenario label="dc:creator is transformed to dcterms:creator">
+      <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
+        <x:expect label="dc:creator is transformed to dcterms:creator" test="oai_dc:dc/dcterms:creator = 'Beadle, Barry.'"/>
+    </x:scenario>
     
     <!-- Publisher -->
     
@@ -644,87 +601,23 @@
     
     <!-- Date -->
     
-  <x:scenario label="date maps and delimits">  
-  <x:scenario label="dc:date is transformed to dcterms:date">
+    <x:scenario label="dc:date is transformed to dcterms:date">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:date is transformed to dcterms:date" test="oai_dc:dc/dcterms:date = '1866'"/>
-  </x:scenario>
-      <x:scenario label="date delimits">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dc:date>Thing 1;Thing 2</dc:date>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="date maps and delimits">
-          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <dcterms:date>Thing 1</dcterms:date>
-            <dcterms:date>Thing 2</dcterms:date>
-            <dcterms:isPartOf>Villanova University Digital Collections</dcterms:isPartOf>
-            <edm:provider>PA Digital</edm:provider>
-          </oai_dc:dc>
-        </x:expect>
-      </x:scenario>
     </x:scenario>
     
     <!-- Subject -->
     
-    <x:scenario label="subject maps and delimits">
-     <x:scenario label="dc:subject is transformed to dcterms:subject">
+    <x:scenario label="dc:subject is transformed to dcterms:subject">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:subject is transformed to dcterms:subject" test="oai_dc:dc/dcterms:subject = 'Popular literature -- Specimens.'"/>
-      </x:scenario>
-      <x:scenario label="subject delimits">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dc:subject>Thing 1;Thing 2</dc:subject>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="subject maps and delimits">
-          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <dcterms:subject>Thing 1</dcterms:subject>
-            <dcterms:subject>Thing 2</dcterms:subject>
-            <dcterms:isPartOf>Villanova University Digital Collections</dcterms:isPartOf>
-            <edm:provider>PA Digital</edm:provider>
-          </oai_dc:dc>
-        </x:expect>
-      </x:scenario>
     </x:scenario>
     
     <!-- Language -->
     
-    <x:scenario label="language maps and delimits">
-     <x:scenario label="dc:language is transformed to dcterms:language">
+    <x:scenario label="dc:language is transformed to dcterms:language">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dc:language is transformed to dcterms:language" test="oai_dc:dc/dcterms:language = 'English'"/>
-      </x:scenario>
-      <x:scenario label="language delimits and remediates">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dc:language>eng;french;yid</dc:language>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="language delimits and remediates">
-          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <dcterms:language>English</dcterms:language>
-            <dcterms:language>french</dcterms:language>
-            <dcterms:language>Yiddish</dcterms:language>
-            <dcterms:isPartOf>Villanova University Digital Collections</dcterms:isPartOf>
-            <edm:provider>PA Digital</edm:provider>
-          </oai_dc:dc>
-        </x:expect>
-      </x:scenario>
     </x:scenario>
     
     <!-- Rights -->
@@ -734,7 +627,6 @@
         <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'https://creativecommons.org/publicdomain/zero/1.0/'"/>
         <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'Villanova Rights Statement'"/>
     </x:scenario>
-      
     
     <!-- Identifiers -->
     
@@ -742,15 +634,14 @@
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
         <x:expect label="dcterms:identifier is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'vudl:293113'"/>
         <x:expect label="base URL is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digital.library.villanova.edu/Item/vudl:293113'"/>
-      <x:expect label="thumbnail URL is generated from identifier" test="oai_dc:dc/edm:preview = 'https://digital.library.villanova.edu/files/vudl:293113/THUMBNAIL'"/>
-      <x:expect label="iiif manifest generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'https://digital.library.villanova.edu/Item/vudl:293113/Manifest'"/>
+      <x:expect label="thumbnail URL is generated from identifier" test="oai_dc:dc/edm:preview = 'https://digital.library.villanova.edu/files/vudl:293113/THUMBNAIL'"></x:expect>
     </x:scenario>
     
     <!-- Contributing Institution -->
     
-    <x:scenario label="remediated dataProvider">
+    <x:scenario label="hard coded dataProvider">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
-        <x:expect label="remediated dataProvider" test="oai_dc:dc/edm:dataProvider = 'Villanova University'"/>
+        <x:expect label="hard coded dataProvider" test="oai_dc:dc/edm:dataProvider = 'Villanova University'"/>
     </x:scenario>
     
     <!-- Collection name -->
