@@ -177,6 +177,7 @@
 		<padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
 		<padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
 		<padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
+        <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
 		<padig:set string="G.M. Hopkins Company Maps">pitt_collection.240</padig:set>
 		<padig:set string="George Westinghouse Museum Collection">pitt_collection.286</padig:set>
 		<padig:set string="Greenstone United Methodist Church, Avalon, Pa. Records">pitt_collection.17</padig:set>
