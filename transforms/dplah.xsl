@@ -21,8 +21,8 @@
 
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/temple.xsl"/>
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/filter.xsl"/>
+    <xsl:include href="temple.xsl"/>
+    <xsl:include href="remediations/filter.xsl"/>
 
      <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
@@ -137,7 +137,7 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- URL
+    <!-- URL -->
     <xsl:template match="dc:identifier[2]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="edm:isShownAt">
@@ -146,7 +146,7 @@
         </xsl:if>
     </xsl:template>
 
-    <!- Preview
+    <!-- Preview -->
     <xsl:template match="dc:identifier[position() = last() and position() > 2]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="edm:preview">
@@ -154,5 +154,5 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    -->
+    
 </xsl:stylesheet>

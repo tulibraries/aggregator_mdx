@@ -628,5 +628,57 @@
     <x:expect label="dc:format becomes File Format (schema:fileFormat)"
       test="oai_dc:dc/schema:fileFormat = 'snakes'" />
   </x:scenario>
-
+  
+  <!-- additional DPLAH tests -->
+  
+  <x:scenario label="dc:title and dcterms:alt is mapped">
+    <x:scenario label="dc:title is transformed to dcterms:title">
+      <x:context href="../../fixtures/dplah_test.xml"/>
+      <x:expect label="dc:title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'Plan of the skirmish with the rebels'"/>
+    </x:scenario>
+    <x:scenario label="title not 1 maps to alt title">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:title>Thing 1</dc:title>
+              <dc:title>Thing 2</dc:title>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="title not 1 maps to alt title">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:title>Thing 1</dcterms:title>
+          <dcterms:alternative>Thing 2</dcterms:alternative>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+  <x:scenario label="dc:format is transformed to schema:fileFormat">
+    <x:context href="../../fixtures/dplah_test.xml"/>
+    <x:expect label="dc:format is transformed to schema:fileFormat" test="oai_dc:dc/schema:fileFormat = 'image/jpeg'" />
+  </x:scenario>
+  
+  <x:scenario label="identifier processing">
+    <x:context href="../../fixtures/dplah_test.xml"/>
+    <x:expect label="dc:identifier[1] is transformed to dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'dplapa:BLOOMS_blmmap_34'" />
+    <x:expect label="dc:identifier[2] is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://cdm17189.contentdm.oclc.org/cdm/ref/collection/blmmap/id/34'"/>
+    <x:expect label="dc:identifer (last) is transformed to edm:preview" test="oai_dc:dc/edm:preview = 'http://cdm17189.contentdm.oclc.org/utils/getthumbnail/collection/blmmap/id/34'" />
+  </x:scenario>
+  
+  <x:scenario label="relation processing">
+    <x:context href="../../fixtures/dplah_test.xml"/>
+    <x:expect label="relation[1] is transformed to dcterms:isPartOf" test="oai_dc:dc/dcterms:isPartOf = 'Bloomsburg University Map Collection'"/>
+    <x:expect label="relation[2] is transformed to dcterms:relation" test="oai_dc:dc/dcterms:relation = 'Hi I Am A Finding Aid'" />
+    <x:expect label="relation[3] is transformed to dcterms:relation" test="oai_dc:dc/dcterms:relation = 'Hi I Am Another Relation'" />
+  </x:scenario>
+  
+  <x:scenario label="dc:source[1] is transformed to dpla:intermediateProvider">
+    <x:context href="../../fixtures/dplah_test.xml"/>
+    <x:expect label="dc:source[1] is transformed to dpla:intermediateProvider" test="oai_dc:dc/dpla:intermediateProvider = 'Keystone Library Network'" />
+  </x:scenario>
+  
 </x:description>
