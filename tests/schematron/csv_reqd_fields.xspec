@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    schematron="../../validations/csv_reqd_fields.sch">
+    
+    <x:scenario label="RequiredElementsPattern">
+        <x:scenario label="valid: title">
+            <x:context>
+                <record airflow-record-id="1">
+                    <Item_No>frk00001</Item_No>
+                    <Title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</Title>
+                    <Creator>Anonymous</Creator>
+                    <Description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</Description>
+                    <Creation_Date>ca. 1825</Creation_Date>
+                    <Format>tif</Format>
+                    <Subject> Flowers | Planters (containers) | Pottery | Rosettes | Tulips</Subject>
+                    <Language>German; English</Language>
+                    <Identifier>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</Identifier>
+                    <Thumbnail>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</Thumbnail>
+                    <Type>Still Image</Type>
+                    <Collection_Name>Fraktur</Collection_Name>
+                </record>
+            </x:context>
+            <x:expect-valid/>
+        </x:scenario>
+        <x:scenario label="not valid: missing title">
+            <x:context>
+                <record airflow-record-id="1">
+                    <Item_No>frk00001</Item_No>
+                    <Creator>Anonymous</Creator>
+                    <Description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</Description>
+                    <Creation_Date>ca. 1825</Creation_Date>
+                    <Format>tif</Format>
+                    <Subject> Flowers | Planters (containers) | Pottery | Rosettes | Tulips</Subject>
+                    <Language>German; English</Language>
+                    <Identifier>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</Identifier>
+                    <Thumbnail>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</Thumbnail>
+                    <Type>Still Image</Type>
+                    <Collection_Name>Fraktur</Collection_Name>
+                </record>
+            </x:context>
+            <x:expect-assert id="Required1"/>
+        </x:scenario>        
+    </x:scenario>
+    
+    <x:scenario label="TitleElementPattern">
+        <x:scenario label="valid">
+            <x:context>
+                <record airflow-record-id="1">
+                    <Item_No>frk00001</Item_No>
+                    <Title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</Title>
+                    <Creator>Anonymous</Creator>
+                    <Description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</Description>
+                    <Creation_Date>ca. 1825</Creation_Date>
+                    <Format>tif</Format>
+                    <Subject> Flowers | Planters (containers) | Pottery | Rosettes | Tulips</Subject>
+                    <Language>German; English</Language>
+                    <Identifier>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</Identifier>
+                    <Thumbnail>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</Thumbnail>
+                    <Type>Still Image</Type>
+                    <Collection_Name>Fraktur</Collection_Name>
+                </record>
+            </x:context>
+            <x:expect-valid/>
+        </x:scenario>
+        <x:scenario label="invalid: empty title 1">
+            <x:context>
+                <record airflow-record-id="1">
+                    <Item_No>frk00001</Item_No>
+                    <Title></Title>
+                    <Creator>Anonymous</Creator>
+                    <Description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</Description>
+                    <Creation_Date>ca. 1825</Creation_Date>
+                    <Format>tif</Format>
+                    <Subject> Flowers | Planters (containers) | Pottery | Rosettes | Tulips</Subject>
+                    <Language>German; English</Language>
+                    <Identifier>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</Identifier>
+                    <Thumbnail>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</Thumbnail>
+                    <Type>Still Image</Type>
+                    <Collection_Name>Fraktur</Collection_Name>
+                </record>
+            </x:context>
+            <x:expect-assert id="Title1"/>
+        </x:scenario>
+        <x:scenario label="invalid: empty title 2">
+            <x:context>
+                <record airflow-record-id="1">
+                    <Item_No>frk00001</Item_No>
+                    <Title/>
+                    <Creator>Anonymous</Creator>
+                    <Description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</Description>
+                    <Creation_Date>ca. 1825</Creation_Date>
+                    <Format>tif</Format>
+                    <Subject> Flowers | Planters (containers) | Pottery | Rosettes | Tulips</Subject>
+                    <Language>German; English</Language>
+                    <Identifier>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</Identifier>
+                    <Thumbnail>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</Thumbnail>
+                    <Type>Still Image</Type>
+                    <Collection_Name>Fraktur</Collection_Name>
+                </record>
+            </x:context>
+            <x:expect-assert id="Title1"/>
+        </x:scenario>
+    </x:scenario>
+    
+</x:description>
