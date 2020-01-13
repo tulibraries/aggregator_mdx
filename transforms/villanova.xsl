@@ -18,8 +18,8 @@
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
 
-    <xsl:include href="../../aggregator_mdx/transforms/remediations/lookup.xsl"/>
-    
+    <xsl:include href="remediations/lookup.xsl"/>
+
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
 
@@ -59,7 +59,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Alternative titles -->
     <xsl:template match="dc:title[position() > 1]">
         <xsl:if test="normalize-space(.)!=''">
@@ -127,7 +127,7 @@
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
- 
+
     <!-- Rights and Rights URI -->
     <xsl:template match="dc:rights">
         <xsl:if test="normalize-space(.)!=''">
@@ -165,30 +165,30 @@
                     <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
                 </xsl:element>
             </xsl:if>
-        
+
         <!-- Identifier -->
             <xsl:element name="dcterms:identifier">
                 <xsl:value-of select="$objID"/>
             </xsl:element>
-            
+
         <!-- URL -->
             <xsl:element name="edm:isShownAt">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            
+
         <!-- Preview -->
             <xsl:element name="edm:preview">
                 <xsl:text>https://digital.library.villanova.edu/files/</xsl:text><xsl:value-of select="$objID"/><xsl:text>/THUMBNAIL</xsl:text>
             </xsl:element>
-            
+
         <!-- IIIF Manifest -->
             <xsl:element name="dcterms:isReferencedBy">
                 <xsl:value-of select="normalize-space(.)"/><xsl:text>/Manifest</xsl:text>
             </xsl:element>
         </xsl:if>
     </xsl:template>
-   
-        
+
+
 <!-- Templates -->
 
     <!-- Collection name -->
@@ -204,12 +204,12 @@
             <xsl:value-of>PA Digital</xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- Type template -->
     <xsl:template name="type_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -239,7 +239,7 @@
                         test="matches($firststem, '^(stillimage.*$|still\simage.*$)', 'i')">
                         <dcterms:type>Still Image</dcterms:type>
                     </xsl:when>
-                    
+
                     <!-- Format -->
                     <xsl:otherwise>
                         <xsl:if test="normalize-space($firststem)!=''">
@@ -249,7 +249,7 @@
                         </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="type_template">
                     <xsl:with-param name="strings" select="$newstem"/>
@@ -297,7 +297,7 @@
     <xsl:template name="crea_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -323,12 +323,12 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- Publisher template -->
     <xsl:template name="publ_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -354,12 +354,12 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- Date template -->
     <xsl:template name="date_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -385,12 +385,12 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- Language template -->
     <xsl:template name="lang_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -410,7 +410,7 @@
                         </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="lang_template">
                     <xsl:with-param name="strings" select="$newstem"/>
@@ -442,7 +442,7 @@
     <xsl:template name="subj_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -453,7 +453,7 @@
                         <xsl:value-of select="normalize-space($firststem)"/>
                     </dcterms:subject>
                 </xsl:if>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="subj_template">
                     <xsl:with-param name="strings" select="$newstem"/>

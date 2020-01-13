@@ -21,9 +21,9 @@
 
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
-    <xsl:include href="../../aggregator_mdx/transforms/remediations/lookup.xsl"/>
+    <xsl:include href="remediations/lookup.xsl"/>
     <!--
-        <xsl:include href="../../aggregator_mdx/transforms/remediations/filter.xsl"/>
+        <xsl:include href="remediations/filter.xsl"/>
     -->
 
     <!-- drop nodes we don't care about, namely, header values -->
