@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+    <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.openarchives.org/OAI/2.0/">
+            <header>
+                <identifier>oai:sciencehistoryorg:000000018</identifier>
+                <datestamp>2019-06-25T13:17:14Z</datestamp>
+            </header>
+            <metadata>
+                <oai_dc:dc xmlns:dpla="http://dp.la/about/map/" xmlns:cnt="http://www.w3.org/2011/content#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:oa="http://www.w3.org/ns/oa#" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services" xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                    <dc:identifier>https://digital.sciencehistory.org/works/000000018</dc:identifier>
+                    <dc:title>Adding molten glass to neck of carboy to make rim</dc:title>
+                    <dc:creator>Creator, John</dc:creator>
+                    <dc:contributor>Contributor, Jane</dc:contributor>
+                    <dc:rights>http://creativecommons.org/publicdomain/mark/1.0/</dc:rights>
+                    <dc:rights>This is a textual rights statement</dc:rights>
+                    <dc:date>After 1895</dc:date>
+                    <dc:description>View of a worker adding molten glass to the neck of a carboy, a type of vessel used for the transportation and fermentation of liquids, at a Glass Works factory in New Jersey. This photograph is one of a set of six stereographs detailing the production of 12-gallon glass carboys.</dc:description>
+                    <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+                    <dc:language>eng;French</dc:language>
+                    <dc:relation>Here&apos;s a link to the collection finding aid.</dc:relation>
+                    <dc:publisher>Underwood &amp; Underwood</dc:publisher>
+                    <dcterms:rightsholder>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:rightsholder>
+                    <dc:subject>Employees</dc:subject>
+                    <dc:subject>Glass blowing and working</dc:subject>
+                    <dc:subject>Manufacturing industries</dc:subject>
+                    <dc:subject>Glass manufacture</dc:subject>
+                    <dc:type>image</dc:type>
+                    <dc:type>photographs</dc:type>
+                    <dc:type>stereographs</dc:type>
+                    <dc:source>Repository</dc:source>
+                    <dc:identifier>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</dc:identifier>
+                    <dpla:originalRecord>https://digital.sciencehistory.org/works/000000018</dpla:originalRecord>
+                    <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
+                    <edm:rights>http://creativecommons.org/publicdomain/mark/1.0/</edm:rights>
+                    <edm:hasType>photographs</edm:hasType>
+                    <edm:hasType>stereographs</edm:hasType>
+                    <edm:object>https://digital.sciencehistory.org/downloads/41687h66b/download_full?disposition=inline</edm:object>
+                </oai_dc:dc>
+            </metadata>
+        </record>
+</documents>
