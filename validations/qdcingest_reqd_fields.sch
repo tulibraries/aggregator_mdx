@@ -15,7 +15,7 @@
     <title>DPLAH fields required</title>
     <rule context="oai_qdc:qualifieddc">
       <assert test="dc:title" id="Required1" role="error">There must be a title</assert>
-      <assert test="dc:rights" id="Required2" role="error">There must be a rights statement</assert>
+      <assert test="dc:rights or dcterms:accessRights" id="Required2" role="error">There must be a rights statement</assert>
     </rule>
   </pattern>
   <pattern id="TitleElementPattern">
@@ -43,6 +43,13 @@
     <rule context="oai_qdc:qualifieddc/dc:rights">
       <assert test="normalize-space(.) != 'pdcp_noharvest'" id="RightsNoHarvest1" role="error">The
         rights element must not contain stopword</assert>
+    </rule>
+  </pattern>
+  <pattern id="AccRightsNoHarvest">
+    <title>Additional Metadata Requirements</title>
+    <rule context="oai_qdc:qualifieddc/dcterms:accessRights">
+      <assert test="normalize-space(.) != 'pdcp_noharvest'" id="AccRightsNoHarvest1" role="error">The
+        access rights element must not contain stopword</assert>
     </rule>
   </pattern>
 </schema>

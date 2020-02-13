@@ -75,5 +75,17 @@
       <assert test="normalize-space(.)!='Temple University'" id="NoHarvestPattern2" role="error">Records from Temple University are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="SHINoHarvestPattern">
+    <title>Check to invalidate Science History Institute</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Science History Institute'" id="NoHarvestPattern3" role="error">Records from Science History Institute are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="PSUNoHarvestPattern">
+    <title>Check to invalidate Penn State</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Pennsylvania State University'" id="NoHarvestPattern4" role="error">Records from Penn State are invalid</assert>
+    </rule>
+  </pattern>
 
 </schema>
