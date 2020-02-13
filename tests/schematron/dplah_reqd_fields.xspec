@@ -908,5 +908,25 @@
       <x:expect-assert id="NoHarvestPattern2"/>
     </x:scenario>
   </x:scenario>
+  <x:scenario label="SHINoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveSHI.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveSHI.xml"/>
+      <x:expect-assert id="NoHarvestPattern3"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="PSUNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemovePSU.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemovePSU.xml"/>
+      <x:expect-assert id="NoHarvestPattern4"/>
+    </x:scenario>
+  </x:scenario>
 
 </x:description>
