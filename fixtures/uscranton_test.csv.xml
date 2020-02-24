@@ -1,0 +1,17 @@
+<collection dag-id="funcake_uscranton" dag-timestamp="2019-11-27_16-54-14">
+  <record airflow-record-id="1">
+    <Item_No>reportsofinspect1885penn</Item_No>
+    <Title>Reports of the Inspectors of Mines of the anthracite coal regions of Pennsylvania for the year ..</Title>
+    <Creator>Pennsylvania. Inspectors of Mines</Creator>
+    <Description>Report year ends Dec. 31,Continues: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Coal Mines of the anthricite coals regions of Pennsylvania for the year ..,Continued by: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Mines of the anthracite and bituminous coal regions of Pennsylvania</Description>
+    <Creation_Date>1885</Creation_Date>
+    <Subject>anthracite coal;Coal mines and mining</Subject>
+    <Language>English</Language>
+    <Identifier>https://archive.org/details/reportsofinspect1885penn</Identifier>
+    <Thumbnail>https://archive.org/services/img/reportsofinspect1885penn</Thumbnail>
+    <Type>text</Type>
+    <Publisher>[Harrisburg] : The Bureau</Publisher>
+    <Collection_Name>Pennsylvania Mining Reports Collection</Collection_Name>
+    <Rights_URI>http://rightsstatements.org/vocab/NoC-US/1.0/</Rights_URI>
+  </record>
+</collection>

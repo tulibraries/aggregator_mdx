@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dpla="http://dp.la/about/map/"
+  xmlns:edm="http://www.europeana.eu/schemas/edm/"
+  xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+  xmlns:oclcterms="http://purl.org/oclc/terms/"
+  xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:oclc="http://purl.org/oclc/terms/"
+  xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+  xmlns:schema="http://schema.org"
+  xmlns:svcs="http://rdfs.org/sioc/services"
+  stylesheet="../../transforms/uscranton_csv.xsl">
+
+  <!-- Collection Name -->
+  <x:scenario label="Collection_Name is transformed to dcterms:isPartOf">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Collection_Name is transformed to dcterms:isPartOf" test="oai_dc:dc/dcterms:isPartOf = 'Pennsylvania Mining Reports Collection'"/>
+  </x:scenario>
+
+  <!-- Contributing Institution -->
+  <x:scenario label="hard coded dataProvider">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="hard coded dataProvider" test="oai_dc:dc/edm:dataProvider = 'University of Scranton'"/>
+  </x:scenario>
+
+  <!-- Creator -->
+  <x:scenario label="Creator is transformed to dcterms:creator">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Creator is transformed to dcterms:creator" test="oai_dc:dc/dcterms:creator = 'Pennsylvania. Inspectors of Mines'"/>
+  </x:scenario>
+
+  <!-- Date -->
+  <x:scenario label="Creation_Date is transformed to dcterms:date">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Creation_Date is transformed to dcterms:date" test="oai_dc:dc/dcterms:date = '1885'"/>
+  </x:scenario>
+
+  <!-- Description -->
+  <x:scenario label="Description is transformed to dcterms:description">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Description is transformed to dcterms:description" test="oai_dc:dc/dcterms:description = 'Report year ends Dec. 31,Continues: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Coal Mines of the anthricite coals regions of Pennsylvania for the year ..,Continued by: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Mines of the anthracite and bituminous coal regions of Pennsylvania'"/>
+  </x:scenario>
+
+  <!-- Hub -->
+  <x:scenario label="hard coded hub name">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"></x:expect>
+  </x:scenario>
+
+  <!-- Identifiers -->
+  <x:scenario label="identifier processing">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Item_No is transformed to dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'reportsofinspect1885penn'"/>
+    <x:expect label="Identifier is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://archive.org/details/reportsofinspect1885penn'"/>
+    <x:expect label="Thumbnail is generated from identifier" test="oai_dc:dc/edm:preview = 'https://archive.org/services/img/reportsofinspect1885penn'"></x:expect>
+  </x:scenario>
+
+  <!-- Language -->
+  <x:scenario label="Language is transformed to dcterms:language">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Language is transformed to dcterms:language" test="oai_dc:dc/dcterms:language = 'English'"/>
+  </x:scenario>
+
+  <!-- Rights -->
+  <x:scenario label="rights processing">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="rights statment URI is transformed to edm:rights" test='oai_dc:dc/edm:rights = "http://rightsstatements.org/vocab/NoC-US/1.0/"'/>
+  </x:scenario>
+
+  <!-- Subject -->
+  <x:scenario label="Subject is transformed to dcterms:subject">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Subject is transformed to dcterms:subject">
+      <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:dpla="http://dp.la/about/map/"
+        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:oclc="http://purl.org/oclc/terms/"
+        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+        xmlns:oclcterms="http://purl.org/oclc/terms/"
+        xmlns:schema="http://schema.org"
+        xmlns:padig="http://padigitial.org/ns/"
+        xmlns:svcs="http://rdfs.org/sioc/services">
+        <dcterms:identifier>reportsofinspect1885penn</dcterms:identifier>
+        <dcterms:title>Reports of the Inspectors of Mines of the anthracite coal regions of Pennsylvania for the year ..</dcterms:title>
+        <dcterms:creator>Pennsylvania. Inspectors of Mines</dcterms:creator>
+        <dcterms:description>Report year ends Dec. 31,Continues: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Coal Mines of the anthricite coals regions of Pennsylvania for the year ..,Continued by: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Mines of the anthracite and bituminous coal regions of Pennsylvania</dcterms:description>
+        <dcterms:date>1885</dcterms:date>
+        <dcterms:subject>anthracite coal</dcterms:subject>
+        <dcterms:subject>Coal mines and mining</dcterms:subject>
+        <dcterms:language>English</dcterms:language>
+        <edm:isShownAt>https://archive.org/details/reportsofinspect1885penn</edm:isShownAt>
+        <edm:preview>https://archive.org/services/img/reportsofinspect1885penn</edm:preview>
+        <dcterms:type>Text</dcterms:type>
+        <dcterms:isPartOf>Pennsylvania Mining Reports Collection</dcterms:isPartOf>
+        <edm:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</edm:rights>
+        <edm:dataProvider>University of Scranton</edm:dataProvider>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
+
+  <!-- Title -->
+  <x:scenario label="Title is transformed to dcterms:title">
+    <x:context href="../../fixtures/uscranton_test.csv.xml"/>
+    <x:expect label="Title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'Reports of the Inspectors of Mines of the anthracite coal regions of Pennsylvania for the year ..'"/>
+  </x:scenario>
+
+  <!-- Type -->
+  <x:scenario label="Type are matched and remediated for known strings">
+    <x:scenario label="Image Type Remediation">
+      <x:scenario label="Image Type Remediation: Starts with lowercase image">
+        <x:context>
+          <record>
+            <Type>text</Type>
+            <Item_No>record-that-should-be-kept</Item_No>
+          </record>
+        </x:context>
+        <x:expect label="Output record Type is 'Still Image'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+</x:description>
