@@ -294,6 +294,25 @@
 		<padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
 		<padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
 		<padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
+	        <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
+	        <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
+	        <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
+	        <padig:set string="Medieval Manuscripts Collection">medieval</padig:set>
+	        <padig:set string="P. W. Costello and Family Art Collection">costello</padig:set>
+	        <padig:set string="Passionist Historical Archives Collection">passionists</padig:set>
+	        <padig:set string="Scranton Local History Collection">p9000coll6</padig:set>
+	        <padig:set string="University of Scranton Aquinas">aquinas</padig:set>
+	        <padig:set string="University of Scranton Basketball Collection">basketball</padig:set>
+	        <padig:set string="University of Scranton Commencement Programs">commencement</padig:set>
+	        <padig:set string="University of Scranton Course Catalogs">p15111coll4</padig:set>
+	        <padig:set string="University of Scranton Department Publications">publications</padig:set>
+	        <padig:set string="University of Scranton Football Collection">p15111coll2</padig:set>
+	        <padig:set string="University of Scranton Photos and Documents">p9000coll7</padig:set>
+	        <padig:set string="University of Scranton PR Publications and Press Releases">prpubs</padig:set>
+	        <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
+	        <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
+	        <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
+	        
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->
