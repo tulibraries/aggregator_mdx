@@ -177,7 +177,7 @@
 		<padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
 		<padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
 		<padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
-        <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
+                <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
 		<padig:set string="G.M. Hopkins Company Maps">pitt_collection.240</padig:set>
 		<padig:set string="George Westinghouse Museum Collection">pitt_collection.286</padig:set>
 		<padig:set string="Greenstone United Methodist Church, Avalon, Pa. Records">pitt_collection.17</padig:set>
@@ -214,7 +214,7 @@
 		<padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
 		<padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
 		<padig:set string="March of the Pittsburgh Blues Copybook">pitt_collection.98</padig:set>
-        <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
+                <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
 		<padig:set string="Mary Elinor Lazenby Papers">pitt_collection.275</padig:set>
 		<padig:set string="Mary Roberts Rinehart Papers">pitt_collection.185</padig:set>
 		<padig:set string="Max A. Lauffer Papers">pitt_collection.197</padig:set>
@@ -312,6 +312,33 @@
 	        <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
 	        <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
 	        <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
+	        <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
+	        <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
+	        <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
+	    	<padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
+	        <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
+	        <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
+	        <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
+	        <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
+	        <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
+	        <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
+	        <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
+	        <padig:set string="West Chester University Aralia Press">qwcaralia</padig:set>
+	        <padig:set string="West Chester University Archaeology Prehistoric Artifacts">qwcarch</padig:set>
+	        <padig:set string="West Chester University Archives">wcutreasure</padig:set>
+	        <padig:set string="West Chester University Chester County Business">chester</padig:set>
+	        <padig:set string="West Chester University Civil War">qwccivilwar</padig:set>
+	        <padig:set string="West Chester University Lowell Gardenour United States Air Force Asia Collection">p17189coll4</padig:set>
+	        <padig:set string="West Chester University Philips Autographed Library">philips</padig:set>
+	        <padig:set string="West Chester University Photographs">qwcphoto</padig:set>
+	        <padig:set string="West Chester University Postcards">qwcpost</padig:set>
+	        <padig:set string="West Chester University Redware">redware</padig:set>
+	        <padig:set string="West Chester University Sharples">sharples</padig:set>
+	        <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
+	        <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
+	        <padig:set string="West Chester University WPA Collection">wpa</padig:set>
+	       
+
 	        
     </xsl:param>
 
