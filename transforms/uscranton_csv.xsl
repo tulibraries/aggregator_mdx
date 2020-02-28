@@ -45,7 +45,7 @@
 
     <!-- Collection Name -->
     <xsl:template match="Collection_Name">
-        <xsl:if test="normalize-space(lower-case(.))">
+        <xsl:if test="normalize-space(.)">
           <xsl:element name="dcterms:isPartOf">
               <xsl:value-of select="normalize-space(.)"/>
           </xsl:element>
