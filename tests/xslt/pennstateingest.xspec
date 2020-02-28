@@ -80,6 +80,7 @@
            <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
            <dcterms:identifier>P722002</dcterms:identifier>
            <dcterms:identifier>Identifier</dcterms:identifier>
+           <dcterms:identifier>PSU-p15037coll3-0</dcterms:identifier>
            <edm:dataProvider>Temple University</edm:dataProvider>
            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
            <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -1128,6 +1129,7 @@
          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
          <dcterms:identifier>P722002</dcterms:identifier>
          <dcterms:identifier>Identifier</dcterms:identifier>
+         <dcterms:identifier>PSU-p15037coll3-0</dcterms:identifier>
          <edm:dataProvider>Temple University</edm:dataProvider>
          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -1255,6 +1257,7 @@
          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
          <dcterms:identifier>P722002</dcterms:identifier>
          <dcterms:identifier>Identifier</dcterms:identifier>
+         <dcterms:identifier>PSU-p15037coll3-0</dcterms:identifier>
          <edm:dataProvider>Temple University</edm:dataProvider>
          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -1300,6 +1303,7 @@
            <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
            <dcterms:identifier>P722002</dcterms:identifier>
            <dcterms:identifier>Identifier</dcterms:identifier>
+           <dcterms:identifier>PSU-p15037coll3-0</dcterms:identifier>
            <edm:dataProvider>Temple University</edm:dataProvider>
            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
            <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -1434,7 +1438,29 @@
    </x:scenario>
 
 <!-- Identifier (map) -->
-     <x:scenario label="identifier not last becomes space-normalized dcterms:identifier">
+   <x:scenario label="dummy identifier generates and maps to dcterms:identifier">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dc:identifier>http://digital.libraries.psu.edu/cdm/ref/collection/maps1/id/14483</dc:identifier>
+           </oai_qdc:qualifieddc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="dummy identifier generates">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:identifier>PSU-maps1-14483</dcterms:identifier>
+         <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+         <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/maps1/id/14483</edm:isShownAt>
+         <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/maps1/id/14483</edm:preview>
+         <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/maps1/14483</svcs:hasService>
+         <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/maps1/14483/manifest.json</dcterms:isReferencedBy>
+         <edm:provider>PA Digital</edm:provider>
+       </oai_dc:dc>
+     </x:expect>
+   </x:scenario>  
+   <x:scenario label="identifier not last becomes space-normalized dcterms:identifier">
        <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
        <x:expect label="identifier not last becomes dcterms:identifier">
            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1468,6 +1494,7 @@
              <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
              <dcterms:identifier>P722002</dcterms:identifier>
              <dcterms:identifier>Identifier</dcterms:identifier>
+             <dcterms:identifier>PSU-p15037coll3-0</dcterms:identifier>
              <edm:dataProvider>Temple University</edm:dataProvider>
              <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
              <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
