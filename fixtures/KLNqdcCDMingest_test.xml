@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository
+    xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <record>
+            <header>
+                <identifier>oai:cdm17189.contentdm.oclc.org:blmmap/0</identifier>
+                <datestamp>2015-10-20</datestamp>
+                <setSpec>blmmap</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Map of Bloomsburg, Columbia Co. Pennsylvania</dc:title>
+                    <dc:creator>Creator name</dc:creator>
+                    <dc:subject>Bloomsburg, Pa. - Maps ; Bloomsburg, Pa. - Directories ; Business enterprises - Pennsylvania - Bloomsburg
+                    </dc:subject>
+                    <dc:publisher>test publisher</dc:publisher>
+                    <dc:description>1 map : col. ; 102 cm. 1870 map of Bloomsburg, Pa., Columbia County, Pa. showing East Bloomsburg, West Bloomsburg, and business directory.
+                    </dc:description>
+                    <dc:identifier>BloomsburgMap1870.jpg</dc:identifier>
+                    <dc:relation>test relation</dc:relation>
+                    <dc:rights>Andruss Library digital images and corresponding text may be used for non-commercial, educational, and personal use only without permission, provided that proper attribution of the source accompanies the image. The digital images are not intended for reproduction or redistribution. Commercial publication requires permission. Contact the Bloomsburg University Archives at guides.library.bloomu.edu/universityarchives or (570) 389-4210. Andruss Library assumes no responsibility for infringement of copyright by content users.</dc:rights>
+                    <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                    <dc:date>1870</dc:date>
+                    <dcterms:issued>1870</dcterms:issued>
+                    <dc:format>jpg</dc:format>
+                    <dc:type>Map</dc:type>
+                    <dc:source>test source</dc:source>
+                    <dc:coverage>United States - Pennsylvania - Bloomsburg</dc:coverage>
+                    <dcterms:temporal>20th century</dcterms:temporal>
+                    <dc:subject>Town</dc:subject>
+                    <dc:contributor>W.W. Richie assisted by P.A. Cunningham</dc:contributor>
+                    <dc:identifier>http://cdm17189.contentdm.oclc.org/cdm/ref/collection/blmmap/id/0</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+</repository>
