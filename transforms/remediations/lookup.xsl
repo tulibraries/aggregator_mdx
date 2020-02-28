@@ -18,6 +18,25 @@
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
 
+    <!-- lookup table for IANA media types -->
+    <xsl:param name="fFormatList">
+        <padig:fformat string="image/jpeg">jpg</padig:fformat>
+        <padig:fformat string="image/jpeg">jpeg</padig:fformat>
+        <padig:fformat string="image/jp2">jp2</padig:fformat>
+        <padig:fformat string="image/jp2">jpg2</padig:fformat>
+        <padig:fformat string="image/jp2">jpeg2</padig:fformat>
+        <padig:fformat string="image/jp2">jpeg2000</padig:fformat>
+        <padig:fformat string="image/jp2">jp2000</padig:fformat>
+        <padig:fformat string="image/tiff">tif</padig:fformat>
+        <padig:fformat string="image/tiff">tiff</padig:fformat>
+        <padig:fformat string="application/pdf">pdf</padig:fformat>
+        <padig:fformat string="video/mpeg">mpeg4</padig:fformat>
+        <padig:fformat string="video/mp4">mp4</padig:fformat>
+        <padig:fformat string="video/mpeg">mpeg</padig:fformat>
+        <padig:fformat string="audio/mpeg">mpeg3</padig:fformat>
+        <padig:fformat string="audio/mp3">mp3</padig:fformat>
+    </xsl:param>
+        
     <!-- lookup table for recommended DCMI Types terms/URIs -->
     <xsl:param name="dcmiType">
         <padig:type string="collection" uri="http://purl.org/dc/dcmitype/Collection">collection</padig:type>
@@ -108,12 +127,40 @@
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
 	<xsl:param name="oaiUrlInt">
-		<padig:url string="Keystone Library Network">http://cdm17189.contentdm.oclc.org/</padig:url>
-		<padig:url string="Lackawanna Valley Digital Archives">http://content.lackawannadigitalarchives.org/</padig:url>
+	    <padig:url string="Keystone Library Network">http://cdm17189.contentdm.oclc.org/</padig:url>
+	    <padig:url string="Keystone Library Network">http://digital.klnpa.org/</padig:url>
+	    <padig:url string="Lackawanna Valley Digital Archives">http://content.lackawannadigitalarchives.org/</padig:url>
 		<padig:url string="Keystone Library Network">http://digital.klnpa.org/</padig:url>
 		<padig:url string="POWER Library as sponsor and HSLC as maintainer">http://digitalcollections.powerlibrary.org/</padig:url>
 		<padig:url string="Historic Pittsburgh">http://historicpittsburgh.org/</padig:url>
 	</xsl:param>
+    
+    <!-- lookup table for Contributing Institutions with Intermediate Providers -->
+    <xsl:param name="ContInt">
+        <padig:cont string="Bloomsburg University">blmmap</padig:cont>
+        <padig:cont string="Bloomsburg University">blmphoto</padig:cont>
+        <padig:cont string="Bloomsburg University">blmpost</padig:cont>
+        <padig:cont string="Slippery Rock University">audio</padig:cont>
+        <padig:cont string="Slippery Rock University">photograph</padig:cont>
+        <padig:cont string="Slippery Rock University">postcard</padig:cont>
+        <padig:cont string="Slippery Rock University">yearbooks</padig:cont>
+        <padig:cont string="West Chester University">wcudoll</padig:cont>
+        <padig:cont string="West Chester University">diaries</padig:cont>
+        <padig:cont string="West Chester University">qwcaralia</padig:cont>
+        <padig:cont string="West Chester University">qwcarch</padig:cont>
+        <padig:cont string="West Chester University">wcutreasure</padig:cont>
+        <padig:cont string="West Chester University">chester</padig:cont>
+        <padig:cont string="West Chester University">qwccivilwar</padig:cont>
+        <padig:cont string="West Chester University">p17189coll4</padig:cont>
+        <padig:cont string="West Chester University">philips</padig:cont>
+        <padig:cont string="West Chester University">qwcphoto</padig:cont>
+        <padig:cont string="West Chester University">qwcpost</padig:cont>
+        <padig:cont string="West Chester University">redware</padig:cont>
+        <padig:cont string="West Chester University">sharples</padig:cont>
+        <padig:cont string="West Chester University">wcnp01</padig:cont>
+        <padig:cont string="West Chester University">p17189coll1</padig:cont>
+        <padig:cont string="West Chester University">wpa</padig:cont>
+    </xsl:param>
 
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
