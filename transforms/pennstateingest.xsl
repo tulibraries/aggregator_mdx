@@ -327,8 +327,13 @@
         <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
         <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
 
-        <!-- Contributing Institution -->
+        <!-- Dummy Identifier -->
         <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:identifier">
+                <xsl:value-of>PSU-</xsl:value-of><xsl:value-of select="$colID"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+            </xsl:element>
+
+        <!-- Contributing Institution -->
             <xsl:if test="$baseURL = $oaiUrl/padig:url">
                 <xsl:element name="edm:dataProvider">
                     <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
