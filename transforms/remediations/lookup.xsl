@@ -160,6 +160,8 @@
         <padig:cont string="West Chester University">wcnp01</padig:cont>
         <padig:cont string="West Chester University">p17189coll1</padig:cont>
         <padig:cont string="West Chester University">wpa</padig:cont>
+        <padig:cont string="Millersville University">mvsphoto</padig:cont>
+        <padig:cont string="Millersville University">wingpost</padig:cont>
     </xsl:param>
 
 	<!-- lookup table for setSpec -->
