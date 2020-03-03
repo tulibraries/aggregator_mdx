@@ -87,5 +87,34 @@
       <assert test="normalize-space(.)!='Pennsylvania State University'" id="NoHarvestPattern4" role="error">Records from Penn State are invalid</assert>
     </rule>
   </pattern>
-
+  <pattern id="SRUNoHarvestPattern">
+    <title>Check to invalidate Slipper Rock</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Slippery Rock University'" id="NoHarvestPattern5" role="error">Records from Slippery Rock University are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="WCUNoHarvestPattern">
+    <title>Check to invalidate West Chester</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='West Chester University'" id="NoHarvestPattern6" role="error">Records from West Chester University are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="BUNoHarvestPattern">
+    <title>Check to invalidate Bloomsburg University</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Bloomsburg University'" id="NoHarvestPattern7" role="error">Records from Bloomsburg University are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="UScrantonNoHarvestPattern">
+    <title>Check to invalidate University of Scranton</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='University of Scranton'" id="NoHarvestPattern8" role="error">Records from University of Scranton are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="MUNoHarvestPattern">
+    <title>Check to invalidate Millersville University</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Millersville University'" id="NoHarvestPattern9" role="error">Records from Millersville University are invalid</assert>
+    </rule>
+  </pattern>
 </schema>

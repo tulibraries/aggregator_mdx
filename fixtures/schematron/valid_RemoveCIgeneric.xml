@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dpla="http://dp.la/about/map/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:oclc="http://purl.org/oclc/terms/" xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:schema="http://schema.org" xmlns:padig="http://padigitial.org/ns/" xmlns:svcs="http://rdfs.org/sioc/services">
+   <dcterms:isPartOf>Historic Pittsburgh Book Collection</dcterms:isPartOf>
+   <dcterms:title>Ten thousand candles: a souvenir of Pittsburgh</dcterms:title>
+   <dcterms:creator>Phillips, Marie Tello , b. 1874</dcterms:creator>
+   <dcterms:subject>Poetry of places--Pennsylvania--Pittsburgh</dcterms:subject>
+   <dcterms:subject>Pittsburgh (Pa.)--Description and travel--Poetry</dcterms:subject>
+   <dcterms:description>Marie Tello Phillips.</dcterms:description>
+   <dcterms:description>"Original drawings by Edward Glannon of Pittsburgh."</dcterms:description>
+   <dcterms:description>Printed on one side of leaf only.</dcterms:description>
+   <dcterms:publisher>Observer Press</dcterms:publisher>
+   <edm:dataProvider>Not a PA Digital contributor</edm:dataProvider>
+   <dcterms:date>1931-1930</dcterms:date>
+   <dcterms:date>1931/1930</dcterms:date>
+   <dcterms:type>Text</dcterms:type>
+   <dcterms:identifier>pitt:00c867676m</dcterms:identifier>
+   <dcterms:language>eng</dcterms:language>
+   <dcterms:spatial>Pennsylvania</dcterms:spatial>
+   <dcterms:spatial>Pittsburgh</dcterms:spatial>
+   <dcterms:spatial>Pittsburgh (Pa.)</dcterms:spatial>
+   <dcterms:rights>No Copyright - United States. The organization that has made the Item available believes that the Item is in the Public Domain under the laws of the United States, but a determination was not made as to its copyright status under the copyright laws of other countries. The Item may not be in the Public Domain under the laws of other countries. Please refer to the organization that has made the Item available for more information.</dcterms:rights>
+   <edm:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</edm:rights>
+   <edm:preview>http://historicpittsburgh.org/islandora/object/pitt%3A00c867676m/datastream/TN/view/Ten%20thousand%20candles.jpg</edm:preview>
+   <edm:isShownAt>http://historicpittsburgh.org/islandora/object/pitt%3A00c867676m</edm:isShownAt>
+   <dpla:intermediateProvider>Historic Pittsburgh</dpla:intermediateProvider>
+   <edm:provider>PA Digital</edm:provider>
+</oai_dc:dc>

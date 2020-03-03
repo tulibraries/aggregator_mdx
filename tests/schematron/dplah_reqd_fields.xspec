@@ -928,5 +928,54 @@
       <x:expect-assert id="NoHarvestPattern4"/>
     </x:scenario>
   </x:scenario>
-
+  <x:scenario label="SRUNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveSRU.xml"/>
+      <x:expect-assert id="NoHarvestPattern5"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="WCUNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveWCU.xml"/>
+      <x:expect-assert id="NoHarvestPattern6"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="BUNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveBU.xml"/>
+      <x:expect-assert id="NoHarvestPattern7"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="UScrantonNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveUScranton.xml"/>
+      <x:expect-assert id="NoHarvestPattern8"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="MUNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveMU.xml"/>
+      <x:expect-assert id="NoHarvestPattern9"/>
+    </x:scenario>
+  </x:scenario>
 </x:description>
