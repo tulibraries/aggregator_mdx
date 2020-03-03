@@ -330,8 +330,13 @@
         <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
         <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
 
-        <!-- Intermediate Provider -->
+        <!-- Dummy Identifier -->
         <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:identifier">
+                <xsl:value-of>padig:KLN-</xsl:value-of><xsl:value-of select="$colID"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+            </xsl:element>
+        
+        <!-- Intermediate Provider -->
             <xsl:if test="$baseURL = $oaiUrlInt/padig:url">
                 <xsl:element name="dpla:intermediateProvider">
                     <xsl:value-of select="$oaiUrlInt/padig:url[. = $baseURL]/@string"/>
