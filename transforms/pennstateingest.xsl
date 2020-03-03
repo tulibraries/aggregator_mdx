@@ -330,7 +330,7 @@
         <!-- Dummy Identifier -->
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:identifier">
-                <xsl:value-of>PSU-</xsl:value-of><xsl:value-of select="$colID"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+                <xsl:value-of>padig:PSU-</xsl:value-of><xsl:value-of select="$colID"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
             </xsl:element>
 
         <!-- Contributing Institution -->
