@@ -130,7 +130,6 @@
 	    <padig:url string="Keystone Library Network">http://cdm17189.contentdm.oclc.org/</padig:url>
 	    <padig:url string="Keystone Library Network">http://digital.klnpa.org/</padig:url>
 	    <padig:url string="Lackawanna Valley Digital Archives">http://content.lackawannadigitalarchives.org/</padig:url>
-		<padig:url string="Keystone Library Network">http://digital.klnpa.org/</padig:url>
 		<padig:url string="POWER Library as sponsor and HSLC as maintainer">http://digitalcollections.powerlibrary.org/</padig:url>
 		<padig:url string="Historic Pittsburgh">http://historicpittsburgh.org/</padig:url>
 	</xsl:param>
