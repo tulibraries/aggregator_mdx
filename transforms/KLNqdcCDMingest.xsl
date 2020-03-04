@@ -541,9 +541,9 @@
                 <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
                 <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
                 <xsl:choose>
-                    <xsl:when test="(normalize-space($firststem)!='') and (normalize-space($firststem) = $fFormatList/padig:fformat)">
+                    <xsl:when test="(normalize-space($firststem)!='') and (lower-case(normalize-space($firststem)) = $fFormatList/padig:fformat)">
                         <xsl:element name="schema:fileFormat">
-                            <xsl:value-of select="$fFormatList/padig:fformat[. = $firststem]/@string"/>
+                            <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($firststem)]/@string"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
@@ -564,9 +564,9 @@
             <xsl:otherwise>
                 <xsl:if test="normalize-space($strings)!=''">
                     <xsl:choose>
-                        <xsl:when test="(normalize-space($strings)!='') and (normalize-space($strings) = $fFormatList/padig:fformat)">
+                        <xsl:when test="(normalize-space($strings)!='') and (lower-case(normalize-space($strings)) = $fFormatList/padig:fformat)">
                             <xsl:element name="schema:fileFormat">
-                                <xsl:value-of select="$fFormatList/padig:fformat[. = $strings]/@string"/>
+                                <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($strings)]/@string"/>
                             </xsl:element>
                         </xsl:when>
                         <xsl:otherwise>
@@ -686,9 +686,9 @@
                 <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
                 <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
                 <xsl:choose>
-                    <xsl:when test="(normalize-space($firststem)!='') and (normalize-space($firststem) = $dplahLang/padig:language)">
+                    <xsl:when test="(normalize-space($firststem)!='') and (lower-case(normalize-space($firststem)) = $dplahLang/padig:language)">
                         <xsl:element name="dcterms:language">
-                            <xsl:value-of select="$dplahLang/padig:language[. = $firststem]/@string"/>
+                            <xsl:value-of select="$dplahLang/padig:language[. = lower-case($firststem)]/@string"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
@@ -709,9 +709,9 @@
             <xsl:otherwise>
                 <xsl:if test="normalize-space($strings)!=''">
                     <xsl:choose>
-                        <xsl:when test="(normalize-space($strings)!='') and (normalize-space($strings) = $dplahLang/padig:language)">
+                        <xsl:when test="(normalize-space($strings)!='') and (lower-case(normalize-space($strings)) = $dplahLang/padig:language)">
                             <xsl:element name="dcterms:language">
-                                <xsl:value-of select="$dplahLang/padig:language[. = $strings]/@string"/>
+                                <xsl:value-of select="$dplahLang/padig:language[. = lower-case($strings)]/@string"/>
                             </xsl:element>
                         </xsl:when>
                             <xsl:otherwise>
