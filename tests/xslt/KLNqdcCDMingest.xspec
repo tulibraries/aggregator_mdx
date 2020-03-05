@@ -728,7 +728,6 @@
          <dcterms:subject>Business enterprises - Pennsylvania - Bloomsburg</dcterms:subject>
          <dcterms:publisher>test publisher</dcterms:publisher>
          <dcterms:description>1 map : col. ; 102 cm. 1870 map of Bloomsburg, Pa., Columbia County, Pa. showing East Bloomsburg, West Bloomsburg, and business directory.</dcterms:description>
-         <dcterms:identifier>BloomsburgMap1870.jpg</dcterms:identifier>
          <dcterms:relation>test relation</dcterms:relation>
          <dcterms:rights>Andruss Library digital images and corresponding text may be used for non-commercial, educational, and personal use only without permission, provided that proper attribution of the source accompanies the image. The digital images are not intended for reproduction or redistribution. Commercial publication requires permission. Contact the Bloomsburg University Archives at guides.library.bloomu.edu/universityarchives or (570) 389-4210. Andruss Library assumes no responsibility for infringement of copyright by content users.</dcterms:rights>
          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
@@ -891,7 +890,6 @@
            <dcterms:subject>Business enterprises - Pennsylvania - Bloomsburg</dcterms:subject>
            <dcterms:publisher>test publisher</dcterms:publisher>
            <dcterms:description>1 map : col. ; 102 cm. 1870 map of Bloomsburg, Pa., Columbia County, Pa. showing East Bloomsburg, West Bloomsburg, and business directory.</dcterms:description>
-           <dcterms:identifier>BloomsburgMap1870.jpg</dcterms:identifier>
            <dcterms:relation>test relation</dcterms:relation>
            <dcterms:rights>Andruss Library digital images and corresponding text may be used for non-commercial, educational, and personal use only without permission, provided that proper attribution of the source accompanies the image. The digital images are not intended for reproduction or redistribution. Commercial publication requires permission. Contact the Bloomsburg University Archives at guides.library.bloomu.edu/universityarchives or (570) 389-4210. Andruss Library assumes no responsibility for infringement of copyright by content users.</dcterms:rights>
            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>

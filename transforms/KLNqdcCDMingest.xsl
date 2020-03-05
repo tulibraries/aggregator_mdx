@@ -314,14 +314,6 @@
     </xsl:template>
 
      <!-- Identifier -->
-    <xsl:template match="dc:identifier[position() != last()]">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:element name="dcterms:identifier">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-        </xsl:if>
-    </xsl:template>
-
     <!-- Create $baseURL and $objID -->
     <xsl:template match="dc:identifier[position() = last()]">
 
