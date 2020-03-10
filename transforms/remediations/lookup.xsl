@@ -161,6 +161,18 @@
         <padig:cont string="West Chester University">wpa</padig:cont>
         <padig:cont string="Millersville University">mvsphoto</padig:cont>
         <padig:cont string="Millersville University">wingpost</padig:cont>
+	<padig:cont string="Bryn Mawr College">BMC_photoarc</padig:set>
+	<padig:cont string="Bryn Mawr College">Mellink</padig:set>
+	<padig:cont string="Bryn Mawr College">BMC_collnew</padig:set>
+	<padig:cont string="Bryn Mawr College">castle</padig:set>
+	<padig:cont string="Bryn Mawr College">BMC_AdvertisingCards</padig:set>
+	<padig:cont string="Bryn Mawr College">BMC_postcard</padig:set>
+	<padig:cont string="Bryn Mawr College">BMC_yrbks</padig:set>
+	<padig:cont string="Bryn Mawr College">BMC_scrpbks</padig:set>
+	<padig:cont string="Bryn Mawr College">almaclarke</padig:set>
+	<padig:cont string="Friends Historical Library of Swarthmore College">SC_Truman</padig:set>
+	<padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College">SC_Broad</padig:set>
+	
     </xsl:param>
 
 	<!-- lookup table for setSpec -->
@@ -385,9 +397,32 @@
 	        <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
 	        <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
 	        <padig:set string="West Chester University WPA Collection">wpa</padig:set>
-	       
-
-	        
+	        <padig:set string="Lehigh Letters">letters</padig:set>
+	        <padig:set string="Postcards">postal</padig:set>
+	        <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
+	        <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
+	        <padig:set string="Bryn Mawr College News">BMC_collnew</padig:set>
+	        <padig:set string="Castle Collection of Natural History Illustrations">castle</padig:set>
+	        <padig:set string="Early Advertising Collection">BMC_AdvertisingCards</padig:set>
+	        <padig:set string="Bryn Mawr College Postcards">BMC_postcard</padig:set>
+	        <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
+	        <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
+	        <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
+	        <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
+	        <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
+	        <padig:set string="What's Up @ Widener">p16069coll20</padig:set>
+	        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
+	        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
+	        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
+	        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
+	        <padig:set string="Brandywine College">p16069coll27</padig:set>
+	        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll27</padig:set>
+	        <padig:set string="View Books">p16069coll32</padig:set>
+	        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
+	        <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll24</padig:set>
+	        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
+	        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
+	        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>      
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->
