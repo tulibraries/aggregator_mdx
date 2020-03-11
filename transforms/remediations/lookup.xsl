@@ -102,76 +102,76 @@
 
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">
-		<padig:url string="Lehigh University">http://cdm.lib.lehigh.edu/</padig:url>
-		<padig:url string="La Salle University">http://cdm15860.contentdm.oclc.org/</padig:url>
-		<padig:url string="Pennsylvania State University">http://digital.libraries.psu.edu/</padig:url>
-		<padig:url string="Temple University">http://digital.library.temple.edu/</padig:url>
-		<padig:url string="University of Pennsylvania">http://digital.library.upenn.edu/</padig:url>
-		<padig:url string="Villanova University">https://digital.library.villanova.edu/</padig:url>
-		<padig:url string="Jefferson - East Falls">http://digitalcollections.philau.edu/</padig:url>
-		<padig:url string="La Salle University">http://digitalcommons.lasalle.edu/</padig:url>
-		<padig:url string="Philadelphia College of Osteopathic Medicine">http://digitalcommons.pcom.edu/</padig:url>
-		<padig:url string="Ursinus College">http://digitalcommons.ursinus.edu/</padig:url>
-		<padig:url string="University of Scranton">http://digitalservices.scranton.edu/</padig:url>
-		<padig:url string="Widener Univeristy">http://digitalwolfgram.widener.edu/</padig:url>
-		<padig:url string="University of Pennsylvania">http://dla.library.upenn.edu/dla/</padig:url>
-		<padig:url string="Thomas Jefferson University">http://jdc.jefferson.edu/</padig:url>
-		<padig:url string="Susquehanna University">http://pahistoryharvest.com/</padig:url>
-		<padig:url string="Pennsylvania State Archives">http://psa.powerlibrary.org/</padig:url>
-		<padig:url string="Historical Medical Library of The College of Physicians of Philadelphia">http://www.cppdigitallibrary.org/</padig:url>
-		<padig:url string="Presbyterian Historical Society">https://digital.history.pcusa.org/</padig:url>
-		<padig:url string="The Library Company of Philadelphia">https://digital.librarycompany.org/</padig:url>
-		<padig:url string="Science History Institute">https://digital.sciencehistory.org/</padig:url>
-		<padig:url string="American Philosophical Society">https://diglib.amphilsoc.org/</padig:url>
+		<padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
+        <padig:url string="La Salle University" code="LASALLE">http://cdm15860.contentdm.oclc.org/</padig:url>
+		<padig:url string="Pennsylvania State University" code="PSU">http://digital.libraries.psu.edu/</padig:url>
+		<padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
+		<padig:url string="University of Pennsylvania" code="PENN">http://digital.library.upenn.edu/</padig:url>
+		<padig:url string="Villanova University" code="VNOVA">https://digital.library.villanova.edu/</padig:url>
+		<padig:url string="Jefferson - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
+		<padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
+		<padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
+        <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
+        <padig:url string="University of Scranton" code="USCR">http://digitalservices.scranton.edu/</padig:url>
+		<padig:url string="Widener Univeristy" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
+		<padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
+		<padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
+		<padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
+		<padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
+        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="COLPHYS">http://www.cppdigitallibrary.org/</padig:url>
+		<padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
+		<padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
+		<padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
+		<padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
     </xsl:param>
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
 	<xsl:param name="oaiUrlInt">
-	    <padig:url string="Keystone Library Network">http://cdm17189.contentdm.oclc.org/</padig:url>
-	    <padig:url string="Keystone Library Network">http://digital.klnpa.org/</padig:url>
-	    <padig:url string="Lackawanna Valley Digital Archives">http://content.lackawannadigitalarchives.org/</padig:url>
-		<padig:url string="POWER Library as sponsor and HSLC as maintainer">http://digitalcollections.powerlibrary.org/</padig:url>
-		<padig:url string="Historic Pittsburgh">http://historicpittsburgh.org/</padig:url>
+	    <padig:url string="Keystone Library Network" code="KLN">http://cdm17189.contentdm.oclc.org/</padig:url>
+	    <padig:url string="Keystone Library Network" code="KLN">http://digital.klnpa.org/</padig:url>
+	    <padig:url string="Lackawanna Valley Digital Archives" code="LVDA">http://content.lackawannadigitalarchives.org/</padig:url>
+		<padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
+		<padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
 	</xsl:param>
     
     <!-- lookup table for Contributing Institutions with Intermediate Providers -->
     <xsl:param name="ContInt">
-        <padig:cont string="Bloomsburg University">blmmap</padig:cont>
-        <padig:cont string="Bloomsburg University">blmphoto</padig:cont>
-        <padig:cont string="Bloomsburg University">blmpost</padig:cont>
-        <padig:cont string="Slippery Rock University">audio</padig:cont>
-        <padig:cont string="Slippery Rock University">photograph</padig:cont>
-        <padig:cont string="Slippery Rock University">postcard</padig:cont>
-        <padig:cont string="Slippery Rock University">yearbooks</padig:cont>
-        <padig:cont string="West Chester University">wcudoll</padig:cont>
-        <padig:cont string="West Chester University">diaries</padig:cont>
-        <padig:cont string="West Chester University">qwcaralia</padig:cont>
-        <padig:cont string="West Chester University">qwcarch</padig:cont>
-        <padig:cont string="West Chester University">wcutreasure</padig:cont>
-        <padig:cont string="West Chester University">chester</padig:cont>
-        <padig:cont string="West Chester University">qwccivilwar</padig:cont>
-        <padig:cont string="West Chester University">p17189coll4</padig:cont>
-        <padig:cont string="West Chester University">philips</padig:cont>
-        <padig:cont string="West Chester University">qwcphoto</padig:cont>
-        <padig:cont string="West Chester University">qwcpost</padig:cont>
-        <padig:cont string="West Chester University">redware</padig:cont>
-        <padig:cont string="West Chester University">sharples</padig:cont>
-        <padig:cont string="West Chester University">wcnp01</padig:cont>
-        <padig:cont string="West Chester University">p17189coll1</padig:cont>
-        <padig:cont string="West Chester University">wpa</padig:cont>
-        <padig:cont string="Millersville University">mvsphoto</padig:cont>
-        <padig:cont string="Millersville University">wingpost</padig:cont>
-        <padig:cont string="Bryn Mawr College">almaclarke</padig:cont>
-        <padig:cont string="Bryn Mawr College">BMC_collnew</padig:cont>
-        <padig:cont string="Bryn Mawr College">BMC_photoarc</padig:cont>
-        <padig:cont string="Bryn Mawr College">BMC_postcard</padig:cont>
-        <padig:cont string="Bryn Mawr College">BMC_scrpbks</padig:cont>
-        <padig:cont string="Bryn Mawr College">BMC_yrbks</padig:cont>
-        <padig:cont string="Bryn Mawr College">castle</padig:cont>
-        <padig:cont string="Bryn Mawr College">BMC_AdvertisingCards</padig:cont>
-        <padig:cont string="Bryn Mawr College">Mellink</padig:cont>
-        <padig:cont string="Friends Historical Library of Swarthmore College">SC_Truman</padig:cont>
-        <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College">SC_Broad</padig:cont>
+        <padig:cont string="Bloomsburg University" code="BLOOMS">blmmap</padig:cont>
+        <padig:cont string="Bloomsburg University" code="BLOOMS">blmphoto</padig:cont>
+        <padig:cont string="Bloomsburg University" code="BLOOMS">blmpost</padig:cont>
+        <padig:cont string="Slippery Rock University" code="SRU">audio</padig:cont>
+        <padig:cont string="Slippery Rock University" code="SRU">photograph</padig:cont>
+        <padig:cont string="Slippery Rock University" code="SRU">postcard</padig:cont>
+        <padig:cont string="Slippery Rock University" code="SRU">yearbooks</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">wcudoll</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">diaries</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">qwcaralia</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">qwcarch</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">wcutreasure</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">chester</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">qwccivilwar</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">p17189coll4</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">philips</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">qwcphoto</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">qwcpost</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">redware</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">sharples</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">wcnp01</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">p17189coll1</padig:cont>
+        <padig:cont string="West Chester University" code="WESTCH">wpa</padig:cont>
+        <padig:cont string="Millersville University" code="WESTCH">mvsphoto</padig:cont>
+        <padig:cont string="Millersville University" code="WESTCH">wingpost</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">almaclarke</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_collnew</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_photoarc</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_postcard</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_scrpbks</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_yrbks</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">castle</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_AdvertisingCards</padig:cont>
+        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">Mellink</padig:cont>
+        <padig:cont string="Friends Historical Library of Swarthmore College" code="FHL">SC_Truman</padig:cont>
+        <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="FHL">SC_Broad</padig:cont>
     </xsl:param>
 
 	<!-- lookup table for setSpec -->
@@ -236,7 +236,7 @@
 		<padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
 		<padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
 		<padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
-                <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
+        <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
 		<padig:set string="G.M. Hopkins Company Maps">pitt_collection.240</padig:set>
 		<padig:set string="George Westinghouse Museum Collection">pitt_collection.286</padig:set>
 		<padig:set string="Greenstone United Methodist Church, Avalon, Pa. Records">pitt_collection.17</padig:set>
@@ -273,7 +273,7 @@
 		<padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
 		<padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
 		<padig:set string="March of the Pittsburgh Blues Copybook">pitt_collection.98</padig:set>
-                <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
+        <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
 		<padig:set string="Mary Elinor Lazenby Papers">pitt_collection.275</padig:set>
 		<padig:set string="Mary Roberts Rinehart Papers">pitt_collection.185</padig:set>
 		<padig:set string="Max A. Lauffer Papers">pitt_collection.197</padig:set>
@@ -353,52 +353,75 @@
 		<padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
 		<padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
 		<padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
-	        <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
-	        <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
-	        <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
-	        <padig:set string="Medieval Manuscripts Collection">medieval</padig:set>
-	        <padig:set string="P. W. Costello and Family Art Collection">costello</padig:set>
-	        <padig:set string="Passionist Historical Archives Collection">passionists</padig:set>
-	        <padig:set string="Scranton Local History Collection">p9000coll6</padig:set>
-	        <padig:set string="University of Scranton Aquinas">aquinas</padig:set>
-	        <padig:set string="University of Scranton Basketball Collection">basketball</padig:set>
-	        <padig:set string="University of Scranton Commencement Programs">commencement</padig:set>
-	        <padig:set string="University of Scranton Course Catalogs">p15111coll4</padig:set>
-	        <padig:set string="University of Scranton Department Publications">publications</padig:set>
-	        <padig:set string="University of Scranton Football Collection">p15111coll2</padig:set>
-	        <padig:set string="University of Scranton Photos and Documents">p9000coll7</padig:set>
-	        <padig:set string="University of Scranton PR Publications and Press Releases">prpubs</padig:set>
-	        <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
-	        <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
-	        <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
-	        <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
-	        <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
-	        <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
-	    	<padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
-	        <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
-	        <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
-	        <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
-	        <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
-	        <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
-	        <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
-	        <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
-	        <padig:set string="West Chester University Aralia Press">qwcaralia</padig:set>
-	        <padig:set string="West Chester University Archaeology Prehistoric Artifacts">qwcarch</padig:set>
-	        <padig:set string="West Chester University Archives">wcutreasure</padig:set>
-	        <padig:set string="West Chester University Chester County Business">chester</padig:set>
-	        <padig:set string="West Chester University Civil War">qwccivilwar</padig:set>
-	        <padig:set string="West Chester University Lowell Gardenour United States Air Force Asia Collection">p17189coll4</padig:set>
-	        <padig:set string="West Chester University Philips Autographed Library">philips</padig:set>
-	        <padig:set string="West Chester University Photographs">qwcphoto</padig:set>
-	        <padig:set string="West Chester University Postcards">qwcpost</padig:set>
-	        <padig:set string="West Chester University Redware">redware</padig:set>
-	        <padig:set string="West Chester University Sharples">sharples</padig:set>
-	        <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
-	        <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
-	        <padig:set string="West Chester University WPA Collection">wpa</padig:set>
-	       
-
-	        
+        <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
+        <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
+        <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
+        <padig:set string="Medieval Manuscripts Collection">medieval</padig:set>
+        <padig:set string="P. W. Costello and Family Art Collection">costello</padig:set>
+        <padig:set string="Passionist Historical Archives Collection">passionists</padig:set>
+        <padig:set string="Scranton Local History Collection">p9000coll6</padig:set>
+        <padig:set string="University of Scranton Aquinas">aquinas</padig:set>
+        <padig:set string="University of Scranton Basketball Collection">basketball</padig:set>
+        <padig:set string="University of Scranton Commencement Programs">commencement</padig:set>
+        <padig:set string="University of Scranton Course Catalogs">p15111coll4</padig:set>
+        <padig:set string="University of Scranton Department Publications">publications</padig:set>
+        <padig:set string="University of Scranton Football Collection">p15111coll2</padig:set>
+        <padig:set string="University of Scranton Photos and Documents">p9000coll7</padig:set>
+        <padig:set string="University of Scranton PR Publications and Press Releases">prpubs</padig:set>
+        <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
+        <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
+        <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
+        <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
+        <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
+        <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
+    	<padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
+        <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
+        <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
+        <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
+        <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
+        <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
+        <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
+        <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
+        <padig:set string="West Chester University Aralia Press">qwcaralia</padig:set>
+        <padig:set string="West Chester University Archaeology Prehistoric Artifacts">qwcarch</padig:set>
+        <padig:set string="West Chester University Archives">wcutreasure</padig:set>
+        <padig:set string="West Chester University Chester County Business">chester</padig:set>
+        <padig:set string="West Chester University Civil War">qwccivilwar</padig:set>
+        <padig:set string="West Chester University Lowell Gardenour United States Air Force Asia Collection">p17189coll4</padig:set>
+        <padig:set string="West Chester University Philips Autographed Library">philips</padig:set>
+        <padig:set string="West Chester University Photographs">qwcphoto</padig:set>
+        <padig:set string="West Chester University Postcards">qwcpost</padig:set>
+        <padig:set string="West Chester University Redware">redware</padig:set>
+        <padig:set string="West Chester University Sharples">sharples</padig:set>
+        <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
+        <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
+        <padig:set string="West Chester University WPA Collection">wpa</padig:set>
+        <padig:set string="Lehigh Letters">letters</padig:set>
+        <padig:set string="Postcards">postal</padig:set>
+        <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
+        <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
+        <padig:set string="Bryn Mawr College News">BMC_collnew</padig:set>
+        <padig:set string="Castle Collection of Natural History Illustrations">castle</padig:set>
+        <padig:set string="Early Advertising Collection">BMC_AdvertisingCards</padig:set>
+        <padig:set string="Bryn Mawr College Postcards">BMC_postcard</padig:set>
+        <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
+        <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
+        <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
+        <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
+        <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
+        <padig:set string="What's Up @ Widener">p16069coll20</padig:set>
+        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
+        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
+        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
+        <padig:set string="Brandywine College">p16069coll27</padig:set>
+        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll27</padig:set>
+        <padig:set string="View Books">p16069coll32</padig:set>
+        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll24</padig:set>
+        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
+        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
+        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set> 
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->

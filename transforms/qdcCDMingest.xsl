@@ -284,7 +284,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Identifier -->
+     <!-- Identifier 
     <xsl:template match="dc:identifier[position() != last()]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:identifier">
@@ -292,7 +292,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-
+     -->
     <!-- Create $baseURL and $objID -->
     <xsl:template match="dc:identifier[position() = last()]">
 
@@ -301,8 +301,13 @@
         <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
         <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
 
-        <!-- Contributing Institution -->
+        <!-- Dummy Identifier -->
         <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:identifier">
+                <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$colID"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+            </xsl:element>
+        
+        <!-- Contributing Institution -->
             <xsl:if test="$baseURL = $oaiUrl/padig:url">
                 <xsl:element name="edm:dataProvider">
                     <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>

@@ -81,8 +81,7 @@
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
            <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <dcterms:identifier>P722002</dcterms:identifier>
-           <dcterms:identifier>Identifier</dcterms:identifier>
+           <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
            <edm:dataProvider>Temple University</edm:dataProvider>
            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
            <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -690,8 +689,7 @@
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>P722002</dcterms:identifier>
-         <dcterms:identifier>Identifier</dcterms:identifier>
+         <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
          <edm:dataProvider>Temple University</edm:dataProvider>
          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -796,8 +794,7 @@
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>P722002</dcterms:identifier>
-         <dcterms:identifier>Identifier</dcterms:identifier>
+         <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
          <edm:dataProvider>Temple University</edm:dataProvider>
          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -841,8 +838,7 @@
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
            <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <dcterms:identifier>P722002</dcterms:identifier>
-           <dcterms:identifier>Identifier</dcterms:identifier>
+           <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
            <edm:dataProvider>Temple University</edm:dataProvider>
            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
            <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
@@ -977,9 +973,9 @@
    </x:scenario>
 
 <!-- Identifier (map) -->
-     <x:scenario label="identifier not last becomes space-normalized dcterms:identifier">
+     <x:scenario label="dummy identifier generates and maps to dcterms:identifier">
        <x:context href="../../fixtures/qdcCDMingest_test.xml"/>
-       <x:expect label="identifier not last becomes dcterms:identifier">
+       <x:expect label="dummy identifier generates and becomes dcterms:identifier">
            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
              <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
              <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
@@ -1009,8 +1005,7 @@
              <dcterms:rights>This is a textual rights statement</dcterms:rights>
              <dcterms:source>The repository is SCRC</dcterms:source>
              <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-             <dcterms:identifier>P722002</dcterms:identifier>
-             <dcterms:identifier>Identifier</dcterms:identifier>
+             <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
              <edm:dataProvider>Temple University</edm:dataProvider>
              <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
              <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
