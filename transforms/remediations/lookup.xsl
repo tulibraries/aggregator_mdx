@@ -161,6 +161,17 @@
         <padig:cont string="West Chester University">wpa</padig:cont>
         <padig:cont string="Millersville University">mvsphoto</padig:cont>
         <padig:cont string="Millersville University">wingpost</padig:cont>
+        <padig:cont string="Bryn Mawr College">almaclarke</padig:cont>
+        <padig:cont string="Bryn Mawr College">BMC_collnew</padig:cont>
+        <padig:cont string="Bryn Mawr College">BMC_photoarc</padig:cont>
+        <padig:cont string="Bryn Mawr College">BMC_postcard</padig:cont>
+        <padig:cont string="Bryn Mawr College">BMC_scrpbks</padig:cont>
+        <padig:cont string="Bryn Mawr College">BMC_yrbks</padig:cont>
+        <padig:cont string="Bryn Mawr College">castle</padig:cont>
+        <padig:cont string="Bryn Mawr College">BMC_AdvertisingCards</padig:cont>
+        <padig:cont string="Bryn Mawr College">Mellink</padig:cont>
+        <padig:cont string="Friends Historical Library of Swarthmore College">SC_Truman</padig:cont>
+        <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College">SC_Broad</padig:cont>
     </xsl:param>
 
 	<!-- lookup table for setSpec -->
