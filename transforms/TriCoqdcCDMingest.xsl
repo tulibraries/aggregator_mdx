@@ -65,12 +65,13 @@
                 </xsl:element>
             </xsl:if>
             
-    <!-- Collection Name -->
+    <!-- Collection Name
             <xsl:if test="$setID = $setSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">
                     <xsl:value-of select="$setSpecList/padig:set[. = $setID]/@string"/>
                 </xsl:element>
             </xsl:if>
+             -->
         </xsl:if>
     </xsl:template>
     
