@@ -117,4 +117,28 @@
       <assert test="normalize-space(.)!='Millersville University'" id="NoHarvestPattern9" role="error">Records from Millersville University are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="BMCNoHarvestPattern">
+    <title>Check to invalidate Bryn Mawr College</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Bryn Mawr College'" id="NoHarvestPattern10" role="error">Records from Bryn Mawr College are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="FHLNoHarvestPattern">
+    <title>Check to invalidate Friends Historical Library of Swarthmore College</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Friends Historical Library of Swarthmore College'" id="NoHarvestPattern11" role="error">Records from Friends Historical Library of Swarthmore College are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="SMHFNoHarvestPattern">
+    <title>Check to invalidate Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College'" id="NoHarvestPattern12" role="error">Records from Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="WIDENNoHarvestPattern">
+    <title>Check to invalidate Widener Univeristy</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Widener Univeristy'" id="NoHarvestPattern13" role="error">Records from Widener Univeristy are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
