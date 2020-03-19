@@ -139,6 +139,7 @@
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmmap</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmphoto</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmpost</padig:cont>
+	<padig:cont string="Bloomsburg University" code="BLOOMS">CHSminutes</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">audio</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">photograph</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">postcard</padig:cont>
@@ -374,6 +375,7 @@
         <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
         <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
         <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
+	<padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
     	<padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
         <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
         <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
