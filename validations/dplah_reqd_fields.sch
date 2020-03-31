@@ -136,9 +136,9 @@
     </rule>
   </pattern>
   <pattern id="WIDENNoHarvestPattern">
-    <title>Check to invalidate Widener Univeristy</title>
+    <title>Check to invalidate Widener University</title>
     <rule context="oai_dc:dc/edm:dataProvider">
-      <assert test="normalize-space(.)!='Widener Univeristy'" id="NoHarvestPattern13" role="error">Records from Widener Univeristy are invalid</assert>
+      <assert test="normalize-space(.)!='Widener University'" id="NoHarvestPattern13" role="error">Records from Widener University are invalid</assert>
     </rule>
   </pattern>
 </schema>
