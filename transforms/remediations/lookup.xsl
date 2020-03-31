@@ -113,7 +113,7 @@
 		<padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
         <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
         <padig:url string="University of Scranton" code="USCR">http://digitalservices.scranton.edu/</padig:url>
-		<padig:url string="Widener Univeristy" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
+		<padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
 		<padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
 		<padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
 		<padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
