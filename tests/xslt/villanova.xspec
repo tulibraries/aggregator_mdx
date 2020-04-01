@@ -732,7 +732,7 @@
 
     <x:scenario label="identifier processing">
       <x:context href="../../fixtures/villanova_test.oaidc.xml"/>
-        <x:expect label="dcterms:identifier is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'vudl:293113'"/>
+      <x:expect label="dcterms:identifier is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'padig:VNOVA-vudl:293113'"/>
         <x:expect label="base URL is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digital.library.villanova.edu/Item/vudl:293113'"/>
       <x:expect label="thumbnail URL is generated from identifier" test="oai_dc:dc/edm:preview = 'https://digital.library.villanova.edu/files/vudl:293113/THUMBNAIL'"/>
       <x:expect label="iiif manifest generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'https://digital.library.villanova.edu/Item/vudl:293113/Manifest'"/>
