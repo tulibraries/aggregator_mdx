@@ -56,24 +56,30 @@
       </x:scenario>
     </x:scenario>
   </x:scenario>
-  <x:scenario label="RelNoHarvest">
+  <x:scenario label="NoHarvest">
     <x:scenario label="valid">
       <x:context href="../../fixtures/schematron/valid_dc.xml"/>
       <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_NoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_NoHarvest1.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_NoHarvest2.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
     </x:scenario>
     <x:scenario label="not valid">
       <x:context href="../../fixtures/schematron/invalid_RelNoHarvest.xml"/>
-      <x:expect-assert id="RelNoHarvest1"/>
-    </x:scenario>
-  </x:scenario>
-  <x:scenario label="RightsNoHarvest">
-    <x:scenario label="valid">
-      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
-      <x:expect-valid/>
+      <x:expect-assert id="NoHarvest1"/>
     </x:scenario>
     <x:scenario label="not valid">
       <x:context href="../../fixtures/schematron/invalid_RightsNoHarvest.xml"/>
-      <x:expect-assert id="RightsNoHarvest1"/>
+      <x:expect-assert id="NoHarvest1"/>
     </x:scenario>
   </x:scenario>
 </x:description>
