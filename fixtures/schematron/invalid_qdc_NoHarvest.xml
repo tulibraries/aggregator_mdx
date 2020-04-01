@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai_qdc:qualifieddc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:dcterms="http://purl.org/dc/terms/" 
+    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" 
+    xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ 
+    http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd 
+    http://purl.org/net/oclcterms 
+    http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+    <dc:title>Ellen Bayne</dc:title>
+    <dcterms:alternative>Foster's melodies</dcterms:alternative>
+    <dc:date>1854</dc:date>
+    <dc:creator>Foster, Stephen Collins, 1826-1864 [composer]</dc:creator>
+    <dc:creator>Sarony &amp; Co. [lithographer]; Lawson [engraver]</dc:creator>
+    <dc:contributor>Christy, Edwin Pearce, 1815-1862 [performer]</dc:contributor>
+    <dc:publisher>New York : Firth, Pond &amp; Co.</dc:publisher>
+    <dc:subject>Songs with piano; Vocal duets with piano; Popular music--United States--To 1901</dc:subject>
+    <dc:description>Title and floral designs with five insets : girl with hat in landscape garden with fountain, dog laying in front of dog house on farm, farm house in woods, girl with hat in garden, old couple at fireplace with cat.</dc:description>
+    <dc:description>"No. 24". Publisher's no. 2664. Advertisements on cover for "No. 12 : Old dog tray", "No. 20 : My old Kentucky home", "No. 23 : Little Ella" and "No. 22 : Old memories".</dc:description>
+    <dc:format>image/jp2</dc:format>
+    <dc:type>Sheet music</dc:type>
+    <dcterms:extent>score (5 p.) ; 35 cm.</dcterms:extent>
+    <dc:language>English</dc:language>
+    <dc:coverage>pdcp_noharvest</dc:coverage>
+    <dc:rights>This material is subject to copyright law and is made available for private study, scholarship, and research purposes only. For access to the original or a high resolution reproduction, and for permission to publish, please contact Temple University Libraries, Special Collections Research Center, scrc@temple.edu, 215-204-8257. </dc:rights>
+    <dcterms:isPartOf>Temple Sheet Music Collections</dcterms:isPartOf>
+    <dc:identifier>SM00158</dc:identifier>
+    <dc:identifier>http://digital.library.temple.edu/cdm/ref/collection/p15037coll1/id/1137</dc:identifier>
+</oai_qdc:qualifieddc>
