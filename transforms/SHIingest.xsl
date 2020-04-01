@@ -305,8 +305,13 @@
 
         <!-- Identifier -->
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:element name="dcterms:identifier">
+            <!--<xsl:element name="dcterms:identifier">
                 <xsl:value-of select="normalize-space($objID)"/>
+            </xsl:element>
+        
+        -->
+            <xsl:element name="dcterms:identifier">
+                <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$objID"/>
             </xsl:element>
         </xsl:if>
 

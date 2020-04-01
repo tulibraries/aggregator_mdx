@@ -742,7 +742,7 @@
          <dcterms:format>photographs</dcterms:format>
          <dcterms:format>stereographs</dcterms:format>
          <dcterms:source>Repository</dcterms:source>
-         <dcterms:identifier>000000018</dcterms:identifier>
+         <dcterms:identifier>padig:SHI-000000018</dcterms:identifier>
          <edm:dataProvider>Science History Institute</edm:dataProvider>
          <edm:isShownAt>https://digital.sciencehistory.org/works/000000018</edm:isShownAt>
          <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
@@ -777,7 +777,7 @@
            <dcterms:format>photographs</dcterms:format>
            <dcterms:format>stereographs</dcterms:format>
            <dcterms:source>Repository</dcterms:source>
-           <dcterms:identifier>000000018</dcterms:identifier>
+           <dcterms:identifier>padig:SHI-000000018</dcterms:identifier>
            <edm:dataProvider>Science History Institute</edm:dataProvider>
            <edm:isShownAt>https://digital.sciencehistory.org/works/000000018</edm:isShownAt>
            <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
@@ -940,7 +940,7 @@
            <dcterms:format>photographs</dcterms:format>
            <dcterms:format>stereographs</dcterms:format>
            <dcterms:source>Repository</dcterms:source>
-           <dcterms:identifier>000000018</dcterms:identifier>
+           <dcterms:identifier>padig:SHI-000000018</dcterms:identifier>
            <edm:dataProvider>Science History Institute</edm:dataProvider>
            <edm:isShownAt>https://digital.sciencehistory.org/works/000000018</edm:isShownAt>
            <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
