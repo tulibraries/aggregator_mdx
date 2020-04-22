@@ -310,7 +310,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Identifier -->
+     <!-- Identifier
     <xsl:template match="dc:identifier[position() != last()]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:identifier">
@@ -318,6 +318,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+     -->
 
     <!-- Create $baseURL and $objID -->
     <xsl:template match="dc:identifier[position() = last()]">
