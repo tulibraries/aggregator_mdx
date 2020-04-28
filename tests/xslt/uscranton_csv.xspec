@@ -88,7 +88,7 @@
         xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
         xmlns:oclcterms="http://purl.org/oclc/terms/"
         xmlns:schema="http://schema.org"
-        xmlns:padig="http://padigitial.org/ns/"
+        xmlns:padig="http://padigital.org/ns/"
         xmlns:svcs="http://rdfs.org/sioc/services">
         <dcterms:identifier>reportsofinspect1885penn</dcterms:identifier>
         <dcterms:title>Reports of the Inspectors of Mines of the anthracite coal regions of Pennsylvania for the year ..</dcterms:title>
