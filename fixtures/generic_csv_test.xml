@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
+    <record airflow-record-id="1">
+        <Item_No>conditions_prospects_norwich_mine</Item_No>
+        <Title>Reports of the Inspectors of Mines of the anthracite coal regions of Pennsylvania for the year ..</Title>
+        <Alternative_Title>Reports of the Inspectors of Mines</Alternative_Title>
+        <Creator>Pennsylvania. Inspectors of Mines</Creator>
+        <Contributor>Test contributor</Contributor>
+        <Description>Report year ends Dec. 31,Continues: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Coal Mines of the anthricite coals regions of Pennsylvania for the year ..,Continued by: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Mines of the anthracite and bituminous coal regions of Pennsylvania</Description>
+        <Creation_Date>1885</Creation_Date>
+        <Subject>anthracite coal|Coal mines and mining</Subject>
+        <Extent>1 photograph, b&amp;w; 8 x 10 in.</Extent>
+        <Language>English</Language>
+        <Identifier>https://archive.org/details/reportsofinspect1885penn</Identifier>
+        <Thumbnail>https://archive.org/services/img/reportsofinspect1885penn</Thumbnail>
+        <Type>text</Type>
+        <Format>jpg</Format>
+        <Place>Test place</Place>
+        <Temporal>Test temporal</Temporal>
+        <Publisher>[Harrisburg] : The Bureau</Publisher>
+        <Source>Test source</Source>
+        <Relation>Test relation</Relation>
+        <Data_Provider>Lehigh University</Data_Provider>
+        <Intermediate_Provider>Test Intermediate Provider</Intermediate_Provider>
+        <Collection_Name>Pennsylvania Mining Reports Collection</Collection_Name>
+        <Rights_URI>http://rightsstatements.org/vocab/NoC-US/1.0/</Rights_URI>
+        <Rights>This is a textual rights statement.</Rights>
+    </record>
+</collection>
