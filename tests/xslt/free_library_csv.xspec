@@ -88,7 +88,7 @@
         xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
         xmlns:oclcterms="http://purl.org/oclc/terms/"
         xmlns:schema="http://schema.org"
-        xmlns:padig="http://padigitial.org/ns/"
+        xmlns:padig="http://padigital.org/ns/"
         xmlns:svcs="http://rdfs.org/sioc/services">
         <dcterms:identifier>frk00001</dcterms:identifier>
         <dcterms:title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</dcterms:title>

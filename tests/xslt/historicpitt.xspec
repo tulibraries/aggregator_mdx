@@ -777,7 +777,7 @@
             </oai:record>
         </x:context>
         <x:expect label="subject is split into separate fields">
-                <oai_dc:dc xmlns:padig="http://padigitial.org/ns/"
+                <oai_dc:dc xmlns:padig="http://padigital.org/ns/"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xmlns:dc="http://purl.org/dc/elements/1.1/"
                     xmlns:dcterms="http://purl.org/dc/terms/"

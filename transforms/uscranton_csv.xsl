@@ -6,7 +6,7 @@
   xmlns:dpla="http://dp.la/about/map/"
   xmlns:edm="http://www.europeana.eu/schemas/edm/"
   xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-  xmlns:padig="http://padigitial.org/ns/"
+  xmlns:padig="http://padigital.org/ns/"
   xmlns:oclcterms="http://purl.org/oclc/terms/"
   xmlns:oai="http://www.openarchives.org/OAI/2.0/"
   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
