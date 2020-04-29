@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-04-29T14:04:20Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_dc">
+        http://dla.library.upenn.edu/dla/archives/oai-pmh.xml
+    </request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:celebration:wheatley/liberty</identifier>
+                <datestamp>2009-09-30</datestamp>
+            </header>
+            <metadata>
+                <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" 
+                    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                    xmlns:dc="http://purl.org/dc/elements/1.1/">
+                    <dc:title xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                        The habitant and the war / by The Hon. Rodolphe Lemieux, K.C., M.P., F.R.S.C.
+                    </dc:title>
+                    <dc:contributor xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">Lemieux, Rodolphe, 1866-1937</dc:contributor>
+                    <dc:identifier xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">PRINT_9928741563503681</dc:identifier>
+                    <dc:language xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">English</dc:language>
+                    <dc:publisher xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">1916.</dc:publisher>
+                    <dc:rights xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">https://creativecommons.org/publicdomain/zero/1.0/</dc:rights>
+                    <dc:subject xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">World War, 1914-1918 - Sermons.</dc:subject>                </oai_dc:dc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
