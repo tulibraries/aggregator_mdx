@@ -141,4 +141,22 @@
       <assert test="normalize-space(.)!='Widener University'" id="NoHarvestPattern13" role="error">Records from Widener University are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="PENNNoHarvestPattern">
+    <title>Check to invalidate University of Pennsylvania</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='University of Pennsylvania'" id="NoHarvestPattern14" role="error">Records from University of Pennsylvania are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="WALTNoHarvestPattern">
+    <title>Check to invalidate The Walters Art Museum</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='The Walters Art Museum'" id="NoHarvestPattern15" role="error">Records from The Walters Art Museum are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="LEHINoHarvestPattern">
+    <title>Check to invalidate Lehigh University</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Lehigh University'" id="NoHarvestPattern16" role="error">Records from Lehigh University are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
