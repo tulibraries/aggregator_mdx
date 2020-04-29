@@ -25,7 +25,7 @@
                         The Lenkin Family Collection of Photography, University of Pennsylvania Libraries
                     </dc:relation>
                     <dc:subject xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">Pyramids</dc:subject>
-                    <dc:type xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">photograph</dc:type>
+                    <dc:language xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">eng;french</dc:language>                    <dc:type xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">photograph</dc:type>
                 </oai_dc:dc>
             </metadata>
         </record>
