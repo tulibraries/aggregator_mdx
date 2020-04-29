@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-04-29T14:04:20Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_dc">
+        http://dla.library.upenn.edu/dla/archives/oai-pmh.xml
+    </request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>
+                    oai:archives.dla.library.upenn.edu:ARCHIVES_20010914015
+                </identifier>
+                <datestamp>2009-09-30</datestamp>
+            </header>
+            <metadata>
+                <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" 
+                    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                    xmlns:dc="http://purl.org/dc/elements/1.1/">
+                    <dc:title>Liberty and Peace</dc:title>
+                    <dc:creator>Wheatley, Phillis, 1753-1784</dc:creator>
+                    <dc:subject>
+                        United States -- History -- Revolution, 1775-1783 -- Poetry
+                    </dc:subject>
+                    <dc:subject>PS866 .W5 L5</dc:subject>
+                    <dc:identifier>
+                        https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html
+                    </dc:identifier>
+                    <dc:format>text/html</dc:format>
+                    <dc:description>Boston: Warden and Russell, 1784</dc:description>
+                    <dc:publisher>Warden and Russell</dc:publisher>
+                    <dc:date>1784</dc:date>
+                    <dc:publisher>A Celebration of Women Writers</dc:publisher>
+                    <dc:date>2006-12-18</dc:date>
+                    <dc:rights>
+                        Personal, noncommercial use of this item is permitted in the United States of America. Please see https://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource.
+                    </dc:rights>
+                    <dc:type>Text</dc:type>
+                </oai_dc:dc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
