@@ -423,7 +423,6 @@
         <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll24</padig:set>
         <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
         <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
-        <padig:set string="Digital Wisteriana">p15860coll2</padig:set>
         <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
         <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
         <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
