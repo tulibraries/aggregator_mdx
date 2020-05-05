@@ -36,18 +36,26 @@
     <!-- Create elements based on dc:identifier -->
     
     <xsl:template match="dc:identifier">
-        <xsl:variable name="objID" select='substring-after(.,"/cdm/ref/")'/>
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
-        <xsl:variable name="colID" select='substring-before(substring-after(.,"https://digital.library.upenn.edu/women/"), ".html")'/>
-        <xsl:variable name="lowerID" select='lower-case(.)'/>
+      
+        <xsl:variable name="itemID-html" select='substring-before(substring-after(.,"https://digital.library.upenn.edu/women/"), ".html")'/>
+        <xsl:variable name="itemID-pdf" select='substring-before(substring-after(.,"https://digital.library.upenn.edu/women/"), ".pdf")'/>
+        <xsl:variable name="itemID-html-clean" select="translate($itemID-html,'/','-')"/>
+        <xsl:variable name="itemID-pdf-clean" select="translate($itemID-pdf,'/','-')"/>
 
         <!-- Local identifier -->
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:element name="dcterms:identifier">
-                <xsl:value-of>padig:PENN-</xsl:value-of><xsl:value-of select="normalize-space($colID)"/>
-            </xsl:element>
-        </xsl:if>
+        
+        <xsl:choose>
+            <xsl:when test="$itemID-html">
+                <xsl:element name="dcterms:identifier">
+                    <xsl:value-of>padig:PENN-celebration-</xsl:value-of><xsl:value-of select="normalize-space($itemID-html-clean)"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:element name="dcterms:identifier">
+                    <xsl:value-of>padig:PENN-celebration-</xsl:value-of><xsl:value-of select="normalize-space($itemID-pdf-clean)"/>
+                </xsl:element>
+            </xsl:otherwise>
+        </xsl:choose>    
 
         <!-- URL -->
             <xsl:if test="normalize-space(.)!=''">

@@ -733,7 +733,7 @@
          <dcterms:creator>Wheatley, Phillis, 1753-1784</dcterms:creator>
          <dcterms:subject>United States -- History -- Revolution, 1775-1783 -- Poetry</dcterms:subject>
          <dcterms:subject>PS866 .W5 L5</dcterms:subject>
-         <dcterms:identifier>padig:PENN-wheatley/liberty/liberty</dcterms:identifier>
+         <dcterms:identifier>padig:PENN-celebration-wheatley-liberty-liberty</dcterms:identifier>
          <edm:isShownAt>https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html</edm:isShownAt>
          <schema:fileFormat>text/html</schema:fileFormat>
          <dcterms:description>Boston: Warden and Russell, 1784</dcterms:description>
@@ -759,7 +759,7 @@
            <dcterms:creator>Wheatley, Phillis, 1753-1784</dcterms:creator>
            <dcterms:subject>United States -- History -- Revolution, 1775-1783 -- Poetry</dcterms:subject>
            <dcterms:subject>PS866 .W5 L5</dcterms:subject>
-           <dcterms:identifier>padig:PENN-wheatley/liberty/liberty</dcterms:identifier>
+           <dcterms:identifier>padig:PENN-celebration-wheatley-liberty-liberty</dcterms:identifier>
            <edm:isShownAt>https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html</edm:isShownAt>
            <schema:fileFormat>text/html</schema:fileFormat>
            <dcterms:description>Boston: Warden and Russell, 1784</dcterms:description>
@@ -917,7 +917,7 @@
            <dcterms:creator>Wheatley, Phillis, 1753-1784</dcterms:creator>
            <dcterms:subject>United States -- History -- Revolution, 1775-1783 -- Poetry</dcterms:subject>
            <dcterms:subject>PS866 .W5 L5</dcterms:subject>
-           <dcterms:identifier>padig:PENN-wheatley/liberty/liberty</dcterms:identifier>
+           <dcterms:identifier>padig:PENN-celebration-wheatley-liberty-liberty</dcterms:identifier>
            <edm:isShownAt>https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html</edm:isShownAt>
            <schema:fileFormat>text/html</schema:fileFormat>
            <dcterms:description>Boston: Warden and Russell, 1784</dcterms:description>
