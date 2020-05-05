@@ -106,6 +106,15 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+    
+    <!-- Country -->
+    <xsl:template match="Country">
+        <xsl:if test="normalize-space(.) != ''">
+            <xsl:element name="dcterms:spatial">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
 
     <!-- Subject -->
     <xsl:template match="Subject">
