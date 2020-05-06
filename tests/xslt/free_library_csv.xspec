@@ -65,6 +65,12 @@
     <x:context href="../../fixtures/free_library_test.csv.xml"/>
     <x:expect label="Language is transformed to dcterms:language" test="oai_dc:dc/dcterms:language = 'German; English'"/>
   </x:scenario>
+  
+  <!-- Country -->
+  <x:scenario label="Country is transformed to dcterms:spatial">
+    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:expect label="Country is transformed to dcterms:spatial" test="oai_dc:dc/dcterms:spatial = 'Italy'"/>
+  </x:scenario>
 
   <!-- Rights -->
   <x:scenario label="rights processing">
@@ -106,6 +112,7 @@
         <edm:preview>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</edm:preview>
         <dcterms:type>Still Image</dcterms:type>
         <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
+        <dcterms:spatial>Italy</dcterms:spatial>
         <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
         <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
         <edm:provider>PA Digital</edm:provider>
