@@ -132,6 +132,26 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+    
+    <!-- Rights -->
+    <xsl:template match="Rights">
+        <xsl:choose>
+            <xsl:when test="starts-with(., 'http://rightsstatements.org/vocab/') or starts-with(., 'http://creativecommons.org/') or starts-with(., 'https://creativecommons.org/')">
+                <xsl:if test="normalize-space(.)!=''">
+                    <xsl:element name="edm:rights">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space(.)!=''">
+                    <xsl:element name="dcterms:rights">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 
     <!-- Thumbnail URL -->
     <xsl:template match="Thumbnail">
@@ -204,9 +224,9 @@
 
     <!-- Rights -->
     <xsl:template name="static-rights-statement">
-      <xsl:element name="dcterms:rights">
-        <xsl:value-of>High-resolution images from the Free Library of Philadelphia&apos;s collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</xsl:value-of>
-      </xsl:element>
+        <xsl:element name="dcterms:rights">
+            <xsl:value-of>High-resolution images from the Free Library of Philadelphia&apos;s collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</xsl:value-of>
+        </xsl:element>       
     </xsl:template>
 
     <!-- Subject -->

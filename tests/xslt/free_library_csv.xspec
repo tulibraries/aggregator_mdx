@@ -73,9 +73,13 @@
   </x:scenario>
 
   <!-- Rights -->
-  <x:scenario label="rights processing">
+  <x:scenario label="static rights statement">
     <x:context href="../../fixtures/free_library_test.csv.xml"/>
     <x:expect label="textual rights statment is transformed to dcterms:rights" test='oai_dc:dc/dcterms:rights = "High-resolution images from the Free Library of Philadelphia&apos;s collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form."'/>
+  </x:scenario>
+  <x:scenario label="rightsstatement.org processing">
+    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:expect label="URI rights statment is transformed to edm:rights" test='oai_dc:dc/edm:rights = "http://rightsstatements.org/vocab/InC/1.0/"'/>
   </x:scenario>
 
   <!-- Subject -->
@@ -113,6 +117,7 @@
         <dcterms:type>Still Image</dcterms:type>
         <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
         <dcterms:spatial>Italy</dcterms:spatial>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
         <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
         <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
         <edm:provider>PA Digital</edm:provider>
