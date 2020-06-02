@@ -174,7 +174,7 @@
         <padig:cont string="Friends Historical Library of Swarthmore College" code="FHL">SC_Truman</padig:cont>
         <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="FHL">SC_Broad</padig:cont>
     </xsl:param>
-
+	
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
 		<padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
@@ -426,6 +426,12 @@
         <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
         <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
         <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
+	<padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
+	<padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
+	<padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
+	<padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set> 
+	<padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
+	<padig:set string="Graphics Collection">islandora_graphics_collection</padig:set> 
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->
