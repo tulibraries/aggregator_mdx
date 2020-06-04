@@ -16,6 +16,7 @@
           <assert test="dc:rights" id="Required2" role="error">There must be a rights statement</assert>
         </rule>
     </pattern>
+  <!--
     <pattern id="TitleElementPattern">
       <title>Required fields must contain text.</title>
         <rule context="oai_dc:dc/dc:title">
@@ -27,6 +28,7 @@
           <assert test="normalize-space(.)" id="Rights1" role="error">The rights property must contain text</assert>
         </rule>
       </pattern>
+      -->
       <pattern id="NoHarvest">
         <title>Additional Metadata Requirements</title>
         <rule context="oai_dc:dc/*">
