@@ -10,7 +10,7 @@
       <x:context href="../../fixtures/schematron/invalid_missing_dc_title.xml"/>
       <x:expect-assert id="Required1"/>
     </x:scenario>
-    <x:scenario label="valid: dc:rights>">
+    <x:scenario label="valid: dc:rights">
       <x:context href="../../fixtures/schematron/valid_dc.xml"/>
       <x:expect-valid/>
     </x:scenario>
@@ -24,6 +24,7 @@
       <x:expect-assert id="Required2"/>
     </x:scenario>
   </x:scenario>
+  <!--
   <x:scenario label="TitleElementPattern">
     <x:scenario label="valid">
       <x:context href="../../fixtures/schematron/valid_dc.xml"/>
@@ -56,6 +57,7 @@
       </x:scenario>
     </x:scenario>
   </x:scenario>
+  -->
   <x:scenario label="NoHarvest">
     <x:scenario label="valid">
       <x:context href="../../fixtures/schematron/valid_dc.xml"/>
