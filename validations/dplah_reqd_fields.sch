@@ -159,4 +159,16 @@
       <assert test="normalize-space(.)!='Lehigh University'" id="NoHarvestPattern16" role="error">Records from Lehigh University are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="PMANoHarvestPattern">
+    <title>Check to invalidate Philadelphia Museum of Art</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Philadelphia Museum of Art'" id="NoHarvestPattern17" role="error">Records from Philadelphia Museum of Art are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="FLPNoHarvestPattern">
+    <title>Check to invalidate Free Library of Philadelphia</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Free Library of Philadelphia'" id="NoHarvestPattern18" role="error">Records from Free Library of Philadelphia are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
