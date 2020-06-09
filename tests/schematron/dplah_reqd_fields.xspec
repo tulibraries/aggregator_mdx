@@ -1048,4 +1048,24 @@
       <x:expect-assert id="NoHarvestPattern16"/>
     </x:scenario>
   </x:scenario>
+  <x:scenario label="PMANoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemovePMA.xml"/>
+      <x:expect-assert id="NoHarvestPattern17"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="FLPNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveFLP.xml"/>
+      <x:expect-assert id="NoHarvestPattern18"/>
+    </x:scenario>
+  </x:scenario>
 </x:description>
