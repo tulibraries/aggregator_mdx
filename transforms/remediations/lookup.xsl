@@ -103,6 +103,7 @@
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">
 		<padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
+        <padig:url string="Curtis Institute of Music" code="CURTIS">http://cdm16667.contentdm.oclc.org/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://cdm15860.contentdm.oclc.org/</padig:url>
 		<padig:url string="Pennsylvania State University" code="PSU">http://digital.libraries.psu.edu/</padig:url>
 		<padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
@@ -177,7 +178,12 @@
 	
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
-		<padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
+        <padig:set string="de Pasquale collection">myfirst</padig:set>
+        <padig:set string="Curtis program books">p16667coll1</padig:set>
+        <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
+        <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
+        <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
+        <padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
 		<padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
 		<padig:set string="African American Construction Workers of Pittsburgh Photographs">pitt_collection.176</padig:set>
 		<padig:set string="Alexander Addison Papers">pitt_collection.15</padig:set>

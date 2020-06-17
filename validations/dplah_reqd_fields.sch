@@ -171,4 +171,10 @@
       <assert test="normalize-space(.)!='Free Library of Philadelphia'" id="NoHarvestPattern18" role="error">Records from Free Library of Philadelphia are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="CHRCNoHarvestPattern">
+    <title>Check to invalidate Catholic Historical Research Center of the Archdiocese of Philadelphia</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Catholic Historical Research Center of the Archdiocese of Philadelphia'" id="NoHarvestPattern19" role="error">Records from Catholic Historical Research Center of the Archdiocese of Philadelphia are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
