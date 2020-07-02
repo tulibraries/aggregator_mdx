@@ -139,4 +139,4 @@ All of the above generate test reports in the relevant test directory, e.g. `tes
 
 ## Deployment
 
-The transformation and validation tasks in Airflow pull the `master` branch of this repository; so deployment is via successful CI and merging of PRs into `master`.
+The transformation and validation tasks in Airflow pull the `main` branch of this repository; so deployment is via successful CI and merging of PRs into `main`.
