@@ -21,9 +21,9 @@
 
      <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine. -->
-    
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/lookup.xsl"/>
-    
+
+    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/main/transforms/remediations/lookup.xsl"/>
+
      <!-- Title -->
     <xsl:template match="dc:title">
         <xsl:if test="normalize-space(.)!=''">
@@ -69,7 +69,7 @@
                     test="matches(., '^(stillimage.*$|still\simage.*$)', 'i')">
                     <dcterms:type>Still Image</dcterms:type>
                 </xsl:when>
-                
+
     <!-- Format -->
                 <xsl:otherwise>
                     <dcterms:format>
@@ -89,7 +89,7 @@
         </xsl:if>
     </xsl:template>
 
-     <!-- Source; uncomment when not used by DPLAH crosswalk 
+     <!-- Source; uncomment when not used by DPLAH crosswalk
     <xsl:template match="dc:source">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:source">
@@ -202,7 +202,7 @@
         </xsl:if>
     </xsl:template>
     -->
-    
+
      <!-- isPartOf -->
     <xsl:template match="dcterms:isPartOf">
         <xsl:if test="normalize-space(.)!=''">
@@ -287,13 +287,13 @@
         </xsl:if>
     </xsl:template>
      -->
-    
+
         <!-- URL
             <xsl:element name="edm:isShownAt">
                 <xsl:value-of select="$baseURL"/> <xsl:text>/cdm/ref/</xsl:text><xsl:value-of select="$objID"/>
             </xsl:element>
         -->
-            
+
         <!-- Thumbnail
             <xsl:element name="edm:preview">
                 <xsl:value-of select="$baseURL"/> <xsl:text>/utils/getthumbnail/</xsl:text><xsl:value-of select="$objID"/>
@@ -312,7 +312,7 @@
         </xsl:element>
     </xsl:template>
     -->
-    
+
      <!-- Hub -->
     <xsl:template name="hub">
         <xsl:element name="edm:provider">

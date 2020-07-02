@@ -25,8 +25,8 @@
     <xsl:include href="remediations/filter.xsl"/>
 
     <!-- For using this XSLT in Combine, you need to replace the following with an actionable HTTP link to the remediation XSLT, or load both XSLT into Combine then rename this to the filepath & name assigned to remediation.xslt within Combine.
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/temple.xsl"/>
-    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/master/transforms/remediations/filter.xsl"/>
+    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/main/transforms/temple.xsl"/>
+    <xsl:include href="https://raw.githubusercontent.com/tulibraries/aggregator_mdx/main/transforms/remediations/filter.xsl"/>
 -->
      <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
