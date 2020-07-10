@@ -206,6 +206,8 @@
         <padig:set string="Textile Printing Blocks">publication:textileprintingblocks</padig:set>
         <padig:set string="The Throat and the Voice, by J. Solis Cohen, M.D. 1879">publication:throat_and_voice</padig:set>
         <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
+        <padig:set string="Historical Photographs - Center City">publication:historical_photos</padig:set>
+        <padig:set string="Historical Photographs - East Falls">publication:historical_photos_ef</padig:set>
         <padig:set string="de Pasquale collection">myfirst</padig:set>
         <padig:set string="Curtis program books">p16667coll1</padig:set>
         <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
