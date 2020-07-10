@@ -178,6 +178,34 @@
 	
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
+        <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
+        <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
+        <padig:set string="American Red Cross Base Hospital No. 38">publication:base_hospital_no_38</padig:set>
+        <padig:set string="American Red Cross base hospital no. 38 in the world war by W. M. L. Coplin.">publication:american_red_cross_base_hospital</padig:set>
+        <padig:set string="Ariel">publication:ariel</padig:set>
+        <padig:set string="Gemrig’s illustrated catalogue of surgical instruments, ca. 1868">publication:catalogue_of_surgical_instruments</padig:set>
+        <padig:set string="Historical Addresses">publication:historical_addresses</padig:set>
+        <padig:set string="History of the anatomy act of Pennsylvania, WS Forbes, 1898">publication:anatomy_act_of_penn</padig:set>
+        <padig:set string="Jefferson Biographies">publication:jeffbiographies</padig:set>
+        <padig:set string="Jefferson College of Biomedical Sciences Commencements">publication:jcbscommencement</padig:set>
+        <padig:set string="Jefferson College of Health Professions and Jefferson College of Pharmacy Commencements">publication:jchpjcpcommencement</padig:set>
+        <padig:set string="Jefferson College of Nursing Commencements">publication:jcncommencement</padig:set>
+        <padig:set string="Jefferson College of Population Health Commencements">publication:jcphcommencement</padig:set>
+        <padig:set string="Jefferson Medical College Catalogs">publication:jmc_catalogs</padig:set>
+        <padig:set string="Jefferson Medical College Yearbooks">publication:jmc_yearbooks</padig:set>
+        <padig:set string="Jefferson Review">publication:jefferson_review</padig:set>
+        <padig:set string="Jefferson Sidney Kimmel Medical College Class Day">publication:skmcclassday</padig:set>
+        <padig:set string="Jefferson Sidney Kimmel Medical College Commencements">publication:skmccommencement</padig:set>
+        <padig:set string="John Plimpton Green Letters">publication:jpgreenletters</padig:set>
+        <padig:set string="Manuscripts and Journals">publication:manuscripts_journals</padig:set>
+        <padig:set string="Medical Notebooks">publication:medicalnotebooks</padig:set>
+        <padig:set string="Modern Surgery, 4th edition, by John Chalmers Da Costa">publication:dacosta_modernsurgery</padig:set>
+        <padig:set string="Nursing Alumni Bulletins">publication:nursing_alumni_bulletin</padig:set>
+        <padig:set string="Obstetrics: The Science and The Art, by Charles D. Meigs, M.D.">publication:meigsobstetrics</padig:set>
+        <padig:set string="On the anatomy of the breast, by Sir Astley Paston Cooper, 1840">publication:cooper</padig:set>
+        <padig:set string="Textile Printing Blocks">publication:textileprintingblocks</padig:set>
+        <padig:set string="The Throat and the Voice, by J. Solis Cohen, M.D. 1879">publication:throat_and_voice</padig:set>
+        <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
         <padig:set string="de Pasquale collection">myfirst</padig:set>
         <padig:set string="Curtis program books">p16667coll1</padig:set>
         <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
