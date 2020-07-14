@@ -25,25 +25,23 @@
         <xsl:include href="remediations/filter.xsl"/>
     -->
 
-    <!-- drop nodes we don't care about, namely, header values
-    <xsl:template match="text() | @*"/>  -->
-
-    <!-- drop records where the OAI header is marked as 'deleted' - removed since this is built into airflow harvest
-    <xsl:template match="//record[header[@status='deleted']]/*"/> -->
-
-    <!-- base record. Matches each OAI feed record that is mapped. -->
-
     <!-- Create elements based on dc:identifier -->
     
     <xsl:template match="dc:identifier">
-      
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="identifier"/>
+            <xsl:call-template name="isShownAt"/>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- TEMPLATES -->
+
+    <!-- identifier -->
+    <xsl:template name="identifier">
         <xsl:variable name="itemID-html" select='substring-before(substring-after(.,"https://digital.library.upenn.edu/women/"), ".html")'/>
         <xsl:variable name="itemID-pdf" select='substring-before(substring-after(.,"https://digital.library.upenn.edu/women/"), ".pdf")'/>
         <xsl:variable name="itemID-html-clean" select="translate($itemID-html,'/','-')"/>
         <xsl:variable name="itemID-pdf-clean" select="translate($itemID-pdf,'/','-')"/>
-
-        <!-- Local identifier -->
-        
         <xsl:choose>
             <xsl:when test="$itemID-html">
                 <xsl:element name="dcterms:identifier">
@@ -55,21 +53,15 @@
                     <xsl:value-of>padig:PENN-celebration-</xsl:value-of><xsl:value-of select="normalize-space($itemID-pdf-clean)"/>
                 </xsl:element>
             </xsl:otherwise>
-        </xsl:choose>    
-
-        <!-- URL -->
-            <xsl:if test="normalize-space(.)!=''">
-                <xsl:element name="edm:isShownAt"><xsl:value-of select="normalize-space(.)"/></xsl:element>
-            </xsl:if>   
+        </xsl:choose>
     </xsl:template>
-        <!-- Preview - none in collection
-            <xsl:if test="normalize-space(.)!=''">
-                <xsl:element name="edm:preview">
-                    <xsl:value-of>https://repo.library.upenn.edu/thumbs/</xsl:value-of><xsl:value-of select="$lowerID"/><xsl:value-of>.jpg</xsl:value-of>
-                </xsl:element>
-            </xsl:if>
-        -->
-        <!-- isPartOf -->
+            
+    <!-- isShownAt -->
+         <xsl:template name="isShownAt">
+             <xsl:element name="edm:isShownAt"><xsl:value-of select="normalize-space(.)"/></xsl:element>
+         </xsl:template>   
+
+    <!-- isPartOf -->
         <xsl:template name="isPartOf">
             <xsl:element name="dcterms:isPartOf"><xsl:value-of>Celebration of Women Writers</xsl:value-of></xsl:element>
         </xsl:template>
