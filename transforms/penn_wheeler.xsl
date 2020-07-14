@@ -26,33 +26,39 @@
     -->
 
     <!-- Create elements based on dc:identifier -->
+    
     <xsl:template match="dc:identifier">
-        <xsl:variable name="lowerID" select='lower-case(.)'/>
-
-        <!-- Local identifier -->
         <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="identifier"/>
+            <xsl:call-template name="isShownAt"/>
+            <xsl:call-template name="preview"/>
+            <xsl:element name="edm:rights">https://creativecommons.org/publicdomain/zero/1.0</xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+<!-- TEMPLATES -->
+    
+        <!-- identifier -->
+        <xsl:template name="identifier">
             <xsl:element name="dcterms:identifier">
                 <xsl:value-of>padig:PENN-</xsl:value-of><xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-        </xsl:if>
-
+        </xsl:template>
+        
         <!-- URL -->
-            <xsl:if test="normalize-space(.)!=''">
+            <xsl:template name="isShownAt">
                 <xsl:element name="edm:isShownAt">
                     <xsl:value-of>http://dla.library.upenn.edu/dla/wheeler/image.html?id=</xsl:value-of><xsl:value-of select="."/>
                 </xsl:element>
-            </xsl:if>   
-            
-        <!-- Preview -->
-            <xsl:if test="normalize-space(.)!=''">
-                <xsl:element name="edm:preview">
-                    <xsl:value-of>https://repo.library.upenn.edu/thumbs/</xsl:value-of><xsl:value-of select="$lowerID"/><xsl:value-of>.jpg</xsl:value-of>
-                </xsl:element>
-                <xsl:element name="edm:rights">https://creativecommons.org/publicdomain/zero/1.0</xsl:element>
-            </xsl:if>
-    </xsl:template>
+            </xsl:template>
 
-     <!-- NAMED TEMPLATES -->
+    <!-- Preview -->
+             <xsl:template name="preview">
+                 <xsl:variable name="lowerID" select='lower-case(.)'/>
+                 <xsl:element name="edm:preview">
+                     <xsl:value-of>https://repo.library.upenn.edu/thumbs/</xsl:value-of><xsl:value-of select="$lowerID"/><xsl:value-of>.jpg</xsl:value-of>
+                 </xsl:element>
+             </xsl:template>
     
     <!-- isPartOf -->
     <xsl:template name="isPartOf">

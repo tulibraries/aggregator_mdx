@@ -24,36 +24,45 @@
     <!--
         <xsl:include href="remediations/filter.xsl"/>
     -->
-
-    <!-- Create elements based on dc:identifier -->
+    
     <xsl:template match="dc:identifier">
-        <xsl:variable name="lowerID" select="lower-case(.)"/>
-        <xsl:variable name="urlID" select="substring-after(.,'HOLYLAND_')"/>
-
-        <!-- Local identifier -->
         <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="identifier"/>
+            <xsl:call-template name="isShownAt"/>
+            <xsl:call-template name="preview"/>
+            <xsl:element name="edm:rights">
+                <xsl:value-of>http://rightsstatements.org/vocab/NoC-US/1.0/</xsl:value-of>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+            
+    <!-- TEMPLATES -->
+    
+        <!-- identifier -->
+        <xsl:template name="identifier">
             <xsl:element name="dcterms:identifier">
                 <xsl:value-of>padig:PENN-</xsl:value-of><xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-        </xsl:if>
-
-        <!-- URL -->
-            <xsl:if test="normalize-space(.)!=''">
+        </xsl:template>
+        
+        <!-- isShownAt -->
+       <xsl:template name="isShownAt">
+           <xsl:variable name="lowerID" select="lower-case(.)"/>
+           <xsl:variable name="urlID" select="substring-after(.,'HOLYLAND_')"/>
                 <xsl:element name="edm:isShownAt">
                     <xsl:value-of>http://dla.library.upenn.edu/dla/holyland/image.html?id=</xsl:value-of><xsl:value-of select="."/>
                 </xsl:element>
-            </xsl:if>   
+       </xsl:template>
+               
             
-        <!-- Preview -->
-            <xsl:if test="normalize-space(.)!=''">
-                <xsl:element name="edm:preview">
+        <!-- preview -->
+           <xsl:template name="preview">
+               <xsl:variable name="lowerID" select="lower-case(.)"/>
+               <xsl:variable name="urlID" select="substring-after(.,'HOLYLAND_')"/>
+                  <xsl:element name="edm:preview">
                     <xsl:value-of>https://repo.library.upenn.edu/thumbs/</xsl:value-of><xsl:value-of select="$urlID"/><xsl:value-of>.jpg</xsl:value-of>
-                </xsl:element>
-                <xsl:element name="edm:rights">
-                    <xsl:value-of>http://rightsstatements.org/vocab/NoC-US/1.0/</xsl:value-of>
-                </xsl:element>
-            </xsl:if>
-    </xsl:template>
+                 </xsl:element>
+           </xsl:template>
 
      <!-- NAMED TEMPLATES -->
     
