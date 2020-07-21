@@ -36,7 +36,7 @@
         <padig:fformat string="audio/mpeg">mpeg3</padig:fformat>
         <padig:fformat string="audio/mp3">mp3</padig:fformat>
     </xsl:param>
-        
+
     <!-- lookup table for recommended DCMI Types terms/URIs -->
     <xsl:param name="dcmiType">
         <padig:type string="collection" uri="http://purl.org/dc/dcmitype/Collection">collection</padig:type>
@@ -135,7 +135,7 @@
 		<padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
 		<padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
 	</xsl:param>
-    
+
     <!-- lookup table for Contributing Institutions with Intermediate Providers -->
     <xsl:param name="ContInt">
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmmap</padig:cont>
@@ -176,7 +176,7 @@
         <padig:cont string="Friends Historical Library of Swarthmore College" code="FHL">SC_Truman</padig:cont>
         <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="FHL">SC_Broad</padig:cont>
     </xsl:param>
-	
+
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
         <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
@@ -466,9 +466,26 @@
 	<padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
 	<padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
 	<padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
-	<padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set> 
+	<padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
 	<padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
-	<padig:set string="Graphics Collection">islandora_graphics_collection</padig:set> 
+	<padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
+  <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
+  <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
+  <padig:set string="La Salle Alumnus">publication:alumnus</padig:set>
+  <padig:set string="La Salle Basketball Media Guides">publication:basketball_media_guides</padig:set>
+  <padig:set string="Campus News">publication:campus_news</padig:set>
+  <padig:set string="College Budget">publication:college_budget</padig:set>
+  <padig:set string="La Salle Commencement Programs">publication:commencement_programs</padig:set>
+  <padig:set string="La Salle Course Catalogs">publication:course_catalogs</padig:set>
+  <padig:set string="Local History Essays">publication:essays</padig:set>
+  <padig:set string="Explorer (Yearbooks)">publication:explorer</padig:set>
+  <padig:set string="La Salle Alumni Association Explorer News">publication:explorer_news</padig:set>
+  <padig:set string="Faculty Bulletins">publication:faculty_bulletins</padig:set>
+  <padig:set string="Faculty and Staff Directories">publication:faculty_staff_directories</padig:set>
+  <padig:set string="La Salle Magazine">publication:lasalle_magazine</padig:set>
+  <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
+  <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
+  <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->
