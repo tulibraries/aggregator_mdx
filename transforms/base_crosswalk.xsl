@@ -190,10 +190,9 @@
     <!-- Relation -->
     <xsl:template match="dc:relation">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="rela_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
+            <xsl:element name="dcterms:relation">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
         </xsl:if>
     </xsl:template>
     
