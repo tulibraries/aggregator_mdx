@@ -42,8 +42,6 @@
           <dcterms:title>First title</dcterms:title>
           <dcterms:alternative>Alt title</dcterms:alternative>
           <edm:provider>PA Digital</edm:provider>
-          <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-          <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
         </oai_dc:dc>
       </x:expect>
       </x:scenario>
@@ -64,8 +62,6 @@
             <dcterms:alternative>Alt title 1</dcterms:alternative>
             <dcterms:alternative>Alt title 2</dcterms:alternative>
             <edm:provider>PA Digital</edm:provider>
-            <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-            <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
           </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -91,8 +87,6 @@
           <dcterms:type>Text</dcterms:type>
           <dcterms:format>photographs</dcterms:format>
           <edm:provider>PA Digital</edm:provider>
-          <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-          <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
         </oai_dc:dc>
       </x:expect>
     </x:scenario>
@@ -535,8 +529,6 @@
          <dcterms:creator>Smith, John</dcterms:creator>
          <dcterms:creator>Smith, Karen</dcterms:creator>
          <edm:provider>PA Digital</edm:provider>
-         <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-         <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
        </oai_dc:dc>
      </x:expect>
    </x:scenario>
@@ -564,8 +556,6 @@
            <schema:fileFormat>Thing1</schema:fileFormat>
            <schema:fileFormat>Thing2</schema:fileFormat>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -594,8 +584,6 @@
            <dcterms:contributor>Smith, John</dcterms:contributor>
            <dcterms:contributor>Smith, Karen</dcterms:contributor>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -623,8 +611,6 @@
            <dcterms:source>Smith, John</dcterms:source>
            <dcterms:source>Smith, Karen</dcterms:source>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -660,8 +646,6 @@
          <dcterms:spatial>Location 1</dcterms:spatial>
          <dcterms:spatial>Location 2</dcterms:spatial>
          <edm:provider>PA Digital</edm:provider>
-         <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-         <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
        </oai_dc:dc>
      </x:expect>
    </x:scenario>
@@ -682,8 +666,6 @@
          <dcterms:temporal>Era 1</dcterms:temporal>
          <dcterms:temporal>Era 2</dcterms:temporal>
          <edm:provider>PA Digital</edm:provider>
-         <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-         <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
        </oai_dc:dc>
      </x:expect>
    </x:scenario>
@@ -717,8 +699,6 @@
            <dcterms:date>1978-07-25</dcterms:date>
            <dcterms:date>1978-07-26</dcterms:date>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -735,6 +715,8 @@
          <dcterms:subject>PS866 .W5 L5</dcterms:subject>
          <dcterms:identifier>padig:PENN-celebration-wheatley-liberty-liberty</dcterms:identifier>
          <edm:isShownAt>https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html</edm:isShownAt>
+         <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
+         <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          <schema:fileFormat>text/html</schema:fileFormat>
          <dcterms:description>Boston: Warden and Russell, 1784</dcterms:description>
          <dcterms:publisher>Warden and Russell</dcterms:publisher>
@@ -744,8 +726,6 @@
          <dcterms:rights>Personal, noncommercial use of this item is permitted in the United States of America. Please see https://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource.</dcterms:rights>
          <dcterms:type>Text</dcterms:type>
          <edm:provider>PA Digital</edm:provider>
-         <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-         <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
        </oai_dc:dc>
      </x:expect>
    </x:scenario>
@@ -761,6 +741,8 @@
            <dcterms:subject>PS866 .W5 L5</dcterms:subject>
            <dcterms:identifier>padig:PENN-celebration-wheatley-liberty-liberty</dcterms:identifier>
            <edm:isShownAt>https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html</edm:isShownAt>
+           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
+           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
            <schema:fileFormat>text/html</schema:fileFormat>
            <dcterms:description>Boston: Warden and Russell, 1784</dcterms:description>
            <dcterms:publisher>Warden and Russell</dcterms:publisher>
@@ -770,8 +752,6 @@
            <dcterms:rights>Personal, noncommercial use of this item is permitted in the United States of America. Please see https://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource.</dcterms:rights>
            <dcterms:type>Text</dcterms:type>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -798,8 +778,6 @@
            <dcterms:relation>Thing 1</dcterms:relation>
            <dcterms:relation>Thing 2</dcterms:relation>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
@@ -827,9 +805,7 @@
            <dcterms:isPartOf>Thing 1</dcterms:isPartOf>
            <dcterms:isPartOf>Thing 2</dcterms:isPartOf>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
-         </oai_dc:dc>
+        </oai_dc:dc>
        </x:expect>
      </x:scenario>
    </x:scenario>
@@ -850,8 +826,6 @@
            <dcterms:isReplacedBy>Thing 1</dcterms:isReplacedBy>
            <dcterms:isReplacedBy>Thing 2</dcterms:isReplacedBy>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
    </x:scenario>
@@ -872,9 +846,7 @@
          <dcterms:replaces>Thing 1</dcterms:replaces>
          <dcterms:replaces>Thing 2</dcterms:replaces>
          <edm:provider>PA Digital</edm:provider>
-         <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-         <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
-       </oai_dc:dc>
+      </oai_dc:dc>
      </x:expect>
    </x:scenario>
 
@@ -919,6 +891,8 @@
            <dcterms:subject>PS866 .W5 L5</dcterms:subject>
            <dcterms:identifier>padig:PENN-celebration-wheatley-liberty-liberty</dcterms:identifier>
            <edm:isShownAt>https://digital.library.upenn.edu/women/wheatley/liberty/liberty.html</edm:isShownAt>
+           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
+           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
            <schema:fileFormat>text/html</schema:fileFormat>
            <dcterms:description>Boston: Warden and Russell, 1784</dcterms:description>
            <dcterms:publisher>Warden and Russell</dcterms:publisher>
@@ -928,8 +902,6 @@
            <dcterms:rights>Personal, noncommercial use of this item is permitted in the United States of America. Please see https://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource.</dcterms:rights>
            <dcterms:type>Text</dcterms:type>
            <edm:provider>PA Digital</edm:provider>
-           <dcterms:isPartOf>Celebration of Women Writers</dcterms:isPartOf>
-           <edm:dataProvider>University of Pennsylvania</edm:dataProvider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>

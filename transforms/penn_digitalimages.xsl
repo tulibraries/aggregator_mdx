@@ -20,7 +20,8 @@
 
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
-    <xsl:include href="upenn.xsl"/>
+    <xsl:include href="oai_dc.xsl"/>
+    <xsl:include href="base_crosswalk.xsl"/>
     <!--
         <xsl:include href="remediations/filter.xsl"/>
     -->
@@ -30,6 +31,8 @@
             <xsl:call-template name="identifier"/>
             <xsl:call-template name="isShownAt"/>
             <xsl:call-template name="preview"/>
+            <xsl:call-template name="isPartOf"/>
+            <xsl:call-template name="dataProvider"/>
         </xsl:if>
     </xsl:template>
         
@@ -61,6 +64,13 @@
     <xsl:template name="isPartOf">
         <xsl:element name="dcterms:isPartOf">
             <xsl:value-of>University Archives Digital Image Collection</xsl:value-of>
+        </xsl:element>
+    </xsl:template>
+    
+    <!-- dataProvider -->
+    <xsl:template name="dataProvider">
+        <xsl:element name="edm:dataProvider">
+            <xsl:value-of>University of Pennsylvania</xsl:value-of>
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
