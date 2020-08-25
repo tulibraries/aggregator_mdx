@@ -51,8 +51,6 @@
             
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <xsl:call-template name="hub"/>
-            <xsl:call-template name="isPartOf"/>
-            <xsl:call-template name="dataProvider"/>
         </oai_dc:dc>
     </xsl:template>
     
