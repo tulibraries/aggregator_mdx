@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:dpla="http://dp.la/about/map/"
+   xmlns:padig="http://padigital.org/ns"
+   xmlns:edm="http://www.europeana.eu/schemas/edm/"
+   xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+   xmlns:oclcterms="http://purl.org/oclc/terms/"
+   xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+   xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
+   xmlns:oclc="http://purl.org/oclc/terms/"
+   xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+   xmlns:schema="http://schema.org"
+   xmlns:svcs="http://rdfs.org/sioc/services"
+   stylesheet="../../transforms/bepress_lasalle.xsl">
+
+   <x:import href="typeformat.xspec"/>
+
+<!-- Title; add title[1] to xsl and then add test here -->
+   <x:scenario label="dc:title becomes space-normalized dcterms:title">
+    <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="dc:title becomes dcterms:title"
+       test="oai_dc:dc/dcterms:title = 'La Salle Explorers 1953-1954'" />
+   </x:scenario>
+
+<!-- Alternate title (map and delimit) -->
+   <x:scenario label="alternative titles map and delimit">
+    <x:scenario label="title not first maps to alttitle">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc
+                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/">              
+                <dc:title>First title</dc:title>
+                <dc:title>Alt title</dc:title>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="title not first maps">
+        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">          
+            <dcterms:title>First title</dcterms:title>
+            <dcterms:alternative>Alt title</dcterms:alternative>
+            <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+      </x:scenario>
+      <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:title>First title</dc:title>
+                <dcterms:alternative>Alt title1;Alt title2</dcterms:alternative>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="alt title is mapped and delimited">
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:title>First title</dcterms:title>
+            <dcterms:alternative>Alt title1</dcterms:alternative>
+            <dcterms:alternative>Alt title2</dcterms:alternative>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+<!-- Creator (map and delimit) -->
+  <x:scenario label="dc:creator delimits, normalizes, and maps">
+   <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
+    <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="dc:creator becomes dcterms:creator)"
+       test="oai_dc:dc/dcterms:creator = 'La Salle University'" />
+   </x:scenario>
+   <x:scenario label="dc:creator becomes space-normalized dcterms:creator and delimits">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+             <dc:creator>Smith, John;Smith, Karen</dc:creator>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="creator maps and delimits">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:creator>Smith, John</dcterms:creator>
+         <dcterms:creator>Smith, Karen</dcterms:creator>
+         <edm:provider>PA Digital</edm:provider>
+       </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+ </x:scenario>
+
+<!-- File format (map and delimit) -->
+   <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
+     <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:format becomes schema:fileFormat)"
+         test="oai_dc:dc/schema:fileFormat = 'application/pdf'" />
+     </x:scenario>
+     <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+               <dc:format>jpg;TIFF;thing</dc:format>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="format maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <schema:fileFormat>image/jpeg</schema:fileFormat>
+           <schema:fileFormat>image/tiff</schema:fileFormat>
+           <schema:fileFormat>thing</schema:fileFormat>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+
+<!-- Contributor (map and delimit) -->
+   <x:scenario label="dc:contributor delimits, normalizes, and maps">
+     <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:contributor becomes dcterms:contributor)"
+         test="oai_dc:dc/dcterms:contributor = 'Test contributor'" />
+     </x:scenario>
+     <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+               <dc:contributor>Smith, John;Smith, Karen</dc:contributor>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="contributor maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:contributor>Smith, John</dcterms:contributor>
+           <dcterms:contributor>Smith, Karen</dcterms:contributor>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+<!-- Source (map and delimit) -->
+   <x:scenario label="dc:source delimits, normalizes, and maps">
+     <x:scenario label="dc:source becomes space-normalized dcterms:source">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:source becomes dcterms:source)"
+         test="oai_dc:dc/dcterms:source = 'La Salle Basketball Media Guides'" />
+     </x:scenario>
+     <x:scenario label="dc:source becomes space-normalized dcterms:source and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+               <dc:source>Smith, John;Smith, Karen</dc:source>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="source maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:source>Smith, John</dcterms:source>
+           <dcterms:source>Smith, Karen</dcterms:source>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+<!-- Publisher (map and delimit) -->
+     <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:publisher becomes dcterms:publisher)"
+         test="oai_dc:dc/dcterms:publisher = 'La Salle College'" />
+     </x:scenario>
+
+<!-- Description (map) -->
+     <x:scenario label="dc:description becomes space-normalized dcterms:description">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:description becomes dcterms:description"
+         test="oai_dc:dc/dcterms:description = 'Test description'" />
+     </x:scenario>
+
+<!-- Spatial (map and delimit) -->
+   <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
+     <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="spatial is mapped and delimited" test="oai_dc:dc/dcterms:spatial = 'Test spatial'" />     
+   </x:scenario>
+
+
+<!-- Date (map and delimit) -->
+   <x:scenario label="dc:date delimits, normalizes, and maps">
+     <x:scenario label="dc:date becomes space-normalized dcterms:date">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:date becomes dcterms:date)"
+         test="oai_dc:dc/dcterms:date = '1953-01-01T08:00:00Z'" />
+     </x:scenario>
+     <x:scenario label="dc:date becomes space-normalized dcterms:date and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+               <dc:date>1978-07-25;1978-07-26</dc:date>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="date maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:date>1978-07-25</dcterms:date>
+           <dcterms:date>1978-07-26</dcterms:date>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+<!-- Subject (map and delimit) -->
+   <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
+     <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="subject is mapped and delimited" test="oai_dc:dc/dcterms:subject = 'History of Science, Technology, and Medicine'"/>
+   </x:scenario>
+
+<!-- Language (map and delimit) -->
+     <x:scenario label="language becomes space-normalized dcterms:language">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+               <dc:language>english;fre;ENG</dc:language>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+        <x:expect label="language normalizes, maps, and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:language>english</dcterms:language>
+           <dcterms:language>French</dcterms:language>
+           <dcterms:language>English</dcterms:language>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+
+<!-- Relation (map and delimit) -->
+   <x:scenario label="relation delimits, normalizes, and maps">
+     <x:scenario label="relation becomes space-normalized dcterms:relation">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dc:relation becomes dcterms:relation)"
+         test='oai_dc:dc/dcterms:relation = "Test relation"' />
+     </x:scenario>
+   </x:scenario>
+
+<!-- isPartOf (map and lookup) -->
+   <x:scenario label="isPartOf delimits, normalizes, and maps">
+     <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="isPartOf becomes dcterms:isPartOf)"
+         test="oai_dc:dc/dcterms:isPartOf = 'La Salle Basketball Media Guides'" />
+     </x:scenario>
+   </x:scenario>
+
+<!-- Replaced by (map and delimit) -->
+   <x:scenario label="isReplacedBy delimits, normalizes, and maps">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+               <dcterms:isReplacedBy>Thing 1; Thing 2;</dcterms:isReplacedBy>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+     <x:expect label="isReplacedBy maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:isReplacedBy>Thing 1</dcterms:isReplacedBy>
+           <dcterms:isReplacedBy>Thing 2</dcterms:isReplacedBy>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+   </x:scenario>
+
+<!-- Replaces (map and delimit) -->
+   <x:scenario label="replaces delimits, normalizes, and maps">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+             <dcterms:replaces>Thing 1; Thing 2;</dcterms:replaces>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="replaces maps and delimits">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:replaces>Thing 1</dcterms:replaces>
+         <dcterms:replaces>Thing 2</dcterms:replaces>
+         <edm:provider>PA Digital</edm:provider>
+       </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+
+<!-- Rights and Rights URI (map/parse and delimit) -->
+   <x:scenario label="rights processing">
+     <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
+     <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This media guide is being made available by La Salle University for research and educational use. Media guides published prior to 1978 are in the public domain. Media guides published during or after 1978 may be protected under U.S. copyright law and all rights are reserved by La Salle University. Please direct any questions about copyright status and use of this media guide to the Intellectual Property Committee, Office of the Provost, at provost@lasalle.edu.'"/>
+     <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
+     <x:expect label="textual rights does not map to edm:rights" test="not(oai_dc:dc/edm:rights = 'This media guide is being made available by La Salle University for research and educational use. Media guides published prior to 1978 are in the public domain. Media guides published during or after 1978 may be protected under U.S. copyright law and all rights are reserved by La Salle University. Please direct any questions about copyright status and use of this media guide to the Intellectual Property Committee, Office of the Provost, at provost@lasalle.edu.')" />
+   </x:scenario>
+
+<!-- Rights Holder (map and delimit) -->
+   <x:scenario label="rights holder delimits, normalizes, and maps">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+             <dcterms:rightsHolder>Thing 1; Thing 2;</dcterms:rightsHolder>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="rightsHolder maps and delimits">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:rightsHolder>Thing 1</dcterms:rightsHolder>
+         <dcterms:rightsHolder>Thing 2</dcterms:rightsHolder>
+         <edm:provider>PA Digital</edm:provider>
+       </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+
+<!-- Identifier (map) -->
+     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
+       <x:context href="../../fixtures/bepress_lasalle.xml"/>
+       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:LASALLE-basketball_media_guides/3'"/>
+     </x:scenario>
+
+<!-- Data Provider (generate and map) -->
+   <x:scenario label="data provider processing">
+     <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'La Salle University'"/>
+   </x:scenario>
+   
+   
+<!-- isShownAt (map) -->
+   <x:scenario label="isShownAt processing">
+     <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digitalcommons.lasalle.edu/basketball_media_guides/3'"/>
+   </x:scenario>
+
+<!-- Preview (generate and map) -->
+   <x:scenario label="preview processing">
+     <x:context href="../../fixtures/bepress_lasalle.xml"/>
+     <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digitalcommons.lasalle.edu/basketball_media_guides/1002/thumbnail.jpg'"/>
+   </x:scenario>
+
+ </x:description>
