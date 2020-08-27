@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-08-27T14:56:17Z</responseDate>
+    <request verb="ListRecords" set="publication:pafolklifemag" metadataPrefix="oai_dc">https://digitalcommons.ursinus.edu/do/oai/</request>
+    <ListRecords>
+    <record>
+        <header>
+            <identifier>oai:digitalcommons.ursinus.edu:pafolklifemag-1016</identifier>
+            <datestamp>2016-05-06T17:09:04Z</datestamp>
+            <setSpec>publication:library</setSpec>
+            <setSpec>publication:special_collections</setSpec>
+            <setSpec>publication:pafolksociety</setSpec>
+            <setSpec>publication:pafolklifemag</setSpec>
+        </header>
+        <metadata>
+            <oai_dc:dc
+                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/">
+                <dc:title>Pennsylvania Folklife Vol. 13, No. 4</dc:title>
+                <dc:creator>Robacker, Earl F.</dc:creator>
+                <dc:contributor>Test contributor</dc:contributor>
+                <dc:description>• Stoneware: Stepchild of Early Pottery • The Days of Auld Lang Syne • Grout-Kootch, Coldframe, and Hotbed • Memories of Three Spring Farm • Folk Festival Program • Saffron Cookery • My Childhood Games • Western Pennsylvania Epitaphs</dc:description>
+                <dc:coverage>Test spatial</dc:coverage>
+                <dc:date>1964-07-01T07:00:00Z</dc:date>
+                <dc:relation>Test relation</dc:relation>
+                <dc:type>text</dc:type>
+                <dc:format>application/pdf</dc:format>
+                <dc:identifier>https://digitalcommons.ursinus.edu/pafolklifemag/17</dc:identifier>
+                <dc:identifier>https://digitalcommons.ursinus.edu/cgi/viewcontent.cgi?article=1016&amp;context=pafolklifemag</dc:identifier>
+                <dc:rights>This publication is in copyright: http://rightsstatements.org/vocab/InC/1.0/ It may be used for educational purposes only.</dc:rights>
+                <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                <dc:source>Pennsylvania Folklife Magazine</dc:source>
+                <dc:language>English</dc:language>
+                <dc:publisher>Pennsylvania Folklife Society, Inc.</dc:publisher>
+                <dc:subject>Pennsylvania</dc:subject>
+                <dc:description>https://digitalcommons.ursinus.edu/pafolklifemag/1016/thumbnail.jpg</dc:description>
+            </oai_dc:dc>
+        </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>
