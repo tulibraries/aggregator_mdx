@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-08-26T16:20:34Z</responseDate>
+    <request verb="ListRecords" set="publication:basketball_media_guides" metadataPrefix="oai_dc">https://digitalcommons.lasalle.edu/do/oai/</request>
+    <ListRecords>
+    <record>
+        <header>
+            <identifier>
+                oai:digitalcommons.lasalle.edu:basketball_media_guides-1002
+            </identifier>
+            <datestamp>2012-09-05T15:36:05Z</datestamp>
+            <setSpec>publication:universitypublications</setSpec>
+            <setSpec>publication:lasalle_history</setSpec>
+            <setSpec>publication:basketball_media_guides</setSpec>
+        </header>
+        <metadata>
+            <oai_dc:dc
+                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/">
+                <dc:title>La Salle Explorers 1953-1954</dc:title>
+                <dc:creator>La Salle University</dc:creator>
+                <dc:contributor>Test contributor</dc:contributor>
+                <dc:coverage>Test spatial</dc:coverage>
+                <dc:relation>Test relation</dc:relation>
+                <dc:language>eng</dc:language>
+                <dc:description>Test description</dc:description>
+                <dc:date>1953-01-01T08:00:00Z</dc:date>
+                <dc:type>text</dc:type>
+                <dc:subject>History of Science, Technology, and Medicine</dc:subject>
+                <dc:format>application/pdf</dc:format>
+                <dc:identifier>https://digitalcommons.lasalle.edu/basketball_media_guides/3</dc:identifier>
+                <dc:identifier>https://digitalcommons.lasalle.edu/cgi/viewcontent.cgi?article=1002&amp;context=basketball_media_guides</dc:identifier>
+                <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                <dc:rights>
+                    This media guide is being made available by La Salle University for research and educational use. Media guides published prior to 1978 are in the public domain. Media guides published during or after 1978 may be protected under U.S. copyright law and all rights are reserved by La Salle University. Please direct any questions about copyright status and use of this media guide to the Intellectual Property Committee, Office of the Provost, at provost@lasalle.edu.
+                </dc:rights>
+                <dc:source>La Salle Basketball Media Guides</dc:source>
+                <dc:publisher>La Salle College</dc:publisher>
+                <dc:description>https://digitalcommons.lasalle.edu/basketball_media_guides/1002/thumbnail.jpg</dc:description>
+            </oai_dc:dc>
+        </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>

@@ -111,6 +111,7 @@
 		<padig:url string="Villanova University" code="VNOVA">https://digital.library.villanova.edu/</padig:url>
 		<padig:url string="Jefferson - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
 		<padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
+        <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
 		<padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
         <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
         <padig:url string="University of Scranton" code="USCR">http://digitalservices.scranton.edu/</padig:url>
