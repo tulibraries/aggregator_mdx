@@ -186,7 +186,7 @@
         <padig:set string="Commencements">publication:commencements</padig:set>
         <padig:set string="Herald of Osteopathy">publication:herald_of_osteopathy</padig:set>
         <padig:set string="Osteopathic Medicine">publication:osteopathic_medicine</padig:set>
-        <padig:set string="PCOM Digest">publication:digest</padig:set>
+        <padig:set string="Digest">publication:digest</padig:set>
         <padig:set string="Philadelphia Journal of Osteopathy">publication:phila_j_osteopathy</padig:set>
         <padig:set string="The Axone">publication:axone</padig:set>
         <padig:set string="Yearbooks">publication:yearbooks</padig:set>
