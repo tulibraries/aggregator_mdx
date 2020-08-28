@@ -190,7 +190,7 @@
         <padig:set string="Philadelphia Journal of Osteopathy">publication:phila_j_osteopathy</padig:set>
         <padig:set string="The Axone">publication:axone</padig:set>
         <padig:set string="Yearbooks">publication:yearbooks</padig:set>
-        <padig:set string="Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
+        <padig:set string="The Dutchman / The Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
         <padig:set string="Pennsylvania Folklife Magazine">publication:pafolklifemag</padig:set>
         <padig:set string="Pennsylvania Folklife Magazine Indexes">publication:pafolklifemagindex</padig:set>
         <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
