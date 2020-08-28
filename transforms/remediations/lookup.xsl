@@ -114,6 +114,7 @@
         <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
 		<padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
         <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
+        <padig:url string="Ursinus College" code="URSINUS">https://digitalcommons.ursinus.edu/</padig:url>
         <padig:url string="University of Scranton" code="USCR">http://digitalservices.scranton.edu/</padig:url>
 		<padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
 		<padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
@@ -180,6 +181,11 @@
 
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
+        <padig:set string="Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
+        <padig:set string="Pennsylvania Folklife Magazine">publication:pafolklifemag</padig:set>
+        <padig:set string="Pennsylvania Folklife Magazine Indexes">publication:pafolklifemagindex</padig:set>
+        <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
+        <padig:set string="Yost History of Ursinus College">publication:yosthistory</padig:set>
         <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
         <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
         <padig:set string="American Red Cross Base Hospital No. 38">publication:base_hospital_no_38</padig:set>
