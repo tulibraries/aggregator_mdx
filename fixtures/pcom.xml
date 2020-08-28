@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-08-28T15:09:49Z</responseDate>
+    <request verb="ListRecords" set="publication:yearbooks" metadataPrefix="oai_dc">https://digitalcommons.pcom.edu/do/oai/</request>
+    <ListRecords>
+    <record>
+        <header>
+            <identifier>oai:digitalcommons.pcom.edu:yearbooks-1107</identifier>
+            <datestamp>2012-07-11T12:16:00Z</datestamp>
+            <setSpec>publication:do_yearbooks</setSpec>
+            <setSpec>publication:pcom_archives</setSpec>
+            <setSpec>publication:college_collections</setSpec>
+            <setSpec>publication:all_yearbooks</setSpec>
+            <setSpec>publication:yearbooks</setSpec>
+        </header>
+        <metadata>
+            <oai_dc:dc
+                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/">
+                <dc:title>Synapsis: Georgia Campus (2011)</dc:title>
+                <dc:creator>Philadelphia College of Osteopathic Medicine</dc:creator>
+                <dc:contributor>Test contributor</dc:contributor>
+                <dc:coverage>Test spatial</dc:coverage>
+                <dc:relation>Test relation</dc:relation>
+                <dc:publisher>Test publisher</dc:publisher>
+                <dc:description>This yearbook includes Association Of Military Osteopathic Physicians and Surgeons, AMOPS, Clubs, Athletic Club, Softball, Football, Soccer, Christian Medical And Dental Association, CMDA, Complimentary and Alternative Medicine, Emergency Medicine, American Medical Student Association, AMSA, Internal Medicine, Obstetrics/Gynecology, Outdoors Club, Trips, Pediatric Club, Radiology, Student Interest Group in Neurology, SIGN, Sigma Sigma Phi, SSPh, (ΣΣΦ), Student Association of the American College Of Osteopathic Family Physicians, ACOFP, Student Government Association, Class Officers, Undergraduate American Association of Osteopathy, UAAO, Student National Medical Association, SNMA, Student Osteopathic Medical Association, SOMA, Formals, Charity, Community Service, D.O. Day on the Hill, Conventions, American Osteopathic Association, AOA, White Coat Ceremony, AIDS Benefit, Holidays</dc:description>
+                <dc:date>2011-01-01T08:00:00Z</dc:date>
+                <dc:type>text</dc:type>
+                <dc:format>application/pdf</dc:format>
+                <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                <dc:identifier>https://digitalcommons.pcom.edu/yearbooks/105</dc:identifier>
+                <dc:identifier>https://digitalcommons.pcom.edu/cgi/viewcontent.cgi?article=1107&amp;context=yearbooks</dc:identifier>
+                <dc:source>All Yearbooks</dc:source>
+                <dc:language>eng</dc:language>
+                <dc:publisher/>
+                <dc:subject>Medicine and Health Sciences</dc:subject>
+                <dc:description>https://digitalcommons.pcom.edu/yearbooks/1107/thumbnail.jpg</dc:description>
+            </oai_dc:dc>
+        </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>
