@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
-    schematron="../../validations/csv_reqd_fields.sch">
+    schematron="../../validations/ingest_csv_reqd_fields.sch">
     
     <!-- Valid scenario includes both upper and lower case title fields -->     
     
