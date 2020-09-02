@@ -13,7 +13,6 @@
       <title>DPLAH fields required</title>
         <rule context="oai_dc:dc">
           <assert test="dc:title" id="Required1" role="error">There must be a title</assert>
-          <assert test="dc:rights" id="Required2" role="error">There must be a rights statement</assert>
         </rule>
     </pattern>
   <!--
