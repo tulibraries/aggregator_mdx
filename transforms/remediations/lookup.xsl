@@ -102,32 +102,32 @@
 
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">
-		<padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
+        <padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
         <padig:url string="Curtis Institute of Music" code="CURTIS">http://cdm16667.contentdm.oclc.org/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://cdm15860.contentdm.oclc.org/</padig:url>
-		<padig:url string="Pennsylvania State University" code="PSU">http://digital.libraries.psu.edu/</padig:url>
-		<padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
-		<padig:url string="University of Pennsylvania" code="PENN">http://digital.library.upenn.edu/</padig:url>
-		<padig:url string="Villanova University" code="VNOVA">https://digital.library.villanova.edu/</padig:url>
-		<padig:url string="Jefferson - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
-		<padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
+        <padig:url string="Pennsylvania State University" code="PSU">http://digital.libraries.psu.edu/</padig:url>
+        <padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
+        <padig:url string="University of Pennsylvania" code="PENN">http://digital.library.upenn.edu/</padig:url>
+        <padig:url string="Villanova University" code="VNOVA">https://digital.library.villanova.edu/</padig:url>
+        <padig:url string="Jefferson - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
+        <padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
-		<padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
+        <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
         <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">https://digitalcommons.pcom.edu/</padig:url>
         <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
         <padig:url string="Ursinus College" code="URSINUS">https://digitalcommons.ursinus.edu/</padig:url>
         <padig:url string="University of Scranton" code="USCR">http://digitalservices.scranton.edu/</padig:url>
-		<padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
-		<padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
-		<padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
+        <padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
+        <padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
+        <padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
         <padig:url string="Thomas Jefferson University" code="TJU">https://jdc.jefferson.edu/</padig:url>
-		<padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
-		<padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
+        <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
+        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="COLPHYS">http://www.cppdigitallibrary.org/</padig:url>
-		<padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
-		<padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
-		<padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
-		<padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
+        <padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
+        <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
+        <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
+        <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
     </xsl:param>
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -135,8 +135,8 @@
 	    <padig:url string="Keystone Library Network" code="KLN">http://cdm17189.contentdm.oclc.org/</padig:url>
 	    <padig:url string="Keystone Library Network" code="KLN">http://digital.klnpa.org/</padig:url>
 	    <padig:url string="Lackawanna Valley Digital Archives" code="LVDA">http://content.lackawannadigitalarchives.org/</padig:url>
-		<padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
-		<padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
+      <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
+      <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
 	</xsl:param>
 
     <!-- lookup table for Contributing Institutions with Intermediate Providers -->
@@ -144,7 +144,7 @@
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmmap</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmphoto</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmpost</padig:cont>
-	<padig:cont string="Bloomsburg University" code="BLOOMS">CHSminutes</padig:cont>
+        <padig:cont string="Bloomsburg University" code="BLOOMS">CHSminutes</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">audio</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">photograph</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">postcard</padig:cont>
@@ -231,182 +231,182 @@
         <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
         <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
         <padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
-		<padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
-		<padig:set string="African American Construction Workers of Pittsburgh Photographs">pitt_collection.176</padig:set>
-		<padig:set string="Alexander Addison Papers">pitt_collection.15</padig:set>
-		<padig:set string="Alexander Cumming Papers">pitt_collection.249</padig:set>
-		<padig:set string="Allegheny Conference on Community Development Photographs">pitt_collection.34</padig:set>
-		<padig:set string="Allegheny County Photography Department Photographs">pitt_collection.320</padig:set>
-		<padig:set string="Allegheny Observatory Records">pitt_collection.108</padig:set>
-		<padig:set string="Aluminum Company of America Photographs">pitt_collection.274</padig:set>
-		<padig:set string="American Left Ephemera Collection">pitt_collection.107</padig:set>
-		<padig:set string="Archives of Industrial Society Photograph Collection">pitt_collection.226</padig:set>
-		<padig:set string="Beazel Family Papers">pitt_collection.246</padig:set>
-		<padig:set string="Bedford County Township Tax Receipts">pitt_collection.16</padig:set>
-		<padig:set string="Bill Green Photographs">pitt_collection.328</padig:set>
-		<padig:set string="Birmingham United Church of Christ Records">pitt_collection.187</padig:set>
-		<padig:set string="Blind and Vision Rehabilitation Services of Pittsburgh">pitt_collection.308</padig:set>
-		<padig:set string="Breathe Pennsylvania Records">pitt_collection.309</padig:set>
-		<padig:set string="Bruce Drisbach-American Steel &amp; Wire Company Photographs">pitt_collection.35</padig:set>
-		<padig:set string="Bryce Brothers and Lenox Incorporated Glass Records">pitt_collection.285</padig:set>
-		<padig:set string="Bureau of Building Inspection, Department of Public Safety, Pittsburgh, Pa. Records">pitt_collection.186</padig:set>
-		<padig:set string="CONSOL Energy, Inc. Mine Maps and Records">pitt_collection.32</padig:set>
-		<padig:set string="Camp Johnson Photographs">pitt_collection.311</padig:set>
-		<padig:set string="Carnegie Museum of Art Collection of Photographs">pitt_collection.36</padig:set>
-		<padig:set string="Carnegie Museum of Natural History Archives">pitt_collection.151</padig:set>
-		<padig:set string="Charles C. McGovern Papers">pitt_collection.193</padig:set>
-		<padig:set string="Charles M. Stotz Photographs">pitt_collection.37</padig:set>
-		<padig:set string="Charles R. Martin Photographs">pitt_collection.38</padig:set>
-		<padig:set string="Charles Richardson Photographs">pitt_collection.157</padig:set>
-		<padig:set string="Chatham University Chronological Photograph Files">pitt_collection.236</padig:set>
-		<padig:set string="Chatham University May Day Collection">pitt_collection.239</padig:set>
-		<padig:set string="Chatham University Shadyside Campus Lantern Slide Collection">pitt_collection.237</padig:set>
-		<padig:set string="Christopher Gist's Journals by William M. Darlington">pitt_collection.101</padig:set>
-		<padig:set string="City Directories">pitt_collection.49</padig:set>
-		<padig:set string="City of Pittsburgh Geodetic and Topographic Survey Maps">pitt_collection.294</padig:set>
-		<padig:set string="Communist Collection of A.E. Forbes">pitt_collection.106</padig:set>
-		<padig:set string="Conference between the Six Nations and the Quakers Minutes">pitt_collection.144</padig:set>
-		<padig:set string="Congregation B'nai Israel Photographs">pitt_collection.154</padig:set>
-		<padig:set string="Coroner's Office Records, Allegheny County, Pa.">pitt_collection.174</padig:set>
-		<padig:set string="D. L. Clark Company Papers and Photographs">pitt_collection.314</padig:set>
-		<padig:set string="Daniel Brodhead Papers">pitt_collection.18</padig:set>
-		<padig:set string="Darlington Family Papers">pitt_collection.100</padig:set>
-		<padig:set string="Daughters of Erin Court #9 Records">pitt_collection.173</padig:set>
-		<padig:set string="Donohoe Family Papers">pitt_collection.102</padig:set>
-		<padig:set string="Dorsey-Turfley Family Photographs">pitt_collection.40</padig:set>
-		<padig:set string="Dunning McNair and Dunning Robert McNair Papers">pitt_collection.19</padig:set>
-		<padig:set string="Edward J. Shourek Photographs">pitt_collection.41</padig:set>
-		<padig:set string="Eichleay Engineering Corporation Records and Photographs">pitt_collection.243</padig:set>
-		<padig:set string="Eliphalet Smith Account Book">pitt_collection.104</padig:set>
-		<padig:set string="Elsie H. Hillman Papers">pitt_collection.182</padig:set>
-		<padig:set string="Ephraim Douglass Ledgers">pitt_collection.20</padig:set>
-		<padig:set string="Extension of the Pittsburgh City Limits Minute Book">pitt_collection.31</padig:set>
-		<padig:set string="F. Theodore Wagner Papers">pitt_collection.42</padig:set>
-		<padig:set string="Father Cox Papers">pitt_collection.53</padig:set>
-		<padig:set string="First Congregational Church, Etna, Pa. Records">pitt_collection.188</padig:set>
-		<padig:set string="First Trinity Evangelical Lutheran Church, Pittsburgh, Pa. Records">pitt_collection.43</padig:set>
-		<padig:set string="Flood Commission of Pittsburgh, Pennsylvania">pitt_collection.292</padig:set>
-		<padig:set string="Ford E. and Harriet R. Curtis Theatre Collection of Pittsburgh Theatre Programs">pitt_collection.254</padig:set>
-		<padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
-		<padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
-		<padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
+        <padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
+        <padig:set string="African American Construction Workers of Pittsburgh Photographs">pitt_collection.176</padig:set>
+        <padig:set string="Alexander Addison Papers">pitt_collection.15</padig:set>
+        <padig:set string="Alexander Cumming Papers">pitt_collection.249</padig:set>
+        <padig:set string="Allegheny Conference on Community Development Photographs">pitt_collection.34</padig:set>
+        <padig:set string="Allegheny County Photography Department Photographs">pitt_collection.320</padig:set>
+        <padig:set string="Allegheny Observatory Records">pitt_collection.108</padig:set>
+        <padig:set string="Aluminum Company of America Photographs">pitt_collection.274</padig:set>
+        <padig:set string="American Left Ephemera Collection">pitt_collection.107</padig:set>
+        <padig:set string="Archives of Industrial Society Photograph Collection">pitt_collection.226</padig:set>
+        <padig:set string="Beazel Family Papers">pitt_collection.246</padig:set>
+        <padig:set string="Bedford County Township Tax Receipts">pitt_collection.16</padig:set>
+        <padig:set string="Bill Green Photographs">pitt_collection.328</padig:set>
+        <padig:set string="Birmingham United Church of Christ Records">pitt_collection.187</padig:set>
+        <padig:set string="Blind and Vision Rehabilitation Services of Pittsburgh">pitt_collection.308</padig:set>
+        <padig:set string="Breathe Pennsylvania Records">pitt_collection.309</padig:set>
+        <padig:set string="Bruce Drisbach-American Steel &amp; Wire Company Photographs">pitt_collection.35</padig:set>
+        <padig:set string="Bryce Brothers and Lenox Incorporated Glass Records">pitt_collection.285</padig:set>
+        <padig:set string="Bureau of Building Inspection, Department of Public Safety, Pittsburgh, Pa. Records">pitt_collection.186</padig:set>
+        <padig:set string="CONSOL Energy, Inc. Mine Maps and Records">pitt_collection.32</padig:set>
+        <padig:set string="Camp Johnson Photographs">pitt_collection.311</padig:set>
+        <padig:set string="Carnegie Museum of Art Collection of Photographs">pitt_collection.36</padig:set>
+        <padig:set string="Carnegie Museum of Natural History Archives">pitt_collection.151</padig:set>
+        <padig:set string="Charles C. McGovern Papers">pitt_collection.193</padig:set>
+        <padig:set string="Charles M. Stotz Photographs">pitt_collection.37</padig:set>
+        <padig:set string="Charles R. Martin Photographs">pitt_collection.38</padig:set>
+        <padig:set string="Charles Richardson Photographs">pitt_collection.157</padig:set>
+        <padig:set string="Chatham University Chronological Photograph Files">pitt_collection.236</padig:set>
+        <padig:set string="Chatham University May Day Collection">pitt_collection.239</padig:set>
+        <padig:set string="Chatham University Shadyside Campus Lantern Slide Collection">pitt_collection.237</padig:set>
+        <padig:set string="Christopher Gist's Journals by William M. Darlington">pitt_collection.101</padig:set>
+        <padig:set string="City Directories">pitt_collection.49</padig:set>
+        <padig:set string="City of Pittsburgh Geodetic and Topographic Survey Maps">pitt_collection.294</padig:set>
+        <padig:set string="Communist Collection of A.E. Forbes">pitt_collection.106</padig:set>
+        <padig:set string="Conference between the Six Nations and the Quakers Minutes">pitt_collection.144</padig:set>
+        <padig:set string="Congregation B'nai Israel Photographs">pitt_collection.154</padig:set>
+        <padig:set string="Coroner's Office Records, Allegheny County, Pa.">pitt_collection.174</padig:set>
+        <padig:set string="D. L. Clark Company Papers and Photographs">pitt_collection.314</padig:set>
+        <padig:set string="Daniel Brodhead Papers">pitt_collection.18</padig:set>
+        <padig:set string="Darlington Family Papers">pitt_collection.100</padig:set>
+        <padig:set string="Daughters of Erin Court #9 Records">pitt_collection.173</padig:set>
+        <padig:set string="Donohoe Family Papers">pitt_collection.102</padig:set>
+        <padig:set string="Dorsey-Turfley Family Photographs">pitt_collection.40</padig:set>
+        <padig:set string="Dunning McNair and Dunning Robert McNair Papers">pitt_collection.19</padig:set>
+        <padig:set string="Edward J. Shourek Photographs">pitt_collection.41</padig:set>
+        <padig:set string="Eichleay Engineering Corporation Records and Photographs">pitt_collection.243</padig:set>
+        <padig:set string="Eliphalet Smith Account Book">pitt_collection.104</padig:set>
+        <padig:set string="Elsie H. Hillman Papers">pitt_collection.182</padig:set>
+        <padig:set string="Ephraim Douglass Ledgers">pitt_collection.20</padig:set>
+        <padig:set string="Extension of the Pittsburgh City Limits Minute Book">pitt_collection.31</padig:set>
+        <padig:set string="F. Theodore Wagner Papers">pitt_collection.42</padig:set>
+        <padig:set string="Father Cox Papers">pitt_collection.53</padig:set>
+        <padig:set string="First Congregational Church, Etna, Pa. Records">pitt_collection.188</padig:set>
+        <padig:set string="First Trinity Evangelical Lutheran Church, Pittsburgh, Pa. Records">pitt_collection.43</padig:set>
+        <padig:set string="Flood Commission of Pittsburgh, Pennsylvania">pitt_collection.292</padig:set>
+        <padig:set string="Ford E. and Harriet R. Curtis Theatre Collection of Pittsburgh Theatre Programs">pitt_collection.254</padig:set>
+        <padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
+        <padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
+        <padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
         <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
-		<padig:set string="G.M. Hopkins Company Maps">pitt_collection.240</padig:set>
-		<padig:set string="George Westinghouse Museum Collection">pitt_collection.286</padig:set>
-		<padig:set string="Greenstone United Methodist Church, Avalon, Pa. Records">pitt_collection.17</padig:set>
-		<padig:set string="Gulf Oil Corporation Records">pitt_collection.290</padig:set>
-		<padig:set string="H.H. Seiferth Sign Company Photographs">pitt_collection.161</padig:set>
-		<padig:set string="H.J. Heinz Company Photographs">pitt_collection.47</padig:set>
-		<padig:set string="H.K. Porter Co., Pittsburgh, Pa. Records">pitt_collection.247</padig:set>
-		<padig:set string="Harold Corsini Photographs">pitt_collection.146</padig:set>
-		<padig:set string="Harold V. Cohen Photographs">pitt_collection.312</padig:set>
-		<padig:set string="Hebrew Institute Photographs">pitt_collection.48</padig:set>
-		<padig:set string="Henry Clay Frick Business Records">pitt_collection.156</padig:set>
-		<padig:set string="Henry Marie Brackenridge and Family Papers">pitt_collection.103</padig:set>
-		<padig:set string="Historic Pittsburgh Book Collection">pitt_collection.241</padig:set>
-		<padig:set string="Historical Society of Upper St. Clair Collection">pitt_collection.50</padig:set>
-		<padig:set string="Hotel Schenley Register">pitt_collection.175</padig:set>
-		<padig:set string="Howard Etzel Photograph Collection">pitt_collection.310</padig:set>
-		<padig:set string="Hugh Henry Brackenridge and Andrew Watson Papers">pitt_collection.21</padig:set>
-		<padig:set string="Irene Kaufmann Settlement Photographs">pitt_collection.51</padig:set>
-		<padig:set string="Irish Centre of Pittsburgh Records">pitt_collection.172</padig:set>
-		<padig:set string="Iroquois Land Deed">pitt_collection.114</padig:set>
-		<padig:set string="Isaac and Samuel Miller Farm Account Book">pitt_collection.273</padig:set>
-		<padig:set string="James Benney Photographs">pitt_collection.52</padig:set>
-		<padig:set string="James Veech Copybook of the General William Irvine Papers">pitt_collection.22</padig:set>
-		<padig:set string="Jewish Sports Hall of Fame of Western Pennsylvania Photographs">pitt_collection.54</padig:set>
-		<padig:set string="Joel B. Levinson Photographs">pitt_collection.305</padig:set>
-		<padig:set string="John Gates Photographs">pitt_collection.55</padig:set>
-		<padig:set string="John M. Tate, Jr. Collection of Notes, Pictures and Documents relating to the Harmony Society">pitt_collection.203</padig:set>
-		<padig:set string="John Woodruff Scrapbooks">pitt_collection.184</padig:set>
-		<padig:set string="Jonathan Forman Papers">pitt_collection.23</padig:set>
-		<padig:set string="Jones &amp; Laughlin Steel Corporation Photographs">pitt_collection.56</padig:set>
-		<padig:set string="Juniata Crossings House Records">pitt_collection.303</padig:set>
-		<padig:set string="Kaufmann's Department Store Photographs">pitt_collection.318</padig:set>
-		<padig:set string="Ken Kobus Collection">pitt_collection.57</padig:set>
-		<padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
-		<padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
-		<padig:set string="March of the Pittsburgh Blues Copybook">pitt_collection.98</padig:set>
+        <padig:set string="G.M. Hopkins Company Maps">pitt_collection.240</padig:set>
+        <padig:set string="George Westinghouse Museum Collection">pitt_collection.286</padig:set>
+        <padig:set string="Greenstone United Methodist Church, Avalon, Pa. Records">pitt_collection.17</padig:set>
+        <padig:set string="Gulf Oil Corporation Records">pitt_collection.290</padig:set>
+        <padig:set string="H.H. Seiferth Sign Company Photographs">pitt_collection.161</padig:set>
+        <padig:set string="H.J. Heinz Company Photographs">pitt_collection.47</padig:set>
+        <padig:set string="H.K. Porter Co., Pittsburgh, Pa. Records">pitt_collection.247</padig:set>
+        <padig:set string="Harold Corsini Photographs">pitt_collection.146</padig:set>
+        <padig:set string="Harold V. Cohen Photographs">pitt_collection.312</padig:set>
+        <padig:set string="Hebrew Institute Photographs">pitt_collection.48</padig:set>
+        <padig:set string="Henry Clay Frick Business Records">pitt_collection.156</padig:set>
+        <padig:set string="Henry Marie Brackenridge and Family Papers">pitt_collection.103</padig:set>
+        <padig:set string="Historic Pittsburgh Book Collection">pitt_collection.241</padig:set>
+        <padig:set string="Historical Society of Upper St. Clair Collection">pitt_collection.50</padig:set>
+        <padig:set string="Hotel Schenley Register">pitt_collection.175</padig:set>
+        <padig:set string="Howard Etzel Photograph Collection">pitt_collection.310</padig:set>
+        <padig:set string="Hugh Henry Brackenridge and Andrew Watson Papers">pitt_collection.21</padig:set>
+        <padig:set string="Irene Kaufmann Settlement Photographs">pitt_collection.51</padig:set>
+        <padig:set string="Irish Centre of Pittsburgh Records">pitt_collection.172</padig:set>
+        <padig:set string="Iroquois Land Deed">pitt_collection.114</padig:set>
+        <padig:set string="Isaac and Samuel Miller Farm Account Book">pitt_collection.273</padig:set>
+        <padig:set string="James Benney Photographs">pitt_collection.52</padig:set>
+        <padig:set string="James Veech Copybook of the General William Irvine Papers">pitt_collection.22</padig:set>
+        <padig:set string="Jewish Sports Hall of Fame of Western Pennsylvania Photographs">pitt_collection.54</padig:set>
+        <padig:set string="Joel B. Levinson Photographs">pitt_collection.305</padig:set>
+        <padig:set string="John Gates Photographs">pitt_collection.55</padig:set>
+        <padig:set string="John M. Tate, Jr. Collection of Notes, Pictures and Documents relating to the Harmony Society">pitt_collection.203</padig:set>
+        <padig:set string="John Woodruff Scrapbooks">pitt_collection.184</padig:set>
+        <padig:set string="Jonathan Forman Papers">pitt_collection.23</padig:set>
+        <padig:set string="Jones &amp; Laughlin Steel Corporation Photographs">pitt_collection.56</padig:set>
+        <padig:set string="Juniata Crossings House Records">pitt_collection.303</padig:set>
+        <padig:set string="Kaufmann's Department Store Photographs">pitt_collection.318</padig:set>
+        <padig:set string="Ken Kobus Collection">pitt_collection.57</padig:set>
+        <padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
+        <padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
+        <padig:set string="March of the Pittsburgh Blues Copybook">pitt_collection.98</padig:set>
         <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
-		<padig:set string="Mary Elinor Lazenby Papers">pitt_collection.275</padig:set>
-		<padig:set string="Mary Roberts Rinehart Papers">pitt_collection.185</padig:set>
-		<padig:set string="Max A. Lauffer Papers">pitt_collection.197</padig:set>
-		<padig:set string="McConway and Torely Company Records">pitt_collection.322</padig:set>
-		<padig:set string="McFarland-Hall-Beck Families Papers">pitt_collection.201</padig:set>
-		<padig:set string="Mellon Bank Records">pitt_collection.287</padig:set>
-		<padig:set string="Mesta Machine Company Photographs">pitt_collection.60</padig:set>
-		<padig:set string="Monongahela Navigation Company Copybook">pitt_collection.24</padig:set>
-		<padig:set string="Monongahela Railway Company Photographs">pitt_collection.61</padig:set>
-		<padig:set string="Monroeville Historical Society Collection">pitt_collection.62</padig:set>
-		<padig:set string="Montefiore Hospital Photographs">pitt_collection.86</padig:set>
-		<padig:set string="Mrs. Hanlin's Diary">pitt_collection.204</padig:set>
-		<padig:set string="National Council of Jewish Women (NCJW), Pittsburgh Section, Records">pitt_collection.110</padig:set>
-		<padig:set string="Northern Liberties Bridge Company Ledger">pitt_collection.63</padig:set>
-		<padig:set string="Northland Historical Image Collection">pitt_collection.64</padig:set>
-		<padig:set string="Oakmont Historical Image Collection">pitt_collection.65</padig:set>
-		<padig:set string="Ohio Company Papers">pitt_collection.25</padig:set>
-		<padig:set string="Oliver M. Kaufmann Photograph Collection of the Irene Kaufmann Settlement">pitt_collection.66</padig:set>
-		<padig:set string="Otto's Suburban Dairy Photographs">pitt_collection.67</padig:set>
-		<padig:set string="PPG Industries Records">pitt_collection.291</padig:set>
-		<padig:set string="Paul Lawrence Peeler Papers and Photographs">pitt_collection.315</padig:set>
-		<padig:set string="Paul Slantis Photographs">pitt_collection.68</padig:set>
-		<padig:set string="Pennsylvania Railroad Photographs">pitt_collection.69</padig:set>
-		<padig:set string="Pitcairn Historical Society Image Collection">pitt_collection.70</padig:set>
-		<padig:set string="Pittsburgh Bureau of Building Inspection Photographs">pitt_collection.155</padig:set>
-		<padig:set string="Pittsburgh Census Tract Maps and Data">pitt_collection.329</padig:set>
-		<padig:set string="Pittsburgh City Photographer Collection">pitt_collection.72</padig:set>
-		<padig:set string="Pittsburgh Photographic Library Collection">pitt_collection.317</padig:set>
-		<padig:set string="Pittsburgh Prints from the Collection of Wesley Pickard">pitt_collection.73</padig:set>
-		<padig:set string="Pittsburgh Public Schools Photographs">pitt_collection.74</padig:set>
-		<padig:set string="Pittsburgh Railways Company Records">pitt_collection.75</padig:set>
-		<padig:set string="Pittsburgh Symphony Orchestra Posters">pitt_collection.150</padig:set>
-		<padig:set string="Pittsburgh Theatre">pitt_collection.10</padig:set>
-		<padig:set string="Pittsburgh Waste Book and Fort Pitt Trading Post Papers">pitt_collection.99</padig:set>
-		<padig:set string="Pittsburgh and Lake Erie Railroad Company Records">pitt_collection.71</padig:set>
-		<padig:set string="Pittsburgh, Fort Wayne, and Chicago Railway Company Photographs">pitt_collection.76</padig:set>
-		<padig:set string="Point Park University Archives">pitt_collection.77</padig:set>
-		<padig:set string="Progress Photographs: William Penn Hotel">pitt_collection.78</padig:set>
-		<padig:set string="Rachel Carson Collection">pitt_collection.238</padig:set>
-		<padig:set string="Railroad Stock Certificate Collection">pitt_collection.250</padig:set>
-		<padig:set string="Richard E. Rauh Photographs">pitt_collection.87</padig:set>
-		<padig:set string="Robert G. Pflaum Photograph Collection">pitt_collection.147</padig:set>
-		<padig:set string="Robert McKnight Diaries">pitt_collection.26</padig:set>
-		<padig:set string="Robert Stobo Papers">pitt_collection.27</padig:set>
-		<padig:set string="Rodef Shalom Congregation Photographs">pitt_collection.79</padig:set>
-		<padig:set string="Rolling Rock Training Camp Ledger">pitt_collection.28</padig:set>
-		<padig:set string="Russell H. Heffley Photographs">pitt_collection.148</padig:set>
-		<padig:set string="Rust Engineering Company Records">pitt_collection.80</padig:set>
-		<padig:set string="Samuel A. Musgrave Photographs">pitt_collection.289</padig:set>
-		<padig:set string="Schnabel Company Photographs">pitt_collection.313</padig:set>
-		<padig:set string="Seder Family Photographs">pitt_collection.81</padig:set>
-		<padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
-		<padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
-		<padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
-		<padig:set string="Teenie Harris Photographs">pitt_collection.85</padig:set>
-		<padig:set string="The Bulletin, Pittsburg Bulletin, and The Bulletin Index">pitt_collection.324</padig:set>
-		<padig:set string="Thomas Mellon Galey Photographs">pitt_collection.321</padig:set>
-		<padig:set string="Thomas Mellon and William B. Negley Day Book">pitt_collection.29</padig:set>
-		<padig:set string="Trimble Company Records">pitt_collection.88</padig:set>
-		<padig:set string="Union Arcade Building Photographs">pitt_collection.90</padig:set>
-		<padig:set string="Union Switch &amp; Signal Strike Photographs">pitt_collection.91</padig:set>
-		<padig:set string="United Electrical, Radio, and Machine Workers of America (UE) Records">pitt_collection.89</padig:set>
-		<padig:set string="United Jewish Federation of Greater Pittsburgh Photographs">pitt_collection.162</padig:set>
-		<padig:set string="United States Army Corps of Engineers, Pittsburgh District Glass Plate Negatives">pitt_collection.316</padig:set>
-		<padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
-		<padig:set string="University of Pittsburgh Historic Photographs">pitt_collection.109</padig:set>
-		<padig:set string="Urban League of Pittsburgh Records">pitt_collection.92</padig:set>
-		<padig:set string="W.B. Austen Diary">pitt_collection.261</padig:set>
-		<padig:set string="Walter J. Teskey Photographs">pitt_collection.93</padig:set>
-		<padig:set string="Warrantee Atlas of Allegheny County, Pennsylvania">pitt_collection.293</padig:set>
-		<padig:set string="Western Pennsylvania Hospital and Dixmont Hospital Records">pitt_collection.195</padig:set>
-		<padig:set string="Western Pennsylvania Maps">pitt_collection.97</padig:set>
-		<padig:set string="Westinghouse Electric Corporation Photographs">pitt_collection.283</padig:set>
-		<padig:set string="William G. Beal Moving Images">pitt_collection.296</padig:set>
-		<padig:set string="William H. Wolf Photographs">pitt_collection.94</padig:set>
-		<padig:set string="William J. Gaughan Collection">pitt_collection.95</padig:set>
-		<padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
-		<padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
-		<padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
+        <padig:set string="Mary Elinor Lazenby Papers">pitt_collection.275</padig:set>
+        <padig:set string="Mary Roberts Rinehart Papers">pitt_collection.185</padig:set>
+        <padig:set string="Max A. Lauffer Papers">pitt_collection.197</padig:set>
+        <padig:set string="McConway and Torely Company Records">pitt_collection.322</padig:set>
+        <padig:set string="McFarland-Hall-Beck Families Papers">pitt_collection.201</padig:set>
+        <padig:set string="Mellon Bank Records">pitt_collection.287</padig:set>
+        <padig:set string="Mesta Machine Company Photographs">pitt_collection.60</padig:set>
+        <padig:set string="Monongahela Navigation Company Copybook">pitt_collection.24</padig:set>
+        <padig:set string="Monongahela Railway Company Photographs">pitt_collection.61</padig:set>
+        <padig:set string="Monroeville Historical Society Collection">pitt_collection.62</padig:set>
+        <padig:set string="Montefiore Hospital Photographs">pitt_collection.86</padig:set>
+        <padig:set string="Mrs. Hanlin's Diary">pitt_collection.204</padig:set>
+        <padig:set string="National Council of Jewish Women (NCJW), Pittsburgh Section, Records">pitt_collection.110</padig:set>
+        <padig:set string="Northern Liberties Bridge Company Ledger">pitt_collection.63</padig:set>
+        <padig:set string="Northland Historical Image Collection">pitt_collection.64</padig:set>
+        <padig:set string="Oakmont Historical Image Collection">pitt_collection.65</padig:set>
+        <padig:set string="Ohio Company Papers">pitt_collection.25</padig:set>
+        <padig:set string="Oliver M. Kaufmann Photograph Collection of the Irene Kaufmann Settlement">pitt_collection.66</padig:set>
+        <padig:set string="Otto's Suburban Dairy Photographs">pitt_collection.67</padig:set>
+        <padig:set string="PPG Industries Records">pitt_collection.291</padig:set>
+        <padig:set string="Paul Lawrence Peeler Papers and Photographs">pitt_collection.315</padig:set>
+        <padig:set string="Paul Slantis Photographs">pitt_collection.68</padig:set>
+        <padig:set string="Pennsylvania Railroad Photographs">pitt_collection.69</padig:set>
+        <padig:set string="Pitcairn Historical Society Image Collection">pitt_collection.70</padig:set>
+        <padig:set string="Pittsburgh Bureau of Building Inspection Photographs">pitt_collection.155</padig:set>
+        <padig:set string="Pittsburgh Census Tract Maps and Data">pitt_collection.329</padig:set>
+        <padig:set string="Pittsburgh City Photographer Collection">pitt_collection.72</padig:set>
+        <padig:set string="Pittsburgh Photographic Library Collection">pitt_collection.317</padig:set>
+        <padig:set string="Pittsburgh Prints from the Collection of Wesley Pickard">pitt_collection.73</padig:set>
+        <padig:set string="Pittsburgh Public Schools Photographs">pitt_collection.74</padig:set>
+        <padig:set string="Pittsburgh Railways Company Records">pitt_collection.75</padig:set>
+        <padig:set string="Pittsburgh Symphony Orchestra Posters">pitt_collection.150</padig:set>
+        <padig:set string="Pittsburgh Theatre">pitt_collection.10</padig:set>
+        <padig:set string="Pittsburgh Waste Book and Fort Pitt Trading Post Papers">pitt_collection.99</padig:set>
+        <padig:set string="Pittsburgh and Lake Erie Railroad Company Records">pitt_collection.71</padig:set>
+        <padig:set string="Pittsburgh, Fort Wayne, and Chicago Railway Company Photographs">pitt_collection.76</padig:set>
+        <padig:set string="Point Park University Archives">pitt_collection.77</padig:set>
+        <padig:set string="Progress Photographs: William Penn Hotel">pitt_collection.78</padig:set>
+        <padig:set string="Rachel Carson Collection">pitt_collection.238</padig:set>
+        <padig:set string="Railroad Stock Certificate Collection">pitt_collection.250</padig:set>
+        <padig:set string="Richard E. Rauh Photographs">pitt_collection.87</padig:set>
+        <padig:set string="Robert G. Pflaum Photograph Collection">pitt_collection.147</padig:set>
+        <padig:set string="Robert McKnight Diaries">pitt_collection.26</padig:set>
+        <padig:set string="Robert Stobo Papers">pitt_collection.27</padig:set>
+        <padig:set string="Rodef Shalom Congregation Photographs">pitt_collection.79</padig:set>
+        <padig:set string="Rolling Rock Training Camp Ledger">pitt_collection.28</padig:set>
+        <padig:set string="Russell H. Heffley Photographs">pitt_collection.148</padig:set>
+        <padig:set string="Rust Engineering Company Records">pitt_collection.80</padig:set>
+        <padig:set string="Samuel A. Musgrave Photographs">pitt_collection.289</padig:set>
+        <padig:set string="Schnabel Company Photographs">pitt_collection.313</padig:set>
+        <padig:set string="Seder Family Photographs">pitt_collection.81</padig:set>
+        <padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
+        <padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
+        <padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
+        <padig:set string="Teenie Harris Photographs">pitt_collection.85</padig:set>
+        <padig:set string="The Bulletin, Pittsburg Bulletin, and The Bulletin Index">pitt_collection.324</padig:set>
+        <padig:set string="Thomas Mellon Galey Photographs">pitt_collection.321</padig:set>
+        <padig:set string="Thomas Mellon and William B. Negley Day Book">pitt_collection.29</padig:set>
+        <padig:set string="Trimble Company Records">pitt_collection.88</padig:set>
+        <padig:set string="Union Arcade Building Photographs">pitt_collection.90</padig:set>
+        <padig:set string="Union Switch &amp; Signal Strike Photographs">pitt_collection.91</padig:set>
+        <padig:set string="United Electrical, Radio, and Machine Workers of America (UE) Records">pitt_collection.89</padig:set>
+        <padig:set string="United Jewish Federation of Greater Pittsburgh Photographs">pitt_collection.162</padig:set>
+        <padig:set string="United States Army Corps of Engineers, Pittsburgh District Glass Plate Negatives">pitt_collection.316</padig:set>
+        <padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
+        <padig:set string="University of Pittsburgh Historic Photographs">pitt_collection.109</padig:set>
+        <padig:set string="Urban League of Pittsburgh Records">pitt_collection.92</padig:set>
+        <padig:set string="W.B. Austen Diary">pitt_collection.261</padig:set>
+        <padig:set string="Walter J. Teskey Photographs">pitt_collection.93</padig:set>
+        <padig:set string="Warrantee Atlas of Allegheny County, Pennsylvania">pitt_collection.293</padig:set>
+        <padig:set string="Western Pennsylvania Hospital and Dixmont Hospital Records">pitt_collection.195</padig:set>
+        <padig:set string="Western Pennsylvania Maps">pitt_collection.97</padig:set>
+        <padig:set string="Westinghouse Electric Corporation Photographs">pitt_collection.283</padig:set>
+        <padig:set string="William G. Beal Moving Images">pitt_collection.296</padig:set>
+        <padig:set string="William H. Wolf Photographs">pitt_collection.94</padig:set>
+        <padig:set string="William J. Gaughan Collection">pitt_collection.95</padig:set>
+        <padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
+        <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
+        <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
         <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
@@ -428,8 +428,8 @@
         <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
         <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
         <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
-	<padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
-    	<padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
+        <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
+        <padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
         <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
         <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
         <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
@@ -479,29 +479,29 @@
         <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
         <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
         <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
-	<padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
-	<padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
-	<padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
-	<padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
-	<padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
-	<padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
-  <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
-  <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
-  <padig:set string="La Salle Alumnus">publication:alumnus</padig:set>
-  <padig:set string="La Salle Basketball Media Guides">publication:basketball_media_guides</padig:set>
-  <padig:set string="Campus News">publication:campus_news</padig:set>
-  <padig:set string="College Budget">publication:college_budget</padig:set>
-  <padig:set string="La Salle Commencement Programs">publication:commencement_programs</padig:set>
-  <padig:set string="La Salle Course Catalogs">publication:course_catalogs</padig:set>
-  <padig:set string="Local History Essays">publication:essays</padig:set>
-  <padig:set string="Explorer (Yearbooks)">publication:explorer</padig:set>
-  <padig:set string="La Salle Alumni Association Explorer News">publication:explorer_news</padig:set>
-  <padig:set string="Faculty Bulletins">publication:faculty_bulletins</padig:set>
-  <padig:set string="Faculty and Staff Directories">publication:faculty_staff_directories</padig:set>
-  <padig:set string="La Salle Magazine">publication:lasalle_magazine</padig:set>
-  <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
-  <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
-  <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
+        <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
+        <padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
+        <padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
+        <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
+        <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
+        <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
+        <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
+        <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
+        <padig:set string="La Salle Alumnus">publication:alumnus</padig:set>
+        <padig:set string="La Salle Basketball Media Guides">publication:basketball_media_guides</padig:set>
+        <padig:set string="Campus News">publication:campus_news</padig:set>
+        <padig:set string="College Budget">publication:college_budget</padig:set>
+        <padig:set string="La Salle Commencement Programs">publication:commencement_programs</padig:set>
+        <padig:set string="La Salle Course Catalogs">publication:course_catalogs</padig:set>
+        <padig:set string="Local History Essays">publication:essays</padig:set>
+        <padig:set string="Explorer (Yearbooks)">publication:explorer</padig:set>
+        <padig:set string="La Salle Alumni Association Explorer News">publication:explorer_news</padig:set>
+        <padig:set string="Faculty Bulletins">publication:faculty_bulletins</padig:set>
+        <padig:set string="Faculty and Staff Directories">publication:faculty_staff_directories</padig:set>
+        <padig:set string="La Salle Magazine">publication:lasalle_magazine</padig:set>
+        <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
+        <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
+        <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->
