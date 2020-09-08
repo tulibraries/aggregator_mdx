@@ -128,6 +128,8 @@
         <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
         <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
         <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
+        <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/catalog/oai</padig:url>
+        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/oai2</padig:url>
     </xsl:param>
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
