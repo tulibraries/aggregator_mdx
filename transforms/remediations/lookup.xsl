@@ -128,6 +128,8 @@
         <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
         <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
         <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
+        <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/catalog/oai</padig:url>
+        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/oai2</padig:url>
     </xsl:param>
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -182,6 +184,26 @@
 
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
+        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette Newspaper archive</padig:set>
+        <padig:set string="Lafayette Magazine Archive">collection:Lafayette Magazine archive</padig:set>
+        <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
+        <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
+        <padig:set string="F&amp;M Founding Documents Collection">scholars-square_hist--founding-docs</padig:set>
+        <padig:set string="College and Academy Photograph Albums Collection">scholars-square_hist--photo-albums</padig:set>
+        <padig:set string="College Photographs Collection">scholars-square_hist--photos</padig:set>
+        <padig:set string="Student Newspapers Collection">scholars-square_hist--newspapers</padig:set>
+        <padig:set string="College Yearbooks Collection">scholars-square_hist--yearbooks</padig:set>
+        <padig:set string="World War I Diaries Collection">scholars-square_hist--wwi</padig:set>
+        <padig:set string="Lancaster Atlases and Pictorial Works Collection">scholars-square_sc--atlases</padig:set>
+        <padig:set string="Bill Hutson Slides Collection">scholars-square_sc--hutson</padig:set>
+        <padig:set string="Lancaster Journal">scholars-square_sc--lancaster--journal--collection</padig:set>
+        <padig:set string="Muench Family Papers Collection">scholars-square_sc--muench</padig:set>
+        <padig:set string="Pennsylvania Dutchman (Periodical) Collection">scholars-square_sc--pa-dutchman-collection</padig:set>
+        <padig:set string="Pennsylvania German Broadside Collection">scholars-square_sc--pa-german-broadside</padig:set>
+        <padig:set string="Pennsylvania German Fraktur Collection">scholars-square_sc--pa-german-fraktur</padig:set>
+        <padig:set string="Reynolds Family Papers Collection">scholars-square_sc--reynolds</padig:set>
+        <padig:set string="Wohlsen Construction Company Marketing and Advertising Collection">scholars-square_sc--wohlsen-marketing</padig:set>
+        <padig:set string="Wohlsen Construction Company Photograph Collection">scholars-square_sc--wohlsen-photos</padig:set>
         <padig:set string="Classic Osteopathic Medical Works">publication:classic_med_works</padig:set>
         <padig:set string="Commencements">publication:commencements</padig:set>
         <padig:set string="Herald of Osteopathy">publication:herald_of_osteopathy</padig:set>
