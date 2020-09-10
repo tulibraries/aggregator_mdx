@@ -573,7 +573,7 @@
         <padig:set string="Abraham Jacobi letters relating to Mount Sinai Hospital, New York">51</padig:set>
     </xsl:param>
 
-    <!-- lookup table for Omeka setSpec, Media Historic Archives and Commission -->
+    <!-- lookup table for Omeka setSpec, Media Historic Archives Commission -->
     <xsl:param name="mhacSetSpecList">
         <padig:set string="Stephen H. Appleton Photograph Collection">1</padig:set>
     </xsl:param>
