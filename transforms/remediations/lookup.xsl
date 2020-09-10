@@ -526,6 +526,79 @@
         <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
     </xsl:param>
 
+    <!-- lookup table for Omeka setSpec, College of Physicians of Philadelphia -->
+    <xsl:param name="cppSetSpecList">
+        <padig:set string="Feldtbůch der Wundtartzney, Hans von Gersdorff">9</padig:set>
+        <padig:set string="Philadelphia General Hospital (Blockley Almshouse)">10</padig:set>
+        <padig:set string="Camp life in the Rockies, H.C. Wood">11</padig:set>
+        <padig:set string="The Anatomy of a Horse, George Stubbs">12</padig:set>
+        <padig:set string="A Philadelphia Physician Encounters the Great War">13</padig:set>
+        <padig:set string="De humani corporis fabrica, Vesalius">14</padig:set>
+        <padig:set string="Anatomia del cavallo, Carlo Ruini">15</padig:set>
+        <padig:set string="Tabulae sceleti et musculorum corporis humani, Bernhard Siegfried Albinus">16</padig:set>
+        <padig:set string="Gray's Anatomy">17</padig:set>
+        <padig:set string="Surgical Anatomy, Joseph Maclise">18</padig:set>
+        <padig:set string="The Morbid Anatomy, Matthew Baillie">19</padig:set>
+        <padig:set string="The anatomy of the human gravid uterus, William Hunter">20</padig:set>
+        <padig:set string="Anatomia humani corporis, Govard Bidloo">21</padig:set>
+        <padig:set string="Osteographia, William Cheselden">22</padig:set>
+        <padig:set string="Historia de la composicion del cuerpo humano, Juan Valverde de Amusco">23</padig:set>
+        <padig:set string="Tabulae anatomicae, Bartolomeo Eustachi">24</padig:set>
+        <padig:set string="The Surgeons Mate, Portraits">25</padig:set>
+        <padig:set string="Clysmatica nova, blood transfusions">26</padig:set>
+        <padig:set string="Prognosticatio eximii doctoris, Theophrasti Paracelsi">27</padig:set>
+        <padig:set string="Medical Botany, William Woodville">28</padig:set>
+        <padig:set string="Buch der Cirurgia, Hieronymus Brunschwig">29</padig:set>
+        <padig:set string="Cognitione de muscoli del corpo humano, Carlo Cesi">30</padig:set>
+        <padig:set string="Traité théorique et pratique des maladies de la peau, Pierre-François Olive Rayer">31</padig:set>
+        <padig:set string="Illustrations of Medical Botany, Joseph Carson">32</padig:set>
+        <padig:set string="Thesaurus Anatomicus, Frederik Ruysch">33</padig:set>
+        <padig:set string="Theatrum anatomicum, Caspar Bauhin">34</padig:set>
+        <padig:set string="Le Grant Herbier">35</padig:set>
+        <padig:set string="Orang-outang, Edward Tyson">36</padig:set>
+        <padig:set string="Pestbuch, Hieronymus Brunschwig">37</padig:set>
+        <padig:set string="Anatomia per uso dei pittori e scultori, Giuseppe del Medico">38</padig:set>
+        <padig:set string="Anthropogenie, oder, Entwickelungsgeschichte des menschen, Ernst Haeckel">39</padig:set>
+        <padig:set string="A System of Human Anatomy, Harrison Allen">40</padig:set>
+        <padig:set string="Traité d'anatomie humaine (1891), Leo Testut">41</padig:set>
+        <padig:set string="Anatomy of the Humane Body, William Cheselden">42</padig:set>
+        <padig:set string="American Medical Botany, Jacob Bigelow">43</padig:set>
+        <padig:set string="Isagogae breves, Jacopo Berengario da Carpi">44</padig:set>
+        <padig:set string="Tabulae VII uteri mulieris gravidae cum iam parturiret mortuae, Bernhard Siegfried Albinus">45</padig:set>
+        <padig:set string="The Battle Creek Sanitarium">46</padig:set>
+        <padig:set string="George Outerbridge">47</padig:set>
+        <padig:set string="Bad Medicine">48</padig:set>
+        <padig:set string="[Ophthalmodouleia], das ist Augendienst, Georg Bartisch">49</padig:set>
+        <padig:set string="Traité des Maladies des Yeux, Antoine Pierre Demours">50</padig:set>
+        <padig:set string="Abraham Jacobi letters relating to Mount Sinai Hospital, New York">51</padig:set>
+    </xsl:param>
+
+    <!-- lookup table for Omeka setSpec, Media Historic Archives Commission -->
+    <xsl:param name="mhacSetSpecList">
+        <padig:set string="Stephen H. Appleton Photograph Collection">1</padig:set>
+    </xsl:param>
+
+    <!-- lookup table for Omeka setSpec, Susquehanna University -->
+    <xsl:param name="susquSetSpecList">
+        <padig:set string="Susquehanna University History Harvest">1</padig:set>
+        <padig:set string="Snyder County History Harvest">2</padig:set>
+        <padig:set string="Milton History Harvest">3</padig:set>
+        <padig:set string="Sunbury History Harvest">4</padig:set>
+        <padig:set string="Northumberland County Historical Society Harvest">7</padig:set>
+        <padig:set string="Susquehanna University History Harvest 2017">8</padig:set>
+        <padig:set string="Selinsgrove History Harvest">10</padig:set>
+    </xsl:param>
+
+    <!-- lookup table for Omeka setSpec, Catholic Historical Research Center -->
+    <xsl:param name="chrcSetSpecList">
+        <padig:set string="Graphics">1</padig:set>
+        <padig:set string="Photographs">2</padig:set>
+        <padig:set string="Church Buildings">3</padig:set>
+        <padig:set string="Pamphlets">4</padig:set>
+        <padig:set string="The American Celt">5</padig:set>
+        <padig:set string="Correspondence">8</padig:set>
+    </xsl:param>
+
     <!-- lookup table for dplah language transforms -->
     <xsl:param name="dplahLang">
         <padig:language string="Afar">aar</padig:language>
