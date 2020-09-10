@@ -184,6 +184,28 @@
 
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
+        <padig:set string="I Remain">letters</padig:set>
+        <padig:set string="Postcards">postal</padig:set>
+        <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
+        <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
+        <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
+        <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
+        <padig:set string="View Books">p16069coll32</padig:set>
+        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
+        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
+        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
+        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
+        <padig:set string="Brandywine College">p16069coll27</padig:set>
+        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll22</padig:set>
+        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
+        <padig:set string="Course Catalogs - Widener University -  Graduate -- 1979-Present">p16069coll26</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
+        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
+        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
+        <padig:set string="de Pasquale collection">myfirst</padig:set>
+        <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
+        <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
+        <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
         <padig:set string="Lafayette Newspaper Archive">collection:Lafayette Newspaper archive</padig:set>
         <padig:set string="Lafayette Magazine Archive">collection:Lafayette Magazine archive</padig:set>
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
@@ -598,7 +620,7 @@
         <padig:set string="The American Celt">5</padig:set>
         <padig:set string="Correspondence">8</padig:set>
     </xsl:param>
-
+    
     <!-- lookup table for dplah language transforms -->
     <xsl:param name="dplahLang">
         <padig:language string="Afar">aar</padig:language>
