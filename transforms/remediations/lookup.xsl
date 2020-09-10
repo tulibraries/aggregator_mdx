@@ -128,6 +128,8 @@
 		<padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
 		<padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
 		<padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
+        <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/catalog/oai</padig:url>
+        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/oai2</padig:url>
     </xsl:param>
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -182,6 +184,48 @@
 
 	<!-- lookup table for setSpec -->
     <xsl:param name="setSpecList">
+        <padig:set string="I Remain">letters</padig:set>
+        <padig:set string="Postcards">postal</padig:set>
+        <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
+        <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
+        <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
+        <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
+        <padig:set string="View Books">p16069coll32</padig:set>
+        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
+        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
+        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
+        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
+        <padig:set string="Brandywine College">p16069coll27</padig:set>
+        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll22</padig:set>
+        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
+        <padig:set string="Course Catalogs - Widener University -  Graduate -- 1979-Present">p16069coll26</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
+        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
+        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
+        <padig:set string="de Pasquale collection">myfirst</padig:set>
+        <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
+        <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
+        <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
+        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette Newspaper archive</padig:set>
+        <padig:set string="Lafayette Magazine Archive">collection:Lafayette Magazine archive</padig:set>
+        <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
+        <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
+        <padig:set string="F&amp;M Founding Documents Collection">scholars-square_hist--founding-docs</padig:set>
+        <padig:set string="College and Academy Photograph Albums Collection">scholars-square_hist--photo-albums</padig:set>
+        <padig:set string="College Photographs Collection">scholars-square_hist--photos</padig:set>
+        <padig:set string="Student Newspapers Collection">scholars-square_hist--newspapers</padig:set>
+        <padig:set string="College Yearbooks Collection">scholars-square_hist--yearbooks</padig:set>
+        <padig:set string="World War I Diaries Collection">scholars-square_hist--wwi</padig:set>
+        <padig:set string="Lancaster Atlases and Pictorial Works Collection">scholars-square_sc--atlases</padig:set>
+        <padig:set string="Bill Hutson Slides Collection">scholars-square_sc--hutson</padig:set>
+        <padig:set string="Lancaster Journal">scholars-square_sc--lancaster--journal--collection</padig:set>
+        <padig:set string="Muench Family Papers Collection">scholars-square_sc--muench</padig:set>
+        <padig:set string="Pennsylvania Dutchman (Periodical) Collection">scholars-square_sc--pa-dutchman-collection</padig:set>
+        <padig:set string="Pennsylvania German Broadside Collection">scholars-square_sc--pa-german-broadside</padig:set>
+        <padig:set string="Pennsylvania German Fraktur Collection">scholars-square_sc--pa-german-fraktur</padig:set>
+        <padig:set string="Reynolds Family Papers Collection">scholars-square_sc--reynolds</padig:set>
+        <padig:set string="Wohlsen Construction Company Marketing and Advertising Collection">scholars-square_sc--wohlsen-marketing</padig:set>
+        <padig:set string="Wohlsen Construction Company Photograph Collection">scholars-square_sc--wohlsen-photos</padig:set>
         <padig:set string="Classic Osteopathic Medical Works">publication:classic_med_works</padig:set>
         <padig:set string="Commencements">publication:commencements</padig:set>
         <padig:set string="Herald of Osteopathy">publication:herald_of_osteopathy</padig:set>
@@ -502,6 +546,79 @@
   <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
   <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
   <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
+    </xsl:param>
+    
+    <!-- lookup table for Omeka setSpec, College of Physicians of Philadelphia -->
+    <xsl:param name="cppSetSpecList">
+        <padig:set string="Feldtbůch der Wundtartzney, Hans von Gersdorff">9</padig:set>
+        <padig:set string="Philadelphia General Hospital (Blockley Almshouse)">10</padig:set>
+        <padig:set string="Camp life in the Rockies, H.C. Wood">11</padig:set>
+        <padig:set string="The Anatomy of a Horse, George Stubbs">12</padig:set>
+        <padig:set string="A Philadelphia Physician Encounters the Great War">13</padig:set>
+        <padig:set string="De humani corporis fabrica, Vesalius">14</padig:set>
+        <padig:set string="Anatomia del cavallo, Carlo Ruini">15</padig:set>
+        <padig:set string="Tabulae sceleti et musculorum corporis humani, Bernhard Siegfried Albinus">16</padig:set>
+        <padig:set string="Gray's Anatomy">17</padig:set>
+        <padig:set string="Surgical Anatomy, Joseph Maclise">18</padig:set>
+        <padig:set string="The Morbid Anatomy, Matthew Baillie">19</padig:set>
+        <padig:set string="The anatomy of the human gravid uterus, William Hunter">20</padig:set>
+        <padig:set string="Anatomia humani corporis, Govard Bidloo">21</padig:set>
+        <padig:set string="Osteographia, William Cheselden">22</padig:set>
+        <padig:set string="Historia de la composicion del cuerpo humano, Juan Valverde de Amusco">23</padig:set>
+        <padig:set string="Tabulae anatomicae, Bartolomeo Eustachi">24</padig:set>
+        <padig:set string="The Surgeons Mate, Portraits">25</padig:set>
+        <padig:set string="Clysmatica nova, blood transfusions">26</padig:set>
+        <padig:set string="Prognosticatio eximii doctoris, Theophrasti Paracelsi">27</padig:set>
+        <padig:set string="Medical Botany, William Woodville">28</padig:set>
+        <padig:set string="Buch der Cirurgia, Hieronymus Brunschwig">29</padig:set>
+        <padig:set string="Cognitione de muscoli del corpo humano, Carlo Cesi">30</padig:set>
+        <padig:set string="Traité théorique et pratique des maladies de la peau, Pierre-François Olive Rayer">31</padig:set>
+        <padig:set string="Illustrations of Medical Botany, Joseph Carson">32</padig:set>
+        <padig:set string="Thesaurus Anatomicus, Frederik Ruysch">33</padig:set>
+        <padig:set string="Theatrum anatomicum, Caspar Bauhin">34</padig:set>
+        <padig:set string="Le Grant Herbier">35</padig:set>
+        <padig:set string="Orang-outang, Edward Tyson">36</padig:set>
+        <padig:set string="Pestbuch, Hieronymus Brunschwig">37</padig:set>
+        <padig:set string="Anatomia per uso dei pittori e scultori, Giuseppe del Medico">38</padig:set>
+        <padig:set string="Anthropogenie, oder, Entwickelungsgeschichte des menschen, Ernst Haeckel">39</padig:set>
+        <padig:set string="A System of Human Anatomy, Harrison Allen">40</padig:set>
+        <padig:set string="Traité d'anatomie humaine (1891), Leo Testut">41</padig:set>
+        <padig:set string="Anatomy of the Humane Body, William Cheselden">42</padig:set>
+        <padig:set string="American Medical Botany, Jacob Bigelow">43</padig:set>
+        <padig:set string="Isagogae breves, Jacopo Berengario da Carpi">44</padig:set>
+        <padig:set string="Tabulae VII uteri mulieris gravidae cum iam parturiret mortuae, Bernhard Siegfried Albinus">45</padig:set>
+        <padig:set string="The Battle Creek Sanitarium">46</padig:set>
+        <padig:set string="George Outerbridge">47</padig:set>
+        <padig:set string="Bad Medicine">48</padig:set>
+        <padig:set string="[Ophthalmodouleia], das ist Augendienst, Georg Bartisch">49</padig:set>
+        <padig:set string="Traité des Maladies des Yeux, Antoine Pierre Demours">50</padig:set>
+        <padig:set string="Abraham Jacobi letters relating to Mount Sinai Hospital, New York">51</padig:set>
+    </xsl:param>
+    
+    <!-- lookup table for Omeka setSpec, Media Historic Archives Commission -->
+    <xsl:param name="mhacSetSpecList">
+        <padig:set string="Stephen H. Appleton Photograph Collection">1</padig:set>
+    </xsl:param>
+    
+    <!-- lookup table for Omeka setSpec, Susquehanna University -->
+    <xsl:param name="susquSetSpecList">
+        <padig:set string="Susquehanna University History Harvest">1</padig:set>
+        <padig:set string="Snyder County History Harvest">2</padig:set>
+        <padig:set string="Milton History Harvest">3</padig:set>
+        <padig:set string="Sunbury History Harvest">4</padig:set>
+        <padig:set string="Northumberland County Historical Society Harvest">7</padig:set>
+        <padig:set string="Susquehanna University History Harvest 2017">8</padig:set>
+        <padig:set string="Selinsgrove History Harvest">10</padig:set>
+    </xsl:param>
+    
+    <!-- lookup table for Omeka setSpec, Catholic Historical Research Center -->
+    <xsl:param name="chrcSetSpecList">
+        <padig:set string="Graphics">1</padig:set>
+        <padig:set string="Photographs">2</padig:set>
+        <padig:set string="Church Buildings">3</padig:set>
+        <padig:set string="Pamphlets">4</padig:set>
+        <padig:set string="The American Celt">5</padig:set>
+        <padig:set string="Correspondence">8</padig:set>
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->
