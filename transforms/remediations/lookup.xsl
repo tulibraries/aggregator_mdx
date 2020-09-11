@@ -290,6 +290,7 @@
         <padig:set string="Bill Green Photographs">pitt_collection.328</padig:set>
         <padig:set string="Birmingham United Church of Christ Records">pitt_collection.187</padig:set>
         <padig:set string="Blind and Vision Rehabilitation Services of Pittsburgh">pitt_collection.308</padig:set>
+        <padig:set string="Bob Nelkin Collection of ACC-PARC Records">pitt_collection.341</padig:set>
         <padig:set string="Breathe Pennsylvania Records">pitt_collection.309</padig:set>
         <padig:set string="Bruce Drisbach-American Steel &amp; Wire Company Photographs">pitt_collection.35</padig:set>
         <padig:set string="Bryce Brothers and Lenox Incorporated Glass Records">pitt_collection.285</padig:set>
