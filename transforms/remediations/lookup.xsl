@@ -393,6 +393,7 @@
         <padig:set string="Oliver M. Kaufmann Photograph Collection of the Irene Kaufmann Settlement">pitt_collection.66</padig:set>
         <padig:set string="Otto's Suburban Dairy Photographs">pitt_collection.67</padig:set>
         <padig:set string="PPG Industries Records">pitt_collection.291</padig:set>
+        <padig:set string="Patricia Clapp Papers">pitt_collection.339</padig:set>
         <padig:set string="Paul Lawrence Peeler Papers and Photographs">pitt_collection.315</padig:set>
         <padig:set string="Paul Slantis Photographs">pitt_collection.68</padig:set>
         <padig:set string="Pennsylvania Railroad Photographs">pitt_collection.69</padig:set>
@@ -424,6 +425,7 @@
         <padig:set string="Samuel A. Musgrave Photographs">pitt_collection.289</padig:set>
         <padig:set string="Schnabel Company Photographs">pitt_collection.313</padig:set>
         <padig:set string="Seder Family Photographs">pitt_collection.81</padig:set>
+        <padig:set string="Shadyside Hospital Records">pitt_collection.334</padig:set>
         <padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
         <padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
         <padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
