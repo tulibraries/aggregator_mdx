@@ -128,18 +128,18 @@
         <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
         <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
         <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
-        <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/catalog/oai</padig:url>
-        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/oai2</padig:url>
+        <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/</padig:url>
+        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
     </xsl:param>
 
 	<!-- lookup table for Intermediate Providers/OAI base URLs -->
-	<xsl:param name="oaiUrlInt">
-	    <padig:url string="Keystone Library Network" code="KLN">http://cdm17189.contentdm.oclc.org/</padig:url>
-	    <padig:url string="Keystone Library Network" code="KLN">http://digital.klnpa.org/</padig:url>
-	    <padig:url string="Lackawanna Valley Digital Archives" code="LVDA">http://content.lackawannadigitalarchives.org/</padig:url>
-      <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
-      <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
-	</xsl:param>
+    <xsl:param name="oaiUrlInt">
+        <padig:url string="Keystone Library Network" code="KLN">http://cdm17189.contentdm.oclc.org/</padig:url>
+        <padig:url string="Keystone Library Network" code="KLN">http://digital.klnpa.org/</padig:url>
+        <padig:url string="Lackawanna Valley Digital Archives" code="LVDA">http://content.lackawannadigitalarchives.org/</padig:url>
+        <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
+        <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
+    </xsl:param>
 
     <!-- lookup table for Contributing Institutions with Intermediate Providers -->
     <xsl:param name="ContInt">
