@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:digital.fandm.edu:scholars-square_7405</identifier>
+      <datestamp>2019-09-17T18:30:56Z</datestamp>
+      <setSpec>scholars-square_hist--yearbooks</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:title>Franklin and Marshall College Yearbook (1917)</dc:title>
+        <dc:title>The Oriflamme Volume XXXIII</dc:title>
+        <dc:creator>Franklin and Marshall College</dc:creator>
+        <dc:contributor>Test contributor</dc:contributor>
+        <dc:coverage>Test spatial</dc:coverage>
+        <dc:source>Test source</dc:source>
+        <dc:relation>Test relation</dc:relation>
+        <dc:format>jpg</dc:format>
+        <dc:subject>Yearbooks</dc:subject>
+        <dc:description>1916</dc:description>
+        <dc:description>Published by the Junior Class of Franklin and Marshall College, Lancaster, Pa. 1916</dc:description>
+        <dc:publisher>Franklin and Marshall College</dc:publisher>
+        <dc:date>1916</dc:date>
+        <dc:type>Text</dc:type>
+        <dc:identifier>scholars-square:7405</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:rights>Permitted Uses: This digital file is posted publicly for non-profit educational use only. All other uses are prohibited. Copyright Franklin and Marshall College, Lancaster, PA</dc:rights>
+        <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+        <dc:identifier.thumbnail>https://digital.fandm.edu/islandora/object/scholars-square%3A7405/datastream/TN/view/Franklin%20and%20Marshall%20College%20Yearbook%20%281917%29.jpg</dc:identifier.thumbnail>
+        <identifier>https://digital.fandm.edu/object/scholars-square7405</identifier>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
