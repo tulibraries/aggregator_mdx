@@ -129,6 +129,7 @@
         <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
         <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
         <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/</padig:url>
+        <padig:url string="Lafayette College" code="LAF">http://hdl.handle.net/10385/</padig:url>
         <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
     </xsl:param>
 
@@ -206,8 +207,8 @@
         <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
         <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
         <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
-        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette Newspaper archive</padig:set>
-        <padig:set string="Lafayette Magazine Archive">collection:Lafayette Magazine archive</padig:set>
+        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
+        <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
         <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
         <padig:set string="F&amp;M Founding Documents Collection">scholars-square_hist--founding-docs</padig:set>
