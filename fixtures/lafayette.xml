@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-09-15T15:12:19Z</responseDate>
+    <request>https://ldr.lafayette.edu</request>
+    <ListRecords>
+    <record  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.openarchives.org/OAI/2.0/">
+        <header>
+            <identifier>oai:ldr:5138jd87r</identifier>
+            <datestamp>2020-04-08T04:09:27Z</datestamp>
+            <setSpec>collection:Lafayette_Newspaper_archive</setSpec>
+        </header>
+        <metadata>
+            <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                <dc:date>1952-03-28</dc:date>
+                <dc:description>A digital archive of the Lafayette College student newspaper (Easton, Pennsylvania).</dc:description>
+                <dc:format>application/pdf</dc:format>
+                <dc:identifier>5138jd87r</dc:identifier>
+                <dc:identifier>http://hdl.handle.net/10385/5138jd87r</dc:identifier>
+                <dc:identifier>https://ldr.lafayette.edu/downloads/fq977t78v?file=thumbnail</dc:identifier>
+                <dc:publisher>Lafayette College</dc:publisher>
+                <dc:rights>http://creativecommons.org/publicdomain/mark/1.0/</dc:rights>
+                <dc:title>The Lafayette - March 28, 1952</dc:title>
+                <dc:type>Periodical</dc:type>
+            </oai_dc:dc>
+        </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>
