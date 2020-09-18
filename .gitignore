@@ -4,4 +4,4 @@ xspec
 # Ignore Mac system files
 .DS_store
 # Ignore html files generated from xspec testing in Oxygen
-.html
+*.html
