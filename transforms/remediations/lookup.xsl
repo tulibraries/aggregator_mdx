@@ -240,6 +240,7 @@
         <padig:set string="Pennsylvania Folklife Magazine Indexes">publication:pafolklifemagindex</padig:set>
         <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
         <padig:set string="Yost History of Ursinus College">publication:yosthistory</padig:set>
+        <padig:set string="Ursinus College Fraktur Collection">publication:ursinus_fraktur</padig:set>
         <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
         <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
         <padig:set string="American Red Cross Base Hospital No. 38">publication:base_hospital_no_38</padig:set>
