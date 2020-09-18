@@ -34,17 +34,17 @@
            <xsl:call-template name="rights"/>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- preview -->
     <xsl:template match="dc:description[last()]">
         <xsl:if test="normalize-space(.)!='' and ends-with(.,'thumbnail.jpg')">
         <xsl:call-template name="preview"/>
         </xsl:if>
     </xsl:template>
-    
-    
+
+
     <!-- templates -->
-    
+
     <!-- isPartOf -->
     <xsl:template name="isPartOf">
     <xsl:if test="normalize-space(lower-case(.))">
@@ -56,7 +56,7 @@
         </xsl:if>
     </xsl:if>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template name="dataProvider">
         <xsl:variable name="baseURL" select="normalize-space('https://digitalcommons.pcom.edu/')"/>
@@ -66,30 +66,30 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- identifier -->
     <xsl:template name="identifier">
-        <xsl:variable name="objID" select="substring-after(.,'https://digitalcommons.pcom.edu/')"/>
+        <xsl:variable name="dobjID" select="replace(substring-after(.,'https://digitalcommons.pcom.edu/'),'[^a-zA-Z0-9\-:_]','_')"/>
         <xsl:variable name="baseURL" select="normalize-space('https://digitalcommons.pcom.edu/')"/>
         <xsl:element name="dcterms:identifier">
-            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$objID"/>
+            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$dobjID"/>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- isShownAt -->
     <xsl:template name="isShownAt">
         <xsl:element name="edm:isShownAt">
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- preview -->
     <xsl:template name="preview">
         <xsl:element name="edm:preview">
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- rights -->
     <xsl:template name="rights">
         <xsl:element name="dcterms:rights">

@@ -491,7 +491,7 @@
 <!-- Identifier (map) -->
      <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
        <x:context href="../../fixtures/pcom.xml"/>
-       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:PCOM-yearbooks/105'"/>
+       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:PCOM-yearbooks_105'"/>
      </x:scenario>
 
 <!-- Data Provider (generate and map) -->
