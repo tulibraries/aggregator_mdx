@@ -68,10 +68,10 @@
     
     <!-- identifier -->
     <xsl:template name="identifier">
-        <xsl:variable name="objID" select="substring-after(.,'https://digitalcommons.ursinus.edu/')"/>
+        <xsl:variable name="dobjID" select="replace(substring-after(.,'https://digitalcommons.ursinus.edu/'),'[^a-zA-Z0-9\-:_]','_')"/>
         <xsl:variable name="baseURL" select="normalize-space('https://digitalcommons.ursinus.edu/')"/>
         <xsl:element name="dcterms:identifier">
-            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$objID"/>
+            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$dobjID"/>
         </xsl:element>
     </xsl:template>
     

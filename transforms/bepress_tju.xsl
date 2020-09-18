@@ -68,7 +68,7 @@
     
     <!-- identifier -->
     <xsl:template name="identifier">
-        <xsl:variable name="objID" select="substring-after(.,'https://jdc.jefferson.edu/')"/>
+        <xsl:variable name="objID" select="replace(substring-after(.,'https://jdc.jefferson.edu/'),'[^a-zA-Z0-9-:]','_')"/>
         <xsl:variable name="baseURL" select="normalize-space('http://jdc.jefferson.edu/')"/>
         <xsl:element name="dcterms:identifier">
             <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$objID"/>
