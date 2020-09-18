@@ -3,3 +3,5 @@ result.log
 xspec
 # Ignore Mac system files
 .DS_store
+# Ignore html files generated from testing in Oxygen
+*.html
