@@ -603,6 +603,7 @@
     <!-- lookup table for Omeka setSpec, Media Historic Archives Commission -->
     <xsl:param name="mhacSetSpecList">
         <padig:set string="Stephen H. Appleton Photograph Collection">1</padig:set>
+        <padig:set string="I. Frank Lees Photograph Collection">2</padig:set>
     </xsl:param>
 
     <!-- lookup table for Omeka setSpec, Susquehanna University -->
