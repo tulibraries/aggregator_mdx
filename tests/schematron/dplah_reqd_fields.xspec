@@ -1109,6 +1109,16 @@
       <x:expect-assert id="NoHarvestPattern22"/>
     </x:scenario>
   </x:scenario>
+  <x:scenario label="MHACNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveCIgeneric.xml"/>
+      <x:expect-assert id="NoHarvestPattern23"/>
+    </x:scenario>
+  </x:scenario>
 <!--    <x:scenario label="CHRCNoHarvestPattern">
     <x:scenario label="valid">
       <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
