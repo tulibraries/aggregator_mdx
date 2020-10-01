@@ -176,20 +176,29 @@
     <rule context="oai_dc:dc/edm:dataProvider">
       <assert test="normalize-space(.)!='Philadelphia College of Osteopathic Medicine'" id="NoHarvestPattern19" role="error">Records from Philadelphia College of Osteopathic Medicine are invalid</assert>
     </rule>
-  </pattern><pattern id="URSNoHarvestPattern">
+  </pattern>
+  <pattern id="URSNoHarvestPattern">
     <title>Check to invalidate Ursinus College</title>
     <rule context="oai_dc:dc/edm:dataProvider">
       <assert test="normalize-space(.)!='Ursinus College'" id="NoHarvestPattern20" role="error">Records from Ursinus College are invalid</assert>
     </rule>
-  </pattern><pattern id="LASALLENoHarvestPattern">
+  </pattern>
+  <pattern id="LASALLENoHarvestPattern">
     <title>Check to invalidate La Salle University</title>
     <rule context="oai_dc:dc/edm:dataProvider">
       <assert test="normalize-space(.)!='La Salle University'" id="NoHarvestPattern21" role="error">Records from La Salle University are invalid</assert>
     </rule>
-  </pattern><pattern id="TJUNoHarvestPattern">
+  </pattern>
+  <pattern id="TJUNoHarvestPattern">
     <title>Check to invalidate Thomas Jefferson University</title>
     <rule context="oai_dc:dc/edm:dataProvider">
       <assert test="normalize-space(.)!='Thomas Jefferson University'" id="NoHarvestPattern22" role="error">Records from Thomas Jefferson University are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="MHACNoHarvestPattern">
+    <title>Check to invalidate Media Historic Archives Commission</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Media Historic Archives Commission'" id="NoHarvestPattern23" role="error">Records from Media Historic Archives Commission are invalid</assert>
     </rule>
   </pattern>
 <!-- 
