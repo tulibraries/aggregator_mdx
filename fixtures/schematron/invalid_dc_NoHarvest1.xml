@@ -6,9 +6,10 @@
     </oai:header>
     <oai:metadata>
         <dc:dc xmlns:dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:title>Egyptian hieroglyphics, from public monuments extracted from Denon</dc:title>
             <dc:creator>Winthrop, James, 1752-1821</dc:creator>
             <dc:subject>Astronomy, Egyptian</dc:subject>
-            <dc:description>Back cover. Physical description: Paper, 28 leaves, bound. Part of the book collection bequeathed to Allegheny College by James Winthrop in 1822. The manuscript Minutes relating to Chinese astronomy is bound with the manuscript Egyptian hieroglyphics, from public monuments extracted from Denon</dc:description>
+            <dc:description>pdcp_noharvest; Back cover. Physical description: Paper, 28 leaves, bound. Part of the book collection bequeathed to Allegheny College by James Winthrop in 1822. The manuscript Minutes relating to Chinese astronomy is bound with the manuscript Egyptian hieroglyphics, from public monuments extracted from Denon</dc:description>
             <dc:contributor>Owen, William</dc:contributor>
             <dc:format>Paper</dc:format>
             <dc:format>Manuscripts and Manuscript Illuminations</dc:format>
