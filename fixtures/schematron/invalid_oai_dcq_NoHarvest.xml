@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-09-30T16:58:51Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_dcq" set="2">https://www.mediahistoricarchives.org/oai</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:www.mediahistoricarchives.org:5560</identifier>
+                <datestamp>2020-03-19T20:03:21Z</datestamp>
+                <setSpec>2</setSpec>
+            </header>
+            <metadata xmlns:oai_dcq="http://www.bl.uk/namespaces/oai_dcq/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+                <oai_dcq:qualifieddc xmlns:oai_dcq="http://www.bl.uk/namespaces/oai_dcq/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bl.uk/namespaces/oai_dcq/ http://www.bl.uk/schemas/qualifieddc/oai_dcq.xsd">
+                    <dc:title>Way House</dc:title>
+                    <dc:subject>Dwellings</dc:subject>
+                    <dc:description>Copy of original photo; source not noted</dc:description>
+                    <dc:date>1919</dc:date>
+                    <dc:type>Image</dc:type>
+                    <dc:format>image/tiff</dc:format>
+                    <dcterms:extent>Print, Photographic</dcterms:extent>
+                    <dc:identifier>P-01004</dc:identifier>
+                    <dc:identifier>https://www.mediahistoricarchives.org/items/show/5560</dc:identifier>
+                    <dcterms:hasFormat>https://www.mediahistoricarchives.org/files/thumbnails/0df2b31c7057d69cbd4990cfd85a5f83.jpg</dcterms:hasFormat>
+                    <dcterms:isPartOf>I. Frank Lees Collection</dcterms:isPartOf>
+                    <dcterms:spatial>11-13 W. State St., Media (Pa.)</dcterms:spatial>
+                    <dc:coverage>pdcp_noharvest</dc:coverage>
+                    <dc:rights>https://www.mediahistoricarchives.org/rightsandrepro</dc:rights>
+                    <dc:rights>http://rightsstatements.org/vocab/</dc:rights>
+                    <dc:rights>Test rights</dc:rights>
+                </oai_dcq:qualifieddc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../validations/ingest_oai_validation.sch">
+  <x:scenario label="RequiredElementsPattern">
+    <x:scenario label="valid: oai_dc:dc title">
+      <x:context href="../../fixtures/schematron/valid_oai_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: oai_qdc:qualifieddc title">
+      <x:context href="../../fixtures/schematron/valid_oai_qdc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: dc:dc title">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: oai_dcq:qualifieddc title">
+      <x:context href="../../fixtures/schematron/valid_oai_dcq.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid: oai_dc missing title">
+      <x:context href="../../fixtures/schematron/invalid_missing_oai_dc_title.xml"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
+    <x:scenario label="not valid: oai_qdc missing title">
+      <x:context href="../../fixtures/schematron/invalid_missing_oai_qdc_title.xml"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
+    <x:scenario label="not valid: dc title">
+      <x:context href="../../fixtures/schematron/invalid_missing_dc_title.xml"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
+    <x:scenario label="not valid: oai_dcq title">
+      <x:context href="../../fixtures/schematron/invalid_missing_oai_dcq_title.xml"/>
+      <x:expect-assert id="Required1"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="NoHarvest">
+    <x:scenario label="valid: oai_dc:dc no harvest">
+      <x:context href="../../fixtures/schematron/valid_oai_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: oai_qdc:qualifieddc no harvest">
+      <x:context href="../../fixtures/schematron/valid_oai_qdc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: dc:dc no harvest">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: oai_dcq:qualifieddc no harvest">
+      <x:context href="../../fixtures/schematron/valid_oai_dcq.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+
+    <!-- oai_dc -->
+    <x:scenario label="oai_dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dc_NoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dc_NoHarvest1.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dc_RelNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dc_RightsNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+
+    <!-- oai_qdc -->
+    <x:scenario label="oai_qdc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_qdc_NoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_qdc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_qdc_NoHarvest1.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_qdc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_qdc_RelNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_qdc not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_qdc_RightsNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+
+    <!-- oai_dcq -->
+    <x:scenario label="oai_dcq not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dcq_NoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_dcq not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dcq_NoHarvest1.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_dcq not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dcq_RelNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="oai_dcq not valid">
+      <x:context href="../../fixtures/schematron/invalid_oai_dcq_RightsNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+
+    <!-- dc -->
+    <x:scenario label="dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_dc_NoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_dc_NoHarvest1.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_dc_RelNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+    <x:scenario label="dc not valid">
+      <x:context href="../../fixtures/schematron/invalid_dc_RightsNoHarvest.xml"/>
+      <x:expect-assert id="NoHarvest1"/>
+    </x:scenario>
+  </x:scenario>
+</x:description>

@@ -6,6 +6,7 @@
     </oai:header>
     <oai:metadata>
         <dc:dc xmlns:dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:title>Egyptian hieroglyphics, from public monuments extracted from Denon</dc:title>
             <dc:creator>Winthrop, James, 1752-1821</dc:creator>
             <dc:subject>Astronomy, Egyptian</dc:subject>
             <dc:description>Back cover. Physical description: Paper, 28 leaves, bound. Part of the book collection bequeathed to Allegheny College by James Winthrop in 1822. The manuscript Minutes relating to Chinese astronomy is bound with the manuscript Egyptian hieroglyphics, from public monuments extracted from Denon</dc:description>
@@ -18,6 +19,7 @@
             <dc:identifier>ADLImageViewer:http://library.artstor.org/#/ssid/23076139</dc:identifier>
             <dc:identifier>SSCImageViewer:http://library.artstor.org/#/ssid/23076139</dc:identifier>
             <dc:language>English</dc:language>
+            <dc:relation>pdcp_noharvest</dc:relation>
             <dc:coverage>Meadville, Pennsylvania</dc:coverage>
             <dc:coverage>United States</dc:coverage>
             <dc:rights>The book is in the public domain.&#160; Allegheny College holds the right to the image and reproduction.&#160; The images that are provided here are for non-profit,&#160;educational use only. For all other uses please contact Special Collections, Pelletier Library, Allegheny College. Access to this collection is made possible by support from the Council of Independent Colleges and The Andrew W. Mellon Foundation.</dc:rights>
