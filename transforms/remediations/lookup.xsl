@@ -37,69 +37,6 @@
         <padig:fformat string="audio/mp3">mp3</padig:fformat>
     </xsl:param>
 
-    <!-- lookup table for recommended DCMI Types terms/URIs -->
-    <xsl:param name="dcmiType">
-        <padig:type string="collection" uri="http://purl.org/dc/dcmitype/Collection">collection</padig:type>
-        <padig:type string="dataset" uri="http://purl.org/dc/dcmitype/Dataset">dataset</padig:type>
-        <padig:type string="event" uri="http://purl.org/dc/dcmitype/Event">event</padig:type>
-        <padig:type string="image" uri="http://purl.org/dc/dcmitype/Image">image</padig:type>
-        <padig:type string="moving image" uri="http://purl.org/dc/dcmitype/MovingImage">moving image</padig:type>
-        <padig:type string="physical object" uri="http://purl.org/dc/dcmitype/PhysicalObject">physical object</padig:type>
-        <padig:type string="physical object" uri="http://purl.org/dc/dcmitype/PhysicalObject">physicalobject</padig:type>
-        <padig:type string="service" uri="http://purl.org/dc/dcmitype/Service">service</padig:type>
-        <padig:type string="software" uri="http://purl.org/dc/dcmitype/Software">software</padig:type>
-        <padig:type string="sound" uri="http://purl.org/dc/dcmitype/Sound">sound</padig:type>
-        <padig:type string="still image" uri="http://purl.org/dc/dcmitype/StillImage">still image</padig:type>
-        <padig:type string="text" uri="http://purl.org/dc/dcmitype/Text">text</padig:type>
-    </xsl:param>
-
-    <!-- lookup table for recommended Getty AAT subtype terms/URIs -->
-    <xsl:param name="gettySubtype">
-        <padig:type string="advertisements" uri="http://vocab.getty.edu/aat/300193993">advertisements</padig:type>
-        <padig:type string="architectural documents" uri="http://vocab.getty.edu/aat/300343615">architectural documents</padig:type>
-        <padig:type string="books" uri="http://vocab.getty.edu/aat/300028051">books</padig:type>
-        <padig:type string="broadsides (notices)" uri="http://vocab.getty.edu/aat/300026739">broadsides</padig:type>
-        <padig:type string="business records" uri="http://vocab.getty.edu/aat/300141693">business records</padig:type>
-        <padig:type string="cartographic materials" uri="http://vocab.getty.edu/aat/300028052">cartographic materials</padig:type>
-        <padig:type string="census records" uri="http://vocab.getty.edu/aat/300026832">census records</padig:type>
-        <padig:type string="ceramic ware (visual works)" uri="http://vocab.getty.edu/aat/300386879">certamic ware</padig:type>
-        <padig:type string="comics (documents)" uri="http://vocab.getty.edu/aat/300015635">comics</padig:type>
-        <padig:type string="correspondence" uri="http://vocab.getty.edu/aat/300026877">correspondence</padig:type>
-        <padig:type string="costume (mode of fashion)" uri="http://vocab.getty.edu/aat/300209275">costume</padig:type>
-        <padig:type string="cultural artifacts" uri="http://vocab.getty.edu/aat/300265421">cultural artifacts</padig:type>
-        <padig:type string="decorative arts" uri="http://vocab.getty.edu/aat/300054168">decorative arts</padig:type>
-        <padig:type string="drawings (visual works)" uri="http://vocab.getty.edu/aat/300033973">drawings</padig:type>
-        <padig:type string="furniture" uri="http://vocab.getty.edu/aat/300037680">furniture</padig:type>
-        <padig:type string="genealogies (histories)" uri="http://vocab.getty.edu/aat/300027015">genealogies</padig:type>
-        <padig:type string="government records" uri="http://vocab.getty.edu/aat/300027777">government records</padig:type>
-        <padig:type string="graphic arts" uri="http://vocab.getty.edu/aat/300264849">graphic arts</padig:type>
-        <padig:type string="interviews" uri="http://vocab.getty.edu/aat/300026392">interviews</padig:type>
-        <padig:type string="jewelry" uri="http://vocab.getty.edu/aat/300209286">jewelry</padig:type>
-        <padig:type string="motion pictures (visual works)" uri="http://vocab.getty.edu/aat/300136900">motion pictures</padig:type>
-        <padig:type string="natural history specimens" uri="http://vocab.getty.edu/aat/300379591">natural history specimens</padig:type>
-        <padig:type string="newspapers" uri="http://vocab.getty.edu/aat/300026656">newspapers</padig:type>
-        <padig:type string="oral histories (document genre)" uri="http://vocab.getty.edu/aat/300202595">oral histories</padig:type>
-        <padig:type string="painting (visual works)" uri="http://vocab.getty.edu/aat/300033618">paiting</padig:type>
-        <padig:type string="pamphlets" uri="http://vocab.getty.edu/aat/300220572">pamphlets</padig:type>
-        <padig:type string="performances (creative events)" uri="http://vocab.getty.edu/aat/300069200">performances</padig:type>
-        <padig:type string="periodicals" uri="http://vocab.getty.edu/aat/300026657">periodicals</padig:type>
-        <padig:type string="photographs" uri="http://vocab.getty.edu/aat/300046300">photographs</padig:type>
-        <padig:type string="postcards" uri="http://vocab.getty.edu/aat/300026816">postcards</padig:type>
-        <padig:type string="posters" uri="http://vocab.getty.edu/aat/300027221">posters</padig:type>
-        <padig:type string="prints (visual works)" uri="http://vocab.getty.edu/aat/300041273">color prints</padig:type>
-        <padig:type string="prints (visual works)" uri="http://vocab.getty.edu/aat/300041273">prints</padig:type>
-        <padig:type string="reference sources" uri="http://vocab.getty.edu/aat/300163404">reference sources</padig:type>
-        <padig:type string="sculpture (visual works)" uri="http://vocab.getty.edu/aat/300047090">sculpture</padig:type>
-        <padig:type string="sermons" uri="http://vocab.getty.edu/aat/300026669">sermons</padig:type>
-        <padig:type string="sheet music" uri="http://vocab.getty.edu/aat/300026430">sheet music</padig:type>
-        <padig:type string="sound recording" uri="http://vocab.getty.edu/aat/300028633">sound recording</padig:type>
-        <padig:type string="textiles (visual works)" uri="http://vocab.getty.edu/aat/300014063">textiles</padig:type>
-        <padig:type string="theses" uri="http://vocab.getty.edu/aat/300028028">theses</padig:type>
-        <padig:type string="tools" uri="http://vocab.getty.edu/aat/300024841">tools</padig:type>
-        <padig:type string="weapons" uri="http://vocab.getty.edu/aat/300036926">weapons</padig:type>
-        <padig:type string="yearbooks" uri="http://vocab.getty.edu/aat/300026646">yearbooks</padig:type>
-    </xsl:param>
-
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">
         <padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
@@ -124,6 +61,7 @@
         <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
         <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="COLPHYS">http://www.cppdigitallibrary.org/</padig:url>
+        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="COLPHYS">https://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
         <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
         <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
@@ -134,7 +72,7 @@
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
     </xsl:param>
 
-	<!-- lookup table for Intermediate Providers/OAI base URLs -->
+    <!-- lookup table for Intermediate Providers/OAI base URLs -->
     <xsl:param name="oaiUrlInt">
         <padig:url string="Keystone Library Network" code="KLN">http://cdm17189.contentdm.oclc.org/</padig:url>
         <padig:url string="Keystone Library Network" code="KLN">http://digital.klnpa.org/</padig:url>
@@ -143,7 +81,7 @@
         <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
     </xsl:param>
 
-    <!-- lookup table for Contributing Institutions with Intermediate Providers -->
+    <!-- lookup table for Contributing Institutions with Intermediate Providers by setSpec -->
     <xsl:param name="ContInt">
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmmap</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmphoto</padig:cont>
@@ -184,7 +122,7 @@
         <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="FHL">SC_Broad</padig:cont>
     </xsl:param>
 
-	<!-- lookup table for setSpec -->
+    <!-- lookup table for collection name by setSpec -->
     <xsl:param name="setSpecList">
         <padig:set string="I Remain">letters</padig:set>
         <padig:set string="Postcards">postal</padig:set>
@@ -552,6 +490,211 @@
         <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
         <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
         <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
+    </xsl:param>
+    
+    <!-- lookup table collection name by identifier -->
+    <xsl:param name="recordIDList">
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:479</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:480</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:481</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:483</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:484</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:485</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:486</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:487</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:488</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:489</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:490</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:491</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:492</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:493</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:495</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:496</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:497</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:498</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:499</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:500</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:501</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:502</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:503</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:506</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:507</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:510</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:511</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:512</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:514</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:515</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:516</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:517</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:518</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:519</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:520</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:521</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:522</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:523</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:524</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:525</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:526</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:527</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:528</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:531</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:532</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:533</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:534</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:535</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:643</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:644</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:645</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:646</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:647</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:648</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:649</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:650</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:651</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:653</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:654</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:655</padig:recordID>
+        <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:656</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:253</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:254</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:255</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:256</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:257</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:258</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:259</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:260</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:261</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:262</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:263</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:264</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:265</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:267</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:268</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:269</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:270</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:271</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:272</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:273</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:274</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:275</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:276</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:277</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:278</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:279</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:280</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:281</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:282</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:283</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:284</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:285</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:288</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:289</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:291</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:292</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:330</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:331</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:332</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:333</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:334</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:335</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:336</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:337</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:340</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:341</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:342</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:343</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:344</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:345</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:346</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:347</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:349</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:350</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:351</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:352</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:355</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:357</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:359</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:360</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:361</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:362</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:363</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:364</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:365</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:411</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:414</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:415</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:416</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:417</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:418</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:419</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:420</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:421</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:422</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:423</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:424</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:425</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:426</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:427</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:428</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:429</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:430</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:431</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:432</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:433</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:434</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:436</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:536</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:538</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:541</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:542</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:543</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:544</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:598</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:625</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:626</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:627</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:628</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:629</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:630</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:631</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:632</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:633</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:634</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:635</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:636</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:637</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:638</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:639</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:640</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:641</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:642</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:760</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:761</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:762</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:763</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:764</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:765</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:766</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:768</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:770</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:771</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:772</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:773</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:774</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:775</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:776</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:777</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:778</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:779</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:780</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:781</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:782</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:783</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:784</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:821</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:822</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:823</padig:recordID>
+        <padig:recordID string="Milton History Harvest">oai:www.pahistoryharvest.com:824</padig:recordID>
     </xsl:param>
 
     <!-- lookup table for Omeka setSpec, College of Physicians of Philadelphia -->
@@ -1621,6 +1764,69 @@
       <padig:lexlanguage string="zul" uri="http://lexvo.org/id/iso639-3/zul">zul</padig:lexlanguage>
       <padig:lexlanguage string="zun" uri="http://lexvo.org/id/iso639-3/zun">zun</padig:lexlanguage>
       <padig:lexlanguage string="zza" uri="http://lexvo.org/id/iso639-3/zza">zza</padig:lexlanguage>
+    </xsl:param>
+
+    <!-- lookup table for recommended DCMI Types terms/URIs -->
+    <xsl:param name="dcmiType">
+        <padig:type string="collection" uri="http://purl.org/dc/dcmitype/Collection">collection</padig:type>
+        <padig:type string="dataset" uri="http://purl.org/dc/dcmitype/Dataset">dataset</padig:type>
+        <padig:type string="event" uri="http://purl.org/dc/dcmitype/Event">event</padig:type>
+        <padig:type string="image" uri="http://purl.org/dc/dcmitype/Image">image</padig:type>
+        <padig:type string="moving image" uri="http://purl.org/dc/dcmitype/MovingImage">moving image</padig:type>
+        <padig:type string="physical object" uri="http://purl.org/dc/dcmitype/PhysicalObject">physical object</padig:type>
+        <padig:type string="physical object" uri="http://purl.org/dc/dcmitype/PhysicalObject">physicalobject</padig:type>
+        <padig:type string="service" uri="http://purl.org/dc/dcmitype/Service">service</padig:type>
+        <padig:type string="software" uri="http://purl.org/dc/dcmitype/Software">software</padig:type>
+        <padig:type string="sound" uri="http://purl.org/dc/dcmitype/Sound">sound</padig:type>
+        <padig:type string="still image" uri="http://purl.org/dc/dcmitype/StillImage">still image</padig:type>
+        <padig:type string="text" uri="http://purl.org/dc/dcmitype/Text">text</padig:type>
+    </xsl:param>
+    
+    <!-- lookup table for recommended Getty AAT subtype terms/URIs -->
+    <xsl:param name="gettySubtype">
+        <padig:type string="advertisements" uri="http://vocab.getty.edu/aat/300193993">advertisements</padig:type>
+        <padig:type string="architectural documents" uri="http://vocab.getty.edu/aat/300343615">architectural documents</padig:type>
+        <padig:type string="books" uri="http://vocab.getty.edu/aat/300028051">books</padig:type>
+        <padig:type string="broadsides (notices)" uri="http://vocab.getty.edu/aat/300026739">broadsides</padig:type>
+        <padig:type string="business records" uri="http://vocab.getty.edu/aat/300141693">business records</padig:type>
+        <padig:type string="cartographic materials" uri="http://vocab.getty.edu/aat/300028052">cartographic materials</padig:type>
+        <padig:type string="census records" uri="http://vocab.getty.edu/aat/300026832">census records</padig:type>
+        <padig:type string="ceramic ware (visual works)" uri="http://vocab.getty.edu/aat/300386879">certamic ware</padig:type>
+        <padig:type string="comics (documents)" uri="http://vocab.getty.edu/aat/300015635">comics</padig:type>
+        <padig:type string="correspondence" uri="http://vocab.getty.edu/aat/300026877">correspondence</padig:type>
+        <padig:type string="costume (mode of fashion)" uri="http://vocab.getty.edu/aat/300209275">costume</padig:type>
+        <padig:type string="cultural artifacts" uri="http://vocab.getty.edu/aat/300265421">cultural artifacts</padig:type>
+        <padig:type string="decorative arts" uri="http://vocab.getty.edu/aat/300054168">decorative arts</padig:type>
+        <padig:type string="drawings (visual works)" uri="http://vocab.getty.edu/aat/300033973">drawings</padig:type>
+        <padig:type string="furniture" uri="http://vocab.getty.edu/aat/300037680">furniture</padig:type>
+        <padig:type string="genealogies (histories)" uri="http://vocab.getty.edu/aat/300027015">genealogies</padig:type>
+        <padig:type string="government records" uri="http://vocab.getty.edu/aat/300027777">government records</padig:type>
+        <padig:type string="graphic arts" uri="http://vocab.getty.edu/aat/300264849">graphic arts</padig:type>
+        <padig:type string="interviews" uri="http://vocab.getty.edu/aat/300026392">interviews</padig:type>
+        <padig:type string="jewelry" uri="http://vocab.getty.edu/aat/300209286">jewelry</padig:type>
+        <padig:type string="motion pictures (visual works)" uri="http://vocab.getty.edu/aat/300136900">motion pictures</padig:type>
+        <padig:type string="natural history specimens" uri="http://vocab.getty.edu/aat/300379591">natural history specimens</padig:type>
+        <padig:type string="newspapers" uri="http://vocab.getty.edu/aat/300026656">newspapers</padig:type>
+        <padig:type string="oral histories (document genre)" uri="http://vocab.getty.edu/aat/300202595">oral histories</padig:type>
+        <padig:type string="painting (visual works)" uri="http://vocab.getty.edu/aat/300033618">paiting</padig:type>
+        <padig:type string="pamphlets" uri="http://vocab.getty.edu/aat/300220572">pamphlets</padig:type>
+        <padig:type string="performances (creative events)" uri="http://vocab.getty.edu/aat/300069200">performances</padig:type>
+        <padig:type string="periodicals" uri="http://vocab.getty.edu/aat/300026657">periodicals</padig:type>
+        <padig:type string="photographs" uri="http://vocab.getty.edu/aat/300046300">photographs</padig:type>
+        <padig:type string="postcards" uri="http://vocab.getty.edu/aat/300026816">postcards</padig:type>
+        <padig:type string="posters" uri="http://vocab.getty.edu/aat/300027221">posters</padig:type>
+        <padig:type string="prints (visual works)" uri="http://vocab.getty.edu/aat/300041273">color prints</padig:type>
+        <padig:type string="prints (visual works)" uri="http://vocab.getty.edu/aat/300041273">prints</padig:type>
+        <padig:type string="reference sources" uri="http://vocab.getty.edu/aat/300163404">reference sources</padig:type>
+        <padig:type string="sculpture (visual works)" uri="http://vocab.getty.edu/aat/300047090">sculpture</padig:type>
+        <padig:type string="sermons" uri="http://vocab.getty.edu/aat/300026669">sermons</padig:type>
+        <padig:type string="sheet music" uri="http://vocab.getty.edu/aat/300026430">sheet music</padig:type>
+        <padig:type string="sound recording" uri="http://vocab.getty.edu/aat/300028633">sound recording</padig:type>
+        <padig:type string="textiles (visual works)" uri="http://vocab.getty.edu/aat/300014063">textiles</padig:type>
+        <padig:type string="theses" uri="http://vocab.getty.edu/aat/300028028">theses</padig:type>
+        <padig:type string="tools" uri="http://vocab.getty.edu/aat/300024841">tools</padig:type>
+        <padig:type string="weapons" uri="http://vocab.getty.edu/aat/300036926">weapons</padig:type>
+        <padig:type string="yearbooks" uri="http://vocab.getty.edu/aat/300026646">yearbooks</padig:type>
     </xsl:param>
 
     <!-- lookup table for Month strings to numbers -->
