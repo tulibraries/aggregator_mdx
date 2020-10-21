@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-10-08T19:38:19Z</responseDate>
+    <request verb="ListRecords" set="33" metadataPrefix="oai_dc">https://www.cppdigitallibrary.org/oai-pmh-repository</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:oai.cppdigitallibrary.org:1480</identifier>
+                <datestamp>2017-10-18T17:51:42Z</datestamp>
+                <setSpec>33</setSpec>
+            </header>
+            <metadata>
+                <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                    <dc:title>Three fetal skeletons with ova and placenta</dc:title>
+                    <dc:creator>Huyberts, Cornelis</dc:creator>
+                    <dc:creator>Ruysch, Frederik, 1638-1731</dc:creator>
+                    <dc:subject>Fetus--anatomy &amp; histology</dc:subject>
+                    <dc:subject>Skeleton</dc:subject>
+                    <dc:subject>Bone and Bones--embryology</dc:subject>
+                    <dc:subject>Ovum</dc:subject>
+                    <dc:subject>Placenta--anatomy &amp; histology</dc:subject>
+                    <dc:subject>Book Illustrations</dc:subject>
+                    <dc:description>Engraved by C. Huyberts from a specimen by Frederik Ruysch.</dc:description>
+                    <dc:description>Three fetal skeletons standing on pedestals. The first holds an unfertilized ovum in its right hand and 3 more ova of different sizes suspended by strings of hair in the left (fig.1); the second holds a fertilized ovum on a string in its right hand (fig. 2); the third holds a fertilized ovum opened up to show inside (fig. 3). With 2 placentas in isolation (fig. 4-5).</dc:description>
+                    <dc:description>Title supplied by cataloger.</dc:description>
+                    <dc:date>1705</dc:date>
+                    <dc:type>StillImage</dc:type>
+                    <dc:format>image/jpeg</dc:format>
+                    <dc:identifier>Af_37_v2.pam1.tab1</dc:identifier>
+                    <dc:identifier>https://www.cppdigitallibrary.org/items/show/1480</dc:identifier>
+                    <dc:identifier>https://www.cppdigitallibrary.org/files/original/623a8a03063d909d816411d6f99b3be1.jpg</dc:identifier>
+                    <dc:identifier>https://www.cppdigitallibrary.org/files/thumbnails/623a8a03063d909d816411d6f99b3be1.jpg</dc:identifier>
+                    <dc:source>Original image in: <a href="/items/browse?advanced%5B0%5D%5Belement_id%5D=48&amp;advanced%5B0%5D%5Btype%5D=contains&amp;advanced%5B0%5D%5Bterms%5D=Ruysch%2C+Frederik%2C+1638-1731.+Thesaurus+anatomicus&amp;submit_search=Search">Ruysch, Frederik, 1638-1731. Thesaurus anatomicus</a> decimus (Amstelaedami : Apud Janssonio-Waesbergios, 1717). <a href="https://cpp.ent.sirsi.net/client/en_US/library/search/results?qu=Thesaurus+Anatomicus%2C+Frederik+Ruysch&amp;te=" target="_blank">Af 37 v.2 Pam 5 (Historical Medical Library of The College of Physicians of Philadelphia)</a></dc:source>
+                    <dc:source><em>Thesaurus Anatomicus</em>, a 10-part work first published from 1701 to 1716, is a catalog of Frederik Ruysch's unusual anatomical collection. Illustrated with over 40 plates, engraved by Joseph Mulder and Cornelis Huyberts, Ruysch's collection contains odd assemblages of primarily human anatomical specimens, some of which he composed with the help of his daughter, the painter, Rachel Ruysch. In addition to the curiosities that he contributed to the science of anatomy, Ruysch also advanced techniques in dissection and embalming.</dc:source>
+                    <dc:language>lat</dc:language>
+                    <dc:language>dut</dc:language>
+                </oai_dc:dc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
