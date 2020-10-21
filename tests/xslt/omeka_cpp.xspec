@@ -14,51 +14,51 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    stylesheet="../../transforms/omeka_cop.xsl">
+    stylesheet="../../transforms/omeka_cpp.xsl">
 
 
 <!-- Institution specific checks -->
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-      <x:context href="../../fixtures/cop.xml"/>
+      <x:context href="../../fixtures/cpp.xml"/>
       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:COLPHYS-1480'"/>
     </x:scenario>
     
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:context href="../../fixtures/cop.xml"/>
+      <x:context href="../../fixtures/cpp.xml"/>
       <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Historical Medical Library of The College of Physicians of Philadelphia'"/>
     </x:scenario>
     
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-        <x:context href="../../fixtures/cop.xml"/>
+        <x:context href="../../fixtures/cpp.xml"/>
       <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://www.cppdigitallibrary.org/items/show/1480'"/>
     </x:scenario>
     
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-        <x:context href="../../fixtures/cop.xml"/>
+        <x:context href="../../fixtures/cpp.xml"/>
       <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://www.cppdigitallibrary.org/files/thumbnails/623a8a03063d909d816411d6f99b3be1.jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-        <x:context href="../../fixtures/cop.xml"/>
+        <x:context href="../../fixtures/cpp.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
           test="oai_dc:dc/dcterms:isPartOf = 'Thesaurus Anatomicus, Frederik Ruysch'"/>
     </x:scenario>
   
     <!-- rights; commented out generic rights crosswalk check below -->
     <x:scenario label="rights statements map, generate, and crosswalk">
-      <x:context href="../../fixtures/cop.xml"/>
+      <x:context href="../../fixtures/cpp.xml"/>
       <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/NoC-NC/1.0/'"></x:expect>
     </x:scenario>
       
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-        <x:context href="../../fixtures/cop.xml"/>
+        <x:context href="../../fixtures/cpp.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
