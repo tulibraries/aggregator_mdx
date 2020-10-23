@@ -124,30 +124,31 @@
 
     <!-- lookup table for collection name by setSpec -->
     <xsl:param name="setSpecList">
+        <!-- Lehigh -->
         <padig:set string="I Remain">letters</padig:set>
         <padig:set string="Postcards">postal</padig:set>
+        <!-- LaSalle CDM -->
         <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
         <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
         <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
-        <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
-        <padig:set string="View Books">p16069coll32</padig:set>
-        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
+        <!-- Widener -->
         <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
         <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
         <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
         <padig:set string="Brandywine College">p16069coll27</padig:set>
         <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll22</padig:set>
         <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
-        <padig:set string="Course Catalogs - Widener University -  Graduate -- 1979-Present">p16069coll26</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll26</padig:set>
         <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
         <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
         <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
-        <padig:set string="de Pasquale collection">myfirst</padig:set>
-        <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
-        <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
-        <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
+        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
+        <padig:set string="View Books">p16069coll32</padig:set>
+        <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
+        <!-- Lafayette -->
         <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
         <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
+        <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
         <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
         <padig:set string="F&amp;M Founding Documents Collection">scholars-square_hist--founding-docs</padig:set>
@@ -166,6 +167,7 @@
         <padig:set string="Reynolds Family Papers Collection">scholars-square_sc--reynolds</padig:set>
         <padig:set string="Wohlsen Construction Company Marketing and Advertising Collection">scholars-square_sc--wohlsen-marketing</padig:set>
         <padig:set string="Wohlsen Construction Company Photograph Collection">scholars-square_sc--wohlsen-photos</padig:set>
+        <!-- PCOM -->
         <padig:set string="Classic Osteopathic Medical Works">publication:classic_med_works</padig:set>
         <padig:set string="Commencements">publication:commencements</padig:set>
         <padig:set string="Herald of Osteopathy">publication:herald_of_osteopathy</padig:set>
@@ -174,12 +176,14 @@
         <padig:set string="Philadelphia Journal of Osteopathy">publication:phila_j_osteopathy</padig:set>
         <padig:set string="The Axone">publication:axone</padig:set>
         <padig:set string="Yearbooks">publication:yearbooks</padig:set>
+        <!-- Ursinus -->
         <padig:set string="The Dutchman / The Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
         <padig:set string="Pennsylvania Folklife Magazine">publication:pafolklifemag</padig:set>
         <padig:set string="Pennsylvania Folklife Magazine Indexes">publication:pafolklifemagindex</padig:set>
         <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
         <padig:set string="Yost History of Ursinus College">publication:yosthistory</padig:set>
         <padig:set string="Ursinus College Fraktur Collection">publication:ursinus_fraktur</padig:set>
+        <!-- TJU -->
         <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
         <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
         <padig:set string="American Red Cross Base Hospital No. 38">publication:base_hospital_no_38</padig:set>
@@ -210,11 +214,13 @@
         <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
         <padig:set string="Historical Photographs - Center City">publication:historical_photos</padig:set>
         <padig:set string="Historical Photographs - East Falls">publication:historical_photos_ef</padig:set>
+        <!-- Curtis -->
         <padig:set string="de Pasquale collection">myfirst</padig:set>
         <padig:set string="Curtis program books">p16667coll1</padig:set>
         <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
         <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
         <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
+        <!-- Historic Pittsburgh -->
         <padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
         <padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
         <padig:set string="African American Construction Workers of Pittsburgh Photographs">pitt_collection.176</padig:set>
@@ -395,6 +401,7 @@
         <padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
         <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
         <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
+        <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
         <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
@@ -413,16 +420,20 @@
         <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
         <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
         <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
+        <!-- Bloomsburg -->
         <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
         <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
         <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
         <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
+        <!-- Millersville -->
         <padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
         <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
+        <!-- Slippery Rock -->
         <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
         <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
         <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
         <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
+        <!-- Westchester -->
         <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
         <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
         <padig:set string="West Chester University Aralia Press">qwcaralia</padig:set>
@@ -439,8 +450,7 @@
         <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
         <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
         <padig:set string="West Chester University WPA Collection">wpa</padig:set>
-        <padig:set string="Lehigh Letters">letters</padig:set>
-        <padig:set string="Postcards">postal</padig:set>
+        <!-- Bryn Mawr -->
         <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
         <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
         <padig:set string="Bryn Mawr College News">BMC_collnew</padig:set>
@@ -450,29 +460,17 @@
         <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
         <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
         <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
+        <!-- Swarthaverford -->
         <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
         <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
-        <padig:set string="What's Up @ Widener">p16069coll20</padig:set>
-        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
-        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
-        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
-        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
-        <padig:set string="Brandywine College">p16069coll27</padig:set>
-        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll27</padig:set>
-        <padig:set string="View Books">p16069coll32</padig:set>
-        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
-        <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll24</padig:set>
-        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
-        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
-        <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
-        <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
-        <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
+        <!-- APS -->
         <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
         <padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
         <padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
         <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
         <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
         <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
+        <!-- LaSalle Bepress -->
         <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
         <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
         <padig:set string="La Salle Alumnus">publication:alumnus</padig:set>
