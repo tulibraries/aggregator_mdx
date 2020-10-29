@@ -489,7 +489,7 @@
         <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
         <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
     </xsl:param>
-    
+
     <!-- lookup table collection name by identifier -->
     <xsl:param name="recordIDList">
         <padig:recordID string="Sunbury History Harvest">oai:www.pahistoryharvest.com:479</padig:recordID>
@@ -697,6 +697,11 @@
 
     <!-- lookup table for Omeka setSpec, College of Physicians of Philadelphia -->
     <xsl:param name="cppSetSpecList">
+        <padig:set string="Images from Les Oeuvres d'Ambroise Paré">3</padig:set>
+        <padig:set string="Memento Mütter">4</padig:set>
+        <padig:set string="Radium in America">5</padig:set>
+        <padig:set string="Under the Influence of the Heavens">6</padig:set>
+        <padig:set string="Memento Mütter - Additional Images">8</padig:set>
         <padig:set string="Feldtbůch der Wundtartzney, Hans von Gersdorff">9</padig:set>
         <padig:set string="Philadelphia General Hospital (Blockley Almshouse)">10</padig:set>
         <padig:set string="Camp life in the Rockies, H.C. Wood">11</padig:set>
@@ -740,6 +745,7 @@
         <padig:set string="[Ophthalmodouleia], das ist Augendienst, Georg Bartisch">49</padig:set>
         <padig:set string="Traité des Maladies des Yeux, Antoine Pierre Demours">50</padig:set>
         <padig:set string="Abraham Jacobi letters relating to Mount Sinai Hospital, New York">51</padig:set>
+        <padig:set string="Sophia Perry diaries">53</padig:set>
     </xsl:param>
 
     <!-- lookup table for Omeka setSpec, Media Historic Archives Commission -->
@@ -768,7 +774,7 @@
         <padig:set string="The American Celt">5</padig:set>
         <padig:set string="Correspondence">8</padig:set>
     </xsl:param>
-    
+
     <!-- lookup table for dplah language transforms -->
     <xsl:param name="dplahLang">
         <padig:language string="Afar">aar</padig:language>
@@ -1779,7 +1785,7 @@
         <padig:type string="still image" uri="http://purl.org/dc/dcmitype/StillImage">still image</padig:type>
         <padig:type string="text" uri="http://purl.org/dc/dcmitype/Text">text</padig:type>
     </xsl:param>
-    
+
     <!-- lookup table for recommended Getty AAT subtype terms/URIs -->
     <xsl:param name="gettySubtype">
         <padig:type string="advertisements" uri="http://vocab.getty.edu/aat/300193993">advertisements</padig:type>
