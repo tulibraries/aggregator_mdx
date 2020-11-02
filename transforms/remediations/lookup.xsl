@@ -70,6 +70,7 @@
         <padig:url string="Lafayette College" code="LAF">http://hdl.handle.net/10385/</padig:url>
         <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
+        <padig:url string="Catholic Historical Research Center" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
     </xsl:param>
 
     <!-- lookup table for Intermediate Providers/OAI base URLs -->
