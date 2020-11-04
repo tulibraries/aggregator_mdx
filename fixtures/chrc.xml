@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    
+    <responseDate>2020-11-02T14:55:07Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_dcq" set="8">https://omeka.chrc-phila.org/oai</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:omeka.chrc-phila.org:7391</identifier>
+                <datestamp>2018-03-13T12:51:08Z</datestamp>
+                <setSpec>8</setSpec>
+            </header>
+            <metadata xmlns:oai_dcq="http://www.bl.uk/namespaces/oai_dcq/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+                <oai_dcq:qualifieddc xmlns:oai_dcq="http://www.bl.uk/namespaces/oai_dcq/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bl.uk/namespaces/oai_dcq/ http://www.bl.uk/schemas/qualifieddc/oai_dcq.xsd">
+                <dc:title>Dougherty notice in CS&amp;T</dc:title>
+                <dc:creator>Dougherty, Dennis J. (Dennis Joseph), 1865-1951.</dc:creator>
+                <dc:subject>Catholic Church--Mexico.</dc:subject>
+                <dc:subject>Catholic Church.</dc:subject>
+                <dc:subject>Archdiocese of Philadelphia (Pa.)--Congresses and conventions.</dc:subject>
+                <dc:subject>Catholics--Political activity--United States--Congresses and conventions.</dc:subject>
+                <dc:subject>Persecution--Mexico.</dc:subject>
+                <dc:subject>The Catholic Standard and Times.</dc:subject>
+                <dc:description>Letter by Cardinal Dougherty to all parishioners about the protest meeting scheduled for the 24th of February, 1935.</dc:description>
+                <dc:date>1935-02-11</dc:date>
+                <dc:type>Text</dc:type>
+                <dc:format>image/jpeg</dc:format>
+                <dc:identifier>SB31, 180</dc:identifier>
+                <dc:identifier>https://omeka.chrc-phila.org/items/show/7391</dc:identifier>
+                    <dcterms:hasFormat>https://omeka.chrc-phila.org/files/thumbnails/82a9a8d2d5590e9cf845be50a698c7e5.jpg</dcterms:hasFormat>
+                <dc:language>eng</dc:language>
+                <dc:rights>&lt;a href="http://rightsstatements.org/vocab/InC/1.0/" target="_blank"&gt;http://rightsstatements.org/vocab/InC/1.0/&lt;/a&gt;</dc:rights>
+                <dcterms:accessRights>This material is made available for private study, scholarship, and research use. For access to the original, contact: CHRC, chrc.aop@gmail.com, 215-904-8149.</dcterms:accessRights>
+                </oai_dcq:qualifieddc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
