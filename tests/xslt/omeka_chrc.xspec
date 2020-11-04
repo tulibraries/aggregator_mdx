@@ -28,7 +28,7 @@
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
       <x:context href="../../fixtures/chrc.xml"/>
-      <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Catholic Historical Research Center'"/>
+      <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Catholic Historical Research Center of the Archdiocese of Philadelphia'"/>
     </x:scenario>
     
     <!-- isShownAt (map) -->
