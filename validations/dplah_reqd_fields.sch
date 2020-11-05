@@ -201,12 +201,16 @@
       <assert test="normalize-space(.)!='Media Historic Archives Commission'" id="NoHarvestPattern23" role="error">Records from Media Historic Archives Commission are invalid</assert>
     </rule>
   </pattern>
-<!-- 
   <pattern id="CHRCNoHarvestPattern">
     <title>Check to invalidate Catholic Historical Research Center of the Archdiocese of Philadelphia</title>
     <rule context="oai_dc:dc/edm:dataProvider">
-      <assert test="normalize-space(.)!='Catholic Historical Research Center of the Archdiocese of Philadelphia'" id="NoHarvestPattern19" role="error">Records from Catholic Historical Research Center of the Archdiocese of Philadelphia are invalid</assert>
+      <assert test="normalize-space(.)!='Catholic Historical Research Center of the Archdiocese of Philadelphia'" id="NoHarvestPattern24" role="error">Records from Catholic Historical Research Center of the Archdiocese of Philadelphia are invalid</assert>
     </rule>
   </pattern>
--->
+  <pattern id="CPPNoHarvestPattern">
+    <title>Check to invalidate Historical Medical Library of The College of Physicians of Philadelphia</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Historical Medical Library of The College of Physicians of Philadelphia'" id="NoHarvestPattern25" role="error">Records from Historical Medical Library of The College of Physicians of Philadelphia are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
