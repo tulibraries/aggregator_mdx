@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:histpitt.library.pitt.edu:pitt_715.3420584.CP</identifier>
+      <datestamp>2018-07-16T21:21:19Z</datestamp>
+      <setSpec>pitt_collection.72</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:title>Overbrook School</dc:title>
+        <dc:creator>Pittsburgh City Photographer</dc:creator>
+        <dc:subject>Overbrook Elementary School (Pittsburgh, Pa.)</dc:subject>
+        <dc:description>A view of the Overbrook Elementary School. The school closed in
+          2002.</dc:description>
+        <dc:contributor>University of Pittsburgh (depositor)</dc:contributor>
+        <dc:date>1934-06-20</dc:date>
+        <dc:type>StillImage</dc:type>
+        <dc:type>photograph</dc:type>
+        <dc:identifier>pitt:715.3420584.CP</dc:identifier>
+        <dc:relation>Pittsburgh City Photographer Collection, 1901-2002</dc:relation>
+        <dc:coverage>Overbrook</dc:coverage>
+        <dc:rights>No Copyright - United States. The organization that has made the Item available
+          believes that the Item is in the Public Domain under the laws of the United States, but a
+          determination was not made as to its copyright status under the copyright laws of other
+          countries. The Item may not be in the Public Domain under the laws of other countries.
+          Please refer to the organization that has made the Item available for more
+          information.</dc:rights>
+        <dc:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</dc:rights>
+        <dc:identifier.thumbnail>http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP/datastream/TN/view/Overbrook%20School.jpg</dc:identifier.thumbnail>
+        <identifier>http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP</identifier>
+        <dc:source>This is a Source</dc:source>
+        <dc:publisher>This is a Publisher</dc:publisher>
+        <dc:language>English</dc:language>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
