@@ -22,6 +22,6 @@
    <edm:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</edm:rights>
    <edm:preview>http://historicpittsburgh.org/islandora/object/pitt%3A00c867676m/datastream/TN/view/Ten%20thousand%20candles.jpg</edm:preview>
    <edm:isShownAt>http://historicpittsburgh.org/islandora/object/pitt%3A00c867676m</edm:isShownAt>
-   <dpla:intermediateProvider>Historic Pittsburgh</dpla:intermediateProvider>
+   <dpla:intermediateProvider>Not a PA Digital intermediate provider</dpla:intermediateProvider>
    <edm:provider>PA Digital</edm:provider>
 </oai_dc:dc>
