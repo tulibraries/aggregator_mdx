@@ -2,10 +2,12 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:edm="http://www.europeana.eu/schemas/edm/"
-  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dpla="http://dp.la/about/map/">
   <ns prefix="dcterms" uri="http://purl.org/dc/terms/"/>
   <ns prefix="edm" uri="http://www.europeana.eu/schemas/edm/"/>
   <ns prefix="oai_dc" uri="http://www.openarchives.org/OAI/2.0/oai_dc/"/>
+  <ns prefix="dpla" uri="http://dp.la/about/map/"/>
 
   <!-- This schematron is to be used as a post-transform validation for the DPLAH DAG only.
   Continue to add contributors/collections to the bottom of this file and in the .xspec as
@@ -211,6 +213,12 @@
     <title>Check to invalidate Historical Medical Library of The College of Physicians of Philadelphia</title>
     <rule context="oai_dc:dc/edm:dataProvider">
       <assert test="normalize-space(.)!='Historical Medical Library of The College of Physicians of Philadelphia'" id="NoHarvestPattern25" role="error">Records from Historical Medical Library of The College of Physicians of Philadelphia are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="HPNoHarvestPattern">
+    <title>Check to invalidate Historic Pittsburgh</title>
+    <rule context="oai_dc:dc/dpla:intermediateProvider">
+      <assert test="normalize-space(.)!='Historic Pittsburgh'" id="NoHarvestPattern26" role="error">Records from Historic Pittsburgh are invalid</assert>
     </rule>
   </pattern>
 </schema>
