@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:american-philosophical:graphics_7879</identifier>
+      <datestamp>2019-09-17T18:30:56Z</datestamp>
+      <setSpec>graphics_Mss.Ms.Coll.76.17</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:title>German planes: </dc:title>
+        <dc:relation>Henry Howard Houston, II Papers--Mss.Ms.Coll.76.17--http://amphilsoc.org/collections/view?docId=ead/Mss.Ms.Coll.76.17-ead.xml</dc:relation>
+        <dc:title/>
+        <dc:identifier>: </dc:identifier>
+        <dc:contributor>()</dc:contributor>
+        <dc:contributor>Test contributor (another role)</dc:contributor>
+        <dc:description>"Two Boche planes coming over. Smoke from French anti aircraft."</dc:description>
+        <dc:type>Photographs</dc:type>
+        <dc:language/>
+        <dc:subject>World War, 1914-1918</dc:subject>
+        <dc:subject>Houston, Henry Howard, II, 1895-1918</dc:subject>
+        <dc:description/>
+        <dc:type>StillImage</dc:type>
+        <dc:format/>
+        <dc:format>Still Image</dc:format>
+        <dc:publisher/>
+        <dc:relation/>
+        <dc:rights>Copyright American Philosophical Society. For reproduction and permission information, see http://www.amphilsoc.org/library/rights.htm</dc:rights>
+        <dc:rights/>
+        <dc:identifier.thumbnail>https://diglib.amphilsoc.org/islandora/object/graphics%3A7879/datastream/TN/view/German%20planes.jpg</dc:identifier.thumbnail>
+        <identifier>https://diglib.amphilsoc.org/islandora/object/graphics%3A7879</identifier>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
