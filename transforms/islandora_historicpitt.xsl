@@ -111,13 +111,15 @@
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
+                        <xsl:if test="normalize-space($firststem)!=''">
                         <xsl:element name="dcterms:contributor">
                             <xsl:value-of select="normalize-space($firststem)"/>
                         </xsl:element>
+                        </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
 
-                <xsl:call-template name="cont_template">
+                <xsl:call-template name="dataProvider">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>

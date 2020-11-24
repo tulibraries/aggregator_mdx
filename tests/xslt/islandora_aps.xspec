@@ -14,27 +14,27 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    stylesheet="../../transforms/islandora_historicpitt.xsl">
+    stylesheet="../../transforms/islandora_aps.xsl">
 
 
 <!-- Institution specific checks -->
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:HP-pitt_3A715_3420584_CP'"/>
+      <x:context href="../../fixtures/islandora_aps.xml"/>
+      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:APS-graphics%3A7879'"/>
     </x:scenario>
     
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="map from contributor with 'depositor' text" test="oai_dc:dc/edm:dataProvider = 'University of Pittsburgh'"/>
+      <x:context href="../../fixtures/islandora_aps.xml"/>
+      <x:expect label="map from contributor with 'depositor' text" test="oai_dc:dc/edm:dataProvider = 'American Philosophical Society'"/>
     </x:scenario>
   
     <!-- Contributor -->
     <x:scenario label="contributor processing">
       <x:scenario label="contributor processing from included xml">
-        <x:context href="../../fixtures/islandora_historicpitt.xml"/>
+        <x:context href="../../fixtures/islandora_aps.xml"/>
         <x:expect label="map from contributor if NOT with 'depositor' text" test="oai_dc:dc/dcterms:contributor = 'Test contributor (another role)'"/>
       </x:scenario>
       <x:scenario label="contributor processing testing delimiters">
@@ -45,8 +45,8 @@
                 xmlns="http://purl.org/dc/elements/1.1/"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
-                <dc:contributor>First contributor;Second contributor;Third contributor (depositor)</dc:contributor>
-                <dc:contributor>;Fourth contributor; </dc:contributor>
+                <dc:contributor>First contributor;Second contributor;Third contributor (another role)</dc:contributor>
+                <dc:contributor>();Fourth contributor; </dc:contributor>
               </oai_dc:dc>
             </metadata>
           </oai:record>
@@ -68,7 +68,7 @@
             xmlns:svcs="http://rdfs.org/sioc/services">          
             <dcterms:contributor>First contributor</dcterms:contributor>
             <dcterms:contributor>Second contributor</dcterms:contributor>
-            <edm:dataProvider>Third contributor</edm:dataProvider>
+            <dcterms:contributor>Third contributor (another role)</dcterms:contributor>
             <dcterms:contributor>Fourth contributor</dcterms:contributor>
             <edm:provider>PA Digital</edm:provider>
           </oai_dc:dc>
@@ -76,34 +76,28 @@
       </x:scenario>
     </x:scenario>
   
-    <!-- Intermediate provider -->
-    <x:scenario label="intermediateProvider processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="identifier generated intProvider name" test="oai_dc:dc/dpla:intermediateProvider = 'Historic Pittsburgh'"/>
-    </x:scenario>
-  
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP'"/>
+      <x:context href="../../fixtures/islandora_aps.xml"/>
+      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://diglib.amphilsoc.org/islandora/object/graphics%3A7879'"/>
     </x:scenario>
     
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP/datastream/TN/view/Overbrook%20School.jpg'"/>
+      <x:context href="../../fixtures/islandora_aps.xml"/>
+      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://diglib.amphilsoc.org/islandora/object/graphics%3A7879/datastream/TN/view/German%20planes.jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
+      <x:context href="../../fixtures/islandora_aps.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
-          test="oai_dc:dc/dcterms:isPartOf = 'Pittsburgh City Photographer Collection'"/>
+          test="oai_dc:dc/dcterms:isPartOf = 'Henry Howard Houston III'"/>
     </x:scenario>
       
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
+      <x:context href="../../fixtures/islandora_aps.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
@@ -268,7 +262,7 @@
         </x:expect>
     </x:scenario>
     
-    <!-- File format (map and delimit) -->
+    <!-- removed - not mapped; File format (map and delimit)
     <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
         <x:context>
             <oai:record>
@@ -331,6 +325,7 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
+    -->
 
     <!-- Contributor (map and delimit) -->
     <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor and delimits">
