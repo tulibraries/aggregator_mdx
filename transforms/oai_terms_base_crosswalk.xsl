@@ -17,48 +17,10 @@
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
-        
-<!-- CROSSWALK STYLESHEET: this transform is used to match the xml record root (oai_dc:dc, oai_qdc:qualifieddc, etc.); in OAI-PMH, this should be the child node of oai:metadata. it also:
-    -adds <edm:provider>PA Digital</edm:provider> to all records
-    -performs the basic crosswalks we do (title to title, creator to creator, etc.) as well as remediations and enhancements for things like type and rights and delimiting on semicolon
-    -includes the LOOKUP STYLESHEET we use to generate a number of things such as data provider, collection name, etc.
-            
-this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are written for OAI-PMH metadata. institution or repository specific transforms, such as generating a padigital identifier, collection name, preview and object URLs, and data provider, should be done using an institution stylesheet (a template with details, including how to override anything within this stylesheet, is at institution_template.xsl). -->
-      
-    <xsl:include href="remediations/lookup.xsl"/>
-    <xsl:include href="oai_terms_base_crosswalk.xsl"/>
-    <!-- <xsl:include href="remediations/filter.xsl"/> -->
     
-    <!-- drop nodes we don't care about, namely, header values -->
-    <xsl:template match="text() | @*"/>
-    
-    <!-- drop records where the OAI header is marked as 'deleted' - removed since this is built into airflow harvest
-    <xsl:template match="//record[header[@status='deleted']]/*"/> -->
-    
-    <!-- base record. Matches each OAI feed record that is mapped. -->
-    <xsl:template match="//oai:record[not(oai:metadata/*/dc:relation[contains(string(), 'pdcp_noharvest')])]">
-        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:dcterms="http://purl.org/dc/terms/"
-            xmlns:dpla="http://dp.la/about/map/"
-            xmlns:edm="http://www.europeana.eu/schemas/edm/"
-            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
-            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-            xmlns:oclc="http://purl.org/oclc/terms/"
-            xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-            xmlns:oclcterms="http://purl.org/oclc/terms/"
-            xmlns:schema="http://schema.org" >
-            
-            <xsl:apply-templates />
-            
-            <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
-            <xsl:call-template name="hub"/>
-        </oai_dc:dc>
-    </xsl:template>
     
     <!-- Title -->
-    <xsl:template match="dc:title[1]">
+    <xsl:template match="dcterms:title[1]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:title">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -67,7 +29,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Alternative titles -->
-    <xsl:template match="dc:title[position() > 1]">
+    <xsl:template match="dcterms:title[position() > 1]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:alternative">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -75,19 +37,10 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="dcterms:alternative">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
     <!-- Type and Format -->
-    <xsl:template match="dc:type">
+    <xsl:template match="dcterms:type">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="type_template">
+            <xsl:call-template name="type_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -96,9 +49,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     
     <!-- File format -->
-    <xsl:template match="dc:format">
+    <xsl:template match="dcterms:format">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="fform_template">
+            <xsl:call-template name="fform_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -106,9 +59,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Creator -->
-    <xsl:template match="dc:creator">
+    <xsl:template match="dcterms:creator">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="crea_template">
+            <xsl:call-template name="crea_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -116,9 +69,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Contributor -->
-    <xsl:template match="dc:contributor">
+    <xsl:template match="dcterms:contributor">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="cont_template">
+            <xsl:call-template name="cont_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -126,9 +79,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Source -->
-    <xsl:template match="dc:source">
+    <xsl:template match="dcterms:source">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="sour_template">
+            <xsl:call-template name="sour_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -136,7 +89,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Publisher -->
-    <xsl:template match="dc:publisher">
+    <xsl:template match="dcterms:publisher">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:publisher">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -145,7 +98,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Description -->
-    <xsl:template match="dc:description">
+    <xsl:template match="dcterms:description">
         <xsl:if test="normalize-space(.)!='' and not(ends-with(.,'thumbnail.jpg'))">
             <xsl:element name="dcterms:description">
                 <xsl:value-of select="."/>
@@ -153,48 +106,20 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Place -->
-    <xsl:template match="dcterms:spatial">
+    <!-- Place -->   
+    <xsl:template match="dcterms:coverage">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
+            <xsl:call-template name="spatial_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
-    <xsl:template match="dc:coverage">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="spatial_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
-    <!-- Temporal coverage -->
-    <xsl:template match="dcterms:temporal">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
-    <!-- Extent -->
-    <xsl:template match="dcterms:extent">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:element name="dcterms:extent">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
         </xsl:if>
     </xsl:template>
     
     <!-- Date -->
-    <xsl:template match="dc:date">
+    <xsl:template match="dcterms:date">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="date_template">
+            <xsl:call-template name="date_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -202,9 +127,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Subject -->
-    <xsl:template match="dc:subject">
+    <xsl:template match="dcterms:subject">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="subj_template">
+            <xsl:call-template name="subj_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -212,9 +137,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Language -->
-    <xsl:template match="dc:language">
+    <xsl:template match="dcterms:language">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="lang_template">
+            <xsl:call-template name="lang_terms_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
@@ -222,7 +147,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
     
     <!-- Relation -->
-    <xsl:template match="dc:relation">
+    <xsl:template match="dcterms:relation">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:relation">
                 <xsl:value-of select="normalize-space(.)"/>
@@ -230,28 +155,8 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Replaced by -->
-    <xsl:template match="dcterms:isReplacedBy">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
-    <!-- Replaces -->
-    <xsl:template match="dcterms:replaces">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
     <!-- Rights and Rights URI -->
-    <xsl:template match="dc:rights">
+    <xsl:template match="dcterms:rights">
         <xsl:variable name="rights" select='normalize-space(.)'/>
         <xsl:if test="normalize-space($rights)!=''">
             <xsl:choose>
@@ -276,20 +181,10 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Rights holder -->
-    <xsl:template match="dcterms:rightsHolder">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
 <!-- TEMPLATES -->
     
-    <!-- Subject template -->
-    <xsl:template name="subj_template">
+         <!-- Subject template -->
+    <xsl:template name="subj_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -305,7 +200,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                 </xsl:if>
 
                 <!--Need to do recursion-->
-                <xsl:call-template name="subj_template">
+                <xsl:call-template name="subj_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -321,7 +216,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- dcterms template -->
-    <xsl:template name="delimiter_template">
+    <xsl:template name="delimiter_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -336,7 +231,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                 </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="delimiter_template">
+                <xsl:call-template name="delimiter_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -352,7 +247,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Creator template -->
-    <xsl:template name="crea_template">
+    <xsl:template name="crea_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -367,7 +262,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="crea_template">
+                <xsl:call-template name="crea_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -383,7 +278,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Coverage template -->
-    <xsl:template name="spatial_template">
+    <xsl:template name="spatial_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
         
@@ -398,7 +293,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="spatial_template">
+                <xsl:call-template name="spatial_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -414,7 +309,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Contributor template -->
-    <xsl:template name="cont_template">
+    <xsl:template name="cont_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -429,7 +324,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="cont_template">
+                <xsl:call-template name="cont_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -445,7 +340,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- File format template -->
-    <xsl:template name="fform_template">
+    <xsl:template name="fform_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
         
@@ -470,7 +365,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                 </xsl:choose>
                 
                 <!--Need to do recursion-->
-                <xsl:call-template name="fform_template">
+                <xsl:call-template name="fform_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -497,7 +392,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Source template -->
-    <xsl:template name="sour_template">
+    <xsl:template name="sour_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -512,7 +407,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="sour_template">
+                <xsl:call-template name="sour_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -528,7 +423,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Publisher template -->
-    <xsl:template name="publ_template">
+    <xsl:template name="publ_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -543,7 +438,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="publ_template">
+                <xsl:call-template name="publ_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -559,7 +454,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Date template -->
-    <xsl:template name="date_template">
+    <xsl:template name="date_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -574,7 +469,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="date_template">
+                <xsl:call-template name="date_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -590,7 +485,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Language template -->
-    <xsl:template name="lang_template">
+    <xsl:template name="lang_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -615,7 +510,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                 </xsl:choose>
 
                 <!--Need to do recursion-->
-                <xsl:call-template name="lang_template">
+                <xsl:call-template name="lang_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -642,7 +537,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Relation template -->
-    <xsl:template name="rela_template">
+    <xsl:template name="rela_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -657,7 +552,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:element>
                 </xsl:if>
                 <!--Need to do recursion-->
-                <xsl:call-template name="rela_template">
+                <xsl:call-template name="rela_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -673,7 +568,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Rights template; this didn't work, but keeping it here -->
-    <xsl:template name="rights_template">
+    <xsl:template name="rights_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -701,7 +596,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                 </xsl:choose>
 
                 <!--Need to do recursion-->
-                <xsl:call-template name="rights_template">
+                <xsl:call-template name="rights_terms_template">
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
@@ -735,7 +630,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     </xsl:template>
 
     <!-- Type template -->
-    <xsl:template name="type_template">
+    <xsl:template name="type_terms_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
 
@@ -780,7 +675,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:choose>
 
                     <!--Need to do recursion-->
-                    <xsl:call-template name="type_template">
+                    <xsl:call-template name="type_terms_template">
                         <xsl:with-param name="strings" select="$newstem"/>
                         <xsl:with-param name="delimiter" select="';'"/>
                     </xsl:call-template>
@@ -820,12 +715,5 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     </xsl:choose>
                 </xsl:otherwise>
             </xsl:choose>
-    </xsl:template>
-    
-    <!-- Hub -->
-    <xsl:template name="hub">
-        <xsl:element name="edm:provider">
-            <xsl:value-of>PA Digital</xsl:value-of>
-        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
