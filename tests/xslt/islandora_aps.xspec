@@ -22,7 +22,7 @@
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
       <x:context href="../../fixtures/islandora_aps.xml"/>
-      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:APS-graphics%3A7879'"/>
+      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:APS-graphics_3A7879'"/>
     </x:scenario>
     
     <!-- Data Provider (generate and map) -->
