@@ -17,6 +17,8 @@
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
+    
+    <xsl:include href="lookup_aps.xsl"/>
 
     <!-- lookup table for IANA media types -->
     <xsl:param name="fFormatList">
