@@ -18,6 +18,12 @@
     
     <!-- American Philosophical Society collecton name lookup -->
     <xsl:param name="apsSetSpecList">
+        <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
+        <padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
+        <padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
+        <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
+        <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
+        <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
         <padig:set string="Video Collection">islandora_video_collection</padig:set>
         <padig:set string="Video Upload Test">video_testing</padig:set>
         <padig:set string="Ward J. MacNeal - Correspondence, 1913-1935">islandora_10738</padig:set>
@@ -29,7 +35,6 @@
         <padig:set string="tester-2">text_test</padig:set>
         <padig:set string="Series V. Materials Gathered by Phyllis Post Goodman">islandora_9744</padig:set>
         <padig:set string="Series V. Notes">islandora_10562</padig:set>
-        <padig:set string="Series V. Personal">text_Mss.B.F826-Series-V</padig:set>
         <padig:set string="Series V. Ruth (Rook) McCulloch">islandora_10774</padig:set>
         <padig:set string="Series VI. Fitter Family Studies">islandora_9821</padig:set>
         <padig:set string="Series VI. Foulke Family Correspondence">text_Mss.B.F826-Series-VI</padig:set>
@@ -793,7 +798,6 @@
         <padig:set string="Mss.Ms.Coll.76 - Smith Family papers">graphics_Mss.Ms.Coll.76</padig:set>
         <padig:set string="Mss.Ms.Coll.76 - Smith-Houston-Morris-Ogden Family papers, 1659-1985">text_Mss.Ms.Coll.76</padig:set>
         <padig:set string="Mss.Ms.Coll.76.17 - Henry Howard Houston, II Papers">text_Mss.Ms.Coll.76.17</padig:set>
-        <padig:set string="Mss.Ms.Coll.76.17 - Henry Howard Houston, II Papers">graphics_Mss.Ms.Coll.76.17</padig:set>
         <padig:set string="Mss.Ms.Coll.77 - Eugenics Record Office Records">text_Mss.Ms.Coll.77</padig:set>
         <padig:set string="Mss.Ms.Coll.78 - Harvey Pitkin Papers">text_Mss.Ms.Coll.78</padig:set>
         <padig:set string="Mss.Ms.Coll.78 - Harvey Pitkin Papers (audio)">audio_Mss.Ms.Coll.78</padig:set>
@@ -1072,9 +1076,7 @@
         <padig:set string="Mss.B.Or2 - George Ord Collection">text_Mss.B.Or2</padig:set>
         <padig:set string="Mss.B.Os73 - W.J.V. (Winthrop John Van Leuven) Osterhout papers">graphics_Mss.B.Os73</padig:set>
         <padig:set string="Mss.B.Ow2 - Sir Richard Owen Papers">text_Mss.B.Ow2</padig:set>
-        <padig:set string="Mss.B.P.31.15d - Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
         <padig:set string="Mss.B.P165 - Colonel Richard Gimbel Collection of Thomas Paine Papers">text_Mss.B.P165</padig:set>
-        <padig:set string="Mss.B.P165 - Colonel Richard Gimbel Collection of Thomas Paine Papers">graphics_Mss.B.P165</padig:set>
         <padig:set string="Mss.B.P212 - Sir James Paget Letters">text_Mss.B.P212</padig:set>
         <padig:set string="Mss.B.P252 - William Parsons material">graphics_Mss.B.P252</padig:set>
         <padig:set string="Mss.B.P274 - Robert M. (Robert Maskell) Patterson papers, 1775-1853">text_Mss.B.P274</padig:set>
@@ -1292,7 +1294,6 @@
         <padig:set string="Mss.342.73.Un3c.d - United States Constitution">text_Mss.342.73.Un3c.d</padig:set>
         <padig:set string="Mss.342.73.Un3c.d - United States. Constitution.">graphics_Mss.342.73.Un3c.d</padig:set>
         <padig:set string="Mss.345.12.P38L - Pennsylvania. General Assembly. The Great Law, 1682">text_Mss.345.12.P38L</padig:set>
-        <padig:set string="Mss.365.P381p - State Penitentiary for the Eastern District of Pennsylvania Records">text_Mss.365.P381p</padig:set>
         <padig:set string="Mss.371.974.As7 - Address on the impolicy of slavery, 1824">text_Mss.371.974.As7</padig:set>
         <padig:set string="Mss.494.9.T84 - Turkish Manuscripts">text_Mss.494.9.T84</padig:set>
         <padig:set string="Mss.497.3.Am4">video_Mss.497.3.Am4</padig:set>
@@ -1366,7 +1367,6 @@
         <padig:set string="George Harrison Shull - Correspondence, 1904-1956">islandora_10731</padig:set>
         <padig:set string="Gifford Lecture">islandora_10518</padig:set>
         <padig:set string="Graphic Material">islandora_10931</padig:set>
-        <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
         <padig:set string="GraphicsStaging">islandora_GraphicsStaging</padig:set>
         <padig:set string="Gregory Bateson">islandora_10915</padig:set>
         <padig:set string="Harry H. Laughlin">islandora_10212</padig:set>
@@ -1504,7 +1504,7 @@
         <padig:set string="917.3.M76v - Voyage en Amerique en Sicile et en Egypte">graphics_917.3.M76v</padig:set>
         <padig:set string="917.4811 Pam. - Pamphlets">islandora_10605</padig:set>
         <padig:set string="917.4811 W65p - Panorama and views of Philadelphia and its vicinity">graphics_917.4811.W65p</padig:set>
-        <padig:set string="917.4811.Pam.no.236 - 	Selections From an Architect's Portfolio">graphics_917.4811.Pam.no.236</padig:set>
+        "<padig:set string="917.4811.Pam.no.236 - 	Selections From an Architect's Portfolio">graphics_917.4811.Pam.no.236</padig:set>
         <padig:set string="917.56.B76n - The natural history of North-Carolina">graphics_917.56.B76n</padig:set>
         <padig:set string="917.94 V55 - Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente">graphics_917.94.V55V</padig:set>
         <padig:set string="917.C25 - Travels through the interior parts of North America, in the years 1766, 1767, and 1768">graphics_917.C25</padig:set>
