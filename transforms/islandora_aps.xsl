@@ -104,9 +104,9 @@
     <xsl:template name="isPartOf">
         <xsl:if test="normalize-space(.) != ''">
             <xsl:variable name="setID" select="normalize-space(.)"/>
-            <xsl:if test="$setID = $setSpecList/padig:set">
+            <xsl:if test="$setID = $apsSetSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">
-                    <xsl:value-of select="$setSpecList/padig:set[. = $setID]/@string"/>
+                    <xsl:value-of select="$apsSetSpecList/padig:set[. = $setID]/@string"/>
                 </xsl:element>
             </xsl:if>
         </xsl:if>

@@ -473,6 +473,7 @@
         <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
         <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
         <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
+        
         <!-- LaSalle Bepress -->
         <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
         <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
