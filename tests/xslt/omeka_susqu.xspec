@@ -59,7 +59,7 @@
       
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-        <x:context href="../../fixtures/cpp.xml"/>
+      <x:context href="../../fixtures/susqu.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
