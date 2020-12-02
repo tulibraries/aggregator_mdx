@@ -84,9 +84,7 @@
             <xsl:otherwise>
                 <xsl:choose>
                     <xsl:when test="normalize-space($strings)!='' and starts-with($strings, '(')">
-                        <xsl:element name="edm:dataProvider">
-                            <xsl:value-of select="normalize-space(substring-before($strings, ' (depositor)'))"/>
-                        </xsl:element>
+                        <xsl:value-of select="null"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:if test="normalize-space($strings)!=''">
