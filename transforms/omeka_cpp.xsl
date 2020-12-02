@@ -25,7 +25,17 @@
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
     
-    <!-- rights -->
+    <!-- unmap relation -->
+    <xsl:template match="dc:realtion" priority="1">
+        <xsl:value-of select="null"/>
+    </xsl:template>
+    
+    <!-- unmap source -->
+    <xsl:template match="dc:source" priority="1">
+        <xsl:value-of select="null"/>
+    </xsl:template>
+    
+    <!-- unmap rights; blanket statement below -->
     <xsl:template match="dc:rights" priority="1">
         <xsl:value-of select="null"/>
     </xsl:template>
