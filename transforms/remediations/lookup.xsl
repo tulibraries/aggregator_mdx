@@ -194,6 +194,8 @@
         <padig:set string="Ariel">publication:ariel</padig:set>
         <padig:set string="Gemrig’s illustrated catalogue of surgical instruments, ca. 1868">publication:catalogue_of_surgical_instruments</padig:set>
         <padig:set string="Historical Addresses">publication:historical_addresses</padig:set>
+        <padig:set string="Historical Photographs - Center City">publication:historical_photos</padig:set>
+        <padig:set string="Historical Photographs - East Falls">publication:historical_photos_ef</padig:set>
         <padig:set string="History of the anatomy act of Pennsylvania, WS Forbes, 1898">publication:anatomy_act_of_penn</padig:set>
         <padig:set string="Jefferson Biographies">publication:jeffbiographies</padig:set>
         <padig:set string="Jefferson College of Biomedical Sciences Commencements">publication:jcbscommencement</padig:set>
@@ -201,11 +203,15 @@
         <padig:set string="Jefferson College of Nursing Commencements">publication:jcncommencement</padig:set>
         <padig:set string="Jefferson College of Population Health Commencements">publication:jcphcommencement</padig:set>
         <padig:set string="Jefferson Medical College Catalogs">publication:jmc_catalogs</padig:set>
+        <padig:set string="Jefferson Medical College Opening Addresses">publication:jmcopeningaddresses</padig:set>
+        <padig:set string="Jefferson Medical College Records Books">publication:jmcrecordsbooks</padig:set>
+        <padig:set string="Jefferson Medical College Theses">publication:jmctheses</padig:set>
         <padig:set string="Jefferson Medical College Yearbooks">publication:jmc_yearbooks</padig:set>
         <padig:set string="Jefferson Review">publication:jefferson_review</padig:set>
         <padig:set string="Jefferson Sidney Kimmel Medical College Class Day">publication:skmcclassday</padig:set>
         <padig:set string="Jefferson Sidney Kimmel Medical College Commencements">publication:skmccommencement</padig:set>
         <padig:set string="John Plimpton Green Letters">publication:jpgreenletters</padig:set>
+        <padig:set string="Lecture &amp; Matriculation Tickets">publication:lecturetickets</padig:set>
         <padig:set string="Manuscripts and Journals">publication:manuscripts_journals</padig:set>
         <padig:set string="Medical Notebooks">publication:medicalnotebooks</padig:set>
         <padig:set string="Modern Surgery, 4th edition, by John Chalmers Da Costa">publication:dacosta_modernsurgery</padig:set>
@@ -215,8 +221,6 @@
         <padig:set string="Textile Printing Blocks">publication:textileprintingblocks</padig:set>
         <padig:set string="The Throat and the Voice, by J. Solis Cohen, M.D. 1879">publication:throat_and_voice</padig:set>
         <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
-        <padig:set string="Historical Photographs - Center City">publication:historical_photos</padig:set>
-        <padig:set string="Historical Photographs - East Falls">publication:historical_photos_ef</padig:set>
         <!-- Curtis -->
         <padig:set string="de Pasquale collection">myfirst</padig:set>
         <padig:set string="Curtis program books">p16667coll1</padig:set>
