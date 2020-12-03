@@ -260,6 +260,7 @@
         <padig:set string="Chatham University Chronological Photograph Files">pitt_collection.236</padig:set>
         <padig:set string="Chatham University May Day Collection">pitt_collection.239</padig:set>
         <padig:set string="Chatham University Shadyside Campus Lantern Slide Collection">pitt_collection.237</padig:set>
+        <padig:set string="Children's Aid Society of Western Pennsylvania Records">pitt_collection.344</padig:set>
         <padig:set string="Christopher Gist's Journals by William M. Darlington">pitt_collection.101</padig:set>
         <padig:set string="City Directories">pitt_collection.49</padig:set>
         <padig:set string="City of Pittsburgh Geodetic and Topographic Survey Maps">pitt_collection.294</padig:set>
@@ -271,9 +272,11 @@
         <padig:set string="Daniel Brodhead Papers">pitt_collection.18</padig:set>
         <padig:set string="Darlington Family Papers">pitt_collection.100</padig:set>
         <padig:set string="Daughters of Erin Court #9 Records">pitt_collection.173</padig:set>
+        <padig:set string="Department of Public Health Annual Records, Pittsburgh, PA">pitt_collection.345</padig:set>
         <padig:set string="Donohoe Family Papers">pitt_collection.102</padig:set>
         <padig:set string="Dorsey-Turfley Family Photographs">pitt_collection.40</padig:set>
         <padig:set string="Dunning McNair and Dunning Robert McNair Papers">pitt_collection.19</padig:set>
+        <padig:set string="Dwight H Roberts Collection">pitt_collection.336</padig:set>
         <padig:set string="Edward J. Shourek Photographs">pitt_collection.41</padig:set>
         <padig:set string="Eichleay Engineering Corporation Records and Photographs">pitt_collection.243</padig:set>
         <padig:set string="Eliphalet Smith Account Book">pitt_collection.104</padig:set>
@@ -313,9 +316,11 @@
         <padig:set string="Isaac and Samuel Miller Farm Account Book">pitt_collection.273</padig:set>
         <padig:set string="James Benney Photographs">pitt_collection.52</padig:set>
         <padig:set string="James Veech Copybook of the General William Irvine Papers">pitt_collection.22</padig:set>
+        <padig:set string="Jennie Bradley Roessing Papers">pitt_collection.343</padig:set>
         <padig:set string="Jewish Sports Hall of Fame of Western Pennsylvania Photographs">pitt_collection.54</padig:set>
         <padig:set string="Joel B. Levinson Photographs">pitt_collection.305</padig:set>
         <padig:set string="John Gates Photographs">pitt_collection.55</padig:set>
+        <padig:set string="John Lorkovich Undertakers Record Book">pitt_collection.347</padig:set>
         <padig:set string="John M. Tate, Jr. Collection of Notes, Pictures and Documents relating to the Harmony Society">pitt_collection.203</padig:set>
         <padig:set string="John Woodruff Scrapbooks">pitt_collection.184</padig:set>
         <padig:set string="Jonathan Forman Papers">pitt_collection.23</padig:set>
@@ -352,6 +357,7 @@
         <padig:set string="Paul Slantis Photographs">pitt_collection.68</padig:set>
         <padig:set string="Pennsylvania Railroad Photographs">pitt_collection.69</padig:set>
         <padig:set string="Pitcairn Historical Society Image Collection">pitt_collection.70</padig:set>
+        <padig:set string="Pittsburgh Academy of Medicine">pitt_collection.346</padig:set>
         <padig:set string="Pittsburgh Bureau of Building Inspection Photographs">pitt_collection.155</padig:set>
         <padig:set string="Pittsburgh Census Tract Maps and Data">pitt_collection.329</padig:set>
         <padig:set string="Pittsburgh City Photographer Collection">pitt_collection.72</padig:set>
