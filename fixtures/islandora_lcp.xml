@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:digital.librarycompany.org:Islandora_6901</identifier>
+      <datestamp>2018-01-02T20:55:04Z</datestamp>
+      <setSpec>Islandora_AART1</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/">
+        <dc:title>Medicine bottle</dc:title>
+        <dc:creator>Thacher Medicine Company</dc:creator>
+        <dc:subject>Bottle, Medicine</dc:subject>
+        <dc:date>Late 19th -early 20th c</dc:date>
+        <dc:publisher>Chattanooga, Tenn</dc:publisher>
+        <dc:language>eng</dc:language>
+        <dcterms:extent>Glass ; 3 ¼ x 1 x 1 inches</dcterms:extent>
+        <dc:subject>Thacher Medicine Company.</dc:subject>
+        <dc:subject>Patent medicines</dc:subject>
+        <dc:subject>Cholera</dc:subject>
+        <dc:subject>Quacks and quackery</dc:subject>
+        <dc:rights>http://rightsstatements.org/vocab/UND/1.0/</dc:rights>
+        <dcterms:hasFormat>https://digital.librarycompany.org/islandora/object/Islandora%3A6901/datastream/TN/view/Medicine%20bottle..jpg</dcterms:hasFormat>
+        <dc:identifier>https://digital.librarycompany.org/islandora/object/Islandora%3A6901</dc:identifier>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
