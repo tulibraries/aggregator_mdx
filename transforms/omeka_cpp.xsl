@@ -26,7 +26,7 @@
     </xsl:template>
     
     <!-- unmap relation -->
-    <xsl:template match="dc:realtion" priority="1">
+    <xsl:template match="dc:relation" priority="1">
         <xsl:value-of select="null"/>
     </xsl:template>
     
