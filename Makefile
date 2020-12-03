@@ -24,7 +24,10 @@ test-xslt:
 		docker-compose run xspec "$$xspectest" ; \
 	done
 
-test-ci: test-bash test-coverage
+test-ci: test-login test-bash test-coverage
+
+test-login:
+	@docker login -u ${DOCKERHUB_USER} -p ${DOCKERHUB_PASSWORD}
 
 test-bash:
 	@echo "CI/CD testing *.xspec with Docker & shell scripts"
