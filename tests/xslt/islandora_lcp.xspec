@@ -1,0 +1,2570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dpla="http://dp.la/about/map/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+    xmlns:oclcterms="http://purl.org/oclc/terms/"
+    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
+    xmlns:oclc="http://purl.org/oclc/terms/"
+    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+    xmlns:schema="http://schema.org"
+    xmlns:svcs="http://rdfs.org/sioc/services"
+    stylesheet="../../transforms/islandora_lcp.xsl">
+
+
+<!-- Institution specific checks -->
+
+    <!-- Identifier (map) -->
+    <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
+      <x:context href="../../fixtures/islandora_lcp.xml"/>
+      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:LIBCO-Islandora_3A6901'"/>
+    </x:scenario>
+    
+    <!-- Data Provider (generate and map) -->
+    <x:scenario label="data provider processing">
+      <x:context href="../../fixtures/islandora_lcp.xml"/>
+      <x:expect label="map from contributor with 'depositor' text" test="oai_dc:dc/edm:dataProvider = 'The Library Company of Philadelphia'"/>
+    </x:scenario>
+  
+    <!-- isShownAt (map) -->
+    <x:scenario label="isShownAt processing">
+      <x:context href="../../fixtures/islandora_lcp.xml"/>
+      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digital.librarycompany.org/islandora/object/Islandora%3A6901'"/>
+    </x:scenario>
+    
+    <!-- Preview (map) -->
+    <x:scenario label="preview processing">
+      <x:context href="../../fixtures/islandora_lcp.xml"/>
+      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digital.librarycompany.org/islandora/object/Islandora%3A6901/datastream/TN/view/Medicine%20bottle..jpg'"/>
+    </x:scenario>
+
+    <!-- isPartOf-->
+    <x:scenario label="SetSpec is looked up and matched to collection name">
+      <x:context href="../../fixtures/islandora_lcp.xml"/>
+        <x:expect label="SetSpec matches collection in lookup.xsl"
+          test="oai_dc:dc/dcterms:isPartOf = 'Art and Artifacts Collection'"/>
+    </x:scenario>
+      
+    <!-- Hub -->
+    <x:scenario label="hard coded hub name">
+      <x:context href="../../fixtures/islandora_lcp.xml"/>
+        <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
+    </x:scenario>
+
+<!-- Generic crosswalk checks -->
+    <!-- Title -->
+    <x:scenario label="dc:title processing">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                      xmlns="http://purl.org/dc/elements/1.1/"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                        <title>First Title</title>
+                        <title>Second Title</title>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="1st dc.title is transformed to dcterms:title"
+          test="oai_dc:dc/dcterms:title = 'First Title'"/>
+        <x:expect label="2nd dc:title is transformed to dcterms:alternative"
+          test="oai_dc:dc/dcterms:alternative = 'Second Title'"/>
+    </x:scenario>
+
+    <!-- Alternate title (map and delimit) -->
+    <x:scenario label="alternative titles map and delimit">
+        <x:scenario label="title not first maps to alttitle">
+            <x:context>
+                <oai:record>
+                    <metadata>
+                        <oai_dc:dc
+                            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                            xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:dcterms="http://purl.org/dc/terms/">              
+                            <dc:title>First title</dc:title>
+                            <dc:title>Alt title</dc:title>
+                        </oai_dc:dc>
+                    </metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="title not first maps">
+                <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:dpla="http://dp.la/about/map/"
+                    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:oclc="http://purl.org/oclc/terms/"
+                    xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                    xmlns:oclcterms="http://purl.org/oclc/terms/"
+                    xmlns:schema="http://schema.org"
+                    xmlns:padig="http://padigital.org/ns"
+                    xmlns:svcs="http://rdfs.org/sioc/services">          
+                    <dcterms:title>First title</dcterms:title>
+                    <dcterms:alternative>Alt title</dcterms:alternative>
+                    <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+            </x:expect>
+        </x:scenario>
+        <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
+            <x:context>
+                <oai:record>
+                    <metadata>
+                        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:dcterms="http://purl.org/dc/terms/"
+                            xmlns:dpla="http://dp.la/about/map/"
+                            xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                            xmlns:oclc="http://purl.org/oclc/terms/"
+                            xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                            xmlns:oclcterms="http://purl.org/oclc/terms/"
+                            xmlns:schema="http://schema.org"
+                            xmlns:padig="http://padigital.org/ns"
+                            xmlns:svcs="http://rdfs.org/sioc/services">
+                            <dc:title>First title</dc:title>
+                            <dcterms:alternative>Alt title1;Alt title2</dcterms:alternative>
+                        </oai_dc:dc>
+                    </metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="alt title is mapped and delimited">
+                <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <dcterms:title>First title</dcterms:title>
+                    <dcterms:alternative>Alt title1</dcterms:alternative>
+                    <dcterms:alternative>Alt title2</dcterms:alternative>
+                    <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+            </x:expect>
+        </x:scenario>
+    </x:scenario>
+    
+    <!-- Creator (map and delimit) -->
+    <x:scenario label="dc:creator becomes space-normalized dcterms:creator and delimits">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:creator>Smith, John;Smith, Karen</dc:creator>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="creator maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:creator>Smith, John</dcterms:creator>
+                <dcterms:creator>Smith, Karen</dcterms:creator>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+
+    <!-- Extent -->
+    <x:scenario label="dcterms:extent maps to dcterms:extent">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dcterms:extent>1 black and white photograph ; 5 1/2 x 7 1/2 inches</dcterms:extent>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="extent maps">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:extent>1 black and white photograph ; 5 1/2 x 7 1/2 inches</dcterms:extent>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- removed - not mapped; File format (map and delimit)
+    <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:dpla="http://dp.la/about/map/"
+                    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                    xmlns:oclc="http://purl.org/oclc/terms/"
+                    xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                    xmlns:oclcterms="http://purl.org/oclc/terms/"
+                    xmlns:schema="http://schema.org"
+                    xmlns:padig="http://padigital.org/ns"
+                    xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:format>jpg;TIFF;thing</dc:format>
+                        <dc:format>jpg</dc:format>
+                        <dc:format>jpeg</dc:format>
+                        <dc:format>jp2</dc:format>
+                        <dc:format>jpg2</dc:format>
+                        <dc:format>jpeg2</dc:format>
+                        <dc:format>jpeg2000</dc:format>
+                        <dc:format>jp2000</dc:format>
+                        <dc:format>tif</dc:format>
+                        <dc:format>tiff</dc:format>
+                        <dc:format>pdf</dc:format>
+                        <dc:format>mpeg4</dc:format>
+                        <dc:format>mp4</dc:format>
+                        <dc:format>mpeg</dc:format>
+                        <dc:format>mpeg3</dc:format>
+                        <dc:format>mp3</dc:format>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="format maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <schema:fileFormat>image/jpeg</schema:fileFormat>
+                <schema:fileFormat>image/tiff</schema:fileFormat>
+                <schema:fileFormat>thing</schema:fileFormat>
+                <schema:fileFormat>image/jpeg</schema:fileFormat>
+                <schema:fileFormat>image/jpeg</schema:fileFormat>
+                <schema:fileFormat>image/jp2</schema:fileFormat>
+                <schema:fileFormat>image/jp2</schema:fileFormat>
+                <schema:fileFormat>image/jp2</schema:fileFormat>
+                <schema:fileFormat>image/jp2</schema:fileFormat>
+                <schema:fileFormat>image/jp2</schema:fileFormat>
+                <schema:fileFormat>image/tiff</schema:fileFormat>
+                <schema:fileFormat>image/tiff</schema:fileFormat>
+                <schema:fileFormat>application/pdf</schema:fileFormat>
+                <schema:fileFormat>video/mpeg</schema:fileFormat>
+                <schema:fileFormat>video/mp4</schema:fileFormat>
+                <schema:fileFormat>video/mpeg</schema:fileFormat>
+                <schema:fileFormat>audio/mpeg</schema:fileFormat>
+                <schema:fileFormat>audio/mp3</schema:fileFormat>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    -->
+
+    <!-- Contributor (map and delimit) -->
+    <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor and delimits">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                            <dc:contributor>Smith, John;Smith, Karen</dc:contributor>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="contributor maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:contributor>Smith, John</dcterms:contributor>
+                <dcterms:contributor>Smith, Karen</dcterms:contributor>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- Source (map and delimit) -->
+    <x:scenario label="dc:source becomes space-normalized dcterms:source and delimits">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:source>Smith, John;Smith, Karen</dc:source>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="source maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:source>Smith, John</dcterms:source>
+                <dcterms:source>Smith, Karen</dcterms:source>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+
+    <!-- Publisher (map and delimit) -->
+    <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:publisher>Smith, John;Smith, Karen </dc:publisher>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="publisher maps">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:publisher>Smith, John;Smith, Karen</dcterms:publisher>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+
+    <!-- Description (map) -->
+    <x:scenario label="dc:description becomes space-normalized dcterms:description; does not map if ends with thumbnail.jpg">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:description>This is a test description; and that was a semicolon </dc:description>
+                        <dc:description>http://www.test.com/thumbnail.jpg</dc:description>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="description maps">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:description>This is a test description; and that was a semicolon </dcterms:description>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- Spatial (map and delimit) -->
+    <x:scenario label="dcterms:spatial and dc:coverage map to dcterms:spatial, space normalized, delimits on semicolon">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:coverage>Test coverage1;Test coverage2 </dc:coverage>
+                        <dcterms:spatial>Test spatial1;Test spatial2 </dcterms:spatial>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="coverage and spatial map">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:spatial>Test coverage1</dcterms:spatial>
+                <dcterms:spatial>Test coverage2</dcterms:spatial>
+                <dcterms:spatial>Test spatial1</dcterms:spatial>
+                <dcterms:spatial>Test spatial2</dcterms:spatial>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>  
+    </x:scenario>
+    
+    <!-- Date (map and delimit) -->
+    <x:scenario label="dc:date becomes space-normalized dcterms:date and delimits">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:date>1978-07-25;1978-07-26</dc:date>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="date maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:date>1978-07-25</dcterms:date>
+                <dcterms:date>1978-07-26</dcterms:date>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+
+    <!-- Subject (map and delimit) -->
+    <x:scenario label="dc:subject maps to dcterms:subject, space normalizes, and delimits on semicolon">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:subject>Test subject1;Test subject2 </dc:subject>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="subject maps">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:subject>Test subject1</dcterms:subject>
+                <dcterms:subject>Test subject2</dcterms:subject>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>  
+    </x:scenario>
+
+    <!-- Relation (map and delimit) -->
+    <x:scenario label="relation normalizes and maps">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:relation>Smith, John;Smith, Karen </dc:relation>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="relation maps">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:relation>Smith, John;Smith, Karen</dcterms:relation>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- Replaced by (map and delimit) -->
+    <x:scenario label="isReplacedBy delimits, normalizes, and maps">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dcterms:isReplacedBy>Thing 1; Thing 2;</dcterms:isReplacedBy>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="isReplacedBy maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:isReplacedBy>Thing 1</dcterms:isReplacedBy>
+                <dcterms:isReplacedBy>Thing 2</dcterms:isReplacedBy>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- Replaces (map and delimit) -->
+    <x:scenario label="replaces delimits, normalizes, and maps">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dcterms:replaces>Thing 1; Thing 2;</dcterms:replaces>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="replaces maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:replaces>Thing 1</dcterms:replaces>
+                <dcterms:replaces>Thing 2</dcterms:replaces>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- Rights and Rights URI (map/parse and delimit) -->
+    <x:scenario label="rights processing">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:rights>This digital file is posted publicly for non-profit educational use only; all other uses are prohibited. </dc:rights>
+                        <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="textual rights statements map to dcterms:rights and rights URIs map to edm:rights">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:rights>This digital file is posted publicly for non-profit educational use only; all other uses are prohibited.</dcterms:rights>
+                <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+    <!-- Rights Holder (map and delimit) -->
+    <x:scenario label="rights holder delimits, normalizes, and maps">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dcterms:rightsHolder>Thing 1; Thing 2;</dcterms:rightsHolder>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="rightsHolder maps and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:rightsHolder>Thing 1</dcterms:rightsHolder>
+                <dcterms:rightsHolder>Thing 2</dcterms:rightsHolder>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+    
+<!-- Type and Format (map/parse, normalize, and delimit) -->
+<x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
+    <x:scenario label="Delimiting, remediating, and parsing">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+              <dc:type>apples;oranges;images;texts;photographs;</dc:type>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="type and format are mapped and delimited">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:format>apples</dcterms:format>
+          <dcterms:format>oranges</dcterms:format>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:type>Text</dcterms:type>
+          <dcterms:format>photographs</dcterms:format>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+
+    <x:scenario label="Text Type Remediation">
+      <x:scenario label="Text Type Remediation: Starts with lowercase text">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>textual kittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: Starts with mixed case text">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>TEXTresource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: text exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>text</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: text exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>TEXT</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: ends with text becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>hello-text</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-text'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Image Type Remediation">
+      <x:scenario label="Image Type Remediation: Starts with lowercase image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>image of kittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: Starts with mixed case Image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>ImAgEresource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Image Remediation: image exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>image</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: image exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>IMAGE</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: ends with image becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>hello-image</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-image'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Moving Image Type Remediation">
+      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, no spaces movingimage">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>movingimagekittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, single-spaced moving image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>moving imagekittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Starts with mixed case moving image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>MOVING ImAgEresource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Remediation: Moving Image exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>moving image</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Moving Image exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>MOVING IMAGE</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: ends with Moving Image becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>hello-moving-image</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-moving-image'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Sound Type Remediation">
+      <x:scenario label="Sound Type Remediation: Starts with lowercase sound">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>sound of kittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Starts with mixed case sound">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>SoUnDresource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Sound exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>sound</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Sound exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>SOUND</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: ends with sound becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>hello-sound</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-sound'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Physical Object Type Remediation">
+      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, no spaces physicalobject">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>physicalobjectkittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, single-spaced Physical Object">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>physical object kittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Starts with mixed case Physical Object">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>PHYSical Objectresource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Remediation: Physical Object exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>physical object</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Physical Object exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>PHYSICAL OBJECT</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: ends with Physical Object becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>hello-physical-object</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-physical-object'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Interactive Resource Type Remediation">
+      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, no spaces interactiveresource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>interactiveresourcepuppies</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, single-spaced Interactive Resource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>interactive resource kittens</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Starts with mixed case Interactive Resource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>InterActive Resource resources</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Remediation: Interactive Resource exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>interactive resource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Interactive Resource exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>INTERACTIVE RESOURCE</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: ends with Interactive Resource becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:dpla="http://dp.la/about/map/"
+           xmlns:edm="http://www.europeana.eu/schemas/edm/"
+           xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+           xmlns:oclc="http://purl.org/oclc/terms/"
+           xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+           xmlns:oclcterms="http://purl.org/oclc/terms/"
+           xmlns:schema="http://schema.org"
+           xmlns:padig="http://padigital.org/ns"
+           xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:type>hello-interactive-resource</dc:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-interactive-resource'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+      <!-- Language (map and delimit) -->
+    <x:scenario label="language becomes space-normalized dcterms:language">
+        <x:context>
+            <oai:record>
+                <metadata>
+                    <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dcterms="http://purl.org/dc/terms/"
+                        xmlns:dpla="http://dp.la/about/map/"
+                        xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                        xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                        xmlns:oclc="http://purl.org/oclc/terms/"
+                        xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                        xmlns:oclcterms="http://purl.org/oclc/terms/"
+                        xmlns:schema="http://schema.org"
+                        xmlns:padig="http://padigital.org/ns"
+                        xmlns:svcs="http://rdfs.org/sioc/services">
+                        <dc:language>english;fre;ENG</dc:language>
+                        <dc:language>aar</dc:language>
+                        <dc:language>abk</dc:language>
+                        <dc:language>ace</dc:language>
+                        <dc:language>ach</dc:language>
+                        <dc:language>ada</dc:language>
+                        <dc:language>ady</dc:language>
+                        <dc:language>afa</dc:language>
+                        <dc:language>afh</dc:language>
+                        <dc:language>afr</dc:language>
+                        <dc:language>ajm</dc:language>
+                        <dc:language>aka</dc:language>
+                        <dc:language>akk</dc:language>
+                        <dc:language>alb</dc:language>
+                        <dc:language>ale</dc:language>
+                        <dc:language>alg</dc:language>
+                        <dc:language>amh</dc:language>
+                        <dc:language>ang</dc:language>
+                        <dc:language>apa</dc:language>
+                        <dc:language>ara</dc:language>
+                        <dc:language>arc</dc:language>
+                        <dc:language>arg</dc:language>
+                        <dc:language>arm</dc:language>
+                        <dc:language>arn</dc:language>
+                        <dc:language>arp</dc:language>
+                        <dc:language>art</dc:language>
+                        <dc:language>arw</dc:language>
+                        <dc:language>asm</dc:language>
+                        <dc:language>ast</dc:language>
+                        <dc:language>ath</dc:language>
+                        <dc:language>aus</dc:language>
+                        <dc:language>ava</dc:language>
+                        <dc:language>ave</dc:language>
+                        <dc:language>awa</dc:language>
+                        <dc:language>aym</dc:language>
+                        <dc:language>aze</dc:language>
+                        <dc:language>bad</dc:language>
+                        <dc:language>bai</dc:language>
+                        <dc:language>bak</dc:language>
+                        <dc:language>bal</dc:language>
+                        <dc:language>bam</dc:language>
+                        <dc:language>ban</dc:language>
+                        <dc:language>baq</dc:language>
+                        <dc:language>bas</dc:language>
+                        <dc:language>bat</dc:language>
+                        <dc:language>bej</dc:language>
+                        <dc:language>bel</dc:language>
+                        <dc:language>bem</dc:language>
+                        <dc:language>ben</dc:language>
+                        <dc:language>ber</dc:language>
+                        <dc:language>bho</dc:language>
+                        <dc:language>bih</dc:language>
+                        <dc:language>bik</dc:language>
+                        <dc:language>bin</dc:language>
+                        <dc:language>bis</dc:language>
+                        <dc:language>bla</dc:language>
+                        <dc:language>bnt</dc:language>
+                        <dc:language>bos</dc:language>
+                        <dc:language>bra</dc:language>
+                        <dc:language>bre</dc:language>
+                        <dc:language>btk</dc:language>
+                        <dc:language>bua</dc:language>
+                        <dc:language>bug</dc:language>
+                        <dc:language>bul</dc:language>
+                        <dc:language>bur</dc:language>
+                        <dc:language>cad</dc:language>
+                        <dc:language>cai</dc:language>
+                        <dc:language>cam</dc:language>
+                        <dc:language>car</dc:language>
+                        <dc:language>cat</dc:language>
+                        <dc:language>cau</dc:language>
+                        <dc:language>ceb</dc:language>
+                        <dc:language>cel</dc:language>
+                        <dc:language>cha</dc:language>
+                        <dc:language>chb</dc:language>
+                        <dc:language>che</dc:language>
+                        <dc:language>chg</dc:language>
+                        <dc:language>chi</dc:language>
+                        <dc:language>chk</dc:language>
+                        <dc:language>chm</dc:language>
+                        <dc:language>chn</dc:language>
+                        <dc:language>cho</dc:language>
+                        <dc:language>chp</dc:language>
+                        <dc:language>chr</dc:language>
+                        <dc:language>chu</dc:language>
+                        <dc:language>chv</dc:language>
+                        <dc:language>chy</dc:language>
+                        <dc:language>cmc</dc:language>
+                        <dc:language>cop</dc:language>
+                        <dc:language>cor</dc:language>
+                        <dc:language>cos</dc:language>
+                        <dc:language>cpe</dc:language>
+                        <dc:language>cpf</dc:language>
+                        <dc:language>cpp</dc:language>
+                        <dc:language>cre</dc:language>
+                        <dc:language>crh</dc:language>
+                        <dc:language>crp</dc:language>
+                        <dc:language>cus</dc:language>
+                        <dc:language>cze</dc:language>
+                        <dc:language>dak</dc:language>
+                        <dc:language>dan</dc:language>
+                        <dc:language>dar</dc:language>
+                        <dc:language>day</dc:language>
+                        <dc:language>del</dc:language>
+                        <dc:language>den</dc:language>
+                        <dc:language>dgr</dc:language>
+                        <dc:language>din</dc:language>
+                        <dc:language>div</dc:language>
+                        <dc:language>doi</dc:language>
+                        <dc:language>dra</dc:language>
+                        <dc:language>dua</dc:language>
+                        <dc:language>dum</dc:language>
+                        <dc:language>dut</dc:language>
+                        <dc:language>dyu</dc:language>
+                        <dc:language>dzo</dc:language>
+                        <dc:language>efi</dc:language>
+                        <dc:language>egy</dc:language>
+                        <dc:language>eka</dc:language>
+                        <dc:language>elx</dc:language>
+                        <dc:language>eng</dc:language>
+                        <dc:language>enm</dc:language>
+                        <dc:language>epo</dc:language>
+                        <dc:language>esk</dc:language>
+                        <dc:language>esp</dc:language>
+                        <dc:language>est</dc:language>
+                        <dc:language>eth</dc:language>
+                        <dc:language>ewe</dc:language>
+                        <dc:language>ewo</dc:language>
+                        <dc:language>fan</dc:language>
+                        <dc:language>fao</dc:language>
+                        <dc:language>far</dc:language>
+                        <dc:language>fat</dc:language>
+                        <dc:language>fij</dc:language>
+                        <dc:language>fin</dc:language>
+                        <dc:language>fiu</dc:language>
+                        <dc:language>fon</dc:language>
+                        <dc:language>fre</dc:language>
+                        <dc:language>fri</dc:language>
+                        <dc:language>frm</dc:language>
+                        <dc:language>fro</dc:language>
+                        <dc:language>fry</dc:language>
+                        <dc:language>ful</dc:language>
+                        <dc:language>fur</dc:language>
+                        <dc:language>gaa</dc:language>
+                        <dc:language>gae</dc:language>
+                        <dc:language>gag</dc:language>
+                        <dc:language>gal</dc:language>
+                        <dc:language>gay</dc:language>
+                        <dc:language>gba</dc:language>
+                        <dc:language>gem</dc:language>
+                        <dc:language>geo</dc:language>
+                        <dc:language>ger</dc:language>
+                        <dc:language>gez</dc:language>
+                        <dc:language>gil</dc:language>
+                        <dc:language>gla</dc:language>
+                        <dc:language>gle</dc:language>
+                        <dc:language>glg</dc:language>
+                        <dc:language>glv</dc:language>
+                        <dc:language>gmh</dc:language>
+                        <dc:language>goh</dc:language>
+                        <dc:language>gon</dc:language>
+                        <dc:language>gor</dc:language>
+                        <dc:language>got</dc:language>
+                        <dc:language>grb</dc:language>
+                        <dc:language>grc</dc:language>
+                        <dc:language>gre</dc:language>
+                        <dc:language>grn</dc:language>
+                        <dc:language>gua</dc:language>
+                        <dc:language>guj</dc:language>
+                        <dc:language>gwi</dc:language>
+                        <dc:language>hai</dc:language>
+                        <dc:language>hat</dc:language>
+                        <dc:language>hau</dc:language>
+                        <dc:language>haw</dc:language>
+                        <dc:language>heb</dc:language>
+                        <dc:language>her</dc:language>
+                        <dc:language>hil</dc:language>
+                        <dc:language>him</dc:language>
+                        <dc:language>hin</dc:language>
+                        <dc:language>hit</dc:language>
+                        <dc:language>hmn</dc:language>
+                        <dc:language>hmo</dc:language>
+                        <dc:language>hun</dc:language>
+                        <dc:language>hup</dc:language>
+                        <dc:language>iba</dc:language>
+                        <dc:language>ibo</dc:language>
+                        <dc:language>ice</dc:language>
+                        <dc:language>ido</dc:language>
+                        <dc:language>iii</dc:language>
+                        <dc:language>ijo</dc:language>
+                        <dc:language>iku</dc:language>
+                        <dc:language>ile</dc:language>
+                        <dc:language>ilo</dc:language>
+                        <dc:language>ina</dc:language>
+                        <dc:language>inc</dc:language>
+                        <dc:language>ind</dc:language>
+                        <dc:language>ine</dc:language>
+                        <dc:language>inh</dc:language>
+                        <dc:language>int</dc:language>
+                        <dc:language>ipk</dc:language>
+                        <dc:language>ira</dc:language>
+                        <dc:language>iri</dc:language>
+                        <dc:language>iro</dc:language>
+                        <dc:language>ita</dc:language>
+                        <dc:language>jav</dc:language>
+                        <dc:language>jpn</dc:language>
+                        <dc:language>jpr</dc:language>
+                        <dc:language>jrb</dc:language>
+                        <dc:language>kaa</dc:language>
+                        <dc:language>kab</dc:language>
+                        <dc:language>kac</dc:language>
+                        <dc:language>kal</dc:language>
+                        <dc:language>kam</dc:language>
+                        <dc:language>kan</dc:language>
+                        <dc:language>kar</dc:language>
+                        <dc:language>kas</dc:language>
+                        <dc:language>kau</dc:language>
+                        <dc:language>kaw</dc:language>
+                        <dc:language>kaz</dc:language>
+                        <dc:language>kbd</dc:language>
+                        <dc:language>kha</dc:language>
+                        <dc:language>khi</dc:language>
+                        <dc:language>khm</dc:language>
+                        <dc:language>kho</dc:language>
+                        <dc:language>kik</dc:language>
+                        <dc:language>kin</dc:language>
+                        <dc:language>kir</dc:language>
+                        <dc:language>kmb</dc:language>
+                        <dc:language>kok</dc:language>
+                        <dc:language>kom</dc:language>
+                        <dc:language>kon</dc:language>
+                        <dc:language>kor</dc:language>
+                        <dc:language>kos</dc:language>
+                        <dc:language>kpe</dc:language>
+                        <dc:language>kro</dc:language>
+                        <dc:language>kru</dc:language>
+                        <dc:language>kua</dc:language>
+                        <dc:language>kum</dc:language>
+                        <dc:language>kur</dc:language>
+                        <dc:language>kus</dc:language>
+                        <dc:language>kut</dc:language>
+                        <dc:language>lad</dc:language>
+                        <dc:language>lah</dc:language>
+                        <dc:language>lam</dc:language>
+                        <dc:language>lan</dc:language>
+                        <dc:language>lao</dc:language>
+                        <dc:language>lap</dc:language>
+                        <dc:language>lat</dc:language>
+                        <dc:language>lav</dc:language>
+                        <dc:language>lez</dc:language>
+                        <dc:language>lim</dc:language>
+                        <dc:language>lin</dc:language>
+                        <dc:language>lit</dc:language>
+                        <dc:language>lol</dc:language>
+                        <dc:language>loz</dc:language>
+                        <dc:language>ltz</dc:language>
+                        <dc:language>lua</dc:language>
+                        <dc:language>lub</dc:language>
+                        <dc:language>lug</dc:language>
+                        <dc:language>lui</dc:language>
+                        <dc:language>lun</dc:language>
+                        <dc:language>luo</dc:language>
+                        <dc:language>lus</dc:language>
+                        <dc:language>mac</dc:language>
+                        <dc:language>mad</dc:language>
+                        <dc:language>mag</dc:language>
+                        <dc:language>mah</dc:language>
+                        <dc:language>mai</dc:language>
+                        <dc:language>mak</dc:language>
+                        <dc:language>mal</dc:language>
+                        <dc:language>man</dc:language>
+                        <dc:language>mao</dc:language>
+                        <dc:language>map</dc:language>
+                        <dc:language>mar</dc:language>
+                        <dc:language>mas</dc:language>
+                        <dc:language>max</dc:language>
+                        <dc:language>may</dc:language>
+                        <dc:language>mdr</dc:language>
+                        <dc:language>men</dc:language>
+                        <dc:language>mga</dc:language>
+                        <dc:language>mic</dc:language>
+                        <dc:language>min</dc:language>
+                        <dc:language>mis</dc:language>
+                        <dc:language>mkh</dc:language>
+                        <dc:language>mla</dc:language>
+                        <dc:language>mlg</dc:language>
+                        <dc:language>mlt</dc:language>
+                        <dc:language>mnc</dc:language>
+                        <dc:language>mni</dc:language>
+                        <dc:language>mno</dc:language>
+                        <dc:language>moh</dc:language>
+                        <dc:language>mol</dc:language>
+                        <dc:language>mon</dc:language>
+                        <dc:language>mos</dc:language>
+                        <dc:language>mul</dc:language>
+                        <dc:language>mun</dc:language>
+                        <dc:language>mus</dc:language>
+                        <dc:language>mwr</dc:language>
+                        <dc:language>myn</dc:language>
+                        <dc:language>nah</dc:language>
+                        <dc:language>nai</dc:language>
+                        <dc:language>nap</dc:language>
+                        <dc:language>nau</dc:language>
+                        <dc:language>nav</dc:language>
+                        <dc:language>nbl</dc:language>
+                        <dc:language>nde</dc:language>
+                        <dc:language>ndo</dc:language>
+                        <dc:language>nds</dc:language>
+                        <dc:language>nep</dc:language>
+                        <dc:language>new</dc:language>
+                        <dc:language>nia</dc:language>
+                        <dc:language>nic</dc:language>
+                        <dc:language>niu</dc:language>
+                        <dc:language>nno</dc:language>
+                        <dc:language>nob</dc:language>
+                        <dc:language>nog</dc:language>
+                        <dc:language>non</dc:language>
+                        <dc:language>nor</dc:language>
+                        <dc:language>nso</dc:language>
+                        <dc:language>nub</dc:language>
+                        <dc:language>nya</dc:language>
+                        <dc:language>nym</dc:language>
+                        <dc:language>nyn</dc:language>
+                        <dc:language>nyo</dc:language>
+                        <dc:language>nzi</dc:language>
+                        <dc:language>oci</dc:language>
+                        <dc:language>oji</dc:language>
+                        <dc:language>ori</dc:language>
+                        <dc:language>orm</dc:language>
+                        <dc:language>osa</dc:language>
+                        <dc:language>oss</dc:language>
+                        <dc:language>ota</dc:language>
+                        <dc:language>oto</dc:language>
+                        <dc:language>paa</dc:language>
+                        <dc:language>pag</dc:language>
+                        <dc:language>pal</dc:language>
+                        <dc:language>pam</dc:language>
+                        <dc:language>pan</dc:language>
+                        <dc:language>pap</dc:language>
+                        <dc:language>pau</dc:language>
+                        <dc:language>peo</dc:language>
+                        <dc:language>per</dc:language>
+                        <dc:language>phi</dc:language>
+                        <dc:language>phn</dc:language>
+                        <dc:language>pli</dc:language>
+                        <dc:language>pol</dc:language>
+                        <dc:language>pon</dc:language>
+                        <dc:language>por</dc:language>
+                        <dc:language>pra</dc:language>
+                        <dc:language>pro</dc:language>
+                        <dc:language>pus</dc:language>
+                        <dc:language>que</dc:language>
+                        <dc:language>raj</dc:language>
+                        <dc:language>rap</dc:language>
+                        <dc:language>rar</dc:language>
+                        <dc:language>roa</dc:language>
+                        <dc:language>roh</dc:language>
+                        <dc:language>rom</dc:language>
+                        <dc:language>rum</dc:language>
+                        <dc:language>run</dc:language>
+                        <dc:language>rus</dc:language>
+                        <dc:language>sad</dc:language>
+                        <dc:language>sag</dc:language>
+                        <dc:language>sah</dc:language>
+                        <dc:language>sai</dc:language>
+                        <dc:language>sal</dc:language>
+                        <dc:language>sam</dc:language>
+                        <dc:language>san</dc:language>
+                        <dc:language>sao</dc:language>
+                        <dc:language>sas</dc:language>
+                        <dc:language>sat</dc:language>
+                        <dc:language>scc</dc:language>
+                        <dc:language>sco</dc:language>
+                        <dc:language>scr</dc:language>
+                        <dc:language>sel</dc:language>
+                        <dc:language>sem</dc:language>
+                        <dc:language>sga</dc:language>
+                        <dc:language>sgn</dc:language>
+                        <dc:language>shn</dc:language>
+                        <dc:language>sho</dc:language>
+                        <dc:language>sid</dc:language>
+                        <dc:language>sin</dc:language>
+                        <dc:language>sio</dc:language>
+                        <dc:language>sit</dc:language>
+                        <dc:language>sla</dc:language>
+                        <dc:language>slo</dc:language>
+                        <dc:language>slv</dc:language>
+                        <dc:language>sma</dc:language>
+                        <dc:language>sme</dc:language>
+                        <dc:language>smi</dc:language>
+                        <dc:language>smj</dc:language>
+                        <dc:language>smn</dc:language>
+                        <dc:language>smo</dc:language>
+                        <dc:language>sms</dc:language>
+                        <dc:language>sna</dc:language>
+                        <dc:language>snd</dc:language>
+                        <dc:language>snh</dc:language>
+                        <dc:language>snk</dc:language>
+                        <dc:language>sog</dc:language>
+                        <dc:language>som</dc:language>
+                        <dc:language>son</dc:language>
+                        <dc:language>sot</dc:language>
+                        <dc:language>spa</dc:language>
+                        <dc:language>srd</dc:language>
+                        <dc:language>srr</dc:language>
+                        <dc:language>ssa</dc:language>
+                        <dc:language>sso</dc:language>
+                        <dc:language>ssw</dc:language>
+                        <dc:language>suk</dc:language>
+                        <dc:language>sun</dc:language>
+                        <dc:language>sus</dc:language>
+                        <dc:language>sux</dc:language>
+                        <dc:language>swa</dc:language>
+                        <dc:language>swe</dc:language>
+                        <dc:language>swz</dc:language>
+                        <dc:language>syr</dc:language>
+                        <dc:language>tag</dc:language>
+                        <dc:language>tah</dc:language>
+                        <dc:language>tai</dc:language>
+                        <dc:language>taj</dc:language>
+                        <dc:language>tam</dc:language>
+                        <dc:language>tar</dc:language>
+                        <dc:language>tat</dc:language>
+                        <dc:language>tel</dc:language>
+                        <dc:language>tem</dc:language>
+                        <dc:language>ter</dc:language>
+                        <dc:language>tet</dc:language>
+                        <dc:language>tgk</dc:language>
+                        <dc:language>tgl</dc:language>
+                        <dc:language>tha</dc:language>
+                        <dc:language>tib</dc:language>
+                        <dc:language>tig</dc:language>
+                        <dc:language>tir</dc:language>
+                        <dc:language>tiv</dc:language>
+                        <dc:language>tkl</dc:language>
+                        <dc:language>tli</dc:language>
+                        <dc:language>tmh</dc:language>
+                        <dc:language>tog</dc:language>
+                        <dc:language>ton</dc:language>
+                        <dc:language>tpi</dc:language>
+                        <dc:language>tru</dc:language>
+                        <dc:language>tsi</dc:language>
+                        <dc:language>tsn</dc:language>
+                        <dc:language>tso</dc:language>
+                        <dc:language>tsw</dc:language>
+                        <dc:language>tuk</dc:language>
+                        <dc:language>tum</dc:language>
+                        <dc:language>tup</dc:language>
+                        <dc:language>tur</dc:language>
+                        <dc:language>tut</dc:language>
+                        <dc:language>tvl</dc:language>
+                        <dc:language>twi</dc:language>
+                        <dc:language>tyv</dc:language>
+                        <dc:language>udm</dc:language>
+                        <dc:language>uga</dc:language>
+                        <dc:language>uig</dc:language>
+                        <dc:language>ukr</dc:language>
+                        <dc:language>umb</dc:language>
+                        <dc:language>und</dc:language>
+                        <dc:language>urd</dc:language>
+                        <dc:language>uzb</dc:language>
+                        <dc:language>vai</dc:language>
+                        <dc:language>ven</dc:language>
+                        <dc:language>vie</dc:language>
+                        <dc:language>vol</dc:language>
+                        <dc:language>vot</dc:language>
+                        <dc:language>wak</dc:language>
+                        <dc:language>wal</dc:language>
+                        <dc:language>war</dc:language>
+                        <dc:language>was</dc:language>
+                        <dc:language>wel</dc:language>
+                        <dc:language>wen</dc:language>
+                        <dc:language>wln</dc:language>
+                        <dc:language>wol</dc:language>
+                        <dc:language>xal</dc:language>
+                        <dc:language>xho</dc:language>
+                        <dc:language>yao</dc:language>
+                        <dc:language>yap</dc:language>
+                        <dc:language>yid</dc:language>
+                        <dc:language>yor</dc:language>
+                        <dc:language>ypk</dc:language>
+                        <dc:language>zap</dc:language>
+                        <dc:language>zen</dc:language>
+                        <dc:language>zha</dc:language>
+                        <dc:language>znd</dc:language>
+                        <dc:language>zul</dc:language>
+                        <dc:language>zun</dc:language>
+                    </oai_dc:dc>
+                </metadata>
+            </oai:record>
+        </x:context>
+        <x:expect label="language normalizes, maps, and delimits">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:language>english</dcterms:language>
+                <dcterms:language>French</dcterms:language>
+                <dcterms:language>English</dcterms:language>
+                <dcterms:language>Afar</dcterms:language>
+                <dcterms:language>Abkhaz</dcterms:language>
+                <dcterms:language>Achinese</dcterms:language>
+                <dcterms:language>Acoli</dcterms:language>
+                <dcterms:language>Adangme</dcterms:language>
+                <dcterms:language>Adygei</dcterms:language>
+                <dcterms:language>Afroasiatic (Other)</dcterms:language>
+                <dcterms:language>Afrihili (Artificial language)</dcterms:language>
+                <dcterms:language>Afrikaans</dcterms:language>
+                <dcterms:language>Aljamia</dcterms:language>
+                <dcterms:language>Akan</dcterms:language>
+                <dcterms:language>Akkadian</dcterms:language>
+                <dcterms:language>Albanian</dcterms:language>
+                <dcterms:language>Aleut</dcterms:language>
+                <dcterms:language>Algonquian (Other)</dcterms:language>
+                <dcterms:language>Amharic</dcterms:language>
+                <dcterms:language>English, Old (ca. 450-1100)</dcterms:language>
+                <dcterms:language>Apache languages</dcterms:language>
+                <dcterms:language>Arabic</dcterms:language>
+                <dcterms:language>Aramaic</dcterms:language>
+                <dcterms:language>Aragonese Spanish</dcterms:language>
+                <dcterms:language>Armenian</dcterms:language>
+                <dcterms:language>Mapuche</dcterms:language>
+                <dcterms:language>Arapaho</dcterms:language>
+                <dcterms:language>Artificial (Other)</dcterms:language>
+                <dcterms:language>Arawak</dcterms:language>
+                <dcterms:language>Assamese</dcterms:language>
+                <dcterms:language>Bable</dcterms:language>
+                <dcterms:language>Athapascan (Other)</dcterms:language>
+                <dcterms:language>Australian languages</dcterms:language>
+                <dcterms:language>Avaric</dcterms:language>
+                <dcterms:language>Avestan</dcterms:language>
+                <dcterms:language>Awadhi</dcterms:language>
+                <dcterms:language>Aymara</dcterms:language>
+                <dcterms:language>Azerbaijani</dcterms:language>
+                <dcterms:language>Banda</dcterms:language>
+                <dcterms:language>Bamileke languages</dcterms:language>
+                <dcterms:language>Bashkir</dcterms:language>
+                <dcterms:language>Baluchi</dcterms:language>
+                <dcterms:language>Bambara</dcterms:language>
+                <dcterms:language>Balinese</dcterms:language>
+                <dcterms:language>Basque</dcterms:language>
+                <dcterms:language>Basa</dcterms:language>
+                <dcterms:language>Baltic (Other)</dcterms:language>
+                <dcterms:language>Beja</dcterms:language>
+                <dcterms:language>Belarusian</dcterms:language>
+                <dcterms:language>Bemba</dcterms:language>
+                <dcterms:language>Bengali</dcterms:language>
+                <dcterms:language>Berber (Other)</dcterms:language>
+                <dcterms:language>Bhojpuri</dcterms:language>
+                <dcterms:language>Bihari</dcterms:language>
+                <dcterms:language>Bikol</dcterms:language>
+                <dcterms:language>Edo</dcterms:language>
+                <dcterms:language>Bislama</dcterms:language>
+                <dcterms:language>Siksika</dcterms:language>
+                <dcterms:language>Bantu (Other)</dcterms:language>
+                <dcterms:language>Bosnian</dcterms:language>
+                <dcterms:language>Braj</dcterms:language>
+                <dcterms:language>Breton</dcterms:language>
+                <dcterms:language>Batak</dcterms:language>
+                <dcterms:language>Buriat</dcterms:language>
+                <dcterms:language>Bugis</dcterms:language>
+                <dcterms:language>Bulgarian</dcterms:language>
+                <dcterms:language>Burmese</dcterms:language>
+                <dcterms:language>Caddo</dcterms:language>
+                <dcterms:language>Central American Indian (Other)</dcterms:language>
+                <dcterms:language>Khmer</dcterms:language>
+                <dcterms:language>Carib</dcterms:language>
+                <dcterms:language>Catalan</dcterms:language>
+                <dcterms:language>Caucasian (Other)</dcterms:language>
+                <dcterms:language>Cebuano</dcterms:language>
+                <dcterms:language>Celtic (Other)</dcterms:language>
+                <dcterms:language>Chamorro</dcterms:language>
+                <dcterms:language>Chibcha</dcterms:language>
+                <dcterms:language>Chechen</dcterms:language>
+                <dcterms:language>Chagatai</dcterms:language>
+                <dcterms:language>Chinese</dcterms:language>
+                <dcterms:language>Truk</dcterms:language>
+                <dcterms:language>Mari</dcterms:language>
+                <dcterms:language>Chinook jargon</dcterms:language>
+                <dcterms:language>Choctaw</dcterms:language>
+                <dcterms:language>Chipewyan</dcterms:language>
+                <dcterms:language>Cherokee</dcterms:language>
+                <dcterms:language>Church Slavic</dcterms:language>
+                <dcterms:language>Chuvash</dcterms:language>
+                <dcterms:language>Cheyenne</dcterms:language>
+                <dcterms:language>Chamic languages</dcterms:language>
+                <dcterms:language>Coptic</dcterms:language>
+                <dcterms:language>Cornish</dcterms:language>
+                <dcterms:language>Corsican</dcterms:language>
+                <dcterms:language>Creoles and Pidgins, English-based (Other)</dcterms:language>
+                <dcterms:language>Creoles and Pidgins, French-based (Other)</dcterms:language>
+                <dcterms:language>Creoles and Pidgins, Portuguese-based (Other)</dcterms:language>
+                <dcterms:language>Cree</dcterms:language>
+                <dcterms:language>Crimean Tatar</dcterms:language>
+                <dcterms:language>Creoles and Pidgins (Other)</dcterms:language>
+                <dcterms:language>Cushitic (Other)</dcterms:language>
+                <dcterms:language>Czech</dcterms:language>
+                <dcterms:language>Dakota</dcterms:language>
+                <dcterms:language>Danish</dcterms:language>
+                <dcterms:language>Dargwa</dcterms:language>
+                <dcterms:language>Dayak</dcterms:language>
+                <dcterms:language>Delaware</dcterms:language>
+                <dcterms:language>Slave</dcterms:language>
+                <dcterms:language>Dogrib</dcterms:language>
+                <dcterms:language>Dinka</dcterms:language>
+                <dcterms:language>Divehi</dcterms:language>
+                <dcterms:language>Dogri</dcterms:language>
+                <dcterms:language>Dravidian (Other)</dcterms:language>
+                <dcterms:language>Duala</dcterms:language>
+                <dcterms:language>Dutch, Middle (ca. 1050-1350)</dcterms:language>
+                <dcterms:language>Dutch</dcterms:language>
+                <dcterms:language>Dyula</dcterms:language>
+                <dcterms:language>Dzongkha</dcterms:language>
+                <dcterms:language>Efik</dcterms:language>
+                <dcterms:language>Egyptian</dcterms:language>
+                <dcterms:language>Ekajuk</dcterms:language>
+                <dcterms:language>Elamite</dcterms:language>
+                <dcterms:language>English</dcterms:language>
+                <dcterms:language>English, Middle (1100-1500)</dcterms:language>
+                <dcterms:language>Esperanto</dcterms:language>
+                <dcterms:language>Eskimo languages</dcterms:language>
+                <dcterms:language>Esperanto</dcterms:language>
+                <dcterms:language>Estonian</dcterms:language>
+                <dcterms:language>Ethiopic</dcterms:language>
+                <dcterms:language>Ewe</dcterms:language>
+                <dcterms:language>Ewondo</dcterms:language>
+                <dcterms:language>Fang</dcterms:language>
+                <dcterms:language>Faroese</dcterms:language>
+                <dcterms:language>Faroese</dcterms:language>
+                <dcterms:language>Fanti</dcterms:language>
+                <dcterms:language>Fijian</dcterms:language>
+                <dcterms:language>Finnish</dcterms:language>
+                <dcterms:language>Finno-Ugrian (Other)</dcterms:language>
+                <dcterms:language>Fon</dcterms:language>
+                <dcterms:language>French</dcterms:language>
+                <dcterms:language>Frisian</dcterms:language>
+                <dcterms:language>French, Middle (ca. 1400-1600)</dcterms:language>
+                <dcterms:language>French, Old (ca. 842-1400)</dcterms:language>
+                <dcterms:language>Frisian</dcterms:language>
+                <dcterms:language>Fula</dcterms:language>
+                <dcterms:language>Friulian</dcterms:language>
+                <dcterms:language>Ga</dcterms:language>
+                <dcterms:language>Scottish Gaelic</dcterms:language>
+                <dcterms:language>Galician</dcterms:language>
+                <dcterms:language>Oromo</dcterms:language>
+                <dcterms:language>Gayo</dcterms:language>
+                <dcterms:language>Gbaya</dcterms:language>
+                <dcterms:language>Germanic (Other)</dcterms:language>
+                <dcterms:language>Georgian</dcterms:language>
+                <dcterms:language>German</dcterms:language>
+                <dcterms:language>Ethiopic</dcterms:language>
+                <dcterms:language>Gilbertese</dcterms:language>
+                <dcterms:language>Scottish Gaelic</dcterms:language>
+                <dcterms:language>Irish</dcterms:language>
+                <dcterms:language>Galician</dcterms:language>
+                <dcterms:language>Manx</dcterms:language>
+                <dcterms:language>German, Middle High (ca. 1050-1500)</dcterms:language>
+                <dcterms:language>German, Old High (ca. 750-1050)</dcterms:language>
+                <dcterms:language>Gondi</dcterms:language>
+                <dcterms:language>Gorontalo</dcterms:language>
+                <dcterms:language>Gothic</dcterms:language>
+                <dcterms:language>Grebo</dcterms:language>
+                <dcterms:language>Greek, Ancient (to 1453)</dcterms:language>
+                <dcterms:language>Greek, Modern (1453- )</dcterms:language>
+                <dcterms:language>Guarani</dcterms:language>
+                <dcterms:language>Guarani</dcterms:language>
+                <dcterms:language>Gujarati</dcterms:language>
+                <dcterms:language>Gwich'in</dcterms:language>
+                <dcterms:language>Haida</dcterms:language>
+                <dcterms:language>Haitian French Creole</dcterms:language>
+                <dcterms:language>Hausa</dcterms:language>
+                <dcterms:language>Hawaiian</dcterms:language>
+                <dcterms:language>Hebrew</dcterms:language>
+                <dcterms:language>Herero</dcterms:language>
+                <dcterms:language>Hiligaynon</dcterms:language>
+                <dcterms:language>Himachali</dcterms:language>
+                <dcterms:language>Hindi</dcterms:language>
+                <dcterms:language>Hittite</dcterms:language>
+                <dcterms:language>Hmong</dcterms:language>
+                <dcterms:language>Hiri Motu</dcterms:language>
+                <dcterms:language>Hungarian</dcterms:language>
+                <dcterms:language>Hupa</dcterms:language>
+                <dcterms:language>Iban</dcterms:language>
+                <dcterms:language>Igbo</dcterms:language>
+                <dcterms:language>Icelandic</dcterms:language>
+                <dcterms:language>Ido</dcterms:language>
+                <dcterms:language>Sichuan Yi</dcterms:language>
+                <dcterms:language>Ijo</dcterms:language>
+                <dcterms:language>Inuktitut</dcterms:language>
+                <dcterms:language>Interlingue</dcterms:language>
+                <dcterms:language>Iloko</dcterms:language>
+                <dcterms:language>Interlingua (International Auxiliary Language Association)</dcterms:language>
+                <dcterms:language>Indic (Other)</dcterms:language>
+                <dcterms:language>Indonesian</dcterms:language>
+                <dcterms:language>Indo-European (Other)</dcterms:language>
+                <dcterms:language>Ingush</dcterms:language>
+                <dcterms:language>Interlingua (International Auxiliary Language Association)</dcterms:language>
+                <dcterms:language>Inupiaq</dcterms:language>
+                <dcterms:language>Iranian (Other)</dcterms:language>
+                <dcterms:language>Irish</dcterms:language>
+                <dcterms:language>Iroquoian (Other)</dcterms:language>
+                <dcterms:language>Italian</dcterms:language>
+                <dcterms:language>Javanese</dcterms:language>
+                <dcterms:language>Japanese</dcterms:language>
+                <dcterms:language>Judeo-Persian</dcterms:language>
+                <dcterms:language>Judeo-Arabic</dcterms:language>
+                <dcterms:language>Kara-Kalpak</dcterms:language>
+                <dcterms:language>Kabyle</dcterms:language>
+                <dcterms:language>Kachin</dcterms:language>
+                <dcterms:language>Kalatdlisut</dcterms:language>
+                <dcterms:language>Kamba</dcterms:language>
+                <dcterms:language>Kannada</dcterms:language>
+                <dcterms:language>Karen</dcterms:language>
+                <dcterms:language>Kashmiri</dcterms:language>
+                <dcterms:language>Kanuri</dcterms:language>
+                <dcterms:language>Kawi</dcterms:language>
+                <dcterms:language>Kazakh</dcterms:language>
+                <dcterms:language>Kabardian</dcterms:language>
+                <dcterms:language>Khasi</dcterms:language>
+                <dcterms:language>Khoisan (Other)</dcterms:language>
+                <dcterms:language>Khmer</dcterms:language>
+                <dcterms:language>Khotanese</dcterms:language>
+                <dcterms:language>Kikuyu</dcterms:language>
+                <dcterms:language>Kinyarwanda</dcterms:language>
+                <dcterms:language>Kyrgyz</dcterms:language>
+                <dcterms:language>Kimbundu</dcterms:language>
+                <dcterms:language>Konkani</dcterms:language>
+                <dcterms:language>Komi</dcterms:language>
+                <dcterms:language>Kongo</dcterms:language>
+                <dcterms:language>Korean</dcterms:language>
+                <dcterms:language>Kusaie</dcterms:language>
+                <dcterms:language>Kpelle</dcterms:language>
+                <dcterms:language>Kru</dcterms:language>
+                <dcterms:language>Kurukh</dcterms:language>
+                <dcterms:language>Kuanyama</dcterms:language>
+                <dcterms:language>Kumyk</dcterms:language>
+                <dcterms:language>Kurdish</dcterms:language>
+                <dcterms:language>Kusaie</dcterms:language>
+                <dcterms:language>Kutenai</dcterms:language>
+                <dcterms:language>Ladino</dcterms:language>
+                <dcterms:language>Lahnda</dcterms:language>
+                <dcterms:language>Lamba</dcterms:language>
+                <dcterms:language>Occitan (post-1500)</dcterms:language>
+                <dcterms:language>Lao</dcterms:language>
+                <dcterms:language>Sami</dcterms:language>
+                <dcterms:language>Latin</dcterms:language>
+                <dcterms:language>Latvian</dcterms:language>
+                <dcterms:language>Lezgian</dcterms:language>
+                <dcterms:language>Limburgish</dcterms:language>
+                <dcterms:language>Lingala</dcterms:language>
+                <dcterms:language>Lithuanian</dcterms:language>
+                <dcterms:language>Mongo-Nkundu</dcterms:language>
+                <dcterms:language>Lozi</dcterms:language>
+                <dcterms:language>Letzeburgesch</dcterms:language>
+                <dcterms:language>Luba-Lulua</dcterms:language>
+                <dcterms:language>Luba-Katanga</dcterms:language>
+                <dcterms:language>Ganda</dcterms:language>
+                <dcterms:language>Luiseno</dcterms:language>
+                <dcterms:language>Lunda</dcterms:language>
+                <dcterms:language>Luo (Kenya and Tanzania)</dcterms:language>
+                <dcterms:language>Lushai</dcterms:language>
+                <dcterms:language>Macedonian</dcterms:language>
+                <dcterms:language>Madurese</dcterms:language>
+                <dcterms:language>Magahi</dcterms:language>
+                <dcterms:language>Marshallese</dcterms:language>
+                <dcterms:language>Maithili</dcterms:language>
+                <dcterms:language>Makasar</dcterms:language>
+                <dcterms:language>Malayalam</dcterms:language>
+                <dcterms:language>Mandingo</dcterms:language>
+                <dcterms:language>Maori</dcterms:language>
+                <dcterms:language>Austronesian (Other)</dcterms:language>
+                <dcterms:language>Marathi</dcterms:language>
+                <dcterms:language>Masai</dcterms:language>
+                <dcterms:language>Manx</dcterms:language>
+                <dcterms:language>Malay</dcterms:language>
+                <dcterms:language>Mandar</dcterms:language>
+                <dcterms:language>Mende</dcterms:language>
+                <dcterms:language>Irish, Middle (ca. 1100-1550)</dcterms:language>
+                <dcterms:language>Micmac</dcterms:language>
+                <dcterms:language>Minangkabau</dcterms:language>
+                <dcterms:language>Miscellaneous languages</dcterms:language>
+                <dcterms:language>Mon-Khmer (Other)</dcterms:language>
+                <dcterms:language>Malagasy</dcterms:language>
+                <dcterms:language>Malagasy</dcterms:language>
+                <dcterms:language>Maltese</dcterms:language>
+                <dcterms:language>Manchu</dcterms:language>
+                <dcterms:language>Manipuri</dcterms:language>
+                <dcterms:language>Manobo languages</dcterms:language>
+                <dcterms:language>Mohawk</dcterms:language>
+                <dcterms:language>Moldavian</dcterms:language>
+                <dcterms:language>Mongolian</dcterms:language>
+                <dcterms:language>Moore</dcterms:language>
+                <dcterms:language>Multiple languages</dcterms:language>
+                <dcterms:language>Munda (Other)</dcterms:language>
+                <dcterms:language>Creek</dcterms:language>
+                <dcterms:language>Marwari</dcterms:language>
+                <dcterms:language>Mayan languages</dcterms:language>
+                <dcterms:language>Nahuatl</dcterms:language>
+                <dcterms:language>North American Indian (Other)</dcterms:language>
+                <dcterms:language>Neapolitan Italian</dcterms:language>
+                <dcterms:language>Nauru</dcterms:language>
+                <dcterms:language>Navajo</dcterms:language>
+                <dcterms:language>Ndebele (South Africa)</dcterms:language>
+                <dcterms:language>Ndebele (Zimbabwe)</dcterms:language>
+                <dcterms:language>Ndonga</dcterms:language>
+                <dcterms:language>Low German</dcterms:language>
+                <dcterms:language>Nepali</dcterms:language>
+                <dcterms:language>Newari</dcterms:language>
+                <dcterms:language>Nias</dcterms:language>
+                <dcterms:language>Niger-Kordofanian (Other)</dcterms:language>
+                <dcterms:language>Niuean</dcterms:language>
+                <dcterms:language>Norwegian (Nynorsk)</dcterms:language>
+                <dcterms:language>Norwegian (Bokmal)</dcterms:language>
+                <dcterms:language>Nogai</dcterms:language>
+                <dcterms:language>Old Norse</dcterms:language>
+                <dcterms:language>Norwegian</dcterms:language>
+                <dcterms:language>Northern Sotho</dcterms:language>
+                <dcterms:language>Nubian languages</dcterms:language>
+                <dcterms:language>Nyanja</dcterms:language>
+                <dcterms:language>Nyamwezi</dcterms:language>
+                <dcterms:language>Nyankole</dcterms:language>
+                <dcterms:language>Nyoro</dcterms:language>
+                <dcterms:language>Nzima</dcterms:language>
+                <dcterms:language>Occitan (post-1500)</dcterms:language>
+                <dcterms:language>Ojibwa</dcterms:language>
+                <dcterms:language>Oriya</dcterms:language>
+                <dcterms:language>Oromo</dcterms:language>
+                <dcterms:language>Osage</dcterms:language>
+                <dcterms:language>Ossetic</dcterms:language>
+                <dcterms:language>Turkish, Ottoman</dcterms:language>
+                <dcterms:language>Otomian languages</dcterms:language>
+                <dcterms:language>Papuan (Other)</dcterms:language>
+                <dcterms:language>Pangasinan</dcterms:language>
+                <dcterms:language>Pahlavi</dcterms:language>
+                <dcterms:language>Pampanga</dcterms:language>
+                <dcterms:language>Panjabi</dcterms:language>
+                <dcterms:language>Papiamento</dcterms:language>
+                <dcterms:language>Palauan</dcterms:language>
+                <dcterms:language>Old Persian (ca. 600-400 B.C.)</dcterms:language>
+                <dcterms:language>Persian</dcterms:language>
+                <dcterms:language>Philippine (Other)</dcterms:language>
+                <dcterms:language>Phoenician</dcterms:language>
+                <dcterms:language>Pali</dcterms:language>
+                <dcterms:language>Polish</dcterms:language>
+                <dcterms:language>Ponape</dcterms:language>
+                <dcterms:language>Portuguese</dcterms:language>
+                <dcterms:language>Prakrit languages</dcterms:language>
+                <dcterms:language>Provencal (to 1500)</dcterms:language>
+                <dcterms:language>Pushto</dcterms:language>
+                <dcterms:language>Quechua</dcterms:language>
+                <dcterms:language>Rajasthani</dcterms:language>
+                <dcterms:language>Rapanui</dcterms:language>
+                <dcterms:language>Rarotongan</dcterms:language>
+                <dcterms:language>Romance (Other)</dcterms:language>
+                <dcterms:language>Raeto-Romance</dcterms:language>
+                <dcterms:language>Romani</dcterms:language>
+                <dcterms:language>Romanian</dcterms:language>
+                <dcterms:language>Rundi</dcterms:language>
+                <dcterms:language>Russian</dcterms:language>
+                <dcterms:language>Sandawe</dcterms:language>
+                <dcterms:language>Sango (Ubangi Creole)</dcterms:language>
+                <dcterms:language>Yakut</dcterms:language>
+                <dcterms:language>South American Indian (Other)</dcterms:language>
+                <dcterms:language>Salishan languages</dcterms:language>
+                <dcterms:language>Samaritan Aramaic</dcterms:language>
+                <dcterms:language>Sanskrit</dcterms:language>
+                <dcterms:language>Samoan</dcterms:language>
+                <dcterms:language>Sasak</dcterms:language>
+                <dcterms:language>Santali</dcterms:language>
+                <dcterms:language>Serbian</dcterms:language>
+                <dcterms:language>Scots</dcterms:language>
+                <dcterms:language>Croatian</dcterms:language>
+                <dcterms:language>Selkup</dcterms:language>
+                <dcterms:language>Semitic (Other)</dcterms:language>
+                <dcterms:language>Irish, Old (to 1100)</dcterms:language>
+                <dcterms:language>Sign languages</dcterms:language>
+                <dcterms:language>Shan</dcterms:language>
+                <dcterms:language>Shona</dcterms:language>
+                <dcterms:language>Sidamo</dcterms:language>
+                <dcterms:language>Sinhalese</dcterms:language>
+                <dcterms:language>Siouan (Other)</dcterms:language>
+                <dcterms:language>Sino-Tibetan (Other)</dcterms:language>
+                <dcterms:language>Slavic (Other)</dcterms:language>
+                <dcterms:language>Slovak</dcterms:language>
+                <dcterms:language>Slovenian</dcterms:language>
+                <dcterms:language>Southern Sami</dcterms:language>
+                <dcterms:language>Northern Sami</dcterms:language>
+                <dcterms:language>Sami</dcterms:language>
+                <dcterms:language>Lule Sami</dcterms:language>
+                <dcterms:language>Inari Sami</dcterms:language>
+                <dcterms:language>Samoan</dcterms:language>
+                <dcterms:language>Skolt Sami</dcterms:language>
+                <dcterms:language>Shona</dcterms:language>
+                <dcterms:language>Sindhi</dcterms:language>
+                <dcterms:language>Sinhalese</dcterms:language>
+                <dcterms:language>Soninke</dcterms:language>
+                <dcterms:language>Sogdian</dcterms:language>
+                <dcterms:language>Somali</dcterms:language>
+                <dcterms:language>Songhai</dcterms:language>
+                <dcterms:language>Sotho</dcterms:language>
+                <dcterms:language>Spanish</dcterms:language>
+                <dcterms:language>Sardinian</dcterms:language>
+                <dcterms:language>Serer</dcterms:language>
+                <dcterms:language>Nilo-Saharan (Other)</dcterms:language>
+                <dcterms:language>Sotho</dcterms:language>
+                <dcterms:language>Swazi</dcterms:language>
+                <dcterms:language>Sukuma</dcterms:language>
+                <dcterms:language>Sundanese</dcterms:language>
+                <dcterms:language>Susu</dcterms:language>
+                <dcterms:language>Sumerian</dcterms:language>
+                <dcterms:language>Swahili</dcterms:language>
+                <dcterms:language>Swedish</dcterms:language>
+                <dcterms:language>Swazi</dcterms:language>
+                <dcterms:language>Syriac</dcterms:language>
+                <dcterms:language>Tagalog</dcterms:language>
+                <dcterms:language>Tahitian</dcterms:language>
+                <dcterms:language>Tai (Other)</dcterms:language>
+                <dcterms:language>Tajik</dcterms:language>
+                <dcterms:language>Tamil</dcterms:language>
+                <dcterms:language>Tatar</dcterms:language>
+                <dcterms:language>Tatar</dcterms:language>
+                <dcterms:language>Telugu</dcterms:language>
+                <dcterms:language>Temne</dcterms:language>
+                <dcterms:language>Terena</dcterms:language>
+                <dcterms:language>Tetum</dcterms:language>
+                <dcterms:language>Tajik</dcterms:language>
+                <dcterms:language>Tagalog</dcterms:language>
+                <dcterms:language>Thai</dcterms:language>
+                <dcterms:language>Tibetan</dcterms:language>
+                <dcterms:language>Tigre</dcterms:language>
+                <dcterms:language>Tigrinya</dcterms:language>
+                <dcterms:language>Tiv</dcterms:language>
+                <dcterms:language>Tokelauan</dcterms:language>
+                <dcterms:language>Tlingit</dcterms:language>
+                <dcterms:language>Tamashek</dcterms:language>
+                <dcterms:language>Tonga (Nyasa)</dcterms:language>
+                <dcterms:language>Tongan</dcterms:language>
+                <dcterms:language>Tok Pisin</dcterms:language>
+                <dcterms:language>Truk</dcterms:language>
+                <dcterms:language>Tsimshian</dcterms:language>
+                <dcterms:language>Tswana</dcterms:language>
+                <dcterms:language>Tsonga</dcterms:language>
+                <dcterms:language>Tswana</dcterms:language>
+                <dcterms:language>Turkmen</dcterms:language>
+                <dcterms:language>Tumbuka</dcterms:language>
+                <dcterms:language>Tupi languages</dcterms:language>
+                <dcterms:language>Turkish</dcterms:language>
+                <dcterms:language>Altaic (Other)</dcterms:language>
+                <dcterms:language>Tuvaluan</dcterms:language>
+                <dcterms:language>Twi</dcterms:language>
+                <dcterms:language>Tuvinian</dcterms:language>
+                <dcterms:language>Udmurt</dcterms:language>
+                <dcterms:language>Ugaritic</dcterms:language>
+                <dcterms:language>Uighur</dcterms:language>
+                <dcterms:language>Ukrainian</dcterms:language>
+                <dcterms:language>Umbundu</dcterms:language>
+                <dcterms:language>Undetermined</dcterms:language>
+                <dcterms:language>Urdu</dcterms:language>
+                <dcterms:language>Uzbek</dcterms:language>
+                <dcterms:language>Vai</dcterms:language>
+                <dcterms:language>Venda</dcterms:language>
+                <dcterms:language>Vietnamese</dcterms:language>
+                <dcterms:language>Volapuk</dcterms:language>
+                <dcterms:language>Votic</dcterms:language>
+                <dcterms:language>Wakashan languages</dcterms:language>
+                <dcterms:language>Walamo</dcterms:language>
+                <dcterms:language>Waray</dcterms:language>
+                <dcterms:language>Washo</dcterms:language>
+                <dcterms:language>Welsh</dcterms:language>
+                <dcterms:language>Sorbian languages</dcterms:language>
+                <dcterms:language>Walloon</dcterms:language>
+                <dcterms:language>Wolof</dcterms:language>
+                <dcterms:language>Kalmyk</dcterms:language>
+                <dcterms:language>Xhosa</dcterms:language>
+                <dcterms:language>Yao (Africa)</dcterms:language>
+                <dcterms:language>Yapese</dcterms:language>
+                <dcterms:language>Yiddish</dcterms:language>
+                <dcterms:language>Yoruba</dcterms:language>
+                <dcterms:language>Yupik languages</dcterms:language>
+                <dcterms:language>Zapotec</dcterms:language>
+                <dcterms:language>Zenaga</dcterms:language>
+                <dcterms:language>Zhuang</dcterms:language>
+                <dcterms:language>Zande</dcterms:language>
+                <dcterms:language>Zulu</dcterms:language>
+                <dcterms:language>Zuni</dcterms:language>
+                <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+        </x:expect>
+    </x:scenario>
+</x:description>
