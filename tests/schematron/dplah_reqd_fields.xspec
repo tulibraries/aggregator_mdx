@@ -1149,4 +1149,34 @@
       <x:expect-assert id="NoHarvestPattern26"/>
     </x:scenario>
   </x:scenario>
+  <x:scenario label="APSNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveCI_aps.xml"/>
+      <x:expect-assert id="NoHarvestPattern27"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="LCPNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveCI_lcp.xml"/>
+      <x:expect-assert id="NoHarvestPattern28"/>
+    </x:scenario>
+  </x:scenario>
+  <x:scenario label="PHSNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveCI_phs.xml"/>
+      <x:expect-assert id="NoHarvestPattern29"/>
+    </x:scenario>
+  </x:scenario>
 </x:description>
