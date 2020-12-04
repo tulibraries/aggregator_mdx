@@ -48,6 +48,26 @@
         <xsl:call-template name="dataProvider"/>
     </xsl:template>
     
+    <!-- fileFormat -->
+    <xsl:template match="dc:format" priority="1">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="fform_cpp_template">
+                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="delimiter" select="'|'"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- language; to remove file size value -->
+    <xsl:template match="dc:language" priority="1">
+        <xsl:if test="normalize-space(.)!='' and not(contains(normalize-space(.),'MB')) and not(contains(normalize-space(.),'KB'))">
+            <xsl:call-template name="lang_template">
+                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    
     <!-- templates -->
 
     <!-- isPartOf -->
@@ -106,5 +126,58 @@
                 <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
             </xsl:element>
         </xsl:if>
+    </xsl:template>
+    
+    <!-- File format template -->
+    <xsl:template name="fform_cpp_template">
+        <xsl:param name="strings"/>
+        <xsl:param name="delimiter"/>
+        
+        <xsl:choose>
+            <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
+            <xsl:when test="contains($strings, $delimiter)">
+                <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
+                <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
+                <xsl:choose>
+                    <xsl:when test="(normalize-space($firststem)!='') and not(contains(normalize-space($firststem),'MB')) and not(contains(normalize-space($firststem),'KB')) and (lower-case(normalize-space($firststem)) = $fFormatList/padig:fformat)">
+                        <xsl:element name="schema:fileFormat">
+                            <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($firststem)]/@string"/>
+                        </xsl:element>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:if test="normalize-space($firststem)!='' and not(contains(normalize-space($firststem),'MB')) and not(contains(normalize-space($firststem),'KB'))">
+                            <xsl:element name="schema:fileFormat">
+                                <xsl:value-of select="normalize-space($firststem)"/>
+                            </xsl:element>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+                <!--Need to do recursion-->
+                <xsl:call-template name="fform_cpp_template">
+                    <xsl:with-param name="strings" select="$newstem"/>
+                    <xsl:with-param name="delimiter" select="'|'"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space($strings)!=''">
+                    <xsl:choose>
+                        <xsl:when test="(normalize-space($strings)!='') and (lower-case(normalize-space($strings)) = $fFormatList/padig:fformat) and not(contains(normalize-space($strings),'MB')) and not(contains(normalize-space($strings),'KB'))">
+                            <xsl:element name="schema:fileFormat">
+                                <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($strings)]/@string"/>
+                            </xsl:element>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:if test="normalize-space($strings)!='' and not(contains(normalize-space($strings),'MB')) and not(contains(normalize-space($strings),'KB'))">
+                                <xsl:element name="schema:fileFormat">
+                                    <xsl:value-of select="normalize-space($strings)"/>
+                                </xsl:element>
+                            </xsl:if>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
+        
     </xsl:template>
 </xsl:stylesheet>
