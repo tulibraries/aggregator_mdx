@@ -107,7 +107,7 @@
                 <xsl:choose>
                     <xsl:when test="normalize-space($firststem)!='' and ends-with($firststem, ' (depositor)')">
                         <xsl:element name="edm:dataProvider">
-                            <xsl:value-of select="normalize-space(substring-before($firststem, ' (depositor)'))"/>
+                            <xsl:value-of select="replace(normalize-space(substring-before($firststem, ' (depositor)')),'&amp;','and')"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
@@ -129,7 +129,7 @@
                 <xsl:choose>
                     <xsl:when test="normalize-space($strings)!='' and ends-with($strings, ' (depositor)')">
                         <xsl:element name="edm:dataProvider">
-                            <xsl:value-of select="normalize-space(substring-before($strings, ' (depositor)'))"/>
+                            <xsl:value-of select="replace(normalize-space(substring-before($strings, ' (depositor)')),'&amp;','and')"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>

@@ -149,8 +149,12 @@
         <padig:set string="View Books">p16069coll32</padig:set>
         <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
         <!-- Lafayette -->
+        <padig:set string="College Archives Image Collection">collection:College_Archives_Image_Collection</padig:set>
         <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
         <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
+        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis_de_Lafayette_Prints_Collection</padig:set>
+        <padig:set string="Mc Kelvy House">collection:McKelvy_Hous</padig:set>
+
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
         <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
@@ -414,6 +418,10 @@
         <padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
         <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
         <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
+        <padig:set string="Melvin Seidenberg Photographs">pitt_collection.332</padig:set>
+        <padig:set string="Louis Semple Clarke Collection">pitt_collection.333</padig:set>
+        <padig:set string="Children's Service Bureau Records">pitt_collection.337</padig:set>
+        <padig:set string="Darlington Digital Library">pitt_collection.153</padig:set>
         <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
@@ -597,6 +605,18 @@
         <padig:set string="William Russell Birch Views of Philadelphia">Islandora_WRBV1</padig:set>
         <padig:set string="World War One Photographs and Ephemera">Islandora_WWIP2</padig:set>
         <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>
+        
+    <!-- Presbyterian Historical Society -->
+        <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
+        <padig:set string="Church Buildings">islandora_churchbuildings</padig:set>
+        <padig:set string="Henry Harmon Spalding and Eliza Hart Spalding Papers">islandora_spalding</padig:set>
+        <padig:set string="Oral Histories Collection">islandora_oralhistories_collection</padig:set>
+        <padig:set string="Presbyterian Historical Society Audio Collection">islandora_audio_collection</padig:set>
+        <padig:set string="Presbyterian Historical Society Map Collection">islandora_maps</padig:set>
+        <padig:set string="Presbyterian Historical Society Portraits">islandora_portraits</padig:set>
+        <padig:set string="Presbyterian Historical Society Video Collection">islandora_video_collection</padig:set>
+        <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
+        <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
     </xsl:param>
 
     <!-- lookup table collection name by identifier -->

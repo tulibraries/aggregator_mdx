@@ -14,130 +14,45 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    stylesheet="../../transforms/islandora_historicpitt.xsl">
+    stylesheet="../../transforms/islandora_phs.xsl">
 
 
 <!-- Institution specific checks -->
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:HP-pitt_3A715_3420584_CP'"/>
+      <x:context href="../../fixtures/islandora_phs.xml"/>
+      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:PHS-islandora_3A2094'"/>
     </x:scenario>
     
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:scenario label="dc:contributor contains (depositor)">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="map from contributor with 'depositor' text" test="oai_dc:dc/edm:dataProvider = 'University of Pittsburgh'"/>
-    </x:scenario>
-      <x:scenario label="dc:contributor contains (depositor) and an &amp;">
-          <x:context>
-            <oai:record>
-              <metadata>
-                <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/"
-                  xmlns:dcterms="http://purl.org/dc/terms/"
-                  xmlns:dpla="http://dp.la/about/map/"
-                  xmlns:edm="http://www.europeana.eu/schemas/edm/"
-                  xmlns:oai="http://www.openarchives.org/OAI/2.0/"
-                  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-                  xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-                  xmlns:oclc="http://purl.org/oclc/terms/"
-                  xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-                  xmlns:oclcterms="http://purl.org/oclc/terms/"
-                  xmlns:schema="http://schema.org"
-                  xmlns:padig="http://padigital.org/ns"
-                  xmlns:svcs="http://rdfs.org/sioc/services">
-                  <dc:contributor>Detre Library &amp; Archives, Heinz History Center (depositor)</dc:contributor>
-                  <dc:contributor>Pittsburgh History &amp; Landmarks Foundation (depositor)</dc:contributor>
-                </oai_dc:dc>
-              </metadata>
-            </oai:record>
-          </x:context>
-          <x:expect label="dc:language with file size does not map">
-            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-              <edm:dataProvider>Detre Library and Archives, Heinz History Center</edm:dataProvider>
-              <edm:dataProvider>Pittsburgh History and Landmarks Foundation</edm:dataProvider>
-              <edm:provider>PA Digital</edm:provider>
-            </oai_dc:dc>
-          </x:expect>
-      </x:scenario>
-    </x:scenario>
-  
-    <!-- Contributor -->
-    <x:scenario label="contributor processing">
-      <x:scenario label="contributor processing from included xml">
-        <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-        <x:expect label="map from contributor if NOT with 'depositor' text" test="oai_dc:dc/dcterms:contributor = 'Test contributor (another role)'"/>
-      </x:scenario>
-      <x:scenario label="contributor processing testing delimiters">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
-                xmlns="http://purl.org/dc/elements/1.1/"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
-                <dc:contributor>First contributor;Second contributor;Third contributor (depositor)</dc:contributor>
-                <dc:contributor>;Fourth contributor; </dc:contributor>
-              </oai_dc:dc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="contributor delimits">
-          <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:dcterms="http://purl.org/dc/terms/"
-            xmlns:dpla="http://dp.la/about/map/"
-            xmlns:edm="http://www.europeana.eu/schemas/edm/"
-            xmlns:oai="http://www.openarchives.org/OAI/2.0/"
-            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-            xmlns:oclc="http://purl.org/oclc/terms/"
-            xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-            xmlns:oclcterms="http://purl.org/oclc/terms/"
-            xmlns:schema="http://schema.org"
-            xmlns:padig="http://padigital.org/ns"
-            xmlns:svcs="http://rdfs.org/sioc/services">          
-            <dcterms:contributor>First contributor</dcterms:contributor>
-            <dcterms:contributor>Second contributor</dcterms:contributor>
-            <edm:dataProvider>Third contributor</edm:dataProvider>
-            <dcterms:contributor>Fourth contributor</dcterms:contributor>
-            <edm:provider>PA Digital</edm:provider>
-          </oai_dc:dc>
-        </x:expect>
-      </x:scenario>
-    </x:scenario>
-  
-    <!-- Intermediate provider -->
-    <x:scenario label="intermediateProvider processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="identifier generated intProvider name" test="oai_dc:dc/dpla:intermediateProvider = 'Historic Pittsburgh'"/>
+        <x:context href="../../fixtures/islandora_phs.xml"/>
+        <x:expect label="map from contributor with 'depositor' text" test="oai_dc:dc/edm:dataProvider = 'Presbyterian Historical Society'"/>
     </x:scenario>
   
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP'"/>
+      <x:context href="../../fixtures/islandora_phs.xml"/>
+      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digital.history.pcusa.org/islandora/object/islandora%3A2094'"/>
     </x:scenario>
     
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP/datastream/TN/view/Overbrook%20School.jpg'"/>
+      <x:context href="../../fixtures/islandora_phs.xml"/>
+      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digital.history.pcusa.org/islandora/object/islandora%3A2094/datastream/TN/view/Letter%20from%20Eliza%20H.%20Spalding%20to%20Lorena%20Hart%2C%20April%204%2C%201834..jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
+      <x:context href="../../fixtures/islandora_phs.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
-          test="oai_dc:dc/dcterms:isPartOf = 'Pittsburgh City Photographer Collection'"/>
+          test="oai_dc:dc/dcterms:isPartOf = 'Henry Harmon Spalding and Eliza Hart Spalding Papers'"/>
     </x:scenario>
       
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
+      <x:context href="../../fixtures/islandora_phs.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
