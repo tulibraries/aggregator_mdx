@@ -27,8 +27,42 @@
     
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
+      <x:scenario label="dc:contributor contains (depositor)">
       <x:context href="../../fixtures/islandora_historicpitt.xml"/>
       <x:expect label="map from contributor with 'depositor' text" test="oai_dc:dc/edm:dataProvider = 'University of Pittsburgh'"/>
+    </x:scenario>
+      <x:scenario label="dc:contributor contains (depositor) and an &amp;">
+          <x:context>
+            <oai:record>
+              <metadata>
+                <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:dcterms="http://purl.org/dc/terms/"
+                  xmlns:dpla="http://dp.la/about/map/"
+                  xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                  xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                  xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                  xmlns:oclc="http://purl.org/oclc/terms/"
+                  xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                  xmlns:oclcterms="http://purl.org/oclc/terms/"
+                  xmlns:schema="http://schema.org"
+                  xmlns:padig="http://padigital.org/ns"
+                  xmlns:svcs="http://rdfs.org/sioc/services">
+                  <dc:contributor>Detre Library &amp; Archives, Heinz History Center (depositor)</dc:contributor>
+                  <dc:contributor>Pittsburgh History &amp; Landmarks Foundation (depositor)</dc:contributor>
+                </oai_dc:dc>
+              </metadata>
+            </oai:record>
+          </x:context>
+          <x:expect label="dc:language with file size does not map">
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <edm:dataProvider>Detre Library and Archives, Heinz History Center</edm:dataProvider>
+              <edm:dataProvider>Pittsburgh History and Landmarks Foundation</edm:dataProvider>
+              <edm:provider>PA Digital</edm:provider>
+            </oai_dc:dc>
+          </x:expect>
+      </x:scenario>
     </x:scenario>
   
     <!-- Contributor -->
