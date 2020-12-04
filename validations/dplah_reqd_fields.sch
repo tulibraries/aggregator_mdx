@@ -221,4 +221,23 @@
       <assert test="normalize-space(.)!='Historic Pittsburgh'" id="NoHarvestPattern26" role="error">Records from Historic Pittsburgh are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="APSNoHarvestPattern">
+    <title>Check to invalidate American Philosophical Society</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='American Philosophical Society'" id="NoHarvestPattern27" role="error">Records from American Philosophical Society are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="LPCNoHarvestPattern">
+    <title>Check to invalidate Library Company of Philadelphia</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Library Company of Philadelphia'" id="NoHarvestPattern28" role="error">Records from Library Company of Philadelphia are invalid</assert>
+    </rule>
+  </pattern>
+  <pattern id="PHSNoHarvestPattern">
+    <title>Check to invalidate Presbyterian Historical Society</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Presbyterian Historical Society'" id="NoHarvestPattern29" role="error">Records from Presbyterian Historical Society are invalid</assert>
+    </rule>
+  </pattern>
+  
 </schema>
