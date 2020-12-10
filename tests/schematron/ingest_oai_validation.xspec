@@ -35,6 +35,42 @@
       <x:expect-assert id="Required1"/>
     </x:scenario>
   </x:scenario>
+  
+  <x:scenario label="Collection">
+    <x:scenario label="valid: oai_dc:dc type">
+      <x:context href="../../fixtures/schematron/valid_oai_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: oai_qdc:qualifieddc type">
+      <x:context href="../../fixtures/schematron/valid_oai_qdc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: dc:dc type">
+      <x:context href="../../fixtures/schematron/valid_dc.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="valid: oai_dcq:qualifieddc type">
+      <x:context href="../../fixtures/schematron/valid_oai_dcq.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid: oai_dc type is 'Collection'">
+      <x:context href="../../fixtures/schematron/invalid_oai_dc_collectiontype.xml"/>
+      <x:expect-assert id="Collection1"/>
+    </x:scenario>
+    <x:scenario label="not valid: oai_qdc type is 'Collection'">
+      <x:context href="../../fixtures/schematron/invalid_oai_qdc_collectiontype.xml"/>
+      <x:expect-assert id="Collection1"/>
+    </x:scenario>
+    <x:scenario label="not valid: dc type is 'Collection'">
+      <x:context href="../../fixtures/schematron/invalid_dc_collectiontype.xml"/>
+      <x:expect-assert id="Collection1"/>
+    </x:scenario>
+    <x:scenario label="not valid: oai_dcq type is 'Collection'">
+      <x:context href="../../fixtures/schematron/invalid_oai_dcq_collectiontype.xml"/>
+      <x:expect-assert id="Collection1"/>
+    </x:scenario>
+  </x:scenario>
+  
   <x:scenario label="NoHarvest">
     <x:scenario label="valid: oai_dc:dc no harvest">
       <x:context href="../../fixtures/schematron/valid_oai_dc.xml"/>
