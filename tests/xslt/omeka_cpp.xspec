@@ -24,19 +24,19 @@
       <x:context href="../../fixtures/omeka_cpp.xml"/>
       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:COLPHYS-1480'"/>
     </x:scenario>
-    
+
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
       <x:context href="../../fixtures/omeka_cpp.xml"/>
       <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Historical Medical Library of The College of Physicians of Philadelphia'"/>
     </x:scenario>
-    
+
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
         <x:context href="../../fixtures/omeka_cpp.xml"/>
       <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://www.cppdigitallibrary.org/items/show/1480'"/>
     </x:scenario>
-    
+
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
         <x:context href="../../fixtures/omeka_cpp.xml"/>
@@ -49,13 +49,13 @@
         <x:expect label="SetSpec matches collection in lookup.xsl"
           test="oai_dc:dc/dcterms:isPartOf = 'Thesaurus Anatomicus, Frederik Ruysch'"/>
     </x:scenario>
-  
+
     <!-- rights; commented out generic rights crosswalk check below -->
     <x:scenario label="rights statements map, generate, and crosswalk">
       <x:context href="../../fixtures/omeka_cpp.xml"/>
       <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/NoC-NC/1.0/'"></x:expect>
     </x:scenario>
-  
+
     <!-- language; do not map if file size -->
     <x:scenario label="dc:language contains file size">
       <x:context>
@@ -90,7 +90,7 @@
         </oai_dc:dc>
       </x:expect>
     </x:scenario>
-  
+
     <!-- fileFormat ; check to remove file sizes -->
     <x:scenario label="dc:format contains file size with 'MB' or 'KB'">
     <x:context>
@@ -125,7 +125,7 @@
       </oai_dc:dc>
     </x:expect>
   </x:scenario>
-      
+
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
         <x:context href="../../fixtures/omeka_cpp.xml"/>
@@ -166,7 +166,7 @@
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                             xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
                             xmlns:dc="http://purl.org/dc/elements/1.1/"
-                            xmlns:dcterms="http://purl.org/dc/terms/">              
+                            xmlns:dcterms="http://purl.org/dc/terms/">
                             <dc:title>First title</dc:title>
                             <dc:title>Alt title</dc:title>
                         </oai_dc:dc>
@@ -187,7 +187,7 @@
                     xmlns:oclcterms="http://purl.org/oclc/terms/"
                     xmlns:schema="http://schema.org"
                     xmlns:padig="http://padigital.org/ns"
-                    xmlns:svcs="http://rdfs.org/sioc/services">          
+                    xmlns:svcs="http://rdfs.org/sioc/services">
                     <dcterms:title>First title</dcterms:title>
                     <dcterms:alternative>Alt title</dcterms:alternative>
                     <edm:provider>PA Digital</edm:provider>
@@ -228,7 +228,7 @@
             </x:expect>
         </x:scenario>
     </x:scenario>
-    
+
     <!-- Creator (map and delimit) -->
     <x:scenario label="dc:creator becomes space-normalized dcterms:creator and delimits">
         <x:context>
@@ -293,7 +293,7 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
-    
+
     <!-- File format (map and delimit) -->
     <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
         <x:context>
@@ -390,8 +390,8 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
-    
-    <!-- Source (map and delimit) 
+
+    <!-- Source (map and delimit)
     <x:scenario label="dc:source becomes space-normalized dcterms:source and delimits">
         <x:context>
             <oai:record>
@@ -484,12 +484,12 @@
         </x:context>
         <x:expect label="description maps">
             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:description>This is a test description; and that was a semicolon </dcterms:description>
+                <dcterms:description>This is a test description; and that was a semicolon</dcterms:description>
                 <edm:provider>PA Digital</edm:provider>
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
-    
+
     <!-- Spatial (map and delimit) -->
     <x:scenario label="dcterms:spatial and dc:coverage map to dcterms:spatial, space normalized, delimits on semicolon">
         <x:context>
@@ -523,9 +523,9 @@
                 <dcterms:spatial>Test spatial2</dcterms:spatial>
                 <edm:provider>PA Digital</edm:provider>
             </oai_dc:dc>
-        </x:expect>  
+        </x:expect>
     </x:scenario>
-    
+
     <!-- Date (map and delimit) -->
     <x:scenario label="dc:date becomes space-normalized dcterms:date and delimits">
         <x:context>
@@ -589,7 +589,7 @@
                 <dcterms:subject>Test subject2</dcterms:subject>
                 <edm:provider>PA Digital</edm:provider>
             </oai_dc:dc>
-        </x:expect>  
+        </x:expect>
     </x:scenario>
 
     <!-- Relation (map and delimit)
@@ -624,7 +624,7 @@
         </x:expect>
     </x:scenario>
     -->
-    
+
     <!-- Replaced by (map and delimit) -->
     <x:scenario label="isReplacedBy delimits, normalizes, and maps">
         <x:context>
@@ -657,7 +657,7 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
-    
+
     <!-- Replaces (map and delimit) -->
     <x:scenario label="replaces delimits, normalizes, and maps">
         <x:context>
@@ -690,7 +690,7 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
-    
+
     <!-- Rights and Rights URI (map/parse and delimit)
     <x:scenario label="rights processing">
         <x:context>
@@ -725,7 +725,7 @@
         </x:expect>
     </x:scenario>
      -->
-    
+
     <!-- Rights Holder (map and delimit) -->
     <x:scenario label="rights holder delimits, normalizes, and maps">
         <x:context>
@@ -758,7 +758,7 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
-    
+
 <!-- Type and Format (map/parse, normalize, and delimit) -->
 <x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
     <x:scenario label="Delimiting, remediating, and parsing">

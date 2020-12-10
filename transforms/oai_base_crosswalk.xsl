@@ -59,18 +59,20 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     <!-- Title -->
     <xsl:template match="dc:title[1]">
-        <xsl:if test="normalize-space(.)!=''">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!=''">
             <xsl:element name="dcterms:title">
-                <xsl:value-of select="normalize-space(.)"/>
+                <xsl:value-of select="normalize-space($norm_string)"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
     
     <!-- Alternative titles -->
     <xsl:template match="dc:title[position() > 1]">
-        <xsl:if test="normalize-space(.)!=''">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!=''">
             <xsl:element name="dcterms:alternative">
-                <xsl:value-of select="normalize-space(.)"/>
+                <xsl:value-of select="normalize-space($norm_string)"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
@@ -78,7 +80,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dcterms:alternative">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -88,7 +90,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:type">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="type_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -99,7 +101,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:format">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="fform_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -109,7 +111,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:creator">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="crea_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -119,7 +121,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:contributor">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="cont_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -129,7 +131,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:source">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="sour_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -137,18 +139,20 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     <!-- Publisher -->
     <xsl:template match="dc:publisher">
-        <xsl:if test="normalize-space(.)!=''">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!=''">
             <xsl:element name="dcterms:publisher">
-                <xsl:value-of select="normalize-space(.)"/>
+                <xsl:value-of select="normalize-space($norm_string)"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
     
     <!-- Description -->
     <xsl:template match="dc:description">
-        <xsl:if test="normalize-space(.)!='' and not(ends-with(.,'thumbnail.jpg'))">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!='' and not(ends-with(normalize-space($norm_string),'thumbnail.jpg'))">
             <xsl:element name="dcterms:description">
-                <xsl:value-of select="."/>
+                <xsl:value-of select="$norm_string"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
@@ -157,7 +161,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dcterms:spatial">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -166,7 +170,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:coverage">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="spatial_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -176,7 +180,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dcterms:temporal">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -184,9 +188,10 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     <!-- Extent -->
     <xsl:template match="dcterms:extent">
-        <xsl:if test="normalize-space(.)!=''">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!=''">
             <xsl:element name="dcterms:extent">
-                <xsl:value-of select="normalize-space(.)"/>
+                <xsl:value-of select="normalize-space($norm_string)"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
@@ -195,7 +200,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:date">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="date_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -205,7 +210,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:subject">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="subj_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -215,7 +220,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dc:language">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="lang_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -223,9 +228,10 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     <!-- Relation -->
     <xsl:template match="dc:relation">
-        <xsl:if test="normalize-space(.)!=''">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!=''">
             <xsl:element name="dcterms:relation">
-                <xsl:value-of select="normalize-space(.)"/>
+                <xsl:value-of select="normalize-space($norm_string)"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>
@@ -234,7 +240,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dcterms:isReplacedBy">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -244,7 +250,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dcterms:replaces">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                 <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -252,7 +258,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     <!-- Rights and Rights URI -->
     <xsl:template match="dc:rights">
-        <xsl:variable name="rights" select='normalize-space(.)'/>
+        <xsl:variable name="rights" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($rights)!=''">
             <xsl:choose>
                 <!-- Rights URI -->
@@ -280,7 +286,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template match="dcterms:rightsHolder">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
         </xsl:if>
@@ -694,7 +700,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                     <xsl:otherwise>
                         <xsl:if test="normalize-space(.)!=''">
                             <xsl:element name="dcterms:rights">
-                                <xsl:value-of select="normalize-space(.)"/>
+                                <xsl:value-of select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                             </xsl:element>
                         </xsl:if>
                     </xsl:otherwise>
@@ -723,7 +729,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                             <xsl:otherwise>
                                 <xsl:if test="normalize-space(.)!=''">
                                     <xsl:element name="dcterms:rights">
-                                        <xsl:value-of select="normalize-space(.)"/>
+                                        <xsl:value-of select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                                     </xsl:element>
                                 </xsl:if>
                             </xsl:otherwise>

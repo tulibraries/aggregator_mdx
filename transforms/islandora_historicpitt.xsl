@@ -20,7 +20,6 @@
         
     <xsl:include href="oai_base_crosswalk.xsl"/>
 
-
     <!-- collection name -->    
     <xsl:template match="oai:header/oai:setSpec">
         <xsl:call-template name="isPartOf"/>
@@ -44,6 +43,12 @@
             <xsl:with-param name="delimiter" select="';'"/>
         </xsl:call-template>
     </xsl:template>
+    
+    <!-- unmap format -->
+    <xsl:template match="dc:format" priority="1">
+        <xsl:value-of select="null"/>
+    </xsl:template>
+    
     
     <!-- templates -->
 

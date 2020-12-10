@@ -28,4 +28,10 @@
           <assert test="not(contains(normalize-space(.),'pdcp_noharvest'))" id="NoHarvest1" role="error">The record must not contain stopword</assert>
         </rule>
     </pattern>
+  <pattern id="Collection">
+    <title>Collection record check</title>
+    <rule context="//*[local-name()='type']">
+      <assert test="not(starts-with(normalize-space(.),'Collection'))" id="Collection1" role="error">Collection records are invalid</assert>
+    </rule>
+  </pattern>
 </schema>

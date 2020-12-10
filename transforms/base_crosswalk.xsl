@@ -107,9 +107,10 @@
     
     <!-- Description -->
     <xsl:template match="dc:description">
-        <xsl:if test="normalize-space(.)!='' and not(ends-with(.,'thumbnail.jpg'))">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!='' and not(ends-with(normalize-space($norm_string),'thumbnail.jpg'))">
             <xsl:element name="dcterms:description">
-                <xsl:value-of select="."/>
+                <xsl:value-of select="$norm_string"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>

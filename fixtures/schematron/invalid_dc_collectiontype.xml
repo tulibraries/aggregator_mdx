@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai:record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai="http://www.openarchives.org/OAI/2.0/">
+    <oai:header>
+        <oai:identifier>23076139</oai:identifier>
+        <oai:datestamp>2020-09-22T19:37:34Z</oai:datestamp>
+    </oai:header>
+    <oai:metadata>
+        <dc:dc xmlns:dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:title>Title</dc:title>
+            <dc:type>Collection</dc:type>
+            <dc:creator>Winthrop, James, 1752-1821</dc:creator>
+            <dc:subject>Astronomy, Egyptian</dc:subject>
+            <dc:description>Back cover. Physical description: Paper, 28 leaves, bound. Part of the book collection bequeathed to Allegheny College by James Winthrop in 1822. The manuscript Minutes relating to Chinese astronomy is bound with the manuscript Egyptian hieroglyphics, from public monuments extracted from Denon</dc:description>
+            <dc:contributor>Owen, William</dc:contributor>
+            <dc:format>Paper</dc:format>
+            <dc:format>Manuscripts and Manuscript Illuminations</dc:format>
+            <dc:identifier>520 W737</dc:identifier>
+            <dc:identifier>Thumbnail:http://forum.jstor.org/oai/thumbnail?id=23076139</dc:identifier>
+            <dc:identifier>FullSize:http://forum.jstor.org/assets/23076139/representation/size/9</dc:identifier>
+            <dc:identifier>ADLImageViewer:http://library.artstor.org/#/ssid/23076139</dc:identifier>
+            <dc:identifier>SSCImageViewer:http://library.artstor.org/#/ssid/23076139</dc:identifier>
+            <dc:language>English</dc:language>
+            <dc:coverage>Meadville, Pennsylvania</dc:coverage>
+            <dc:coverage>United States</dc:coverage>
+            <dc:rights>The book is in the public domain.&#160; Allegheny College holds the right to the image and reproduction.&#160; The images that are provided here are for non-profit,&#160;educational use only. For all other uses please contact Special Collections, Pelletier Library, Allegheny College. Access to this collection is made possible by support from the Council of Independent Colleges and The Andrew W. Mellon Foundation.</dc:rights>
+        </dc:dc>
+    </oai:metadata>
+</oai:record>
