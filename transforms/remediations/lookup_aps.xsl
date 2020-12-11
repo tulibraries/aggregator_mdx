@@ -24,6 +24,8 @@
         <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
         <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
         <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
+        
+        <!-- not in use 
         <padig:set string="Video Collection">islandora_video_collection</padig:set>
         <padig:set string="Video Upload Test">video_testing</padig:set>
         <padig:set string="Ward J. MacNeal - Correspondence, 1913-1935">islandora_10738</padig:set>
@@ -1256,7 +1258,7 @@
         <padig:set string="Mss.913.72.N84 - Notes on Mexican Antiquities">graphics_Mss.913.72.N84</padig:set>
         <padig:set string="Mss.913.72.Wi649 - Ancient Mexican material culture as revealed in Codex Vindobonensis Mexicanus">graphics_Mss.913.72.Wi649</padig:set>
         <padig:set string="Mss.913.748.Un3 - United States Works Projects Administration (Pa.) Reports">graphics_Mss.913.748.Un3</padig:set>
-        <padig:set string="Mss.914.79.P85.m - Material, [ca. 17--], for Jan Potocki's 'Voyages dans les steps dAstrakhan et du Caucase'">text_Mss.914.79.P85.m</padig:set>
+        <padig:set string="Mss.914.79.P85.m - Material, [ca. 17-], for Jan Potocki's 'Voyages dans les steps dAstrakhan et du Caucase'">text_Mss.914.79.P85.m</padig:set>
         <padig:set string="Mss.917.3.L58 - Lewis and Clark Journals">graphics_Mss.917.3.L58</padig:set>
         <padig:set string="Mss.917.3.R76 - Etats-Unis d'Amerique">graphics_Mss.917.3.R76</padig:set>
         <padig:set string="Mss.917.48.D33 - Ephraim Dyer IV collection, ca. 1842, of the sketches of Sherman Day">graphics_Mss.917.48.D33</padig:set>
@@ -1587,5 +1589,6 @@
         <padig:set string="509 C685usp - Collection of Pamphlets on Unconventional Science">islandora_10608</padig:set>
         <padig:set string="509 Pam. - Pamphlets">islandora_10609</padig:set>
         <padig:set string="510.Pam.xp - Broadsides and Pamphlets from the papers of Robert Maskell Patterson">text_510.Pam.xp</padig:set>
-    </xsl:param>
+    -->
+    </xsl:param>    
 </xsl:stylesheet>
