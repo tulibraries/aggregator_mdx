@@ -35,6 +35,11 @@
         <xsl:call-template name="dataProvider"/>
     </xsl:template>
     
+    <!-- rights and rights URI -->
+    <xsl:template match="dc:rights" priority="1">
+        <xsl:value-of select="null"/>
+    </xsl:template>
+    
     <!-- templates -->
     
     <!-- isPartOf ; uses setSpec if exists otherwise uses identifier. provider was not able to add setSpec metadata for sets 3 and 4. -->
@@ -85,6 +90,9 @@
         <xsl:if test="normalize-space(.) != '' and contains(.,'/items/show/')">
         <xsl:element name="dcterms:identifier">
             <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+        </xsl:element>
+        <xsl:element name="edm:rights">
+            <xsl:value-of>http://rightsstatements.org/vocab/CNE/1.0/</xsl:value-of>
         </xsl:element>
         </xsl:if>
     </xsl:template>

@@ -50,12 +50,11 @@
           test="oai_dc:dc/dcterms:isPartOf = 'Susquehanna University History Harvest'"/>
     </x:scenario>
 
-    <!-- rights; commented out generic rights crosswalk check below
+    <!-- rights; commented out generic rights crosswalk check below -->
     <x:scenario label="rights statements map, generate, and crosswalk">
       <x:context href="../../fixtures/susqu.xml"/>
-      <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/NoC-NC/1.0/'"></x:expect>
+      <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/CNE/1.0/'"></x:expect>
     </x:scenario>
-     -->
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
@@ -620,7 +619,7 @@
         </x:expect>
     </x:scenario>
 
-    <!-- Rights and Rights URI (map/parse and delimit) -->
+    <!-- Rights and Rights URI (map/parse and delimit)
     <x:scenario label="rights processing">
         <x:context>
             <oai:record>
@@ -653,6 +652,7 @@
             </oai_dc:dc>
         </x:expect>
     </x:scenario>
+    -->
 
     <!-- Rights Holder (map and delimit) -->
     <x:scenario label="rights holder delimits, normalizes, and maps">

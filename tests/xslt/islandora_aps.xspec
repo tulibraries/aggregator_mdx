@@ -121,6 +121,32 @@
       </x:scenario>
     </x:scenario>
 
+    <!-- empty rights -->
+    <x:scenario label="has blank rights statement only">
+      <x:context>
+        <documents>
+          <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://www.openarchives.org/OAI/2.0/">
+            <header>
+              <identifier>oai:american-philosophical:graphics_7879</identifier>
+              <datestamp>2019-09-17T18:30:56Z</datestamp>
+              <setSpec>video_2019April</setSpec>
+            </header>
+            <metadata>
+              <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                xmlns="http://purl.org/dc/elements/1.1/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                <dc:rights/>
+              </oai_dc:dc>
+            </metadata>
+          </record>
+        </documents>
+      </x:context>
+      <x:expect label="isPartOf becomes 'Graphics Collection'"
+        test="oai_dc:dc/dcterms:rights = 'The APS has an Open Access Policy for all unrestricted material in the digital library. Open Access Materials can be used freely for non-commercial, scholarly, educational, or fair use as defined under United States copyright law. Read the full policy and learn more about our Rights and Reproduction at: http://www.amphilsoc.org/library/rights'"/>
+    </x:scenario>
+
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
       <x:context href="../../fixtures/islandora_aps.xml"/>

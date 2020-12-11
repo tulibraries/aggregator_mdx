@@ -258,7 +258,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     
     <!-- Rights and Rights URI -->
     <xsl:template match="dc:rights">
-        <xsl:variable name="rights" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
         <xsl:if test="normalize-space($rights)!=''">
             <xsl:choose>
                 <!-- Rights URI -->
