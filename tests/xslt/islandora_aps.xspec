@@ -89,10 +89,36 @@
     </x:scenario>
 
     <!-- isPartOf-->
-    <x:scenario label="SetSpec is looked up and matched to collection name">
+    <x:scenario label="SetSpec is looked up and matched to collection name">    <x:scenario label="setSpec matches lookup value">
       <x:context href="../../fixtures/islandora_aps.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
           test="oai_dc:dc/dcterms:isPartOf = 'Henry Howard Houston III'"/>
+    </x:scenario>
+      <x:scenario label="setSpec does not match lookup value">
+        <x:context>
+          <documents>
+            <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://www.openarchives.org/OAI/2.0/">
+              <header>
+                <identifier>oai:american-philosophical:graphics_7879</identifier>
+                <datestamp>2019-09-17T18:30:56Z</datestamp>
+                <setSpec>video_2019April</setSpec>
+              </header>
+              <metadata>
+                <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+                  xmlns="http://purl.org/dc/elements/1.1/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                  <title>First Title</title>
+                  <title>Second Title</title>
+                </oai_dc:dc>
+              </metadata>
+            </record>
+          </documents>
+        </x:context>
+        <x:expect label="isPartOf becomes 'Graphics Collection'"
+          test="oai_dc:dc/dcterms:isPartOf = 'Graphics Collection'"/>
+      </x:scenario>
     </x:scenario>
 
     <!-- Hub -->

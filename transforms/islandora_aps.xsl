@@ -102,11 +102,19 @@
     <xsl:template name="isPartOf">
         <xsl:if test="normalize-space(.) != ''">
             <xsl:variable name="setID" select="normalize-space(.)"/>
-            <xsl:if test="$setID = $apsSetSpecList/padig:set">
-                <xsl:element name="dcterms:isPartOf">
-                    <xsl:value-of select="$apsSetSpecList/padig:set[. = $setID]/@string"/>
-                </xsl:element>
-            </xsl:if>
+            
+            <xsl:choose>
+                <xsl:when test="$setID = $apsSetSpecList/padig:set">
+                    <xsl:element name="dcterms:isPartOf">
+                        <xsl:value-of select="$apsSetSpecList/padig:set[. = $setID]/@string"/>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$setID != $apsSetSpecList/padig:set">
+                    <xsl:element name="dcterms:isPartOf">
+                        <xsl:value-of>Graphics Collection</xsl:value-of> 
+                    </xsl:element>
+                </xsl:when>                    
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     
