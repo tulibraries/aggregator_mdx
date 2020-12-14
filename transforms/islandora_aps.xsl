@@ -50,48 +50,21 @@
         <xsl:call-template name="isShownAt"/>
         <xsl:call-template name="identifier"/>
         <xsl:call-template name="dataProvider"/>
+        <xsl:call-template name="rights"/>
     </xsl:template>
     
-    <!-- Rights and Rights URI -->
-    <xsl:template match="dc:rights[1]" priority="1">
-        <xsl:choose>
-            <xsl:when test="normalize-space(.)=''">
-                <xsl:element name="dcterms:rights">
-                    <xsl:value-of>The APS has an Open Access Policy for all unrestricted material in the digital library. Open Access Materials can be used freely for non-commercial, scholarly, educational, or fair use as defined under United States copyright law. Read the full policy and learn more about our Rights and Reproduction at: http://www.amphilsoc.org/library/rights</xsl:value-of>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:call-template name="rights"/>
-            </xsl:otherwise>
-        </xsl:choose>
+    <!-- rights -->
+    <xsl:template match="dc:rights" priority="1">
+        <xsl:value-of select="null"/>
     </xsl:template>
     
     <!-- templates -->
 
     <!-- rights -->
     <xsl:template name="rights">
-        <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
-        <xsl:if test="normalize-space($rights)!=''">
-            <xsl:choose>
-                <!-- Rights URI -->
-                <xsl:when
-                    test="starts-with($rights, 'http://rightsstatements.org/vocab/') or starts-with($rights, 'http://creativecommons.org/') or starts-with($rights, 'https://creativecommons.org/')">
-                    <xsl:if test="normalize-space($rights)!=''">
-                        <xsl:element name="edm:rights">
-                            <xsl:value-of select="normalize-space($rights)"/>
-                        </xsl:element>
-                    </xsl:if>
-                </xsl:when>
-                <!-- Rights text -->
-                <xsl:otherwise>
-                    <xsl:if test="normalize-space($rights)!=''">
-                        <xsl:element name="dcterms:rights">
-                            <xsl:value-of select="normalize-space($rights)"/>
-                        </xsl:element>
-                    </xsl:if>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:if>
+        <xsl:element name="dcterms:rights">
+            <xsl:value-of>The APS has an Open Access Policy for all unrestricted material in the digital library. Open Access Materials can be used freely for non-commercial, scholarly, educational, or fair use as defined under United States copyright law. Read the full policy and learn more about our Rights and Reproduction at: http://www.amphilsoc.org/library/rights</xsl:value-of>
+        </xsl:element>
     </xsl:template>
     
     <!-- contributor -->
