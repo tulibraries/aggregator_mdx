@@ -40,6 +40,21 @@
         <xsl:value-of select="null"/>
     </xsl:template>
     
+    <!-- unmap source -->
+    <xsl:template match="dc:source" priority="1">
+        <xsl:value-of select="null"/>
+    </xsl:template>
+    
+    <!-- don't map incorrect value from language -->
+    <xsl:template match="dc:language" priority="1">
+        <xsl:if test="normalize-space(.)!='' and not(contains(normalize-space(.),'Click'))">
+            <xsl:call-template name="lang_template">
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    
     <!-- templates -->
     
     <!-- isPartOf ; uses setSpec if exists otherwise uses identifier. provider was not able to add setSpec metadata for sets 3 and 4. -->

@@ -55,6 +55,12 @@
       <x:context href="../../fixtures/susqu.xml"/>
       <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/CNE/1.0/'"></x:expect>
     </x:scenario>
+  
+    <!-- language -->
+    <x:scenario label="language field contains 'eng' and incorrectly mapped value">
+      <x:context href="../../fixtures/susqu.xml"/>
+      <x:expect label="only language maps" test="oai_dc:dc/dcterms:language = 'English'"></x:expect>
+    </x:scenario>
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
@@ -347,8 +353,6 @@
         </x:context>
         <x:expect label="source maps and delimits">
             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:source>Smith, John</dcterms:source>
-                <dcterms:source>Smith, Karen</dcterms:source>
                 <edm:provider>PA Digital</edm:provider>
             </oai_dc:dc>
         </x:expect>
