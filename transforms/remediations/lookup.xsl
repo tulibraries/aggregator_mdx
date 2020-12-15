@@ -94,6 +94,8 @@
         <padig:cont string="Slippery Rock University" code="SRU">photograph</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">postcard</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">yearbooks</padig:cont>
+        <padig:cont string="Slippery Rock University" code="SRU">p17189coll5</padig:cont>
+        <padig:cont string="Slippery Rock University" code="SRU">alternator</padig:cont>
         <padig:cont string="West Chester University" code="WESTCH">wcudoll</padig:cont>
         <padig:cont string="West Chester University" code="WESTCH">diaries</padig:cont>
         <padig:cont string="West Chester University" code="WESTCH">qwcaralia</padig:cont>
