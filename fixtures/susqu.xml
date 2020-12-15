@@ -23,10 +23,13 @@
                     <dc:date>2016-10-22</dc:date>
                     <dc:type>Moving Image</dc:type>
                     <dc:type>Moving Image</dc:type>
+                    <dc:source>Test source</dc:source>
                     <dc:identifier>http://pahistoryharvest.com/items/show/108</dc:identifier>
                     <dc:identifier>http://pahistoryharvest.com/files/original/13b835649ae5cb46b6e8ede1d5044955.jpg</dc:identifier>
                     <dc:identifier>http://pahistoryharvest.com/files/thumbnails/13b835649ae5cb46b6e8ede1d5044955.jpg</dc:identifier>
                     <dc:language>eng</dc:language>
+                    <dc:language>Click <a href="http://pahistoryharvest.com/items/show/36" title="Richard Derrick History Harvest Interview: Full-Length" target="_blank" rel="noreferrer">here </a>to watch Richard Derrick's full-length video</dc:language>
+                    
                 </oai_dc:dc>
             </metadata>
         </record>
