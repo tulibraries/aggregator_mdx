@@ -153,7 +153,7 @@
         <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
         <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
         <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis_de_Lafayette_Prints_Collection</padig:set>
-        <padig:set string="Mc Kelvy House">collection:McKelvy_Hous</padig:set>
+        <padig:set string="Mc Kelvy House">collection:McKelvy_House</padig:set>
 
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
