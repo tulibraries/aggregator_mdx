@@ -532,20 +532,11 @@
             <xsl:when test="contains($strings, $delimiter)">
                 <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
                 <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
-                <xsl:choose>
-                    <xsl:when test="(normalize-space($firststem)!='') and (lower-case(normalize-space($firststem)) = $fFormatList/padig:fformat)">
-                        <xsl:element name="schema:fileFormat">
-                            <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($firststem)]/@string"/>
-                        </xsl:element>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:if test="normalize-space($firststem)!=''">
-                            <xsl:element name="schema:fileFormat">
-                                <xsl:value-of select="normalize-space($firststem)"/>
-                            </xsl:element>
-                        </xsl:if>
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:if test="(normalize-space($firststem)!='') and (lower-case(normalize-space($firststem)) = $fFormatList/padig:fformat)">
+                    <xsl:element name="schema:fileFormat">
+                        <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($firststem)]/@string"/>
+                    </xsl:element>
+                </xsl:if>
                 
                 <!--Need to do recursion-->
                 <xsl:call-template name="fform_template">
@@ -555,20 +546,11 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:if test="normalize-space($strings)!=''">
-                    <xsl:choose>
-                        <xsl:when test="(normalize-space($strings)!='') and (lower-case(normalize-space($strings)) = $fFormatList/padig:fformat)">
-                            <xsl:element name="schema:fileFormat">
-                                <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($strings)]/@string"/>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:if test="normalize-space($strings)!=''">
-                                <xsl:element name="schema:fileFormat">
-                                    <xsl:value-of select="normalize-space($strings)"/>
-                                </xsl:element>
-                            </xsl:if>
-                        </xsl:otherwise>
-                    </xsl:choose>
+                    <xsl:if test="(normalize-space($strings)!='') and (lower-case(normalize-space($strings)) = $fFormatList/padig:fformat)">
+                        <xsl:element name="schema:fileFormat">
+                            <xsl:value-of select="$fFormatList/padig:fformat[. = lower-case($strings)]/@string"/>
+                        </xsl:element>
+                    </xsl:if>
                 </xsl:if>
             </xsl:otherwise>
         </xsl:choose>

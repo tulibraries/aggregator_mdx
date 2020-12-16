@@ -27,7 +27,7 @@
                     <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
                     <dc:date>1870</dc:date>
                     <dcterms:issued>1870</dcterms:issued>
-                    <dc:format>jpg</dc:format>
+                    <dc:format>jpg;else</dc:format>
                     <dc:type>Map</dc:type>
                     <dc:source>test source</dc:source>
                     <dc:coverage>United States - Pennsylvania - Bloomsburg</dc:coverage>
