@@ -37,8 +37,9 @@
                 <dc:identifier>https://jdc.jefferson.edu/tju_dmed_photo_album/1</dc:identifier>
                 <dc:identifier>
 https://jdc.jefferson.edu/context/tju_dmed_photo_album/article/1000/type/native/viewcontent</dc:identifier>
-                <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                <dc:rights><p>http://rightsstatements.org/vocab/InC/1.0/</p></dc:rights>
                 <dc:rights>Test rights</dc:rights>
+                
                 <dc:source>Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975</dc:source>
                 <dc:publisher>Test publisher</dc:publisher>
                 <dc:publisher/>

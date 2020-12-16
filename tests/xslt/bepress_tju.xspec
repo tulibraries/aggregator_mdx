@@ -1331,7 +1331,7 @@
 <!-- Rights and Rights URI (map/parse and delimit) -->
    <x:scenario label="rights processing">
      <x:context href="../../fixtures/tju.xml"/>
-     <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
+     <x:expect label="rights URI with html formatting is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
      <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'Test rights'"/>
      <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
      <x:expect label="textual rights does not map to edm:rights" test="not(oai_dc:dc/edm:rights = 'Test rights')" />
