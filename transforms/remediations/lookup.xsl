@@ -19,6 +19,7 @@
     version="2.0">
     
     <xsl:include href="lookup_aps.xsl"/>
+    <xsl:include href="lookup_power.xsl"/>
 
     <!-- lookup table for IANA media types -->
     <xsl:param name="fFormatList">
