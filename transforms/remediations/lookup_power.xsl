@@ -15,7 +15,7 @@
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
-    
+
     <!-- POWER photos and docs collecton name lookup -->
     <xsl:param name="powerSetSpecList">
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
@@ -175,14 +175,14 @@
         <padig:set string="The Baldwin School - The Hourglass">papd_kthbs-hg</padig:set>
         <padig:set string="Ulysses Library Association - Phil Bennett Collection">papd_pulpl-pbc</padig:set>
         <padig:set string="Ulysses Library Association - Ulysses History">papd_pulpl-uh</padig:set>
-        <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: the Lutheran Deaconess Movement in the United States">papd_aulsp-ihor</padig:set>
+        <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: the Lutheran Deaconess Movement in the United States">papd_aulsp-ihorldm</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
         <padig:set string="Warren Library Association - Historic Photographs">papd_pwala-hstph</padig:set>
         <padig:set string="Warren Library Association - The Carnival, First Presbyterian Church, 1899">papd_pwala-tcfpc</padig:set>
         <padig:set string="Williamson College of the Trades - Isaiah Van Sant Williamson History">papd_awsmt-ivswh</padig:set>
         <padig:set string="Williamson College of the Trades - Williamson Trade School History">papd_awsmt-wtsh</padig:set>
-    
+
     <!-- POWER state archives collecton name lookup -->
         <padig:set string="2nd Geological Survey (PA) Accounts of Board Commissioners, 1875-1877">psa_gsabc</padig:set>
         <padig:set string="2nd Geological Survey (PA) County Geological Maps of the Board of Commissioners">psa_gscgmbc</padig:set>
