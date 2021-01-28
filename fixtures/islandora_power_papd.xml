@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:digitalarchives.powerlibrary.org:papd_pcccp-post_17</identifier>
+      <datestamp>2020-06-25T14:02:58Z</datestamp>
+      <setSpec>papd_pcccp-post</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:title>CVMH Postcard</dc:title>
+        <dc:subject>Johnstown (Cambria County, Pa.)--Pictorial works.</dc:subject>
+        <dc:description>Colorized image of Conemaugh Valley Memorial Hospital</dc:description>
+        <dc:description>This Digital Object is provided in a collection that is included in POWER Library: Pennsylvania Photos and Documents, which is funded by the Office of Commonwealth Libraries of Pennsylvania/Pennsylvania Department of Education.</dc:description>
+        <dc:publisher>Minksy Bros. and Co., Publishing Division, Pittsburgh</dc:publisher>
+        <dc:contributor>Minksy Bros. and Co., Publishing Division (Creator)</dc:contributor>
+        <dc:contributor>Cambria County Library (Provider)</dc:contributor>
+        <dc:date/>
+        <dc:date>2017-08-17</dc:date>
+        <dc:format>postcard</dc:format>
+        <dc:format>image/jpeg</dc:format>
+        <dc:identifier>papd:pcccp-post_17</dc:identifier>
+        <dc:identifier>local: </dc:identifier>
+        <dc:identifier>islandora: pcccp-post_17</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:relation>Johnstown Postcards Collection</dc:relation>
+        <dc:coverage>Johnstown (Cambria County, Pa.)</dc:coverage>
+        <dc:rights>Digital images copyright Cambria County Library. May be used for educational purposes as long as a credit statement is included.</dc:rights>
+        <dc:identifier.thumbnail>https://digitalarchives.powerlibrary.org/papd/islandora/object/papd%3Apcccp-post_17/datastream/TN/view/CVMH%20Postcard.jpg</dc:identifier.thumbnail>
+        <dc.identifier.link>https://digitalarchives.powerlibrary.org/papd/islandora/object/papd%3Apcccp-post_17</dc.identifier.link>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
