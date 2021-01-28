@@ -17,7 +17,7 @@
     version="2.0">
 
     <!-- POWER photos and docs collecton name lookup -->
-    <xsl:param name="power_papdSetSpecList">
+    <xsl:param name="powerSetSpecList">
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
         <padig:set string="Albright College - Central Pennsylvania College Photos">papd_cpaphoto</padig:set>
         <padig:set string="Albright College - Evangelical Church Historic Lantern Slides">papd_churchslide</padig:set>
@@ -182,10 +182,8 @@
         <padig:set string="Warren Library Association - The Carnival, First Presbyterian Church, 1899">papd_pwala-tcfpc</padig:set>
         <padig:set string="Williamson College of the Trades - Isaiah Van Sant Williamson History">papd_awsmt-ivswh</padig:set>
         <padig:set string="Williamson College of the Trades - Williamson Trade School History">papd_awsmt-wtsh</padig:set>
-    </xsl:param>
 
     <!-- POWER state archives collecton name lookup -->
-    <xsl:param name="power_psaSetSpecList">
         <padig:set string="2nd Geological Survey (PA) Accounts of Board Commissioners, 1875-1877">psa_gsabc</padig:set>
         <padig:set string="2nd Geological Survey (PA) County Geological Maps of the Board of Commissioners">psa_gscgmbc</padig:set>
         <padig:set string="2nd Geological Survey (PA) Diary of Charles Ashburner Board of Commissioners, 1876">psa_gsdcaabc</padig:set>

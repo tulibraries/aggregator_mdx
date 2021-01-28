@@ -82,6 +82,8 @@
         <padig:url string="Keystone Library Network" code="KLN">http://digital.klnpa.org/</padig:url>
         <padig:url string="Lackawanna Valley Digital Archives" code="LVDA">http://content.lackawannadigitalarchives.org/</padig:url>
         <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
+        <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">https://digitalarchives.powerlibrary.org/papd/</padig:url>
+        <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">https://digitalarchives.powerlibrary.org/psa/</padig:url>
         <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
     </xsl:param>
 
