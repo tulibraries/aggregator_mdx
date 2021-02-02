@@ -240,5 +240,10 @@
     </rule>
   </pattern>
    -->
-  
+  <pattern id="POWERNoHarvestPattern">
+    <title>Check to invalidate POWER Library</title>
+    <rule context="oai_dc:dc/dpla:intermediateProvider">
+      <assert test="normalize-space(.)!='POWER Library as sponsor and HSLC as maintainer'" id="NoHarvestPattern30" role="error">Records from POWER Library are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
