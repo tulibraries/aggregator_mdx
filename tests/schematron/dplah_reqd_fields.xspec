@@ -1181,4 +1181,14 @@
     </x:scenario>
   </x:scenario>
    -->
+  <x:scenario label="POWERNoHarvestPattern">
+    <x:scenario label="valid">
+      <x:context href="../../fixtures/schematron/valid_RemoveCIgeneric.xml"/>
+      <x:expect-valid/>
+    </x:scenario>
+    <x:scenario label="not valid">
+      <x:context href="../../fixtures/schematron/invalid_RemoveCI_power.xml"/>
+      <x:expect-assert id="NoHarvestPattern30"/>
+    </x:scenario>
+  </x:scenario>
 </x:description>
