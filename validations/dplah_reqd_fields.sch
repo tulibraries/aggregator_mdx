@@ -246,4 +246,10 @@
       <assert test="normalize-space(.)!='POWER Library as sponsor and HSLC as maintainer'" id="NoHarvestPattern30" role="error">Records from POWER Library are invalid</assert>
     </rule>
   </pattern>
+  <pattern id="ScrantonPLNoHarvestPattern">
+    <title>Check to invalidate Scranton Public Library</title>
+    <rule context="oai_dc:dc/edm:dataProvider">
+      <assert test="normalize-space(.)!='Scranton Public Library'" id="NoHarvestPattern31" role="error">Records from Scranton Public Library are invalid</assert>
+    </rule>
+  </pattern>
 </schema>
