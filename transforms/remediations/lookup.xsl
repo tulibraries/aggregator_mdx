@@ -17,7 +17,7 @@
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
-    
+
     <xsl:include href="lookup_aps.xsl"/>
     <xsl:include href="lookup_power.xsl"/>
 
@@ -242,6 +242,7 @@
         <padig:set string="African American Construction Workers of Pittsburgh Photographs">pitt_collection.176</padig:set>
         <padig:set string="Alexander Addison Papers">pitt_collection.15</padig:set>
         <padig:set string="Alexander Cumming Papers">pitt_collection.249</padig:set>
+        <padig:set string="Alexander Lowy Papers">pitt_collection.13</padig:set>
         <padig:set string="Allegheny Conference on Community Development Photographs">pitt_collection.34</padig:set>
         <padig:set string="Allegheny County Photography Department Photographs">pitt_collection.320</padig:set>
         <padig:set string="Allegheny Observatory Records">pitt_collection.108</padig:set>
@@ -279,6 +280,7 @@
         <padig:set string="Coroner's Office Records, Allegheny County, Pa.">pitt_collection.174</padig:set>
         <padig:set string="D. L. Clark Company Papers and Photographs">pitt_collection.314</padig:set>
         <padig:set string="Daniel Brodhead Papers">pitt_collection.18</padig:set>
+        <padig:set string="Darlington Autograph Files">pitt_collection.145</padig:set>
         <padig:set string="Darlington Family Papers">pitt_collection.100</padig:set>
         <padig:set string="Daughters of Erin Court #9 Records">pitt_collection.173</padig:set>
         <padig:set string="Department of Public Health Annual Records, Pittsburgh, PA">pitt_collection.345</padig:set>
@@ -339,6 +341,7 @@
         <padig:set string="Ken Kobus Collection">pitt_collection.57</padig:set>
         <padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
         <padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
+        <padig:set string="M. Stanford Jackson Papers">pitt_collection.281</padig:set>
         <padig:set string="March of the Pittsburgh Blues Copybook">pitt_collection.98</padig:set>
         <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
         <padig:set string="Mary Elinor Lazenby Papers">pitt_collection.275</padig:set>
@@ -374,6 +377,7 @@
         <padig:set string="Pittsburgh Prints from the Collection of Wesley Pickard">pitt_collection.73</padig:set>
         <padig:set string="Pittsburgh Public Schools Photographs">pitt_collection.74</padig:set>
         <padig:set string="Pittsburgh Railways Company Records">pitt_collection.75</padig:set>
+        <padig:set string="Pittsburgh Speech and Society Project">pitt_collection.152</padig:set>
         <padig:set string="Pittsburgh Symphony Orchestra Posters">pitt_collection.150</padig:set>
         <padig:set string="Pittsburgh Theatre">pitt_collection.10</padig:set>
         <padig:set string="Pittsburgh Waste Book and Fort Pitt Trading Post Papers">pitt_collection.99</padig:set>
@@ -385,6 +389,7 @@
         <padig:set string="Railroad Stock Certificate Collection">pitt_collection.250</padig:set>
         <padig:set string="Richard E. Rauh Photographs">pitt_collection.87</padig:set>
         <padig:set string="Robert G. Pflaum Photograph Collection">pitt_collection.147</padig:set>
+        <padig:set string="Robert J. Walker Papers">pitt_collection.119</padig:set>
         <padig:set string="Robert McKnight Diaries">pitt_collection.26</padig:set>
         <padig:set string="Robert Stobo Papers">pitt_collection.27</padig:set>
         <padig:set string="Rodef Shalom Congregation Photographs">pitt_collection.79</padig:set>
@@ -397,6 +402,7 @@
         <padig:set string="Shadyside Hospital Records">pitt_collection.334</padig:set>
         <padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
         <padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
+        <padig:set string="Stephen Foster Collection">pitt_collection.111</padig:set>
         <padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
         <padig:set string="Teenie Harris Photographs">pitt_collection.85</padig:set>
         <padig:set string="The Bulletin, Pittsburg Bulletin, and The Bulletin Index">pitt_collection.324</padig:set>
@@ -421,6 +427,7 @@
         <padig:set string="William H. Wolf Photographs">pitt_collection.94</padig:set>
         <padig:set string="William J. Gaughan Collection">pitt_collection.95</padig:set>
         <padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
+        <padig:set string="William Pitt Family Papers">pitt_collection.117</padig:set>
         <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
         <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
         <padig:set string="Melvin Seidenberg Photographs">pitt_collection.332</padig:set>
@@ -496,7 +503,7 @@
         <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
         <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
         <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
-        
+
         <!-- LaSalle Bepress -->
         <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
         <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
@@ -515,7 +522,7 @@
         <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
         <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
         <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
-        
+
     <!-- Library Company -->
         <padig:set string="Aero Service Corporation Photographic Negative Collection">Islandora_AERO1</padig:set>
         <padig:set string="African Americana from the Thomas Richardson Scrapbook">Islandora_AALM1</padig:set>
@@ -610,7 +617,7 @@
         <padig:set string="William Russell Birch Views of Philadelphia">Islandora_WRBV1</padig:set>
         <padig:set string="World War One Photographs and Ephemera">Islandora_WWIP2</padig:set>
         <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>
-        
+
     <!-- Presbyterian Historical Society -->
         <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
         <padig:set string="Church Buildings">islandora_churchbuildings</padig:set>
