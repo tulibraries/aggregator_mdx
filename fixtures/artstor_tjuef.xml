@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+        <identifier>27556086</identifier>
+        <datestamp>2020-12-17T15:24:43Z</datestamp>
+    </header>
+    <metadata>
+        <dc:dc xmlns:dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:title>Roosevelt Boulevard Bridge</dc:title>
+            <dc:creator>Colourpicture</dc:creator>
+            <dc:subject>Bridge</dc:subject>
+            <dc:description>Text Front: &amp;quot;ROOSEVELT BOULEVARD BRIDGE OVER PENNYPACK CREEK, PHILADELPHIA, PA. PH-22;&amp;quot; </dc:description>
+            <dc:publisher>Central News Co.</dc:publisher>
+            <dc:contributor>Jefferson - East Falls</dc:contributor>
+            <dc:type>image</dc:type>
+            <dc:identifier>BRI.PHI.ne-rbb-4</dc:identifier>
+            <dc:identifier>Thumbnail:http://forum.jstor.org/oai/thumbnail?id=27556086</dc:identifier>
+            <dc:identifier>FullSize:http://forum.jstor.org/assets/27556086/representation/size/9</dc:identifier>
+            <dc:identifier>ADLImageViewer:http://library.artstor.org/#/ssid/27556086</dc:identifier>
+            <dc:identifier>SSCImageViewer:http://library.artstor.org/#/ssid/27556086</dc:identifier>
+            <dc:source>Postcard</dc:source>
+        </dc:dc>
+    </metadata>
+</record>
