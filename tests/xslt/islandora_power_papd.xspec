@@ -27,41 +27,9 @@
 
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:scenario label="dc:contributor contains (provider)">
+      <x:scenario label="dcterms:contributor contains (provider)">
       <x:context href="../../fixtures/islandora_power_papd.xml"/>
         <x:expect label="map from contributor with 'provider' text" test="oai_dc:dc/edm:dataProvider = 'Cambria County Library'"/>
-    </x:scenario>
-      <x:scenario label="dc:contributor contains (provider) and an &amp;">
-          <x:context>
-            <oai:record>
-              <metadata>
-                <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/"
-                  xmlns:dcterms="http://purl.org/dc/terms/"
-                  xmlns:dpla="http://dp.la/about/map/"
-                  xmlns:edm="http://www.europeana.eu/schemas/edm/"
-                  xmlns:oai="http://www.openarchives.org/OAI/2.0/"
-                  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-                  xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-                  xmlns:oclc="http://purl.org/oclc/terms/"
-                  xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-                  xmlns:oclcterms="http://purl.org/oclc/terms/"
-                  xmlns:schema="http://schema.org"
-                  xmlns:padig="http://padigital.org/ns"
-                  xmlns:svcs="http://rdfs.org/sioc/services">
-                  <dc:contributor>Detre Library &amp; Archives, Heinz History Center (Provider)</dc:contributor>
-                  <dc:contributor>Pittsburgh History &amp; Landmarks Foundation (Provider)</dc:contributor>
-                </oai_dc:dc>
-              </metadata>
-            </oai:record>
-          </x:context>
-          <x:expect label="dc:language with file size does not map">
-            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-              <edm:dataProvider>Detre Library and Archives, Heinz History Center</edm:dataProvider>
-              <edm:dataProvider>Pittsburgh History and Landmarks Foundation</edm:dataProvider>
-              <edm:provider>PA Digital</edm:provider>
-            </oai_dc:dc>
-          </x:expect>
       </x:scenario>
     </x:scenario>
 
@@ -69,7 +37,7 @@
     <x:scenario label="contributor processing">
       <x:scenario label="contributor processing from included xml">
         <x:context href="../../fixtures/islandora_power_papd.xml"/>
-        <x:expect label="map from contributor if NOT with 'provider' text" test="oai_dc:dc/dcterms:contributor = 'Minksy Bros. and Co., Publishing Division (Creator)'"/>
+        <x:expect label="map from contributor if NOT with 'provider' text" test="oai_dc:dc/dcterms:contributor = 'test contributor'"/>
       </x:scenario>
       <x:scenario label="contributor processing testing delimiters">
         <x:context>
@@ -79,8 +47,8 @@
                 xmlns="http://purl.org/dc/elements/1.1/"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
-                <dc:contributor>First contributor;Second contributor;Third contributor (Provider)</dc:contributor>
-                <dc:contributor>;Fourth contributor; </dc:contributor>
+                <dcterms:contributor>First contributor;Second contributor;Third contributor (Provider)</dcterms:contributor>
+                <dcterms:contributor>;Fourth contributor; </dcterms:contributor>
               </oai_dc:dc>
             </metadata>
           </oai:record>
@@ -125,7 +93,7 @@
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
       <x:context href="../../fixtures/islandora_power_papd.xml"/>
-      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digitalarchives.powerlibrary.org/papd/islandora/object/papd%3Apcccp-post_17/datastream/TN/view/CVMH%20Postcard.jpg'"/>
+      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digitalarchives.powerlibrary.org/papd/islandora/object/papd%3Apcccp-post_17/datastream/TN/view/'"/>
     </x:scenario>
 
     <!-- isPartOf-->
