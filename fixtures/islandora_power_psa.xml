@@ -9,41 +9,41 @@
             <setSpec>psa_bfcm</setSpec>
         </header>
         <metadata>
-            <oai_dc:dc
-                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-                xmlns:dc="http://purl.org/dc/elements/1.1/">           
-                <dc:title>Board of Fish Commissioners, Minutes (Roll 6625, Part 1)</dc:title>
-                <dc:subject>Pennsylvania Fish &amp; Boat Commission</dc:subject>
-                <dc:subject>Boats and boating--Law and legislation--United States</dc:subject>
-                <dc:subject>Regulations</dc:subject>
-                <dc:subject>Fisheries</dc:subject>
-                <dc:subject>Conservation</dc:subject>
-                <dc:subject>Fishing</dc:subject>
-                <dc:subject>Fishery law and legislation</dc:subject>
-                <dc:description>Records of the Fish and Boat Commission, Board of Fish Commissioners, Minutes, Volumes 1-3, 1924-1926.</dc:description>
-                <dc:description>This Digital Object is provided in a collection that is included in POWER LIBRARY: Pennsylvania Photos and Documents, which is funded by the Office of Commonwealth Libraries of Pennsylvania/Pennsylvania Department of Education.</dc:description>
-                <dc:description>Quarterly meeting minutes and agendas of the Fish Commission and its successor the Fish and Boat Commission. The minutes document approval of past minutes and contain committee reports on boating legislation, law enforcement, propagation, special regulations, as well as access and property maintenance. Transcripts of discussions on management of fisheries, conservation regulations, and rules and regulations for fishing and boating are also present. Appendices often contain budget reports, resolutions, legislation and copies of the Pennsylvania Code &amp; Bulletin. Agendas (1993-1998) contain briefing sheets, which consist of summaries, commentaries, and recommendations on issues for consideration. Also present are statements of policy (1969-1970), and a briefing booklet on the Black Bass issue (May 30, 1995). Meeting minutes from 1924-1954 are only available on microfilm.</dc:description>
-                <dc:publisher>Pennsylvania. Fish and Boat Commission</dc:publisher>
-                <dc:contributor>Board of Fish Commissioners (Creator)</dc:contributor>
-                <dc:contributor>Pennsylvania State Archives (Provider)</dc:contributor>
-                <dc:date>1924; 1925; 1926</dc:date>
-                <dc:date/>
-                <dc:type>Text</dc:type>
-                <dc:format>microfilm</dc:format>
-                <dc:format>image/jpeg</dc:format>
-                <dc:identifier>psa:bfcm_2646</dc:identifier>
-                <dc:identifier>local: RG72-6625, Part 1</dc:identifier>
-                <dc:identifier>islandora: bfcm_2646</dc:identifier>
-                <dc:language>English</dc:language>
-                <dc:relation>RG 72, Board of Commissioners, Series 1, Minutes, 1924-1954, 1965-1986, 1993-1999</dc:relation>
-                <dc:coverage>Pennsylvania</dc:coverage>
-                <dc:rights>http://rightsstatements.org/vocab/NoC-NC/1.0/</dc:rights>
-                <dc:rights>Commercial use of this image requires permission and may be subject to a fee. Contact Pennsylvania State Archives at http://www.pastatearchives.com</dc:rights>
-                <dc:identifier.thumbnail>https://digitalarchives.powerlibrary.org/psa/islandora/object/psa%3Abfcm_2646/datastream/TN/view/Board%20of%20Fish%20Commissioners%2C%20Minutes%20%28Roll%206625%2C%20Part%201%29.jpg</dc:identifier.thumbnail>
-                <dc.identifier.link>https://digitalarchives.powerlibrary.org/psa/islandora/object/psa%3Abfcm_2646</dc.identifier.link>
-            </oai_dc:dc>
+            <qualifieddc 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                xmlns:mods="http://www.loc.gov/mods/v3" 
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xsi:noNamespaceSchemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/qualifieddc.xsd">           
+                <dcterms:title>Board of Fish Commissioners, Minutes (Roll 6625, Part 1)</dcterms:title>
+                <dcterms:subject>Pennsylvania Fish &amp; Boat Commission</dcterms:subject>
+                <dcterms:subject>Boats and boating--Law and legislation--United States</dcterms:subject>
+                <dcterms:subject>Regulations</dcterms:subject>
+                <dcterms:subject>Fisheries</dcterms:subject>
+                <dcterms:subject>Conservation</dcterms:subject>
+                <dcterms:subject>Fishing</dcterms:subject>
+                <dcterms:subject>Fishery law and legislation</dcterms:subject>
+                <dcterms:description>Records of the Fish and Boat Commission, Board of Fish Commissioners, Minutes, Volumes 1-3, 1924-1926.</dcterms:description>
+                <dcterms:description>This Digital Object is provided in a collection that is included in POWER LIBRARY: Pennsylvania Photos and Documents, which is funded by the Office of Commonwealth Libraries of Pennsylvania/Pennsylvania Department of Education.</dcterms:description>
+                <dcterms:description>Quarterly meeting minutes and agendas of the Fish Commission and its successor the Fish and Boat Commission. The minutes document approval of past minutes and contain committee reports on boating legislation, law enforcement, propagation, special regulations, as well as access and property maintenance. Transcripts of discussions on management of fisheries, conservation regulations, and rules and regulations for fishing and boating are also present. Appendices often contain budget reports, resolutions, legislation and copies of the Pennsylvania Code &amp; Bulletin. Agendas (1993-1998) contain briefing sheets, which consist of summaries, commentaries, and recommendations on issues for consideration. Also present are statements of policy (1969-1970), and a briefing booklet on the Black Bass issue (May 30, 1995). Meeting minutes from 1924-1954 are only available on microfilm.</dcterms:description>
+                <dcterms:publisher>Pennsylvania. Fish and Boat Commission</dcterms:publisher>
+                <dcterms:creator>Board of Fish Commissioners</dcterms:creator>
+                <dcterms:contributor>Pennsylvania State Archives (Provider)</dcterms:contributor>
+                <dcterms:contributor>test contributor</dcterms:contributor>
+                <dcterms:date>1924; 1925; 1926</dcterms:date>
+                <dcterms:date/>
+                <dcterms:type>Text</dcterms:type>
+                <dcterms:format>microfilm</dcterms:format>
+                <dcterms:format>image/jpeg</dcterms:format>
+                <dcterms:identifier>psa:bfcm_2646</dcterms:identifier>
+                <dcterms:identifier>local: RG72-6625, Part 1</dcterms:identifier>
+                <dcterms:identifier>islandora: bfcm_2646</dcterms:identifier>
+                <dcterms:language>English</dcterms:language>
+                <dcterms:relation>RG 72, Board of Commissioners, Series 1, Minutes, 1924-1954, 1965-1986, 1993-1999</dcterms:relation>
+                <dcterms:coverage>Pennsylvania</dcterms:coverage>
+                <dcterms:rights>http://rightsstatements.org/vocab/NoC-NC/1.0/</dcterms:rights>
+                <dcterms:rights>Commercial use of this image requires permission and may be subject to a fee. Contact Pennsylvania State Archives at http://www.pastatearchives.com</dcterms:rights>
+                <identifier.link>https://digitalarchives.powerlibrary.org/psa/islandora/object/psa%3Abfcm_2646</identifier.link>
+            </qualifieddc>
         </metadata>
     </record>
 </documents>
