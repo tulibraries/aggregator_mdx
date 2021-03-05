@@ -19,37 +19,27 @@
     <xsl:strip-space elements="*"/>
         
     <xsl:include href="oai_base_crosswalk.xsl"/>
+    
 
     <!-- collection name -->    
     <xsl:template match="oai:header/oai:setSpec">
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
     
-    <!-- preview -->
-    <xsl:template match="dc:identifier.thumbnail">
-        <xsl:call-template name="preview"/>
-    </xsl:template>
-    
-    <!-- isShownAt -->
-    <xsl:template match="oai:metadata/oai_dc:dc/oai:dc.identifier.link">
+    <!-- isShownAt; preview; identifier -->
+    <xsl:template match="//*[namespace-uri()='http://www.openarchives.org/OAI/2.0/' and local-name()='identifier.link']">
         <xsl:call-template name="isShownAt"/>
+        <xsl:call-template name="preview"/>
         <xsl:call-template name="identifier"/>
     </xsl:template>
     
     <!-- dataProvider -->
-    <xsl:template match="dc:contributor" priority="1">
+    <xsl:template match="dcterms:contributor" priority="1">
         <xsl:call-template name="dataProvider">
             <xsl:with-param name="strings" select="normalize-space(.)"/>
             <xsl:with-param name="delimiter" select="';'"/>
         </xsl:call-template>
     </xsl:template>
-    
-    <!-- unmap format
-    <xsl:template match="dc:format" priority="1">
-        <xsl:value-of select="null"/>
-    </xsl:template>
-    -->
-    
     
     <!-- templates -->
 
@@ -69,7 +59,7 @@
     <xsl:template name="preview">
         <xsl:if test="normalize-space(.) != ''">
             <xsl:element name="edm:preview">
-                <xsl:value-of select="normalize-space(.)"/>
+                <xsl:value-of select="normalize-space(.)"/><xsl:text>/datastream/TN/view/</xsl:text>
             </xsl:element>
         </xsl:if>
     </xsl:template>
