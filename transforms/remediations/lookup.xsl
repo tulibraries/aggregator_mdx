@@ -248,6 +248,7 @@
         <padig:set string="Allegheny Observatory Records">pitt_collection.108</padig:set>
         <padig:set string="Aluminum Company of America Photographs">pitt_collection.274</padig:set>
         <padig:set string="American Left Ephemera Collection">pitt_collection.107</padig:set>
+        <padig:set string="Andrew Carnegie Correspondence Collection">pitt_collection.349</padig:set>
         <padig:set string="Archives of Industrial Society Photograph Collection">pitt_collection.226</padig:set>
         <padig:set string="Beazel Family Papers">pitt_collection.246</padig:set>
         <padig:set string="Bedford County Township Tax Receipts">pitt_collection.16</padig:set>
@@ -278,6 +279,7 @@
         <padig:set string="Conference between the Six Nations and the Quakers Minutes">pitt_collection.144</padig:set>
         <padig:set string="Congregation B'nai Israel Photographs">pitt_collection.154</padig:set>
         <padig:set string="Coroner's Office Records, Allegheny County, Pa.">pitt_collection.174</padig:set>
+        <padig:set string="Crafton Public Library Collection">pitt_collection.353</padig:set>
         <padig:set string="D. L. Clark Company Papers and Photographs">pitt_collection.314</padig:set>
         <padig:set string="Daniel Brodhead Papers">pitt_collection.18</padig:set>
         <padig:set string="Darlington Autograph Files">pitt_collection.145</padig:set>
@@ -318,6 +320,7 @@
         <padig:set string="Henry Marie Brackenridge and Family Papers">pitt_collection.103</padig:set>
         <padig:set string="Historic Pittsburgh Book Collection">pitt_collection.241</padig:set>
         <padig:set string="Historical Society of Upper St. Clair Collection">pitt_collection.50</padig:set>
+        <padig:set string="Homer S. Brown Papers">pitt_collection.352</padig:set>
         <padig:set string="Hotel Schenley Register">pitt_collection.175</padig:set>
         <padig:set string="Howard Etzel Photograph Collection">pitt_collection.310</padig:set>
         <padig:set string="Hugh Henry Brackenridge and Andrew Watson Papers">pitt_collection.21</padig:set>
@@ -384,6 +387,7 @@
         <padig:set string="Pittsburgh and Lake Erie Railroad Company Records">pitt_collection.71</padig:set>
         <padig:set string="Pittsburgh, Fort Wayne, and Chicago Railway Company Photographs">pitt_collection.76</padig:set>
         <padig:set string="Point Park University Archives">pitt_collection.77</padig:set>
+        <padig:set string="Proceedings of the Allegheny County (Pa.) Office of the Coroner's Open Inquest into the death of Jonny Gammage">pitt_collection.351</padig:set>
         <padig:set string="Progress Photographs: William Penn Hotel">pitt_collection.78</padig:set>
         <padig:set string="Rachel Carson Collection">pitt_collection.238</padig:set>
         <padig:set string="Railroad Stock Certificate Collection">pitt_collection.250</padig:set>
@@ -406,6 +410,7 @@
         <padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
         <padig:set string="Teenie Harris Photographs">pitt_collection.85</padig:set>
         <padig:set string="The Bulletin, Pittsburg Bulletin, and The Bulletin Index">pitt_collection.324</padig:set>
+        <padig:set string="Thomas C. Brogan Papers on The Mayor's Task Force of Civil Disorders">pitt_collection.350</padig:set>
         <padig:set string="Thomas Mellon Galey Photographs">pitt_collection.321</padig:set>
         <padig:set string="Thomas Mellon and William B. Negley Day Book">pitt_collection.29</padig:set>
         <padig:set string="Trimble Company Records">pitt_collection.88</padig:set>
@@ -454,6 +459,7 @@
         <padig:set string="Chinese Overseas Student Newsletters">pitt_collection.244</padig:set>
         <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
+        <padig:set string="Edward J. Shourek Photographs">pitt_collection.41</padig:set>
         <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
@@ -464,6 +470,7 @@
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
+        <padig:set string="Oliver M. Kaufmann Photograph Collection of the Irene Kaufmann Settlement">pitt_collection.66</padig:set>
         <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
         <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
         <padig:set string="Pitt Athletics">pitt_collection.4</padig:set>
@@ -498,6 +505,7 @@
         <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
         <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
         <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
+        <padig:set string="William Pitt Family Papers">pitt_collection.117</padig:set>
         <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
