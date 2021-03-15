@@ -16,6 +16,21 @@
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
 
+    <!-- lookup table to identify LVDA collections -->
+    <xsl:param name="powerSetInt">
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-cot</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-ccos</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-cccfnepa</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-fsplps</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-flmtcm</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-hspl</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-ndnepa</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-naap</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-ootw</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-scw</padig:setInt>
+        <padig:setInt string="Lackawanna Valley Digital Archives">papd_pscrl-socmc</padig:setInt>
+    </xsl:param>
+
     <!-- POWER photos and docs collecton name lookup -->
     <xsl:param name="powerSetSpecList">
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
