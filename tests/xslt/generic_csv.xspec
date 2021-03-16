@@ -17,6 +17,12 @@
    xmlns:svcs="http://rdfs.org/sioc/services"
    stylesheet="../../transforms/generic_csv.xsl">
 
+<!-- mediaMaster -->
+   <x:scenario label="value in mediaMaster maps to padig:mediaMaster">
+     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:expect label="" test="oai_dc:dc/padig:mediaMaster = 'https://media.philamuseum.org/image/JGJ_B001_F001_001_001/full/800,/0/default.jpg'"></x:expect>
+   </x:scenario>
+
 <!-- Title (map and delimit) -->
    <x:scenario label="Title becomes space-normalized dcterms:title">
     <x:context href="../../fixtures/generic_csv_test.xml"/>
