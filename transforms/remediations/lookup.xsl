@@ -296,6 +296,7 @@
         <padig:set string="Eliphalet Smith Account Book">pitt_collection.104</padig:set>
         <padig:set string="Elsie H. Hillman Papers">pitt_collection.182</padig:set>
         <padig:set string="Ephraim Douglass Ledgers">pitt_collection.20</padig:set>
+        <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Extension of the Pittsburgh City Limits Minute Book">pitt_collection.31</padig:set>
         <padig:set string="F. Theodore Wagner Papers">pitt_collection.42</padig:set>
         <padig:set string="Father Cox Papers">pitt_collection.53</padig:set>
@@ -460,8 +461,6 @@
         <padig:set string="Chinese Overseas Student Newsletters">pitt_collection.244</padig:set>
         <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
-        <padig:set string="Edward J. Shourek Photographs">pitt_collection.41</padig:set>
-        <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
@@ -471,7 +470,6 @@
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
-        <padig:set string="Oliver M. Kaufmann Photograph Collection of the Irene Kaufmann Settlement">pitt_collection.66</padig:set>
         <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
         <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
         <padig:set string="Pitt Athletics">pitt_collection.4</padig:set>
@@ -506,7 +504,6 @@
         <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
         <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
         <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
-        <padig:set string="William Pitt Family Papers">pitt_collection.117</padig:set>
         <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
