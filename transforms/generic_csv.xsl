@@ -229,6 +229,16 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- mediaMaster (for full image URL) -->
+    <xsl:template match="mediaMaster">
+        <xsl:if test="normalize-space(.) != ''">
+            <xsl:element name="padig:mediaMaster">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    
+
     <!-- Thumbnail URL -->
     <xsl:template match="Thumbnail">
         <xsl:if test="normalize-space(.) != ''">
