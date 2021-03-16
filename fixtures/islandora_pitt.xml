@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:digital-prod.library.pitt.edu:pitt_9119B.III.8.SH</identifier>
+      <datestamp>2019-02-21T22:05:14Z</datestamp>
+      <setSpec>pitt_collection.41</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:title>Midge, Boob, and Shrimp</dc:title>
+        <dc:creator>Shourek, Edward J.</dc:creator>
+        <dc:subject>Hill District (Pittsburgh, Pa.)</dc:subject>
+        <dc:subject>Public schools--Pennsylvania--Pittsburgh.</dc:subject>
+        <dc:subject>Central High School (Pittsburgh, Pa.)</dc:subject>
+        <dc:subject>Boys--Pennsylvania--Pittsburgh.</dc:subject>
+        <dc:description>A view of three young men; Midge, Boob, and Shrimp posed outside the ventilator of Central High School in 1914.</dc:description>
+        <dc:description>Central High School</dc:description>
+        <dc:contributor>University of Pittsburgh (depositor)</dc:contributor>
+        <dc:contributor>Test contributor (another role)</dc:contributor>
+        <dc:date>1914</dc:date>
+        <dc:type>StillImage</dc:type>
+        <dc:type>photograph</dc:type>
+        <dc:identifier>pitt:9119B.III.8.SH</dc:identifier>
+        <dc:identifier>pitt: 9119B.III.8.SH</dc:identifier>
+        <dc:relation>Edward J. Shourek Photograph Collection</dc:relation>
+        <dc:coverage>Hill District</dc:coverage>
+        <dc:rights>The copyright and related rights status of this Item has been reviewed by the organization that has made the Item available, but the organization was unable to make a conclusive determination as to the copyright status of the Item. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</dc:rights>
+        <dc:rights>http://rightsstatements.org/vocab/UND/1.0/</dc:rights>
+        <dc:identifier.thumbnail>https://digital.library.pitt.edu/islandora/object/pitt%3A9119B.III.8.SH/datastream/TN/view/Midge%2C%20Boob%2C%20and%20Shrimp.jpg</dc:identifier.thumbnail>
+        <identifier>https://digital.library.pitt.edu/islandora/object/pitt%3A9119B.III.8.SH</identifier>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
