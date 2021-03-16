@@ -20,10 +20,15 @@
         
     <xsl:include href="oai_base_crosswalk.xsl"/>
     
-
+    <!-- unmap temporal -->
+    <xsl:template match="dcterms:temporal" priority="1">
+        <xsl:value-of select="null"/>
+    </xsl:template>
+    
     <!-- collection name -->    
     <xsl:template match="oai:header/oai:setSpec">
         <xsl:call-template name="isPartOf"/>
+        <xsl:call-template name="lvda"/>
     </xsl:template>
     
     <!-- isShownAt; preview; identifier -->
@@ -50,6 +55,18 @@
             <xsl:if test="$setID = $powerSetSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">
                     <xsl:value-of select="$powerSetSpecList/padig:set[. = $setID]/@string"/>
+                </xsl:element>
+            </xsl:if>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- add LVDA as intermediate provider -->
+    <xsl:template name="lvda">
+        <xsl:if test="normalize-space(lower-case(.))">
+            <xsl:variable name="setInt" select="normalize-space(lower-case(.))"/>
+            <xsl:if test="$setInt = $powerSetInt/padig:setInt">
+                <xsl:element name="dpla:intermediateProvider">
+                    <xsl:value-of select="$powerSetInt/padig:setInt[. = $setInt]/@string"/>
                 </xsl:element>
             </xsl:if>
         </xsl:if>
