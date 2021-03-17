@@ -156,6 +156,10 @@
         <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
         <!-- Lafayette -->
         <padig:set string="College Archives Image Collection">collection:College_Archives_Image_Collection</padig:set>
+        <padig:set string="Gerald &amp; Rella Warner Dutch East Indies Negatives">collection:Gerald_&_Rella_Warner_Dutch_East_Indies_Negatives</padig:set>
+        <padig:set string="Gerald &amp; Rella Warner Japan Slides">collection:Gerald_&_Rella_Warner_Japan_Slides</padig:set>
+        <padig:set string="Gerald &amp; Rella Warner Manchuria Negatives">collection:Gerald_&_Rella_Warner_Manchuria_Negatives</padig:set>
+        <padig:set string="Gerald &amp; Rella Warner Postcards">collection:Gerald_&_Rella_Warner_Taiwan_Negatives</padig:set>
         <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
         <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
         <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis_de_Lafayette_Prints_Collection</padig:set>
