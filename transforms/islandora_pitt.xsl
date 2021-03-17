@@ -44,11 +44,15 @@
         </xsl:call-template>
     </xsl:template>
     
-    <!-- unmap format - this is based on HP transform; commenting this out for testing
+    <!-- map format to type (values in dc:format reflect original format rather than digital)-->
     <xsl:template match="dc:format" priority="1">
-        <xsl:value-of select="null"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="type_template">
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
+        </xsl:if>    
     </xsl:template>
-    -->
     
     
     <!-- templates -->
