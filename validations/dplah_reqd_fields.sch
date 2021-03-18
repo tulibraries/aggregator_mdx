@@ -233,13 +233,12 @@
       <assert test="normalize-space(.)!='Library Company of Philadelphia'" id="NoHarvestPattern28" role="error">Records from Library Company of Philadelphia are invalid</assert>
     </rule>
   </pattern>
-  <!-- <pattern id="PHSNoHarvestPattern">
+  <pattern id="PHSNoHarvestPattern">
     <title>Check to invalidate Presbyterian Historical Society</title>
     <rule context="oai_dc:dc/edm:dataProvider">
       <assert test="normalize-space(.)!='Presbyterian Historical Society'" id="NoHarvestPattern29" role="error">Records from Presbyterian Historical Society are invalid</assert>
     </rule>
   </pattern>
-   -->
   <pattern id="POWERNoHarvestPattern">
     <title>Check to invalidate POWER Library</title>
     <rule context="oai_dc:dc/dpla:intermediateProvider">
