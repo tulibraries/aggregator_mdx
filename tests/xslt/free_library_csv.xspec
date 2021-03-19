@@ -55,7 +55,7 @@
   <!-- Identifiers -->
   <x:scenario label="identifier processing">
     <x:context href="../../fixtures/free_library_test.csv.xml"/>
-      <x:expect label="Item_No is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'frk00001'"/>
+    <x:expect label="Item_No is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'padig:FLP-MAP00000001'"/>
       <x:expect label="Identifier is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001'"/>
     <x:expect label="Thumbnail is generated from identifier" test="oai_dc:dc/edm:preview = 'http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg'"></x:expect>
   </x:scenario>
@@ -63,7 +63,44 @@
   <!-- Language -->
   <x:scenario label="Language is transformed to dcterms:language">
     <x:context href="../../fixtures/free_library_test.csv.xml"/>
-    <x:expect label="Language is transformed to dcterms:language" test="oai_dc:dc/dcterms:language = 'German; English'"/>
+    <x:expect label="Language is transformed to dcterms:language"><oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:dpla="http://dp.la/about/map/"
+      xmlns:edm="http://www.europeana.eu/schemas/edm/"
+      xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+      xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+      xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+      xmlns:oclc="http://purl.org/oclc/terms/"
+      xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+      xmlns:oclcterms="http://purl.org/oclc/terms/"
+      xmlns:schema="http://schema.org"
+      xmlns:padig="http://padigital.org/ns/"
+      xmlns:svcs="http://rdfs.org/sioc/services">
+      <dcterms:identifier>padig:FLP-MAP00000001</dcterms:identifier>
+      <dcterms:title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</dcterms:title>
+      <dcterms:creator>Anonymous</dcterms:creator>
+      <dcterms:description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</dcterms:description>
+      <dcterms:date>ca. 1825</dcterms:date>
+      <schema:fileFormat>image/tiff</schema:fileFormat>
+      <dcterms:subject>Flowers</dcterms:subject>
+      <dcterms:subject>Planters (containers)</dcterms:subject>
+      <dcterms:subject>Pottery</dcterms:subject>
+      <dcterms:subject>Rosettes</dcterms:subject>
+      <dcterms:subject>Tulips</dcterms:subject>
+      <dcterms:language>German</dcterms:language>
+      <dcterms:language>English</dcterms:language>
+      <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>       
+      <edm:isShownAt>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</edm:isShownAt>
+      <edm:preview>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</edm:preview>
+      <dcterms:type>Still Image</dcterms:type>
+      <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
+      <dcterms:spatial>Italy</dcterms:spatial>
+      <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
+      <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
+      <edm:provider>PA Digital</edm:provider>
+    </oai_dc:dc>
+    </x:expect>
   </x:scenario>
   
   <!-- Country -->
@@ -100,24 +137,25 @@
         xmlns:schema="http://schema.org"
         xmlns:padig="http://padigital.org/ns/"
         xmlns:svcs="http://rdfs.org/sioc/services">
-        <dcterms:identifier>frk00001</dcterms:identifier>
+        <dcterms:identifier>padig:FLP-MAP00000001</dcterms:identifier>
         <dcterms:title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</dcterms:title>
         <dcterms:creator>Anonymous</dcterms:creator>
         <dcterms:description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</dcterms:description>
         <dcterms:date>ca. 1825</dcterms:date>
-        <schema:fileFormat>tif</schema:fileFormat>
+        <schema:fileFormat>image/tiff</schema:fileFormat>
         <dcterms:subject>Flowers</dcterms:subject>
         <dcterms:subject>Planters (containers)</dcterms:subject>
         <dcterms:subject>Pottery</dcterms:subject>
         <dcterms:subject>Rosettes</dcterms:subject>
         <dcterms:subject>Tulips</dcterms:subject>
-        <dcterms:language>German; English</dcterms:language>
+        <dcterms:language>German</dcterms:language>
+        <dcterms:language>English</dcterms:language>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>       
         <edm:isShownAt>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</edm:isShownAt>
         <edm:preview>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</edm:preview>
         <dcterms:type>Still Image</dcterms:type>
         <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
         <dcterms:spatial>Italy</dcterms:spatial>
-        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
         <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
         <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
         <edm:provider>PA Digital</edm:provider>
