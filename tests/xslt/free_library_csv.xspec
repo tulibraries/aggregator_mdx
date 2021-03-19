@@ -90,7 +90,8 @@
       <dcterms:subject>Tulips</dcterms:subject>
       <dcterms:language>German</dcterms:language>
       <dcterms:language>English</dcterms:language>
-      <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>        <edm:isShownAt>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</edm:isShownAt>
+      <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>       
+      <edm:isShownAt>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</edm:isShownAt>
       <edm:preview>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</edm:preview>
       <dcterms:type>Still Image</dcterms:type>
       <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
@@ -149,7 +150,8 @@
         <dcterms:subject>Tulips</dcterms:subject>
         <dcterms:language>German</dcterms:language>
         <dcterms:language>English</dcterms:language>
-        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>        <edm:isShownAt>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</edm:isShownAt>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>       
+        <edm:isShownAt>http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001</edm:isShownAt>
         <edm:preview>http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg</edm:preview>
         <dcterms:type>Still Image</dcterms:type>
         <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
