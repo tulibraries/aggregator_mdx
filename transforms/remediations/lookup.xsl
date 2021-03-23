@@ -301,7 +301,6 @@
         <padig:set string="Eliphalet Smith Account Book">pitt_collection.104</padig:set>
         <padig:set string="Elsie H. Hillman Papers">pitt_collection.182</padig:set>
         <padig:set string="Ephraim Douglass Ledgers">pitt_collection.20</padig:set>
-        <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Extension of the Pittsburgh City Limits Minute Book">pitt_collection.31</padig:set>
         <padig:set string="F. Theodore Wagner Papers">pitt_collection.42</padig:set>
         <padig:set string="Father Cox Papers">pitt_collection.53</padig:set>
@@ -466,6 +465,7 @@
         <padig:set string="Chinese Overseas Student Newsletters">pitt_collection.244</padig:set>
         <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
+        <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
