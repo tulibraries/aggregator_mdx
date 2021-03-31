@@ -14,11 +14,11 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    stylesheet="../../transforms/fandm_islandora.xsl">
+    stylesheet="../../transforms/islandora_fandm.xsl">
 
 
     <x:scenario label="SetSpec is looked up and matched to collection name">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
             test="oai_dc:dc/dcterms:isPartOf = 'College Yearbooks Collection'"/>
     </x:scenario>
@@ -122,7 +122,7 @@
     <!-- Creator (map and delimit) -->
     <x:scenario label="dc:creator delimits, normalizes, and maps">
         <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
-            <x:context href="../../fixtures/fandm.xml"/>
+            <x:context href="../../fixtures/islandora_fandm.xml"/>
             <x:expect label="dc:creator becomes dcterms:creator)"
                 test="oai_dc:dc/dcterms:creator = 'Franklin and Marshall College'" />
         </x:scenario>
@@ -161,7 +161,7 @@
 
     <!-- Extent -->
     <x:scenario label="dc:format maps to dcterms:extent">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="dc:format becomes dcterms:extent)"
                 test="oai_dc:dc/dcterms:extent = '1 black and white photograph : 5 1/2 x 7 1/2 inches'" />
     </x:scenario>
@@ -169,7 +169,7 @@
     <!-- Contributor (map and delimit) -->
     <x:scenario label="dc:contributor delimits, normalizes, and maps">
         <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
-            <x:context href="../../fixtures/fandm.xml"/>
+            <x:context href="../../fixtures/islandora_fandm.xml"/>
             <x:expect label="dc:contributor becomes dcterms:contributor)"
                 test="oai_dc:dc/dcterms:contributor = 'Test contributor'" />
         </x:scenario>
@@ -209,7 +209,7 @@
     <!-- Source (map and delimit) -->
     <x:scenario label="dc:source delimits, normalizes, and maps">
         <x:scenario label="dc:source becomes space-normalized dcterms:source">
-            <x:context href="../../fixtures/fandm.xml"/>
+            <x:context href="../../fixtures/islandora_fandm.xml"/>
             <x:expect label="dc:source becomes dcterms:source)"
                 test="oai_dc:dc/dcterms:source = 'Test source'" />
         </x:scenario>
@@ -248,28 +248,28 @@
 
     <!-- Publisher (map and delimit) -->
     <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="dc:publisher becomes dcterms:publisher)"
             test="oai_dc:dc/dcterms:publisher = 'Franklin and Marshall College'" />
     </x:scenario>
 
     <!-- Description (map) -->
     <x:scenario label="dc:description becomes space-normalized dcterms:description">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="dc:description becomes dcterms:description"
             test="oai_dc:dc/dcterms:description[last()] = 'Published by the Junior Class of Franklin and Marshall College, Lancaster, Pa. 1916'" />
     </x:scenario>
     
     <!-- Spatial (map and delimit) -->
     <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="spatial is mapped and delimited" test="oai_dc:dc/dcterms:spatial = 'Test spatial'" />     
     </x:scenario>
     
     <!-- Date (map and delimit) -->
     <x:scenario label="dc:date delimits, normalizes, and maps">
         <x:scenario label="dc:date becomes space-normalized dcterms:date">
-            <x:context href="../../fixtures/fandm.xml"/>
+            <x:context href="../../fixtures/islandora_fandm.xml"/>
             <x:expect label="dc:date becomes dcterms:date)"
                 test="oai_dc:dc/dcterms:date = '1916'" />
         </x:scenario>
@@ -308,7 +308,7 @@
 
     <!-- Subject (map and delimit) -->
     <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="first subject is mapped and delimited" test="oai_dc:dc/dcterms:subject = 'Yearbooks'"/>
     </x:scenario>
     
@@ -349,7 +349,7 @@
     <!-- Relation (map and delimit) -->
     <x:scenario label="relation delimits, normalizes, and maps">
         <x:scenario label="relation becomes space-normalized dcterms:relation">
-            <x:context href="../../fixtures/fandm.xml"/>
+            <x:context href="../../fixtures/islandora_fandm.xml"/>
             <x:expect label="dc:relation becomes dcterms:relation)"
                 test='oai_dc:dc/dcterms:relation = "Test relation"' />
         </x:scenario>
@@ -423,7 +423,7 @@
     
     <!-- Rights and Rights URI (map/parse and delimit) -->
     <x:scenario label="rights processing">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
         <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'Permitted Uses: This digital file is posted publicly for non-profit educational use only. All other uses are prohibited. Copyright Franklin and Marshall College, Lancaster, PA'"/>
         <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
@@ -465,25 +465,25 @@
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:FANDM-scholars-square7405'"/>
     </x:scenario>
     
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Franklin and Marshall College'"/>
     </x:scenario>
     
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digital.fandm.edu/object/scholars-square7405'"/>
     </x:scenario>
     
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digital.fandm.edu/islandora/object/scholars-square%3A7405/datastream/TN/view/Franklin%20and%20Marshall%20College%20Yearbook%20%281917%29.jpg'"/>
     </x:scenario>
     
@@ -1371,7 +1371,7 @@
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-        <x:context href="../../fixtures/fandm.xml"/>
+        <x:context href="../../fixtures/islandora_fandm.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 </x:description>
