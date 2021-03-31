@@ -19,9 +19,16 @@
     <xsl:strip-space elements="*"/>
         
         
-    <xsl:include href="oai_dc.xsl"/>
-    <xsl:include href="base_crosswalk_fandm.xsl"/>
+    <xsl:include href="oai_base_crosswalk.xsl"/>
     
+    <!-- remap format to extent -->
+    <xsl:template match="dc:format" priority="1">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:element name="dcterms:extent">
+                <xsl:value-of select="normalize-space(replace(normalize-space(.),'&amp;amp;','&amp;'))"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
     
     <!-- collection name -->
     <xsl:template match="oai:header/oai:setSpec">
