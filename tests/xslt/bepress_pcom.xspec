@@ -15,12 +15,12 @@
    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
    xmlns:schema="http://schema.org"
    xmlns:svcs="http://rdfs.org/sioc/services"
-   stylesheet="../../transforms/pcom.xsl">
+   stylesheet="../../transforms/bepress_pcom.xsl">
 
 
 <!-- Title; add title[1] to xsl and then add test here -->
    <x:scenario label="dc:title becomes space-normalized dcterms:title">
-    <x:context href="../../fixtures/pcom.xml"/>
+    <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="dc:title becomes dcterms:title"
        test="oai_dc:dc/dcterms:title = 'Synapsis: Georgia Campus (2011)'" />
    </x:scenario>
@@ -102,7 +102,7 @@
 <!-- Creator (map and delimit) -->
   <x:scenario label="dc:creator delimits, normalizes, and maps">
    <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
-    <x:context href="../../fixtures/pcom.xml"/>
+    <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="dc:creator becomes dcterms:creator)"
        test="oai_dc:dc/dcterms:creator = 'Philadelphia College of Osteopathic Medicine'" />
    </x:scenario>
@@ -142,7 +142,7 @@
 <!-- File format (map and delimit) -->
    <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
      <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:format becomes schema:fileFormat)"
          test="oai_dc:dc/schema:fileFormat = 'application/pdf'" />
      </x:scenario>
@@ -184,7 +184,7 @@
 <!-- Contributor (map and delimit) -->
    <x:scenario label="dc:contributor delimits, normalizes, and maps">
      <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:contributor becomes dcterms:contributor)"
          test="oai_dc:dc/dcterms:contributor = 'Test contributor'" />
      </x:scenario>
@@ -224,7 +224,7 @@
 <!-- Source (map and delimit) -->
    <x:scenario label="dc:source delimits, normalizes, and maps">
      <x:scenario label="dc:source becomes space-normalized dcterms:source">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:source becomes dcterms:source)"
          test="oai_dc:dc/dcterms:source = 'All Yearbooks'" />
      </x:scenario>
@@ -263,21 +263,21 @@
 
 <!-- Publisher (map and delimit) -->
      <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:publisher becomes dcterms:publisher)"
          test="oai_dc:dc/dcterms:publisher = 'Test publisher'" />
      </x:scenario>
 
 <!-- Description (map) -->
      <x:scenario label="dc:description becomes space-normalized dcterms:description">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:description becomes dcterms:description"
          test="oai_dc:dc/dcterms:description = 'This yearbook includes Association Of Military Osteopathic Physicians and Surgeons, AMOPS, Clubs, Athletic Club, Softball, Football, Soccer, Christian Medical And Dental Association, CMDA, Complimentary and Alternative Medicine, Emergency Medicine, American Medical Student Association, AMSA, Internal Medicine, Obstetrics/Gynecology, Outdoors Club, Trips, Pediatric Club, Radiology, Student Interest Group in Neurology, SIGN, Sigma Sigma Phi, SSPh, (ΣΣΦ), Student Association of the American College Of Osteopathic Family Physicians, ACOFP, Student Government Association, Class Officers, Undergraduate American Association of Osteopathy, UAAO, Student National Medical Association, SNMA, Student Osteopathic Medical Association, SOMA, Formals, Charity, Community Service, D.O. Day on the Hill, Conventions, American Osteopathic Association, AOA, White Coat Ceremony, AIDS Benefit, Holidays'" />
      </x:scenario>
 
 <!-- Spatial (map and delimit) -->
    <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
-     <x:context href="../../fixtures/pcom.xml"/>
+     <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="spatial is mapped and delimited" test="oai_dc:dc/dcterms:spatial = 'Test spatial'" />     
    </x:scenario>
 
@@ -285,7 +285,7 @@
 <!-- Date (map and delimit) -->
    <x:scenario label="dc:date delimits, normalizes, and maps">
      <x:scenario label="dc:date becomes space-normalized dcterms:date">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:date becomes dcterms:date)"
          test="oai_dc:dc/dcterms:date = '2011-01-01T08:00:00Z'" />
      </x:scenario>
@@ -324,7 +324,7 @@
 
 <!-- Subject (map and delimit) -->
    <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
-     <x:context href="../../fixtures/pcom.xml"/>
+     <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="subject is mapped and delimited" test="oai_dc:dc/dcterms:subject = 'Medicine and Health Sciences'"/>
    </x:scenario>
 
@@ -365,7 +365,7 @@
 <!-- Relation (map and delimit) -->
    <x:scenario label="relation delimits, normalizes, and maps">
      <x:scenario label="relation becomes space-normalized dcterms:relation">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dc:relation becomes dcterms:relation)"
          test='oai_dc:dc/dcterms:relation = "Test relation"' />
      </x:scenario>
@@ -374,7 +374,7 @@
 <!-- isPartOf (map and lookup) -->
    <x:scenario label="isPartOf delimits, normalizes, and maps">
      <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="isPartOf becomes dcterms:isPartOf)"
          test="oai_dc:dc/dcterms:isPartOf = 'Yearbooks'" />
      </x:scenario>
@@ -448,7 +448,7 @@
 
 <!-- Rights and Rights URI (map/parse and delimit) -->
    <x:scenario label="rights processing">
-     <x:context href="../../fixtures/pcom.xml"/>
+     <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
      <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This material is subject to copyright and is made available for nonprofit educational and research purposes only. For permission to publish substantial portions of this material, or to use it for any commercial purpose​, please contact the PCOM Library, library@pcom.edu​'"/>
      <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
@@ -490,26 +490,26 @@
 
 <!-- Identifier (map) -->
      <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-       <x:context href="../../fixtures/pcom.xml"/>
+       <x:context href="../../fixtures/bepress_pcom.xml"/>
        <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:PCOM-yearbooks_105'"/>
      </x:scenario>
 
 <!-- Data Provider (generate and map) -->
    <x:scenario label="data provider processing">
-     <x:context href="../../fixtures/pcom.xml"/>
+     <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Philadelphia College of Osteopathic Medicine'"/>
    </x:scenario>
    
    
 <!-- isShownAt (map) -->
    <x:scenario label="isShownAt processing">
-     <x:context href="../../fixtures/pcom.xml"/>
+     <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://digitalcommons.pcom.edu/yearbooks/105'"/>
    </x:scenario>
 
 <!-- Preview (generate and map) -->
    <x:scenario label="preview processing">
-     <x:context href="../../fixtures/pcom.xml"/>
+     <x:context href="../../fixtures/bepress_pcom.xml"/>
      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://digitalcommons.pcom.edu/yearbooks/1107/thumbnail.jpg'"/>
    </x:scenario>
 
