@@ -15,8 +15,11 @@
    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
    xmlns:schema="http://schema.org"
    xmlns:svcs="http://rdfs.org/sioc/services"
-   stylesheet="../../transforms/pennstateingest.xsl">
+   stylesheet="../../transforms/cdm_generic.xsl">
 
+   <!--
+  Testing Match Templates in qdcCDMingest.xsl
+  -->
 
 <!-- Title; add title[1] to xsl and then add test here -->
    <x:scenario label="dc:title becomes space-normalized dcterms:title">
@@ -50,6 +53,7 @@
         <x:context href="../../fixtures/cdm_generic.xml"/>
         <x:expect label="alt title is mapped and delimited">
           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
             <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
             <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
             <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -77,9 +81,8 @@
            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
-           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
            <edm:dataProvider>Temple University</edm:dataProvider>
+           <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
            <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
            <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
@@ -90,7 +93,7 @@
      </x:scenario>
    </x:scenario>
 
-<!-- Type. Medium, and Format (map/parse, normalize, and delimit) -->
+<!-- Type and Format (map/parse, normalize, and delimit) -->
 <x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
     <x:scenario label="Delimiting, remediating, and parsing">
       <x:context>
@@ -529,445 +532,6 @@
       </x:scenario>
     </x:scenario>
   </x:scenario>
-   
-   <x:scenario label="dcterms:medium values are matched, mapped, remediated, and delimited for known strings">
-    <x:scenario label="Delimiting, remediating, and parsing">
-      <x:context>
-        <oai:record>
-          <metadata>
-            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-              <dcterms:medium>apples;oranges;images;texts;photographs;</dcterms:medium>
-            </oai_qdc:qualifieddc>
-          </metadata>
-        </oai:record>
-      </x:context>
-      <x:expect label="type and format are mapped and delimited">
-        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <dcterms:format>apples</dcterms:format>
-          <dcterms:format>oranges</dcterms:format>
-          <dcterms:type>Image</dcterms:type>
-          <dcterms:type>Text</dcterms:type>
-          <dcterms:format>photographs</dcterms:format>
-          <edm:provider>PA Digital</edm:provider>
-        </oai_dc:dc>
-      </x:expect>
-    </x:scenario>
-
-    <x:scenario label="Text Type Remediation">
-      <x:scenario label="Text Type Remediation: Starts with lowercase text">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>textual kittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
-      </x:scenario>
-      <x:scenario label="Text Type Remediation: Starts with mixed case text">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>TEXTresource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
-      </x:scenario>
-      <x:scenario label="Text Type Remediation: text exact lowercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>text</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
-      </x:scenario>
-      <x:scenario label="Text Type Remediation: text exact uppercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>TEXT</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
-      </x:scenario>
-      <x:scenario label="Text Type Remediation: ends with text becomes format">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>hello-text</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-text'" />
-        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
-      </x:scenario>
-    </x:scenario>
-    <x:scenario label="Image Type Remediation">
-      <x:scenario label="Image Type Remediation: Starts with lowercase image">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>image of kittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
-      </x:scenario>
-      <x:scenario label="Image Type Remediation: Starts with mixed case Image">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>ImAgEresource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
-      </x:scenario>
-      <x:scenario label="Image Image Remediation: image exact lowercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>image</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
-      </x:scenario>
-      <x:scenario label="Image Type Remediation: image exact uppercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>IMAGE</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
-      </x:scenario>
-      <x:scenario label="Image Type Remediation: ends with image becomes format">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>hello-image</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-image'" />
-        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
-      </x:scenario>
-    </x:scenario>
-    <x:scenario label="Moving Image Type Remediation">
-      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, no spaces movingimage">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>movingimagekittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
-      </x:scenario>
-      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, single-spaced moving image">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>moving imagekittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
-      </x:scenario>
-      <x:scenario label="Moving Image Type Remediation: Starts with mixed case moving image">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>MOVING ImAgEresource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
-      </x:scenario>
-      <x:scenario label="Moving Image Remediation: Moving Image exact lowercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>moving image</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
-      </x:scenario>
-      <x:scenario label="Moving Image Type Remediation: Moving Image exact uppercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>MOVING IMAGE</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
-      </x:scenario>
-      <x:scenario label="Moving Image Type Remediation: ends with Moving Image becomes format">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>hello-moving-image</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-moving-image'" />
-        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
-      </x:scenario>
-    </x:scenario>
-    <x:scenario label="Sound Type Remediation">
-      <x:scenario label="Sound Type Remediation: Starts with lowercase sound">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>sound of kittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
-      </x:scenario>
-      <x:scenario label="Sound Type Remediation: Starts with mixed case sound">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>SoUnDresource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
-      </x:scenario>
-      <x:scenario label="Sound Type Remediation: Sound exact lowercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>sound</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
-      </x:scenario>
-      <x:scenario label="Sound Type Remediation: Sound exact uppercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>SOUND</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
-      </x:scenario>
-      <x:scenario label="Sound Type Remediation: ends with sound becomes format">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>hello-sound</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-sound'" />
-        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
-      </x:scenario>
-    </x:scenario>
-    <x:scenario label="Physical Object Type Remediation">
-      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, no spaces physicalobject">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>physicalobjectkittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
-      </x:scenario>
-      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, single-spaced Physical Object">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>physical object kittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
-      </x:scenario>
-      <x:scenario label="Physical Object Type Remediation: Starts with mixed case Physical Object">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>PHYSical Objectresource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
-      </x:scenario>
-      <x:scenario label="Physical Object Remediation: Physical Object exact lowercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>physical object</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
-      </x:scenario>
-      <x:scenario label="Physical Object Type Remediation: Physical Object exact uppercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>PHYSICAL OBJECT</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
-      </x:scenario>
-      <x:scenario label="Physical Object Type Remediation: ends with Physical Object becomes format">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>hello-physical-object</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-physical-object'" />
-        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
-      </x:scenario>
-    </x:scenario>
-    <x:scenario label="Interactive Resource Type Remediation">
-      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, no spaces interactiveresource">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>interactiveresourcepuppies</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
-      </x:scenario>
-      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, single-spaced Interactive Resource">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>interactive resource kittens</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
-      </x:scenario>
-      <x:scenario label="Interactive Resource Type Remediation: Starts with mixed case Interactive Resource">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>InterActive Resource resources</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
-      </x:scenario>
-      <x:scenario label="Interactive Resource Remediation: Interactive Resource exact lowercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>interactive resource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
-      </x:scenario>
-      <x:scenario label="Interactive Resource Type Remediation: Interactive Resource exact uppercase">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>INTERACTIVE RESOURCE</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
-      </x:scenario>
-      <x:scenario label="Interactive Resource Type Remediation: ends with Interactive Resource becomes format">
-        <x:context>
-          <oai:record>
-            <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <dcterms:medium>hello-interactive-resource</dcterms:medium>
-              </oai_qdc:qualifieddc>
-            </metadata>
-          </oai:record>
-        </x:context>
-        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-interactive-resource'" />
-        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
-      </x:scenario>
-    </x:scenario>
-  </x:scenario>
 
 <!-- Creator (map and delimit) -->
   <x:scenario label="dc:creator delimits, normalizes, and maps">
@@ -1097,6 +661,7 @@
      <x:context href="../../fixtures/cdm_generic.xml"/>
      <x:expect label="spatial is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
          <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
          <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1124,9 +689,8 @@
          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
          <edm:dataProvider>Temple University</edm:dataProvider>
+         <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
          <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
@@ -1196,33 +760,13 @@
        </x:expect>
      </x:scenario>
    </x:scenario>
-   
-   <x:scenario label="dcterms:created delimits, normalizes, and maps">
-     <x:scenario label="dcterms:created becomes space-normalized dcterms:date and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dcterms:created>1978-07-25;1978-07-26</dcterms:created>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="date maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:date>1978-07-25</dcterms:date>
-           <dcterms:date>1978-07-26</dcterms:date>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
 
 <!-- Subject (map and delimit) -->
    <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
      <x:context href="../../fixtures/cdm_generic.xml"/>
      <x:expect label="subject is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
          <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
          <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1250,9 +794,8 @@
          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
          <edm:dataProvider>Temple University</edm:dataProvider>
+         <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
          <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
@@ -1267,6 +810,7 @@
        <x:context href="../../fixtures/cdm_generic.xml"/>
         <x:expect label="language normalizes, maps, and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
            <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
            <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
            <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1294,9 +838,8 @@
            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
-           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
            <edm:dataProvider>Temple University</edm:dataProvider>
+           <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
            <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
            <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
            <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
@@ -1325,8 +868,7 @@
        </x:context>
        <x:expect label="relation maps and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:relation>Thing 1</dcterms:relation>
-           <dcterms:relation>Thing 2</dcterms:relation>
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -1334,30 +876,10 @@
    </x:scenario>
 
 <!-- isPartOf (map and delimit) -->
-   <x:scenario label="isPartOf delimits, normalizes, and maps">
-     <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
+   <x:scenario label="isPartOf generates from lookup">
        <x:context href="../../fixtures/cdm_generic.xml"/>
        <x:expect label="isPartOf becomes dcterms:isPartOf)"
-         test="oai_dc:dc/dcterms:isPartOf = 'George D. McDowell Philadelphia Evening Bulletin Photographs'" />
-     </x:scenario>
-     <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dcterms:isPartOf>Thing 1; Thing 2;</dcterms:isPartOf>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="relation maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:isPartOf>Thing 1</dcterms:isPartOf>
-           <dcterms:isPartOf>Thing 2</dcterms:isPartOf>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
+         test="oai_dc:dc/dcterms:isPartOf = 'de Pasquale collection'" />
    </x:scenario>
 
 <!-- Replaced by (map and delimit) -->
@@ -1430,32 +952,11 @@
    </x:scenario>
 
 <!-- Identifier (map) -->
-   <x:scenario label="dummy identifier generates and maps to dcterms:identifier">
-     <x:context>
-       <oai:record>
-         <metadata>
-           <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-             <dc:identifier>http://digital.libraries.psu.edu/cdm/ref/collection/maps1/id/14483</dc:identifier>
-           </oai_qdc:qualifieddc>
-         </metadata>
-       </oai:record>
-     </x:context>
-     <x:expect label="dummy identifier generates">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:identifier>padig:PSU-maps1-14483</dcterms:identifier>
-         <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
-         <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/maps1/id/14483</edm:isShownAt>
-         <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/maps1/id/14483</edm:preview>
-         <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/maps1/14483</svcs:hasService>
-         <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/maps1/14483/manifest.json</dcterms:isReferencedBy>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
-   </x:scenario>  
-   <x:scenario label="identifier not last becomes space-normalized dcterms:identifier">
+     <x:scenario label="dummy identifier generates and maps to dcterms:identifier">
        <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="identifier not last becomes dcterms:identifier">
+       <x:expect label="dummy identifier generates and becomes dcterms:identifier">
            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
              <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
              <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
              <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1483,9 +984,8 @@
              <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
              <dcterms:rights>This is a textual rights statement</dcterms:rights>
              <dcterms:source>The repository is SCRC</dcterms:source>
-             <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-             <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
              <edm:dataProvider>Temple University</edm:dataProvider>
+             <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
              <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
              <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
              <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
