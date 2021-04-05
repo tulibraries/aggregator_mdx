@@ -57,7 +57,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </oai_dc:dc>
     </xsl:template>
     
-    <!-- Title -->
+    <!-- Title; no delimiter due to punctuation -->
     <xsl:template match="dc:title[1]">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!=''">
@@ -67,7 +67,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Alternative titles -->
+    <!-- Alternative titles; no delimiter due to punctuation -->
     <xsl:template match="dc:title[position() > 1]">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!=''">
@@ -137,7 +137,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Publisher -->
+    <!-- Publisher; no delimiter due to punctuation -->
     <xsl:template match="dc:publisher">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!=''">
@@ -147,7 +147,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Description -->
+    <!-- Description; no delimiter due to punctuation -->
     <xsl:template match="dc:description">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!='' and not(ends-with(normalize-space($norm_string),'thumbnail.jpg'))">
@@ -186,7 +186,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Extent -->
+    <!-- Extent; no delimiter due to punctuation -->
     <xsl:template match="dcterms:extent">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!=''">
@@ -226,7 +226,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Relation -->
+    <!-- Relation; no delimiter due to punctuation -->
     <xsl:template match="dc:relation">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!=''">
@@ -256,7 +256,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
-    <!-- Rights and Rights URI -->
+    <!-- Rights and Rights URI; no delimiter due to punctuation -->
     <xsl:template match="dc:rights">
         <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
         <xsl:if test="normalize-space($rights)!=''">

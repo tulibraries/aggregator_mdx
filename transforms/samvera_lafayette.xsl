@@ -19,8 +19,7 @@
     <xsl:strip-space elements="*"/>
         
         
-    <xsl:include href="oai_dc.xsl"/>
-    <xsl:include href="base_crosswalk.xsl"/>    
+    <xsl:include href="oai_base_crosswalk.xsl"/>    
     
     <!-- collection name -->
     <xsl:template match="oai:header/oai:setSpec">

@@ -14,45 +14,45 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    stylesheet="../../transforms/lafayette.xsl">
+    stylesheet="../../transforms/samvera_lafayette.xsl">
 
 
 <!-- Institution specific checks -->
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-        <x:context href="../../fixtures/lafayette.xml"/>
-        <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:LAF-5138jd87r'"/>
+        <x:context href="../../fixtures/samvera_lafayette.xml"/>
+        <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:LAFAYETTE-5138jd87r'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-        <x:context href="../../fixtures/lafayette.xml"/>
+        <x:context href="../../fixtures/samvera_lafayette.xml"/>
         <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Lafayette College'"/>
     </x:scenario>
 
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-        <x:context href="../../fixtures/lafayette.xml"/>
+        <x:context href="../../fixtures/samvera_lafayette.xml"/>
         <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://hdl.handle.net/10385/5138jd87r'"/>
     </x:scenario>
 
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-        <x:context href="../../fixtures/lafayette.xml"/>
+        <x:context href="../../fixtures/samvera_lafayette.xml"/>
         <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://ldr.lafayette.edu/downloads/fq977t78v?file=thumbnail'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-        <x:context href="../../fixtures/lafayette.xml"/>
+        <x:context href="../../fixtures/samvera_lafayette.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
             test="oai_dc:dc/dcterms:isPartOf = 'Lafayette Newspaper Archive'"/>
     </x:scenario>
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-        <x:context href="../../fixtures/lafayette.xml"/>
+        <x:context href="../../fixtures/samvera_lafayette.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
