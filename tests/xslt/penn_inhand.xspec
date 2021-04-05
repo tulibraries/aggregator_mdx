@@ -800,7 +800,7 @@
      </x:scenario>
    </x:scenario>
 
-<!-- isPartOf (map and delimit) -->
+<!-- isPartOf (map and delimit)
    <x:scenario label="isPartOf delimits, normalizes, and maps">
      <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
        <x:context href="../../fixtures/penn_inhand.xml"/>
@@ -826,6 +826,7 @@
        </x:expect>
      </x:scenario>
    </x:scenario>
+    -->
 
 <!-- Replaced by (map and delimit) -->
    <x:scenario label="isReplacedBy delimits, normalizes, and maps">
