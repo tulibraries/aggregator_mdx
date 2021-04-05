@@ -20,7 +20,7 @@
 
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
-    <xsl:include href="oai_qdc.xsl"/>
+    <xsl:include href="oai_base_crosswalk.xsl"/>
     <xsl:include href="base_crosswalk_scranton.xsl"/>
 
     <!-- Create collection name -->
