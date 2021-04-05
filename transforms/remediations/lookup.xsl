@@ -71,8 +71,8 @@
         <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
         <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
         <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
-        <padig:url string="Lafayette College" code="LAF">https://ldr.lafayette.edu/</padig:url>
-        <padig:url string="Lafayette College" code="LAF">http://hdl.handle.net/10385/</padig:url>
+        <padig:url string="Lafayette College" code="LAFAYETTE">https://ldr.lafayette.edu/</padig:url>
+        <padig:url string="Lafayette College" code="LAFAYETTE">http://hdl.handle.net/10385/</padig:url>
         <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
         <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
