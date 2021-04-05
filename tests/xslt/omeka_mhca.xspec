@@ -21,38 +21,38 @@
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-      <x:context href="../../fixtures/mhac.xml"/>
+      <x:context href="../../fixtures/omeka_mhac.xml"/>
       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:MHAC-5560'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:context href="../../fixtures/mhac.xml"/>
+      <x:context href="../../fixtures/omeka_mhac.xml"/>
       <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Media Historic Archives Commission'"/>
     </x:scenario>
 
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-        <x:context href="../../fixtures/mhac.xml"/>
+        <x:context href="../../fixtures/omeka_mhac.xml"/>
         <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://www.mediahistoricarchives.org/items/show/5560'"/>
     </x:scenario>
 
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-        <x:context href="../../fixtures/mhac.xml"/>
+        <x:context href="../../fixtures/omeka_mhac.xml"/>
         <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://www.mediahistoricarchives.org/files/thumbnails/0df2b31c7057d69cbd4990cfd85a5f83.jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-        <x:context href="../../fixtures/mhac.xml"/>
+        <x:context href="../../fixtures/omeka_mhac.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
           test="oai_dc:dc/dcterms:isPartOf = 'I. Frank Lees Photograph Collection'"/>
     </x:scenario>
 
     <!-- rights; commented out generic rights crosswalk check below -->
     <x:scenario label="rights statements map, generate, and crosswalk">
-      <x:context href="../../fixtures/mhac.xml"/>
+      <x:context href="../../fixtures/omeka_mhac.xml"/>
       <x:expect label="url to rights page transforms into rights text; URIs map to edm:rights; other text maps to dcterms:rights">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -92,7 +92,7 @@
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-        <x:context href="../../fixtures/mhac.xml"/>
+        <x:context href="../../fixtures/omeka_mhac.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 

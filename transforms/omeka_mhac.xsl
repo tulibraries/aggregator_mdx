@@ -17,8 +17,7 @@
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
 
-    <xsl:include href="oai_dcq.xsl"/>
-    <xsl:include href="base_crosswalk.xsl"/>
+    <xsl:include href="oai_base_crosswalk.xsl"/>
 
 
     <!-- take isPartOf from setSpec rather than dcterms:isPartOf -->
