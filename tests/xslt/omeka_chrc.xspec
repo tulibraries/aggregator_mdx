@@ -21,44 +21,44 @@
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-      <x:context href="../../fixtures/chrc.xml"/>
+      <x:context href="../../fixtures/omeka_chrc.xml"/>
       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:CHRC-7391'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:context href="../../fixtures/chrc.xml"/>
+      <x:context href="../../fixtures/omeka_chrc.xml"/>
       <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Catholic Historical Research Center of the Archdiocese of Philadelphia'"/>
     </x:scenario>
 
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-      <x:context href="../../fixtures/chrc.xml"/>
+      <x:context href="../../fixtures/omeka_chrc.xml"/>
       <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://omeka.chrc-phila.org/items/show/7391'"/>
     </x:scenario>
 
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-      <x:context href="../../fixtures/chrc.xml"/>
+      <x:context href="../../fixtures/omeka_chrc.xml"/>
       <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://omeka.chrc-phila.org/files/thumbnails/82a9a8d2d5590e9cf845be50a698c7e5.jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-      <x:context href="../../fixtures/chrc.xml"/>
+      <x:context href="../../fixtures/omeka_chrc.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
           test="oai_dc:dc/dcterms:isPartOf = 'Correspondence'"/>
     </x:scenario>
 
     <!-- rights; commented out generic rights crosswalk check below -->
     <x:scenario label="rights statements map, generate, and crosswalk">
-      <x:context href="../../fixtures/chrc.xml"/>
+      <x:context href="../../fixtures/omeka_chrc.xml"/>
       <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"></x:expect>
     </x:scenario>
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-        <x:context href="../../fixtures/chrc.xml"/>
+        <x:context href="../../fixtures/omeka_chrc.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 

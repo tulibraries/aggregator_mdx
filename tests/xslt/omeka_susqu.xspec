@@ -21,50 +21,50 @@
 
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
       <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:SUSQU-108'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->
     <x:scenario label="data provider processing">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
       <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Susquehanna University'"/>
     </x:scenario>
 
     <!-- isShownAt (map) -->
     <x:scenario label="isShownAt processing">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
       <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://pahistoryharvest.com/items/show/108'"/>
     </x:scenario>
 
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
       <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://pahistoryharvest.com/files/thumbnails/13b835649ae5cb46b6e8ede1d5044955.jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
     <x:scenario label="SetSpec is looked up and matched to collection name">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
           test="oai_dc:dc/dcterms:isPartOf = 'Susquehanna University History Harvest'"/>
     </x:scenario>
 
     <!-- rights; commented out generic rights crosswalk check below -->
     <x:scenario label="rights statements map, generate, and crosswalk">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
       <x:expect label="rights URI generates" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/CNE/1.0/'"></x:expect>
     </x:scenario>
   
     <!-- language -->
     <x:scenario label="language field contains 'eng' and incorrectly mapped value">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
       <x:expect label="only language maps" test="oai_dc:dc/dcterms:language = 'English'"></x:expect>
     </x:scenario>
 
     <!-- Hub -->
     <x:scenario label="hard coded hub name">
-      <x:context href="../../fixtures/susqu.xml"/>
+      <x:context href="../../fixtures/omeka_susqu.xml"/>
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
