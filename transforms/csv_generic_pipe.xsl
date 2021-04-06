@@ -36,8 +36,6 @@
             <xsl:apply-templates/>
 
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
-            <xsl:call-template name="static-rights-statement"/>
-            <xsl:call-template name="dataprovider"/>
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
     </xsl:template>
@@ -127,8 +125,8 @@
         </xsl:if>
     </xsl:template>
     
-    <!-- Country -->
-    <xsl:template match="Country">
+    <!-- Place -->
+    <xsl:template match="Place">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="plac_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
@@ -289,25 +287,11 @@
 
     <!-- NAMED TEMPLATES -->
 
-    <!-- Contributing Institution -->
-    <xsl:template name="dataprovider">
-        <xsl:element name="edm:dataProvider">
-            <xsl:value-of>Free Library of Philadelphia</xsl:value-of>
-        </xsl:element>
-    </xsl:template>
-    
     <!-- Hub -->
     <xsl:template name="hub">
         <xsl:element name="edm:provider">
             <xsl:value-of>PA Digital</xsl:value-of>
         </xsl:element>
-    </xsl:template>
-    
-    <!-- Rights -->
-    <xsl:template name="static-rights-statement">
-        <xsl:element name="dcterms:rights">
-            <xsl:value-of>High-resolution images from the Free Library of Philadelphia&apos;s collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</xsl:value-of>
-        </xsl:element>       
     </xsl:template>
 
     <!-- Alternative title template -->

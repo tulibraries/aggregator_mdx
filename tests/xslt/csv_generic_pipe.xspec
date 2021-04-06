@@ -15,17 +15,17 @@
    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
    xmlns:schema="http://schema.org"
    xmlns:svcs="http://rdfs.org/sioc/services"
-   stylesheet="../../transforms/generic_csv.xsl">
+   stylesheet="../../transforms/csv_generic_pipe.xsl">
 
 <!-- mediaMaster -->
    <x:scenario label="value in mediaMaster maps to padig:mediaMaster">
-     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="" test="oai_dc:dc/padig:mediaMaster = 'https://media.philamuseum.org/image/JGJ_B001_F001_001_001/full/800,/0/default.jpg'"></x:expect>
    </x:scenario>
 
 <!-- Title (map and delimit) -->
    <x:scenario label="Title becomes space-normalized dcterms:title">
-    <x:context href="../../fixtures/generic_csv_test.xml"/>
+    <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="Title becomes dcterms:title"
        test="oai_dc:dc/dcterms:title = 'Reports of the Inspectors of Mines of the anthracite coal regions of Pennsylvania for the year ..'" />
    </x:scenario>
@@ -54,7 +54,7 @@
           <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
             <record airflow-record-id="1">
               <Title>Title</Title>
-              <Alternative_Title>Alt title1;Alt title2</Alternative_Title>
+              <Alternative_Title>Alt title1|Alt title2</Alternative_Title>
             </record>
           </collection>
         </x:context>
@@ -75,7 +75,7 @@
       <x:context>
         <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
           <record airflow-record-id="1">
-            <Type>apples;oranges;images;texts;photographs;</Type>
+            <Type>apples|oranges|images|texts|photographs|</Type>
           </record>
         </collection>
       </x:context>
@@ -444,7 +444,7 @@
 <!-- Creator (map and delimit) -->
   <x:scenario label="Creator delimits, normalizes, and maps">
    <x:scenario label="Creator becomes space-normalized dcterms:creator">
-    <x:context href="../../fixtures/generic_csv_test.xml"/>
+    <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="Creator becomes dcterms:creator)"
        test="oai_dc:dc/dcterms:creator = 'Pennsylvania. Inspectors of Mines'" />
    </x:scenario>
@@ -452,7 +452,7 @@
      <x:context>
           <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
             <record airflow-record-id="1">
-             <Creator>Smith, John;Smith, Karen</Creator>
+             <Creator>Smith, John|Smith, Karen</Creator>
             </record>
           </collection>
      </x:context>
@@ -469,7 +469,7 @@
 <!-- File format (map and delimit) -->
    <x:scenario label="Format delimits, normalizes, and maps to schema:fileFormat">
      <x:scenario label="Format becomes space-normalized schema:fileFormat">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Format becomes schema:fileFormat"
          test="oai_dc:dc/schema:fileFormat = 'image/jpeg'" />
      </x:scenario>
@@ -477,7 +477,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Format>Thing1;Thing2</Format>
+             <Format>Thing1|Thing2</Format>
            </record>
          </collection>
        </x:context>
@@ -495,7 +495,7 @@
 <!-- Contributor (map and delimit) -->
    <x:scenario label="Contributor delimits, normalizes, and maps">
      <x:scenario label="Contributor becomes space-normalized dcterms:contributor">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Contributor becomes dcterms:contributor)"
          test="oai_dc:dc/dcterms:contributor = 'Test contributor'" />
      </x:scenario>
@@ -503,7 +503,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Contributor>Smith, John;Smith, Karen</Contributor>
+             <Contributor>Smith, John|Smith, Karen</Contributor>
            </record>
          </collection>
        </x:context>
@@ -520,7 +520,7 @@
 <!-- Source (map and delimit) -->
    <x:scenario label="Source delimits, normalizes, and maps">
      <x:scenario label="Source becomes space-normalized dcterms:source">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Source becomes dcterms:source)"
          test="oai_dc:dc/dcterms:source = 'Test source'" />
      </x:scenario>
@@ -528,7 +528,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Source>Smith, John;Smith, Karen</Source>
+             <Source>Smith, John|Smith, Karen</Source>
            </record>
          </collection>
        </x:context>
@@ -544,14 +544,14 @@
 
 <!-- Publisher (map and delimit) -->
      <x:scenario label="Publisher becomes space-normalized dcterms:publisher">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Publisher becomes dcterms:publisher)"
          test="oai_dc:dc/dcterms:publisher = '[Harrisburg] : The Bureau'" />
      </x:scenario>
 
 <!-- Description (map) -->
      <x:scenario label="Description becomes space-normalized dcterms:description">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Description becomes dcterms:description"
          test="oai_dc:dc/dcterms:description = 'Report year ends Dec. 31,Continues: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Coal Mines of the anthricite coals regions of Pennsylvania for the year ..,Continued by: Pennsylvania. Inspectors of Mines. Reports of the Inspectors of Mines of the anthracite and bituminous coal regions of Pennsylvania'" />
      </x:scenario>
@@ -561,7 +561,7 @@
      <x:context>
        <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
          <record airflow-record-id="1">
-           <Place>Place1;Place2</Place>
+           <Place>Place1|Place2</Place>
          </record>
        </collection>
      </x:context>
@@ -580,7 +580,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Temporal>Time1;Time2</Temporal>
+             <Temporal>Time1|Time2</Temporal>
            </record>
          </collection>
        </x:context>
@@ -596,7 +596,7 @@
 
 <!-- Extent (map) -->
    <x:scenario label="dcterms:extent becomes space-normalized dcterms:extent">
-     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="dcterms:extent becomes dcterms:extent)"
        test="oai_dc:dc/dcterms:extent = '1 photograph, b&amp;w; 8 x 10 in.'" />
    </x:scenario>
@@ -604,7 +604,7 @@
 <!-- Date (map and delimit) -->
    <x:scenario label="Creation_Date delimits, normalizes, and maps">
      <x:scenario label="Creation_Date becomes space-normalized dcterms:date">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Creation_Date becomes dcterms:date)"
          test="oai_dc:dc/dcterms:date = '1885'" />
      </x:scenario>
@@ -612,7 +612,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-               <Creation_Date>1978-07-25;1978-07-26</Creation_Date>
+               <Creation_Date>1978-07-25|1978-07-26</Creation_Date>
            </record>
          </collection>
        </x:context>
@@ -631,7 +631,7 @@
      <x:context>
        <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
          <record airflow-record-id="1">
-           <Subject>Subject1;Subject2</Subject>
+           <Subject>Subject1|Subject2</Subject>
          </record>
        </collection>
      </x:context>
@@ -649,7 +649,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Language>eng;yid;french</Language>
+             <Language>eng|yid|french</Language>
            </record>
          </collection>
        </x:context>
@@ -666,7 +666,7 @@
 <!-- Relation (map and delimit) -->
    <x:scenario label="Relation delimits, normalizes, and maps">
      <x:scenario label="Relation becomes space-normalized dcterms:relation">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Relation becomes dcterms:relation)"
          test='oai_dc:dc/dcterms:relation = "Test relation"' />
      </x:scenario>
@@ -674,7 +674,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Relation>Thing 1;Thing 2</Relation>
+             <Relation>Thing 1|Thing 2</Relation>
            </record>
          </collection>
        </x:context>
@@ -691,7 +691,7 @@
 <!-- isPartOf (map and delimit) -->
    <x:scenario label="Collection_Name delimits, normalizes, and maps">
      <x:scenario label="Collection_Name becomes space-normalized dcterms:isPartOf">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Collection_Name becomes dcterms:isPartOf)"
          test="oai_dc:dc/dcterms:isPartOf = 'Pennsylvania Mining Reports Collection'" />
      </x:scenario>
@@ -699,7 +699,7 @@
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
-             <Collection_Name>Thing 1;Thing 2</Collection_Name>
+             <Collection_Name>Thing 1|Thing 2</Collection_Name>
            </record>
          </collection>
        </x:context>
@@ -715,7 +715,7 @@
 
 <!-- Rights and Rights URI (map/parse and delimit) -->
    <x:scenario label="rights processing">
-     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/NoC-US/1.0/'"/>
      <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This is a textual rights statement.'"/>
      <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/NoC-US/1.0/')" />
@@ -724,25 +724,25 @@
 
 <!-- Identifier (map) -->
      <x:scenario label="Item_No maps to dcterms:identifier">
-       <x:context href="../../fixtures/generic_csv_test.xml"/>
+       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Item_No maps becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'conditions_prospects_norwich_mine'"/>
      </x:scenario>
 
 <!-- Data Provider (generate and map) -->
    <x:scenario label="Data_Provider processing">
-     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="Data_Provider maps to edm:dataProvider" test="oai_dc:dc/edm:dataProvider = 'Lehigh University'"/>
    </x:scenario>
 
 <!-- isShownAt (map) -->
    <x:scenario label="isShownAt processing">
-     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="Identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://archive.org/details/reportsofinspect1885penn'"/>
    </x:scenario>
 
 <!-- Preview (generate and map) -->
    <x:scenario label="preview processing">
-     <x:context href="../../fixtures/generic_csv_test.xml"/>
+     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
      <x:expect label="Thumbnail maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://archive.org/services/img/reportsofinspect1885penn'"/>
    </x:scenario>
  </x:description>

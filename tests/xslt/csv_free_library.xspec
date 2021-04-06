@@ -14,55 +14,55 @@
   xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
   xmlns:schema="http://schema.org"
   xmlns:svcs="http://rdfs.org/sioc/services"
-  stylesheet="../../transforms/free_library_csv.xsl">
+  stylesheet="../../transforms/csv_free_library.xsl">
 
   <!-- Collection Name -->
   <x:scenario label="Collection_Name is transformed to dcterms:isPartOf">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Collection_Name is transformed to dcterms:isPartOf" test="oai_dc:dc/dcterms:isPartOf = 'Fraktur'"/>
   </x:scenario>
 
   <!-- Contributing Institution -->
   <x:scenario label="hard coded dataProvider">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="hard coded dataProvider" test="oai_dc:dc/edm:dataProvider = 'Free Library of Philadelphia'"/>
   </x:scenario>
 
   <!-- Creator -->
   <x:scenario label="Creator is transformed to dcterms:creator">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Creator is transformed to dcterms:creator" test="oai_dc:dc/dcterms:creator = 'Anonymous'"/>
   </x:scenario>
 
   <!-- Date -->
   <x:scenario label="Creation_Date is transformed to dcterms:date">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Creation_Date is transformed to dcterms:date" test="oai_dc:dc/dcterms:date = 'ca. 1825'"/>
   </x:scenario>
 
   <!-- Description -->
   <x:scenario label="Description is transformed to dcterms:description">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Description is transformed to dcterms:description" test="oai_dc:dc/dcterms:description = 'Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.'"/>
   </x:scenario>
 
   <!-- Hub -->
   <x:scenario label="hard coded hub name">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"></x:expect>
   </x:scenario>
 
   <!-- Identifiers -->
   <x:scenario label="identifier processing">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
-    <x:expect label="Item_No is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'padig:FLP-MAP00000001'"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
+    <x:expect label="Item_No is derived from base URL" test="oai_dc:dc/dcterms:identifier = 'padig:FREE_LIBRARY-MAP00000001'"/>
       <x:expect label="Identifier is transformed to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://libwww.freelibrary.org/diglib/searchItem.cfm?itemID=frk00001'"/>
     <x:expect label="Thumbnail is generated from identifier" test="oai_dc:dc/edm:preview = 'http://libwww.freelibrary.org/digicol/fraktur/frk00001t.jpg'"></x:expect>
   </x:scenario>
 
   <!-- Language -->
   <x:scenario label="Language is transformed to dcterms:language">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Language is transformed to dcterms:language"><oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:dc="http://purl.org/dc/elements/1.1/"
       xmlns:dcterms="http://purl.org/dc/terms/"
@@ -77,7 +77,9 @@
       xmlns:schema="http://schema.org"
       xmlns:padig="http://padigital.org/ns/"
       xmlns:svcs="http://rdfs.org/sioc/services">
-      <dcterms:identifier>padig:FLP-MAP00000001</dcterms:identifier>
+      <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
+      <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
+      <dcterms:identifier>padig:FREE_LIBRARY-MAP00000001</dcterms:identifier>
       <dcterms:title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</dcterms:title>
       <dcterms:creator>Anonymous</dcterms:creator>
       <dcterms:description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</dcterms:description>
@@ -96,8 +98,6 @@
       <dcterms:type>Still Image</dcterms:type>
       <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
       <dcterms:spatial>Italy</dcterms:spatial>
-      <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
-      <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
       <edm:provider>PA Digital</edm:provider>
     </oai_dc:dc>
     </x:expect>
@@ -105,23 +105,23 @@
   
   <!-- Country -->
   <x:scenario label="Country is transformed to dcterms:spatial">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Country is transformed to dcterms:spatial" test="oai_dc:dc/dcterms:spatial = 'Italy'"/>
   </x:scenario>
 
   <!-- Rights -->
   <x:scenario label="static rights statement">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="textual rights statment is transformed to dcterms:rights" test='oai_dc:dc/dcterms:rights = "High-resolution images from the Free Library of Philadelphia&apos;s collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form."'/>
   </x:scenario>
   <x:scenario label="rightsstatement.org processing">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="URI rights statment is transformed to edm:rights" test='oai_dc:dc/edm:rights = "http://rightsstatements.org/vocab/InC/1.0/"'/>
   </x:scenario>
 
   <!-- Subject -->
   <x:scenario label="Subject is transformed to dcterms:subject">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Subject is transformed to dcterms:subject">
       <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -137,7 +137,9 @@
         xmlns:schema="http://schema.org"
         xmlns:padig="http://padigital.org/ns/"
         xmlns:svcs="http://rdfs.org/sioc/services">
-        <dcterms:identifier>padig:FLP-MAP00000001</dcterms:identifier>
+        <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
+        <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
+        <dcterms:identifier>padig:FREE_LIBRARY-MAP00000001</dcterms:identifier>
         <dcterms:title>Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber</dcterms:title>
         <dcterms:creator>Anonymous</dcterms:creator>
         <dcterms:description>Hand-drawn; hand-colored; hand-lettered. The main text, hand-lettered in German Fraktur with blanks handwritten in German script, is framed by a rectangular border. The county and town are written in English. Below it is a confirmation note in German script. On each side is a scalloped pot with a tulip, adorned with leaves, smaller blossoms and two scalloped flowers. Several rosettes and flowers are above and below the text frame. The abbreviation v d m after the pastors name stands for verbi divini magister, which means Teacher of Gods Word. Based on designs by Abraham Huth.</dcterms:description>
@@ -156,8 +158,6 @@
         <dcterms:type>Still Image</dcterms:type>
         <dcterms:isPartOf>Fraktur</dcterms:isPartOf>
         <dcterms:spatial>Italy</dcterms:spatial>
-        <dcterms:rights>High-resolution images from the Free Library of Philadelphia's collections are available for publication and other uses, within copyright and licensing restrictions. Please take note of the Item No which you will need to fill out the Reproduction Services form.</dcterms:rights>
-        <edm:dataProvider>Free Library of Philadelphia</edm:dataProvider>
         <edm:provider>PA Digital</edm:provider>
       </oai_dc:dc>
     </x:expect>
@@ -165,7 +165,7 @@
 
   <!-- Title -->
   <x:scenario label="Title is transformed to dcterms:title">
-    <x:context href="../../fixtures/free_library_test.csv.xml"/>
+    <x:context href="../../fixtures/csv_free_library.xml"/>
     <x:expect label="Title is transformed to dcterms:title" test="oai_dc:dc/dcterms:title = 'Birth and Baptismal Certificate (Geburts und Taufschein) for Jonas Laber'"/>
   </x:scenario>
 
