@@ -45,7 +45,7 @@
         <padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
         <padig:url string="Curtis Institute of Music" code="CURTIS">http://cdm16667.contentdm.oclc.org/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://cdm15860.contentdm.oclc.org/</padig:url>
-        <padig:url string="Pennsylvania State University" code="PSU">http://digital.libraries.psu.edu/</padig:url>
+        <padig:url string="Pennsylvania State University" code="PENNSTATE">http://digital.libraries.psu.edu/</padig:url>
         <padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
         <padig:url string="University of Pennsylvania" code="PENN">http://digital.library.upenn.edu/</padig:url>
         <padig:url string="Villanova University" code="VNOVA">https://digital.library.villanova.edu/</padig:url>

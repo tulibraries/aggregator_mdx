@@ -15,12 +15,12 @@
    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
    xmlns:schema="http://schema.org"
    xmlns:svcs="http://rdfs.org/sioc/services"
-   stylesheet="../../transforms/pennstateingest.xsl">
+   stylesheet="../../transforms/cdm_pennstate.xsl">
 
 
 <!-- Title; add title[1] to xsl and then add test here -->
    <x:scenario label="dc:title becomes space-normalized dcterms:title">
-    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="dc:title becomes dcterms:title"
        test="oai_dc:dc/dcterms:title = 'A citizen gives his opinion on a proposed disco hall.'" />
    </x:scenario>
@@ -47,7 +47,7 @@
       </x:expect>
       </x:scenario>
       <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
-        <x:context href="../../fixtures/cdm_generic.xml"/>
+        <x:context href="../../fixtures/cdm_pennstate.xml"/>
         <x:expect label="alt title is mapped and delimited">
           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
@@ -78,12 +78,12 @@
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
            <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
-           <edm:dataProvider>Temple University</edm:dataProvider>
-           <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-           <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-           <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-           <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+           <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+            <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
+           <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+           <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+           <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+           <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -972,7 +972,7 @@
 <!-- Creator (map and delimit) -->
   <x:scenario label="dc:creator delimits, normalizes, and maps">
    <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
-    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="dc:creator becomes dcterms:creator)"
        test="oai_dc:dc/dcterms:creator = 'Schell, Albert F.'" />
    </x:scenario>
@@ -999,7 +999,7 @@
 <!-- File format (map and delimit) -->
    <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
      <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:format becomes schema:fileFormat)"
          test="oai_dc:dc/schema:fileFormat = 'image/jp2'" />
      </x:scenario>
@@ -1027,7 +1027,7 @@
 <!-- Contributor (map and delimit) -->
    <x:scenario label="dc:contributor delimits, normalizes, and maps">
      <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:contributor becomes dcterms:contributor)"
          test="oai_dc:dc/dcterms:contributor = 'Smith, Jane J.'" />
      </x:scenario>
@@ -1054,7 +1054,7 @@
 <!-- Source (map and delimit) -->
    <x:scenario label="dc:source delimits, normalizes, and maps">
      <x:scenario label="dc:source becomes space-normalized dcterms:source">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:source becomes dcterms:source)"
          test="oai_dc:dc/dcterms:source = 'The repository is SCRC'" />
      </x:scenario>
@@ -1080,21 +1080,21 @@
 
 <!-- Publisher (map and delimit) -->
      <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:publisher becomes dcterms:publisher)"
          test="oai_dc:dc/dcterms:publisher = 'Evening Bulletin'" />
      </x:scenario>
 
 <!-- Description (map) -->
      <x:scenario label="dc:description becomes space-normalized dcterms:description">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:description becomes dcterms:description"
          test="oai_dc:dc/dcterms:description = 'A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.'" />
      </x:scenario>
 
 <!-- Spatial (map and delimit) -->
    <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="spatial is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
@@ -1125,12 +1125,12 @@
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
-         <edm:dataProvider>Temple University</edm:dataProvider>
-         <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-         <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-         <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-         <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+         <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+         <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
+         <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+         <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+         <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+         <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
          <edm:provider>PA Digital</edm:provider>
        </oai_dc:dc>
      </x:expect>
@@ -1139,7 +1139,7 @@
 <!-- Temporal (map and delimit) -->
    <x:scenario label="dcterms:temporal delimits, normalizes, and maps">
      <x:scenario label="dcterms:temporal becomes space-normalized dcterms:temporal">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dcterms:temporal becomes dcterms:temporal)"
          test="oai_dc:dc/dcterms:temporal = '20th century'" />
      </x:scenario>
@@ -1165,7 +1165,7 @@
 
 <!-- Extent (map) -->
    <x:scenario label="dcterms:extent becomes space-normalized dcterms:extent">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="dcterms:extent becomes dcterms:extent)"
        test="oai_dc:dc/dcterms:extent = '1 photograph, b&amp;w; 8 x 10 in.'" />
    </x:scenario>
@@ -1173,7 +1173,7 @@
 <!-- Date (map and delimit) -->
    <x:scenario label="dc:date delimits, normalizes, and maps">
      <x:scenario label="dc:date becomes space-normalized dcterms:date">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:date becomes dcterms:date)"
          test="oai_dc:dc/dcterms:date = '1978-07-25'" />
      </x:scenario>
@@ -1220,7 +1220,7 @@
 
 <!-- Subject (map and delimit) -->
    <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="subject is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
@@ -1251,12 +1251,12 @@
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
-         <edm:dataProvider>Temple University</edm:dataProvider>
-         <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-         <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-         <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-         <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+         <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+         <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
+         <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+         <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+         <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+         <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
          <edm:provider>PA Digital</edm:provider>
        </oai_dc:dc>
      </x:expect>
@@ -1264,7 +1264,7 @@
 
 <!-- Language (map and delimit) -->
      <x:scenario label="language becomes space-normalized dcterms:language">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
         <x:expect label="language normalizes, maps, and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
            <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
@@ -1295,21 +1295,21 @@
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
            <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
-           <edm:dataProvider>Temple University</edm:dataProvider>
-           <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-           <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-           <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-           <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+           <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+           <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
+           <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+           <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+           <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+           <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
      </x:scenario>
 
 <!-- Relation (map and delimit) -->
-   <x:scenario label="relation delimits, normalizes, and maps">
+   <x:scenario label="relation normalizes and maps">
      <x:scenario label="relation becomes space-normalized dcterms:relation">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="dc:relation becomes dcterms:relation)"
          test='oai_dc:dc/dcterms:relation = "Here&apos;s a link to the collection finding aid."' />
      </x:scenario>
@@ -1325,8 +1325,7 @@
        </x:context>
        <x:expect label="relation maps and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:relation>Thing 1</dcterms:relation>
-           <dcterms:relation>Thing 2</dcterms:relation>
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -1336,7 +1335,7 @@
 <!-- isPartOf (map and delimit) -->
    <x:scenario label="isPartOf delimits, normalizes, and maps">
      <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="isPartOf becomes dcterms:isPartOf)"
          test="oai_dc:dc/dcterms:isPartOf = 'George D. McDowell Philadelphia Evening Bulletin Photographs'" />
      </x:scenario>
@@ -1402,7 +1401,7 @@
 
 <!-- Rights and Rights URI (map/parse and delimit) -->
    <x:scenario label="rights processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
      <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This is a textual rights statement'"/>
      <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
@@ -1442,8 +1441,8 @@
      </x:context>
      <x:expect label="dummy identifier generates">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:identifier>padig:PSU-maps1-14483</dcterms:identifier>
          <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+         <dcterms:identifier>padig:PENNSTATE-maps1-14483</dcterms:identifier>
          <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/maps1/id/14483</edm:isShownAt>
          <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/maps1/id/14483</edm:preview>
          <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/maps1/14483</svcs:hasService>
@@ -1453,7 +1452,7 @@
      </x:expect>
    </x:scenario>  
    <x:scenario label="identifier not last becomes space-normalized dcterms:identifier">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
+       <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="identifier not last becomes dcterms:identifier">
            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
              <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
@@ -1484,12 +1483,12 @@
              <dcterms:rights>This is a textual rights statement</dcterms:rights>
              <dcterms:source>The repository is SCRC</dcterms:source>
              <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-             <dcterms:identifier>padig:PSU-p15037coll3-0</dcterms:identifier>
-             <edm:dataProvider>Temple University</edm:dataProvider>
-             <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-             <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-             <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-             <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+             <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
+             <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
+             <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+             <edm:preview>http://digital.libraries.psu.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+             <svcs:hasService>http://digital.libraries.psu.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+             <dcterms:isReferencedBy>http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
              <edm:provider>PA Digital</edm:provider>
            </oai_dc:dc>
        </x:expect>
@@ -1497,31 +1496,31 @@
 
 <!-- Data Provider (generate and map) -->
    <x:scenario label="data provider processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="lookup identifier URL and map to institution" test="oai_dc:dc/edm:dataProvider = 'Temple University'"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
+     <x:expect label="lookup identifier URL and map to institution" test="oai_dc:dc/edm:dataProvider = 'Pennsylvania State University'"/>
    </x:scenario>
 
 <!-- isShownAt (map) -->
    <x:scenario label="isShownAt processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0'"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
+     <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0'"/>
    </x:scenario>
 
 <!-- Preview (generate and map) -->
    <x:scenario label="preview processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0'"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
+     <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://digital.libraries.psu.edu/utils/getthumbnail/collection/p15037coll3/id/0'"/>
    </x:scenario>
 
 <!-- IIIF Base URL (generate and map) -->
    <x:scenario label="IIIF base url processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/svcs:hasService = 'http://digital.library.temple.edu/digital/iiif/p15037coll3/0'"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
+     <x:expect label="preview generates and maps" test="oai_dc:dc/svcs:hasService = 'http://digital.libraries.psu.edu/digital/iiif/p15037coll3/0'"/>
    </x:scenario>
 
 <!-- IIIF Manifest (generate and map) -->
    <x:scenario label="IIIF manifest processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json'"/>
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
+     <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json'"/>
    </x:scenario>
  </x:description>
