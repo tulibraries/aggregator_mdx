@@ -43,7 +43,6 @@
     
     <!-- isPartOf -->
     <xsl:template name="isPartOf">
-        
             <xsl:variable name="setID" select="normalize-space(lower-case(.))"/>
             <xsl:if test="$setID = $setSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">

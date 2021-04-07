@@ -128,8 +128,8 @@
         <padig:cont string="Bryn Mawr College" code="BRYNMAWR">castle</padig:cont>
         <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_AdvertisingCards</padig:cont>
         <padig:cont string="Bryn Mawr College" code="BRYNMAWR">Mellink</padig:cont>
-        <padig:cont string="Friends Historical Library of Swarthmore College" code="FHL">SC_Truman</padig:cont>
-        <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="FHL">SC_Broad</padig:cont>
+        <padig:cont string="Friends Historical Library of Swarthmore College" code="SWATHAVERFORD">SC_Truman</padig:cont>
+        <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="SWATHAVERFORD">SC_Broad</padig:cont>
     </xsl:param>
 
     <!-- lookup table for collection name by setSpec -->
