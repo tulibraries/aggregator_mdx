@@ -15,7 +15,7 @@
    xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
    xmlns:schema="http://schema.org"
    xmlns:svcs="http://rdfs.org/sioc/services"
-   stylesheet="../../transforms/KLNqdcCDMingest.xsl">
+   stylesheet="../../transforms/cdm_kln.xsl">
 
    <!--
   Testing Match Templates in qdcCDMingest.xsl
@@ -23,7 +23,7 @@
 
 <!-- Title; add title[1] to xsl and then add test here -->
    <x:scenario label="dc:title becomes space-normalized dcterms:title">
-    <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+    <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="dc:title becomes dcterms:title"
        test="oai_dc:dc/dcterms:title = 'Map of Bloomsburg, Columbia Co. Pennsylvania'" />
    </x:scenario>
@@ -514,7 +514,7 @@
 <!-- Creator (map and delimit) -->
   <x:scenario label="dc:creator delimits, normalizes, and maps">
    <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
-    <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+    <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="dc:creator becomes dcterms:creator)"
        test="oai_dc:dc/dcterms:creator = 'Creator name'" />
    </x:scenario>
@@ -541,7 +541,7 @@
 <!-- File format (map and delimit) -->
    <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
      <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:format becomes schema:fileFormat)"
          test="oai_dc:dc/schema:fileFormat = 'image/jpeg'" />
      </x:scenario>
@@ -559,6 +559,7 @@
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
            <schema:fileFormat>image/jpeg</schema:fileFormat>
            <schema:fileFormat>image/tiff</schema:fileFormat>
+           <schema:fileFormat>thing</schema:fileFormat>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -569,7 +570,7 @@
 <!-- Contributor (map and delimit) -->
    <x:scenario label="dc:contributor delimits, normalizes, and maps">
      <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:contributor becomes dcterms:contributor)"
          test="oai_dc:dc/dcterms:contributor = 'W.W. Richie assisted by P.A. Cunningham'" />
      </x:scenario>
@@ -596,7 +597,7 @@
 <!-- Source (map and delimit) -->
    <x:scenario label="dc:source delimits, normalizes, and maps">
      <x:scenario label="dc:source becomes space-normalized dcterms:source">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:source becomes dcterms:source)"
          test="oai_dc:dc/dcterms:source = 'test source'" />
      </x:scenario>
@@ -622,28 +623,28 @@
 
 <!-- Publisher (map and delimit) -->
      <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:publisher becomes dcterms:publisher)"
          test="oai_dc:dc/dcterms:publisher = 'test publisher'" />
      </x:scenario>
 
 <!-- Description (map) -->
      <x:scenario label="dc:description becomes space-normalized dcterms:description">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:description becomes dcterms:description"
          test="oai_dc:dc/dcterms:description = '1 map : col. ; 102 cm. 1870 map of Bloomsburg, Pa., Columbia County, Pa. showing East Bloomsburg, West Bloomsburg, and business directory.'" />
      </x:scenario>
 
 <!-- Spatial (map and delimit) -->
    <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="spatial is mapped and delimited" test="oai_dc:dc/dcterms:spatial = 'United States - Pennsylvania - Bloomsburg'" />     
    </x:scenario>
 
 <!-- Temporal (map and delimit) -->
    <x:scenario label="dcterms:temporal delimits, normalizes, and maps">
      <x:scenario label="dcterms:temporal becomes space-normalized dcterms:temporal">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dcterms:temporal becomes dcterms:temporal)"
          test="oai_dc:dc/dcterms:temporal = '20th century'" />
      </x:scenario>
@@ -689,7 +690,7 @@
 <!-- Date (map and delimit) -->
    <x:scenario label="dc:date delimits, normalizes, and maps">
      <x:scenario label="dc:date becomes space-normalized dcterms:date">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:date becomes dcterms:date)"
          test="oai_dc:dc/dcterms:date = '1870'" />
      </x:scenario>
@@ -715,7 +716,7 @@
 
 <!-- Subject (map and delimit) -->
    <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="subject is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <edm:dataProvider>Bloomsburg University</edm:dataProvider>
@@ -732,6 +733,7 @@
          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
          <dcterms:date>1870</dcterms:date>
          <schema:fileFormat>image/jpeg</schema:fileFormat>
+         <schema:fileFormat>else</schema:fileFormat>
          <dcterms:format>Map</dcterms:format>
          <dcterms:source>test source</dcterms:source>
          <dcterms:spatial>United States - Pennsylvania - Bloomsburg</dcterms:spatial>
@@ -771,13 +773,13 @@
      </x:scenario>
 
 <!-- Relation (map and delimit) -->
-   <x:scenario label="relation delimits, normalizes, and maps">
+   <x:scenario label="relation normalizes and maps">
      <x:scenario label="relation becomes space-normalized dcterms:relation">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dc:relation becomes dcterms:relation)"
          test='oai_dc:dc/dcterms:relation = "test relation"' />
      </x:scenario>
-     <x:scenario label="dc:relation becomes space-normalized dcterms:relation and delimits">
+     <x:scenario label="dc:relation becomes space-normalized dcterms:relation">
        <x:context>
          <oai:record>
            <metadata>
@@ -787,10 +789,9 @@
            </metadata>
          </oai:record>
        </x:context>
-       <x:expect label="relation maps and delimits">
+       <x:expect label="relation maps">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:relation>Thing 1</dcterms:relation>
-           <dcterms:relation>Thing 2</dcterms:relation>
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -800,7 +801,7 @@
 <!-- isPartOf (map and lookup) -->
    <x:scenario label="isPartOf delimits, normalizes, and maps">
      <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="isPartOf becomes dcterms:isPartOf)"
          test="oai_dc:dc/dcterms:isPartOf = 'Bloomsburg University Map Collection'" />
      </x:scenario>
@@ -848,7 +849,7 @@
 
 <!-- Rights and Rights URI (map/parse and delimit) -->
    <x:scenario label="rights processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
      <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'Andruss Library digital images and corresponding text may be used for non-commercial, educational, and personal use only without permission, provided that proper attribution of the source accompanies the image. The digital images are not intended for reproduction or redistribution. Commercial publication requires permission. Contact the Bloomsburg University Archives at guides.library.bloomu.edu/universityarchives or (570) 389-4210. Andruss Library assumes no responsibility for infringement of copyright by content users.'"/>
      <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
@@ -877,7 +878,7 @@
 
 <!-- Identifier (map) -->
      <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
-       <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+       <x:context href="../../fixtures/cdm_kln.xml"/>
        <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
            <edm:dataProvider>Bloomsburg University</edm:dataProvider>
@@ -894,6 +895,7 @@
            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
            <dcterms:date>1870</dcterms:date>
            <schema:fileFormat>image/jpeg</schema:fileFormat>
+           <schema:fileFormat>else</schema:fileFormat>
            <dcterms:format>Map</dcterms:format>
            <dcterms:source>test source</dcterms:source>
            <dcterms:spatial>United States - Pennsylvania - Bloomsburg</dcterms:spatial>
@@ -913,37 +915,37 @@
 
 <!-- Data Provider (generate and map) -->
    <x:scenario label="data provider processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="lookup setspec and map to institution" test="oai_dc:dc/edm:dataProvider = 'Bloomsburg University'"/>
    </x:scenario>
    
 <!-- Intermediate Provider (generate and map) -->
    <x:scenario label="intermediate provider processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="lookup URL and map to intermediate provider" test="oai_dc:dc/dpla:intermediateProvider = 'Keystone Library Network'"/>
    </x:scenario>
    
 <!-- isShownAt (map) -->
    <x:scenario label="isShownAt processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://cdm17189.contentdm.oclc.org/cdm/ref/collection/blmmap/id/0'"/>
    </x:scenario>
 
 <!-- Preview (generate and map) -->
    <x:scenario label="preview processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://cdm17189.contentdm.oclc.org/utils/getthumbnail/collection/blmmap/id/0'"/>
    </x:scenario>
 
 <!-- IIIF Base URL (generate and map) -->
    <x:scenario label="IIIF base url processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="preview generates and maps" test="oai_dc:dc/svcs:hasService = 'http://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0'"/>
    </x:scenario>
 
 <!-- IIIF Manifest (generate and map) -->
    <x:scenario label="IIIF manifest processing">
-     <x:context href="../../fixtures/KLNqdcCDMingest_test.xml"/>
+     <x:context href="../../fixtures/cdm_kln.xml"/>
      <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'http://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json'"/>
    </x:scenario>
  </x:description>
