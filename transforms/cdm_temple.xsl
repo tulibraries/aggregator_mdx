@@ -28,7 +28,7 @@
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
     
-    <xsl:template match="dcterms:isPartOf">
+    <xsl:template match="dcterms:isPartOf" priority="1">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:element name="dcterms:isPartOf">
                 <xsl:value-of select="normalize-space(.)"/>

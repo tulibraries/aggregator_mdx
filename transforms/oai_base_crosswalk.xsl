@@ -236,6 +236,15 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
         </xsl:if>
     </xsl:template>
     
+    <xsl:template match="dcterms:isPartOf">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!=''">
+            <xsl:element name="dcterms:relation">
+                <xsl:value-of select="normalize-space($norm_string)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+    
     <!-- Replaced by -->
     <xsl:template match="dcterms:isReplacedBy">
         <xsl:if test="normalize-space(.)!=''">

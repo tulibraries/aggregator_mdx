@@ -39,7 +39,7 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="dcterms:isPartOf">
+    <xsl:template match="dcterms:isPartOf" priority="1">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="rela_template">
                 <xsl:with-param name="strings" select="normalize-space(.)"/>
