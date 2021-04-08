@@ -17,24 +17,23 @@
     version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
-        
+
 <!-- CROSSWALK STYLESHEET: this transform is used to match the xml record root (oai_dc:dc, oai_qdc:qualifieddc, etc.); in OAI-PMH, this should be the child node of oai:metadata. it also:
     -adds <edm:provider>PA Digital</edm:provider> to all records
     -performs the basic crosswalks we do (title to title, creator to creator, etc.) as well as remediations and enhancements for things like type and rights and delimiting on semicolon
     -includes the LOOKUP STYLESHEET we use to generate a number of things such as data provider, collection name, etc.
-            
+
 this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are written for OAI-PMH metadata. institution or repository specific transforms, such as generating a padigital identifier, collection name, preview and object URLs, and data provider, should be done using an institution stylesheet (a template with details, including how to override anything within this stylesheet, is at institution_template.xsl). -->
-      
+
     <xsl:include href="remediations/lookup.xsl"/>
     <xsl:include href="oai_terms_base_crosswalk.xsl"/>
-    <!-- <xsl:include href="remediations/filter.xsl"/> -->
     
     <!-- drop nodes we don't care about, namely, header values -->
     <xsl:template match="text() | @*"/>
-    
+
     <!-- drop records where the OAI header is marked as 'deleted' - removed since this is built into airflow harvest
     <xsl:template match="//record[header[@status='deleted']]/*"/> -->
-    
+
     <!-- base record. Matches each OAI feed record that is mapped. -->
     <xsl:template match="//oai:record[not(oai:metadata/*/dc:relation[contains(string(), 'pdcp_noharvest')])]">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -49,14 +48,14 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
             xmlns:oclcterms="http://purl.org/oclc/terms/"
             xmlns:schema="http://schema.org" >
-            
+
             <xsl:apply-templates />
-            
+
             <!-- add templates you have to call - e.g. named templates; matched templates with mode -->
             <xsl:call-template name="hub"/>
         </oai_dc:dc>
     </xsl:template>
-    
+
     <!-- Title; no delimiter due to punctuation -->
     <xsl:template match="dc:title[1]">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
@@ -66,7 +65,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Alternative titles; no delimiter due to punctuation -->
     <xsl:template match="dc:title[position() > 1]">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
@@ -76,7 +75,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="dcterms:alternative">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="delimiter_template">
@@ -85,7 +84,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Type and Format -->
     <xsl:template match="dc:type">
         <xsl:if test="normalize-space(.)!=''">
@@ -95,8 +94,8 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
-    
+
+
     <!-- File format -->
     <xsl:template match="dc:format">
         <xsl:if test="normalize-space(.)!=''">
@@ -106,7 +105,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Creator -->
     <xsl:template match="dc:creator">
         <xsl:if test="normalize-space(.)!=''">
@@ -116,7 +115,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Contributor -->
     <xsl:template match="dc:contributor">
         <xsl:if test="normalize-space(.)!=''">
@@ -126,7 +125,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Source -->
     <xsl:template match="dc:source">
         <xsl:if test="normalize-space(.)!=''">
@@ -136,7 +135,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Publisher; no delimiter due to punctuation -->
     <xsl:template match="dc:publisher">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
@@ -146,7 +145,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Description; no delimiter due to punctuation -->
     <xsl:template match="dc:description">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
@@ -156,7 +155,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Place -->
     <xsl:template match="dcterms:spatial">
         <xsl:if test="normalize-space(.)!=''">
@@ -166,7 +165,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="dc:coverage">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="spatial_template">
@@ -175,7 +174,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Temporal coverage -->
     <xsl:template match="dcterms:temporal">
         <xsl:if test="normalize-space(.)!=''">
@@ -185,7 +184,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Extent; no delimiter due to punctuation -->
     <xsl:template match="dcterms:extent">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
@@ -195,7 +194,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Date -->
     <xsl:template match="dc:date">
         <xsl:if test="normalize-space(.)!=''">
@@ -205,7 +204,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Subject -->
     <xsl:template match="dc:subject">
         <xsl:if test="normalize-space(.)!=''">
@@ -215,7 +214,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Language -->
     <xsl:template match="dc:language">
         <xsl:if test="normalize-space(.)!=''">
@@ -225,7 +224,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Relation; no delimiter due to punctuation -->
     <xsl:template match="dc:relation">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
@@ -235,7 +234,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="dcterms:isPartOf">
         <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
         <xsl:if test="normalize-space($norm_string)!=''">
@@ -244,7 +243,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Replaced by -->
     <xsl:template match="dcterms:isReplacedBy">
         <xsl:if test="normalize-space(.)!=''">
@@ -254,7 +253,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Replaces -->
     <xsl:template match="dcterms:replaces">
         <xsl:if test="normalize-space(.)!=''">
@@ -264,7 +263,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Rights and Rights URI; no delimiter due to punctuation -->
     <xsl:template match="dc:rights">
         <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
@@ -290,7 +289,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:choose>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- Rights holder -->
     <xsl:template match="dcterms:rightsHolder">
         <xsl:if test="normalize-space(.)!=''">
@@ -300,9 +299,9 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
-    
+
 <!-- TEMPLATES -->
-    
+
     <!-- Subject template -->
     <xsl:template name="subj_template">
         <xsl:param name="strings"/>
@@ -401,7 +400,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template name="spatial_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -463,7 +462,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
     <xsl:template name="fform_template">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
             <xsl:when test="contains($strings, $delimiter)">
@@ -483,7 +482,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                         </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
-                
+
                 <!--Need to do recursion-->
                 <xsl:call-template name="fform_template">
                     <xsl:with-param name="strings" select="$newstem"/>
@@ -836,7 +835,7 @@ this stylesheet will likely be included in all INSTITUTION STYLESHEETS that are 
                 </xsl:otherwise>
             </xsl:choose>
     </xsl:template>
-    
+
     <!-- Hub -->
     <xsl:template name="hub">
         <xsl:element name="edm:provider">

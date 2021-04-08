@@ -21,20 +21,8 @@
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
     <xsl:include href="oai_base_crosswalk.xsl"/>
-    <!--
-        <xsl:include href="remediations/filter.xsl"/>
-    -->
-
-    <!-- drop nodes we don't care about, namely, header values
-    <xsl:template match="text() | @*"/>  -->
-
-    <!-- drop records where the OAI header is marked as 'deleted' - removed since this is built into airflow harvest
-    <xsl:template match="//record[header[@status='deleted']]/*"/> -->
-
-    <!-- base record. Matches each OAI feed record that is mapped. -->
 
     <!-- Create elements based on dc:identifier -->
-    
     <xsl:template match="dc:identifier">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="identifier"/>
@@ -52,14 +40,14 @@
                 <xsl:element name="edm:isShownAt">
                     <xsl:value-of>http://dla.library.upenn.edu/dla/print/pageturn.html?id=</xsl:value-of><xsl:value-of select="."/>
                 </xsl:element>
-            </xsl:if>   
+            </xsl:if>
     </xsl:template>
 
         <!-- isPartOf -->
         <xsl:template name="isPartOf">
             <xsl:element name="dcterms:isPartOf"><xsl:value-of>Print at Penn</xsl:value-of></xsl:element>
         </xsl:template>
-    
+
     <!-- identifier -->
     <xsl:template name="identifier">
     <xsl:if test="normalize-space(.)!=''">
@@ -68,12 +56,12 @@
         </xsl:element>
     </xsl:if>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template name="dataProvider">
         <xsl:element name="edm:dataProvider">
             <xsl:value-of>University of Pennsylvania</xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
 </xsl:stylesheet>

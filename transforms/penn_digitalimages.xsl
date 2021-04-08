@@ -21,9 +21,7 @@
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
     <xsl:include href="oai_base_crosswalk.xsl"/>
-    <!--
-        <xsl:include href="remediations/filter.xsl"/>
-    -->
+
 
     <xsl:template match="dc:identifier">
         <xsl:if test="normalize-space(.)!=''">
@@ -34,9 +32,9 @@
             <xsl:call-template name="dataProvider"/>
         </xsl:if>
     </xsl:template>
-        
+
     <!-- TEMPLATES -->
-        
+
     <!-- identifier -->
     <xsl:template name="identifier">
         <xsl:element name="dcterms:identifier">
@@ -45,27 +43,27 @@
     </xsl:template>
 
     <!-- isShownAt -->
-    <xsl:template name="isShownAt">    
+    <xsl:template name="isShownAt">
         <xsl:element name="edm:isShownAt">
             <xsl:value-of>http://dla.library.upenn.edu/dla/archives/image.html?id=</xsl:value-of><xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
-            
+
     <!-- Preview -->
     <xsl:template name="preview">
         <xsl:variable name="lowerID" select='lower-case(.)'/>
         <xsl:element name="edm:preview">
             <xsl:value-of>https://repo.library.upenn.edu/thumbs/</xsl:value-of><xsl:value-of select="$lowerID"/><xsl:value-of>.jpg</xsl:value-of>
         </xsl:element>
-    </xsl:template>  
-    
+    </xsl:template>
+
     <!-- isPartOf -->
     <xsl:template name="isPartOf">
         <xsl:element name="dcterms:isPartOf">
             <xsl:value-of>University Archives Digital Image Collection</xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template name="dataProvider">
         <xsl:element name="edm:dataProvider">
