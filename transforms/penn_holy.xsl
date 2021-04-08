@@ -21,9 +21,7 @@
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
     <xsl:include href="oai_base_crosswalk.xsl"/>
-    <!--
-        <xsl:include href="remediations/filter.xsl"/>
-    -->
+
     
     <xsl:template match="dc:identifier">
         <xsl:if test="normalize-space(.)!=''">
@@ -37,16 +35,16 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-            
+
     <!-- TEMPLATES -->
-    
+
         <!-- identifier -->
         <xsl:template name="identifier">
             <xsl:element name="dcterms:identifier">
                 <xsl:value-of>padig:PENN-</xsl:value-of><xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:template>
-        
+
         <!-- isShownAt -->
        <xsl:template name="isShownAt">
            <xsl:variable name="lowerID" select="lower-case(.)"/>
@@ -55,8 +53,8 @@
                     <xsl:value-of>http://dla.library.upenn.edu/dla/holyland/image.html?id=</xsl:value-of><xsl:value-of select="."/>
                 </xsl:element>
        </xsl:template>
-               
-            
+
+
         <!-- preview -->
            <xsl:template name="preview">
                <xsl:variable name="lowerID" select="lower-case(.)"/>
@@ -67,14 +65,14 @@
            </xsl:template>
 
      <!-- NAMED TEMPLATES -->
-    
+
     <!-- isPartOf -->
     <xsl:template name="isPartOf">
         <xsl:element name="dcterms:isPartOf">
             <xsl:value-of>Holy Land Digital Image Collections</xsl:value-of>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template name="dataProvider">
         <xsl:element name="edm:dataProvider">

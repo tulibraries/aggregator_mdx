@@ -1,18 +1,27 @@
-# aggregator_mdx
-This repository contains metadata transformations, validations, Elasticsearch mappers, and sample data (fixtures) used by the PA Digital aggregator setup. The validations and transformations are Schematron and XSL; while the mappers are for use in the Elasticsearch instance behind Combine. All pieces here are used in the PA Digital Combine, albeit the validations and transformations are created to be platform-independent (within realm of XML technologies).
+# aggregator_mdx (Updated documentation in progress)
+This repository contains metadata transformations, validations, and sample data (fixtures) used by PA Digital's aggregator setup Shoo Fly Pie. The validations and transformations are Schematron and XSL. All pieces here are used by Shoo Fly, albeit the validations and transformations are created to be platform-independent (within realm of XML technologies).
+
+PA Digital's aggregation system includes these components:
+- Shoo Fly Pie: Runs on Apache Airflow, the backend, task-management system that ingests, processes, and publishes metadata to our OAI-PMH server. XSLT and Schematron files described here are called using a variables file found in [funcake_dags](https://github.com/tulibraries/funcake_dags) and imported manually into Airflow.
+
+- [Funnel Cake](funnelcake.padigital.org/): the frontend Blacklight site that displays metadata ingested from our OAI-PMH server. This is used to more easily perform quality assessment on aggregated metadata.
+
+This documentation and the infrastructure described here was originally written and created by Christina Harlow and later updated to reflect evolving practice and use.
 
 ### Transforms
 
-The XSLT (all version 2) is written in 3 levels:
+The XSLT (all version 2) is written to process XML metadata harvested via OAI-PMH as well as XML or CSV that are unavailable via OAI-PMH but stored in PA Digital's private data repository.
 
-- collection-specific XSLT (e.g. `transforms/temple_p16002coll25.xsl`): these are the files you actually run against the desired XML files. This imports the provider-specific XSLT (next).
-- provider-specific XSLT (e.g. `transforms/temple.xsl`): this file is imported above and contains XML node templates that are reused across collections. If/when collections are consistent enough to use the same XSLT, this can be made into that (for example, `dplah.xsl` could easily be a single collection & provider-level transform, though it currently imports shared templates from `temple.xsl` for sake of reuse). These imports the remediation XSLT (next).
+The transformations are written at three levels:
+
+- institution- or repository-specific XSLT (e.g., `transforms/cdm_temple.xsl`): these are the files you actually run against the desired XML files and generally include mappings to crosswalk metadata whose location varies depending on repository and institution. These include digital object and thumbnail preview URLs; IIIF URLs; data provider, intermediate provider, and collection names; locally generated identifiers; and any mapping that should override the base crosswalk (next).
+
+- base crosswalk XSLT (e.g., `transforms/oai_base_crosswalk.xsl`): this file is imported above and contains XML node templates that are reused across collections (for example, mapping incoming dc:title to PA Digital's dcterms:title, dc:creator to dcterms:creator, etc.). The OAI-PMH base crosswalks delimit on semicolon for all but the following fields where semicolon is sometimes used as punctuation: description, title, publisher, extent, relation, and rights. There are also base crosswalks to process CSV or XML stored in PA Digital's private data repository (`csv_generic_semic.xsl`, which delimits on `;` and `csv_generic_pipe.xsl`, which delimits on `|`). Base crosswalks should not be modified unless a change is desired for all processed collections. If an override of the base crosswalk is desired, it should be done in the institution- or repository-specific XSLT described above (see `dcterms:isPartOf` mapping in `cdm_temple.xsl` for an example of a crosswalk override; the `priority` attribute should be used to avoid ambiguous rule matching).  All base crosswalks import the remediation XSLT (next).
+
 - remediation-specific XSLT (`tranforms/remediations/*.xsl`): these files have normalization & enhancements.
-  - `remediations/dedupe.xsl` performs a deduplication of elements and values within a record.
-  - `remediations/filter.xsl` is a list of identifiers that cause a record to be filtered out from the transform output.
-  - `remediations/lookups.xsl` has lookup parameters used by the above templates to normalize string values against a variety of vocabularies, including DCMI Types, the DPLA-recommended Getty AAT subset, Lexvo Language look-ups, month abbreviations, etc. An example of using these lookup params is commented out in `temple.xsl` (see the template for `dc:language`).
+  - `remediations/lookups.xsl` has lookup parameters used by the above templates to normalize string values against a variety of vocabularies, including DCMI Types, the DPLA-recommended Getty AAT subset, Lexvo Language look-ups, month abbreviations, etc. It is often used in institution or repository crosswalks to generate data provider names by a base URL, collection names by setSpec values, institutions codes for use in our local identifiers, etc. An example of using these lookup params can be found in `samvera_shi.xsl` (see `identifier` and `dataProvider` templates).
 
-To run one of the collection-specific XSLT, you need to have all 3 files in the same directory structure.
+The same filename is used across different file types (e.g., `cdm_temple.xsl` is used to transform the sample file `cdm_temple.xml` and is tested using `cdm_temple.xspec`). Except where an institution has a local or unnamed repository, the first part of the filename indicates which repository it is used for and the next is the ID of the institution we use locally. To run one of the institution- or repository-specific XSLT, you need to have all 3 files in the directory structure provided here.
 
 ### Validations
 
