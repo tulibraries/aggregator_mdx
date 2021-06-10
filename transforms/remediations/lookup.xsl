@@ -321,6 +321,7 @@
         <padig:set string="H.K. Porter Co., Pittsburgh, Pa. Records">pitt_collection.247</padig:set>
         <padig:set string="Harold Corsini Photographs">pitt_collection.146</padig:set>
         <padig:set string="Harold V. Cohen Photographs">pitt_collection.312</padig:set>
+        <padig:set string="Harper Family Papers">pitt_collection.356</padig:set>
         <padig:set string="Hebrew Institute Photographs">pitt_collection.48</padig:set>
         <padig:set string="Henry Clay Frick Business Records">pitt_collection.156</padig:set>
         <padig:set string="Henry Marie Brackenridge and Family Papers">pitt_collection.103</padig:set>
@@ -366,6 +367,7 @@
         <padig:set string="Montefiore Hospital Photographs">pitt_collection.86</padig:set>
         <padig:set string="Mrs. Hanlin's Diary">pitt_collection.204</padig:set>
         <padig:set string="National Council of Jewish Women (NCJW), Pittsburgh Section, Records">pitt_collection.110</padig:set>
+        <padig:set string="National Organization for Women (NOW) Newsletters">pitt_collection.355</padig:set>
         <padig:set string="Northern Liberties Bridge Company Ledger">pitt_collection.63</padig:set>
         <padig:set string="Northland Historical Image Collection">pitt_collection.64</padig:set>
         <padig:set string="Oakmont Historical Image Collection">pitt_collection.65</padig:set>
@@ -382,6 +384,7 @@
         <padig:set string="Pittsburgh Bureau of Building Inspection Photographs">pitt_collection.155</padig:set>
         <padig:set string="Pittsburgh Census Tract Maps and Data">pitt_collection.329</padig:set>
         <padig:set string="Pittsburgh City Photographer Collection">pitt_collection.72</padig:set>
+        <padig:set string="Pittsburgh International Lesbian and Gay Film Festival Records">pitt_collection.359</padig:set>
         <padig:set string="Pittsburgh Photographic Library Collection">pitt_collection.317</padig:set>
         <padig:set string="Pittsburgh Prints from the Collection of Wesley Pickard">pitt_collection.73</padig:set>
         <padig:set string="Pittsburgh Public Schools Photographs">pitt_collection.74</padig:set>
@@ -397,6 +400,7 @@
         <padig:set string="Progress Photographs: William Penn Hotel">pitt_collection.78</padig:set>
         <padig:set string="Rachel Carson Collection">pitt_collection.238</padig:set>
         <padig:set string="Railroad Stock Certificate Collection">pitt_collection.250</padig:set>
+        <padig:set string="Reverend David J. Beale Collection">pitt_collection.361</padig:set>
         <padig:set string="Richard E. Rauh Photographs">pitt_collection.87</padig:set>
         <padig:set string="Robert G. Pflaum Photograph Collection">pitt_collection.147</padig:set>
         <padig:set string="Robert J. Walker Papers">pitt_collection.119</padig:set>
@@ -467,6 +471,7 @@
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
         <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
+        <padig:set string="Fox Chapel Garden Club Records">pitt_collection.360</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
         <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
