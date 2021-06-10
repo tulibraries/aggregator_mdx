@@ -49,7 +49,7 @@
         <padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
         <padig:url string="University of Pennsylvania" code="PENN">http://digital.library.upenn.edu/</padig:url>
         <padig:url string="Villanova University" code="VILLANOVA">https://digital.library.villanova.edu/</padig:url>
-        <padig:url string="Jefferson - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
+        <padig:url string="Thomas Jefferson University - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
         <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
