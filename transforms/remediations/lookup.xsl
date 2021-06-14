@@ -538,6 +538,7 @@
         <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
         <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
         <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
+        <padig:set string="Bloomsburg University World War I Student Files Collection">blmwwi</padig:set>
         <!-- Millersville -->
         <padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
         <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
