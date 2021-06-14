@@ -105,7 +105,7 @@
         <padig:set string="LancasterHistory - City Directories 1914-1922">papd_slchs-cd03</padig:set>
         <padig:set string="LancasterHistory - Lancaster Examiner and Herald Newspaper 1834-1854">papd_slchs-leh01</padig:set>
         <padig:set string="LancasterHistory - Lancaster Examiner and Herald Newspaper 1855-1872">papd_slchs-leh02</padig:set>
-        <padig:set string="LancasterHistory - Lititz Newspapers.">papd_slchs-lnp1</padig:set>
+        <padig:set string="LancasterHistory - Lititz Newspapers">papd_slchs-lnp1</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1873-1890">papd_nhclar01</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1891-1910">papd_nhclar02</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1911-1950">papd_nhclarion</padig:set>
