@@ -94,6 +94,7 @@
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmmap</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmphoto</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">blmpost</padig:cont>
+        <padig:cont string="Bloomsburg University" code="BLOOMS">blmwwi</padig:cont>
         <padig:cont string="Bloomsburg University" code="BLOOMS">CHSminutes</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">audio</padig:cont>
         <padig:cont string="Slippery Rock University" code="SRU">photograph</padig:cont>
