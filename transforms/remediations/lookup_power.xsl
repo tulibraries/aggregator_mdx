@@ -166,7 +166,6 @@
         <padig:set string="Pennsylvania Highlands Community College - Beaverdale Collection">papd_acacc-bdale</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria City Church Project">papd_acacc-cccp</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Civil War 150">papd_acacc-cw</padig:set>
-        <padig:set string="Pennsylvania Highlands Community College - Cambria Co. Immigration Declarations">papd_acacc-ccip</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Memory Project">papd_acacc-memor</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cresson Sanatorium">papd_acacc-cs</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Area Fire Department Collection">papd_acacc-jafd</padig:set>
