@@ -157,15 +157,38 @@
         <padig:set string="View Books">p16069coll32</padig:set>
         <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
         <!-- Lafayette -->
-        <padig:set string="College Archives Image Collection">collection:College_Archives_Image_Collection</padig:set>
-        <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald_and_Rella_Warner_Dutch_East_Indies_Negatives</padig:set>
-        <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald_and_Rella_Warner_Japan_Slides</padig:set>
-        <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald_and_Rella_Warner_Manchuria_Negatives</padig:set>
-        <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald_and_Rella_Warner_Taiwan_Negatives</padig:set>
-        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
-        <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
-        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis_de_Lafayette_Prints_Collection</padig:set>
-        <padig:set string="Mc Kelvy House">collection:McKelvy_House</padig:set>
+        <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
+        <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
+        <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald+and+Rella+Warner+Japan+Slides</padig:set>
+        <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald+and+Rella+Warner+Manchuria+Negatives</padig:set>
+        <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald+and+Rella+Warner+Postcards</padig:set>
+        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette+Newspaper+archive</padig:set>
+        <padig:set string="Lafayette Magazine Archive">collection:Lafayette+Magazine+archive</padig:set>
+        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis+de+Lafayette+Prints+Collection</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 01 - Portraits: Before 1789">collection:Marquis+de+Lafayette+Prints+Series+01+-+Portraits%3A+Before+1789</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 02 - Portraits: Quenedey">collection:Marquis+de+Lafayette+Prints+Series+02+-+Portraits%3A+Quenedey</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 03 - Portraits: Levachez">collection:Marquis+de+Lafayette+Prints+Series+03+-+Portraits%3A+Levachez</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 04 - Portraits: Debucourt, Etc.">collection:Marquis+de+Lafayette+Prints+Series+04+-+Portraits%3A+Debucourt%2C+Etc.</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 05 - Portraits: Weyler">collection:Marquis+de+Lafayette+Prints+Series+05+-+Portraits%3A+Weyler</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 06 - Portraits: Jacobi (Bolt)">collection:Marquis+de+Lafayette+Prints+Series+06+-+Portraits%3A+Jacobi+%28Bolt%29</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 07 - Portraits: Miscellaneous Before 1800">collection:Marquis+de+Lafayette+Prints+Series+07+-+Portraits%3A+Miscellaneous+Before+1800</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 08 - Portraits: Clary, Etc.">collection:Marquis+de+Lafayette+Prints+Series+08+-+Portraits%3A+Clary%2C+Etc.</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 09 - Portraits: Scheffer">collection:Marquis+de+Lafayette+Prints+Series+09+-+Portraits%3A+Scheffer</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 10 - Portraits: Gerard">collection:Marquis+de+Lafayette+Prints+Series+10+-+Portraits%3A+Gerard</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 11 - Portraits: Maurin">collection:Marquis+de+Lafayette+Prints+Series+11+-+Portraits%3A+Maurin</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 12 - Portraits: Julien, Etc.">collection:Marquis+de+Lafayette+Prints+Series+12+-+Portraits%3A+Julien%2C+Etc.</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 13 - Portraits: Miscellaneous - Uniform, White Neck-band and Collar, Without Bow">collection:Marquis+de+Lafayette+Prints+Series+13+-+Portraits%3A+Miscellaneous+-+Uniform%2C+White+Neck-band+and+Collar%2C+Without+Bow</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 14 - Portraits: Bridi, Etc.">collection:Marquis+de+Lafayette+Prints+Series+14+-+Portraits%3A+Bridi%2C+Etc.</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 15 - Portraits: Miscellaneous - Uniform, Fur Collar, Etc.">collection:Marquis+de+Lafayette+Prints+Series+15+-+Portraits%3A+Miscellaneous+-+Uniform%2C+Fur+Collar%2C+Etc.</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 16 - Portraits: Martinet, Etc.">collection:Marquis+de+Lafayette+Prints+Series+16+-+Portraits%3A+Martinet%2C+Etc.</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 17 - Portraits: Miscellaneous - 1800-1834">collection:Marquis+de+Lafayette+Prints+Series+17+-+Portraits%3A+Miscellaneous+-+1800-1834</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 18 - Portraits: Equestrian">collection:Marquis+de+Lafayette+Prints+Series+18+-+Portraits%3A+Equestrian</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 19 - Caricatures">collection:Marquis+de+Lafayette+Prints+Series+19+-+Caricatures</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 20 - Symbolic Compositions">collection:Marquis+de+Lafayette+Prints+Series+20+-+Symbolic+Compositions</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 21 - Members of Family">collection:Marquis+de+Lafayette+Prints+Series+21+-+Members+of+Family</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 22 - Scenes from the Life: 1776-1834">collection:Marquis+de+Lafayette+Prints+Series+22+-+Scenes+from+the+Life%3A+1776-1834</padig:set>
+        <padig:set string="Marquis de Lafayette Prints Series 23 - Homes: Chavaniac and LaGrange">collection:Marquis+de+Lafayette+Prints+Series+23+-+Homes%3A+Chavaniac+and+LaGrange</padig:set>
+        <padig:set string="McKelvy House">collection:McKelvy+House</padig:set>
 
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
@@ -711,7 +734,7 @@
         <padig:set string="Presbyterian Historical Society Video Collection">islandora_video_collection</padig:set>
         <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
         <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
-        
+
     <!-- Penn State -->
         <padig:set string="A Few Good Women">afgw</padig:set>
         <padig:set string="A. E. Bye Papers">aebye</padig:set>
