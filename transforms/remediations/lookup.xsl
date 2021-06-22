@@ -157,15 +157,15 @@
         <padig:set string="View Books">p16069coll32</padig:set>
         <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
         <!-- Lafayette -->
-        <padig:set string="College Archives Image Collection">collection:College_Archives_Image_Collection</padig:set>
-        <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald_and_Rella_Warner_Dutch_East_Indies_Negatives</padig:set>
-        <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald_and_Rella_Warner_Japan_Slides</padig:set>
-        <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald_and_Rella_Warner_Manchuria_Negatives</padig:set>
-        <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald_and_Rella_Warner_Taiwan_Negatives</padig:set>
-        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette_Newspaper_archive</padig:set>
-        <padig:set string="Lafayette Magazine Archive">collection:Lafayette_Magazine_archive</padig:set>
-        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis_de_Lafayette_Prints_Collection</padig:set>
-        <padig:set string="Mc Kelvy House">collection:McKelvy_House</padig:set>
+        <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
+        <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
+        <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald+and+Rella+Warner+Japan+Slides</padig:set>
+        <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald+and+Rella+Warner+Manchuria+Negatives</padig:set>
+        <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald+and+Rella+Warner+Postcards</padig:set>
+        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette+Newspaper+archive</padig:set>
+        <padig:set string="Lafayette Magazine Archive">collection:Lafayette+Magazine+archive</padig:set>
+        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis+de+Lafayette+Prints+Collection</padig:set>
+        <padig:set string="McKelvy House">collection:McKelvy+House</padig:set>
 
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
@@ -711,7 +711,7 @@
         <padig:set string="Presbyterian Historical Society Video Collection">islandora_video_collection</padig:set>
         <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
         <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
-        
+
     <!-- Penn State -->
         <padig:set string="A Few Good Women">afgw</padig:set>
         <padig:set string="A. E. Bye Papers">aebye</padig:set>
