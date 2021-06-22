@@ -23,20 +23,6 @@
 
     <xsl:include href="cdm_generic.xsl"/>
     
-    <!-- map collection names from isPartOf instead of setSpec -->
-    <xsl:template match="oai:header/oai:setSpec" priority="1">
-        <xsl:value-of select="null"/>
-    </xsl:template>
-    
-    <xsl:template match="dcterms:isPartOf" priority="1">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="delimiter_template">
-                <xsl:with-param name="strings" select="normalize-space(.)"/>
-                <xsl:with-param name="delimiter" select="';'"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
-    
     <!-- medium to type -->
     <xsl:template match="dcterms:medium">
         <xsl:if test="normalize-space(.)!=''">
