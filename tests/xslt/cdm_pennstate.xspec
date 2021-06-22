@@ -50,6 +50,7 @@
         <x:context href="../../fixtures/cdm_pennstate.xml"/>
         <x:expect label="alt title is mapped and delimited">
           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:isPartOf>Sarah Chamberlin Eccleston Diary and Journal, 1864-1916</dcterms:isPartOf>
             <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
             <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
             <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -77,7 +78,7 @@
            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
-           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+           <dcterms:relation>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:relation>
            <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
             <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
            <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
@@ -1097,6 +1098,7 @@
      <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="spatial is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:isPartOf>Sarah Chamberlin Eccleston Diary and Journal, 1864-1916</dcterms:isPartOf>
          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
          <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
          <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1124,7 +1126,7 @@
          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+         <dcterms:relation>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:relation>
          <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
          <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
          <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
@@ -1223,6 +1225,7 @@
      <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="subject is mapped and delimited">
        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:isPartOf>Sarah Chamberlin Eccleston Diary and Journal, 1864-1916</dcterms:isPartOf>
          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
          <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
          <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1250,7 +1253,7 @@
          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
          <dcterms:rights>This is a textual rights statement</dcterms:rights>
          <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+         <dcterms:relation>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:relation>
          <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
          <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
          <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
@@ -1267,6 +1270,7 @@
        <x:context href="../../fixtures/cdm_pennstate.xml"/>
         <x:expect label="language normalizes, maps, and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:isPartOf>Sarah Chamberlin Eccleston Diary and Journal, 1864-1916</dcterms:isPartOf>
            <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
            <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
            <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1294,7 +1298,7 @@
            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
            <dcterms:rights>This is a textual rights statement</dcterms:rights>
            <dcterms:source>The repository is SCRC</dcterms:source>
-           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+           <dcterms:relation>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:relation>
            <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
            <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
            <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
@@ -1332,12 +1336,12 @@
      </x:scenario>
    </x:scenario>
 
-<!-- isPartOf (map and delimit) -->
-   <x:scenario label="isPartOf delimits, normalizes, and maps">
-     <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
+<!-- isPartOf (maps to relation and delimits) -->
+   <x:scenario label="isPartOf delimits, normalizes, and maps to relation">
+     <x:scenario label="isPartOf becomes space-normalized dcterms:relation">
        <x:context href="../../fixtures/cdm_pennstate.xml"/>
-       <x:expect label="isPartOf becomes dcterms:isPartOf)"
-         test="oai_dc:dc/dcterms:isPartOf = 'George D. McDowell Philadelphia Evening Bulletin Photographs'" />
+       <x:expect label="isPartOf becomes dcterms:relation)"
+         test="oai_dc:dc/dcterms:relation = 'George D. McDowell Philadelphia Evening Bulletin Photographs'" />
      </x:scenario>
      <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf and delimits">
        <x:context>
@@ -1351,8 +1355,7 @@
        </x:context>
        <x:expect label="relation maps and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:isPartOf>Thing 1</dcterms:isPartOf>
-           <dcterms:isPartOf>Thing 2</dcterms:isPartOf>
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -1455,6 +1458,7 @@
        <x:context href="../../fixtures/cdm_pennstate.xml"/>
        <x:expect label="identifier not last becomes dcterms:identifier">
            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:isPartOf>Sarah Chamberlin Eccleston Diary and Journal, 1864-1916</dcterms:isPartOf>
              <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
              <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
              <dcterms:alternative>Here's another alt title</dcterms:alternative>
@@ -1482,7 +1486,7 @@
              <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
              <dcterms:rights>This is a textual rights statement</dcterms:rights>
              <dcterms:source>The repository is SCRC</dcterms:source>
-             <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+             <dcterms:relation>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:relation>
              <edm:dataProvider>Pennsylvania State University</edm:dataProvider>
              <dcterms:identifier>padig:PENNSTATE-p15037coll3-0</dcterms:identifier>
              <edm:isShownAt>http://digital.libraries.psu.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
