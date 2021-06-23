@@ -135,6 +135,9 @@
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Milton Hershey School - Hershey News Newspaper 1953-1964">papd_kmheh-hn</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc</padig:set>
+        <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc_6507</padig:set>
+        <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc_6507_2_1</padig:set>
+        <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc_6507_2_2</padig:set>
         <padig:set string="Monroeville Public Library - Allegheny County Yearbooks">papd_pmonr-acy</padig:set>
         <padig:set string="Montgomery County Community College - Betzwood Studios">papd_amccc-betz</padig:set>
         <padig:set string="Montgomery County Community College - The Montgazette Newspaper 1967-2017">papd_amccc-mgztt</padig:set>
