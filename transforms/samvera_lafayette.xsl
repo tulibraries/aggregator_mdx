@@ -14,18 +14,18 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    version="2.0">    
+    version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
-        
-        
-    <xsl:include href="oai_base_crosswalk.xsl"/>    
-    
+
+
+    <xsl:include href="oai_base_crosswalk.xsl"/>
+
     <!-- collection name -->
     <xsl:template match="oai:header/oai:setSpec">
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
-    
+
     <!-- identifier, etc. -->
     <xsl:template match="dc:identifier">
         <xsl:call-template name="preview"/>
@@ -33,7 +33,7 @@
         <xsl:call-template name="identifier"/>
         <xsl:call-template name="dataProvider"/>
     </xsl:template>
-    
+
     <!-- templates -->
 
     <!-- isPartOf -->
@@ -41,14 +41,14 @@
         <xsl:if test="normalize-space(lower-case(.))">
             <xsl:variable name="setIDlower" select="normalize-space(lower-case(.))"/>
             <xsl:variable name="setID" select="normalize-space(.)"/>
-            <xsl:if test="$setIDlower or $setID = $setSpecList/padig:set">
+            <xsl:if test="$setIDlower = $setSpecList/padig:set or $setID = $setSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">
                     <xsl:value-of select="$setSpecList/padig:set[(. = $setID) or (. = $setIDlower)]/@string"/>
                 </xsl:element>
             </xsl:if>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- preview -->
     <xsl:template name="preview">
         <xsl:if test="normalize-space(.) != '' and ends-with(.,'thumbnail')">
@@ -57,7 +57,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- isShownAt -->
     <xsl:template name="isShownAt">
         <xsl:if test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
@@ -66,19 +66,19 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- identifier -->
     <xsl:template name="identifier">
         <xsl:variable name="itemID" select="substring-after(.,'/10385/')"/>
         <xsl:variable name="baseURL" select="normalize-space('http://hdl.handle.net/10385/')"/>
-        
+
         <xsl:if test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
         <xsl:element name="dcterms:identifier">
             <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
         </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template name="dataProvider">
         <xsl:variable name="baseURL" select="substring-before(.,'downloads/')"/>
