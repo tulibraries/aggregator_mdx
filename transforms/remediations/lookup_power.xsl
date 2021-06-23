@@ -174,7 +174,6 @@
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Area Fire Department Collection">papd_acacc-jafd</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
-        <padig:set string="Pennsylvania Horticultural Society - Archive Collections Guides">papd_spahs-acg</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Louise Bush-Brown Image Collection">papd_spahs-lbbic</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Flower Show">papd_spahs-pfsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Garden Photographs, 1900-1940: 1. Garden Club of Philadelphia">papd_spahs-pgpgcp</padig:set>
@@ -551,6 +550,7 @@
         <padig:set string="Medical Licenses (PA) Record, 1912-1964">psa_pmlr</padig:set>
         <padig:set string="Medical Statistics Books (PA), 1883-1900">psa_msbpa00</padig:set>
         <padig:set string="Meeting Minutes and Related Records (PA), 1972-1976">psa_mmarrpa76</padig:set>
+        <padig:set string="Meeting Minute Books, 1937-1958, 1965-1969, 1978-1989">psa_mmb1937</padig:set>
         <padig:set string="Memoranda Book (PA), 1791">psa_mbpa91</padig:set>
         <padig:set string="Memoranda Book of Old Accounts (PA), undated">psa_mbooapa</padig:set>
         <padig:set string="Memoranda of Account Book (PA), 1791">psa_mabpa1791</padig:set>
@@ -780,7 +780,6 @@
         <padig:set string="West Chester University (PA), School Newspaper, 1924-1988">psa_wcusn</padig:set>
         <padig:set string="West Chester University (PA), Yearbooks, 1910-1987">psa_wcuy1910</padig:set>
         <padig:set string="Western Expedition (Whiskey Rebellion) Accounts, 1794-1804">psa_wewra</padig:set>
-        <padig:set string="Woodville State Hospital (PA) Funeral Director Release Registers, 1951-1967">psa_wdshfdrr</padig:set>
         <padig:set string="Woodville State Hospital (PA), Patient Register Books of Allegheny Co Hosp for Insane">psa_wdshprbachi</padig:set>
         <padig:set string="Works Progress Administration Bituminous Coal &amp; Coal Mining Maps (PA), 1934-1936">psa_wpabccmm</padig:set>
         <padig:set string="World War I Posters (PA)">psa_wwip</padig:set>
