@@ -14,30 +14,30 @@
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
     xmlns:svcs="http://rdfs.org/sioc/services"
-    version="2.0">    
+    version="2.0">
     <xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
-        
+
     <xsl:include href="oai_base_crosswalk.xsl"/>
-    
+
     <!-- unmap temporal -->
     <xsl:template match="dcterms:temporal" priority="1">
         <xsl:value-of select="null"/>
     </xsl:template>
-    
-    <!-- collection name -->    
+
+    <!-- collection name -->
     <xsl:template match="oai:header/oai:setSpec">
         <xsl:call-template name="isPartOf"/>
         <xsl:call-template name="lvda"/>
     </xsl:template>
-    
+
     <!-- isShownAt; preview; identifier -->
     <xsl:template match="//*[namespace-uri()='http://www.openarchives.org/OAI/2.0/' and local-name()='identifier.link']">
         <xsl:call-template name="isShownAt"/>
         <xsl:call-template name="preview"/>
         <xsl:call-template name="identifier"/>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template match="dcterms:contributor" priority="1">
         <xsl:call-template name="dataProvider">
@@ -45,13 +45,13 @@
             <xsl:with-param name="delimiter" select="';'"/>
         </xsl:call-template>
     </xsl:template>
-    
+
     <!-- templates -->
 
     <!-- isPartOf -->
     <xsl:template name="isPartOf">
-        <xsl:if test="normalize-space(lower-case(.))">
-            <xsl:variable name="setID" select="normalize-space(lower-case(.))"/>
+        <xsl:if test="normalize-space(.)">
+            <xsl:variable name="setID" select="normalize-space(.)"/>
             <xsl:if test="$setID = $powerSetSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">
                     <xsl:value-of select="$powerSetSpecList/padig:set[. = $setID]/@string"/>
@@ -59,7 +59,7 @@
             </xsl:if>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- add LVDA as intermediate provider -->
     <xsl:template name="lvda">
         <xsl:if test="normalize-space(lower-case(.))">
@@ -71,7 +71,7 @@
             </xsl:if>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- preview -->
     <xsl:template name="preview">
         <xsl:if test="normalize-space(.) != ''">
@@ -80,7 +80,7 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- isShownAt -->
     <xsl:template name="isShownAt">
         <xsl:if test="normalize-space(.) != ''">
@@ -89,34 +89,34 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- identifier -->
     <xsl:template name="identifier">
         <xsl:variable name="itemID" select="replace(substring-after(.,'/object/'),'[^a-zA-Z0-9\-:_]','_')"/>
         <xsl:variable name="baseURL" select="substring-before(.,'islandora/')"/>
-        
+
         <xsl:if test="normalize-space(.) != ''">
         <xsl:element name="dcterms:identifier">
             <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrlInt/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
         </xsl:element>
-            
+
     <!-- intermediateProvider -->
         <xsl:element name="dpla:intermediateProvider">
             <xsl:value-of select="$oaiUrlInt/padig:url[. = $baseURL]/@string"/>
-        </xsl:element>      
+        </xsl:element>
         </xsl:if>
     </xsl:template>
-    
+
     <!-- dataProvider -->
     <xsl:template name="dataProvider">
         <xsl:param name="strings"/>
         <xsl:param name="delimiter"/>
-        
+
         <xsl:choose>
             <xsl:when test="contains($strings, $delimiter)">
                 <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
                 <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
-                
+
                 <xsl:choose>
                     <xsl:when test="normalize-space($firststem)!='' and ends-with($firststem, ' (Provider)')">
                         <xsl:element name="edm:dataProvider">
@@ -136,7 +136,7 @@
                     <xsl:with-param name="strings" select="$newstem"/>
                     <xsl:with-param name="delimiter" select="';'"/>
                 </xsl:call-template>
-                
+
             </xsl:when>
             <xsl:otherwise>
                 <xsl:choose>
@@ -150,7 +150,7 @@
                             <xsl:element name="dcterms:contributor">
                                 <xsl:value-of select="normalize-space($strings)"/>
                             </xsl:element>
-                        </xsl:if>            
+                        </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:otherwise>
