@@ -64,7 +64,7 @@
         <padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
         <padig:url string="Thomas Jefferson University" code="TJU">https://jdc.jefferson.edu/</padig:url>
         <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
-        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
+        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>http://digital.libraries.psu.edu/cdm/ref/collection/wpamaps/id/3314
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
@@ -156,6 +156,37 @@
         <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
         <padig:set string="View Books">p16069coll32</padig:set>
         <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
+        <padig:set string="Alumni Magazines - Alumni Bulletin and Alumnus -- 1952-1968">p16069coll3</padig:set>
+        <padig:set string="Alumni Magazines - Widener Magazine -- 1989-Present">p16069coll6</padig:set>
+        <padig:set string="Buildings">p16069coll1</padig:set>
+        <padig:set string="Caps and Uniforms">p270801coll5</padig:set>
+        <padig:set string="Course Catalogs  - Circulars -- 1856-1892">p16069coll11</padig:set>
+        <padig:set string="Course Catalogs - Pennsylvania Military College -- 1893-1966">p16069coll21</padig:set>
+        <padig:set string="Cowee Family Papers">p16069coll14</padig:set>
+        <padig:set string="Distinguished Alumni">p270801coll17</padig:set>
+        <padig:set string="Diversity Trailblazers">p16069coll33</padig:set>
+        <padig:set string="Fallen Soldiers - PMC and Widener Alumni Who Died in Combat">p16069coll35</padig:set>
+        <padig:set string="Female Trailblazers">p16069coll28</padig:set>
+        <padig:set string="Historical Chronologies">p270801coll10</padig:set>
+        <padig:set string="Histories - A History of Pennsylvania Military College -- 1821-1954">p270801coll8</padig:set>
+        <padig:set string="Histories - Faculty, Administration and Alumni Oral Histories">p16069coll8</padig:set>
+        <padig:set string="Histories - Pennsylvania Military College -- The Story of One Hundred Years">p16069coll7</padig:set>
+        <padig:set string="Libraries - From Old Main to Wolfgram">p16069coll29</padig:set>
+        <padig:set string="Newspapers - The Dome -- 1947-2008">p270801coll11</padig:set>
+        <padig:set string="Newspapers - The PMC News -- 1916-1950">p16069coll9</padig:set>
+        <padig:set string="Pennsylvania Military Preparatory School (PMPS)">p16069coll15</padig:set>
+        <padig:set string="Photographs - PMA and PMC">p15139coll2</padig:set>
+        <padig:set string="PMC 50th Anniversary Exhibits and Homecoming Videos">p16069coll30</padig:set>
+        <padig:set string="PMC During World War II">p16069coll4</padig:set>
+        <padig:set string="Postcards">p270801coll15</padig:set>
+        <padig:set string="Presidents on Parade">p16069coll25</padig:set>
+        <padig:set string="Scrapbooks">p270801coll4</padig:set>
+        <padig:set string="Seals and Emblems">p16069coll13</padig:set>
+        <padig:set string="Student Lists 1856-1930">p16069coll10</padig:set>
+        <padig:set string="Taps Lyrics - History">p16069coll36</padig:set>
+        <padig:set string="Yearbooks - Pennsylvania Military College and PMC Colleges -- 1900 - 1972">p270801coll6</padig:set>
+        <padig:set string="Yearbooks- Widener College and Widener University --  1973 - 2010">p15139coll3</padig:set>
+        
         <!-- Lafayette -->
         <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
         <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>

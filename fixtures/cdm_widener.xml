@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2019-11-25T14:41:26Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_qdc" set="p16069coll7">http://digitalwolfgram.widener.edu/oai/oai.php</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:digitalwolfgram.widener.edu:p16069coll7/0</identifier>
+                <datestamp>2011-05-23</datestamp>
+                <setSpec>p16069coll7</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>08. Historical and Biographical Sketches of the Scholastic and Military Activities of our History as an Institution</dc:title>
+                    <dc:creator>Buxton, Henry J.</dc:creator>
+                    <dc:subject>Institutional History</dc:subject>
+                    <dc:date>c. 1921</dc:date>
+                    <dc:type>Text</dc:type>
+                    <dc:format>PDF</dc:format>
+                    <dc:publisher>Pennsylvania Military College</dc:publisher>
+                    <dc:description>PMC School Newspaper published from 1916 through 1950.</dc:description>
+                    <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+                    <dc:rights>This item is owned by the Widener University Archives. The user is responsible for all copyright issues. Please credit: Widener University Archives</dc:rights>
+                    <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+                    <dc:date>2011_09_15</dc:date>
+                    <dc:format>Widener University Archives</dc:format>
+                    <dc:source>    http://cdm270801.cdmhost.com/cdm/compoundobject/collection/p270801coll6/id/8191/rec/16</dc:source>
+                    <dc:identifier>http://digitalwolfgram.widener.edu/cdm/ref/collection/p16069coll7/id/0</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
