@@ -64,7 +64,7 @@
         <padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
         <padig:url string="Thomas Jefferson University" code="TJU">https://jdc.jefferson.edu/</padig:url>
         <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
-        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>http://digital.libraries.psu.edu/cdm/ref/collection/wpamaps/id/3314
+        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
