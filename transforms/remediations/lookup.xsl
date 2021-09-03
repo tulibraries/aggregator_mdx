@@ -186,7 +186,7 @@
         <padig:set string="Taps Lyrics - History">p16069coll36</padig:set>
         <padig:set string="Yearbooks - Pennsylvania Military College and PMC Colleges -- 1900 - 1972">p270801coll6</padig:set>
         <padig:set string="Yearbooks- Widener College and Widener University --  1973 - 2010">p15139coll3</padig:set>
-        
+
         <!-- Lafayette -->
         <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
         <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
@@ -686,6 +686,7 @@
         <padig:set string="Michael Zinman Blank Forms Collection">Islandora_ZINM3</padig:set>
         <padig:set string="Michael Zinman Ephemera Collection">Islandora_ZINM4</padig:set>
         <padig:set string="Michael Zinman Raised Letter Publications">Islandora_ZINM6</padig:set>
+        <padig:set string="Miscellaneous Collections">Islandora:MISCE</padig:set>
         <padig:set string="Nature Prints of Leaves Albums">Islandora_BREI1</padig:set>
         <padig:set string="Pawson &amp; Nicholson Photograph Album">Islandora_PAWS1</padig:set>
         <padig:set string="Philadelphia on Stone: Library Company of Philadelphia">Islandora_POS01</padig:set>
