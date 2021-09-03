@@ -686,7 +686,7 @@
         <padig:set string="Michael Zinman Blank Forms Collection">Islandora_ZINM3</padig:set>
         <padig:set string="Michael Zinman Ephemera Collection">Islandora_ZINM4</padig:set>
         <padig:set string="Michael Zinman Raised Letter Publications">Islandora_ZINM6</padig:set>
-        <padig:set string="Miscellaneous Collections">Islandora:MISCE</padig:set>
+        <padig:set string="Miscellaneous Collections">Islandora_MISCE</padig:set>
         <padig:set string="Nature Prints of Leaves Albums">Islandora_BREI1</padig:set>
         <padig:set string="Pawson &amp; Nicholson Photograph Album">Islandora_PAWS1</padig:set>
         <padig:set string="Philadelphia on Stone: Library Company of Philadelphia">Islandora_POS01</padig:set>
