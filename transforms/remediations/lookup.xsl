@@ -506,6 +506,7 @@
         <padig:set string="Fox Chapel Garden Club Records">pitt_collection.360</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
+        <padig:set string="Gao Lecture Series">pitt_collection.357</padig:set>
         <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
         <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
         <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
