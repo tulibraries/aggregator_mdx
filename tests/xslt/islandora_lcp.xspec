@@ -22,7 +22,7 @@
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
       <x:context href="../../fixtures/islandora_lcp.xml"/>
-      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:LIBCO-Islandora_3A6901'"/>
+      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:LIBCO-Islandora_6901'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->

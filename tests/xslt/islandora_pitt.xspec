@@ -22,7 +22,7 @@
     <!-- Identifier (map) -->
     <x:scenario label="dummy identifier generates and incoming identifier not last becomes space-normalized dcterms:identifier">
       <x:context href="../../fixtures/islandora_pitt.xml"/>
-      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:PITT-pitt_3A9119B_III_8_SH'"/>
+      <x:expect label="dummy identifier generates and incoming identifier not last becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'padig:PITT-pitt_9119B_III_8_SH'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->
