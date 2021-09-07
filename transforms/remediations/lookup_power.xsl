@@ -50,6 +50,7 @@
         <padig:set string="Bellwood-Antis Public Library - Bellwood Bulletin Newspaper">papd_pbapl-bb</padig:set>
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Newspaper Clippings Aliquippa Area">papd_pbfja-sncaa</padig:set>
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Photographs Aliquippa Area">papd_pbfja-spaa</padig:set>
+        <padig:set string="Bernville Area Community Library - Tulpehocken High School Yearbooks">papd_pbeac-thsy</padig:set>
         <padig:set string="Boyertown Area Senior High School - Boyertown School News">papd_kboyh-bsn</padig:set>
         <padig:set string="Braddock Carnegie Library Association - Braddock Area Year Books">papd_pbcal-bayb</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA History Books">papd_pcccp-books</padig:set>
@@ -62,6 +63,10 @@
         <padig:set string="Carnegie Mellon University - Andrew Carnegie Online Archives">papd_acamu-acarc</padig:set>
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
         <padig:set string="Centre County Library &amp; Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
+        <padig:set string="Chester County History Center - Jean Kane Foulke Papers">papd_scchc-jkfp</padig:set>
+        <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
+        <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
         <padig:set string="Chester County Library &amp; District - Northern Chester County Historic Photographs">papd_pcccl-ncchp</padig:set>
         <padig:set string="Clarion Free Library - Mary Hamilton Holiday Cards">papd_pclfl-mhhc</padig:set>
         <padig:set string="Clarion Free Library - World War I">papd_pclfl-wwi</padig:set>
@@ -83,6 +88,8 @@
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
         <padig:set string="German Society of Pennsylvania - Women's Auxiliary of the German Society of Pennsylvania">papd_sgsop-wagsp</padig:set>
+        <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Box Collection/ Pennsylvania School for the Deaf">papd_sgehs-pbcpsftd</padig:set>
+        <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes African-American History Collection">papd_sgehs-pbaahc</padig:set>
         <padig:set string="Heinz History Center - Buhl Foundation Photographs">papd_shswp-bfp</padig:set>
         <padig:set string="Henderson High School - B. Reed Henderson High School Collection">papd_khendhscol</padig:set>
         <padig:set string="Historical Society of Montgomery County - Historic Photographs of Norristown">papd_shsmc-hpn</padig:set>
@@ -156,11 +163,14 @@
         <padig:set string="New Castle Public Library - Shenango Area High School Yearbooks">papd_pncpl-sahsy</padig:set>
         <padig:set string="New Castle Public Library - Union Township High School Yearbooks">papd_pncpl-uthsyb</padig:set>
         <padig:set string="New Castle Public Library - Wilmington Area High School Yearbooks">papd_pncpl-wahsy</padig:set>
+        <padig:set string="New Cumberland Public Library - Around Town">papd_pnecp-at</padig:set>
         <padig:set string="New Cumberland Public Library - Churches of New Cumberland">papd_pnecp-conc</padig:set>
         <padig:set string="New Cumberland Public Library - NC Hi Magazines">papd_pnecp-nchm</padig:set>
+        <padig:set string="New Cumberland Public Library - New Cumberland Flood of 1936">papd_pnecp-ncf1936</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Public Library Collection">papd_pnecp-ncplc</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Town Celebrations">papd_pnecp-nctc</padig:set>
         <padig:set string="New Cumberland Public Library - Schools of New Cumberland">papd_pnecp-snc</padig:set>
+        <padig:set string="New Cumberland Public Library - William D. Bailey 1863 Civil War Diary">papd_pnecp-wdb1862</padig:set>
         <padig:set string="Osterhout Free Library - Wilkes-Barre Sunday Independent Newspaper 1915-1958">papd_wbsunind</padig:set>
         <padig:set string="Pennsylvania College of Technology - Williamsport Technical Institute">papd_willtech</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Historical Photographs">papd_spgsl-photo</padig:set>
@@ -169,9 +179,13 @@
         <padig:set string="Pennsylvania Highlands Community College - Beaverdale Collection">papd_acacc-bdale</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria City Church Project">papd_acacc-cccp</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Civil War 150">papd_acacc-cw</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Cambria Co. Immigration Declarations">papd_acacc-ccip</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Cambria County Education Collection">papd_acacc-ccec</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Memory Project">papd_acacc-memor</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cresson Sanatorium">papd_acacc-cs</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Area Fire Department Collection">papd_acacc-jafd</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Johnstown Steel Industry Collection">papd_acacc-jsic</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Klahre Collection">papd_acacc-klahre</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Louise Bush-Brown Image Collection">papd_spahs-lbbic</padig:set>
