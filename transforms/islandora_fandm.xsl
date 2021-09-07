@@ -82,7 +82,7 @@
     
     <!-- identifier -->
     <xsl:template name="identifier">
-        <xsl:variable name="itemID" select="substring-after(.,'/object/')"/>
+        <xsl:variable name="itemID" select="replace(replace(substring-after(.,'/object/'),'[^a-zA-Z0-9\-:_]','_'),'_3A','_')"/>
         <xsl:variable name="baseURL" select="substring-before(.,'object/')"/>
         
         <xsl:element name="dcterms:identifier">

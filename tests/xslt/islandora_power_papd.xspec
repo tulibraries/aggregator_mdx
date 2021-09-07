@@ -22,7 +22,7 @@
     <!-- Identifier (map) -->
     <x:scenario label="identifier">
       <x:context href="../../fixtures/islandora_power_papd.xml"/>
-      <x:expect label="dummy identifier generates and incoming identifier does not map" test="oai_dc:dc/dcterms:identifier = 'padig:POWER-papd_3Apcccp-post_17'"/>
+      <x:expect label="dummy identifier generates and incoming identifier does not map" test="oai_dc:dc/dcterms:identifier = 'padig:POWER-papd_pcccp-post_17'"/>
     </x:scenario>
 
     <!-- Data Provider (generate and map) -->
