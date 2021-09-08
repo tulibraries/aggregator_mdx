@@ -6,7 +6,9 @@ PA Digital's aggregation system includes these components:
 
 - [Funnel Cake](funnelcake.padigital.org/): the frontend Blacklight site that displays metadata ingested from our OAI-PMH server. This is used to more easily perform quality assessment on aggregated metadata.
 
-The same filename is used across different file types (e.g., `cdm_temple.xsl` is used to transform the sample file `cdm_temple.xml` and is tested using `cdm_temple.xspec`). Except where an institution has a local or unnamed repository, the first part of the filename indicates which repository it is used for and the next is the ID of the institution we use locally. To run one of the institution- or repository-specific XSLT, you need to have all 3 files in the directory structure provided here.
+The same filename is used across different file types (e.g., `cdm_temple.xsl` is used to transform the sample file `cdm_temple.xml` and is tested using `cdm_temple.xspec`). Except where an institution has a local or unnamed repository, the first part of the filename indicates which repository it is used for and the next is the ID of the institution we use locally. For our use in Airflow, dag_ids maintained in [funcake_dags](https://github.com/tulibraries/funcake_dags) should match the institution code used in filenames and the lookup table in aggregator_mdx, minus the prepended repo code. For example, the corresponding dag_id for "cdm_temple.xsl" should be "temple". 
+
+To run one of the institution- or repository-specific XSLT, you need to have all 3 files in the directory structure provided here.
 
 This documentation and the infrastructure described here was originally written and created by Christina Harlow and later updated to reflect evolving practice and use.
 
@@ -14,11 +16,11 @@ This documentation and the infrastructure described here was originally written 
 
 The XSLT (all version 2) is written to process XML metadata harvested via OAI-PMH as well as XML or CSV that are unavailable via OAI-PMH but stored in PA Digital's private data repository.
 
-The transformations are written at three levels:
+Transformations are written at three levels:
 
-- institution- or repository-specific XSLT (e.g., `transforms/cdm_temple.xsl`): these are the files you actually run against the desired XML files and generally include mappings to crosswalk metadata whose location varies depending on repository and institution. These include digital object and thumbnail preview URLs; IIIF URLs; data provider, intermediate provider, and collection names; locally generated identifiers; and any mapping that should override the base crosswalk (next).
+- institution- or repository-specific XSLT (e.g., `transforms/cdm_temple.xsl`): these are the files you actually run against the desired XML files and generally include mappings to crosswalk metadata whose location or presentation varies depending on repository and institution. These include digital object and thumbnail preview URLs; IIIF URLs; data provider, intermediate provider, and collection names; locally generated identifiers; and any mapping that should override the base crosswalk (next).
 
-- base crosswalk XSLT (e.g., `transforms/oai_base_crosswalk.xsl`): this file is imported above and contains XML node templates that are reused across collections (for example, mapping incoming dc:title to PA Digital's dcterms:title, dc:creator to dcterms:creator, etc.). The OAI-PMH base crosswalks delimit on semicolon for all but the following fields where semicolon is sometimes used as punctuation: description, title, publisher, extent, relation, and rights. There are also base crosswalks to process CSV or XML stored in PA Digital's private data repository (`csv_generic_semic.xsl`, which delimits on `;` and `csv_generic_pipe.xsl`, which delimits on `|`). Base crosswalks should not be modified unless a change is desired for all processed collections. If an override of the base crosswalk is desired, it should be done in the institution- or repository-specific XSLT described above (see `dcterms:isPartOf` mapping in `cdm_temple.xsl` for an example of a crosswalk override; the `priority` attribute should be used to avoid ambiguous rule matching).  All base crosswalks import the remediation XSLT (next).
+- base crosswalk XSLT (e.g., `transforms/oai_base_crosswalk.xsl`): this file is imported above and contains XML node templates that are reused across collections (for example, mapping incoming dc:title to PA Digital's dcterms:title, dc:creator to dcterms:creator, etc.). The OAI-PMH base crosswalks delimit on semicolon for all but the following fields where semicolon is sometimes used as punctuation: description, title, publisher, extent, relation, and rights. There are also base crosswalks to process CSV or XML stored in PA Digital's private data repository (`csv_generic_semic.xsl`, which delimits on `;` and `csv_generic_pipe.xsl`, which delimits on `|`). Base crosswalks should not be modified unless a change is desired for all processed collections. If an override of the base crosswalk is required, it should be done in the institution- or repository-specific XSLT described above (see `dcterms:isPartOf` mapping in `cdm_temple.xsl` for an example of a crosswalk override; the `priority` attribute should be used to avoid ambiguous rule matching).  All base crosswalks import the remediation XSLT (next).
 
 - remediation-specific XSLT (`tranforms/remediations/*.xsl`): these files have normalization & enhancements.
   - `remediations/lookups.xsl` has lookup parameters used by the above templates to normalize string values against a variety of vocabularies, including DCMI Types, the DPLA-recommended Getty AAT subset, Lexvo Language look-ups, month abbreviations, etc. It is often used in institution or repository crosswalks to generate data provider names by a base URL, collection names by setSpec values, institutions codes for use in our local identifiers, etc. An example of using these lookup params can be found in `samvera_shi.xsl` (see `identifier` and `dataProvider` templates).
@@ -30,13 +32,13 @@ Our validation scripts are written in Schematron, which uses XPath to test for d
 In order to pass validation, the test must resolve to TRUE. If it resolves to FALSE, it is invalid. The tests should check for what *should* be present, rather than what should not. In the example below, an object URL in edm:isShownAt must begin with 'http.' If it does not, the validation fails with the following response: 'edm:isShownAt must contain a URL.'
 
 ```
-    <pattern id="ItemURLElementPattern">
-        <title>Additional Trackback URL Requirements</title>
+<pattern id="ItemURLElementPattern">
+    <title>Additional Trackback URL Requirements</title>
         <rule context="oai_dc:dc/edm:isShownAt">
             <assert test="normalize-space(.)" id="ItemURL1" role="error">The trackback URL must contain text</assert>
             <assert test="starts-with(normalize-space(.),'http')" id="ItemURL2" role="error">edm:isShownAt must contain a URL</assert>
         </rule>
-    </pattern>
+</pattern>
 ```
 
 ## Local Development & Testing
@@ -131,7 +133,7 @@ To run just the Schematron Unit tests (e.g. every `.xspec` file within `tests/sc
 $ make test-sch
 ```
 
-To run all Unit tests (e.g. every `.xspec` file within `tests/schematron/` and within `tests/xslt/`)):
+To run all Unit tests (e.g. every `.xspec` file within `tests/schematron/` and within `tests/xslt/`):
 
 ```
 $ make test
