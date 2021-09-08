@@ -77,9 +77,6 @@ All three arguments are required:
 - `xsl`: the XSLT document you want to apply to the XML;
 - `o`: the output document where the resulting XML is written.
 
-### Running Schematron
-
-WIP. Requires a bit more work.
 
 ### Writing XSpec Unit Tests
 
