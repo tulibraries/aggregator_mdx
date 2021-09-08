@@ -1,4 +1,4 @@
-# PA Digital aggregator transformations and validations (aggregator_mdx)
+# PA Digital aggregator metadata transformations and validations (aggregator_mdx)
 This repository contains metadata transformations, validations, and sample data (fixtures) used by PA Digital aggregation processes. The validations and transformations are written in Schematron and XSL. While built for the PA Digital aggregator, the validations and transformations are created to be platform-independent (within realm of XML technologies).
 
 Tasks associated with PA Digital aggregation, including transformations and validations, are managed and executed with the open source platform Apache Airflow using institution-specific automated workflows. XSLT and Schematron files described here are called using Airflow variables, which are maintained as a JSON file (variables.json) in [funcake_dags](https://github.com/tulibraries/funcake_dags) and imported manually into Airflow. For more information, see [About the PA Digital Aggregator](https://padigital.org/about-aggregator/).
