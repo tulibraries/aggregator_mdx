@@ -1,10 +1,14 @@
 # aggregator_mdx (Updated documentation in progress)
-This repository contains metadata transformations, validations, and sample data (fixtures) used by PA Digital's aggregator setup Shoo Fly Pie. The validations and transformations are Schematron and XSL. All pieces here are used by Shoo Fly, albeit the validations and transformations are created to be platform-independent (within realm of XML technologies).
+This repository contains metadata transformations, validations, and sample data (fixtures) used by PA Digital's aggregator setup Shoo Fly Pie. The validations and transformations are Schematron and XSL. All pieces here are used by Shoo Fly, though the validations and transformations are created to be platform-independent (within realm of XML technologies).
 
 PA Digital's aggregation system includes these components:
 - Shoo Fly Pie: Runs on Apache Airflow, the backend, task-management system that ingests, processes, and publishes metadata to our OAI-PMH server. XSLT and Schematron files described here are called using a variables file found in [funcake_dags](https://github.com/tulibraries/funcake_dags) and imported manually into Airflow.
 
 - [Funnel Cake](funnelcake.padigital.org/): the frontend Blacklight site that displays metadata ingested from our OAI-PMH server. This is used to more easily perform quality assessment on aggregated metadata.
+
+The same filename is used across different file types (e.g., `cdm_temple.xsl` is used to transform the sample file `cdm_temple.xml` and is tested using `cdm_temple.xspec`). Except where an institution has a local or unnamed repository, the first part of the filename indicates which repository it is used for and the next is the ID of the institution we use locally. For our use in Airflow, dag_ids maintained in [funcake_dags](https://github.com/tulibraries/funcake_dags) should match the institution code used in filenames and the lookup table in aggregator_mdx, minus the prepended repo code. For example, the corresponding dag_id for "cdm_temple.xsl" should be "temple". 
+
+To run one of the institution- or repository-specific XSLT, you need to have all 3 files in the directory structure provided here.
 
 This documentation and the infrastructure described here was originally written and created by Christina Harlow and later updated to reflect evolving practice and use.
 
@@ -12,20 +16,30 @@ This documentation and the infrastructure described here was originally written 
 
 The XSLT (all version 2) is written to process XML metadata harvested via OAI-PMH as well as XML or CSV that are unavailable via OAI-PMH but stored in PA Digital's private data repository.
 
-The transformations are written at three levels:
+Transformations are written at three levels:
 
-- institution- or repository-specific XSLT (e.g., `transforms/cdm_temple.xsl`): these are the files you actually run against the desired XML files and generally include mappings to crosswalk metadata whose location varies depending on repository and institution. These include digital object and thumbnail preview URLs; IIIF URLs; data provider, intermediate provider, and collection names; locally generated identifiers; and any mapping that should override the base crosswalk (next).
+- institution- or repository-specific XSLT (e.g., `transforms/cdm_temple.xsl`): these are the files you actually run against the desired XML files and generally include mappings to crosswalk metadata whose location or presentation varies depending on repository and institution. These include digital object and thumbnail preview URLs; IIIF URLs; data provider, intermediate provider, and collection names; locally generated identifiers; and any mapping that should override the base crosswalk (next).
 
-- base crosswalk XSLT (e.g., `transforms/oai_base_crosswalk.xsl`): this file is imported above and contains XML node templates that are reused across collections (for example, mapping incoming dc:title to PA Digital's dcterms:title, dc:creator to dcterms:creator, etc.). The OAI-PMH base crosswalks delimit on semicolon for all but the following fields where semicolon is sometimes used as punctuation: description, title, publisher, extent, relation, and rights. There are also base crosswalks to process CSV or XML stored in PA Digital's private data repository (`csv_generic_semic.xsl`, which delimits on `;` and `csv_generic_pipe.xsl`, which delimits on `|`). Base crosswalks should not be modified unless a change is desired for all processed collections. If an override of the base crosswalk is desired, it should be done in the institution- or repository-specific XSLT described above (see `dcterms:isPartOf` mapping in `cdm_temple.xsl` for an example of a crosswalk override; the `priority` attribute should be used to avoid ambiguous rule matching).  All base crosswalks import the remediation XSLT (next).
+- base crosswalk XSLT (e.g., `transforms/oai_base_crosswalk.xsl`): this file is imported above and contains XML node templates that are reused across collections (for example, mapping incoming dc:title to PA Digital's dcterms:title, dc:creator to dcterms:creator, etc.). The OAI-PMH base crosswalks delimit on semicolon for all but the following fields where semicolon is sometimes used as punctuation: description, title, publisher, extent, relation, and rights. There are also base crosswalks to process CSV or XML stored in PA Digital's private data repository (`csv_generic_semic.xsl`, which delimits on `;` and `csv_generic_pipe.xsl`, which delimits on `|`). Base crosswalks should not be modified unless a change is desired for all processed collections. If an override of the base crosswalk is required, it should be done in the institution- or repository-specific XSLT described above (see `dcterms:isPartOf` mapping in `cdm_temple.xsl` for an example of a crosswalk override; the `priority` attribute should be used to avoid ambiguous rule matching).  All base crosswalks import the remediation XSLT (next).
 
 - remediation-specific XSLT (`tranforms/remediations/*.xsl`): these files have normalization & enhancements.
   - `remediations/lookups.xsl` has lookup parameters used by the above templates to normalize string values against a variety of vocabularies, including DCMI Types, the DPLA-recommended Getty AAT subset, Lexvo Language look-ups, month abbreviations, etc. It is often used in institution or repository crosswalks to generate data provider names by a base URL, collection names by setSpec values, institutions codes for use in our local identifiers, etc. An example of using these lookup params can be found in `samvera_shi.xsl` (see `identifier` and `dataProvider` templates).
 
-The same filename is used across different file types (e.g., `cdm_temple.xsl` is used to transform the sample file `cdm_temple.xml` and is tested using `cdm_temple.xspec`). Except where an institution has a local or unnamed repository, the first part of the filename indicates which repository it is used for and the next is the ID of the institution we use locally. To run one of the institution- or repository-specific XSLT, you need to have all 3 files in the directory structure provided here.
-
 ### Validations
 
-To be written up.
+Our validation scripts are written in Schematron, which uses XPath to test for different elements and patterns within the metadata. These files are found in the `/validations` folder. Validation scripts run at two points in the aggregation workflow - the first is immediately after ingest of metadata, and the second runs after the transform tasks. Within these steps, two separate scripts run concurrently. One serves as a filter; any invalid records as defined by the script do not proceed to the next task. Along with a human-readable error note such as, “There must be a title,” invalid records are listed in a CSV that can easily be passed on to data providers for review and remediation. The other script serves as a reporting tool; 'invalid' records do continue on to the next task. This creates a list of records that match specified XPath selections for assessment purposes. For example, `validations/padigital_missing_thumbnailURL.sch` tests for records that lack thumbnail URLs, allowing us to provide CSV reports to data providers without preventing records from moving to the next task.
+
+In order to pass validation, the test must resolve to TRUE. If it resolves to FALSE, it is invalid. The tests should check for what *should* be present, rather than what should not. In the example below, an object URL in edm:isShownAt must begin with 'http.' If it does not, the validation fails with the following response: 'edm:isShownAt must contain a URL.'
+
+```
+<pattern id="ItemURLElementPattern">
+    <title>Additional Trackback URL Requirements</title>
+        <rule context="oai_dc:dc/edm:isShownAt">
+            <assert test="normalize-space(.)" id="ItemURL1" role="error">The trackback URL must contain text</assert>
+            <assert test="starts-with(normalize-space(.),'http')" id="ItemURL2" role="error">edm:isShownAt must contain a URL</assert>
+        </rule>
+</pattern>
+```
 
 ## Local Development & Testing
 
@@ -50,7 +64,7 @@ $ cd aggregator_mdx
 
 ### Running XSLT
 
-To run XSLT against a XML document:
+To run XSLT against an XML document:
 1. Both the XSLT document(s) & the XML document need to be in this repository, e.g., in the `aggregator_mdx` directory or subdirectories.
 2. Run the following command to build a Saxon image with your local directories available to it, then to run the `fixtures/sample.xml` XML document against the `transforms/sample.xsl` XSLT & output the result to `sample-result.xml`:
 
@@ -63,9 +77,6 @@ All three arguments are required:
 - `xsl`: the XSLT document you want to apply to the XML;
 - `o`: the output document where the resulting XML is written.
 
-### Running Schematron
-
-WIP. Requires a bit more work.
 
 ### Writing XSpec Unit Tests
 
@@ -100,7 +111,7 @@ To add tests:
     stylesheet="../../transforms/dplah.xsl">
   </x:description>
   ```
-2. Within the `x:description` parent node, write a test scenario (`x:scenario`) to test each case per validation rule, XSL matched template, or XSL named template. You can nest `x:scenario` elements as makes sense for what your testing (e.g., for the schematron tests, you could add a top-level scenario per pattern, then a child scenario within each for both checking valid XML passes and invalid XML returns the expected errors).
+2. Within the `x:description` parent node, write a test scenario (`x:scenario`) to test each case per validation rule, XSL matched template, or XSL named template. You can nest `x:scenario` elements as makes sense for what you are testing (e.g., for the schematron tests, you could add a top-level scenario per pattern, then a child scenario within each for both checking valid XML passes and invalid XML returns the expected errors).
 3. Each XSpec test has sample XML ('fixtures') that is passed in and the result checked. This data is passed via `x:context` within each scenario. You can either put in the fixture XML directly in the `x:content` node in each `x:scenario`, or you can have `x:context` reference fixture files in `fixtures` via an `href` attribute and relative path to the file in the repository.
 
 When ready to check your test suite locally, you can run the tests as described below.
@@ -111,33 +122,23 @@ To run just the XSLT Unit tests (e.g. every `.xspec` file within `tests/xslt/`):
 
 ```
 $ make test-xslt
-  [test filename]
-  [build output]
-  [test output]
-  [repeat the above for the next test file]
 ```
 
 To run just the Schematron Unit tests (e.g. every `.xspec` file within `tests/schematron/`):
 
 ```
 $ make test-sch
-  [test filename]
-  [build output]
-  [test output]
-  [repeat the above for the next test file]
 ```
 
-To run all Unit tests (e.g. every `.xspec` file within `tests/schematron/` and within `tests/xslt/`)):
+To run all Unit tests (e.g. every `.xspec` file within `tests/schematron/` and within `tests/xslt/`):
 
 ```
 $ make test
-  [test filename]
-  [build output]
-  [test output]
-  [repeat the above for the next test file]
 ```
 
 All of the above generate test reports in the relevant test directory, e.g. `tests/schematron/xspec` or `tests/schematron/xspec`. These are HTML and XML versions of the output, which can be helpful to review if debugging a failing test (just open the directory in your web browser via a local filepath). These are always ignored by git, so never checked into GitHub.
+
+Alternatively, you can run individual unit tests from within Oxygen. See documentation [here](https://www.oxygenxml.com/doc/versions/23.1/ug-editor/topics/xspec-helper-view-addon.html). Please note that this only tests a single XSpec file. It is handy to troubleshoot and check tests quickly, but since transforms are often run against multiple sample files, the integrity of the repository depends on *all* tests running sucessfully. The Docker commands described above test all of the XSpecs in a folder, and is far more reliable.
 
 ## CI/CD
 
