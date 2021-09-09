@@ -696,7 +696,6 @@
         <padig:set string="David Doret Ephemera Collection">Islandora_DORE2</padig:set>
         <padig:set string="Dickerson Family Cased Portrait Collection">Islandora_DIFA1</padig:set>
         <padig:set string="Dickerson Family Collection">Islandora_DICM3</padig:set>
-        <padig:set string="Digital Collections">islandora_root</padig:set>
         <padig:set string="Engravings by William Humphrys Scrapbook">Islandora_HUMP1</padig:set>
         <padig:set string="Ephemera Collection">Islandora_EPHEM</padig:set>
         <padig:set string="Eugene Davis Philadelphia Street Railway Electrification Photograph Collection">Islandora_RAIL1</padig:set>
@@ -841,7 +840,7 @@
         <padig:set string="William and Frederick Langenheim Stereograph Collection">Islandora_LANG1</padig:set>
         <padig:set string="World War One Collection">Islandora_WWI01</padig:set>
         <padig:set string="World War One Photographs and Ephemera">Islandora_WWIP2</padig:set>
-        <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>        
+        <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>
 
     <!-- Presbyterian Historical Society -->
         <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
