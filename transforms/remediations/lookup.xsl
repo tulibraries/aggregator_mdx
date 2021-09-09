@@ -767,7 +767,7 @@
         <padig:set string="Old Philadelphia Views Album">Islandora_MORA3</padig:set>
         <padig:set string="Pawson &amp; Nicholson Photograph Album">Islandora_PAWS1</padig:set>
         <padig:set string="Pennsylvania Capitol Collection">Islandora_PACC1</padig:set>
-        <padig:set string="Peter Collinson's 1739 Annotated First Edition of the "History of London"">Islandora_COLL1</padig:set>
+        <padig:set string="Peter Collinson's 1739 Annotated First Edition of the &quot;History of London&quot;">Islandora_COLL1</padig:set>
         <padig:set string="Peter Moran Sketchbooks">Islandora_PMOR1</padig:set>
         <padig:set string="Philadelphia Archdiocesan Historical Research Center">Islandora_PAH01</padig:set>
         <padig:set string="Philadelphia Zoo Photograph Album">Islandora_PZOO1</padig:set>
