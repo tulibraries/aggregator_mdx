@@ -882,8 +882,6 @@ schematron="../../validations/padigital_reqd_fields.sch">
           </x:scenario>
         </x:scenario>
       </x:scenario>
-<<<<<<< Updated upstream
-=======
   
   <x:scenario label="APSUrlPattern">
     <x:scenario label="valid">
@@ -946,5 +944,4 @@ schematron="../../validations/padigital_reqd_fields.sch">
       </x:scenario>
     </x:scenario>
   </x:scenario>
->>>>>>> Stashed changes
 </x:description>

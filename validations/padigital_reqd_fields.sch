@@ -54,13 +54,11 @@
             <assert test="normalize-space(.)" id="Identifier1" role="error">The identifier element must contain text</assert>
         </rule>
     </pattern>
-<<<<<<< Updated upstream
-=======
+
     <pattern id="APSUrlPattern">
         <title>Remove collection record from APS stream</title>
         <rule context="oai_dc:dc/edm:isShownAt">
             <assert test="starts-with(normalize-space(.),'https://diglib.amphilsoc.org/islandora/object/')" id="APSUrl" role="error">edm:isShownAt contains URL for APS collection-level record</assert>
         </rule>
     </pattern>
->>>>>>> Stashed changes
 </schema>
