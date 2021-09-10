@@ -116,7 +116,6 @@
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1873-1890">papd_nhclar01</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1891-1910">papd_nhclar02</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1911-1950">papd_nhclarion</padig:set>
-        <padig:set string="Le Cordon Bleu Inst of Culinary Arts - Amer. Culinary Fed., Pittsburgh Chapter">papd_apacl-acfpc</padig:set>
         <padig:set string="Lock Haven University - 1877-2008">papd_alhupviscro</padig:set>
         <padig:set string="Lock Haven University - Wrestling Program">papd_alhupwrest</padig:set>
         <padig:set string="Lycoming College - Alumni Magazine of Lycoming College">papd_alycc-almag</padig:set>
