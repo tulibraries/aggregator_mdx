@@ -904,7 +904,7 @@ schematron="../../validations/padigital_reqd_fields.sch">
           <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
           <schema:fileFormat>image/jp2</schema:fileFormat>
           <dcterms:identifier>P288153B</dcterms:identifier>
-          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0</edm:isShownAt>
+          <edm:isShownAt>https://diglib.amphilsoc.org/islandora/object/tohono-oodham-reservation</edm:isShownAt>
           <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
           <edm:dataProvider>Test University</edm:dataProvider>
           <edm:provider>PA Digital</edm:provider>
@@ -914,7 +914,7 @@ schematron="../../validations/padigital_reqd_fields.sch">
     </x:scenario>
     
     <x:scenario label="not valid">
-      <x:scenario label="not valid: filtered APS record">
+      <x:scenario label="not valid: URL for collection-level APS record">
         <x:context>
           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:dcterms="http://purl.org/dc/terms/"

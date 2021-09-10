@@ -55,9 +55,9 @@
         </rule>
     </pattern>
     <pattern id="APSUrlPattern">
-        <title>Remove collection record from APS stream</title>
+        <title>Remove collection records from APS stream</title>
         <rule context="oai_dc:dc/edm:isShownAt">
-            <assert test="not(starts-with(normalize-space(.),'https://diglib.amphilsoc.org/islandora/graphics/mssbc752-edward-u-condon-papers'))" id="APSUrl" role="error">edm:isShownAt contains filtered URL</assert>
+            <assert test="not(starts-with(normalize-space(.),'https://diglib.amphilsoc.org/islandora/graphics/'))" id="APSUrl" role="error">edm:isShownAt contains URL for collection-level APS record</assert>
         </rule>
     </pattern>
 </schema>
