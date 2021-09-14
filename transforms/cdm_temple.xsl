@@ -30,9 +30,10 @@
     
     <xsl:template match="dcterms:isPartOf" priority="1">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:element name="dcterms:isPartOf">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
+            <xsl:call-template name="delimiter_template">
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
         </xsl:if>
     </xsl:template>
     
