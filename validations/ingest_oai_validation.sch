@@ -36,8 +36,8 @@
   </pattern>
   <pattern id="APSUrlPattern">
     <title>Remove collection records from APS stream</title>
-    <rule context="oai_dc:dc/identifier">
-      <assert test="not(starts-with(normalize-space(.),'https://diglib.amphilsoc.org/islandora/graphics/'))" id="APSUrl" role="error">edm:isShownAt contains URL for collection-level APS record</assert>
+    <rule context="//*[local-name()='identifier']">
+      <assert test="not(starts-with(normalize-space(.),'https://diglib.amphilsoc.org/islandora/graphics/'))" id="APSUrl" role="error">Contains object URL for collection-level APS record</assert>
     </rule>
   </pattern>
 </schema>

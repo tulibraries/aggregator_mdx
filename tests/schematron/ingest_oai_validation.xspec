@@ -201,21 +201,14 @@
             xmlns:dpla="http://dp.la/about/map/" xmlns:schema="http://schema.org"
             xmlns:oai="http://www.openarchives.org/OAI/2.0/"
             xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/">
-            <dcterms:title>Celebration at Independence Hall</dcterms:title>
-            <dcterms:creator>pdcp_noharvest</dcterms:creator>
-            <dcterms:publisher>Philadelphia Evening Bulletin</dcterms:publisher>
-            <dcterms:description>Photo shows pennants and streamers hanging from clock and bell tower of Independence Hall and Commodore John Barry monument. There is a tent and loud speaker system immediately in front of Independence Hall entrance. Note dirigible in left upper quadrant of photo.</dcterms:description>
-            <dcterms:spatial>Philadelphia (Pa.);Independence National Historical Park (Philadelphia, Pa.)</dcterms:spatial>
-            <dcterms:date>1924</dcterms:date>
-            <dcterms:subject>Statues</dcterms:subject>
-            <dcterms:type>Image</dcterms:type>
-            <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-            <schema:fileFormat>image/jp2</schema:fileFormat>
-            <dcterms:identifier/>
-            <identifier>https://diglib.amphilsoc.org/islandora/graphics/mssbc752-edward-u-condon-papers</identifier>
-            <edm:preview>http://digital.library.temple.edu/cdm/ref/collection/p16002coll25/id/0/tnail</edm:preview>
-            <edm:dataProvider>Test University</edm:dataProvider>
-            <edm:provider>PA Digital</edm:provider>
+            <dc:title>Mss.497.3.B63c - James Teit's maps in the ACLS collection</dc:title>
+            <dc:date/>
+            <dc:language>eng</dc:language>
+            <dc:description/>
+            <dc:description/>
+            <dc:rights>The APS has an Open Access Policy for all unrestricted material in the digital library. Open Access Materials can be used freely for non-commercial, scholarly, educational, or fair use as defined under United States copyright law. Read the full policy and learn more about our Rights and Reproduction at: http://www.amphilsoc.org/library/rights</dc:rights>
+            <dc:identifier.thumbnail>https://diglib.amphilsoc.org/islandora/object/text%3AMss.497.3.B63c_TeitMaps/datastream/TN/view/Mss.497.3.B63c%20-%20James%20Teit%27s%20maps%20in%20the%20ACLS%20collection.jpg</dc:identifier.thumbnail>
+            <identifier>https://diglib.amphilsoc.org/islandora/graphics/mss4973b63c-james-teits-maps-acls-collection</identifier>
           </oai_dc:dc>
         </x:context>
         <x:expect-assert id="APSUrl"/>
