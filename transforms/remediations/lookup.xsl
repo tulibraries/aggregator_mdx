@@ -275,6 +275,7 @@
         <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
         <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
         <!-- Historic Pittsburgh -->
+        <padig:set string="Adolph M. Foerster Collection">pitt_collection.168</padig:set>
         <padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
         <padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
         <padig:set string="African American Construction Workers of Pittsburgh Photographs">pitt_collection.176</padig:set>
@@ -300,6 +301,7 @@
         <padig:set string="Bureau of Building Inspection, Department of Public Safety, Pittsburgh, Pa. Records">pitt_collection.186</padig:set>
         <padig:set string="CONSOL Energy, Inc. Mine Maps and Records">pitt_collection.32</padig:set>
         <padig:set string="Camp Johnson Photographs">pitt_collection.311</padig:set>
+        <padig:set string="Carnegie Library of Pittsburgh 125th Anniversary Collection">pitt_collection.363</padig:set>
         <padig:set string="Carnegie Museum of Art Collection of Photographs">pitt_collection.36</padig:set>
         <padig:set string="Carnegie Museum of Natural History Archives">pitt_collection.151</padig:set>
         <padig:set string="Charles C. McGovern Papers">pitt_collection.193</padig:set>
@@ -381,6 +383,7 @@
         <padig:set string="Juniata Crossings House Records">pitt_collection.303</padig:set>
         <padig:set string="Kaufmann's Department Store Photographs">pitt_collection.318</padig:set>
         <padig:set string="Ken Kobus Collection">pitt_collection.57</padig:set>
+        <padig:set string="Kennywood Park Records">pitt_collection.362</padig:set>
         <padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
         <padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
         <padig:set string="M. Stanford Jackson Papers">pitt_collection.281</padig:set>
@@ -440,6 +443,7 @@
         <padig:set string="Robert Stobo Papers">pitt_collection.27</padig:set>
         <padig:set string="Rodef Shalom Congregation Photographs">pitt_collection.79</padig:set>
         <padig:set string="Rolling Rock Training Camp Ledger">pitt_collection.28</padig:set>
+        <padig:set string="Royal Kane Photographs">pitt_collection.365</padig:set>
         <padig:set string="Russell H. Heffley Photographs">pitt_collection.148</padig:set>
         <padig:set string="Rust Engineering Company Records">pitt_collection.80</padig:set>
         <padig:set string="Samuel A. Musgrave Photographs">pitt_collection.289</padig:set>
