@@ -334,6 +334,8 @@
         <padig:set string="Accounts of the Wardens of the Port, 1763-1957">psa_aotwotp1763</padig:set>
         <padig:set string="Accounts, 1775-1776, undated">psa_acc1775</padig:set>
         <padig:set string="Accounts, 1776-1777, undated">psa_acc1776</padig:set>
+        <padig:set string="Accounts, 1777-1779">psa_acc17771779</padig:set>
+        <padig:set string="Accounts, 1777">psa_a1777</padig:set>
         <padig:set string="Accounts, 1777">psa_acc1777</padig:set>
         <padig:set string="Administrative and Biennial Reports, 1915-1969">psa_abr1915</padig:set>
         <padig:set string="Admission and Discharge Books (PA), 1844-1888">psa_aadbpa</padig:set>
@@ -356,6 +358,7 @@
         <padig:set string="Appearance Dockets, 1956-1977">psa_ad1956</padig:set>
         <padig:set string="Applicant Files of the Pennsylvania Soldiers and Sailors Home, 1886-1949">psa_afpssh1949</padig:set>
         <padig:set string="Applications and Licenses Issued to Chiropodists (PA) Record, 1956-1974">psa_palicr</padig:set>
+        <padig:set string="Applications for License as a Moneylender - Consumer's Credit and Small Loans, 1915-1933">psa_aflam1915</padig:set>
         <padig:set string="Applications for PA Teaching Certificates, 1866-1922">psa_afpatc</padig:set>
         <padig:set string="Applications for Passes, 1776-1788, undated">psa_afp1776</padig:set>
         <padig:set string="Appointment and Commission Books for Civil Officers, 1790-1973">psa_acbfco1790</padig:set>
@@ -386,6 +389,7 @@
         <padig:set string="Board of Commissioners Journal to Erect the Western State Penitentiary, 1818-1835">psa_bcjewsppa</padig:set>
         <padig:set string="Board of Fish Commission (PA) Minutes, 1924-1969">psa_bfcm</padig:set>
         <padig:set string="Bond Records (PA), 1867-1921">psa_brpa</padig:set>
+        <padig:set string="Bonds of Marque, 1777">psa_bom1777</padig:set>
         <padig:set string="Bonds, Assignments, Contracts, Acts, Titles and Misc. Documents (PA), 1775-1949">psa_bacatmd</padig:set>
         <padig:set string="Boundary Survey Accounts (PA), 1782-1810">psa_bsapa</padig:set>
         <padig:set string="Braddock Road Accounts, 1755-1756">psa_bra1756</padig:set>
@@ -518,12 +522,14 @@
         <padig:set string="Extradition Warrant Books (PA), 1867-1964">psa_ewbpa</padig:set>
         <padig:set string="Farm Census Returns (PA), 1924, 1927">psa_fsr</padig:set>
         <padig:set string="Forfeited Estate Accounts (PA), 1777-1809">psa_feapa92</padig:set>
+        <padig:set string="Forfeited Estates File, 1777-1790">psa_fef1777</padig:set>
         <padig:set string="Funded and Unfunded Debt Accounts (PA), 1790-1809">psa_fudapa</padig:set>
         <padig:set string="General Assembly Committee Book, 1785">psa_gacb1785</padig:set>
         <padig:set string="General Assembly Minute Books, 1779-1781, 1783-1784, 1788">psa_gamb1779</padig:set>
         <padig:set string="General Assembly Petitions and Miscellaneous Records, 1776-1790">psa_gapmr</padig:set>
         <padig:set string="General Correspondence (PA), 1776-1809">psa_gcpa</padig:set>
         <padig:set string="General Correspondence (PA), 1891-1946, not inclusive">psa_gcpa1922</padig:set>
+        <padig:set string="General Correspondence and Petitions, 1777">psa_gcap1777</padig:set>
         <padig:set string="General Correspondence, 1700-1772">psa_gc1772</padig:set>
         <padig:set string="General Gaol Delivery Dockets, 1778-1828">psa_ggdd1778</padig:set>
         <padig:set string="General Motions and Divorce Docket, 1750-1837 (Divorces 1800-1805 only)">psa_gmdd1750</padig:set>
@@ -542,6 +548,7 @@
         <padig:set string="Indents Delivered to the Treasurer (PA), 1793">psa_idthtpa</padig:set>
         <padig:set string="Index (PA) of Licensed Practitioners of Medicine, 1894-1981">psa_ilpmp</padig:set>
         <padig:set string="Index of Prisoners (PA), circa mid-1930s - early 1950s">psa_ioppacm1950</padig:set>
+        <padig:set string="Index Stubs and Cards to Miners' Certificates, 1937-1988">psa_isactmc1937</padig:set>
         <padig:set string="Index to Declaration of Intention Dockets, 1832-1901">psa_idid1832</padig:set>
         <padig:set string="Index to Ledger AA, 1777-1788">psa_ilaa1977</padig:set>
         <padig:set string="Index to Naturalization Papers, 1794-1824, 1842-1868">psa_inp1794</padig:set>
@@ -556,6 +563,7 @@
         <padig:set string="Internal Improvements File (PA), 1777-1809">psa_iifpa09</padig:set>
         <padig:set string="Internal Improvements File, 1790-1902">psa_iif1790</padig:set>
         <padig:set string="Inventory of Canal Commissioners' Maps in the Pennsylvania State Archives, 1968">psa_iccmpsa1968</padig:set>
+        <padig:set string="Inventory of Church Archives of Pennsylvania, including Records of Pennsylvania Jewish Congregations - Questionnaires (denomination by county) 1937-1940">psa_iocaop1937</padig:set>
         <padig:set string="Inventory of County Archives of Pennsylvania, 1937-1942, 1946, 1950">psa_icap1950</padig:set>
         <padig:set string="Investigation Reports of the State Boards of Charities (PA), 1890-1935">psa_risbctpa</padig:set>
         <padig:set string="Investigative Reports (after plant closures) of Health Hazards in Industrial Plants, circa 1941-1973">psa_irhh1941</padig:set>
@@ -582,6 +590,7 @@
         <padig:set string="Letter Book, Accounts, and Related Records of the Auditors of Accounts (PA) 1777-1784">psa_lbarraapa</padig:set>
         <padig:set string="Letter Books and Indexes, 1782-1803">psa_lbai</padig:set>
         <padig:set string="Letter Books and Rough Copies, 1790-1861">psa_lbrc1790</padig:set>
+        <padig:set string="Letter Books, 1782-1789">psa_lb1782</padig:set>
         <padig:set string="Letter Books, 1793-1849">psa_lb1793</padig:set>
         <padig:set string="Letter Press Books (PA), 1879-1880, 1884-1895">psa_lpppa1879</padig:set>
         <padig:set string="Letters Patent (PA), 1814-1874, 1902-1927">psa_lpp</padig:set>
@@ -590,6 +599,7 @@
         <padig:set string="Licenses Issued to Chiropodists (PA) Record, 1914-1956">psa_plicr</padig:set>
         <padig:set string="Lincoln University (PA), Publications, 1884-1991">psa_lupap</padig:set>
         <padig:set string="List of Printed Accounts (PA) in the Comptroller General's Office, 1777-1789">psa_lpacgo</padig:set>
+        <padig:set string="List of Soldiers Orphans' Arriving at Age 16, 1894">psa_losoa1894</padig:set>
         <padig:set string="List of Those Receiving State Money For Whom No Account Was Raised (PA), c.1790">psa_ltrsmpa</padig:set>
         <padig:set string="Listing of (PA) Licensed Drugless Therapists, 1914-1951">psa_lldt</padig:set>
         <padig:set string="Lists of Deserters and Substitute Deserters, 1861-1866">psa_ldsd1866</padig:set>
@@ -602,6 +612,7 @@
         <padig:set string="Mansfield University (PA), Treasurer's Minutes, 1855-1959">psa_mutm1959</padig:set>
         <padig:set string="Mansfield University (PA), Yearbooks, 1918-1986">psa_mupay</padig:set>
         <padig:set string="Manual for Newspaper Transcription, 1941">psa_mnt1941</padig:set>
+        <padig:set string="Marriage Bonds for Philadelphia County, 1784-1786">psa_mbfpc1784</padig:set>
         <padig:set string="Medical Examination Papers (PA), 1861-1865">psa_meppa</padig:set>
         <padig:set string="Medical Licenses (PA) Issued on Licenses from Other States Record, 1894-1963">psa_pmlilosr</padig:set>
         <padig:set string="Medical Licenses (PA) Recommended By the State Medical Society Record, 1894-1911">psa_pmlrsmsr</padig:set>
@@ -612,6 +623,7 @@
         <padig:set string="Memoranda Book (PA), 1791">psa_mbpa91</padig:set>
         <padig:set string="Memoranda Book of Old Accounts (PA), undated">psa_mbooapa</padig:set>
         <padig:set string="Memoranda Book, 1776-1777">psa_memb1776</padig:set>
+        <padig:set string="Memoranda Book, 1780-1787">psa_mb1780</padig:set>
         <padig:set string="Memoranda of Account Book (PA), 1791">psa_mabpa1791</padig:set>
         <padig:set string="Mexican War Accounts and Related Papers (PA), 1846-1880">psa_mwarp</padig:set>
         <padig:set string="Mexican War Service Index (PA), 1846-1848">psa_mwsipa</padig:set>
@@ -620,6 +632,7 @@
         <padig:set string="Military Commission Books Card Index, 1800-1860">psa_mcbci1860</padig:set>
         <padig:set string="Military Commission Books, 1800-1944">psa_mcb1944</padig:set>
         <padig:set string="Military Pension Accounts and Related Papers (PA), circa 1789-1883">psa_mpaarppac</padig:set>
+        <padig:set string="Military Returns, 1775-1790">psa_mr1775</padig:set>
         <padig:set string="Militia Absentee Return Record for Philadelphia City, 1777-1791">psa_marrpc</padig:set>
         <padig:set string="Militia Certificates Received from the Receiver General (PA), 1789-1793">psa_mcrfrg</padig:set>
         <padig:set string="Militia Exemption Books (PA), 1801-1813">psa_mebpa1813</padig:set>
@@ -629,12 +642,16 @@
         <padig:set string="Minute Book (Rough Copy), 1777">psa_mbrc1777</padig:set>
         <padig:set string="Minute Book, 1775-1776">psa_mb1775</padig:set>
         <padig:set string="Minute Book, 1777">psa_mb1777</padig:set>
+        <padig:set string="Minute Book, 1777">psa_mibk1777</padig:set>
         <padig:set string="Minute Books (PA), 1893-1977">psa_mbpa1893</padig:set>
+        <padig:set string="Minute Books (Rough Copies), 1777-1790">psa_mbksrc1777</padig:set>
         <padig:set string="Minute Books of the Board of Inspectors and Board of Trustees (PA), 1826-1931">psa_mbbibt31</padig:set>
         <padig:set string="Minute Books of the Board of Inspectors and Board of Trustees (PA), 1829-1889">psa_mbbibt</padig:set>
         <padig:set string="Minute Books of the Lancaster District, 1810-1829">psa_mcld1810</padig:set>
         <padig:set string="Minute Books of the Wardens of the Port, the Bd. Commissioners of Navigation, and the Navigation Comm., 1766-1773, 1783-1978">psa_mbotwotp1766</padig:set>
         <padig:set string="Minute Books, 1776-1777">psa_mb1776</padig:set>
+        <padig:set string="Minute Books, 1777-1790">psa_mbks1777</padig:set>
+        <padig:set string="Minute Books, 1777">psa_mibks1777</padig:set>
         <padig:set string="Minute Books, 1806-1816, 1819-1981">psa_mb1806</padig:set>
         <padig:set string="Minute Books, 1834-1838, 1854-1857, 1859-1990">psa_mb1834</padig:set>
         <padig:set string="Minutes (Rough Copy), 1775-1776, undated">psa_mrc1775</padig:set>
@@ -665,6 +682,7 @@
         <padig:set string="Newspaper Transcripts and Checklists of 18th and 19th Century Articles, circa 1940-1942">psa_ntc1942</padig:set>
         <padig:set string="Notary Public (PA) Commission Registers, 1893-1945">psa_nppacr</padig:set>
         <padig:set string="Notary Public (PA) Termination Card Index, 1945-1964">psa_mppatci</padig:set>
+        <padig:set string="Oaths of Allegiance, 1777-1790">psa_ooa1777</padig:set>
         <padig:set string="Office of Lieutenant Governor (PA) Board of Pardons Minutes, 1974-1999">psa_olgbpm</padig:set>
         <padig:set string="Officers Claim Book for Arrears in Clothing (PA), 1778-1791">psa_ocbfaic</padig:set>
         <padig:set string="Officers Clothing Account Book (PA), 1791">psa_ocabpa</padig:set>
@@ -684,6 +702,7 @@
         <padig:set string="Parole and Respite Books (PA), 1910-1942">psa_parbpa</padig:set>
         <padig:set string="Parole Prisoners' Date of Discharge Books (PA), circa 1910-1957">psa_ppdodbpac</padig:set>
         <padig:set string="Paroled Prisoner Statistical Book (PA), 1910-1931">psa_psbpa1931</padig:set>
+        <padig:set string="Payroll Requisitions, 1922-1933">psa_pr1922</padig:set>
         <padig:set string="Pennsylvania Notes, 1937-1939">psa_pn1937</padig:set>
         <padig:set string="Permanent Teaching Certificates (PA) Record Books, 1868-1908">psa_pptcrb</padig:set>
         <padig:set string="Perpetuation of Testimony Dockets, 1781-1801">psa_ptd1781</padig:set>
@@ -727,6 +746,7 @@
         <padig:set string="Prisoner Registers (PA), 1910-1970">psa_prpa1910-70</padig:set>
         <padig:set string="Prisoners Paroled and Discharged Book (PA), 1887-1918">psa_ppadbpa18</padig:set>
         <padig:set string="Prisoners' Record, 1889-1929">psa_pr1889</padig:set>
+        <padig:set string="Proceedings of the Pennsylvania Indian Commissioners, 1784-1785">psa_potpic1784</padig:set>
         <padig:set string="Provincial Officers' Sureties, 1742-1776">psa_pos1776</padig:set>
         <padig:set string="Publications (Including the Expedition of Baron de Longueuil), 1939-1942">psa_piebl1939</padig:set>
         <padig:set string="Receipt Book, 1776-1777">psa_rb1776</padig:set>
@@ -750,10 +770,12 @@
         <padig:set string="Record of Special Punishments, 1889-1925, 1931">psa_rsp1889</padig:set>
         <padig:set string="Recorder of Deeds Accounts (PA), 1947-1964">psa_rdapa</padig:set>
         <padig:set string="Records of Drafted Men and Substitutes (PA), 1862">psa_rdmspa</padig:set>
+        <padig:set string="Records of the Pennsylvania Writers, Pennsylvania Historical Commission, American Guide Series (1935-1941)">psa_rotpwphcags1935</padig:set>
         <padig:set string="Records of the State Highway and Bridge Authority, State Highway Commission, State Transportation Commission, and Transportation Advisory Committee, 1949-1994">psa_rotshaba1949</padig:set>
         <padig:set string="Reformatory Record (Weekly Prison Publication), 1890-1936">psa_rrwpp</padig:set>
         <padig:set string="Register of Accounts Received from the Register General (PA), 1790-1792">psa_rarfrg</padig:set>
         <padig:set string="Register of Executive Accounts (PA), 1784-1791">psa_reapa</padig:set>
+        <padig:set string="Register of Letters of Marque, 1778-1782">psa_rolom1778</padig:set>
         <padig:set string="Register of Sick and Wounded Soldiers, circa 1861-1865">psa_rsws1865</padig:set>
         <padig:set string="Registers of Mine Accidents (PA) for the Anthracite Districts, 1899-1972">psa_rmaad</padig:set>
         <padig:set string="Registers of Mine Accidents (PA) for the Bituminous Districts, 1899-1972">psa_rmabd</padig:set>
