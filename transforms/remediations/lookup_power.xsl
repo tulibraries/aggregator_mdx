@@ -55,6 +55,7 @@
         <padig:set string="Braddock Carnegie Library Association - Braddock Area Year Books">papd_pbcal-bayb</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA History Books">papd_pcccp-books</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA Postcards">papd_pcccp-post</padig:set>
+        <padig:set string="Cambria County Library - Johnstown Area Yearbooks">papd_pcccp-jay</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - American Marketplace">papd_pcalo-amc</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - Industry, Mining, &amp; Technology Journals">papd_pcalo-imtj</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - Iron &amp; Steel Photographic Collection">papd_pcalo-ispc</padig:set>
@@ -66,6 +67,7 @@
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
         <padig:set string="Chester County History Center - Jean Kane Foulke Papers">papd_scchc-jkfp</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
+        <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
         <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
         <padig:set string="Chester County Library &amp; District - Northern Chester County Historic Photographs">papd_pcccl-ncchp</padig:set>
         <padig:set string="Clarion Free Library - Mary Hamilton Holiday Cards">papd_pclfl-mhhc</padig:set>
@@ -90,6 +92,7 @@
         <padig:set string="German Society of Pennsylvania - Women's Auxiliary of the German Society of Pennsylvania">papd_sgsop-wagsp</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Box Collection/ Pennsylvania School for the Deaf">papd_sgehs-pbcpsftd</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes African-American History Collection">papd_sgehs-pbaahc</padig:set>
+        <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes Welfare History Collection">papd_sgehs-pbwhc</padig:set>
         <padig:set string="Heinz History Center - Buhl Foundation Photographs">papd_shswp-bfp</padig:set>
         <padig:set string="Henderson High School - B. Reed Henderson High School Collection">papd_khendhscol</padig:set>
         <padig:set string="Historical Society of Montgomery County - Historic Photographs of Norristown">papd_shsmc-hpn</padig:set>
@@ -138,7 +141,9 @@
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
+        <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
+        <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
         <padig:set string="Milton Hershey School - Hershey News Newspaper 1953-1964">papd_kmheh-hn</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc_6507</padig:set>
@@ -150,6 +155,7 @@
         <padig:set string="Montgomery County Community College - Yearbooks">papd_amccc-yb</padig:set>
         <padig:set string="New Castle Public Library - 100th Anniversary">papd_pncpl-100</padig:set>
         <padig:set string="New Castle Public Library - Cascade Park">papd_pncpl-cp</padig:set>
+        <padig:set string="New Castle Public Library - History Room Documents">papd_pncpl-hrd</padig:set>
         <padig:set string="New Castle Public Library - Laurel High School Yearbooks">papd_pncpl-lhsy</padig:set>
         <padig:set string="New Castle Public Library - Lawrence County Area Vocational Technical School Yearbooks">papd_pncpl-lcatsy</padig:set>
         <padig:set string="New Castle Public Library - Mohawk Area High School Yearbooks">papd_pncpl-mahsy</padig:set>
@@ -164,6 +170,7 @@
         <padig:set string="New Castle Public Library - Wilmington Area High School Yearbooks">papd_pncpl-wahsy</padig:set>
         <padig:set string="New Cumberland Public Library - Around Town">papd_pnecp-at</padig:set>
         <padig:set string="New Cumberland Public Library - Churches of New Cumberland">papd_pnecp-conc</padig:set>
+        <padig:set string="New Cumberland Public Library - Groups and Organizations of New Cumberland">papd_pnecp-gaoonc</padig:set>
         <padig:set string="New Cumberland Public Library - NC Hi Magazines">papd_pnecp-nchm</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Flood of 1936">papd_pnecp-ncf1936</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Public Library Collection">papd_pnecp-ncplc</padig:set>
@@ -199,6 +206,7 @@
         <padig:set string="Pittsburgh City Archives - Bedford-Bigelow-West Penn Hillside Study Area Photographs, 1953">papd_scopa-bbwphsap</padig:set>
         <padig:set string="Pittsburgh City Archives - Centre-Morgan Redevelopment Area Photographs, 1953">papd_scopa-cmrap</padig:set>
         <padig:set string="Pittsburgh City Archives - Centre-Weil Study Area Photographs, 1953">papd_scopa-cwsap</padig:set>
+        <padig:set string="Pittsburgh City Archives - Common and Select Councils of the City of Pittsburgh Minute Books, 1816-1877">papd_scopa-csccopmb1816</padig:set>
         <padig:set string="Pittsburgh City Archives - Lower Hazelwood District Redevelopment Photographs">papd_pl7136-lhdrp</padig:set>
         <padig:set string="Pittsburgh City Archives - Manchester, Chateau Street West Redevelopment Area Photographs, 1959">papd_scopa-mcswrap</padig:set>
         <padig:set string="Pittsburgh City Archives - Progress Magazine, 1921-1941 (bulk 1921-1931)">papd_scopa-pm</padig:set>
