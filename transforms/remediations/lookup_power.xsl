@@ -141,7 +141,6 @@
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
-        <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
         <padig:set string="Milton Hershey School - Hershey News Newspaper 1953-1964">papd_kmheh-hn</padig:set>
