@@ -875,6 +875,7 @@
         <padig:set string="George Hoenshel Fleming Sr. Family Papers">fleming</padig:set>
         <padig:set string="George Medrick Papers">medrick</padig:set>
         <padig:set string="Harold Rasmussen Scrapbooks, Badges, and Buttons">rasmussen</padig:set>
+        <padig:set string="Hayfield Estate Records, 1925-1945">hayfield</padig:set>
         <padig:set string="Howard Truman Curtiss Papers">curtiss</padig:set>
         <padig:set string="Jerry Doyle Papers">jdp</padig:set>
         <padig:set string="John Chorey Papers">chorey</padig:set>
@@ -882,6 +883,7 @@
         <padig:set string="Kirschner Family Papers">kirschner</padig:set>
         <padig:set string="Mira Dock Lantern Slides">mdfls</padig:set>
         <padig:set string="Morris W. Hackman Civil War Diary">mwh</padig:set>
+        <padig:set string="Ogontz Mosaic">omt</padig:set>
         <padig:set string="Penn State Froth">froth</padig:set>
         <padig:set string="Penn State Libraries Photo Archive">psuphotos</padig:set>
         <padig:set string="Pennsylvania Bridges Collection">pab</padig:set>
@@ -889,6 +891,7 @@
         <padig:set string="Pinkerton's National Detective Agency"></padig:set>
         <padig:set string="Sarah Chamberlin Eccleston Diary and Journal, 1864-1916">chamberlin</padig:set>
         <padig:set string="T. R. Johns">trjohns</padig:set>
+        <padig:set string="The Ogontz School for Young Ladies Yearbooks 1898-1950">ogontz</padig:set>
         <padig:set string="Thomas W. Benson Political Protest Collection">benson</padig:set>
         <padig:set string="Union League of Philadelphia Archives">ulp</padig:set>
         <padig:set string="United Mine Workers of America Photographic, Graphic, and Artifacts Collection">umwap</padig:set>
