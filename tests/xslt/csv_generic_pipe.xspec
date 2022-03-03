@@ -602,13 +602,13 @@
    </x:scenario>
 
 <!-- Date (map and delimit) -->
-   <x:scenario label="Creation_Date delimits, normalizes, and maps">
-     <x:scenario label="Creation_Date becomes space-normalized dcterms:date">
+   <x:scenario label="date fields delimit, normalize, and map">
+     <x:scenario label="date in Creation_Date field">
        <x:context href="../../fixtures/csv_generic_pipe.xml"/>
        <x:expect label="Creation_Date becomes dcterms:date)"
          test="oai_dc:dc/dcterms:date = '1885'" />
      </x:scenario>
-     <x:scenario label="Creation_Date becomes space-normalized dcterms:date and delimits">
+     <x:scenario label="date in Creation_Date becomes space-normalized dcterms:date and delimits">
        <x:context>
          <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
            <record airflow-record-id="1">
@@ -617,6 +617,22 @@
          </collection>
        </x:context>
        <x:expect label="Creation_Date maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:date>1978-07-25</dcterms:date>
+           <dcterms:date>1978-07-26</dcterms:date>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+     <x:scenario label="date in Date field with pipe delimiter">
+       <x:context>
+         <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
+           <record airflow-record-id="1">
+             <Date>1978-07-25|1978-07-26</Date>
+           </record>
+         </collection>
+       </x:context>
+       <x:expect label="date in Date field maps to dcterms:date and delimits">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
            <dcterms:date>1978-07-25</dcterms:date>
            <dcterms:date>1978-07-26</dcterms:date>
@@ -723,10 +739,27 @@
    </x:scenario>
 
 <!-- Identifier (map) -->
-     <x:scenario label="Item_No maps to dcterms:identifier">
-       <x:context href="../../fixtures/csv_generic_pipe.xml"/>
-       <x:expect label="Item_No maps becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'conditions_prospects_norwich_mine'"/>
+   <x:scenario label="identifier fields map to dcterms:identifier">  
+    <x:scenario label="identifier in Item_No maps to dcterms:identifier">
+        <x:context href="../../fixtures/csv_generic_pipe.xml"/>
+        <x:expect label="Item_No maps becomes dcterms:identifier" test="oai_dc:dc/dcterms:identifier = 'conditions_prospects_norwich_mine'"/>
+      </x:scenario>
+     <x:scenario label="Identifier in ID field">
+       <x:context>
+         <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
+           <record airflow-record-id="1">
+             <ID>conditions_prospects_norwich_mine</ID>
+           </record>
+         </collection>
+       </x:context>
+       <x:expect label="Value in ID field maps to dcterms:identifier">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:identifier>conditions_prospects_norwich_mine</dcterms:identifier>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
      </x:scenario>
+   </x:scenario>
 
 <!-- Data Provider (generate and map) -->
    <x:scenario label="Data_Provider processing">
@@ -736,13 +769,47 @@
 
 <!-- isShownAt (map) -->
    <x:scenario label="isShownAt processing">
-     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
-     <x:expect label="Identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://archive.org/details/reportsofinspect1885penn'"/>
+     <x:scenario label="URL in identifier field">
+      <x:context href="../../fixtures/csv_generic_pipe.xml"/>
+      <x:expect label="Identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://archive.org/details/reportsofinspect1885penn'"/>
+     </x:scenario>
+     <x:scenario label="URL in URL field">
+       <x:context>
+         <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
+           <record airflow-record-id="1">
+             <URL>https://archive.org/details/reportsofinspect1885penn</URL>
+           </record>
+         </collection>
+       </x:context>
+       <x:expect label="Value in URL field maps to edm:isShownAt">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <edm:isShownAt>https://archive.org/details/reportsofinspect1885penn</edm:isShownAt>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
    </x:scenario>
 
 <!-- Preview (generate and map) -->
    <x:scenario label="preview processing">
-     <x:context href="../../fixtures/csv_generic_pipe.xml"/>
-     <x:expect label="Thumbnail maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://archive.org/services/img/reportsofinspect1885penn'"/>
+     <x:scenario label="preview URL in Thumbnail field">
+      <x:context href="../../fixtures/csv_generic_pipe.xml"/>
+      <x:expect label="Thumbnail maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://archive.org/services/img/reportsofinspect1885penn'"/>
+     </x:scenario>
+     <x:scenario label="preview URL in Preview field">
+       <x:context>
+         <collection dag-id="funcake_generic_csv" dag-timestamp="2019-11-27_16-54-14">
+           <record airflow-record-id="1">
+             <Preview>https://archive.org/services/img/reportsofinspect1885penn</Preview>
+           </record>
+         </collection>
+       </x:context>
+       <x:expect label="Value in Preview field maps to edm:preview">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <edm:preview>https://archive.org/services/img/reportsofinspect1885penn</edm:preview>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
    </x:scenario>
  </x:description>
