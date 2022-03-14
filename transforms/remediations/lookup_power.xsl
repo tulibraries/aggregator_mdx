@@ -46,6 +46,7 @@
         <padig:set string="Altoona Area Public Library - Blair County Historic Reports">papd_palap-bchr</padig:set>
         <padig:set string="Altoona Area Public Library - Blair County Oral Histories">papd_palap-bcoh</padig:set>
         <padig:set string="Altoona Area Public Library - History Photographs">papd_palap-hp</padig:set>
+        <padig:set string="Altoona Area Public Library - The Great Flood of 1977">papd_palap-gf1977</padig:set>
         <padig:set string="Bedford County Library - Winona Garbrick">papd_pbecf-wg</padig:set>
         <padig:set string="Bellwood-Antis Public Library - Bellwood Bulletin Newspaper">papd_pbapl-bb</padig:set>
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Newspaper Clippings Aliquippa Area">papd_pbfja-sncaa</padig:set>
@@ -86,6 +87,7 @@
         <padig:set string="Erie County Public Library - Erie County Yearbooks">papd_percp-ecy</padig:set>
         <padig:set string="Erie County Public Library - Erie Gay News">papd_percp-egn</padig:set>
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
+        <padig:set string="Erie County Public Library - Erie County COVID-19 Oral Histories">papd_percp-ecc19oh</padig:set>
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
@@ -141,8 +143,12 @@
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
+        <padig:set string="Meyersdale Public Library - 1998 Southern Somerset County Tornadoes Oral Histories">papd_pmeye-1998ssctoh</padig:set>
+        <padig:set string="Meyersdale Public Library - African American Burials in Somerset County">papd_pmeye-aabisc</padig:set>
+        <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
+        <padig:set string="Milton Hershey School - Hershey Community Archives - Hotel Hershey Highlights">papd_kmheh-hcahhh</padig:set>
         <padig:set string="Milton Hershey School - Hershey News Newspaper 1953-1964">papd_kmheh-hn</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc_6507</padig:set>
@@ -232,6 +238,7 @@
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
         <padig:set string="Sewickley Public Library - Historic Images and Documents">papd_psepl-hiad2</padig:set>
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
+        <padig:set string="St. Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="State Library of Pennsylvania - Abraham Lincoln">papd_sstlp-linc</padig:set>
         <padig:set string="State Library of Pennsylvania - Ambler Gazette Newspaper">papd_sstlp-ag</padig:set>
