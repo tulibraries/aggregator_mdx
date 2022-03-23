@@ -262,11 +262,44 @@
    </x:scenario>
 
 <!-- Publisher (map and delimit) -->
-     <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
-       <x:context href="../../fixtures/bepress_lasalle.xml"/>
-       <x:expect label="dc:publisher becomes dcterms:publisher)"
-         test="oai_dc:dc/dcterms:publisher = 'La Salle College'" />
-     </x:scenario>
+   <x:scenario label='publisher processing'>  
+      <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
+          <x:context href="../../fixtures/bepress_lasalle.xml"/>
+          <x:expect label="dc:publisher becomes dcterms:publisher"
+            test="oai_dc:dc/dcterms:publisher = 'La Salle College'" />
+      </x:scenario>
+      <x:scenario label='publisher contains repository name'>
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:dpla="http://dp.la/about/map/"
+                xmlns:edm="http://www.europeana.eu/schemas/edm/"
+                xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:oclc="http://purl.org/oclc/terms/"
+                xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+                xmlns:oclcterms="http://purl.org/oclc/terms/"
+                xmlns:schema="http://schema.org"
+                xmlns:padig="http://padigital.org/ns"
+                xmlns:svcs="http://rdfs.org/sioc/services">
+                <dc:publisher>La Salle</dc:publisher>
+                <dc:publisher>La Salle University Digital Commons</dc:publisher>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="repo name does not map to dcterms:publisher">
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:publisher>La Salle</dcterms:publisher>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+        </x:expect>
+      </x:scenario>
+   </x:scenario>
 
 <!-- Description (map) -->
      <x:scenario label="dc:description becomes space-normalized dcterms:description">

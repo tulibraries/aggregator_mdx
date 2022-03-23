@@ -24,6 +24,16 @@
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
 
+    <!-- publisher; to unmap repository name -->
+    <xsl:template match="dc:publisher" priority="1">
+        <xsl:variable name="norm_string" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+        <xsl:if test="normalize-space($norm_string)!='' and normalize-space($norm_string)!='La Salle University Digital Commons'">
+            <xsl:element name="dcterms:publisher">
+                <xsl:value-of select="normalize-space($norm_string)"/>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
     <!--Create dcterms: identifier, $baseURL, and $objID -->
     <xsl:template match="dc:identifier[1]">
         <xsl:if test="normalize-space(.)!=''">
