@@ -65,10 +65,16 @@
         <padig:set string="Carnegie Mellon University - Andrew Carnegie Online Archives">papd_acamu-acarc</padig:set>
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
         <padig:set string="Centre County Library &amp; Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum">papd_pcecl-kl</padig:set>
+        <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
+        <padig:set string="Chester County History Center - Elizabeth Broomell Passmore Diary Collection">papd_scchc-ebpdc</padig:set>
+        <padig:set string="Chester County History Center - Ennion Cook Account Book Collection">papd_scchc-ecabc</padig:set>
         <padig:set string="Chester County History Center - Jean Kane Foulke Papers">papd_scchc-jkfp</padig:set>
+        <padig:set string="Chester County History Center - Lewis White Williams Diary Collection">papd_scchc-lwwdc</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
         <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
+        <padig:set string="Chester County History Center - William Riley Blakeslee Diary Collection">papd_scchc-wrbdc</padig:set>
         <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
         <padig:set string="Chester County Library &amp; District - Northern Chester County Historic Photographs">papd_pcccl-ncchp</padig:set>
         <padig:set string="Clarion Free Library - Mary Hamilton Holiday Cards">papd_pclfl-mhhc</padig:set>
@@ -96,6 +102,7 @@
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes African-American History Collection">papd_sgehs-pbaahc</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes Welfare History Collection">papd_sgehs-pbwhc</padig:set>
         <padig:set string="Heinz History Center - Buhl Foundation Photographs">papd_shswp-bfp</padig:set>
+        <padig:set string="Hempfield High School (Landisville PA) - The Flash - Hempfield High School Newspaper">papd_khmph-fhhsn</padig:set>
         <padig:set string="Henderson High School - B. Reed Henderson High School Collection">papd_khendhscol</padig:set>
         <padig:set string="Historical Society of Montgomery County - Historic Photographs of Norristown">papd_shsmc-hpn</padig:set>
         <padig:set string="iLead Pennsylvania - Memory Master">papd_ilead-mm</padig:set>
@@ -148,6 +155,7 @@
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
+        <padig:set string="Meyersdale Public Library - The History Behind the Meyersdale Public Library">papd_pmeye-hbtmpl</padig:set>
         <padig:set string="Milton Hershey School - Hershey Community Archives - Hotel Hershey Highlights">papd_kmheh-hcahhh</padig:set>
         <padig:set string="Milton Hershey School - Hershey News Newspaper 1953-1964">papd_kmheh-hn</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc</padig:set>
@@ -176,6 +184,7 @@
         <padig:set string="New Cumberland Public Library - Around Town">papd_pnecp-at</padig:set>
         <padig:set string="New Cumberland Public Library - Churches of New Cumberland">papd_pnecp-conc</padig:set>
         <padig:set string="New Cumberland Public Library - Groups and Organizations of New Cumberland">papd_pnecp-gaoonc</padig:set>
+        <padig:set string="New Cumberland Public Library - Local News">papd_pnecp-ln</padig:set>
         <padig:set string="New Cumberland Public Library - NC Hi Magazines">papd_pnecp-nchm</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Flood of 1936">papd_pnecp-ncf1936</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Public Library Collection">papd_pnecp-ncplc</padig:set>
@@ -185,6 +194,7 @@
         <padig:set string="Osterhout Free Library - Wilkes-Barre Sunday Independent Newspaper 1915-1958">papd_wbsunind</padig:set>
         <padig:set string="Pennsylvania College of Technology - Williamsport Technical Institute">papd_willtech</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Historical Photographs">papd_spgsl-photo</padig:set>
+        <padig:set string="Pennsylvania Geological Survey - Hurricane Agnes Flood Photographs">papd_spgsl-hafp</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - American Association of University Women - Johnstown Branch">papd_acacc-aauwjb</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Bailey Collection">papd_acacc-bailey</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Beaverdale Collection">papd_acacc-bdale</padig:set>
@@ -749,6 +759,7 @@
         <padig:set string="Postcards (PA)">psa_pc</padig:set>
         <padig:set string="Posters (PA)">psa_p</padig:set>
         <padig:set string="Precepts of the Court of Admiralty, 1781-1788">psa_pca1781</padig:set>
+        <padig:set string="Prison Population Records: Discharge Description Dockets, 1873-1957">psa_pprddd</padig:set>
         <padig:set string="Prisoner Registers (PA), 1910-1970">psa_prpa1910-70</padig:set>
         <padig:set string="Prisoners Paroled and Discharged Book (PA), 1887-1918">psa_ppadbpa18</padig:set>
         <padig:set string="Prisoners' Record, 1889-1929">psa_pr1889</padig:set>
