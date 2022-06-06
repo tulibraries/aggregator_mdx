@@ -301,7 +301,7 @@
         <padig:set string="Bureau of Building Inspection, Department of Public Safety, Pittsburgh, Pa. Records">pitt_collection.186</padig:set>
         <padig:set string="CONSOL Energy, Inc. Mine Maps and Records">pitt_collection.32</padig:set>
         <padig:set string="Camp Johnson Photographs">pitt_collection.311</padig:set>
-        <padig:set string="Carl T. Schofer Diaries">pitt:collection.380</padig:set>
+        <padig:set string="Carl T. Schofer Diaries">pitt_collection.380</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh 125th Anniversary Collection">pitt_collection.363</padig:set>
         <padig:set string="Carnegie Museum of Art Collection of Photographs">pitt_collection.36</padig:set>
         <padig:set string="Carnegie Museum of Natural History Archives">pitt_collection.151</padig:set>
@@ -344,7 +344,7 @@
         <padig:set string="Flood Commission of Pittsburgh, Pennsylvania">pitt_collection.292</padig:set>
         <padig:set string="Ford E. and Harriet R. Curtis Theatre Collection of Pittsburgh Theatre Programs">pitt_collection.254</padig:set>
         <padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
-        <padig:set string="Frank Bolden Papers">pitt:collection.366</padig:set>
+        <padig:set string="Frank Bolden Papers">pitt_collection.366</padig:set>
         <padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
         <padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
         <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
@@ -490,7 +490,7 @@
         <!-- University of Pittsburgh -->
         <padig:set string="19th Century Schoolbooks">pitt_collection.120</padig:set>
         <padig:set string="Abner Shimony Papers">pitt_collection.121</padig:set>
-        <padig:set string="Alberto Britos Scrapbook on Nicolás Guillén Visit to Uruguay">pitt:collection.378</padig:set>
+        <padig:set string="Alberto Britos Scrapbook on Nicolás Guillén Visit to Uruguay">pitt_collection.378</padig:set>
         <padig:set string="Allen Family Papers">pitt_collection.122</padig:set>
         <padig:set string="An Attempt to Describe the Future of the United States">pitt_collection.245</padig:set>
         <padig:set string="Archives of Scientific Philosophy">pitt_collection.123</padig:set>
