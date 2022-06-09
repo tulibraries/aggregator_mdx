@@ -43,7 +43,16 @@
     <xsl:template match="edm:preview">
         <xsl:call-template name="preview"/>
     </xsl:template>
-        
+    
+    <!-- mediaMaster (for full image URL) -->
+    <xsl:template match="edm:object">
+        <xsl:if test="normalize-space(.) != ''">
+            <xsl:call-template name="medi_template">
+                <xsl:with-param name="strings" select="."/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
         
     <!-- templates -->
     
@@ -94,5 +103,36 @@
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:if>
+    </xsl:template>
+    
+    <!-- mediaMaster template -->
+    <xsl:template name="medi_template">
+        <xsl:param name="strings"/>
+        <xsl:param name="delimiter"/>
+        
+        <xsl:choose>
+            <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
+            <xsl:when test="contains($strings, $delimiter)">
+                <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
+                <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
+                <xsl:if test="normalize-space($firststem)!=''">
+                    <xsl:element name="padig:mediaMaster">
+                        <xsl:value-of select="normalize-space($firststem)" />
+                    </xsl:element>
+                </xsl:if>
+                <!--Need to do recursion-->
+                <xsl:call-template name="medi_template">
+                    <xsl:with-param name="strings" select="$newstem"/>
+                    <xsl:with-param name="delimiter" select="';'"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space($strings)!=''">
+                    <xsl:element name="padig:mediaMaster">
+                        <xsl:value-of select="normalize-space($strings)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
