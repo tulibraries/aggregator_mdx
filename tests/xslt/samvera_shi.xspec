@@ -17,9 +17,6 @@
    xmlns:svcs="http://rdfs.org/sioc/services"
    stylesheet="../../transforms/samvera_shi.xsl">
 
-   <!--
-  Testing Match Templates in SHIingest.xsl
-  -->
 
 <!-- Title (map) -->
    <x:scenario label="dc:title becomes space-normalized dcterms:title">
@@ -740,6 +737,7 @@
          <edm:dataProvider>Science History Institute</edm:dataProvider>
          <edm:isShownAt>https://digital.sciencehistory.org/works/000000018</edm:isShownAt>
          <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
+         <padig:mediaMaster>https://digital.sciencehistory.org/downloads/41687h66b/download_full?disposition=inline</padig:mediaMaster>
          <edm:provider>PA Digital</edm:provider>
                 </oai_dc:dc>
      </x:expect>
@@ -777,6 +775,7 @@
            <edm:dataProvider>Science History Institute</edm:dataProvider>
            <edm:isShownAt>https://digital.sciencehistory.org/works/000000018</edm:isShownAt>
            <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
+            <padig:mediaMaster>https://digital.sciencehistory.org/downloads/41687h66b/download_full?disposition=inline</padig:mediaMaster>
            <edm:provider>PA Digital</edm:provider>
                     </oai_dc:dc>
        </x:expect>
@@ -789,7 +788,7 @@
        <x:expect label="dc:relation becomes dcterms:relation)"
          test='oai_dc:dc/dcterms:relation = "Here&apos;s a link to the collection finding aid."' />
      </x:scenario>
-     <x:scenario label="dc:relation becomes space-normalized dcterms:relation and delimits">
+     <x:scenario label="dc:relation becomes space-normalized dcterms:relation">
        <x:context>
          <oai:record>
            <metadata>
@@ -799,11 +798,28 @@
            </metadata>
          </oai:record>
        </x:context>
-       <x:expect label="relation maps and delimits">
+       <x:expect label="relation maps">
          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
            <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
            <edm:provider>PA Digital</edm:provider>
                     </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+     <x:scenario label="incoming isPartOf maps to dcterms:relation">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:isPartOf>Thing 1; Thing 2;</dcterms:isPartOf>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="isPartOf maps to relation">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
        </x:expect>
      </x:scenario>
    </x:scenario>
@@ -916,6 +932,7 @@
            <edm:dataProvider>Science History Institute</edm:dataProvider>
            <edm:isShownAt>https://digital.sciencehistory.org/works/000000018</edm:isShownAt>
            <edm:preview>https://digital.sciencehistory.org/downloads/41687h66b/download_medium?disposition=inline</edm:preview>
+           <padig:mediaMaster>https://digital.sciencehistory.org/downloads/41687h66b/download_full?disposition=inline</padig:mediaMaster>
            <edm:provider>PA Digital</edm:provider>
                     </oai_dc:dc>
        </x:expect>
