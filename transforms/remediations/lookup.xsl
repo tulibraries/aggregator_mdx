@@ -454,6 +454,7 @@
         <padig:set string="Shadyside Hospital Records">pitt_collection.334</padig:set>
         <padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
         <padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
+        <padig:set string="St. Luke’s Lutheran Church (West View, Pa.) Records and Photographs">pitt_collection.375</padig:set>
         <padig:set string="Stephen Foster Collection">pitt_collection.111</padig:set>
         <padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
         <padig:set string="Teenie Harris Photographs">pitt_collection.85</padig:set>
@@ -461,6 +462,7 @@
         <padig:set string="Thomas C. Brogan Papers on The Mayor's Task Force of Civil Disorders">pitt_collection.350</padig:set>
         <padig:set string="Thomas Mellon Galey Photographs">pitt_collection.321</padig:set>
         <padig:set string="Thomas Mellon and William B. Negley Day Book">pitt_collection.29</padig:set>
+        <padig:set string="Thorn Hill School for Boys Records">pitt_collection.382</padig:set>
         <padig:set string="Trimble Company Records">pitt_collection.88</padig:set>
         <padig:set string="Union Arcade Building Photographs">pitt_collection.90</padig:set>
         <padig:set string="Union Switch &amp; Signal Strike Photographs">pitt_collection.91</padig:set>
@@ -520,6 +522,7 @@
         <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
         <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
         <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
+        <padig:set string="Hervey Allen Papers">pitt_collection.129</padig:set>
         <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
