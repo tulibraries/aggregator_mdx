@@ -64,8 +64,9 @@
         <padig:set string="Carnegie Library of Pittsburgh - The Builder">papd_pcalo-build2</padig:set>
         <padig:set string="Carnegie Mellon University - Andrew Carnegie Online Archives">papd_acamu-acarc</padig:set>
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
-        <padig:set string="Centre County Library &amp; Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
-        <padig:set string="Centre County Library and Historical Museum">papd_pcecl-kl</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
         <padig:set string="Chester County History Center - Elizabeth Broomell Passmore Diary Collection">papd_scchc-ebpdc</padig:set>
@@ -104,6 +105,7 @@
         <padig:set string="Heinz History Center - Buhl Foundation Photographs">papd_shswp-bfp</padig:set>
         <padig:set string="Hempfield High School (Landisville PA) - The Flash - Hempfield High School Newspaper">papd_khmph-fhhsn</padig:set>
         <padig:set string="Henderson High School - B. Reed Henderson High School Collection">papd_khendhscol</padig:set>
+        <padig:set string="Historical Society of Montgomery County - African American History Collection">papd_shsmc-aahc</padig:set>
         <padig:set string="Historical Society of Montgomery County - Historic Photographs of Norristown">papd_shsmc-hpn</padig:set>
         <padig:set string="iLead Pennsylvania - Memory Master">papd_ilead-mm</padig:set>
         <padig:set string="Indiana University of Pennsylvania - Indiana, Pennsylvania in the Civil War">papd_aiupa-cw</padig:set>
@@ -148,10 +150,12 @@
         <padig:set string="Matthews Public Library - Fredericksburg, Pennsylvania Historic Images">papd_plecl-fphi</padig:set>
         <padig:set string="McBride Memorial Library - Berwick High School Yearbooks">papd_pbrpl-bhsyb</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Day at the 1939 New York World's Fair">papd_pmeln-nd1939nywf</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
         <padig:set string="Meyersdale Public Library - 1998 Southern Somerset County Tornadoes Oral Histories">papd_pmeye-1998ssctoh</padig:set>
         <padig:set string="Meyersdale Public Library - African American Burials in Somerset County">papd_pmeye-aabisc</padig:set>
+        <padig:set string="Meyersdale Public Library - Garrett School Memorabilia">papd_pmeye-gsm</padig:set>
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
@@ -216,8 +220,10 @@
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Garden Photographs, 1900-1940: 3. PHS Collection Portfolios">papd_spahs-pgpphscp</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - PHS Archives Digital Image Collection">papd_spahs-padic</padig:set>
         <padig:set string="Pennsylvania School for the Deaf - Mount Airy Campus">papd_kpsfd-mac</padig:set>
+        <padig:set string="Pennsylvania School for the Deaf - Pennsylvania School for the Deaf Yearbooks">papd_kpsfd-psftdy</padig:set>
         <padig:set string="Peters Township Public Library - Historic Images and Documents Collection">papd_ppetl-hidc</padig:set>
         <padig:set string="Peters Township Public Library - Life in Peters Township: An Oral History Project">papd_ppetl-lipt</padig:set>
+        <padig:set string="Pittsburgh City Archives - Allegheny City Records, 1840-1907">papd_scopa-acr1840</padig:set>
         <padig:set string="Pittsburgh City Archives - Bedford-Bigelow-West Penn Hillside Study Area Photographs, 1953">papd_scopa-bbwphsap</padig:set>
         <padig:set string="Pittsburgh City Archives - Centre-Morgan Redevelopment Area Photographs, 1953">papd_scopa-cmrap</padig:set>
         <padig:set string="Pittsburgh City Archives - Centre-Weil Study Area Photographs, 1953">papd_scopa-cwsap</padig:set>
@@ -235,6 +241,8 @@
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
+        <padig:set string="Schwenkfelder Library &amp; Heritage Center - Schwenkfelder Library &amp; Heritage Center Cased Images Collection">papd_sslhc-slhccic</padig:set>
+        <padig:set string="Schwenkfelder Library &amp; Heritage Center - The Christopher Saur, Jr. Diary and Account Book">papd_sslhc-csjdab</padig:set>
         <padig:set string="Scranton Public Library - Celebrating Our Towns: Lackawanna Co. Centennial Books and Community Histories">papd_pscrl-cot</padig:set>
         <padig:set string="Scranton Public Library - Century Club of Scranton">papd_pscrl-ccos</padig:set>
         <padig:set string="Scranton Public Library - Community and Church Cookbooks from Northeastern PA">papd_pscrl-cccfnepa</padig:set>
@@ -317,6 +325,7 @@
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Anne E. Sanford Missionary Collection">papd_aulsp-ihoraes</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: the Lutheran Deaconess Movement in the United States">papd_aulsp-ihorldm</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
+        <padig:set string="Upper Merion Area High School Library - Upper Merion Area High School Athletic Scrapbooks and Programs">papd_kupmh-umahsasap</padig:set>
         <padig:set string="Upper Merion Township Library - Upper Merion Area School District Yearbooks">papd_pupmt-sdybs</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
         <padig:set string="Warren Library Association - Historic Photographs">papd_pwala-hstph</padig:set>
