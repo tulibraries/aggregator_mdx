@@ -887,6 +887,7 @@
         <padig:set string="Alice Marshall Collection">amc</padig:set>
         <padig:set string="Amalgamated Association of Iron, Steel, and Tin Workers of North America Records">amalgamated</padig:set>
         <padig:set string="Anderson and Ellis Art Education Collection">arted</padig:set>
+        <padig:set string="Black History and Visual Culture">blackhistory</padig:set>
         <padig:set string="Brent Wilson Papers">brentwilson</padig:set>
         <padig:set string="Cresson Literary Society Records">cls</padig:set>
         <padig:set string="Daniel Elias Frantz Diary">def</padig:set>
@@ -906,6 +907,7 @@
         <padig:set string="Mira Dock Lantern Slides">mdfls</padig:set>
         <padig:set string="Morris W. Hackman Civil War Diary">mwh</padig:set>
         <padig:set string="Ogontz Mosaic">omt</padig:set>
+        <padig:set string="Penn State Altoona Campus Collections">altoona</padig:set>
         <padig:set string="Penn State Froth">froth</padig:set>
         <padig:set string="Penn State Libraries Photo Archive">psuphotos</padig:set>
         <padig:set string="Pennsylvania Bridges Collection">pab</padig:set>
