@@ -76,6 +76,7 @@
         <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
         <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
+        <padig:url string="Moravian Historical Society" code="MORAVIAN">https://moravianhistoricalsociety.reclaim.hosting/oai</padig:url>
     </xsl:param>
 
     <!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -1212,6 +1213,18 @@
         <padig:set string="Pamphlets">4</padig:set>
         <padig:set string="The American Celt">5</padig:set>
         <padig:set string="Correspondence">8</padig:set>
+    </xsl:param>
+
+    <!-- lookup table for Omeka setSpec, Moravian Historical Society -->
+    <xsl:param name="moravianSetSpecList">
+        <padig:set string="Moravian Historical Society Annual Lectures">587</padig:set>
+        <padig:set string="The Moravian Newspaper">588</padig:set>
+        <padig:set string="Nazareth Hall">589</padig:set>
+        <padig:set string="Nazareth in the Eighteenth Century Paper">1334</padig:set>
+        <padig:set string="Henry Family Letters">2330</padig:set>
+        <padig:set string="Boulton Gun Works">2331</padig:set>
+        <padig:set string="Civil War News">2332</padig:set>
+        <padig:set string="William Henry I">2333</padig:set>
     </xsl:param>
 
     <!-- lookup table for dplah language transforms -->

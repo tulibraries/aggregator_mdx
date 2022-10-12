@@ -20,7 +20,7 @@
 
     <xsl:include href="oai_base_crosswalk.xsl"/>
 
-    <!-- WORK IN PROGRESS -->
+    <!-- WORK IN PROGRESS testing initial harvest -->
 
     <!-- collection name -->
     <xsl:template match="oai:header/oai:setSpec">
