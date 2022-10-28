@@ -27,14 +27,18 @@
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
 
-
     <!-- identifier, etc. -->
-    <xsl:template match="dc:identifier">
-        <xsl:call-template name="preview"/>
-        <xsl:call-template name="isShownAtRights"/>
+    <xsl:template match="oai:identifier">
         <xsl:call-template name="identifier"/>
-        <xsl:call-template name="dataProvider"/>
+        <!-- data provider -->
+        <xsl:element name="edm:dataProvider">
+            <xsl:text>Moravian Historical Society</xsl:text>
+        </xsl:element>
     </xsl:template>
+        
+        <!-- thumbnails not mapped in sample data; it they are added in the future, see omeka_mhac
+            
+            <xsl:call-template name="preview"/> -->
 
     <!-- templates -->
 
@@ -44,13 +48,13 @@
             <xsl:variable name="setID" select="normalize-space(.)"/>
             <xsl:if test="$setID = $moravianSetSpecList/padig:set">
                 <xsl:element name="dcterms:isPartOf">
-                    <xsl:value-of select="$cppSetSpecList/padig:set[(. = $setID)]/@string"/>
+                    <xsl:value-of select="$moravianSetSpecList/padig:set[(. = $setID)]/@string"/>
                 </xsl:element>
             </xsl:if>
         </xsl:if>
     </xsl:template>
 
-    <!-- preview -->
+    <!-- preview 
     <xsl:template name="preview">
         <xsl:if test="normalize-space(.) != '' and contains(.,'/thumbnails/')">
             <xsl:element name="edm:preview">
@@ -58,28 +62,28 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
+    -->
 
-    <!-- isShownAt -->
-    <xsl:template name="isShownAtRights">
-        <xsl:if test="normalize-space(.) != '' and contains(.,'/items/show/')">
-            <xsl:element name="edm:isShownAt">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-
-
-    <!-- identifier -->
+    <!-- identifier-related processing -->
     <xsl:template name="identifier">
-        <xsl:variable name="itemID" select="replace(substring-after(.,'/items/show/'),'[^a-zA-Z0-9\-:_]','_')"/>
-        <xsl:variable name="baseURL" select="substring-before(.,'items/show/')"/>
-
-        <xsl:if test="normalize-space(.) != '' and contains(.,'/items/show/')">
-        <xsl:element name="dcterms:identifier">
-            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
-        </xsl:element>
+    <xsl:variable name="itemID" select="substring-after(.,'oai:moravianhistoricalsociety.reclaim.hosting:')"/>
+    <xsl:variable name="identifierSubstring" select="substring-before(.,$itemID)"/>
+    
+        <xsl:if test="normalize-space(.) != ''">
+            <!-- isShownAt -->
+            <xsl:element name="edm:isShownAt">
+                <xsl:text>https://moravianhistoricalsociety.reclaim.hosting/s/mhs/item/</xsl:text><xsl:value-of select="normalize-space($itemID)"/>
+            </xsl:element>
+            
+            <!-- identifier -->
+            <xsl:element name="dcterms:identifier">
+                <xsl:text>padig:MORAVIAN-</xsl:text><xsl:value-of select="$itemID"/>
+            </xsl:element>
+            
         </xsl:if>
     </xsl:template>
 
-    <!-- dataProvider -->
+
     <xsl:template name="dataProvider">
         <xsl:variable name="baseURL" select="substring-before(.,'items/show/')"/>
 
@@ -89,6 +93,5 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-
 
 </xsl:stylesheet>
