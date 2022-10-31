@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-10-08T19:38:19Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_dc" set="589">https://moravianhistoricalsociety.reclaim.hosting/oai</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:moravianhistoricalsociety.reclaim.hosting:126</identifier>
+                <datestamp>2022-09-08T18:35:54Z</datestamp>
+                <setSpec>589</setSpec>
+            </header>
+            <metadata>
+                <oai_dcterms:dcterms xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_dcterms="http://www.openarchives.org/OAI/2.0/oai_dcterms/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dcterms/ http://www.openarchives.org/OAI/2.0/oai_dcterms.xsd">
+                    <dcterms:title>History of the school from the Synod from 1893 to 1898</dcterms:title>
+                    <dcterms:subject>Moravians--Pennsylvania</dcterms:subject>
+                    <dcterms:subject>Moravian Church--Education--Pennsylvania</dcterms:subject>
+                    <dcterms:description>A 23-page, handwritten history of the school of Synod of 1893 to 1898, who elected Moravian brethren to the Board of Trustees for Nazareth Hall in 1893, including Granville Henry as president in 1983.</dcterms:description>
+                    <dcterms:type>Text</dcterms:type>
+                    <dcterms:identifier>A121c</dcterms:identifier>
+                    <dcterms:source>Box 12, Folder 10</dcterms:source>
+                    <dcterms:language>eng</dcterms:language>
+                    <dcterms:rights xsi:type="dcterms:URI" title="No Copyright - Non-Commercial Use Only">https://rightsstatements.org/page/NoC-NC/1.0/</dcterms:rights>
+                    <dcterms:extent>23 pages, 8 x 5 in.</dcterms:extent>
+                    <dcterms:medium>papers (documents)</dcterms:medium>
+                    <dcterms:spatial>Nazareth, Pennsylvania</dcterms:spatial>
+                    <dcterms:temporal>19th century</dcterms:temporal>
+                    <dcterms:temporal>1893-1898</dcterms:temporal>
+                    <dcterms:provenance>From the Henry Family collection.</dcterms:provenance>
+                    <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/api/items/126</dcterms:identifier>
+                    <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/files/original/0a668b531d703c74eddae8d629cd884fb1c89506.jpg</dcterms:identifier>
+                </oai_dcterms:dcterms>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>

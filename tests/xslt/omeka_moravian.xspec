@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:dpla="http://dp.la/about/map/"
+   xmlns:padig="http://padigital.org/ns"
+   xmlns:edm="http://www.europeana.eu/schemas/edm/"
+   xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+   xmlns:oclcterms="http://purl.org/oclc/terms/"
+   xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+   xmlns:oclc="http://purl.org/oclc/terms/"
+   xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+   xmlns:schema="http://schema.org"
+   xmlns:svcs="http://rdfs.org/sioc/services"
+   stylesheet="../../transforms/omeka_moravian.xsl">
+
+<!-- Title (map) -->
+    <x:scenario label="title crosswalk - dcterms:title maps and normalizes">
+        <x:context href="../../fixtures/omeka_moravian.xml"/>
+        <x:expect label="dcterms:title becomes dcterms:title"
+          test="oai_dc:dc/dcterms:title = 'History of the school from the Synod from 1893 to 1898'" />
+    </x:scenario>
+
+<!-- Alternate title (map and delimit) -->
+   <x:scenario label="alternative titles map and delimit">
+    <x:scenario label="title not first maps to alttitle">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:title>First title</dcterms:title>
+              <dcterms:title>Alt title</dcterms:title>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="title not first maps">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:title>First title</dcterms:title>
+          <dcterms:alternative>Alt title</dcterms:alternative>
+          <edm:provider>PA Digital</edm:provider>
+          
+        </oai_dc:dc>
+      </x:expect>
+      </x:scenario>
+      <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:title>First title</dcterms:title>
+                <dcterms:alternative>Alt title 1; Alt title 2</dcterms:alternative>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="alt title is mapped and delimited">
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:title>First title</dcterms:title>
+            <dcterms:alternative>Alt title 1</dcterms:alternative>
+            <dcterms:alternative>Alt title 2</dcterms:alternative>
+            <edm:provider>PA Digital</edm:provider>
+          </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+<!-- Type and Format (map/parse, normalize, and delimit) -->
+<x:scenario label="dcterms:type values are matched, remediated, and delimited for known strings">
+    <x:scenario label="Delimiting, remediating, and parsing">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:type>apples;oranges;images;texts;photographs;</dcterms:type>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="type and format are mapped and delimited">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:format>apples</dcterms:format>
+          <dcterms:format>oranges</dcterms:format>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:type>Text</dcterms:type>
+          <dcterms:format>photographs</dcterms:format>
+          <edm:provider>PA Digital</edm:provider>
+                  </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+
+    <x:scenario label="Text Type Remediation">
+      <x:scenario label="Text Type Remediation: Starts with lowercase text">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>textual kittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: Starts with mixed case text">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>TEXTresource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: text exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>text</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: text exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>TEXT</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+      </x:scenario>
+      <x:scenario label="Text Type Remediation: ends with text becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>hello-text</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-text'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Image Type Remediation">
+      <x:scenario label="Image Type Remediation: Starts with lowercase image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>image of kittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: Starts with mixed case Image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>ImAgEresource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Image Remediation: image exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>image</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: image exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>IMAGE</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+      </x:scenario>
+      <x:scenario label="Image Type Remediation: ends with image becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>hello-image</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-image'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Moving Image Type Remediation">
+      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, no spaces movingimage">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>movingimagekittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Starts with lowercase, single-spaced moving image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>moving imagekittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Starts with mixed case moving image">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>MOVING ImAgEresource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Remediation: Moving Image exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>moving image</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: Moving Image exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>MOVING IMAGE</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+      </x:scenario>
+      <x:scenario label="Moving Image Type Remediation: ends with Moving Image becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>hello-moving-image</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-moving-image'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Sound Type Remediation">
+      <x:scenario label="Sound Type Remediation: Starts with lowercase sound">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>sound of kittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Starts with mixed case sound">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>SoUnDresource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Sound exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>sound</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: Sound exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>SOUND</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Sound'" test="oai_dc:dc/dcterms:type = 'Sound'" />
+      </x:scenario>
+      <x:scenario label="Sound Type Remediation: ends with sound becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>hello-sound</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-sound'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Physical Object Type Remediation">
+      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, no spaces physicalobject">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>physicalobjectkittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Starts with lowercase, single-spaced Physical Object">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>physical object kittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Starts with mixed case Physical Object">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>PHYSical Objectresource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Remediation: Physical Object exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>physical object</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: Physical Object exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>PHYSICAL OBJECT</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+      </x:scenario>
+      <x:scenario label="Physical Object Type Remediation: ends with Physical Object becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>hello-physical-object</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-physical-object'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+    <x:scenario label="Interactive Resource Type Remediation">
+      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, no spaces interactiveresource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>interactiveresourcepuppies</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Starts with lowercase, single-spaced Interactive Resource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>interactive resource kittens</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Starts with mixed case Interactive Resource">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>InterActive Resource resources</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Remediation: Interactive Resource exact lowercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>interactive resource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: Interactive Resource exact uppercase">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>INTERACTIVE RESOURCE</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Interactive Resource'" test="oai_dc:dc/dcterms:type = 'Interactive Resource'" />
+      </x:scenario>
+      <x:scenario label="Interactive Resource Type Remediation: ends with Interactive Resource becomes format">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dcterms:type>hello-interactive-resource</dcterms:type>
+              </oai_dc:dc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-interactive-resource'" />
+        <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
+      </x:scenario>
+    </x:scenario>
+  </x:scenario>
+
+<!-- Creator (map and delimit) -->
+   <x:scenario label="dc:creator becomes space-normalized dcterms:creator and delimits">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:creator>Smith, John;Smith, Karen;</dcterms:creator>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="creator maps and delimits">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:creator>Smith, John</dcterms:creator>
+         <dcterms:creator>Smith, Karen</dcterms:creator>
+         <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+     </x:expect>
+ </x:scenario>
+
+<!-- File format (map and delimit) 
+   <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
+     <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
+       <x:context href="../../fixtures/omeka_moravian.xml"/>
+       <x:expect label="dc:format becomes schema:fileFormat)"
+         test="oai_dc:dc/schema:fileFormat = 'image/jp2'" />
+     </x:scenario>
+     <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:format>Thing1;Thing2</dcterms:format>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="format maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <schema:fileFormat>Thing1</schema:fileFormat>
+           <schema:fileFormat>Thing2</schema:fileFormat>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+-->
+
+<!-- Contributor (map and delimit) -->
+   <x:scenario label="contributor processing">
+     <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:contributor>Smith, John;Smith, Karen;</dcterms:contributor>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+     <x:expect label="single dcterms:contributor with two values separated w semicolon becomes two space-normalized dcterms:contributor">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:contributor>Smith, John</dcterms:contributor>
+           <dcterms:contributor>Smith, Karen</dcterms:contributor>
+           <edm:provider>PA Digital</edm:provider>
+                    </oai_dc:dc>
+       </x:expect>
+   </x:scenario>
+
+<!-- Source (map and delimit) -->
+   <x:scenario label="dcterms:source becomes space-normalized dcterms:source and delimits">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:source>Smith, John;Smith, Karen;</dcterms:source>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="source maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:source>Smith, John</dcterms:source>
+           <dcterms:source>Smith, Karen</dcterms:source>
+           <edm:provider>PA Digital</edm:provider>
+                    </oai_dc:dc>
+       </x:expect>
+   </x:scenario>
+
+<!-- Publisher (map and delimit) -->
+     <x:scenario label="dcterms:publisher maps and normalizes">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:publisher>Smith, John;Smith, Karen;</dcterms:publisher>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="dcterms:publisher maps to dcterms:publisher and does not delimit on semicolon">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:publisher>Smith, John;Smith, Karen;</dcterms:publisher>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+
+<!-- Description (map) -->
+     <x:scenario label="description processing">
+       <x:context href="../../fixtures/omeka_moravian.xml"/>
+       <x:expect label="dcterms:description becomes space-normalized dcterms:description"
+         test="oai_dc:dc/dcterms:description = 'A 23-page, handwritten history of the school of Synod of 1893 to 1898, who elected Moravian brethren to the Board of Trustees for Nazareth Hall in 1893, including Granville Henry as president in 1983.'" />
+     </x:scenario>
+
+<!-- Spatial (map and delimit) -->
+   <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:spatial>Location 1; Location 2;</dcterms:spatial>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="spatial is mapped and delimited">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:spatial>Location 1</dcterms:spatial>
+         <dcterms:spatial>Location 2</dcterms:spatial>
+         <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+
+<!-- Temporal (map and delimit) -->
+   <x:scenario label="dcterms:temporal delimits, normalizes, and maps">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:temporal>Era 1; Era 2;</dcterms:temporal>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="temporal is mapped and delimited">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:temporal>Era 1</dcterms:temporal>
+         <dcterms:temporal>Era 2</dcterms:temporal>
+         <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+
+<!-- Extent (map) -->
+   <x:scenario label="extent processing">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="dcterms:extent becomes space-normalized dcterms:extent; does not delimit"
+       test="oai_dc:dc/dcterms:extent = '1 photograph, b&amp;w; 8 x 10 in.'" />
+   </x:scenario>
+
+<!-- Date (map and delimit) -->
+   <x:scenario label="date processing">
+     <x:scenario label="dcterms:date contains two values separated by semicolon">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:date>1978-07-25;1978-07-26</dcterms:date>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="dcterms:date maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:date>1978-07-25</dcterms:date>
+           <dcterms:date>1978-07-26</dcterms:date>
+           <edm:provider>PA Digital</edm:provider>
+                    </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   </x:scenario>
+
+<!-- Subject (map and delimit) -->
+   <x:scenario label="subject processing">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:subject>Subject 1;Subject 2 </dcterms:subject>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+       <x:expect label="dcterms:subject maps to dcterms:subject, space normalizes, and delimits on semicolon">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:subject>Subject 1</dcterms:subject>
+         <dcterms:subject>Subject 2</dcterms:subject>
+         <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+
+<!-- Language (map and delimit) -->
+     <x:scenario label="language processing">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:language>eng;french;yid;</dcterms:language>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="multi-value language transforms from lookup table, delimits, space normalizes, and maps to dcterms:language">
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:language>English</dcterms:language>
+            <dcterms:language>french</dcterms:language>
+            <dcterms:language>Yiddish</dcterms:language>
+           <edm:provider>PA Digital</edm:provider>
+                    </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+
+<!-- Relation (map and delimit) -->
+     <x:scenario label="relation processing">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:relation>Thing 1; Thing 2; </dcterms:relation>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="dcterms:relation becomes space-normalized dcterms:relation; does not delimit">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
+           <edm:provider>PA Digital</edm:provider>
+                    </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+     <x:scenario label="incoming isPartOf maps to dcterms:relation">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:isPartOf>Thing 1; Thing 2;</dcterms:isPartOf>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+       <x:expect label="isPartOf maps to relation">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
+           <edm:provider>PA Digital</edm:provider>
+         </oai_dc:dc>
+       </x:expect>
+     </x:scenario>
+   
+
+<!-- isPartOf (map and delimit) -->
+   <x:scenario label="isPartOf processing">
+       <x:context href="../../fixtures/omeka_moravian.xml"/>
+       <x:expect label="value in setSpec goes to lookup and generates collection name in dcterms:isPartOf)"
+         test="oai_dc:dc/dcterms:isPartOf = 'Nazareth Hall'" />
+   </x:scenario>
+
+<!-- Replaced by (map and delimit) -->
+   <x:scenario label="isReplacedBy delimits, normalizes, and maps">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:isReplacedBy>Thing 1; Thing 2;</dcterms:isReplacedBy>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+     <x:expect label="isReplacedBy maps and delimits">
+         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <dcterms:isReplacedBy>Thing 1</dcterms:isReplacedBy>
+           <dcterms:isReplacedBy>Thing 2</dcterms:isReplacedBy>
+           <edm:provider>PA Digital</edm:provider>
+                    </oai_dc:dc>
+       </x:expect>
+   </x:scenario>
+
+<!-- Replaces (map and delimit) -->
+   <x:scenario label="replaces delimits, normalizes, and maps">
+     <x:context>
+       <oai:record>
+         <metadata>
+           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             <dcterms:replaces>Thing 1; Thing 2;</dcterms:replaces>
+           </oai_dc:dc>
+         </metadata>
+       </oai:record>
+     </x:context>
+     <x:expect label="replaces maps and delimits">
+       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <dcterms:replaces>Thing 1</dcterms:replaces>
+         <dcterms:replaces>Thing 2</dcterms:replaces>
+         <edm:provider>PA Digital</edm:provider>
+                </oai_dc:dc>
+     </x:expect>
+   </x:scenario>
+
+<!-- Rights and Rights URI (map/parse and delimit) -->
+   <!-- Note: need to add processing of rights where URLs are used instead of URIs. For now incoming URLs will map to dcterms:rights as seen here, which DPLA will then transform to URIs -->
+   <x:scenario label="rights processing">
+     <x:scenario label="data provider's example record">
+      <x:context href="../../fixtures/omeka_moravian.xml"/>
+      <x:expect label="URL to rightsstatements.org space normalizes and maps to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'https://rightsstatements.org/page/NoC-NC/1.0/'"/>
+     </x:scenario>
+     <x:scenario label="other rights testing">
+       <x:context>
+         <oai:record>
+           <metadata>
+             <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <dcterms:rights>This is a textual rights statement</dcterms:rights>
+               <dcterms:rights>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:rights>
+             </oai_dc:dc>
+           </metadata>
+         </oai:record>
+       </x:context>
+     <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This is a textual rights statement'"/>
+     <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://creativecommons.org/publicdomain/mark/1.0/')" />
+     <x:expect label="textual rights does not map to edm:rights" test="not(oai_dc:dc/edm:rights = 'This is a textual rights statement')" />
+     </x:scenario>
+   </x:scenario>
+
+<!-- Identifier (map) -->
+   <x:scenario label="identifier processing">
+     <x:context href="../../fixtures/omeka_moravian.xml"/>
+     <x:expect label="dummy identifier generates based on substring in incoming identifier" test="oai_dc:dc/dcterms:identifier = 'padig:MORAVIAN-126'"/>
+   </x:scenario>
+
+<!-- Data Provider (generate and map) -->
+   <x:scenario label="data provider processing">
+     <x:context href="../../fixtures/omeka_moravian.xml"/>
+     <x:expect label="adds text string with data provider name" test="oai_dc:dc/edm:dataProvider = 'Moravian Historical Society'"/>
+   </x:scenario>
+
+<!-- isShownAt (map) -->
+   <x:scenario label="isShownAt processing">
+     <x:context href="../../fixtures/omeka_moravian.xml"/>
+     <x:expect label="substring in incoming identifier generates edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://moravianhistoricalsociety.reclaim.hosting/s/mhs/item/126'"/>
+   </x:scenario>
+   
+ </x:description>
