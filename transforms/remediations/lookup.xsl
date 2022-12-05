@@ -362,6 +362,7 @@
         <padig:set string="Hebrew Institute Photographs">pitt_collection.48</padig:set>
         <padig:set string="Henry Clay Frick Business Records">pitt_collection.156</padig:set>
         <padig:set string="Henry Marie Brackenridge and Family Papers">pitt_collection.103</padig:set>
+        <padig:set string="Herb Ferguson Photographs">pitt_collection.384</padig:set>
         <padig:set string="Historic Pittsburgh Book Collection">pitt_collection.241</padig:set>
         <padig:set string="Historical Society of Upper St. Clair Collection">pitt_collection.50</padig:set>
         <padig:set string="Homer S. Brown Papers">pitt_collection.352</padig:set>
