@@ -202,6 +202,7 @@
         <padig:set string="Pennsylvania Highlands Community College - American Association of University Women - Johnstown Branch">papd_acacc-aauwjb</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Bailey Collection">papd_acacc-bailey</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Beaverdale Collection">papd_acacc-bdale</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Business Licenses Collection">papd_acacc-blc</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria City Church Project">papd_acacc-cccp</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Civil War 150">papd_acacc-cw</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Co. Immigration Declarations">papd_acacc-ccip</padig:set>
@@ -213,6 +214,7 @@
         <padig:set string="Pennsylvania Highlands Community College - Klahre Collection">papd_acacc-klahre</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
+        <padig:set string="Pennsylvania Horticultural Society - Jay V. Hare Lantern Slide Collection">papd_spahs-jvhlsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Louise Bush-Brown Image Collection">papd_spahs-lbbic</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Flower Show">papd_spahs-pfsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Garden Photographs, 1900-1940: 1. Garden Club of Philadelphia">papd_spahs-pgpgcp</padig:set>
@@ -238,6 +240,7 @@
         <padig:set string="Reading Area Community College - The Schuylkill Navigation System">papd_aracc-sns</padig:set>
         <padig:set string="Reading Public Library - Berks County Postcards">papd_prepl-brcpc</padig:set>
         <padig:set string="Reading Public Library - Berks County Yearbooks">papd_prepl-brcyb</padig:set>
+        <padig:set string="Sacred Heart Academy Bryn Mawr - Sacred Heart Academy Bryn Mawr School Archives: Photos and Documents">papd_kcdsh-shabmsapd</padig:set>
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
@@ -322,6 +325,7 @@
         <padig:set string="Ulysses Library Association - Phil Bennett Collection">papd_pulpl-pbc</padig:set>
         <padig:set string="Ulysses Library Association - Ulysses History">papd_pulpl-uh</padig:set>
         <padig:set string="Uniontown Public Library - Fayette County Iron Works Records">papd_punpl-fciwr</padig:set>
+        <padig:set string="Uniontown Public Library - Photos of Fayette County, PA">papd_punpl-pofcp</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Anne E. Sanford Missionary Collection">papd_aulsp-ihoraes</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: the Lutheran Deaconess Movement in the United States">papd_aulsp-ihorldm</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
@@ -329,6 +333,7 @@
         <padig:set string="Upper Merion Township Library - Upper Merion Area School District Yearbooks">papd_pupmt-sdybs</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
         <padig:set string="Warren Library Association - Historic Photographs">papd_pwala-hstph</padig:set>
+        <padig:set string="Warren Library Association - Kinzua Scrapbooks">papd_pwala-ks</padig:set>
         <padig:set string="Warren Library Association - The Allegheny Pilot">papd_pwala-alpil</padig:set>
         <padig:set string="Warren Library Association - The Carnival, First Presbyterian Church, 1899">papd_pwala-tcfpc</padig:set>
         <padig:set string="West Pittston Public Library - Pittston Gazette Newspaper 1850-1908">papd_pwepp-pgazz</padig:set>
