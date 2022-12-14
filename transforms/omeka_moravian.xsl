@@ -27,7 +27,7 @@
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
 
-    <!-- identifier, etc. -->
+    <!-- identifier, data provider -->
     <xsl:template match="oai:identifier">
         <xsl:call-template name="identifier"/>
         <!-- data provider -->
@@ -36,9 +36,12 @@
         </xsl:element>
     </xsl:template>
         
-        <!-- thumbnails not mapped in sample data; it they are added in the future, see omeka_mhac
-            
-            <xsl:call-template name="preview"/> -->
+    <!-- preview -->   
+    <xsl:template match="dcterms:identifier">
+        <xsl:if test="normalize-space(.) != '' and contains(.,'.jpg')">
+            <xsl:call-template name="preview"/>
+        </xsl:if>
+    </xsl:template>
 
     <!-- templates -->
 
@@ -54,16 +57,13 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- preview 
+    <!-- preview -->
     <xsl:template name="preview">
-        <xsl:if test="normalize-space(.) != '' and contains(.,'/thumbnails/')">
-            <xsl:element name="edm:preview">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-        </xsl:if>
+        <xsl:element name="edm:preview">
+            <xsl:value-of select="replace(normalize-space(.), '/original/', '/medium/')"/>
+        </xsl:element>
     </xsl:template>
-    -->
-
+    
     <!-- identifier-related processing -->
     <xsl:template name="identifier">
     <xsl:variable name="itemID" select="substring-after(.,'oai:moravianhistoricalsociety.reclaim.hosting:')"/>

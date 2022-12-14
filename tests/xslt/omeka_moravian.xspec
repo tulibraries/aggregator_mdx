@@ -866,4 +866,9 @@
      <x:expect label="substring in incoming identifier generates edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://moravianhistoricalsociety.reclaim.hosting/s/mhs/item/126'"/>
    </x:scenario>
    
+<!-- preview -->
+   <x:scenario label="preview processing">
+     <x:context href="../../fixtures/omeka_moravian.xml"/>
+     <x:expect label="URL to jpg in dcterms:identifier transforms to preview URL and maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://moravianhistoricalsociety.reclaim.hosting/files/medium/0a668b531d703c74eddae8d629cd884fb1c89506.jpg'"/>
+   </x:scenario>
  </x:description>
