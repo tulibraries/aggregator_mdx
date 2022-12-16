@@ -35,12 +35,10 @@
             <xsl:text>Moravian Historical Society</xsl:text>
         </xsl:element>
     </xsl:template>
-        
-    <!-- preview -->   
-    <xsl:template match="dcterms:identifier">
-        <xsl:if test="normalize-space(.) != '' and contains(.,'.jpg')">
+
+    <!-- preview -->
+    <xsl:template match="dcterms:identifier[normalize-space(.) != '' and contains(.,'.jpg')][1]">
             <xsl:call-template name="preview"/>
-        </xsl:if>
     </xsl:template>
 
     <!-- templates -->
@@ -63,23 +61,23 @@
             <xsl:value-of select="replace(normalize-space(.), '/original/', '/medium/')"/>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- identifier-related processing -->
     <xsl:template name="identifier">
     <xsl:variable name="itemID" select="substring-after(.,'oai:moravianhistoricalsociety.reclaim.hosting:')"/>
     <xsl:variable name="identifierSubstring" select="substring-before(.,$itemID)"/>
-    
+
         <xsl:if test="normalize-space(.) != ''">
             <!-- isShownAt -->
             <xsl:element name="edm:isShownAt">
                 <xsl:text>https://moravianhistoricalsociety.reclaim.hosting/s/mhs/item/</xsl:text><xsl:value-of select="normalize-space($itemID)"/>
             </xsl:element>
-            
+
             <!-- identifier -->
             <xsl:element name="dcterms:identifier">
                 <xsl:text>padig:MORAVIAN-</xsl:text><xsl:value-of select="$itemID"/>
             </xsl:element>
-            
+
         </xsl:if>
     </xsl:template>
 
