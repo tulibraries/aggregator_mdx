@@ -33,6 +33,8 @@
                     <dcterms:provenance>From the Henry Family collection.</dcterms:provenance>
                     <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/api/items/126</dcterms:identifier>
                     <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/files/original/0a668b531d703c74eddae8d629cd884fb1c89506.jpg</dcterms:identifier>
+                    <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/files/original/9e5de8c1d355ebb489dd628571057a9917a8cfaa.jpg</dcterms:identifier>
+                    <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/files/original/4ed44f144463d3c0ac366f748648eae91a84f3ce.jpg</dcterms:identifier>
                 </oai_dcterms:dcterms>
             </metadata>
         </record>
