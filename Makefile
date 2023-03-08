@@ -1,3 +1,5 @@
+DOCKERHUB_PASSWORD := $(subst ",\",$(DOCKERHUB_PASSWORD))
+
 build: down
 	@echo "Building xspec containers, networks, volumes"
 	docker-compose pull
@@ -27,7 +29,7 @@ test-xslt:
 test-ci: test-login test-bash test-coverage
 
 test-login:
-	@docker login -u ${DOCKERHUB_USER} -p ${DOCKERHUB_PASSWORD}
+	@docker login -u ${DOCKERHUB_USER} --password=$(DOCKERHUB_PASSWORD)
 
 test-bash:
 	@echo "CI/CD testing *.xspec with Docker & shell scripts"
