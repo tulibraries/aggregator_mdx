@@ -126,7 +126,7 @@
     <x:scenario label="SetSpec is looked up and matched to collection name">
       <x:context href="../../fixtures/islandora_docpitt.xml"/>
         <x:expect label="SetSpec matches collection in lookup.xsl"
-          test="oai_dc:dc/dcterms:isPartOf = 'Edward J. Shourek Photographs'"/>
+          test="oai_dc:dc/dcterms:isPartOf = 'Pitt Publications'"/>
     </x:scenario>
 
     <!-- ampersand normalization -->
