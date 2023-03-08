@@ -47,6 +47,7 @@
         <padig:set string="Altoona Area Public Library - Blair County Oral Histories">papd_palap-bcoh</padig:set>
         <padig:set string="Altoona Area Public Library - History Photographs">papd_palap-hp</padig:set>
         <padig:set string="Altoona Area Public Library - The Great Flood of 1977">papd_palap-gf1977</padig:set>
+        <padig:set string="Battle of Homestead Foundation - Charles McCollester Collection">papd_sbhfa-cmc</padig:set>
         <padig:set string="Bedford County Library - Winona Garbrick">papd_pbecf-wg</padig:set>
         <padig:set string="Bellwood-Antis Public Library - Bellwood Bulletin Newspaper">papd_pbapl-bb</padig:set>
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Newspaper Clippings Aliquippa Area">papd_pbfja-sncaa</padig:set>
@@ -65,15 +66,21 @@
         <padig:set string="Carnegie Mellon University - Andrew Carnegie Online Archives">papd_acamu-acarc</padig:set>
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
         <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
+        <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
         <padig:set string="Chester County History Center - Elizabeth Broomell Passmore Diary Collection">papd_scchc-ebpdc</padig:set>
         <padig:set string="Chester County History Center - Ennion Cook Account Book Collection">papd_scchc-ecabc</padig:set>
         <padig:set string="Chester County History Center - Jean Kane Foulke Papers">papd_scchc-jkfp</padig:set>
+        <padig:set string="Chester County History Center - John Churchman Papers: Early Land Grants and Surveys in Chester County, Pa. (Nottingham Lots)">papd_scchc-jcpelgascc</padig:set>
+        <padig:set string="Chester County History Center - John Hill Brinton Reminiscences Collection">papd_scchc-jhbrc</padig:set>
         <padig:set string="Chester County History Center - Lewis White Williams Diary Collection">papd_scchc-lwwdc</padig:set>
+        <padig:set string="Chester County History Center - Liberty Cornet Band Minutes and Membership Book">papd_scchc-lcbmamb</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
+        <padig:set string="Chester County History Center - Walter Finney Diary Collection">papd_scchc-wfdc</padig:set>
         <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
         <padig:set string="Chester County History Center - William Riley Blakeslee Diary Collection">papd_scchc-wrbdc</padig:set>
         <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
@@ -83,6 +90,7 @@
         <padig:set string="College of Physicians of Philadelphia - Colonial Formularies">papd_cppmss</padig:set>
         <padig:set string="Conshohocken Free Library - Conshohocken Town Council Minutes">papd_pcofl-mtc1</padig:set>
         <padig:set string="Conshohocken Free Library - The Recorder Newspaper 1879-1964">papd_pcofl-creco</padig:set>
+        <padig:set string="Cooper-Siegel Community Library - Fox Chapel Area High School Renard Yearbooks">papd_plawm-fcahsry</padig:set>
         <padig:set string="Crawford County Federated Library System - Meadville Local History">papd_pmeplmlhc</padig:set>
         <padig:set string="DeSales University - Bishop McShea Archives">papd_adesu-bmcsa</padig:set>
         <padig:set string="DeSales University - St. Francis de Sales">papd_adesu-sfdes</padig:set>
@@ -91,6 +99,7 @@
         <padig:set string="Elizabethtown College - Church of the Brethren Photographs">papd_aeliz-cbpc</padig:set>
         <padig:set string="Elizabethtown College - Historic Images">papd_aeliz-hi</padig:set>
         <padig:set string="Elizabethtown College - Peace Pamphlets">papd_aeliz-pp</padig:set>
+        <padig:set string="Elizabethtown College - Teachers for West Africa Program Images">papd_aeliz-tfwapi</padig:set>
         <padig:set string="Erie County Public Library - Erie County Yearbooks">papd_percp-ecy</padig:set>
         <padig:set string="Erie County Public Library - Erie Gay News">papd_percp-egn</padig:set>
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
@@ -98,6 +107,8 @@
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
+        <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
+        <padig:set string="German Society of Pennsylvania - Singing Societies Collection">papd_sgsop-ssc</padig:set>
         <padig:set string="German Society of Pennsylvania - Women's Auxiliary of the German Society of Pennsylvania">papd_sgsop-wagsp</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Box Collection/ Pennsylvania School for the Deaf">papd_sgehs-pbcpsftd</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes African-American History Collection">papd_sgehs-pbaahc</padig:set>
@@ -193,8 +204,10 @@
         <padig:set string="New Cumberland Public Library - New Cumberland Flood of 1936">papd_pnecp-ncf1936</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Public Library Collection">papd_pnecp-ncplc</padig:set>
         <padig:set string="New Cumberland Public Library - New Cumberland Town Celebrations">papd_pnecp-nctc</padig:set>
+        <padig:set string="New Cumberland Public Library - Roland Benjamin collection">papd_pnecp-rbc</padig:set>
         <padig:set string="New Cumberland Public Library - Schools of New Cumberland">papd_pnecp-snc</padig:set>
         <padig:set string="New Cumberland Public Library - William D. Bailey 1863 Civil War Diary">papd_pnecp-wdb1862</padig:set>
+        <padig:set string="Old Economy Village - Archives">papd_solev-arch</padig:set>
         <padig:set string="Osterhout Free Library - Wilkes-Barre Sunday Independent Newspaper 1915-1958">papd_wbsunind</padig:set>
         <padig:set string="Pennsylvania College of Technology - Williamsport Technical Institute">papd_willtech</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Historical Photographs">papd_spgsl-photo</padig:set>
@@ -214,6 +227,7 @@
         <padig:set string="Pennsylvania Highlands Community College - Klahre Collection">papd_acacc-klahre</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
+        <padig:set string="Pennsylvania Horticultural Society - Ida W. Pritchett Photograph Collection">papd_spahs-iwppc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Jay V. Hare Lantern Slide Collection">papd_spahs-jvhlsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Louise Bush-Brown Image Collection">papd_spahs-lbbic</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Flower Show">papd_spahs-pfsc</padig:set>
@@ -243,6 +257,8 @@
         <padig:set string="Sacred Heart Academy Bryn Mawr - Sacred Heart Academy Bryn Mawr School Archives: Photos and Documents">papd_kcdsh-shabmsapd</padig:set>
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
+        <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
+        <padig:set string="Saint Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Schwenkfelder Library &amp; Heritage Center Cased Images Collection">papd_sslhc-slhccic</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - The Christopher Saur, Jr. Diary and Account Book">papd_sslhc-csjdab</padig:set>
@@ -259,7 +275,6 @@
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
         <padig:set string="Sewickley Public Library - Historic Images and Documents">papd_psepl-hiad2</padig:set>
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
-        <padig:set string="St. Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="State Library of Pennsylvania - Abraham Lincoln">papd_sstlp-linc</padig:set>
         <padig:set string="State Library of Pennsylvania - Ambler Gazette Newspaper">papd_sstlp-ag</padig:set>
