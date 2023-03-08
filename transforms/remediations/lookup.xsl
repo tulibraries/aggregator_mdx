@@ -61,6 +61,10 @@
         <padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
         <padig:url string="University of Pittsburgh" code="PITT">https://digital.library.pitt.edu/</padig:url>
         <padig:url string="University of Pittsburgh" code="PITT">http://digital.library.pitt.edu/</padig:url>
+        <padig:url string="Documenting Pitt" code="DOCPITT"
+            >https://documenting.pitt.edu/</padig:url>
+        <padig:url string="Documenting Pitt" code="DOCPITT"
+            >http://documenting.pitt.edu/</padig:url>
         <padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
         <padig:url string="Thomas Jefferson University" code="TJU">https://jdc.jefferson.edu/</padig:url>
         <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
@@ -471,7 +475,6 @@
         <padig:set string="United Electrical, Radio, and Machine Workers of America (UE) Records">pitt_collection.89</padig:set>
         <padig:set string="United Jewish Federation of Greater Pittsburgh Photographs">pitt_collection.162</padig:set>
         <padig:set string="United States Army Corps of Engineers, Pittsburgh District Glass Plate Negatives">pitt_collection.316</padig:set>
-        <padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
         <padig:set string="University of Pittsburgh Historic Photographs">pitt_collection.109</padig:set>
         <padig:set string="Urban League of Pittsburgh Records">pitt_collection.92</padig:set>
         <padig:set string="W.B. Austen Diary">pitt_collection.261</padig:set>
@@ -529,17 +532,6 @@
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
-        <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
-        <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
-        <padig:set string="Pitt Athletics">pitt_collection.4</padig:set>
-        <padig:set string="Pitt Campus Life">pitt_collection.160</padig:set>
-        <padig:set string="Pitt Faculty">pitt_collection.5</padig:set>
-        <padig:set string="Pitt Nationality Rooms">pitt_collection.6</padig:set>
-        <padig:set string="Pitt News">pitt_collection.9</padig:set>
-        <padig:set string="Pitt Photographs">pitt_collection.7</padig:set>
-        <padig:set string="Pitt Publications">pitt_collection.3</padig:set>
-        <padig:set string="Pitt Student Life">pitt_collection.8</padig:set>
-        <padig:set string="Pitt Yearbooks">pitt_collection.12</padig:set>
         <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
         <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
         <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
@@ -551,11 +543,7 @@
         <padig:set string="Thaddeus Sheldon Papers">pitt_collection.113</padig:set>
         <padig:set string="Theodore M. Finney Music Library Collection">pitt_collection.295</padig:set>
         <padig:set string="Thomas G. Masaryk Papers">pitt_collection.319</padig:set>
-        <padig:set string="University Catalogues">pitt_collection.326</padig:set>
-        <padig:set string="University of Pittsburgh Bradford">pitt_collection.330</padig:set>
-        <padig:set string="University of Pittsburgh Johnstown">pitt_collection.192</padig:set>
         <padig:set string="University of Pittsburgh Press Digital Editions">pitt_collection.137</padig:set>
-        <padig:set string="University Times">pitt_collection.325</padig:set>
         <padig:set string="V.F. Wachsmuth Treatise">pitt_collection.256</padig:set>
         <padig:set string="Vézelay: Benedictine Abbey of Sainte Marie Madeleine">pitt_collection.138</padig:set>
         <padig:set string="Visuals for Foreign Language Instruction">pitt_collection.139</padig:set>
@@ -563,6 +551,24 @@
         <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
         <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
         <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
+        <!-- Documenting Pitt -->
+        <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
+        <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
+        <padig:set string="Pitt Athletics">pitt_collection.4</padig:set>
+        <padig:set string="Pitt Campus Life">pitt_collection.160</padig:set>
+        <padig:set string="Pitt Faculty">pitt_collection.5</padig:set>
+        <padig:set string="Pitt Nationality Rooms">pitt_collection.6</padig:set>
+        <padig:set string="Pitt News">pitt_collection.9</padig:set>
+        <padig:set string="Pitt Photographs">pitt_collection.7</padig:set>
+        <padig:set string="Pitt Publications">pitt_collection.3</padig:set>
+        <padig:set string="Pitt Student Life">pitt_collection.8</padig:set>
+        <padig:set string="Pitt Yearbooks">pitt_collection.12</padig:set>
+        <padig:set string="University Catalogues">pitt_collection.326</padig:set>
+        <padig:set string="University of Pittsburgh Bradford">pitt_collection.330</padig:set>
+        <padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
+        <padig:set string="University of Pittsburgh Johnstown">pitt_collection.192</padig:set>
+        <padig:set string="University Times">pitt_collection.325</padig:set>
+        
         <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
