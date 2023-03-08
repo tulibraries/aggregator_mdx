@@ -532,6 +532,7 @@
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
+        <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
         <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
         <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
         <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
