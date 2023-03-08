@@ -107,8 +107,8 @@
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
-        <padig:set string="German Society of Pennsylvania - Henry Keppele records">papd_sgsop-hkr</padig:set>
-        <padig:set string="German Society of Pennsylvania - Singing societies collection">papd_sgsop-ssc</padig:set>
+        <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
+        <padig:set string="German Society of Pennsylvania - Singing Societies Collection">papd_sgsop-ssc</padig:set>
         <padig:set string="German Society of Pennsylvania - Women's Auxiliary of the German Society of Pennsylvania">papd_sgsop-wagsp</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Box Collection/ Pennsylvania School for the Deaf">papd_sgehs-pbcpsftd</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Boxes African-American History Collection">papd_sgehs-pbaahc</padig:set>
@@ -258,6 +258,7 @@
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
+        <padig:set string="Saint Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Schwenkfelder Library &amp; Heritage Center Cased Images Collection">papd_sslhc-slhccic</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - The Christopher Saur, Jr. Diary and Account Book">papd_sslhc-csjdab</padig:set>
@@ -274,7 +275,6 @@
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
         <padig:set string="Sewickley Public Library - Historic Images and Documents">papd_psepl-hiad2</padig:set>
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
-        <padig:set string="St. Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="State Library of Pennsylvania - Abraham Lincoln">papd_sstlp-linc</padig:set>
         <padig:set string="State Library of Pennsylvania - Ambler Gazette Newspaper">papd_sstlp-ag</padig:set>
