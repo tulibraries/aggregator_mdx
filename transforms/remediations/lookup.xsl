@@ -877,10 +877,11 @@
         <padig:set string="World War One Photographs and Ephemera">Islandora_WWIP2</padig:set>
         <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>
 
-    <!-- Presbyterian Historical Society -->
+    <!-- Presbyterian Historical Society --> 
         <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
         <padig:set string="Church Buildings">islandora_churchbuildings</padig:set>
         <padig:set string="Henry Harmon Spalding and Eliza Hart Spalding Papers">islandora_spalding</padig:set>
+        <padig:set string="Katie G. Cannon Collection">islandora_kgc</padig:set>
         <padig:set string="Oral Histories Collection">islandora_oralhistories_collection</padig:set>
         <padig:set string="Presbyterian Historical Society Audio Collection">islandora_audio_collection</padig:set>
         <padig:set string="Presbyterian Historical Society Map Collection">islandora_maps</padig:set>
