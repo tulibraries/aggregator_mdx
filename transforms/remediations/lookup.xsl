@@ -373,6 +373,7 @@
         <padig:set string="Hotel Schenley Register">pitt_collection.175</padig:set>
         <padig:set string="Howard Etzel Photograph Collection">pitt_collection.310</padig:set>
         <padig:set string="Hugh Henry Brackenridge and Andrew Watson Papers">pitt_collection.21</padig:set>
+        <padig:set string="Humane Animal Rescue Records and Photographs">pitt_collection.391</padig:set>
         <padig:set string="Irene Kaufmann Settlement Photographs">pitt_collection.51</padig:set>
         <padig:set string="Irish Centre of Pittsburgh Records">pitt_collection.172</padig:set>
         <padig:set string="Iroquois Land Deed">pitt_collection.114</padig:set>
@@ -458,10 +459,13 @@
         <padig:set string="Schnabel Company Photographs">pitt_collection.313</padig:set>
         <padig:set string="Seder Family Photographs">pitt_collection.81</padig:set>
         <padig:set string="Shadyside Hospital Records">pitt_collection.334</padig:set>
+        <padig:set string="Sisters of St. Joseph of Baden Oral History Collection, 1979-1983, 1990">pitt_collection.386</padig:set>
         <padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
         <padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
         <padig:set string="St. Luke’s Lutheran Church (West View, Pa.) Records and Photographs">pitt_collection.375</padig:set>
         <padig:set string="Stephen Foster Collection">pitt_collection.111</padig:set>
+        <padig:set string="Stereoviews of the Railroad Strike of 1877">pitt_collection.390</padig:set>
+        <padig:set string="Tarentum Oral Histories: Voices of Faith, Years of Change, 1995">pitt_collection.388</padig:set>
         <padig:set string="Tax-Book of Pitt Township, Allegheny County, Pa.">pitt_collection.84</padig:set>
         <padig:set string="Teenie Harris Photographs">pitt_collection.85</padig:set>
         <padig:set string="The Bulletin, Pittsburg Bulletin, and The Bulletin Index">pitt_collection.324</padig:set>
