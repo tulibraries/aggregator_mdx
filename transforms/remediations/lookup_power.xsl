@@ -248,15 +248,6 @@
         <padig:set string="Pennsylvania School for the Deaf - Pennsylvania School for the Deaf Yearbooks">papd_kpsfd-psftdy</padig:set>
         <padig:set string="Peters Township Public Library - Historic Images and Documents Collection">papd_ppetl-hidc</padig:set>
         <padig:set string="Peters Township Public Library - Life in Peters Township: An Oral History Project">papd_ppetl-lipt</padig:set>
-        <padig:set string="Pittsburgh City Archives - Allegheny City Records, 1840-1907">papd_scopa-acr1840</padig:set>
-        <padig:set string="Pittsburgh City Archives - Bedford-Bigelow-West Penn Hillside Study Area Photographs, 1953">papd_scopa-bbwphsap</padig:set>
-        <padig:set string="Pittsburgh City Archives - Centre-Morgan Redevelopment Area Photographs, 1953">papd_scopa-cmrap</padig:set>
-        <padig:set string="Pittsburgh City Archives - Centre-Weil Study Area Photographs, 1953">papd_scopa-cwsap</padig:set>
-        <padig:set string="Pittsburgh City Archives - Common and Select Councils of the City of Pittsburgh Minute Books, 1816-1877">papd_scopa-csccopmb1816</padig:set>
-        <padig:set string="Pittsburgh City Archives - Lower Hazelwood District Redevelopment Photographs">papd_pl7136-lhdrp</padig:set>
-        <padig:set string="Pittsburgh City Archives - Manchester, Chateau Street West Redevelopment Area Photographs, 1959">papd_scopa-mcswrap</padig:set>
-        <padig:set string="Pittsburgh City Archives - Progress Magazine, 1921-1941 (bulk 1921-1931)">papd_scopa-pm</padig:set>
-        <padig:set string="Pittsburgh City Archives - South Side Redevelopment Area Photographs">papd_pl7136-ssrap</padig:set>
         <padig:set string="Pottsville Free Public Library - Schuylkill County History">papd_ppofp-sch</padig:set>
         <padig:set string="Pottsville Free Public Library - Schuylkill County Photographs">papd_ppofp-scp</padig:set>
         <padig:set string="Reading Area Community College - Reading Area Community College - Yearbook Collection">papd_aracc-ybc</padig:set>
