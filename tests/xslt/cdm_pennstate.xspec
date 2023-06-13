@@ -1539,7 +1539,7 @@
      <x:context href="../../fixtures/cdm_pennstate_contentwarning.xml"/>
      <x:expect label="content warning description generated" test="oai_dc:dc/dcterms:description = 'The following item contains content that may be offensive or upsetting.'"/>
      <x:expect label="preview not generated" test="not(oai_dc:dc/edm:preview)"/>
-     <x:expect label="preview not generated" test="not(oai_dc:dc/svcs:hasService)"/>
-     <x:expect label="preview not generated" test="not(oai_dc:dc/dcterms:isReferencedBy)"/>
+     <x:expect label="IIIF Base URL not generated" test="not(oai_dc:dc/svcs:hasService)"/>
+     <x:expect label="IIIF Manifest not generated" test="not(oai_dc:dc/dcterms:isReferencedBy)"/>
    </x:scenario>
  </x:description>
