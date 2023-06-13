@@ -68,7 +68,10 @@
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Mary E. D. Wilson Composition Collection">papd_pcecl-medwcc</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Miles-Potter-Humes House">papd_pcecl-mphh</padig:set>
         <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
+        <padig:set string="Cheltenham Township Library System - Cheltenham Historical Photograph Collection">papd_pglfl-chpc</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
         <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
@@ -108,6 +111,8 @@
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
+        <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat">papd_sgsop-gsppd</padig:set>
+        <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat (1838)">papd_sgsop-gsppd1838</padig:set>
         <padig:set string="German Society of Pennsylvania - Singing Societies Collection">papd_sgsop-ssc</padig:set>
         <padig:set string="German Society of Pennsylvania - Women's Auxiliary of the German Society of Pennsylvania">papd_sgsop-wagsp</padig:set>
         <padig:set string="Germantown Historical Society/ Historic Germantown - Pamphlet Box Collection/ Pennsylvania School for the Deaf">papd_sgehs-pbcpsftd</padig:set>
@@ -157,6 +162,7 @@
         <padig:set string="Lycoming College - Williamsport Dickinson Seminary Junior College and College Preparatory School">papd_lyc-2</padig:set>
         <padig:set string="Lycoming College - Williamsport Dickinson Seminary of Lycoming College">papd_lyc-1</padig:set>
         <padig:set string="Lycoming College - Yearbooks of Lycoming College and Dickinson Seminary">papd_alycc-ybook</padig:set>
+        <padig:set string="Manheim Township School District - Hi-Lite">papd_kmath-hl</padig:set>
         <padig:set string="Martinsburg Community Library - George Liebegott Genealogy Index">papd_pmbcl-li</padig:set>
         <padig:set string="Matthews Public Library - Fredericksburg, Pennsylvania Historic Images">papd_plecl-fphi</padig:set>
         <padig:set string="McBride Memorial Library - Berwick High School Yearbooks">papd_pbrpl-bhsyb</padig:set>
@@ -171,6 +177,7 @@
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
         <padig:set string="Meyersdale Public Library - The History Behind the Meyersdale Public Library">papd_pmeye-hbtmpl</padig:set>
+        <padig:set string="Meyersdale Public Library - William Henry Welfley Scrapbook Collection">papd_pmeye-whwsc</padig:set>
         <padig:set string="Milton Hershey School - Hershey Community Archives - Hotel Hershey Highlights">papd_kmheh-hcahhh</padig:set>
         <padig:set string="Milton Hershey School - Hershey News Newspaper 1953-1964">papd_kmheh-hn</padig:set>
         <padig:set string="Milton Hershey School - The Hershey Press Newspaper 1909-1926">papd_kmheh-thpc</padig:set>
@@ -228,7 +235,9 @@
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Ida W. Pritchett Photograph Collection">papd_spahs-iwppc</padig:set>
+        <padig:set string="Pennsylvania Horticultural Society - James Lawrence Dillon Lantern Slide Collection">papd_spahs-jldlsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Jay V. Hare Lantern Slide Collection">papd_spahs-jvhlsc</padig:set>
+        <padig:set string="Pennsylvania Horticultural Society - Joseph Ascenzi Lantern Slide Collection">papd_spahs-jalsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Louise Bush-Brown Image Collection">papd_spahs-lbbic</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Flower Show">papd_spahs-pfsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Philadelphia Garden Photographs, 1900-1940: 1. Garden Club of Philadelphia">papd_spahs-pgpgcp</padig:set>
@@ -365,6 +374,7 @@
         <padig:set string="Williamson College of the Trades - Williamson Trade School History">papd_awsmt-wtsh</padig:set>
         <padig:set string="Wilson College - World War II">papd_awlsn-wwii</padig:set>
         <padig:set string="Wissahickon Valley Public Library - Ambler Gazette Newspaper">papd_wivp-gazett</padig:set>
+        <padig:set string="Woodland Hills School District - Woodland Hills School District: Past and Present">papd_kwohh-whsdpap</padig:set>
 
     <!-- POWER state archives collecton name lookup -->
         <padig:set string="2nd Geological Survey (PA) Accounts of Board Commissioners, 1875-1877">psa_gsabc</padig:set>
