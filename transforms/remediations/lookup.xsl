@@ -903,6 +903,7 @@
         <padig:set string="Anderson and Ellis Art Education Collection">arted</padig:set>
         <padig:set string="Black History and Visual Culture">blackhistory</padig:set>
         <padig:set string="Brent Wilson Papers">brentwilson</padig:set>
+        <padig:set string="Central Pennsylvania Architecture and Landscape Architecture Collection">cpalac</padig:set>
         <padig:set string="Cresson Literary Society Records">cls</padig:set>
         <padig:set string="Daniel Elias Frantz Diary">def</padig:set>
         <padig:set string="Digital Map Drawer">maps1</padig:set>
@@ -913,6 +914,7 @@
         <padig:set string="George Medrick Papers">medrick</padig:set>
         <padig:set string="Harold Rasmussen Scrapbooks, Badges, and Buttons">rasmussen</padig:set>
         <padig:set string="Hayfield Estate Records, 1925-1945">hayfield</padig:set>
+        <padig:set string="Historical Recipe Books">recipes</padig:set>
         <padig:set string="Howard Truman Curtiss Papers">curtiss</padig:set>
         <padig:set string="Jerry Doyle Papers">jdp</padig:set>
         <padig:set string="John Chorey Papers">chorey</padig:set>
@@ -923,7 +925,8 @@
         <padig:set string="Ogontz Mosaic">omt</padig:set>
         <padig:set string="Penn State Altoona Campus Collections">altoona</padig:set>
         <padig:set string="Penn State Froth">froth</padig:set>
-        <padig:set string="Penn State Libraries Photo Archive">psuphotos</padig:set>
+        <padig:set string="Penn State Libraries Photo Archive">psuphoto</padig:set>
+        <padig:set string="Penn State University Archives Oral History Collections">oralhistory</padig:set>
         <padig:set string="Pennsylvania Bridges Collection">pab</padig:set>
         <padig:set string="Philip Murray Papers">murray</padig:set>
         <padig:set string="Pinkerton's National Detective Agency"></padig:set>
@@ -938,6 +941,7 @@
         <padig:set string="Walter R. Collins Civil War Diaries and Photograph">wrc</padig:set>
         <padig:set string="Washington Literary Society Records, 1859-1895">wls</padig:set>
         <padig:set string="William H.H. Fisher Civil War Diary">whf</padig:set>
+        <padig:set string="Women's Suffrage Collection">suffrage</padig:set>
         <padig:set string="World War I Glass Plate Stereographs">ww1stereo</padig:set>
         <padig:set string="WPA Bituminous Coal Mine Maps">wpamaps</padig:set>
     </xsl:param>
