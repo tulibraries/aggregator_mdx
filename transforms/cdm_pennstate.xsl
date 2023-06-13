@@ -21,7 +21,29 @@
 
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
-    <xsl:include href="cdm_generic.xsl"/>
+    <xsl:include href="oai_base_crosswalk.xsl"/>
+    <xsl:include href="cdm_generic_templates.xsl"/>
+
+    <!-- Create collection name -->
+    
+    <xsl:template match="oai:header/oai:setSpec">
+            <xsl:call-template name="isPartOf"/>
+    </xsl:template>
+
+    <!-- Identifier templates, with Penn State content warning logic for preview -->
+
+    <xsl:template match="dc:identifier[position() = last()]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="dataProvider"/>
+            <xsl:call-template name="identifier"/>
+            <xsl:call-template name="isShownAt"/>
+            <xsl:if test="not(../dcterms:audience[text() = 'true'])">
+                <xsl:call-template name="preview"/>
+                <xsl:call-template name="iiifBase"/>
+                <xsl:call-template name="iiifManifest"/>
+            </xsl:if>
+        </xsl:if>
+    </xsl:template>
     
     <!-- medium to type -->
     <xsl:template match="dcterms:medium">
@@ -68,4 +90,14 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
+
+    <!-- Penn State content warning description -->
+    <xsl:template match="dcterms:audience">
+        <xsl:if test=". = 'true'">
+            <xsl:element name="dcterms:description">
+                <xsl:value-of>The following item contains content that may be offensive or upsetting.</xsl:value-of>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+      
 </xsl:stylesheet>

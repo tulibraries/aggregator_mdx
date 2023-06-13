@@ -21,6 +21,7 @@
     <!-- Use includes here if you need to separate out templates for either use specific to a dataset or use generic enough for multiple providers (like remediation.xslt). -->
 
     <xsl:include href="oai_base_crosswalk.xsl"/>
+    <xsl:include href="cdm_generic_templates.xsl"/>
 
     <!-- Create collection name -->
     
@@ -38,76 +39,4 @@
             <xsl:call-template name="iiifManifest"/>
         </xsl:if>
     </xsl:template>
-
-    <!-- templates -->
-    
-    <!-- isPartOf -->
-    <xsl:template name="isPartOf">
-            <xsl:variable name="setID" select="normalize-space(lower-case(.))"/>
-            <xsl:if test="$setID = $setSpecList/padig:set">
-                <xsl:element name="dcterms:isPartOf">
-                    <xsl:value-of select="$setSpecList/padig:set[. = $setID]/@string"/>
-                </xsl:element>
-            </xsl:if>
-    </xsl:template>
-    
-    <!-- dataProvider -->
-    <xsl:template name="dataProvider">
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:if test="$baseURL = $oaiUrl/padig:url">
-            <xsl:element name="edm:dataProvider">
-                <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
-            </xsl:element>
-        </xsl:if>
-    </xsl:template>
-    
-    <!-- identifier -->
-    <xsl:template name="identifier">
-        <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
-        <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        
-        <xsl:element name="dcterms:identifier">
-            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$colID"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
-        </xsl:element>
-    </xsl:template>
-    
-    <!-- isShownAt -->
-    <xsl:template name="isShownAt">
-        <xsl:element name="edm:isShownAt">
-            <xsl:value-of select="normalize-space(.)"/>
-        </xsl:element>
-    </xsl:template>
-    
-    <!-- preview -->
-    <xsl:template name="preview">
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:variable name="objID" select='substring-after(.,"/cdm/ref/")'/>
-        
-        <xsl:element name="edm:preview">
-            <xsl:value-of select="$baseURL"/> <xsl:text>utils/getthumbnail/</xsl:text><xsl:value-of select="$objID"/>
-        </xsl:element>
-    </xsl:template>
-    
-    <!-- iiifBase -->
-    <xsl:template name="iiifBase">
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
-        <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
-        
-        <xsl:element name="svcs:hasService">
-            <xsl:value-of select="$baseURL"/> <xsl:text>digital/iiif/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/>
-        </xsl:element>
-    </xsl:template>
-    
-    <!-- iiifManifest -->
-    <xsl:template name="iiifManifest">
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
-        <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
-        
-        <xsl:element name="dcterms:isReferencedBy">
-            <xsl:value-of select="$baseURL"/> <xsl:text>iiif/info/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/><xsl:text>/manifest.json</xsl:text>
-        </xsl:element>
-    </xsl:template>  
 </xsl:stylesheet>

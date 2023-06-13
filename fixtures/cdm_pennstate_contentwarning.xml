@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2023-06-13T14:37:40Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_qdc" set="ww1stereo">http://digital.libraries.psu.edu/oai/oai.php</request>  
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:digital.libraries.psu.edu:ww1stereo/523</identifier>
+                <datestamp>2022-10-18</datestamp>
+                <setSpec>ww1stereo</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>Cadavre Allemand</dc:title>
+                    <dcterms:alternative>[…] - Cadavre Allemand</dcterms:alternative>
+                    <dcterms:created>1914/1918</dcterms:created>
+                    <dc:subject>World War, 1914-1918</dc:subject>
+                    <dcterms:temporal>1914/1918</dcterms:temporal>
+                    <dcterms:medium>stereographs: photographs</dcterms:medium>
+                    <dc:language>fre</dc:language>
+                    <dcterms:isPartOf>World War I glass plate stereographs</dcterms:isPartOf>
+                    <dcterms:isPartOf>Deceased and wounded soldiers</dcterms:isPartOf>
+                    <dcterms:isPartOf>HCLA 09531</dcterms:isPartOf>
+                    <dc:source>Box 1, Carton 1, Negative Number 54A</dc:source>
+                    <dc:source>Pennsylvania State University. Special Collections Library</dc:source>
+                    <dc:source>http://resources.libraries.psu.edu/findingaids/9531.htm</dc:source>
+                    <dc:rights>http://rightsstatements.org/vocab/NKC/1.0/</dc:rights>
+                    <dc:identifier>pstsc_09531_108</dc:identifier>
+                    <dc:type>Image;StillImage</dc:type>
+                    <dcterms:audience>true</dcterms:audience>
+                    <dc:identifier>http://digital.libraries.psu.edu/cdm/ref/collection/ww1stereo/id/523</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
