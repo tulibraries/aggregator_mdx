@@ -508,6 +508,7 @@
         <padig:set string="Bruno De Finetti Papers">pitt_collection.125</padig:set>
         <padig:set string="Burd-Shippen Family Papers">pitt_collection.115</padig:set>
         <padig:set string="Carl Gustav Hempel Papers">pitt_collection.126</padig:set>
+        <padig:set string="Charles and Frankie Pace Collection">pitt_collection.383</padig:set>
         <padig:set string="Chartres: Cathedral of Notre-Dame">pitt_collection.127</padig:set>
         <padig:set string="China's Cultural Revolution in Memories: The CR/10 Project">pitt_collection.302</padig:set>
         <padig:set string="Chinese Land Records">pitt_collection.179</padig:set>
@@ -527,12 +528,14 @@
         <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
         <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
         <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
+        <padig:set string="Herman Mishkin Photograph Collection">pitt_collection.393</padig:set>
         <padig:set string="Hervey Allen Papers">pitt_collection.129</padig:set>
         <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
         <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
+        <padig:set string="Oscar Knight Diaries">pitt_collection.394</padig:set>
         <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
         <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
         <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
@@ -547,6 +550,7 @@
         <padig:set string="University of Pittsburgh Press Digital Editions">pitt_collection.137</padig:set>
         <padig:set string="V.F. Wachsmuth Treatise">pitt_collection.256</padig:set>
         <padig:set string="Vézelay: Benedictine Abbey of Sainte Marie Madeleine">pitt_collection.138</padig:set>
+        <padig:set string="VIDEOSCOPE Magazine">pitt_collection.392</padig:set>
         <padig:set string="Visuals for Foreign Language Instruction">pitt_collection.139</padig:set>
         <padig:set string="Walter and Martha Leuba Papers">pitt_collection.140</padig:set>
         <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
