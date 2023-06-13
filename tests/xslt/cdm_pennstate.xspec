@@ -1527,4 +1527,19 @@
      <x:context href="../../fixtures/cdm_pennstate.xml"/>
      <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'http://digital.libraries.psu.edu/iiif/info/p15037coll3/0/manifest.json'"/>
    </x:scenario>
+
+ <!-- Penn State Content Warning -->
+
+  <x:scenario label="Penn State Content Warning not present">
+     <x:context href="../../fixtures/cdm_pennstate.xml"/>
+     <x:expect label="content warning description not generated" test="oai_dc:dc/dcterms:description != 'The following item contains content that may be offensive or upsetting.'"/>
+   </x:scenario>
+
+  <x:scenario label="Penn State Content Warning true">
+     <x:context href="../../fixtures/cdm_pennstate_contentwarning.xml"/>
+     <x:expect label="content warning description generated" test="oai_dc:dc/dcterms:description = 'The following item contains content that may be offensive or upsetting.'"/>
+     <x:expect label="preview not generated" test="not(oai_dc:dc/edm:preview)"/>
+     <x:expect label="IIIF Base URL not generated" test="not(oai_dc:dc/svcs:hasService)"/>
+     <x:expect label="IIIF Manifest not generated" test="not(oai_dc:dc/dcterms:isReferencedBy)"/>
+   </x:scenario>
  </x:description>
