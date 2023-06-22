@@ -37,7 +37,7 @@
     </xsl:template>
 
     <!-- preview -->
-    <xsl:template match="dcterms:identifier[normalize-space(.) != '' and contains(.,'.jpg')][1]">
+    <xsl:template match="dcterms:identifier[normalize-space(.) != '' and contains(.,'moravianhistoricalsociety.reclaim.hosting/files/original/')][1]">
             <xsl:call-template name="preview"/>
     </xsl:template>
 
@@ -57,9 +57,23 @@
 
     <!-- preview -->
     <xsl:template name="preview">
-        <xsl:element name="edm:preview">
-            <xsl:value-of select="replace(normalize-space(.), '/original/', '/medium/')"/>
-        </xsl:element>
+        <xsl:variable name="filesMediumURL" select="replace(normalize-space(.), '/original/', '/medium/')"/>
+        <xsl:if test="contains($filesMediumURL,'.jpg')">
+            <xsl:element name="edm:preview">
+                <xsl:value-of select="$filesMediumURL"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="contains($filesMediumURL,'.pdf')">
+            <xsl:element name="edm:preview">
+                <xsl:value-of select="replace($filesMediumURL, '.pdf', '.jpg')"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:if test="contains($filesMediumURL,'.png')">
+            <xsl:element name="edm:preview">
+                <xsl:value-of select="replace($filesMediumURL, '.png', '.jpg')"/>
+            </xsl:element>
+        </xsl:if>
+
     </xsl:template>
 
     <!-- identifier-related processing -->

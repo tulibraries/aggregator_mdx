@@ -867,8 +867,32 @@
    </x:scenario>
    
 <!-- preview -->
-   <x:scenario label="preview processing">
+   <x:scenario label="preview processing with jpeg original file">
      <x:context href="../../fixtures/omeka_moravian.xml"/>
-     <x:expect label="URL to jpg in dcterms:identifier transforms to preview URL and maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://moravianhistoricalsociety.reclaim.hosting/files/medium/0a668b531d703c74eddae8d629cd884fb1c89506.jpg'"/>
+     <x:expect label="Files URL with jpg extension in dcterms:identifier transforms to preview URL and maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://moravianhistoricalsociety.reclaim.hosting/files/medium/0a668b531d703c74eddae8d629cd884fb1c89506.jpg'"/>
    </x:scenario>
+   <x:scenario label="preview processing with pdf original file">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/files/original/5a78d6999687f46ea12dbda4adcce38fd22c6127.pdf</dcterms:identifier>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="Files URL with pdf extension in dcterms:identifier transforms to preview URL and maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://moravianhistoricalsociety.reclaim.hosting/files/medium/5a78d6999687f46ea12dbda4adcce38fd22c6127.jpg'"/>
+    </x:scenario>
+    <x:scenario label="preview processing with png original file">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:identifier xsi:type="dcterms:URI">https://moravianhistoricalsociety.reclaim.hosting/files/original/a341b571ea6f98205d37218da74b3ebcc8632c22.png</dcterms:identifier>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="Files URL with png extension in dcterms:identifier transforms to preview URL and maps to edm:preview" test="oai_dc:dc/edm:preview = 'https://moravianhistoricalsociety.reclaim.hosting/files/medium/a341b571ea6f98205d37218da74b3ebcc8632c22.jpg'"/>
+    </x:scenario>
  </x:description>
