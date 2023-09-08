@@ -48,6 +48,7 @@
         <padig:set string="Altoona Area Public Library - History Photographs">papd_palap-hp</padig:set>
         <padig:set string="Altoona Area Public Library - The Great Flood of 1977">papd_palap-gf1977</padig:set>
         <padig:set string="Battle of Homestead Foundation - Charles McCollester Collection">papd_sbhfa-cmc</padig:set>
+        <padig:set string="Battle of Homestead Foundation - Mike Stout Collection">papd_sbhfa-msc</padig:set>
         <padig:set string="Bedford County Library - Winona Garbrick">papd_pbecf-wg</padig:set>
         <padig:set string="Bellwood-Antis Public Library - Bellwood Bulletin Newspaper">papd_pbapl-bb</padig:set>
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Newspaper Clippings Aliquippa Area">papd_pbfja-sncaa</padig:set>
@@ -66,12 +67,14 @@
         <padig:set string="Carnegie Mellon University - Andrew Carnegie Online Archives">papd_acamu-acarc</padig:set>
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Mary E. D. Wilson Composition Collection">papd_pcecl-medwcc</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Miles-Potter-Humes House">papd_pcecl-mphh</padig:set>
         <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
         <padig:set string="Cheltenham Township Library System - Cheltenham Historical Photograph Collection">papd_pglfl-chpc</padig:set>
+        <padig:set string="Cheltenham Township Library System - Historic La Mott/ Cheltenham Township Community">papd_pglfl-hlmctc</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
         <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
@@ -97,7 +100,6 @@
         <padig:set string="Crawford County Federated Library System - Meadville Local History">papd_pmeplmlhc</padig:set>
         <padig:set string="DeSales University - Bishop McShea Archives">papd_adesu-bmcsa</padig:set>
         <padig:set string="DeSales University - St. Francis de Sales">papd_adesu-sfdes</padig:set>
-        <padig:set string="Eastern State Penitentiary Historic Site - The Umpire">papd_sesph-umpire</padig:set>
         <padig:set string="Elizabethtown College - Anna V. Blough Missionary Letters and Diaries from China">papd_aeliz-lttrs</padig:set>
         <padig:set string="Elizabethtown College - Church of the Brethren Photographs">papd_aeliz-cbpc</padig:set>
         <padig:set string="Elizabethtown College - Historic Images">papd_aeliz-hi</padig:set>
@@ -123,8 +125,8 @@
         <padig:set string="Henderson High School - B. Reed Henderson High School Collection">papd_khendhscol</padig:set>
         <padig:set string="Historical Society of Montgomery County - African American History Collection">papd_shsmc-aahc</padig:set>
         <padig:set string="Historical Society of Montgomery County - Historic Photographs of Norristown">papd_shsmc-hpn</padig:set>
-        <padig:set string="iLead Pennsylvania - Memory Master">papd_ilead-mm</padig:set>
         <padig:set string="Indiana University of Pennsylvania - Indiana, Pennsylvania in the Civil War">papd_aiupa-cw</padig:set>
+        <padig:set string="Indiana University of Pennsylvania - Indiana University of Pennsylvania (IUP) Collection">papd_aiupa-iuopc</padig:set>
         <padig:set string="James V. Brown Library - Historic Documents">papd_pjvbl-docs</padig:set>
         <padig:set string="James V. Brown Library - Lycoming County Digital Photo Archive">papd_pjvbl-archi</padig:set>
         <padig:set string="Juniata College - Huntingdon County Historical Newspapers">papd_ajuncnews</padig:set>
@@ -146,6 +148,7 @@
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1873-1890">papd_nhclar01</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1891-1910">papd_nhclar02</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1911-1950">papd_nhclarion</padig:set>
+        <padig:set string="Laughlin Memorial Library - Ambridge Historic Newspaper Collection">papd_plamf-ahnc</padig:set>
         <padig:set string="Lock Haven University - 1877-2008">papd_alhupviscro</padig:set>
         <padig:set string="Lock Haven University - Wrestling Program">papd_alhupwrest</padig:set>
         <padig:set string="Lycoming College - Alumni Magazine of Lycoming College">papd_alycc-almag</padig:set>
@@ -222,6 +225,7 @@
         <padig:set string="Pennsylvania Highlands Community College - American Association of University Women - Johnstown Branch">papd_acacc-aauwjb</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Bailey Collection">papd_acacc-bailey</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Beaverdale Collection">papd_acacc-bdale</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Beth Sholom Synagogue">papd_acacc-bss</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Business Licenses Collection">papd_acacc-blc</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria City Church Project">papd_acacc-cccp</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Civil War 150">papd_acacc-cw</padig:set>
@@ -248,6 +252,9 @@
         <padig:set string="Pennsylvania School for the Deaf - Pennsylvania School for the Deaf Yearbooks">papd_kpsfd-psftdy</padig:set>
         <padig:set string="Peters Township Public Library - Historic Images and Documents Collection">papd_ppetl-hidc</padig:set>
         <padig:set string="Peters Township Public Library - Life in Peters Township: An Oral History Project">papd_ppetl-lipt</padig:set>
+        <padig:set string="Peters Township Public Library - Peters Township News 1958-1959">papd_ppetl-ptn1958</padig:set>
+        <padig:set string="Peters Township Public Library - Peters Township News Progress 1959-1970">papd_ppetl-ptnp1959</padig:set>
+        <padig:set string="Peters Township Public Library - The Commerce News 1955-1958">papd_ppetl-tcn1955</padig:set>
         <padig:set string="Pottsville Free Public Library - Schuylkill County History">papd_ppofp-sch</padig:set>
         <padig:set string="Pottsville Free Public Library - Schuylkill County Photographs">papd_ppofp-scp</padig:set>
         <padig:set string="Reading Area Community College - Reading Area Community College - Yearbook Collection">papd_aracc-ybc</padig:set>
@@ -346,6 +353,8 @@
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
         <padig:set string="Upper Merion Area High School Library - Upper Merion Area High School Athletic Scrapbooks and Programs">papd_kupmh-umahsasap</padig:set>
         <padig:set string="Upper Merion Township Library - Upper Merion Area School District Yearbooks">papd_pupmt-sdybs</padig:set>
+        <padig:set string="Wagner Free Institute of Science - Engineering 1: The Materials of Engineering Construction">papd_swfis-e1mec</padig:set>
+        <padig:set string="Wagner Free Institute of Science - Manuscripts of Lectures on Conchology by William Wagner">papd_swfis-molocbww</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
         <padig:set string="Warren Library Association - Historic Photographs">papd_pwala-hstph</padig:set>
         <padig:set string="Warren Library Association - Kinzua Scrapbooks">papd_pwala-ks</padig:set>
