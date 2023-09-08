@@ -318,6 +318,7 @@
         <padig:set string="Chatham University May Day Collection">pitt_collection.239</padig:set>
         <padig:set string="Chatham University Shadyside Campus Lantern Slide Collection">pitt_collection.237</padig:set>
         <padig:set string="Children's Aid Society of Western Pennsylvania Records">pitt_collection.344</padig:set>
+        <padig:set string="Children's Service Bureau Records">pitt_collection.337</padig:set>
         <padig:set string="Christopher Gist's Journals by William M. Darlington">pitt_collection.101</padig:set>
         <padig:set string="City Directories">pitt_collection.49</padig:set>
         <padig:set string="City of Pittsburgh Geodetic and Topographic Survey Maps">pitt_collection.294</padig:set>
@@ -329,6 +330,7 @@
         <padig:set string="D. L. Clark Company Papers and Photographs">pitt_collection.314</padig:set>
         <padig:set string="Daniel Brodhead Papers">pitt_collection.18</padig:set>
         <padig:set string="Darlington Autograph Files">pitt_collection.145</padig:set>
+        <padig:set string="Darlington Digital Library">pitt_collection.153</padig:set>
         <padig:set string="Darlington Family Papers">pitt_collection.100</padig:set>
         <padig:set string="Daughters of Erin Court #9 Records">pitt_collection.173</padig:set>
         <padig:set string="Department of Public Health Annual Records, Pittsburgh, PA">pitt_collection.345</padig:set>
@@ -394,6 +396,7 @@
         <padig:set string="Ken Kobus Collection">pitt_collection.57</padig:set>
         <padig:set string="Kennywood Park Records">pitt_collection.362</padig:set>
         <padig:set string="Kingsley Association Records">pitt_collection.58</padig:set>
+        <padig:set string="Louis Semple Clarke Collection">pitt_collection.333</padig:set>
         <padig:set string="Lyon, Shorb &amp; Company Photographs">pitt_collection.59</padig:set>
         <padig:set string="M. Stanford Jackson Papers">pitt_collection.281</padig:set>
         <padig:set string="March of the Pittsburgh Blues Copybook">pitt_collection.98</padig:set>
@@ -404,6 +407,7 @@
         <padig:set string="McConway and Torely Company Records">pitt_collection.322</padig:set>
         <padig:set string="McFarland-Hall-Beck Families Papers">pitt_collection.201</padig:set>
         <padig:set string="Mellon Bank Records">pitt_collection.287</padig:set>
+        <padig:set string="Melvin Seidenberg Photographs">pitt_collection.332</padig:set>
         <padig:set string="Mesta Machine Company Photographs">pitt_collection.60</padig:set>
         <padig:set string="Monongahela Navigation Company Copybook">pitt_collection.24</padig:set>
         <padig:set string="Monongahela Railway Company Photographs">pitt_collection.61</padig:set>
@@ -462,6 +466,7 @@
         <padig:set string="Sisters of St. Joseph of Baden Oral History Collection, 1979-1983, 1990">pitt_collection.386</padig:set>
         <padig:set string="Smoke Control Lantern Slides">pitt_collection.82</padig:set>
         <padig:set string="Spencer Family Photographs">pitt_collection.83</padig:set>
+        <padig:set string="Squirrel Hill Historical Society and Squirrel Hill Urban Coalition Photograph Collection">pitt_collection.397</padig:set>
         <padig:set string="St. Luke’s Lutheran Church (West View, Pa.) Records and Photographs">pitt_collection.375</padig:set>
         <padig:set string="Stephen Foster Collection">pitt_collection.111</padig:set>
         <padig:set string="Stereoviews of the Railroad Strike of 1877">pitt_collection.390</padig:set>
@@ -493,11 +498,7 @@
         <padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
         <padig:set string="William Pitt Family Papers">pitt_collection.117</padig:set>
         <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
-        <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
-        <padig:set string="Melvin Seidenberg Photographs">pitt_collection.332</padig:set>
-        <padig:set string="Louis Semple Clarke Collection">pitt_collection.333</padig:set>
-        <padig:set string="Children's Service Bureau Records">pitt_collection.337</padig:set>
-        <padig:set string="Darlington Digital Library">pitt_collection.153</padig:set>
+        <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>             
         <!-- University of Pittsburgh -->
         <padig:set string="19th Century Schoolbooks">pitt_collection.120</padig:set>
         <padig:set string="Abner Shimony Papers">pitt_collection.121</padig:set>
@@ -521,6 +522,7 @@
         <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
         <padig:set string="Dialogues in Afrolatinidad">pitt_collection.368</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
+        <padig:set string="Duquesne Light Photograph Collection">pitt_collection.396</padig:set>
         <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
         <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
@@ -545,6 +547,7 @@
         <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
         <padig:set string="Rose Rand Papers">pitt_collection.134</padig:set>
         <padig:set string="Rudolf Carnap Papers">pitt_collection.135</padig:set>
+        <padig:set string="Sarah Cordelia Mellon and Alan Magee Scaife Wedding Album">pitt_collection.395</padig:set>
         <padig:set string="Shooting Star Review">pitt_collection.299</padig:set>
         <padig:set string="Stalinka: Digital Library of Staliniana">pitt_collection.136</padig:set>
         <padig:set string="Stockton Family Letters">pitt_collection.118</padig:set>
