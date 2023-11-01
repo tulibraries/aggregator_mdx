@@ -46,6 +46,16 @@
             <xsl:call-template name="iiifBase"/>
             <xsl:call-template name="iiifManifest"/>
         </xsl:if>
+    </xsl:template> 
+    
+    <!-- Supplemental Type and Format -->
+    <xsl:template match="dc:type" priority="1">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="supplemental_type_template">
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
+        </xsl:if>
     </xsl:template>
     
     <!-- templates -->
@@ -120,4 +130,271 @@
             <xsl:value-of select="$baseURL"/> <xsl:text>iiif/info/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/><xsl:text>/manifest.json</xsl:text>
         </xsl:element>
     </xsl:template>  
+    
+    <!-- Supplemental Type Template for Temple -->
+    
+    <xsl:template name="supplemental_type_template">
+        <xsl:param name="strings"/>
+        <xsl:param name="delimiter"/>
+        
+        <xsl:choose>
+            <!-- IF A PAREN, STOP AT AN OPENING semicolon -->
+            <xsl:when test="contains($strings, $delimiter)">
+                <xsl:variable name="newstem" select="normalize-space(substring-after($strings, $delimiter))"/>
+                <xsl:variable name="firststem" select="normalize-space(substring-before($strings, $delimiter))"/>
+                <xsl:choose>
+                    <xsl:when test="matches($firststem, '(^text.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^image.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '^(movingimage.*$|moving\simage.*$)', 'i')">
+                        <dcterms:type>Moving Image</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '^(sound.*$)', 'i')">
+                        <dcterms:type>Sound</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '^(physicalobject.*$|physical\sobject.*$)', 'i')">
+                        <dcterms:type>Physical Object</dcterms:type>
+                    </xsl:when>
+                    <xsl:when
+                        test="matches($firststem, '^(interactiveresource.*$|interactive\sresource.*$)', 'i')">
+                        <dcterms:type>Interactive Resource</dcterms:type>
+                    </xsl:when>
+                    <xsl:when
+                        test="matches($firststem, '^(stillimage.*$|still\simage.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                    </xsl:when>
+                    <!-- Temple customization starts here -->
+                    <xsl:when test="matches($firststem, '(^administrativerecord.*$|administrative\srecord.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^book.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^clipping.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^coursecatalog.*$|course\scatalog.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^correspondence.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^ephemera.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^financialrecord.*$|financial\srecord)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^graphicart.*$|graphic\sart.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^manuscript.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^map.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^object.*$)', 'i')">
+                        <dcterms:type>Physical Object</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^pamphlet.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^periodical.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^photograph.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^poster.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^publication.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^report.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^sheetmusic.*$|sheet\smusic.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^slide.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when> 
+                    <xsl:when test="matches($firststem, '(^transcript.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^video.*$)', 'i')">
+                        <dcterms:type>Moving Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($firststem, '(^yearbook.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($firststem)"/></dcterms:format>
+                    </xsl:when>
+                    <!-- Format -->
+                    <xsl:otherwise>
+                        <xsl:if test="normalize-space($firststem)!=''">
+                            <dcterms:format>
+                                <xsl:value-of select="normalize-space($firststem)"/>
+                            </dcterms:format>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <!--Need to do recursion-->
+                <xsl:call-template name="supplemental_type_template">
+                    <xsl:with-param name="strings" select="$newstem"/>
+                    <xsl:with-param name="delimiter" select="';'"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="matches($strings, '(^text.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^image.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '^(movingimage.*$|moving\simage.*$)', 'i')">
+                        <dcterms:type>Moving Image</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '^(sound.*$)', 'i')">
+                        <dcterms:type>Sound</dcterms:type>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '^(physicalobject.*$|physical\sobject.*$)', 'i')">
+                        <dcterms:type>Physical Object</dcterms:type>
+                    </xsl:when>
+                    <xsl:when
+                        test="matches($strings, '^(interactiveresource.*$|interactive\sresource.*$)', 'i')">
+                        <dcterms:type>Interactive Resource</dcterms:type>
+                    </xsl:when>
+                    <xsl:when
+                        test="matches($strings, '^(stillimage.*$|still\simage.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                    </xsl:when>
+                    <!-- Temple customization starts here -->
+                    <xsl:when test="matches($strings, '(^administrativerecord.*$|administrative\srecord.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^book.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^clipping.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^coursecatalog.*$|course\scatalog.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^correspondence.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^ephemera.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^financialrecord.*$|financial\srecord)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^graphicart.*$|graphic\sart.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^manuscript.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^map.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^object.*$)', 'i')">
+                        <dcterms:type>Physical Object</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^pamphlet.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^periodical.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^photograph.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^poster.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^publication.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^report.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^sheetmusic.*$|sheet\smusic.*$)', 'i')">
+                        <dcterms:type>Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^slide.*$)', 'i')">
+                        <dcterms:type>Still Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^transcript.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^video.*$)', 'i')">
+                        <dcterms:type>Moving Image</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <xsl:when test="matches($strings, '(^yearbook.*$)', 'i')">
+                        <dcterms:type>Text</dcterms:type>
+                        <dcterms:format><xsl:value-of select="normalize-space($strings)"/></dcterms:format>
+                    </xsl:when>
+                    <!-- Format -->
+                    <xsl:otherwise>
+                        <xsl:if test="normalize-space($strings)!=''">
+                            <dcterms:format>
+                                <xsl:value-of select="normalize-space($strings)"/>
+                            </dcterms:format>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
 </xsl:stylesheet>

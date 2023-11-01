@@ -510,6 +510,7 @@
            <dcterms:subject>DiLacqua, Peter</dcterms:subject>
            <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
            <schema:fileFormat>image/jp2</schema:fileFormat>
+           <dcterms:type>Still Image</dcterms:type>
            <dcterms:format>Photographs</dcterms:format>
            <dcterms:type>Image</dcterms:type>
            <dcterms:type>Still Image</dcterms:type>
@@ -548,6 +549,7 @@
           <dcterms:format>oranges</dcterms:format>
           <dcterms:type>Image</dcterms:type>
           <dcterms:type>Text</dcterms:type>
+          <dcterms:type>Still Image</dcterms:type>
           <dcterms:format>photographs</dcterms:format>
           <edm:provider>PA Digital</edm:provider>
         </oai_dc:dc>
@@ -967,6 +969,294 @@
         <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-interactive-resource'" />
         <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
       </x:scenario>
+      
+      <x:scenario label="Supplemental Type Remediation: Administrative Records">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Administrative Records</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Administrative Records'" test="oai_dc:dc/dcterms:format = 'Administrative Records'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Books">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Books</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Books'" test="oai_dc:dc/dcterms:format = 'Books'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Clippings">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Clippings</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Clippings'" test="oai_dc:dc/dcterms:format = 'Clippings'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Course Catalogs">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Course Catalogs</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Course Catalogs'" test="oai_dc:dc/dcterms:format = 'Course Catalogs'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Correspondence">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Correspondence</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Correspondence'" test="oai_dc:dc/dcterms:format = 'Correspondence'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Ephemera">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Ephemera</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Ephemera'" test="oai_dc:dc/dcterms:format = 'Ephemera'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Financial Records">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Financial Records</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Financial Records'" test="oai_dc:dc/dcterms:format = 'Financial Records'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Graphic Arts">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Graphic Arts</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+        <x:expect label="Output record dcterms:format is 'Graphic Arts'" test="oai_dc:dc/dcterms:format = 'Graphic Arts'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Manuscripts">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Manuscripts</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Manuscripts'" test="oai_dc:dc/dcterms:format = 'Manuscripts'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Maps">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Maps</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+        <x:expect label="Output record dcterms:format is 'Maps'" test="oai_dc:dc/dcterms:format = 'Maps'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Objects">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Objects</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Physical Object'" test="oai_dc:dc/dcterms:type = 'Physical Object'" />
+        <x:expect label="Output record dcterms:format is 'Maps'" test="oai_dc:dc/dcterms:format = 'Objects'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Pamphlets">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Pamphlets</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Pamphlets'" test="oai_dc:dc/dcterms:format = 'Pamphlets'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Periodicals">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Periodicals</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Periodicals'" test="oai_dc:dc/dcterms:format = 'Periodicals'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Photographs">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Photographs</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Still Image'" test="oai_dc:dc/dcterms:type = 'Still Image'" />
+        <x:expect label="Output record dcterms:format is 'Photographs'" test="oai_dc:dc/dcterms:format = 'Photographs'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Posters">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Posters</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Still Image'" test="oai_dc:dc/dcterms:type = 'Still Image'" />
+        <x:expect label="Output record dcterms:format is 'Posters'" test="oai_dc:dc/dcterms:format = 'Posters'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Publications">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Publications</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Publications'" test="oai_dc:dc/dcterms:format = 'Publications'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Reports">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Reports</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Reports'" test="oai_dc:dc/dcterms:format = 'Reports'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Sheet Music">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Sheet Music</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Image'" test="oai_dc:dc/dcterms:type = 'Image'" />
+        <x:expect label="Output record dcterms:format is 'Sheet Music'" test="oai_dc:dc/dcterms:format = 'Sheet Music'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Slides">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Slides</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Still Image'" test="oai_dc:dc/dcterms:type = 'Still Image'" />
+        <x:expect label="Output record dcterms:format is 'Slides'" test="oai_dc:dc/dcterms:format = 'Slides'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Transcripts">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Transcripts</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Transcripts'" test="oai_dc:dc/dcterms:format = 'Transcripts'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Video Recordings">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Video recordings</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Moving Image'" test="oai_dc:dc/dcterms:type = 'Moving Image'" />
+        <x:expect label="Output record dcterms:format is 'Transcripts'" test="oai_dc:dc/dcterms:format = 'Video recordings'" />
+      </x:scenario>
+      <x:scenario label="Supplemental Type Remediation: Yearbooks">
+        <x:context>
+          <oai:record>
+            <metadata>
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:type>Yearbooks</dc:type>
+              </oai_qdc:qualifieddc>
+            </metadata>
+          </oai:record>
+        </x:context>
+        <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
+        <x:expect label="Output record dcterms:format is 'Yearbooks'" test="oai_dc:dc/dcterms:format = 'Yearbooks'" />
+      </x:scenario>
+      
     </x:scenario>
   </x:scenario>
 
@@ -1119,6 +1409,7 @@
          <dcterms:subject>DiLacqua, Peter</dcterms:subject>
          <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
          <schema:fileFormat>image/jp2</schema:fileFormat>
+         <dcterms:type>Still Image</dcterms:type>
          <dcterms:format>Photographs</dcterms:format>
          <dcterms:type>Image</dcterms:type>
          <dcterms:type>Still Image</dcterms:type>
@@ -1225,6 +1516,7 @@
          <dcterms:subject>DiLacqua, Peter</dcterms:subject>
          <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
          <schema:fileFormat>image/jp2</schema:fileFormat>
+         <dcterms:type>Still Image</dcterms:type>
          <dcterms:format>Photographs</dcterms:format>
          <dcterms:type>Image</dcterms:type>
          <dcterms:type>Still Image</dcterms:type>
@@ -1270,6 +1562,7 @@
            <dcterms:subject>DiLacqua, Peter</dcterms:subject>
            <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
            <schema:fileFormat>image/jp2</schema:fileFormat>
+           <dcterms:type>Still Image</dcterms:type>
            <dcterms:format>Photographs</dcterms:format>
            <dcterms:type>Image</dcterms:type>
            <dcterms:type>Still Image</dcterms:type>
@@ -1437,6 +1730,7 @@
              <dcterms:subject>DiLacqua, Peter</dcterms:subject>
              <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
              <schema:fileFormat>image/jp2</schema:fileFormat>
+             <dcterms:type>Still Image</dcterms:type>
              <dcterms:format>Photographs</dcterms:format>
              <dcterms:type>Image</dcterms:type>
              <dcterms:type>Still Image</dcterms:type>
