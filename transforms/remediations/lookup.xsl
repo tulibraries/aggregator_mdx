@@ -525,6 +525,7 @@
         <padig:set string="Dialogues in Afrolatinidad">pitt_collection.368</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
         <padig:set string="Duquesne Light Photograph Collection">pitt_collection.396</padig:set>
+        <padig:set string="Emergency Influenza Hospital Nurses (Duquesne, Pa.) Photographs">pitt_collection.405</padig:set>
         <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
         <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
@@ -532,6 +533,7 @@
         <padig:set string="Frances Hesselbein Papers">pitt_collection.367</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
+        <padig:set string="Frederick J. Osterling Collection">pitt_collection.401</padig:set>
         <padig:set string="Gao Lecture Series">pitt_collection.327</padig:set>
         <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
         <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
@@ -541,9 +543,11 @@
         <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
+        <padig:set string="Latin American Postcard Collection">pitt_collection.400</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
         <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
         <padig:set string="Oscar Knight Diaries">pitt_collection.394</padig:set>
+        <padig:set string="Pittsburgh Youth Olympiad Photographs">pitt_collection.403</padig:set>
         <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
         <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
         <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
