@@ -914,6 +914,7 @@
         <padig:set string="A. J. Thompson Civil War Diary">ajt</padig:set>
         <padig:set string="Alice Marshall Collection">amc</padig:set>
         <padig:set string="Amalgamated Association of Iron, Steel, and Tin Workers of North America Records">amalgamated</padig:set>
+        <padig:set string="American Popular Revolutionary Alliance Party (Peru) Collection">apra</padig:set>
         <padig:set string="Anderson and Ellis Art Education Collection">arted</padig:set>
         <padig:set string="Black History and Visual Culture">blackhistory</padig:set>
         <padig:set string="Brent Wilson Papers">brentwilson</padig:set>
@@ -923,6 +924,7 @@
         <padig:set string="Digital Map Drawer">maps1</padig:set>
         <padig:set string="Edwin Forbes Civil War Etchings">Forbes</padig:set>
         <padig:set string="Elisha J. Bracken Civil War Diary">ejb</padig:set>
+        <padig:set string="Gender and Sexual Identity and Expression">gender</padig:set>
         <padig:set string="George and Alice Beatty Papers">gbp</padig:set>
         <padig:set string="George Hoenshel Fleming Sr. Family Papers">fleming</padig:set>
         <padig:set string="George Medrick Papers">medrick</padig:set>
@@ -940,6 +942,7 @@
         <padig:set string="Penn State Altoona Campus Collections">altoona</padig:set>
         <padig:set string="Penn State Froth">froth</padig:set>
         <padig:set string="Penn State Libraries Photo Archive">psuphoto</padig:set>
+        <padig:set string="Penn State Mont Alto Campus Collections">montalto</padig:set>
         <padig:set string="Penn State University Archives Oral History Collections">oralhistory</padig:set>
         <padig:set string="Pennsylvania Bridges Collection">pab</padig:set>
         <padig:set string="Philip Murray Papers">murray</padig:set>
