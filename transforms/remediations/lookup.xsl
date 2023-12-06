@@ -906,6 +906,7 @@
         <padig:set string="Presbyterian Historical Society Video Collection">islandora_video_collection</padig:set>
         <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
         <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
+        <padig:set string="Tehran Community School">islandora_tehran_community_school</padig:set>
 
     <!-- Penn State -->
         <padig:set string="A Few Good Women">afgw</padig:set>
