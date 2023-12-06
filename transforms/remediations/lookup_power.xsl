@@ -56,6 +56,7 @@
         <padig:set string="Bernville Area Community Library - Tulpehocken High School Yearbooks">papd_pbeac-thsy</padig:set>
         <padig:set string="Boyertown Area Senior High School - Boyertown School News">papd_kboyh-bsn</padig:set>
         <padig:set string="Braddock Carnegie Library Association - Braddock Area Year Books">papd_pbcal-bayb</padig:set>
+        <padig:set string="C. C. Mellor Memorial Library - The History of the Borough of Edgewood">papd_pccmm-ccmml</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA History Books">papd_pcccp-books</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA Postcards">papd_pcccp-post</padig:set>
         <padig:set string="Cambria County Library - Johnstown Area Yearbooks">papd_pcccp-jay</padig:set>
@@ -80,6 +81,7 @@
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
         <padig:set string="Chester County History Center - Elizabeth Broomell Passmore Diary Collection">papd_scchc-ebpdc</padig:set>
         <padig:set string="Chester County History Center - Ennion Cook Account Book Collection">papd_scchc-ecabc</padig:set>
+        <padig:set string="Chester County History Center - Halliday Jackson Collection">papd_scchc-hjc</padig:set>
         <padig:set string="Chester County History Center - Jean Kane Foulke Papers">papd_scchc-jkfp</padig:set>
         <padig:set string="Chester County History Center - John Churchman Papers: Early Land Grants and Surveys in Chester County, Pa. (Nottingham Lots)">papd_scchc-jcpelgascc</padig:set>
         <padig:set string="Chester County History Center - John Hill Brinton Reminiscences Collection">papd_scchc-jhbrc</padig:set>
@@ -112,6 +114,7 @@
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
+        <padig:set string="German Society of Pennsylvania - German Society Agentur">papd_sgsop-gsa</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
         <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat">papd_sgsop-gsppd</padig:set>
         <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat (1838)">papd_sgsop-gsppd1838</padig:set>
@@ -169,6 +172,7 @@
         <padig:set string="Martinsburg Community Library - George Liebegott Genealogy Index">papd_pmbcl-li</padig:set>
         <padig:set string="Matthews Public Library - Fredericksburg, Pennsylvania Historic Images">papd_plecl-fphi</padig:set>
         <padig:set string="McBride Memorial Library - Berwick High School Yearbooks">papd_pbrpl-bhsyb</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - Millgrove Schoolhouse">papd_pmeln-ms</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Day at the 1939 New York World's Fair">papd_pmeln-nd1939nywf</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
@@ -216,6 +220,7 @@
         <padig:set string="New Cumberland Public Library - New Cumberland Town Celebrations">papd_pnecp-nctc</padig:set>
         <padig:set string="New Cumberland Public Library - Roland Benjamin collection">papd_pnecp-rbc</padig:set>
         <padig:set string="New Cumberland Public Library - Schools of New Cumberland">papd_pnecp-snc</padig:set>
+        <padig:set string="New Cumberland Public Library - Scrapbooks and Memorabilia">papd_pnecp-sam</padig:set>
         <padig:set string="New Cumberland Public Library - William D. Bailey 1863 Civil War Diary">papd_pnecp-wdb1862</padig:set>
         <padig:set string="Old Economy Village - Archives">papd_solev-arch</padig:set>
         <padig:set string="Osterhout Free Library - Wilkes-Barre Sunday Independent Newspaper 1915-1958">papd_wbsunind</padig:set>
@@ -252,6 +257,7 @@
         <padig:set string="Pennsylvania School for the Deaf - Pennsylvania School for the Deaf Yearbooks">papd_kpsfd-psftdy</padig:set>
         <padig:set string="Peters Township Public Library - Historic Images and Documents Collection">papd_ppetl-hidc</padig:set>
         <padig:set string="Peters Township Public Library - Life in Peters Township: An Oral History Project">papd_ppetl-lipt</padig:set>
+        <padig:set string="Peters Township Public Library - Peters Township High School Yearbooks">papd_ppetl-pthsy</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township News 1958-1959">papd_ppetl-ptn1958</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township News Progress 1959-1970">papd_ppetl-ptnp1959</padig:set>
         <padig:set string="Peters Township Public Library - The Commerce News 1955-1958">papd_ppetl-tcn1955</padig:set>
@@ -353,6 +359,7 @@
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
         <padig:set string="Upper Merion Area High School Library - Upper Merion Area High School Athletic Scrapbooks and Programs">papd_kupmh-umahsasap</padig:set>
         <padig:set string="Upper Merion Township Library - Upper Merion Area School District Yearbooks">papd_pupmt-sdybs</padig:set>
+        <padig:set string="Upper Moreland Free Public Library - Upper Moreland High School Yearbooks">papd_pupmf-umhsy</padig:set>
         <padig:set string="Wagner Free Institute of Science - Engineering 1: The Materials of Engineering Construction">papd_swfis-e1mec</padig:set>
         <padig:set string="Wagner Free Institute of Science - Manuscripts of Lectures on Conchology by William Wagner">papd_swfis-molocbww</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
