@@ -540,6 +540,7 @@
         <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
         <padig:set string="Herman Mishkin Photograph Collection">pitt_collection.393</padig:set>
         <padig:set string="Hervey Allen Papers">pitt_collection.129</padig:set>
+        <padig:set string="Homestead Album Oral History Project Records">pitt_collection.409</padig:set>
         <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
@@ -547,6 +548,7 @@
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
         <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
         <padig:set string="Oscar Knight Diaries">pitt_collection.394</padig:set>
+        <padig:set string="Pittsburgh Renaissance Project: The Stanton Belfour Oral History Collection">pitt_collection.410</padig:set>
         <padig:set string="Pittsburgh Youth Olympiad Photographs">pitt_collection.403</padig:set>
         <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
         <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
@@ -555,7 +557,9 @@
         <padig:set string="Rudolf Carnap Papers">pitt_collection.135</padig:set>
         <padig:set string="Sarah Cordelia Mellon and Alan Magee Scaife Wedding Album">pitt_collection.395</padig:set>
         <padig:set string="Shooting Star Review">pitt_collection.299</padig:set>
+        <padig:set string="Southern Blacks' Migration to Pittsburgh Oral History Project">pitt_collection.411</padig:set>
         <padig:set string="Stalinka: Digital Library of Staliniana">pitt_collection.136</padig:set>
+        <padig:set string="State and Local Government Archives Oral History Collection">pitt_collection.408</padig:set>
         <padig:set string="Stockton Family Letters">pitt_collection.118</padig:set>
         <padig:set string="Thaddeus Sheldon Papers">pitt_collection.113</padig:set>
         <padig:set string="Theodore M. Finney Music Library Collection">pitt_collection.295</padig:set>
