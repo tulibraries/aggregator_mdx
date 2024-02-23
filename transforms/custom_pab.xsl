@@ -79,6 +79,11 @@
         <xsl:call-template name="relation"/>
     </xsl:template>
     
+    <!-- Call template to remove HTML from dc:rights -->
+    
+    <xsl:template match="dc:rights" priority="1">
+        <xsl:call-template name="rights"/>
+    </xsl:template>
             
     <!-- templates -->
     
@@ -152,6 +157,38 @@
                     </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>      
+    </xsl:template>
+    
+    <xsl:template name="rights">
+        <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
+        <xsl:choose>
+            <xsl:when test="contains(.,'&lt;a href')">
+                <xsl:variable name="string1" select="normalize-space(substring-before(.,'&lt;a href=&quot;'))"/>
+                <xsl:variable name="string2" select="normalize-space(substring-after(.,'&lt;a href=&quot;'))"/>
+                <xsl:variable name="string3" select="normalize-space(substring-after($string2,'&quot;&gt;'))"/>
+                <xsl:variable name="string4" select="normalize-space(substring-before($string3,'&lt;/a&gt;'))"/>
+                <xsl:element name="dcterms:rights">
+                    <xsl:value-of select="$string1"/>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="$string4"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when
+                test="starts-with($rights, 'http://rightsstatements.org/vocab/') or starts-with($rights, 'http://creativecommons.org/') or starts-with($rights, 'https://creativecommons.org/')">
+                <xsl:if test="normalize-space($rights)!=''">
+                    <xsl:element name="edm:rights">
+                        <xsl:value-of select="normalize-space($rights)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space(.) != ''">
+                    <xsl:element name="dcterms:rights">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>

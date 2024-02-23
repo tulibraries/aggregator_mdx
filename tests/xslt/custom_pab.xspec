@@ -103,6 +103,14 @@
       </oai_dc:dc>
     </x:expect>
   </x:scenario>
+  
+  <!-- Rights (map and remove HTML) -->
+  
+  <x:scenario label="rights has HTML">
+    <x:context href="../../fixtures/custom_pab.xml"/>
+    <x:expect label="rights has HTML" xml:space = "preserve"
+      test="oai_dc:dc/dcterms:rights = 'Permission to reproduce material from Athenaeum collections must be granted in writing and is at the discretion of The Athenaeum. All permission is granted on a per-use basis. Images may not be altered (aside from cropping) without special permission. The user of supplied reproductions assumes all responsibilities for citing sources properly, and using images in conformity with existing copyright laws, and may be required to supply The Athenaeum with a copy of any publication or project in which the images appear. The Athenaeum reserves the right to refuse to reproduce any item in its collections. For information on ordering reproductions of Athenaeum drawings, please see https://philaathenaeum.org/rights-and-reproductions/'" /></x:scenario>
+  
 
     <!-- Intermediate Provider (generate and map) -->
 
