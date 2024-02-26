@@ -33,9 +33,17 @@
     
     <!-- Call preview template -->
     
-    <xsl:template match="dcterms:hasVersion" priority="1">
+    <xsl:template match="dcterms:hasVersion[1]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="preview"/>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- Call mediaMaster template -->
+    
+    <xsl:template match="dcterms:hasVersion[position() > 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="mediaMaster"/>
         </xsl:if>
     </xsl:template>
     
@@ -77,8 +85,13 @@
     
     <xsl:template match="dc:relation" priority="1">
         <xsl:call-template name="relation"/>
-    </xsl:template>
+    </xsl:template> 
     
+    <!-- Call template to remove HTML from dc:rights -->
+    
+    <xsl:template match="dc:rights" priority="1">
+        <xsl:call-template name="rights"/>
+    </xsl:template>
             
     <!-- templates -->
     
@@ -115,13 +128,28 @@
     </xsl:template>
     
     <!-- preview -->
+    <!-- map 1st instance only of hasFormat to preview (size 300) and mediaMaster (full size) -->
+    
     <xsl:template name="preview">
-        <xsl:variable name="partialURL" select='substring-after(.,"iiif.cfm/")'/>
-        <xsl:variable name="objID" select='substring-before($partialURL,"/full")'/>
-        <xsl:element name="edm:preview">
-            <xsl:text>https://www.philadelphiabuildings.org/pab/iiif.cfm/</xsl:text><xsl:value-of select="$objID"/><xsl:text>/full/300,/0/default.jpg</xsl:text>
-        </xsl:element>
+            <xsl:variable name="partialURL" select='substring-after(.,"iiif.cfm/")'/>
+            <xsl:variable name="objID" select='substring-before($partialURL,"/full")'/>
+            <xsl:element name="edm:preview">
+                <xsl:text>https://www.philadelphiabuildings.org/pab/iiif.cfm/</xsl:text><xsl:value-of select="$objID"/><xsl:text>/full/300,/0/default.jpg</xsl:text>
+            </xsl:element>
+            <xsl:element name="padig:mediaMaster">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
     </xsl:template>
+        
+    <!-- mediaMaster -->   
+    <!-- map all other instances of hasFormat to mediaMaster -->
+    
+    <xsl:template name="mediaMaster">
+            <xsl:element name="padig:mediaMaster">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>  
+    </xsl:template>
+    
     
     <!-- iiifManifest -->
     <xsl:template name="iiifManifest">
@@ -138,8 +166,9 @@
                     <xsl:variable name="linkValue" select="normalize-space(substring-before($string1,'&lt;/a&gt;'))"/>
                     <xsl:variable name="string2" select="normalize-space(substring-after(.,'&lt;a href=&quot;'))"/>
                     <xsl:variable name="linkURL" select="normalize-space(substring-before($string2,'&quot;&gt;'))"/>
+                    <xsl:variable name="linkValueNormalized" select="replace(normalize-space($linkValue),'&amp;amp;','&amp;')"/>
                     <xsl:element name="dcterms:relation">
-                        <xsl:value-of select="$linkValue"/>
+                        <xsl:value-of select="$linkValueNormalized"/>
                         <xsl:text>, </xsl:text>
                         <xsl:value-of select="$linkURL"/>
                     </xsl:element>
@@ -147,11 +176,43 @@
                 <xsl:otherwise>
                     <xsl:if test="normalize-space(.) != ''">
                         <xsl:element name="dcterms:relation">
-                            <xsl:value-of select="normalize-space(.)"/>
+                            <xsl:value-of select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                         </xsl:element>
                     </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>      
+    </xsl:template>
+    
+    <xsl:template name="rights">
+        <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
+        <xsl:choose>
+            <xsl:when test="contains(.,'&lt;a href=&quot;https://philaathenaeum.org')">
+                <xsl:variable name="string1" select="normalize-space(substring-before(.,'&lt;a href=&quot;'))"/>
+                <xsl:variable name="string2" select="normalize-space(substring-after(.,'&lt;a href=&quot;'))"/>
+                <xsl:variable name="string3" select="normalize-space(substring-after($string2,'&quot;&gt;'))"/>
+                <xsl:variable name="string4" select="normalize-space(substring-before($string3,'&lt;/a&gt;'))"/>
+                <xsl:element name="dcterms:rights">
+                    <xsl:value-of select="$string1"/>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="$string4"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when
+                test="starts-with($rights, 'http://rightsstatements.org/vocab/') or starts-with($rights, 'http://creativecommons.org/') or starts-with($rights, 'https://creativecommons.org/')">
+                <xsl:if test="normalize-space($rights)!=''">
+                    <xsl:element name="edm:rights">
+                        <xsl:value-of select="normalize-space($rights)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space(.) != ''">
+                    <xsl:element name="dcterms:rights">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>

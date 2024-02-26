@@ -13,7 +13,7 @@
         <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd">
             <dc:title>Girard College</dc:title>
             <dc:creator>Walter, Thomas Ustick, 1804-1887</dc:creator>
-            <dc:contributor>Contributor, Jane</dc:contributor>
+            <dc:contributor>Girard College, client</dc:contributor>
             <dc:date>1835</dc:date>
             <dcterms:extent>1 item</dcterms:extent>
             <dcterms:description>Hello description.</dcterms:description>
@@ -21,11 +21,12 @@
             <dcterms:medium>Prints (visual works)</dcterms:medium>
             <dc:source>Athenaeum of Philadelphia</dc:source>
             <dcterms:isPartOf>Thomas Ustick Walter Collection</dcterms:isPartOf>
-            <dc:relation>&lt;a href=&quot;https://www.philadelphiabuildings.org/pab/app/pj_display.cfm/20551&quot;&gt;Founders Hall (Girard College, client)&lt;/a&gt;</dc:relation>
+            <dc:relation>&lt;a href=&quot;https://www.philadelphiabuildings.org/pab/app/pj_display.cfm/20551&quot;&gt;Founders Hall &amp;amp; (Girard College, client)&lt;/a&gt;</dc:relation>
             <dcterms:isReferencedBy>122-PR-055</dcterms:isReferencedBy>
             <dc:type>Image</dc:type>
             <dcterms:hasFormat>https://www.philadelphiabuildings.org/pab/iiif.cfm/E9F7B2BD-1422-7865-6B0CB689716ABED7/manifest</dcterms:hasFormat>
             <dcterms:hasVersion>https://www.philadelphiabuildings.org/pab/iiif.cfm/4F27F9CB-1422-7865-6BD970C3DEF68E4D/full/1000,/0/default.jpg</dcterms:hasVersion>
+            <dcterms:hasVersion>https://www.philadelphiabuildings.org/pab/iiif.cfm/162BCE77-155D-010A-02D1406653818A47/full/1000,/0/default.jpg</dcterms:hasVersion>
             <dc:rights>Permission to reproduce material from Athenaeum collections must be granted in writing and is at the discretion of The Athenaeum. All permission is granted on a per-use basis. Images may not be altered (aside from cropping) without special permission. The user of supplied reproductions assumes all responsibilities for citing sources properly, and using images in conformity with existing copyright laws, and may be required to supply The Athenaeum with a copy of any publication or project in which the images appear. The Athenaeum reserves the right to refuse to reproduce any item in its collections. For information on ordering reproductions of Athenaeum drawings, please see &lt;a href=&quot;https://philaathenaeum.org/rights-and-reproductions/&quot;&gt;https://philaathenaeum.org/rights-and-reproductions/&lt;/a&gt;.</dc:rights>
             <dc:language>en</dc:language>
             <dc:identifier>https://www.philadelphiabuildings.org/pab/app/ho_display.cfm/880591</dc:identifier>
