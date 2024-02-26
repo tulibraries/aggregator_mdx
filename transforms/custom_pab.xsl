@@ -143,8 +143,9 @@
                     <xsl:variable name="linkValue" select="normalize-space(substring-before($string1,'&lt;/a&gt;'))"/>
                     <xsl:variable name="string2" select="normalize-space(substring-after(.,'&lt;a href=&quot;'))"/>
                     <xsl:variable name="linkURL" select="normalize-space(substring-before($string2,'&quot;&gt;'))"/>
+                    <xsl:variable name="linkValueNormalized" select="replace(normalize-space($linkValue),'&amp;amp;','&amp;')"/>
                     <xsl:element name="dcterms:relation">
-                        <xsl:value-of select="$linkValue"/>
+                        <xsl:value-of select="$linkValueNormalized"/>
                         <xsl:text>, </xsl:text>
                         <xsl:value-of select="$linkURL"/>
                     </xsl:element>
