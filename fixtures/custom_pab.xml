@@ -13,7 +13,7 @@
         <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd">
             <dc:title>Girard College</dc:title>
             <dc:creator>Walter, Thomas Ustick, 1804-1887</dc:creator>
-            <dc:contributor>Contributor, Jane</dc:contributor>
+            <dc:contributor>Girard College, client</dc:contributor>
             <dc:date>1835</dc:date>
             <dcterms:extent>1 item</dcterms:extent>
             <dcterms:description>Hello description.</dcterms:description>
