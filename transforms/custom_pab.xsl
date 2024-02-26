@@ -162,7 +162,7 @@
     <xsl:template name="rights">
         <xsl:variable name="rights" select="replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;','')"/>
         <xsl:choose>
-            <xsl:when test="contains(.,'&lt;a href')">
+            <xsl:when test="contains(.,'&lt;a href=&quot;https://philaathenaeum.org')">
                 <xsl:variable name="string1" select="normalize-space(substring-before(.,'&lt;a href=&quot;'))"/>
                 <xsl:variable name="string2" select="normalize-space(substring-after(.,'&lt;a href=&quot;'))"/>
                 <xsl:variable name="string3" select="normalize-space(substring-after($string2,'&quot;&gt;'))"/>
