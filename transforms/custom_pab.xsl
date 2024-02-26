@@ -33,9 +33,17 @@
     
     <!-- Call preview template -->
     
-    <xsl:template match="dcterms:hasVersion" priority="1">
+    <xsl:template match="dcterms:hasVersion[1]">
         <xsl:if test="normalize-space(.)!=''">
             <xsl:call-template name="preview"/>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- Call mediaMaster template -->
+    
+    <xsl:template match="dcterms:hasVersion[position() > 1]">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="mediaMaster"/>
         </xsl:if>
     </xsl:template>
     
@@ -77,7 +85,7 @@
     
     <xsl:template match="dc:relation" priority="1">
         <xsl:call-template name="relation"/>
-    </xsl:template>
+    </xsl:template> 
     
     <!-- Call template to remove HTML from dc:rights -->
     
@@ -120,13 +128,28 @@
     </xsl:template>
     
     <!-- preview -->
+    <!-- map 1st instance only of hasFormat to preview (size 300) and mediaMaster (full size) -->
+    
     <xsl:template name="preview">
-        <xsl:variable name="partialURL" select='substring-after(.,"iiif.cfm/")'/>
-        <xsl:variable name="objID" select='substring-before($partialURL,"/full")'/>
-        <xsl:element name="edm:preview">
-            <xsl:text>https://www.philadelphiabuildings.org/pab/iiif.cfm/</xsl:text><xsl:value-of select="$objID"/><xsl:text>/full/300,/0/default.jpg</xsl:text>
-        </xsl:element>
+            <xsl:variable name="partialURL" select='substring-after(.,"iiif.cfm/")'/>
+            <xsl:variable name="objID" select='substring-before($partialURL,"/full")'/>
+            <xsl:element name="edm:preview">
+                <xsl:text>https://www.philadelphiabuildings.org/pab/iiif.cfm/</xsl:text><xsl:value-of select="$objID"/><xsl:text>/full/300,/0/default.jpg</xsl:text>
+            </xsl:element>
+            <xsl:element name="padig:mediaMaster">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
     </xsl:template>
+        
+    <!-- mediaMaster -->   
+    <!-- map all other instances of hasFormat to mediaMaster -->
+    
+    <xsl:template name="mediaMaster">
+            <xsl:element name="padig:mediaMaster">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>  
+    </xsl:template>
+    
     
     <!-- iiifManifest -->
     <xsl:template name="iiifManifest">
