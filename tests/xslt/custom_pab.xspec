@@ -96,19 +96,19 @@
         <x:expect label="dc:source maps to edm:dataProvider" test="oai_dc:dc/edm:dataProvider = 'Athenaeum of Philadelphia'"/>
     </x:scenario>
 
-    <!-- Relation (map and remove HTML) -->
+    <!-- Relation (map, remove HTML, normalize ampersand) -->
 
   <x:scenario label="relation has HTML">
     <x:context href="../../fixtures/custom_pab.xml"/>
     <x:expect label="relation has HTML" xml:space = "preserve"
-      test="oai_dc:dc/dcterms:relation = 'Founders Hall (Girard College, client), https://www.philadelphiabuildings.org/pab/app/pj_display.cfm/20551'" />
+      test="oai_dc:dc/dcterms:relation = 'Founders Hall &amp; (Girard College, client), https://www.philadelphiabuildings.org/pab/app/pj_display.cfm/20551'" />
   </x:scenario>   
   <x:scenario label="relation has no HTML">
     <x:context>
       <oai:record>
         <metadata>
           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <dc:relation>No HTML</dc:relation>
+            <dc:relation>No HTML &amp;amp;</dc:relation>
           </oai_dc:dc>
         </metadata>
       </oai:record>
@@ -128,7 +128,7 @@
         xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
         xmlns:schema="http://schema.org"
         xmlns:svcs="http://rdfs.org/sioc/services">
-        <dcterms:relation>No HTML</dcterms:relation>
+        <dcterms:relation>No HTML &amp;</dcterms:relation>
         <edm:provider>PA Digital</edm:provider>
       </oai_dc:dc>
     </x:expect>

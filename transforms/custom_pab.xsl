@@ -176,7 +176,7 @@
                 <xsl:otherwise>
                     <xsl:if test="normalize-space(.) != ''">
                         <xsl:element name="dcterms:relation">
-                            <xsl:value-of select="normalize-space(.)"/>
+                            <xsl:value-of select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
                         </xsl:element>
                     </xsl:if>
                 </xsl:otherwise>
