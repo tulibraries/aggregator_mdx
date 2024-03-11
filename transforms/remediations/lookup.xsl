@@ -355,6 +355,7 @@
         <padig:set string="Ford E. and Harriet R. Curtis Theatre Collection of Pittsburgh Theatre Programs">pitt_collection.254</padig:set>
         <padig:set string="Frank B. Fairbanks Rail Transportation Archive">pitt_collection.44</padig:set>
         <padig:set string="Frank Bolden Papers">pitt_collection.366</padig:set>
+        <padig:set string="Frank France Photographs">pitt_collection.415</padig:set>
         <padig:set string="Frederick T. Gretton Photographs">pitt_collection.45</padig:set>
         <padig:set string="Fuchs Family Papers and Photographs">pitt_collection.46</padig:set>
         <padig:set string="Fur Trader's Journal">pitt_collection.258</padig:set>
@@ -370,6 +371,7 @@
         <padig:set string="Harper Family Papers">pitt_collection.356</padig:set>
         <padig:set string="Hebrew Institute Photographs">pitt_collection.48</padig:set>
         <padig:set string="Henry Clay Frick Business Records">pitt_collection.156</padig:set>
+        <padig:set string="Henry Ellenbogen Papers">pitt_collection.417</padig:set>
         <padig:set string="Henry Marie Brackenridge and Family Papers">pitt_collection.103</padig:set>
         <padig:set string="Herb Ferguson Photographs">pitt_collection.384</padig:set>
         <padig:set string="Historic Pittsburgh Book Collection">pitt_collection.241</padig:set>
@@ -435,6 +437,7 @@
         <padig:set string="Pittsburgh Bureau of Building Inspection Photographs">pitt_collection.155</padig:set>
         <padig:set string="Pittsburgh Census Tract Maps and Data">pitt_collection.329</padig:set>
         <padig:set string="Pittsburgh City Photographer Collection">pitt_collection.72</padig:set>
+        <padig:set string="Pittsburgh Folk Festival Records and Photographs">pitt_collection.418</padig:set>
         <padig:set string="Pittsburgh International Lesbian and Gay Film Festival Records">pitt_collection.359</padig:set>
         <padig:set string="Pittsburgh Photographic Library Collection">pitt_collection.317</padig:set>
         <padig:set string="Pittsburgh Prints from the Collection of Wesley Pickard">pitt_collection.73</padig:set>
@@ -513,6 +516,7 @@
         <padig:set string="Audubon's Birds of America">pitt_collection.1</padig:set>
         <padig:set string="Autograph Files of H. Edmund Friesell">pitt_collection.169</padig:set>
         <padig:set string="Barry Rosensteel Japanese Print Collection">pitt_collection.124</padig:set>
+        <padig:set string="Being Human Podcast Recordings">pitt_collection.389</padig:set>
         <padig:set string="Bruno De Finetti Papers">pitt_collection.125</padig:set>
         <padig:set string="Burd-Shippen Family Papers">pitt_collection.115</padig:set>
         <padig:set string="Carl Gustav Hempel Papers">pitt_collection.126</padig:set>
@@ -529,6 +533,7 @@
         <padig:set string="Emergency Influenza Hospital Nurses (Duquesne, Pa.) Photographs">pitt_collection.405</padig:set>
         <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
         <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
+        <padig:set string="Ethnic Fraternal Organizations Oral History Project Collection">pitt_collection.412</padig:set>
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
         <padig:set string="Fox Chapel Garden Club Records">pitt_collection.360</padig:set>
         <padig:set string="Frances Hesselbein Papers">pitt_collection.367</padig:set>
