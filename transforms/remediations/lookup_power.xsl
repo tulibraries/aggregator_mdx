@@ -48,6 +48,7 @@
         <padig:set string="Altoona Area Public Library - History Photographs">papd_palap-hp</padig:set>
         <padig:set string="Altoona Area Public Library - The Great Flood of 1977">papd_palap-gf1977</padig:set>
         <padig:set string="Battle of Homestead Foundation - Charles McCollester Collection">papd_sbhfa-cmc</padig:set>
+        <padig:set string="Battle of Homestead Foundation - Mark Fallon Collection">papd_sbhfa-mfc</padig:set>
         <padig:set string="Battle of Homestead Foundation - Mike Stout Collection">papd_sbhfa-msc</padig:set>
         <padig:set string="Bedford County Library - Winona Garbrick">papd_pbecf-wg</padig:set>
         <padig:set string="Bellwood-Antis Public Library - Bellwood Bulletin Newspaper">papd_pbapl-bb</padig:set>
@@ -67,6 +68,7 @@
         <padig:set string="Carnegie Library of Pittsburgh - The Builder">papd_pcalo-build2</padig:set>
         <padig:set string="Carnegie Mellon University - Andrew Carnegie Online Archives">papd_acamu-acarc</padig:set>
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Autobiography of Colonel Samuel Miles">papd_pcecl-aocsm</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
@@ -107,6 +109,7 @@
         <padig:set string="Elizabethtown College - Historic Images">papd_aeliz-hi</padig:set>
         <padig:set string="Elizabethtown College - Peace Pamphlets">papd_aeliz-pp</padig:set>
         <padig:set string="Elizabethtown College - Teachers for West Africa Program Images">papd_aeliz-tfwapi</padig:set>
+        <padig:set string="Erie County Public Library - Erie County Maps">papd_percp-ecm</padig:set>
         <padig:set string="Erie County Public Library - Erie County Yearbooks">papd_percp-ecy</padig:set>
         <padig:set string="Erie County Public Library - Erie Gay News">papd_percp-egn</padig:set>
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
@@ -116,6 +119,7 @@
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
         <padig:set string="German Society of Pennsylvania - German Society Agentur">papd_sgsop-gsa</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
+        <padig:set string="German Society of Pennsylvania - Henry Melchior Muhlenberg Papers, 1771-1786">papd_sgsop-hmmp1771</padig:set>
         <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat">papd_sgsop-gsppd</padig:set>
         <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat (1838)">papd_sgsop-gsppd1838</padig:set>
         <padig:set string="German Society of Pennsylvania - Singing Societies Collection">papd_sgsop-ssc</padig:set>
@@ -176,9 +180,11 @@
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Day at the 1939 New York World's Fair">papd_pmeln-nd1939nywf</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - The N.H.S. Chronicle">papd_pmeln-nhsc</padig:set>
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
         <padig:set string="Meyersdale Public Library - 1998 Southern Somerset County Tornadoes Oral Histories">papd_pmeye-1998ssctoh</padig:set>
         <padig:set string="Meyersdale Public Library - African American Burials in Somerset County">papd_pmeye-aabisc</padig:set>
+        <padig:set string="Meyersdale Public Library - From Dale City to Meyersdale">papd_pmeye-fdctm</padig:set>
         <padig:set string="Meyersdale Public Library - Garrett School Memorabilia">papd_pmeye-gsm</padig:set>
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
@@ -224,6 +230,7 @@
         <padig:set string="New Cumberland Public Library - William D. Bailey 1863 Civil War Diary">papd_pnecp-wdb1862</padig:set>
         <padig:set string="Old Economy Village - Archives">papd_solev-arch</padig:set>
         <padig:set string="Osterhout Free Library - Wilkes-Barre Sunday Independent Newspaper 1915-1958">papd_wbsunind</padig:set>
+        <padig:set string="Pennsylvania College of Technology - Williamsport Area Community College - 1960s">papd_apact-wacc1960</padig:set>
         <padig:set string="Pennsylvania College of Technology - Williamsport Technical Institute">papd_willtech</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Historical Photographs">papd_spgsl-photo</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Hurricane Agnes Flood Photographs">papd_spgsl-hafp</padig:set>
@@ -271,6 +278,7 @@
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
+        <padig:set string="Saint Joseph's University - Marvin Samson Center for the History of Pharmacy - Philadelphia College of Pharmacy History">papd_astju-mschppcph</padig:set>
         <padig:set string="Saint Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Schwenkfelder Library &amp; Heritage Center Cased Images Collection">papd_sslhc-slhccic</padig:set>
@@ -278,6 +286,7 @@
         <padig:set string="Scranton Public Library - Celebrating Our Towns: Lackawanna Co. Centennial Books and Community Histories">papd_pscrl-cot</padig:set>
         <padig:set string="Scranton Public Library - Century Club of Scranton">papd_pscrl-ccos</padig:set>
         <padig:set string="Scranton Public Library - Community and Church Cookbooks from Northeastern PA">papd_pscrl-cccfnepa</padig:set>
+        <padig:set string="Scranton Public Library - Department of Public Safety Mug Shot Collection: 1903-1909">papd_pscrl-dpsmsc</padig:set>
         <padig:set string="Scranton Public Library - Friends of the Scranton Public Library Poetry Series">papd_pscrl-fsplps</padig:set>
         <padig:set string="Scranton Public Library - From Lace Makers to Coal Miners: Life in the Lackawanna Valley 1866-1920">papd_pscrl-flmtcm</padig:set>
         <padig:set string="Scranton Public Library - History of the Scranton Public Library">papd_pscrl-hspl</padig:set>
