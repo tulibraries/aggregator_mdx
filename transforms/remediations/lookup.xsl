@@ -952,6 +952,7 @@
         <padig:set string="Penn State Altoona Campus Collections">altoona</padig:set>
         <padig:set string="Penn State Froth">froth</padig:set>
         <padig:set string="Penn State Libraries Photo Archive">psuphoto</padig:set>
+        <padig:set string="Penn State Life Science Collections">life_sci</padig:set>
         <padig:set string="Penn State Mont Alto Campus Collections">montalto</padig:set>
         <padig:set string="Penn State University Archives Oral History Collections">oralhistory</padig:set>
         <padig:set string="Pennsylvania Bridges Collection">pab</padig:set>
@@ -966,6 +967,7 @@
         <padig:set string="United Mine Workers of America, President's Office Correspondence">umwac</padig:set>
         <padig:set string="United Steelworkers of America District 33 Records">district33</padig:set>
         <padig:set string="Walter R. Collins Civil War Diaries and Photograph">wrc</padig:set>
+        <padig:set string="War Posters">warposters</padig:set>
         <padig:set string="Washington Literary Society Records, 1859-1895">wls</padig:set>
         <padig:set string="William H.H. Fisher Civil War Diary">whf</padig:set>
         <padig:set string="Women's Suffrage Collection">suffrage</padig:set>
