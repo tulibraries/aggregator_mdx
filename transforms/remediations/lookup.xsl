@@ -81,6 +81,7 @@
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
         <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
         <padig:url string="Moravian Historical Society" code="MORAVIAN">https://moravianhistoricalsociety.reclaim.hosting/oai</padig:url>
+        <padig:url string="Cabrini University" code="CABRINI">https://cdm17305.contentdm.oclc.org/oai/oai.php</padig:url>
     </xsl:param>
 
     <!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -973,6 +974,25 @@
         <padig:set string="Women's Suffrage Collection">suffrage</padig:set>
         <padig:set string="World War I Glass Plate Stereographs">ww1stereo</padig:set>
         <padig:set string="WPA Bituminous Coal Mine Maps">wpamaps</padig:set>
+
+    <!-- Cabrini CDM-->
+        <padig:set string="America's First Citizen Saint - The Saint Frances Cabrini Collection">p17305coll22</padig:set>
+        <padig:set string="Personal Effects">p17305coll1</padig:set>
+        <padig:set string="Relics">p17305coll2</padig:set>
+        <padig:set string="Travels">p17305coll5</padig:set>
+        <padig:set string="Popes and Prelates">p17305coll6</padig:set>
+        <padig:set string="Beatification and Canonization Documents">p17305coll7</padig:set>
+        <padig:set string="Beatification and Canonization Photographs">p17305coll8</padig:set>
+        <padig:set string="Beatification and Canonization Subjects of Miracles">p17305coll9</padig:set>
+        <padig:set string="Mother Cabrini Letters">p17305coll10</padig:set>
+        <padig:set string="Photographs">p17305coll11</padig:set>
+        <padig:set string="International Missions">p17305coll3</padig:set>
+        <padig:set string="New Orleans Louisiana Missions">p17305coll13</padig:set>
+        <padig:set string="Memorie">p17305coll15</padig:set>
+        <padig:set string="Saint Frances Cabrini Documents">p17305coll16</padig:set>
+        <padig:set string="Saint Frances Cabrini Commemorative Items">p17305coll17</padig:set>
+        <padig:set string="Sisters of Providence">p17305coll26</padig:set>
+
     </xsl:param>
 
     <!-- lookup table collection name by identifier -->
