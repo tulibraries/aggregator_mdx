@@ -81,7 +81,7 @@
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
         <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
         <padig:url string="Moravian Historical Society" code="MORAVIAN">https://moravianhistoricalsociety.reclaim.hosting/oai</padig:url>
-        <padig:url string="Cabrini University" code="CABRINI">http://cdm17305.contentdm.oclc.org/oai/oai.php</padig:url>
+        <padig:url string="Cabrini University" code="CABRINI">http://cdm17305.contentdm.oclc.org/</padig:url>
     </xsl:param>
 
     <!-- lookup table for Intermediate Providers/OAI base URLs -->
