@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2024-04-16T17:27:47Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="oai_qdc" set="p17305coll5">http://cdm17305.contentdm.oclc.org/oai/oai.php</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:cdm17305.contentdm.oclc.org:p17305coll5/0</identifier>
+                <datestamp>2019-04-05</datestamp>
+                <setSpec>p17305coll5</setSpec>
+            </header>
+            <metadata>
+                <oai_qdc:qualifieddc xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+                    <dc:title>01_Oceanic Travels of Mother Cabrini</dc:title>
+                    <dc:subject>Cabrini, Frances Xavier, Saint, 1850-1917; Voyages and travels;</dc:subject>
+                    <dc:subject>Cabrini, Frances Xavier, Saint, 1850-1917; Voyages and travels; oceanic travels;</dc:subject>
+                    <dc:description>A timeline summarizing the principal journeys of Mother Cabrini between 1889-1917. In 28 years Mother Cabrini spent 9 months on oceanic voyages, 13 years in the United States, 11 years and 7 months in Europe and 3 years and 3 months in Latin America. All this from a woman who, after a near fatal drowning as a young girl, was deathly afraid of water. World War I prohibited Mother Cabrini from travelling to Europe. She spent the last five years of her life in the United States. Image from: &quot;Mother Cabrini Italian Immigrant of the Century.&quot; Mary Louise Sullivan, MSC. NY; Center for Migration Studies, 1992.</dc:description>
+                    <dc:creator>Sullivan, Mary Louise, M.S.C.</dc:creator>
+                    <dc:publisher>Cabrini University -- Holy Spirit Library</dc:publisher>
+                    <dc:date>1889-1917</dc:date>
+                    <dc:type>timeline</dc:type>
+                    <dc:format>jpeg</dc:format>
+                    <dc:source>Travels</dc:source>
+                    <dc:rights>Center for Migration Studies, 1992.</dc:rights>
+                    <dc:identifier>oceanic travels of mother cabrini.jpg</dc:identifier>
+                    <dc:identifier>http://cdm17305.contentdm.oclc.org/cdm/ref/collection/p17305coll5/id/0</dc:identifier>
+                </oai_qdc:qualifieddc>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
