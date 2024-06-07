@@ -338,6 +338,7 @@
         <padig:set string="Darlington Family Papers">pitt_collection.100</padig:set>
         <padig:set string="Daughters of Erin Court #9 Records">pitt_collection.173</padig:set>
         <padig:set string="Department of Public Health Annual Records, Pittsburgh, PA">pitt_collection.345</padig:set>
+        <padig:set string="Dollar Bank Image Collection">pitt_collection.423</padig:set>
         <padig:set string="Donohoe Family Papers">pitt_collection.102</padig:set>
         <padig:set string="Dorsey-Turfley Family Photographs">pitt_collection.40</padig:set>
         <padig:set string="Dunning McNair and Dunning Robert McNair Papers">pitt_collection.19</padig:set>
@@ -551,6 +552,7 @@
         <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
         <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
         <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
+        <padig:set string="Kuntu Repertory Theatre Records">pitt_collection.399</padig:set>
         <padig:set string="Latin American Postcard Collection">pitt_collection.400</padig:set>
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
         <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
@@ -567,10 +569,12 @@
         <padig:set string="Southern Blacks' Migration to Pittsburgh Oral History Project">pitt_collection.411</padig:set>
         <padig:set string="Stalinka: Digital Library of Staliniana">pitt_collection.136</padig:set>
         <padig:set string="State and Local Government Archives Oral History Collection">pitt_collection.408</padig:set>
+        <padig:set string="Steel Process Lantern Slide Collection">pitt_collection.200</padig:set>
         <padig:set string="Stockton Family Letters">pitt_collection.118</padig:set>
         <padig:set string="Thaddeus Sheldon Papers">pitt_collection.113</padig:set>
         <padig:set string="Theodore M. Finney Music Library Collection">pitt_collection.295</padig:set>
         <padig:set string="Thomas G. Masaryk Papers">pitt_collection.319</padig:set>
+        <padig:set string="University of Pittsburgh Board of Trustees Public Meeting Minutes">pitt_collection.282</padig:set>
         <padig:set string="University of Pittsburgh Press Digital Editions">pitt_collection.137</padig:set>
         <padig:set string="V.F. Wachsmuth Treatise">pitt_collection.256</padig:set>
         <padig:set string="Vézelay: Benedictine Abbey of Sainte Marie Madeleine">pitt_collection.138</padig:set>
