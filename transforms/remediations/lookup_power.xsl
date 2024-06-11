@@ -61,6 +61,7 @@
         <padig:set string="Cambria County Library - Johnstown, PA History Books">papd_pcccp-books</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA Postcards">papd_pcccp-post</padig:set>
         <padig:set string="Cambria County Library - Johnstown Area Yearbooks">papd_pcccp-jay</padig:set>
+        <padig:set string="Carnegie Library of Homestead - Homestead Newspaper Collection 1881-1979">papd_pcalh-hnc1881</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - American Marketplace">papd_pcalo-amc</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - Industry, Mining, &amp; Technology Journals">papd_pcalo-imtj</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - Iron &amp; Steel Photographic Collection">papd_pcalo-ispc</padig:set>
@@ -73,6 +74,7 @@
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Letters and Notes of Colonel Samuel Miles">papd_pcecl-lanocsm</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Mary E. D. Wilson Composition Collection">papd_pcecl-medwcc</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Miles-Potter-Humes House">papd_pcecl-mphh</padig:set>
         <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
@@ -81,6 +83,7 @@
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
         <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
+        <padig:set string="Chester County History Center - David Evans Collection">papd_scchc-dec</padig:set>
         <padig:set string="Chester County History Center - Elizabeth Broomell Passmore Diary Collection">papd_scchc-ebpdc</padig:set>
         <padig:set string="Chester County History Center - Ennion Cook Account Book Collection">papd_scchc-ecabc</padig:set>
         <padig:set string="Chester County History Center - Halliday Jackson Collection">papd_scchc-hjc</padig:set>
@@ -101,6 +104,7 @@
         <padig:set string="Conshohocken Free Library - Conshohocken Town Council Minutes">papd_pcofl-mtc1</padig:set>
         <padig:set string="Conshohocken Free Library - The Recorder Newspaper 1879-1964">papd_pcofl-creco</padig:set>
         <padig:set string="Cooper-Siegel Community Library - Fox Chapel Area High School Renard Yearbooks">papd_plawm-fcahsry</padig:set>
+        <padig:set string="Cooper-Siegel Community Library - Fox Chapel Area Historical Materials">papd_plawm-fcahm</padig:set>
         <padig:set string="Crawford County Federated Library System - Meadville Local History">papd_pmeplmlhc</padig:set>
         <padig:set string="DeSales University - Bishop McShea Archives">papd_adesu-bmcsa</padig:set>
         <padig:set string="DeSales University - St. Francis de Sales">papd_adesu-sfdes</padig:set>
@@ -109,11 +113,12 @@
         <padig:set string="Elizabethtown College - Historic Images">papd_aeliz-hi</padig:set>
         <padig:set string="Elizabethtown College - Peace Pamphlets">papd_aeliz-pp</padig:set>
         <padig:set string="Elizabethtown College - Teachers for West Africa Program Images">papd_aeliz-tfwapi</padig:set>
+        <padig:set string="Erie County Public Library - Erie County COVID-19 Oral Histories">papd_percp-ecc19oh</padig:set>
         <padig:set string="Erie County Public Library - Erie County Maps">papd_percp-ecm</padig:set>
         <padig:set string="Erie County Public Library - Erie County Yearbooks">papd_percp-ecy</padig:set>
         <padig:set string="Erie County Public Library - Erie Gay News">papd_percp-egn</padig:set>
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
-        <padig:set string="Erie County Public Library - Erie County COVID-19 Oral Histories">papd_percp-ecc19oh</padig:set>
+        <padig:set string="Erie County Public Library - Erie Public Library Reports">papd_percp-eplr</padig:set>
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
@@ -189,6 +194,8 @@
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
+        <padig:set string="Meyersdale Public Library - Springs Historical Society - Johnston Bender Family Collection">papd_pmeye-jbfc</padig:set>
+        <padig:set string="Meyersdale Public Library - Springs Historical Society - Miller Machine">papd_pmeye-mm</padig:set>
         <padig:set string="Meyersdale Public Library - The History Behind the Meyersdale Public Library">papd_pmeye-hbtmpl</padig:set>
         <padig:set string="Meyersdale Public Library - William Henry Welfley Scrapbook Collection">papd_pmeye-whwsc</padig:set>
         <padig:set string="Milton Hershey School - Hershey Community Archives - Hotel Hershey Highlights">papd_kmheh-hcahhh</padig:set>
@@ -280,6 +287,7 @@
         <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
         <padig:set string="Saint Joseph's University - Marvin Samson Center for the History of Pharmacy - Philadelphia College of Pharmacy History">papd_astju-mschppcph</padig:set>
         <padig:set string="Saint Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
+        <padig:set string="Schwenkfelder Library &amp; Heritage Center - Amos A. Yeakel Civil War Diary">papd_sslhc-aaycwd</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Schwenkfelder Library &amp; Heritage Center Cased Images Collection">papd_sslhc-slhccic</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - The Christopher Saur, Jr. Diary and Account Book">papd_sslhc-csjdab</padig:set>
