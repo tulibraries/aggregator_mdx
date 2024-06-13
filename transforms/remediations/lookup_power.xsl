@@ -323,7 +323,6 @@
         <padig:set string="State Library of Pennsylvania - Lebanon Advertiser Newspaper">papd_sstlp-lead</padig:set>
         <padig:set string="State Library of Pennsylvania - Lewistown Republican Newspaper">papd_sstlp-lewrep</padig:set>
         <padig:set string="State Library of Pennsylvania - Mapleton Advertiser Newspaper">papd_sstlp-maad</padig:set>
-        <padig:set string="State Library of Pennsylvania - Mapleton Item Newspaper">papd_sstlp-mait</padig:set>
         <padig:set string="State Library of Pennsylvania - Marietta Advocate and Farmers and Mechanics Intelligencer Newspaper">papd_sstlp-maradv</padig:set>
         <padig:set string="State Library of Pennsylvania - Marietta Pioneer Newspaper">papd_sstlp-marpion</padig:set>
         <padig:set string="State Library of Pennsylvania - Marietta Register Newspaper">papd_sstlp-marreg</padig:set>
