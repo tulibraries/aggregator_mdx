@@ -848,6 +848,7 @@
         <padig:set string="19th Century Schoolbooks">pitt_collection.120</padig:set>
         <padig:set string="Abner Shimony Papers">pitt_collection.121</padig:set>
         <padig:set string="Alberto Britos Scrapbook on Nicolás Guillén Visit to Uruguay">pitt_collection.378</padig:set>
+        <padig:set string="Allegheny County Medical Society Minute Book">pitt_collection.430</padig:set>
         <padig:set string="Allen Family Papers">pitt_collection.122</padig:set>
         <padig:set string="An Attempt to Describe the Future of the United States">pitt_collection.245</padig:set>
         <padig:set string="Archives of Scientific Philosophy">pitt_collection.123</padig:set>
@@ -856,10 +857,13 @@
         <padig:set string="Autograph Files of H. Edmund Friesell">pitt_collection.169</padig:set>
         <padig:set string="Barry Rosensteel Japanese Print Collection">pitt_collection.124</padig:set>
         <padig:set string="Being Human Podcast Recordings">pitt_collection.389</padig:set>
+        <padig:set string="Brashear Association Records">pitt_collection.402</padig:set>
         <padig:set string="Bruno De Finetti Papers">pitt_collection.125</padig:set>
         <padig:set string="Burd-Shippen Family Papers">pitt_collection.115</padig:set>
+        <padig:set string="Byrd R. Brown Autograph Album">pitt_collection.434</padig:set>
         <padig:set string="Carl Gustav Hempel Papers">pitt_collection.126</padig:set>
         <padig:set string="Charles and Frankie Pace Collection">pitt_collection.383</padig:set>
+        <padig:set string="Charles J. Dengler Jr. Diary">pitt_collection.427</padig:set>
         <padig:set string="Chartres: Cathedral of Notre-Dame">pitt_collection.127</padig:set>
         <padig:set string="China's Cultural Revolution in Memories: The CR/10 Project">pitt_collection.302</padig:set>
         <padig:set string="Chinese Land Records">pitt_collection.179</padig:set>
@@ -869,6 +873,7 @@
         <padig:set string="Dialogues in Afrolatinidad">pitt_collection.368</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
         <padig:set string="Duquesne Light Photograph Collection">pitt_collection.396</padig:set>
+        <padig:set string="Edward Rocco (E.R.) Montagna Diary">pitt_collection.433</padig:set>
         <padig:set string="Emergency Influenza Hospital Nurses (Duquesne, Pa.) Photographs">pitt_collection.405</padig:set>
         <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
         <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
@@ -880,6 +885,7 @@
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
         <padig:set string="Frederick J. Osterling Collection">pitt_collection.401</padig:set>
         <padig:set string="Gao Lecture Series">pitt_collection.327</padig:set>
+        <padig:set string="George A. Romero Archival Collection">pitt_collection.425</padig:set>
         <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
         <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
         <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
@@ -921,6 +927,7 @@
         <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
         <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
         <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
+        <padig:set string="Woman's Suffrage Movement in Pennsylvania Collection">pitt_collection.431</padig:set>
         
         <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
