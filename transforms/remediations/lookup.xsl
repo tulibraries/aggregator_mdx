@@ -42,46 +42,44 @@
 
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">
-        <padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
+        <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
+        <padig:url string="Cabrini University" code="CABRINI">http://cdm17305.contentdm.oclc.org/</padig:url>
+        <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
         <padig:url string="Curtis Institute of Music" code="CURTIS">http://cdm16667.contentdm.oclc.org/</padig:url>
+        <padig:url string="Documenting Pitt" code="DOCPITT">https://documenting.pitt.edu/</padig:url>
+        <padig:url string="Documenting Pitt" code="DOCPITT">http://documenting.pitt.edu/</padig:url>
+        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
+        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://www.cppdigitallibrary.org/</padig:url>
+        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://cdm15860.contentdm.oclc.org/</padig:url>
+        <padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
+        <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
+        <padig:url string="Lafayette College" code="LAFAYETTE">https://ldr.lafayette.edu/</padig:url>
+        <padig:url string="Lafayette College" code="LAFAYETTE">http://hdl.handle.net/10385/</padig:url>
+        <padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
+        <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
+        <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
+        <padig:url string="Moravian Historical Society" code="MORAVIAN">https://moravianhistoricalsociety.reclaim.hosting/oai</padig:url>
+        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
         <padig:url string="Pennsylvania State University" code="PENNSTATE">http://digital.libraries.psu.edu/</padig:url>
+        <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
+        <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">https://digitalcommons.pcom.edu/</padig:url>
+        <padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
+        <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
+        <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
         <padig:url string="Temple University" code="TEMPLE">http://digital.library.temple.edu/</padig:url>
         <padig:url string="University of Pennsylvania" code="PENN">http://digital.library.upenn.edu/</padig:url>
         <padig:url string="Villanova University" code="VILLANOVA">https://digital.library.villanova.edu/</padig:url>
+        <padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
+        <padig:url string="Thomas Jefferson University" code="TJU">https://jdc.jefferson.edu/</padig:url>
         <padig:url string="Thomas Jefferson University - East Falls" code="JEF">http://digitalcollections.philau.edu/</padig:url>
-        <padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
-        <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
-        <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">http://digitalcommons.pcom.edu/</padig:url>
-        <padig:url string="Philadelphia College of Osteopathic Medicine" code="PCOM">https://digitalcommons.pcom.edu/</padig:url>
-        <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
-        <padig:url string="Ursinus College" code="URSINUS">https://digitalcommons.ursinus.edu/</padig:url>
-        <padig:url string="University of Scranton" code="USCRANTON">http://digitalservices.scranton.edu/</padig:url>
-        <padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
         <padig:url string="University of Pennsylvania" code="PENN">http://dla.library.upenn.edu/dla/</padig:url>
         <padig:url string="University of Pittsburgh" code="PITT">https://digital.library.pitt.edu/</padig:url>
         <padig:url string="University of Pittsburgh" code="PITT">http://digital.library.pitt.edu/</padig:url>
-        <padig:url string="Documenting Pitt" code="DOCPITT"
-            >https://documenting.pitt.edu/</padig:url>
-        <padig:url string="Documenting Pitt" code="DOCPITT"
-            >http://documenting.pitt.edu/</padig:url>
-        <padig:url string="Thomas Jefferson University" code="TJU">http://jdc.jefferson.edu/</padig:url>
-        <padig:url string="Thomas Jefferson University" code="TJU">https://jdc.jefferson.edu/</padig:url>
-        <padig:url string="Susquehanna University" code="SUSQU">http://pahistoryharvest.com/</padig:url>
-        <padig:url string="Pennsylvania State Archives" code="PSA">http://psa.powerlibrary.org/</padig:url>
-        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://www.cppdigitallibrary.org/</padig:url>
-        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://www.cppdigitallibrary.org/</padig:url>
-        <padig:url string="Presbyterian Historical Society" code="PHS">https://digital.history.pcusa.org/</padig:url>
-        <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
-        <padig:url string="Science History Institute" code="SHI">https://digital.sciencehistory.org/</padig:url>
-        <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
-        <padig:url string="Lafayette College" code="LAFAYETTE">https://ldr.lafayette.edu/</padig:url>
-        <padig:url string="Lafayette College" code="LAFAYETTE">http://hdl.handle.net/10385/</padig:url>
-        <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
-        <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
-        <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
-        <padig:url string="Moravian Historical Society" code="MORAVIAN">https://moravianhistoricalsociety.reclaim.hosting/oai</padig:url>
-        <padig:url string="Cabrini University" code="CABRINI">http://cdm17305.contentdm.oclc.org/</padig:url>
+        <padig:url string="University of Scranton" code="USCRANTON">http://digitalservices.scranton.edu/</padig:url>
+        <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
+        <padig:url string="Ursinus College" code="URSINUS">https://digitalcommons.ursinus.edu/</padig:url>      
+        <padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>  
     </xsl:param>
 
     <!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -142,71 +140,76 @@
 
     <!-- lookup table for collection name by setSpec -->
     <xsl:param name="setSpecList">
-        <!-- Lehigh -->
-        <padig:set string="I Remain">letters</padig:set>
-        <padig:set string="Postcards">postal</padig:set>
-        <!-- LaSalle CDM -->
-        <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
-        <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
-        <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
-        <!-- Widener -->
-        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
-        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
-        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
-        <padig:set string="Brandywine College">p16069coll27</padig:set>
-        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll22</padig:set>
-        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
-        <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll26</padig:set>
-        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
-        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
-        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
-        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
-        <padig:set string="View Books">p16069coll32</padig:set>
-        <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
-        <padig:set string="Alumni Magazines - Alumni Bulletin and Alumnus -- 1952-1968">p16069coll3</padig:set>
-        <padig:set string="Alumni Magazines - Widener Magazine -- 1989-Present">p16069coll6</padig:set>
-        <padig:set string="Buildings">p16069coll1</padig:set>
-        <padig:set string="Caps and Uniforms">p270801coll5</padig:set>
-        <padig:set string="Course Catalogs  - Circulars -- 1856-1892">p16069coll11</padig:set>
-        <padig:set string="Course Catalogs - Pennsylvania Military College -- 1893-1966">p16069coll21</padig:set>
-        <padig:set string="Cowee Family Papers">p16069coll14</padig:set>
-        <padig:set string="Distinguished Alumni">p270801coll17</padig:set>
-        <padig:set string="Diversity Trailblazers">p16069coll33</padig:set>
-        <padig:set string="Fallen Soldiers - PMC and Widener Alumni Who Died in Combat">p16069coll35</padig:set>
-        <padig:set string="Female Trailblazers">p16069coll28</padig:set>
-        <padig:set string="Historical Chronologies">p270801coll10</padig:set>
-        <padig:set string="Histories - A History of Pennsylvania Military College -- 1821-1954">p270801coll8</padig:set>
-        <padig:set string="Histories - Faculty, Administration and Alumni Oral Histories">p16069coll8</padig:set>
-        <padig:set string="Histories - Pennsylvania Military College -- The Story of One Hundred Years">p16069coll7</padig:set>
-        <padig:set string="Libraries - From Old Main to Wolfgram">p16069coll29</padig:set>
-        <padig:set string="Newspapers - The Dome -- 1947-2008">p270801coll11</padig:set>
-        <padig:set string="Newspapers - The PMC News -- 1916-1950">p16069coll9</padig:set>
-        <padig:set string="Pennsylvania Military Preparatory School (PMPS)">p16069coll15</padig:set>
-        <padig:set string="Photographs - PMA and PMC">p15139coll2</padig:set>
-        <padig:set string="PMC 50th Anniversary Exhibits and Homecoming Videos">p16069coll30</padig:set>
-        <padig:set string="PMC During World War II">p16069coll4</padig:set>
-        <padig:set string="Postcards">p270801coll15</padig:set>
-        <padig:set string="Presidents on Parade">p16069coll25</padig:set>
-        <padig:set string="Scrapbooks">p270801coll4</padig:set>
-        <padig:set string="Seals and Emblems">p16069coll13</padig:set>
-        <padig:set string="Student Lists 1856-1930">p16069coll10</padig:set>
-        <padig:set string="Taps Lyrics - History">p16069coll36</padig:set>
-        <padig:set string="Yearbooks - Pennsylvania Military College and PMC Colleges -- 1900 - 1972">p270801coll6</padig:set>
-        <padig:set string="Yearbooks- Widener College and Widener University --  1973 - 2010">p15139coll3</padig:set>
-
-        <!-- Lafayette -->
-        <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
-        <padig:set string="General Eisenhower at Lafayette: Founders' Day 1946">collection:General+Eisenhower+at+Lafayette%3A+Founders%27+Day+1946</padig:set>
-        <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
-        <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald+and+Rella+Warner+Japan+Slides</padig:set>
-        <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald+and+Rella+Warner+Manchuria+Negatives</padig:set>
-        <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald+and+Rella+Warner+Postcards</padig:set>
-        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette+Newspaper+archive</padig:set>
-        <padig:set string="Lafayette Magazine Archive">collection:Lafayette+Magazine+archive</padig:set>
-        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis+de+Lafayette+Prints+Collection</padig:set>
-        <padig:set string="Marquis Magazine">collection:Marquis+Magazine</padig:set>
-        <padig:set string="McKelvy House">collection:McKelvy+House</padig:set>
-
+        
+        <!-- APS -->
+        <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
+        <padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
+        <padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
+        <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
+        <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
+        <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
+        
+        <!-- Bloomsburg -->
+        <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
+        <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
+        <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
+        <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
+        <padig:set string="Bloomsburg University World War I Student Files Collection">blmwwi</padig:set>
+        
+        <!-- Bryn Mawr -->
+        <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
+        <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
+        <padig:set string="Bryn Mawr College News">BMC_collnew</padig:set>
+        <padig:set string="Castle Collection of Natural History Illustrations">castle</padig:set>
+        <padig:set string="Early Advertising Collection">BMC_AdvertisingCards</padig:set>
+        <padig:set string="Bryn Mawr College Postcards">BMC_postcard</padig:set>
+        <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
+        <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
+        <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
+        
+        <!-- Cabrini CDM-->
+        <padig:set string="America's First Citizen Saint - The Saint Frances Cabrini Collection">p17305coll22</padig:set>
+        <padig:set string="Personal Effects">p17305coll1</padig:set>
+        <padig:set string="Relics">p17305coll2</padig:set>
+        <padig:set string="Travels">p17305coll5</padig:set>
+        <padig:set string="Popes and Prelates">p17305coll6</padig:set>
+        <padig:set string="Beatification and Canonization Documents">p17305coll7</padig:set>
+        <padig:set string="Beatification and Canonization Photographs">p17305coll8</padig:set>
+        <padig:set string="Beatification and Canonization Subjects of Miracles">p17305coll9</padig:set>
+        <padig:set string="Mother Cabrini Letters">p17305coll10</padig:set>
+        <padig:set string="Photographs">p17305coll11</padig:set>
+        <padig:set string="International Missions">p17305coll3</padig:set>
+        <padig:set string="New Orleans Louisiana Missions">p17305coll13</padig:set>
+        <padig:set string="Memorie">p17305coll15</padig:set>
+        <padig:set string="Saint Frances Cabrini Documents">p17305coll16</padig:set>
+        <padig:set string="Saint Frances Cabrini Commemorative Items">p17305coll17</padig:set>
+        <padig:set string="Sisters of Providence">p17305coll26</padig:set>
+        
+        <!-- Curtis -->
+        <padig:set string="de Pasquale collection">myfirst</padig:set>
+        <padig:set string="Curtis program books">p16667coll1</padig:set>
+        <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
+        <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
+        <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
+        
+        <!-- Documenting Pitt -->
+        <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
+        <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
+        <padig:set string="Pitt Athletics">pitt_collection.4</padig:set>
+        <padig:set string="Pitt Campus Life">pitt_collection.160</padig:set>
+        <padig:set string="Pitt Faculty">pitt_collection.5</padig:set>
+        <padig:set string="Pitt Nationality Rooms">pitt_collection.6</padig:set>
+        <padig:set string="Pitt News">pitt_collection.9</padig:set>
+        <padig:set string="Pitt Photographs">pitt_collection.7</padig:set>
+        <padig:set string="Pitt Publications">pitt_collection.3</padig:set>
+        <padig:set string="Pitt Student Life">pitt_collection.8</padig:set>
+        <padig:set string="Pitt Yearbooks">pitt_collection.12</padig:set>
+        <padig:set string="University Catalogues">pitt_collection.326</padig:set>
+        <padig:set string="University of Pittsburgh Bradford">pitt_collection.330</padig:set>
+        <padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
+        <padig:set string="University of Pittsburgh Johnstown">pitt_collection.192</padig:set>
+        <padig:set string="University Times">pitt_collection.325</padig:set>
+        
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
         <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
@@ -226,63 +229,7 @@
         <padig:set string="Reynolds Family Papers Collection">scholars-square_sc--reynolds</padig:set>
         <padig:set string="Wohlsen Construction Company Marketing and Advertising Collection">scholars-square_sc--wohlsen-marketing</padig:set>
         <padig:set string="Wohlsen Construction Company Photograph Collection">scholars-square_sc--wohlsen-photos</padig:set>
-        <!-- PCOM -->
-        <padig:set string="Classic Osteopathic Medical Works">publication:classic_med_works</padig:set>
-        <padig:set string="Commencements">publication:commencements</padig:set>
-        <padig:set string="Herald of Osteopathy">publication:herald_of_osteopathy</padig:set>
-        <padig:set string="Osteopathic Medicine">publication:osteopathic_medicine</padig:set>
-        <padig:set string="Digest">publication:digest</padig:set>
-        <padig:set string="Philadelphia Journal of Osteopathy">publication:phila_j_osteopathy</padig:set>
-        <padig:set string="The Axone">publication:axone</padig:set>
-        <padig:set string="Yearbooks">publication:yearbooks</padig:set>
-        <!-- Ursinus -->
-        <padig:set string="The Dutchman / The Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
-        <padig:set string="Pennsylvania Folklife Magazine">publication:pafolklifemag</padig:set>
-        <padig:set string="Pennsylvania Folklife Magazine Indexes">publication:pafolklifemagindex</padig:set>
-        <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
-        <padig:set string="Yost History of Ursinus College">publication:yosthistory</padig:set>
-        <padig:set string="Ursinus College Fraktur Collection">publication:ursinus_fraktur</padig:set>
-        <!-- TJU -->
-        <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
-        <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
-        <padig:set string="American Red Cross Base Hospital No. 38">publication:base_hospital_no_38</padig:set>
-        <padig:set string="American Red Cross base hospital no. 38 in the world war by W. M. L. Coplin.">publication:american_red_cross_base_hospital</padig:set>
-        <padig:set string="Ariel">publication:ariel</padig:set>
-        <padig:set string="Gemrig’s illustrated catalogue of surgical instruments, ca. 1868">publication:catalogue_of_surgical_instruments</padig:set>
-        <padig:set string="Historical Addresses">publication:historical_addresses</padig:set>
-        <padig:set string="Historical Photographs - Center City">publication:historical_photos</padig:set>
-        <padig:set string="Historical Photographs - East Falls">publication:historical_photos_ef</padig:set>
-        <padig:set string="History of the anatomy act of Pennsylvania, WS Forbes, 1898">publication:anatomy_act_of_penn</padig:set>
-        <padig:set string="Jefferson Biographies">publication:jeffbiographies</padig:set>
-        <padig:set string="Jefferson College of Biomedical Sciences Commencements">publication:jcbscommencement</padig:set>
-        <padig:set string="Jefferson College of Health Professions and Jefferson College of Pharmacy Commencements">publication:jchpjcpcommencement</padig:set>
-        <padig:set string="Jefferson College of Nursing Commencements">publication:jcncommencement</padig:set>
-        <padig:set string="Jefferson College of Population Health Commencements">publication:jcphcommencement</padig:set>
-        <padig:set string="Jefferson Medical College Catalogs">publication:jmc_catalogs</padig:set>
-        <padig:set string="Jefferson Medical College Opening Addresses">publication:jmcopeningaddresses</padig:set>
-        <padig:set string="Jefferson Medical College Records Books">publication:jmcrecordsbooks</padig:set>
-        <padig:set string="Jefferson Medical College Theses">publication:jmctheses</padig:set>
-        <padig:set string="Jefferson Medical College Yearbooks">publication:jmc_yearbooks</padig:set>
-        <padig:set string="Jefferson Review">publication:jefferson_review</padig:set>
-        <padig:set string="Jefferson Sidney Kimmel Medical College Class Day">publication:skmcclassday</padig:set>
-        <padig:set string="Jefferson Sidney Kimmel Medical College Commencements">publication:skmccommencement</padig:set>
-        <padig:set string="John Plimpton Green Letters">publication:jpgreenletters</padig:set>
-        <padig:set string="Lecture &amp; Matriculation Tickets">publication:lecturetickets</padig:set>
-        <padig:set string="Manuscripts and Journals">publication:manuscripts_journals</padig:set>
-        <padig:set string="Medical Notebooks">publication:medicalnotebooks</padig:set>
-        <padig:set string="Modern Surgery, 4th edition, by John Chalmers Da Costa">publication:dacosta_modernsurgery</padig:set>
-        <padig:set string="Nursing Alumni Bulletins">publication:nursing_alumni_bulletin</padig:set>
-        <padig:set string="Obstetrics: The Science and The Art, by Charles D. Meigs, M.D.">publication:meigsobstetrics</padig:set>
-        <padig:set string="On the anatomy of the breast, by Sir Astley Paston Cooper, 1840">publication:cooper</padig:set>
-        <padig:set string="Textile Printing Blocks">publication:textileprintingblocks</padig:set>
-        <padig:set string="The Throat and the Voice, by J. Solis Cohen, M.D. 1879">publication:throat_and_voice</padig:set>
-        <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
-        <!-- Curtis -->
-        <padig:set string="de Pasquale collection">myfirst</padig:set>
-        <padig:set string="Curtis program books">p16667coll1</padig:set>
-        <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
-        <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
-        <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
+        
         <!-- Historic Pittsburgh -->
         <padig:set string="Adolph M. Foerster Collection">pitt_collection.168</padig:set>
         <padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
@@ -506,173 +453,21 @@
         <padig:set string="William M. Darlington Collection of Fort Pitt Copybooks">pitt_collection.30</padig:set>
         <padig:set string="William Pitt Family Papers">pitt_collection.117</padig:set>
         <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
-        <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>             
-        <!-- University of Pittsburgh -->
-        <padig:set string="19th Century Schoolbooks">pitt_collection.120</padig:set>
-        <padig:set string="Abner Shimony Papers">pitt_collection.121</padig:set>
-        <padig:set string="Alberto Britos Scrapbook on Nicolás Guillén Visit to Uruguay">pitt_collection.378</padig:set>
-        <padig:set string="Allen Family Papers">pitt_collection.122</padig:set>
-        <padig:set string="An Attempt to Describe the Future of the United States">pitt_collection.245</padig:set>
-        <padig:set string="Archives of Scientific Philosophy">pitt_collection.123</padig:set>
-        <padig:set string="Arlen Specter Senatorial Papers">pitt_collection.288</padig:set>
-        <padig:set string="Audubon's Birds of America">pitt_collection.1</padig:set>
-        <padig:set string="Autograph Files of H. Edmund Friesell">pitt_collection.169</padig:set>
-        <padig:set string="Barry Rosensteel Japanese Print Collection">pitt_collection.124</padig:set>
-        <padig:set string="Being Human Podcast Recordings">pitt_collection.389</padig:set>
-        <padig:set string="Bruno De Finetti Papers">pitt_collection.125</padig:set>
-        <padig:set string="Burd-Shippen Family Papers">pitt_collection.115</padig:set>
-        <padig:set string="Carl Gustav Hempel Papers">pitt_collection.126</padig:set>
-        <padig:set string="Charles and Frankie Pace Collection">pitt_collection.383</padig:set>
-        <padig:set string="Chartres: Cathedral of Notre-Dame">pitt_collection.127</padig:set>
-        <padig:set string="China's Cultural Revolution in Memories: The CR/10 Project">pitt_collection.302</padig:set>
-        <padig:set string="Chinese Land Records">pitt_collection.179</padig:set>
-        <padig:set string="Chinese Marriage Documents">pitt_collection.196</padig:set>
-        <padig:set string="Chinese Overseas Student Newsletters">pitt_collection.244</padig:set>
-        <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
-        <padig:set string="Dialogues in Afrolatinidad">pitt_collection.368</padig:set>
-        <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
-        <padig:set string="Duquesne Light Photograph Collection">pitt_collection.396</padig:set>
-        <padig:set string="Emergency Influenza Hospital Nurses (Duquesne, Pa.) Photographs">pitt_collection.405</padig:set>
-        <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
-        <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
-        <padig:set string="Ethnic Fraternal Organizations Oral History Project Collection">pitt_collection.412</padig:set>
-        <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
-        <padig:set string="Fox Chapel Garden Club Records">pitt_collection.360</padig:set>
-        <padig:set string="Frances Hesselbein Papers">pitt_collection.367</padig:set>
-        <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
-        <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
-        <padig:set string="Frederick J. Osterling Collection">pitt_collection.401</padig:set>
-        <padig:set string="Gao Lecture Series">pitt_collection.327</padig:set>
-        <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
-        <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
-        <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
-        <padig:set string="Herman Mishkin Photograph Collection">pitt_collection.393</padig:set>
-        <padig:set string="Hervey Allen Papers">pitt_collection.129</padig:set>
-        <padig:set string="Homestead Album Oral History Project Records">pitt_collection.409</padig:set>
-        <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
-        <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
-        <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
-        <padig:set string="Kuntu Repertory Theatre Records">pitt_collection.399</padig:set>
-        <padig:set string="Latin American Postcard Collection">pitt_collection.400</padig:set>
-        <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
-        <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
-        <padig:set string="Oscar Knight Diaries">pitt_collection.394</padig:set>
-        <padig:set string="Pittsburgh Renaissance Project: The Stanton Belfour Oral History Collection">pitt_collection.410</padig:set>
-        <padig:set string="Pittsburgh Youth Olympiad Photographs">pitt_collection.403</padig:set>
-        <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
-        <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
-        <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
-        <padig:set string="Rose Rand Papers">pitt_collection.134</padig:set>
-        <padig:set string="Rudolf Carnap Papers">pitt_collection.135</padig:set>
-        <padig:set string="Sarah Cordelia Mellon and Alan Magee Scaife Wedding Album">pitt_collection.395</padig:set>
-        <padig:set string="Shooting Star Review">pitt_collection.299</padig:set>
-        <padig:set string="Southern Blacks' Migration to Pittsburgh Oral History Project">pitt_collection.411</padig:set>
-        <padig:set string="Stalinka: Digital Library of Staliniana">pitt_collection.136</padig:set>
-        <padig:set string="State and Local Government Archives Oral History Collection">pitt_collection.408</padig:set>
-        <padig:set string="Steel Process Lantern Slide Collection">pitt_collection.200</padig:set>
-        <padig:set string="Stockton Family Letters">pitt_collection.118</padig:set>
-        <padig:set string="Thaddeus Sheldon Papers">pitt_collection.113</padig:set>
-        <padig:set string="Theodore M. Finney Music Library Collection">pitt_collection.295</padig:set>
-        <padig:set string="Thomas G. Masaryk Papers">pitt_collection.319</padig:set>
-        <padig:set string="University of Pittsburgh Board of Trustees Public Meeting Minutes">pitt_collection.282</padig:set>
-        <padig:set string="University of Pittsburgh Press Digital Editions">pitt_collection.137</padig:set>
-        <padig:set string="V.F. Wachsmuth Treatise">pitt_collection.256</padig:set>
-        <padig:set string="Vézelay: Benedictine Abbey of Sainte Marie Madeleine">pitt_collection.138</padig:set>
-        <padig:set string="VIDEOSCOPE Magazine">pitt_collection.392</padig:set>
-        <padig:set string="Visuals for Foreign Language Instruction">pitt_collection.139</padig:set>
-        <padig:set string="Walter and Martha Leuba Papers">pitt_collection.140</padig:set>
-        <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
-        <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
-        <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
-        <!-- Documenting Pitt -->
-        <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
-        <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
-        <padig:set string="Pitt Athletics">pitt_collection.4</padig:set>
-        <padig:set string="Pitt Campus Life">pitt_collection.160</padig:set>
-        <padig:set string="Pitt Faculty">pitt_collection.5</padig:set>
-        <padig:set string="Pitt Nationality Rooms">pitt_collection.6</padig:set>
-        <padig:set string="Pitt News">pitt_collection.9</padig:set>
-        <padig:set string="Pitt Photographs">pitt_collection.7</padig:set>
-        <padig:set string="Pitt Publications">pitt_collection.3</padig:set>
-        <padig:set string="Pitt Student Life">pitt_collection.8</padig:set>
-        <padig:set string="Pitt Yearbooks">pitt_collection.12</padig:set>
-        <padig:set string="University Catalogues">pitt_collection.326</padig:set>
-        <padig:set string="University of Pittsburgh Bradford">pitt_collection.330</padig:set>
-        <padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
-        <padig:set string="University of Pittsburgh Johnstown">pitt_collection.192</padig:set>
-        <padig:set string="University Times">pitt_collection.325</padig:set>
+        <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
         
-        <!-- University of Scranton -->
-        <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
-        <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
-        <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
-        <padig:set string="Medieval Manuscripts Collection">medieval</padig:set>
-        <padig:set string="P. W. Costello and Family Art Collection">costello</padig:set>
-        <padig:set string="Passionist Historical Archives Collection">passionists</padig:set>
-        <padig:set string="Scranton Local History Collection">p9000coll6</padig:set>
-        <padig:set string="University of Scranton Aquinas">aquinas</padig:set>
-        <padig:set string="University of Scranton Basketball Collection">basketball</padig:set>
-        <padig:set string="University of Scranton Commencement Programs">commencement</padig:set>
-        <padig:set string="University of Scranton Course Catalogs">p15111coll4</padig:set>
-        <padig:set string="University of Scranton Department Publications">publications</padig:set>
-        <padig:set string="University of Scranton Football Collection">p15111coll2</padig:set>
-        <padig:set string="University of Scranton Photos and Documents">p9000coll7</padig:set>
-        <padig:set string="University of Scranton PR Publications and Press Releases">prpubs</padig:set>
-        <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
-        <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
-        <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
-        <!-- Bloomsburg -->
-        <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
-        <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
-        <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
-        <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
-        <padig:set string="Bloomsburg University World War I Student Files Collection">blmwwi</padig:set>
-        <!-- Millersville -->
-        <padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
-        <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
-        <!-- Slippery Rock -->
-        <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
-        <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
-        <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
-        <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
-        <!-- Westchester -->
-        <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
-        <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
-        <padig:set string="West Chester University Aralia Press">qwcaralia</padig:set>
-        <padig:set string="West Chester University Archaeology Prehistoric Artifacts">qwcarch</padig:set>
-        <padig:set string="West Chester University Archives">wcutreasure</padig:set>
-        <padig:set string="West Chester University Chester County Business">chester</padig:set>
-        <padig:set string="West Chester University Civil War">qwccivilwar</padig:set>
-        <padig:set string="West Chester University Lowell Gardenour United States Air Force Asia Collection">p17189coll4</padig:set>
-        <padig:set string="West Chester University Philips Autographed Library">philips</padig:set>
-        <padig:set string="West Chester University Photographs">qwcphoto</padig:set>
-        <padig:set string="West Chester University Postcards">qwcpost</padig:set>
-        <padig:set string="West Chester University Redware">redware</padig:set>
-        <padig:set string="West Chester University Sharples">sharples</padig:set>
-        <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
-        <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
-        <padig:set string="West Chester University WPA Collection">wpa</padig:set>
-        <!-- Bryn Mawr -->
-        <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
-        <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
-        <padig:set string="Bryn Mawr College News">BMC_collnew</padig:set>
-        <padig:set string="Castle Collection of Natural History Illustrations">castle</padig:set>
-        <padig:set string="Early Advertising Collection">BMC_AdvertisingCards</padig:set>
-        <padig:set string="Bryn Mawr College Postcards">BMC_postcard</padig:set>
-        <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
-        <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
-        <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
-        <!-- Swarthaverford -->
-        <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
-        <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
-        <!-- APS -->
-        <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
-        <padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
-        <padig:set string="Thomas Paine Political Cartoons">graphics_Mss.B.P165</padig:set>
-        <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
-        <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
-        <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
-
+        <!-- Lafayette -->
+        <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
+        <padig:set string="General Eisenhower at Lafayette: Founders' Day 1946">collection:General+Eisenhower+at+Lafayette%3A+Founders%27+Day+1946</padig:set>
+        <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
+        <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald+and+Rella+Warner+Japan+Slides</padig:set>
+        <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald+and+Rella+Warner+Manchuria+Negatives</padig:set>
+        <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald+and+Rella+Warner+Postcards</padig:set>
+        <padig:set string="Lafayette Newspaper Archive">collection:Lafayette+Newspaper+archive</padig:set>
+        <padig:set string="Lafayette Magazine Archive">collection:Lafayette+Magazine+archive</padig:set>
+        <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis+de+Lafayette+Prints+Collection</padig:set>
+        <padig:set string="Marquis Magazine">collection:Marquis+Magazine</padig:set>
+        <padig:set string="McKelvy House">collection:McKelvy+House</padig:set>
+        
         <!-- LaSalle Bepress -->
         <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
         <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
@@ -703,7 +498,16 @@
         <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
         <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
         <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
-
+        
+        <!-- LaSalle CDM -->
+        <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
+        <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
+        <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
+        
+        <!-- Lehigh -->
+        <padig:set string="I Remain">letters</padig:set>
+        <padig:set string="Postcards">postal</padig:set>
+        
         <!-- Library Company -->
         <!-- Includes setspecs used in variables.json, but also any other setspec that could be a nested collection -->
         <padig:set string="&quot;At the Instance&quot; Illustration Collection">Islandora_ATII1</padig:set>
@@ -908,22 +712,23 @@
         <padig:set string="World War One Collection">Islandora_WWI01</padig:set>
         <padig:set string="World War One Photographs and Ephemera">Islandora_WWIP2</padig:set>
         <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>
-
-    <!-- Presbyterian Historical Society --> 
-        <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
-        <padig:set string="Church Buildings">islandora_churchbuildings</padig:set>
-        <padig:set string="Henry Harmon Spalding and Eliza Hart Spalding Papers">islandora_spalding</padig:set>
-        <padig:set string="Katie G. Cannon Collection">islandora_kgc</padig:set>
-        <padig:set string="Oral Histories Collection">islandora_oralhistories_collection</padig:set>
-        <padig:set string="Presbyterian Historical Society Audio Collection">islandora_audio_collection</padig:set>
-        <padig:set string="Presbyterian Historical Society Map Collection">islandora_maps</padig:set>
-        <padig:set string="Presbyterian Historical Society Portraits">islandora_portraits</padig:set>
-        <padig:set string="Presbyterian Historical Society Video Collection">islandora_video_collection</padig:set>
-        <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
-        <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
-        <padig:set string="Tehran Community School">islandora_tehran_community_school</padig:set>
-
-    <!-- Penn State -->
+        
+        
+        <!-- Millersville -->
+        <padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
+        <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
+        
+        <!-- PCOM -->
+        <padig:set string="Classic Osteopathic Medical Works">publication:classic_med_works</padig:set>
+        <padig:set string="Commencements">publication:commencements</padig:set>
+        <padig:set string="Herald of Osteopathy">publication:herald_of_osteopathy</padig:set>
+        <padig:set string="Osteopathic Medicine">publication:osteopathic_medicine</padig:set>
+        <padig:set string="Digest">publication:digest</padig:set>
+        <padig:set string="Philadelphia Journal of Osteopathy">publication:phila_j_osteopathy</padig:set>
+        <padig:set string="The Axone">publication:axone</padig:set>
+        <padig:set string="Yearbooks">publication:yearbooks</padig:set>
+        
+        <!-- Penn State -->
         <padig:set string="A Few Good Women">afgw</padig:set>
         <padig:set string="A. E. Bye Papers">aebye</padig:set>
         <padig:set string="A. J. Thompson Civil War Diary">ajt</padig:set>
@@ -978,24 +783,242 @@
         <padig:set string="Women's Suffrage Collection">suffrage</padig:set>
         <padig:set string="World War I Glass Plate Stereographs">ww1stereo</padig:set>
         <padig:set string="WPA Bituminous Coal Mine Maps">wpamaps</padig:set>
-
-    <!-- Cabrini CDM-->
-        <padig:set string="America's First Citizen Saint - The Saint Frances Cabrini Collection">p17305coll22</padig:set>
-        <padig:set string="Personal Effects">p17305coll1</padig:set>
-        <padig:set string="Relics">p17305coll2</padig:set>
-        <padig:set string="Travels">p17305coll5</padig:set>
-        <padig:set string="Popes and Prelates">p17305coll6</padig:set>
-        <padig:set string="Beatification and Canonization Documents">p17305coll7</padig:set>
-        <padig:set string="Beatification and Canonization Photographs">p17305coll8</padig:set>
-        <padig:set string="Beatification and Canonization Subjects of Miracles">p17305coll9</padig:set>
-        <padig:set string="Mother Cabrini Letters">p17305coll10</padig:set>
-        <padig:set string="Photographs">p17305coll11</padig:set>
-        <padig:set string="International Missions">p17305coll3</padig:set>
-        <padig:set string="New Orleans Louisiana Missions">p17305coll13</padig:set>
-        <padig:set string="Memorie">p17305coll15</padig:set>
-        <padig:set string="Saint Frances Cabrini Documents">p17305coll16</padig:set>
-        <padig:set string="Saint Frances Cabrini Commemorative Items">p17305coll17</padig:set>
-        <padig:set string="Sisters of Providence">p17305coll26</padig:set>
+        
+        <!-- Presbyterian Historical Society --> 
+        <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
+        <padig:set string="Church Buildings">islandora_churchbuildings</padig:set>
+        <padig:set string="Henry Harmon Spalding and Eliza Hart Spalding Papers">islandora_spalding</padig:set>
+        <padig:set string="Katie G. Cannon Collection">islandora_kgc</padig:set>
+        <padig:set string="Oral Histories Collection">islandora_oralhistories_collection</padig:set>
+        <padig:set string="Presbyterian Historical Society Audio Collection">islandora_audio_collection</padig:set>
+        <padig:set string="Presbyterian Historical Society Map Collection">islandora_maps</padig:set>
+        <padig:set string="Presbyterian Historical Society Portraits">islandora_portraits</padig:set>
+        <padig:set string="Presbyterian Historical Society Video Collection">islandora_video_collection</padig:set>
+        <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
+        <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
+        <padig:set string="Tehran Community School">islandora_tehran_community_school</padig:set>
+        
+        <!-- Slippery Rock -->
+        <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
+        <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
+        <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
+        <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
+        
+        <!-- Swarthaverford -->
+        <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
+        <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
+        
+        <!-- TJU -->
+        <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
+        <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
+        <padig:set string="American Red Cross Base Hospital No. 38">publication:base_hospital_no_38</padig:set>
+        <padig:set string="American Red Cross base hospital no. 38 in the world war by W. M. L. Coplin.">publication:american_red_cross_base_hospital</padig:set>
+        <padig:set string="Ariel">publication:ariel</padig:set>
+        <padig:set string="Gemrig’s illustrated catalogue of surgical instruments, ca. 1868">publication:catalogue_of_surgical_instruments</padig:set>
+        <padig:set string="Historical Addresses">publication:historical_addresses</padig:set>
+        <padig:set string="Historical Photographs - Center City">publication:historical_photos</padig:set>
+        <padig:set string="Historical Photographs - East Falls">publication:historical_photos_ef</padig:set>
+        <padig:set string="History of the anatomy act of Pennsylvania, WS Forbes, 1898">publication:anatomy_act_of_penn</padig:set>
+        <padig:set string="Jefferson Biographies">publication:jeffbiographies</padig:set>
+        <padig:set string="Jefferson College of Biomedical Sciences Commencements">publication:jcbscommencement</padig:set>
+        <padig:set string="Jefferson College of Health Professions and Jefferson College of Pharmacy Commencements">publication:jchpjcpcommencement</padig:set>
+        <padig:set string="Jefferson College of Nursing Commencements">publication:jcncommencement</padig:set>
+        <padig:set string="Jefferson College of Population Health Commencements">publication:jcphcommencement</padig:set>
+        <padig:set string="Jefferson Medical College Catalogs">publication:jmc_catalogs</padig:set>
+        <padig:set string="Jefferson Medical College Opening Addresses">publication:jmcopeningaddresses</padig:set>
+        <padig:set string="Jefferson Medical College Records Books">publication:jmcrecordsbooks</padig:set>
+        <padig:set string="Jefferson Medical College Theses">publication:jmctheses</padig:set>
+        <padig:set string="Jefferson Medical College Yearbooks">publication:jmc_yearbooks</padig:set>
+        <padig:set string="Jefferson Review">publication:jefferson_review</padig:set>
+        <padig:set string="Jefferson Sidney Kimmel Medical College Class Day">publication:skmcclassday</padig:set>
+        <padig:set string="Jefferson Sidney Kimmel Medical College Commencements">publication:skmccommencement</padig:set>
+        <padig:set string="John Plimpton Green Letters">publication:jpgreenletters</padig:set>
+        <padig:set string="Lecture &amp; Matriculation Tickets">publication:lecturetickets</padig:set>
+        <padig:set string="Manuscripts and Journals">publication:manuscripts_journals</padig:set>
+        <padig:set string="Medical Notebooks">publication:medicalnotebooks</padig:set>
+        <padig:set string="Modern Surgery, 4th edition, by John Chalmers Da Costa">publication:dacosta_modernsurgery</padig:set>
+        <padig:set string="Nursing Alumni Bulletins">publication:nursing_alumni_bulletin</padig:set>
+        <padig:set string="Obstetrics: The Science and The Art, by Charles D. Meigs, M.D.">publication:meigsobstetrics</padig:set>
+        <padig:set string="On the anatomy of the breast, by Sir Astley Paston Cooper, 1840">publication:cooper</padig:set>
+        <padig:set string="Textile Printing Blocks">publication:textileprintingblocks</padig:set>
+        <padig:set string="The Throat and the Voice, by J. Solis Cohen, M.D. 1879">publication:throat_and_voice</padig:set>
+        <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
+        
+        <!-- University of Pittsburgh -->
+        <padig:set string="19th Century Schoolbooks">pitt_collection.120</padig:set>
+        <padig:set string="Abner Shimony Papers">pitt_collection.121</padig:set>
+        <padig:set string="Alberto Britos Scrapbook on Nicolás Guillén Visit to Uruguay">pitt_collection.378</padig:set>
+        <padig:set string="Allegheny County Medical Society Minute Book">pitt_collection.430</padig:set>
+        <padig:set string="Allen Family Papers">pitt_collection.122</padig:set>
+        <padig:set string="An Attempt to Describe the Future of the United States">pitt_collection.245</padig:set>
+        <padig:set string="Archives of Scientific Philosophy">pitt_collection.123</padig:set>
+        <padig:set string="Arlen Specter Senatorial Papers">pitt_collection.288</padig:set>
+        <padig:set string="Audubon's Birds of America">pitt_collection.1</padig:set>
+        <padig:set string="Autograph Files of H. Edmund Friesell">pitt_collection.169</padig:set>
+        <padig:set string="Barry Rosensteel Japanese Print Collection">pitt_collection.124</padig:set>
+        <padig:set string="Being Human Podcast Recordings">pitt_collection.389</padig:set>
+        <padig:set string="Brashear Association Records">pitt_collection.402</padig:set>
+        <padig:set string="Bruno De Finetti Papers">pitt_collection.125</padig:set>
+        <padig:set string="Burd-Shippen Family Papers">pitt_collection.115</padig:set>
+        <padig:set string="Byrd R. Brown Autograph Album">pitt_collection.434</padig:set>
+        <padig:set string="Carl Gustav Hempel Papers">pitt_collection.126</padig:set>
+        <padig:set string="Charles and Frankie Pace Collection">pitt_collection.383</padig:set>
+        <padig:set string="Charles J. Dengler Jr. Diary">pitt_collection.427</padig:set>
+        <padig:set string="Chartres: Cathedral of Notre-Dame">pitt_collection.127</padig:set>
+        <padig:set string="China's Cultural Revolution in Memories: The CR/10 Project">pitt_collection.302</padig:set>
+        <padig:set string="Chinese Land Records">pitt_collection.179</padig:set>
+        <padig:set string="Chinese Marriage Documents">pitt_collection.196</padig:set>
+        <padig:set string="Chinese Overseas Student Newsletters">pitt_collection.244</padig:set>
+        <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
+        <padig:set string="Dialogues in Afrolatinidad">pitt_collection.368</padig:set>
+        <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
+        <padig:set string="Duquesne Light Photograph Collection">pitt_collection.396</padig:set>
+        <padig:set string="Edward Rocco (E.R.) Montagna Diary">pitt_collection.433</padig:set>
+        <padig:set string="Emergency Influenza Hospital Nurses (Duquesne, Pa.) Photographs">pitt_collection.405</padig:set>
+        <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
+        <padig:set string="Erroll Garner Archive">pitt_collection.340</padig:set>
+        <padig:set string="Ethnic Fraternal Organizations Oral History Project Collection">pitt_collection.412</padig:set>
+        <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
+        <padig:set string="Fox Chapel Garden Club Records">pitt_collection.360</padig:set>
+        <padig:set string="Frances Hesselbein Papers">pitt_collection.367</padig:set>
+        <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
+        <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
+        <padig:set string="Frederick J. Osterling Collection">pitt_collection.401</padig:set>
+        <padig:set string="Gao Lecture Series">pitt_collection.327</padig:set>
+        <padig:set string="George A. Romero Archival Collection">pitt_collection.425</padig:set>
+        <padig:set string="George Washington Collection">pitt_collection.183</padig:set>
+        <padig:set string="Hans Reichenbach Papers">pitt_collection.177</padig:set>
+        <padig:set string="Henry F. and Kate B. Hebley Collection of Soviet Lantern Slides">pitt_collection.335</padig:set>
+        <padig:set string="Herman Mishkin Photograph Collection">pitt_collection.393</padig:set>
+        <padig:set string="Hervey Allen Papers">pitt_collection.129</padig:set>
+        <padig:set string="Homestead Album Oral History Project Records">pitt_collection.409</padig:set>
+        <padig:set string="Issac Meason Ledger and Mount Vernon Furnace Records">pitt_collection.369</padig:set>
+        <padig:set string="James Wilkinson Papers">pitt_collection.116</padig:set>
+        <padig:set string="Kōgyo: The Art of Noh">pitt_collection.130</padig:set>
+        <padig:set string="Kuntu Repertory Theatre Records">pitt_collection.399</padig:set>
+        <padig:set string="Latin American Postcard Collection">pitt_collection.400</padig:set>
+        <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
+        <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
+        <padig:set string="Oscar Knight Diaries">pitt_collection.394</padig:set>
+        <padig:set string="Pittsburgh Renaissance Project: The Stanton Belfour Oral History Collection">pitt_collection.410</padig:set>
+        <padig:set string="Pittsburgh Youth Olympiad Photographs">pitt_collection.403</padig:set>
+        <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
+        <padig:set string="Rare Books and Imprints">pitt_collection.298</padig:set>
+        <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
+        <padig:set string="Rose Rand Papers">pitt_collection.134</padig:set>
+        <padig:set string="Rudolf Carnap Papers">pitt_collection.135</padig:set>
+        <padig:set string="Sarah Cordelia Mellon and Alan Magee Scaife Wedding Album">pitt_collection.395</padig:set>
+        <padig:set string="Shooting Star Review">pitt_collection.299</padig:set>
+        <padig:set string="Southern Blacks' Migration to Pittsburgh Oral History Project">pitt_collection.411</padig:set>
+        <padig:set string="Stalinka: Digital Library of Staliniana">pitt_collection.136</padig:set>
+        <padig:set string="State and Local Government Archives Oral History Collection">pitt_collection.408</padig:set>
+        <padig:set string="Steel Process Lantern Slide Collection">pitt_collection.200</padig:set>
+        <padig:set string="Stockton Family Letters">pitt_collection.118</padig:set>
+        <padig:set string="Thaddeus Sheldon Papers">pitt_collection.113</padig:set>
+        <padig:set string="Theodore M. Finney Music Library Collection">pitt_collection.295</padig:set>
+        <padig:set string="Thomas G. Masaryk Papers">pitt_collection.319</padig:set>
+        <padig:set string="University of Pittsburgh Board of Trustees Public Meeting Minutes">pitt_collection.282</padig:set>
+        <padig:set string="University of Pittsburgh Press Digital Editions">pitt_collection.137</padig:set>
+        <padig:set string="V.F. Wachsmuth Treatise">pitt_collection.256</padig:set>
+        <padig:set string="Vézelay: Benedictine Abbey of Sainte Marie Madeleine">pitt_collection.138</padig:set>
+        <padig:set string="VIDEOSCOPE Magazine">pitt_collection.392</padig:set>
+        <padig:set string="Visuals for Foreign Language Instruction">pitt_collection.139</padig:set>
+        <padig:set string="Walter and Martha Leuba Papers">pitt_collection.140</padig:set>
+        <padig:set string="Wesley C. Salmon Papers">pitt_collection.141</padig:set>
+        <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
+        <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
+        <padig:set string="Woman's Suffrage Movement in Pennsylvania Collection">pitt_collection.431</padig:set>
+        
+        <!-- University of Scranton -->
+        <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
+        <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
+        <padig:set string="International Correspondence Schools of Scranton Collection">ics</padig:set>
+        <padig:set string="Medieval Manuscripts Collection">medieval</padig:set>
+        <padig:set string="P. W. Costello and Family Art Collection">costello</padig:set>
+        <padig:set string="Passionist Historical Archives Collection">passionists</padig:set>
+        <padig:set string="Scranton Local History Collection">p9000coll6</padig:set>
+        <padig:set string="University of Scranton Aquinas">aquinas</padig:set>
+        <padig:set string="University of Scranton Basketball Collection">basketball</padig:set>
+        <padig:set string="University of Scranton Commencement Programs">commencement</padig:set>
+        <padig:set string="University of Scranton Course Catalogs">p15111coll4</padig:set>
+        <padig:set string="University of Scranton Department Publications">publications</padig:set>
+        <padig:set string="University of Scranton Football Collection">p15111coll2</padig:set>
+        <padig:set string="University of Scranton Photos and Documents">p9000coll7</padig:set>
+        <padig:set string="University of Scranton PR Publications and Press Releases">prpubs</padig:set>
+        <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
+        <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
+        <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
+        
+        <!-- Ursinus -->
+        <padig:set string="The Dutchman / The Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
+        <padig:set string="Pennsylvania Folklife Magazine">publication:pafolklifemag</padig:set>
+        <padig:set string="Pennsylvania Folklife Magazine Indexes">publication:pafolklifemagindex</padig:set>
+        <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
+        <padig:set string="Yost History of Ursinus College">publication:yosthistory</padig:set>
+        <padig:set string="Ursinus College Fraktur Collection">publication:ursinus_fraktur</padig:set>
+        
+        <!-- Westchester -->
+        <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
+        <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
+        <padig:set string="West Chester University Aralia Press">qwcaralia</padig:set>
+        <padig:set string="West Chester University Archaeology Prehistoric Artifacts">qwcarch</padig:set>
+        <padig:set string="West Chester University Archives">wcutreasure</padig:set>
+        <padig:set string="West Chester University Chester County Business">chester</padig:set>
+        <padig:set string="West Chester University Civil War">qwccivilwar</padig:set>
+        <padig:set string="West Chester University Lowell Gardenour United States Air Force Asia Collection">p17189coll4</padig:set>
+        <padig:set string="West Chester University Philips Autographed Library">philips</padig:set>
+        <padig:set string="West Chester University Photographs">qwcphoto</padig:set>
+        <padig:set string="West Chester University Postcards">qwcpost</padig:set>
+        <padig:set string="West Chester University Redware">redware</padig:set>
+        <padig:set string="West Chester University Sharples">sharples</padig:set>
+        <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
+        <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
+        <padig:set string="West Chester University WPA Collection">wpa</padig:set>
+        
+        <!-- Widener -->
+        <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
+        <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
+        <padig:set string="Alumni Magazines - Impact -- 1968-1989">p16069coll5</padig:set>
+        <padig:set string="Brandywine College">p16069coll27</padig:set>
+        <padig:set string="Course Catalogs - PMC Colleges -- 1967-1972">p16069coll22</padig:set>
+        <padig:set string="Course Catalogs - Widener College -- 1972-1980">p16069coll23</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Graduate -- 1979-Present">p16069coll26</padig:set>
+        <padig:set string="Course Catalogs - Widener University - Undergraduate -- 1979-Present">p16069coll24</padig:set>
+        <padig:set string="Intersections - Sexuality and University Archives Together">p16069coll34</padig:set>
+        <padig:set string="Newspapers -- 1877-1912">p16069coll19</padig:set>
+        <padig:set string="Student Handbooks -- 1947-Present">p16069coll31</padig:set>
+        <padig:set string="View Books">p16069coll32</padig:set>
+        <padig:set string="Widener Online Newsletters">p16069coll20</padig:set>
+        <padig:set string="Alumni Magazines - Alumni Bulletin and Alumnus -- 1952-1968">p16069coll3</padig:set>
+        <padig:set string="Alumni Magazines - Widener Magazine -- 1989-Present">p16069coll6</padig:set>
+        <padig:set string="Buildings">p16069coll1</padig:set>
+        <padig:set string="Caps and Uniforms">p270801coll5</padig:set>
+        <padig:set string="Course Catalogs  - Circulars -- 1856-1892">p16069coll11</padig:set>
+        <padig:set string="Course Catalogs - Pennsylvania Military College -- 1893-1966">p16069coll21</padig:set>
+        <padig:set string="Cowee Family Papers">p16069coll14</padig:set>
+        <padig:set string="Distinguished Alumni">p270801coll17</padig:set>
+        <padig:set string="Diversity Trailblazers">p16069coll33</padig:set>
+        <padig:set string="Fallen Soldiers - PMC and Widener Alumni Who Died in Combat">p16069coll35</padig:set>
+        <padig:set string="Female Trailblazers">p16069coll28</padig:set>
+        <padig:set string="Historical Chronologies">p270801coll10</padig:set>
+        <padig:set string="Histories - A History of Pennsylvania Military College -- 1821-1954">p270801coll8</padig:set>
+        <padig:set string="Histories - Faculty, Administration and Alumni Oral Histories">p16069coll8</padig:set>
+        <padig:set string="Histories - Pennsylvania Military College -- The Story of One Hundred Years">p16069coll7</padig:set>
+        <padig:set string="Libraries - From Old Main to Wolfgram">p16069coll29</padig:set>
+        <padig:set string="Newspapers - The Dome -- 1947-2008">p270801coll11</padig:set>
+        <padig:set string="Newspapers - The PMC News -- 1916-1950">p16069coll9</padig:set>
+        <padig:set string="Pennsylvania Military Preparatory School (PMPS)">p16069coll15</padig:set>
+        <padig:set string="Photographs - PMA and PMC">p15139coll2</padig:set>
+        <padig:set string="PMC 50th Anniversary Exhibits and Homecoming Videos">p16069coll30</padig:set>
+        <padig:set string="PMC During World War II">p16069coll4</padig:set>
+        <padig:set string="Postcards">p270801coll15</padig:set>
+        <padig:set string="Presidents on Parade">p16069coll25</padig:set>
+        <padig:set string="Scrapbooks">p270801coll4</padig:set>
+        <padig:set string="Seals and Emblems">p16069coll13</padig:set>
+        <padig:set string="Student Lists 1856-1930">p16069coll10</padig:set>
+        <padig:set string="Taps Lyrics - History">p16069coll36</padig:set>
+        <padig:set string="Yearbooks - Pennsylvania Military College and PMC Colleges -- 1900 - 1972">p270801coll6</padig:set>
+        <padig:set string="Yearbooks- Widener College and Widener University --  1973 - 2010">p15139coll3</padig:set>
 
     </xsl:param>
 
