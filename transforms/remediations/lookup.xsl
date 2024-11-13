@@ -51,6 +51,8 @@
         <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://www.cppdigitallibrary.org/</padig:url>
+        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://cppdigitallibrary.org/</padig:url>
+        <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://cppdigitallibrary.org/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://cdm15860.contentdm.oclc.org/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">http://digitalcommons.lasalle.edu/</padig:url>
         <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
@@ -1230,7 +1232,6 @@
     <!-- lookup table for Omeka setSpec, College of Physicians of Philadelphia -->
     <xsl:param name="cppSetSpecList">
         <padig:set string="Images from Les Oeuvres d'Ambroise Paré">3</padig:set>
-        <padig:set string="Memento Mütter">4</padig:set>
         <padig:set string="Radium in America">5</padig:set>
         <padig:set string="Under the Influence of the Heavens">6</padig:set>
         <padig:set string="Memento Mütter - Additional Images">8</padig:set>
