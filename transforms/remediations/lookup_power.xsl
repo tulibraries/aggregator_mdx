@@ -290,7 +290,6 @@
         <padig:set string="Reading Area Community College - Wes Fisher Piano Sheet Music Collection">papd_aracc-wfpsmc</padig:set>
         <padig:set string="Reading Public Library - Berks County Postcards">papd_prepl-brcpc</padig:set>
         <padig:set string="Reading Public Library - Berks County Yearbooks">papd_prepl-brcyb</padig:set>
-        <padig:set string="Sacred Heart Academy Bryn Mawr - Sacred Heart Academy Bryn Mawr School Archives: Photos and Documents">papd_kcdsh-shabmsapd</padig:set>
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
