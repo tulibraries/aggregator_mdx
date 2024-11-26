@@ -458,6 +458,7 @@
         <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
         
         <!-- Lafayette -->
+        <padig:set string="Aya">collection:AYA</padig:set>
         <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
         <padig:set string="General Eisenhower at Lafayette: Founders' Day 1946">collection:General+Eisenhower+at+Lafayette%3A+Founders%27+Day+1946</padig:set>
         <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
@@ -469,6 +470,7 @@
         <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis+de+Lafayette+Prints+Collection</padig:set>
         <padig:set string="Marquis Magazine">collection:Marquis+Magazine</padig:set>
         <padig:set string="McKelvy House">collection:McKelvy+House</padig:set>
+        <padig:set string="Pacific War Postcards">collection:Pacific+War+Postcards</padig:set>
         
         <!-- LaSalle Bepress -->
         <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
