@@ -233,6 +233,7 @@
         <padig:set string="Wohlsen Construction Company Photograph Collection">scholars-square_sc--wohlsen-photos</padig:set>
         
         <!-- Historic Pittsburgh -->
+        <padig:set string="Aaronel deRoy Gruber Papers and Photographs">pitt_collection.440</padig:set>
         <padig:set string="Adolph M. Foerster Collection">pitt_collection.168</padig:set>
         <padig:set string="Aerial Photographs of Pittsburgh">pitt_collection.33</padig:set>
         <padig:set string="African American Jazz Preservation Society of Pittsburgh Oral History Project Records and Recordings">pitt_collection.212</padig:set>
@@ -340,6 +341,7 @@
         <padig:set string="James Veech Copybook of the General William Irvine Papers">pitt_collection.22</padig:set>
         <padig:set string="Jennie Bradley Roessing Papers">pitt_collection.343</padig:set>
         <padig:set string="Jewish Sports Hall of Fame of Western Pennsylvania Photographs">pitt_collection.54</padig:set>
+        <padig:set string="Jim Papriello Photographs">pitt_collection.441</padig:set>
         <padig:set string="Joel B. Levinson Photographs">pitt_collection.305</padig:set>
         <padig:set string="John Gates Photographs">pitt_collection.55</padig:set>
         <padig:set string="John Lorkovich Undertakers Record Book">pitt_collection.347</padig:set>
@@ -359,6 +361,7 @@
         <padig:set string="Marshall W. &quot;Major&quot; Taylor Scrapbooks">pitt_collection.202</padig:set>
         <padig:set string="Mary Elinor Lazenby Papers">pitt_collection.275</padig:set>
         <padig:set string="Mary Roberts Rinehart Papers">pitt_collection.185</padig:set>
+        <padig:set string="Maurice Levy Oral History of Music in Pittsburgh Collection">pitt_collection.442</padig:set>
         <padig:set string="Max A. Lauffer Papers">pitt_collection.197</padig:set>
         <padig:set string="McConway and Torely Company Records">pitt_collection.322</padig:set>
         <padig:set string="McFarland-Hall-Beck Families Papers">pitt_collection.201</padig:set>
@@ -855,6 +858,7 @@
         <padig:set string="Allegheny County Medical Society Minute Book">pitt_collection.430</padig:set>
         <padig:set string="Allen Family Papers">pitt_collection.122</padig:set>
         <padig:set string="An Attempt to Describe the Future of the United States">pitt_collection.245</padig:set>
+        <padig:set string="Ann P. Sharples diary">pitt_collection.435</padig:set>
         <padig:set string="Archives of Scientific Philosophy">pitt_collection.123</padig:set>
         <padig:set string="Arlen Specter Senatorial Papers">pitt_collection.288</padig:set>
         <padig:set string="Audubon's Birds of America">pitt_collection.1</padig:set>
@@ -875,8 +879,11 @@
         <padig:set string="Chinese Overseas Student Newsletters">pitt_collection.244</padig:set>
         <padig:set string="Chinese Political Prisoner Photograph Collection">pitt_collection.251</padig:set>
         <padig:set string="Dialogues in Afrolatinidad">pitt_collection.368</padig:set>
+        <padig:set string="Diary of an unidentified Irish Roman Catholic priest">pitt_collection.438</padig:set>
         <padig:set string="Dick Thornburgh Papers">pitt_collection.143</padig:set>
+        <padig:set string="Dillon and Fetterman Families Papers">pitt_collection.428</padig:set>
         <padig:set string="Duquesne Light Photograph Collection">pitt_collection.396</padig:set>
+        <padig:set string="Edna M. Parkins Berg and Carl Berg Papers">pitt_collection.437</padig:set>
         <padig:set string="Edward Rocco (E.R.) Montagna Diary">pitt_collection.433</padig:set>
         <padig:set string="Emergency Influenza Hospital Nurses (Duquesne, Pa.) Photographs">pitt_collection.405</padig:set>
         <padig:set string="Emerging Masters Collection">pitt_collection.306</padig:set>
@@ -885,7 +892,9 @@
         <padig:set string="Fidelis Zitterbart Manuscripts">pitt_collection.190</padig:set>
         <padig:set string="Fox Chapel Garden Club Records">pitt_collection.360</padig:set>
         <padig:set string="Frances Hesselbein Papers">pitt_collection.367</padig:set>
+        <padig:set string="Frank Floyd Hightower Photograph Collection">pitt_collection.422</padig:set>
         <padig:set string="Frank Plumpton Ramsey Papers">pitt_collection.128</padig:set>
+        <padig:set string="Frank Russell Hightower Photograph Collection">pitt_collection.432</padig:set>
         <padig:set string="Fred Wright Cartoons">pitt_collection.112</padig:set>
         <padig:set string="Frederick J. Osterling Collection">pitt_collection.401</padig:set>
         <padig:set string="Gao Lecture Series">pitt_collection.327</padig:set>
@@ -904,6 +913,7 @@
         <padig:set string="Lillian A. Friedberg Postcards">pitt_collection.223</padig:set>
         <padig:set string="Mirskey Collection of Salon Orchestra and Silent Film Music">pitt_collection.370</padig:set>
         <padig:set string="Oscar Knight Diaries">pitt_collection.394</padig:set>
+        <padig:set string="Pittsburgh Public Theater Collection">pitt_collection.420</padig:set>
         <padig:set string="Pittsburgh Renaissance Project: The Stanton Belfour Oral History Collection">pitt_collection.410</padig:set>
         <padig:set string="Pittsburgh Youth Olympiad Photographs">pitt_collection.403</padig:set>
         <padig:set string="Ramón Gómez de la Serna Papers">pitt_collection.132</padig:set>
@@ -911,6 +921,7 @@
         <padig:set string="Richard C. Jeffrey Papers">pitt_collection.133</padig:set>
         <padig:set string="Rose Rand Papers">pitt_collection.134</padig:set>
         <padig:set string="Rudolf Carnap Papers">pitt_collection.135</padig:set>
+        <padig:set string="Sam Rivers Archive">pitt_collection.407</padig:set>
         <padig:set string="Sarah Cordelia Mellon and Alan Magee Scaife Wedding Album">pitt_collection.395</padig:set>
         <padig:set string="Shooting Star Review">pitt_collection.299</padig:set>
         <padig:set string="Southern Blacks' Migration to Pittsburgh Oral History Project">pitt_collection.411</padig:set>
@@ -921,6 +932,7 @@
         <padig:set string="Thaddeus Sheldon Papers">pitt_collection.113</padig:set>
         <padig:set string="Theodore M. Finney Music Library Collection">pitt_collection.295</padig:set>
         <padig:set string="Thomas G. Masaryk Papers">pitt_collection.319</padig:set>
+        <padig:set string="Travel Diary by &quot;Betty&quot;">pitt_collection.436</padig:set>
         <padig:set string="University of Pittsburgh Board of Trustees Public Meeting Minutes">pitt_collection.282</padig:set>
         <padig:set string="University of Pittsburgh Press Digital Editions">pitt_collection.137</padig:set>
         <padig:set string="V.F. Wachsmuth Treatise">pitt_collection.256</padig:set>
