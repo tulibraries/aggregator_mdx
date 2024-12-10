@@ -59,6 +59,7 @@
         <padig:set string="Boyertown Area Senior High School - Boyertown School News">papd_kboyh-bsn</padig:set>
         <padig:set string="Braddock Carnegie Library Association - Braddock Area Year Books">papd_pbcal-bayb</padig:set>
         <padig:set string="Byzantine Catholic Seminary Library - Prostopinije (Slavic Plain Chant)">papd_abyzc-pspc</padig:set>
+        <padig:set string="C. C. Mellor Memorial Library - History of Edgewood Schools">papd_pccmm-hoes</padig:set>
         <padig:set string="C. C. Mellor Memorial Library - The History of the Borough of Edgewood">papd_pccmm-ccmml</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA History Books">papd_pcccp-books</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA Postcards">papd_pcccp-post</padig:set>
@@ -82,6 +83,7 @@
         <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
         <padig:set string="Cheltenham Township Library System - Cheltenham Historical Photograph Collection">papd_pglfl-chpc</padig:set>
         <padig:set string="Cheltenham Township Library System - Historic La Mott/ Cheltenham Township Community">papd_pglfl-hlmctc</padig:set>
+        <padig:set string="Chester County History Center - Abigail Speakman Diary Collection">papd_scchc-asdc</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
         <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
@@ -94,6 +96,7 @@
         <padig:set string="Chester County History Center - John Hill Brinton Reminiscences Collection">papd_scchc-jhbrc</padig:set>
         <padig:set string="Chester County History Center - Lewis White Williams Diary Collection">papd_scchc-lwwdc</padig:set>
         <padig:set string="Chester County History Center - Liberty Cornet Band Minutes and Membership Book">papd_scchc-lcbmamb</padig:set>
+        <padig:set string="Chester County History Center - Phebe Ann Sharpless Diary Collection">papd_scchc-pasdc</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
         <padig:set string="Chester County History Center - Walter Finney Diary Collection">papd_scchc-wfdc</padig:set>
         <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
@@ -197,12 +200,14 @@
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rockwood Area Historical &amp; Genealogical Society - Casselman Village Area">papd_pmeye-cva</padig:set>
+        <padig:set string="Meyersdale Public Library - Rockwood Area Historical &amp; Genealogical Society - Rockwood Borough History">papd_pmeye-rbh</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
         <padig:set string="Meyersdale Public Library - Springs Historical Society - Johnston Bender Family Collection">papd_pmeye-jbfc</padig:set>
         <padig:set string="Meyersdale Public Library - Springs Historical Society - Miller Machine">papd_pmeye-mm</padig:set>
         <padig:set string="Meyersdale Public Library - Springs Historical Society - Wagner Collection">papd_pmeye-wc</padig:set>
         <padig:set string="Meyersdale Public Library - The History Behind the Meyersdale Public Library">papd_pmeye-hbtmpl</padig:set>
         <padig:set string="Meyersdale Public Library - William Henry Welfley Scrapbook Collection">papd_pmeye-whwsc</padig:set>
+        <padig:set string="Milanof-Schock Public Library - Donegal High School Yearbooks">papd_pmisl-dhsy</padig:set>
         <padig:set string="Milanof-Schock Public Library - East Donegal Township High School Yearbooks">papd_pmisl-edthsy</padig:set>
         <padig:set string="Milanof-Schock Public Library - Mount Joy High School Yearbooks">papd_pmisl-mjhsy</padig:set>
         <padig:set string="Milton Hershey School - Hershey Community Archives - Hotel Hershey Highlights">papd_kmheh-hcahhh</padig:set>
@@ -258,6 +263,7 @@
         <padig:set string="Pennsylvania Highlands Community College - Cambria Co. Immigration Declarations">papd_acacc-ccip</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria County Education Collection">papd_acacc-ccec</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Memory Project">papd_acacc-memor</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Conemaugh School of Nursing">papd_acacc-cson</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cresson Sanatorium">papd_acacc-cs</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Dale Borough">papd_acacc-db</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Area Fire Department Collection">papd_acacc-jafd</padig:set>
@@ -265,6 +271,7 @@
         <padig:set string="Pennsylvania Highlands Community College - Klahre Collection">papd_acacc-klahre</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Wilmore Collection">papd_acacc-wilmore</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Ida W. Pritchett Photograph Collection">papd_spahs-iwppc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - James Lawrence Dillon Lantern Slide Collection">papd_spahs-jldlsc</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Jay V. Hare Lantern Slide Collection">papd_spahs-jvhlsc</padig:set>
@@ -314,6 +321,7 @@
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
         <padig:set string="Sewickley Public Library - Historic Images and Documents">papd_psepl-hiad2</padig:set>
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
+        <padig:set string="Springside Chestnut Hill Academy - The Wissahickon Magazine Collection 1903-1931">papd_kspsl-wmc1903</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="State Library of Pennsylvania - Abraham Lincoln">papd_sstlp-linc</padig:set>
         <padig:set string="State Library of Pennsylvania - Ambler Gazette Newspaper">papd_sstlp-ag</padig:set>
@@ -387,6 +395,7 @@
         <padig:set string="Upper Moreland Free Public Library - Upper Moreland High School Yearbooks">papd_pupmf-umhsy</padig:set>
         <padig:set string="Wagner Free Institute of Science - Engineering 1: The Materials of Engineering Construction">papd_swfis-e1mec</padig:set>
         <padig:set string="Wagner Free Institute of Science - Manuscripts of Lectures on Conchology by William Wagner">papd_swfis-molocbww</padig:set>
+        <padig:set string="Wagner Free Institute of Science - Manuscripts of Lectures on Mineralogy by William Wagner">papd_swfis-molombww</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
         <padig:set string="Warren Library Association - Historic Photographs">papd_pwala-hstph</padig:set>
         <padig:set string="Warren Library Association - Kinzua Scrapbooks">papd_pwala-ks</padig:set>
