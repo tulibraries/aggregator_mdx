@@ -64,7 +64,7 @@
         </oai_dc:dc>
       </x:expect>
     </x:scenario>
-    <x:scenario label="identifier generates and isShownAt maps for non-handle">
+    <x:scenario label="identifier generates and isShownAt maps for non-handle with /images/">
       <x:context>
         <oai:record>
           <metadata>
@@ -79,7 +79,7 @@
           </metadata>
         </oai:record>
       </x:context>
-      <x:expect label="identifier generates and isShownAt maps for non-handle">
+      <x:expect label="identifier generates and isShownAt maps for non-handle with /images/">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:dc="http://purl.org/dc/elements/1.1/"
           xmlns:dcterms="http://purl.org/dc/terms/"
@@ -96,6 +96,42 @@
           xmlns:svcs="http://rdfs.org/sioc/services">
           <edm:isShownAt>https://ldr.lafayette.edu/concern/images/2n49t3119</edm:isShownAt>
           <dcterms:identifier>padig:LAFAYETTE-2n49t3119</dcterms:identifier>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+    <x:scenario label="identifier generates and isShownAt maps for non-handle with /publications/">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc
+              xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/">
+              <dc:identifier>https://ldr.lafayette.edu/concern/publications/vx021g70r</dc:identifier>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="identifier generates and isShownAt maps for non-handle with /publications/">
+        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:dpla="http://dp.la/about/map/"
+          xmlns:edm="http://www.europeana.eu/schemas/edm/"
+          xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:oclc="http://purl.org/oclc/terms/"
+          xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+          xmlns:oclcterms="http://purl.org/oclc/terms/"
+          xmlns:schema="http://schema.org"
+          xmlns:padig="http://padigital.org/ns"
+          xmlns:svcs="http://rdfs.org/sioc/services">
+          <edm:isShownAt>https://ldr.lafayette.edu/concern/publications/vx021g70r</edm:isShownAt>
+          <dcterms:identifier>padig:LAFAYETTE-vx021g70r</dcterms:identifier>
           <edm:provider>PA Digital</edm:provider>
         </oai_dc:dc>
       </x:expect>

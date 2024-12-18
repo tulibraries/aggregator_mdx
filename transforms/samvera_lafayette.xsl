@@ -67,7 +67,7 @@
                 </xsl:element>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:if test="normalize-space(.) != '' and starts-with(.,'https://ldr.lafayette.edu/concern/images/')">
+                <xsl:if test="normalize-space(.) != '' and starts-with(.,'https://ldr.lafayette.edu/concern/')">
                     <xsl:element name="edm:isShownAt">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
@@ -96,7 +96,14 @@
                     <xsl:element name="dcterms:identifier">
                         <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL2]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID2"/>
                     </xsl:element>
-                </xsl:if>              
+                </xsl:if>
+                <xsl:if test="normalize-space(.) != '' and starts-with(.,'https://ldr.lafayette.edu/concern/publications/')">
+                    <xsl:variable name="itemID3" select="substring-after(.,'publications/')"/>
+                    <xsl:variable name="baseURL3" select="normalize-space('https://ldr.lafayette.edu/')"/>
+                    <xsl:element name="dcterms:identifier">
+                        <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL3]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID3"/>
+                    </xsl:element>
+                </xsl:if>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
