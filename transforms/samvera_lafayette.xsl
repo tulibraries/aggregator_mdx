@@ -60,23 +60,45 @@
 
     <!-- isShownAt -->
     <xsl:template name="isShownAt">
-        <xsl:if test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
-            <xsl:element name="edm:isShownAt">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
+                <xsl:element name="edm:isShownAt">
+                    <xsl:value-of select="normalize-space(.)"/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space(.) != '' and starts-with(.,'https://ldr.lafayette.edu/concern/images/')">
+                    <xsl:element name="edm:isShownAt">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <!-- identifier -->
     <xsl:template name="identifier">
-        <xsl:variable name="itemID" select="substring-after(.,'/10385/')"/>
-        <xsl:variable name="baseURL" select="normalize-space('http://hdl.handle.net/10385/')"/>
+        <xsl:choose>
+            <xsl:when test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
+                <xsl:variable name="itemID" select="substring-after(.,'/10385/')"/>
+                <xsl:variable name="baseURL" select="normalize-space('http://hdl.handle.net/10385/')"/>
 
-        <xsl:if test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
-        <xsl:element name="dcterms:identifier">
-            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
-        </xsl:element>
-        </xsl:if>
+                <xsl:if test="normalize-space(.) != '' and starts-with(.,'http://hdl.handle.net/')">
+                    <xsl:element name="dcterms:identifier">
+                        <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+                    </xsl:element>
+                    </xsl:if>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="normalize-space(.) != '' and starts-with(.,'https://ldr.lafayette.edu/concern/images/')">
+                    <xsl:variable name="itemID2" select="substring-after(.,'images/')"/>
+                    <xsl:variable name="baseURL2" select="normalize-space('https://ldr.lafayette.edu/')"/>
+                    <xsl:element name="dcterms:identifier">
+                        <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL2]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID2"/>
+                    </xsl:element>
+                </xsl:if>              
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <!-- dataProvider -->
