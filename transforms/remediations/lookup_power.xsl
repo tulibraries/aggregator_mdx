@@ -64,6 +64,7 @@
         <padig:set string="Cambria County Library - Johnstown, PA History Books">papd_pcccp-books</padig:set>
         <padig:set string="Cambria County Library - Johnstown, PA Postcards">papd_pcccp-post</padig:set>
         <padig:set string="Cambria County Library - Johnstown Area Yearbooks">papd_pcccp-jay</padig:set>
+        <padig:set string="Carnegie Library of Homestead - The Homestead Daily News, News Messenger, &amp; Daily Messenger 1897-1979">papd_pcalh-hdnnmdm</padig:set>
         <padig:set string="Carnegie Library of Homestead - Homestead Newspaper Collection 1881-1979">papd_pcalh-hnc1881</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - American Marketplace">papd_pcalo-amc</padig:set>
         <padig:set string="Carnegie Library of Pittsburgh - Industry, Mining, &amp; Technology Journals">papd_pcalo-imtj</padig:set>
@@ -98,9 +99,11 @@
         <padig:set string="Chester County History Center - Liberty Cornet Band Minutes and Membership Book">papd_scchc-lcbmamb</padig:set>
         <padig:set string="Chester County History Center - Phebe Ann Sharpless Diary Collection">papd_scchc-pasdc</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
+        <padig:set string="Chester County History Center - Timothy Kirk Memorandum Book Collection">papd_scchc-tkmbc</padig:set>
         <padig:set string="Chester County History Center - Walter Finney Diary Collection">papd_scchc-wfdc</padig:set>
         <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
         <padig:set string="Chester County History Center - William Riley Blakeslee Diary Collection">papd_scchc-wrbdc</padig:set>
+        <padig:set string="Chester County History Center - William W. Heed Diary Collection">papd_scchc-wwhdc</padig:set>
         <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
         <padig:set string="Chester County Library &amp; District - Northern Chester County Historic Photographs">papd_pcccl-ncchp</padig:set>
         <padig:set string="Clarion Free Library - Mary Hamilton Holiday Cards">papd_pclfl-mhhc</padig:set>
@@ -195,8 +198,11 @@
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
         <padig:set string="Meyersdale Public Library - 1998 Southern Somerset County Tornadoes Oral Histories">papd_pmeye-1998ssctoh</padig:set>
         <padig:set string="Meyersdale Public Library - African American Burials in Somerset County">papd_pmeye-aabisc</padig:set>
+        <padig:set string="Meyersdale Public Library - Captain William (Will) Lewis Judy">papd_pmeye-cwlj</padig:set>
         <padig:set string="Meyersdale Public Library - From Dale City to Meyersdale">papd_pmeye-fdctm</padig:set>
         <padig:set string="Meyersdale Public Library - Garrett School Memorabilia">papd_pmeye-gsm</padig:set>
+        <padig:set string="Meyersdale Public Library - Meyersdale Commercial Newspaper">papd_pmeye-mcn</padig:set>
+        <padig:set string="Meyersdale Public Library - Old-Time Meyersdale Photographs">papd_pmeye-otmp</padig:set>
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
         <padig:set string="Meyersdale Public Library - Rockwood Area Historical &amp; Genealogical Society - Casselman Village Area">papd_pmeye-cva</padig:set>
@@ -270,6 +276,7 @@
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Steel Industry Collection">papd_acacc-jsic</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Klahre Collection">papd_acacc-klahre</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Suppes Collection">papd_acacc-sc</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - The Johnstown Flood of 1889">papd_acacc-jtf</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Wilmore Collection">papd_acacc-wilmore</padig:set>
         <padig:set string="Pennsylvania Horticultural Society - Ida W. Pritchett Photograph Collection">papd_spahs-iwppc</padig:set>
@@ -387,13 +394,17 @@
         <padig:set string="Ulysses Library Association - Ulysses History">papd_pulpl-uh</padig:set>
         <padig:set string="Uniontown Public Library - Fayette County Iron Works Records">papd_punpl-fciwr</padig:set>
         <padig:set string="Uniontown Public Library - Photos of Fayette County, PA">papd_punpl-pofcp</padig:set>
+        <padig:set string="Unionville High School - Unionville High School Scrapbooks">papd_kuvhs-uhss</padig:set>
+        <padig:set string="Unionville High School - Unionville High School Yearbooks">papd_kuvhs-uhsy</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Anne E. Sanford Missionary Collection">papd_aulsp-ihoraes</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: the Lutheran Deaconess Movement in the United States">papd_aulsp-ihorldm</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
         <padig:set string="Upper Merion Area High School Library - Upper Merion Area High School Athletic Scrapbooks and Programs">papd_kupmh-umahsasap</padig:set>
         <padig:set string="Upper Merion Township Library - Upper Merion Area School District Yearbooks">papd_pupmt-sdybs</padig:set>
         <padig:set string="Upper Moreland Free Public Library - Upper Moreland High School Yearbooks">papd_pupmf-umhsy</padig:set>
+        <padig:set string="Upper Moreland Free Public Library - Upper Moreland Oral Histories">papd_pupmf-umoh</padig:set>
         <padig:set string="Wagner Free Institute of Science - Engineering 1: The Materials of Engineering Construction">papd_swfis-e1mec</padig:set>
+        <padig:set string="Wagner Free Institute of Science - Engineering 2: Civil Engineering Structures">papd_swfis-e2ces</padig:set>
         <padig:set string="Wagner Free Institute of Science - Manuscripts of Lectures on Conchology by William Wagner">papd_swfis-molocbww</padig:set>
         <padig:set string="Wagner Free Institute of Science - Manuscripts of Lectures on Mineralogy by William Wagner">papd_swfis-molombww</padig:set>
         <padig:set string="Warren Library Association - Historic Flood Control (1943)">papd_pwala-hstfl</padig:set>
