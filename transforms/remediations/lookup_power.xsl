@@ -13,8 +13,7 @@
     xmlns:oclc="http://purl.org/oclc/terms/"
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
-    xmlns:svcs="http://rdfs.org/sioc/services"
-    version="2.0">
+    xmlns:svcs="http://rdfs.org/sioc/services" version="2.0">
 
     <!-- lookup table to identify LVDA collections -->
     <xsl:param name="powerSetInt">
@@ -34,6 +33,7 @@
     <!-- POWER photos and docs collecton name lookup -->
     <xsl:param name="powerSetSpecList">
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - Lucy Say Illustrations">papd_adrex-lsi</padig:set>
         <padig:set string="Albright College - Central Pennsylvania College Photos">papd_cpaphoto</padig:set>
         <padig:set string="Albright College - Evangelical Church Historic Lantern Slides">papd_churchslide</padig:set>
         <padig:set string="Albright College - Myerstown Photos">papd_myrsphoto</padig:set>
@@ -75,6 +75,7 @@
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Autobiography of Colonel Samuel Miles">papd_pcecl-aocsm</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Centre County School Class Photographs">papd_pcecl-ccscp</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
@@ -83,6 +84,7 @@
         <padig:set string="Centre County Library and Historical Museum - Miles-Potter-Humes House">papd_pcecl-mphh</padig:set>
         <padig:set string="Centre County Library and Historical Museum - P. Benner Wilson Letters">papd_pcecl-pbwl</padig:set>
         <padig:set string="Cheltenham Township Library System - Cheltenham Historical Photograph Collection">papd_pglfl-chpc</padig:set>
+        <padig:set string="Cheltenham Township Library System - Cheltenham Township Properties">papd_pglfl-cthp</padig:set>
         <padig:set string="Cheltenham Township Library System - Historic La Mott/ Cheltenham Township Community">papd_pglfl-hlmctc</padig:set>
         <padig:set string="Chester County History Center - Abigail Speakman Diary Collection">papd_scchc-asdc</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
@@ -97,11 +99,14 @@
         <padig:set string="Chester County History Center - John Hill Brinton Reminiscences Collection">papd_scchc-jhbrc</padig:set>
         <padig:set string="Chester County History Center - Lewis White Williams Diary Collection">papd_scchc-lwwdc</padig:set>
         <padig:set string="Chester County History Center - Liberty Cornet Band Minutes and Membership Book">papd_scchc-lcbmamb</padig:set>
+        <padig:set string="Chester County History Center - Mary Eliza Brinton Hopkins Diary Collection">papd_scchc-mebhd</padig:set>
         <padig:set string="Chester County History Center - Phebe Ann Sharpless Diary Collection">papd_scchc-pasdc</padig:set>
+        <padig:set string="Chester County History Center - Rebecca Townsend Brown Diary Collection">papd_scchc-rtbdc</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
         <padig:set string="Chester County History Center - Timothy Kirk Memorandum Book Collection">papd_scchc-tkmbc</padig:set>
         <padig:set string="Chester County History Center - Walter Finney Diary Collection">papd_scchc-wfdc</padig:set>
         <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
+        <padig:set string="Chester County History Center - William H. Brown Diary Collection">papd_scchc-whbdc</padig:set>
         <padig:set string="Chester County History Center - William Riley Blakeslee Diary Collection">papd_scchc-wrbdc</padig:set>
         <padig:set string="Chester County History Center - William W. Heed Diary Collection">papd_scchc-wwhdc</padig:set>
         <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
@@ -130,9 +135,11 @@
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
+        <padig:set string="German Society of Pennsylvania - Deutsche Ansiedelungs-Gesellschaft zu Philadelphia (German Settlement Society of Philadelphia) records">papd_sgsop-daggssr</padig:set>
         <padig:set string="German Society of Pennsylvania - German Society Agentur">papd_sgsop-gsa</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Melchior Muhlenberg Papers, 1771-1786">papd_sgsop-hmmp1771</padig:set>
+        <padig:set string="German Society of Pennsylvania - John F. Ballier Civil War Journal">papd_sgsop-jfbcwj</padig:set>
         <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat">papd_sgsop-gsppd</padig:set>
         <padig:set string="German Society of Pennsylvania - Philadelphia Demokrat (1838)">papd_sgsop-gsppd1838</padig:set>
         <padig:set string="German Society of Pennsylvania - Singing Societies Collection">papd_sgsop-ssc</padig:set>
@@ -150,6 +157,7 @@
         <padig:set string="James V. Brown Library - Historic Documents">papd_pjvbl-docs</padig:set>
         <padig:set string="James V. Brown Library - Lycoming County Digital Photo Archive">papd_pjvbl-archi</padig:set>
         <padig:set string="Jersey Shore Public Library - The Jersey Shore Historical Society - The Jersey Shore Historical Society Photographs">papd_pjspl-jshsp</padig:set>
+        <padig:set string="Julia R. Masterman School - Julia R. Masterman School Yearbooks">papd_0001k-jrmsy</padig:set>
         <padig:set string="Juniata College - Huntingdon County Historical Newspapers">papd_ajuncnews</padig:set>
         <padig:set string="Keystone College - 1868 to present">papd_akeys-1868</padig:set>
         <padig:set string="Keystone College - Christy Mathewson">papd_akeyscmath</padig:set>
@@ -157,6 +165,7 @@
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc_266_2_1</padig:set>
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc_266</padig:set>
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc</padig:set>
+        <padig:set string="Kittanning Public Library - Kittanning's Natural Disasters">papd_kkifl-knd</padig:set>
         <padig:set string="Knoxville Public Library - Knoxville Pennsylvania 1880-1920">papd_pkvpl-knpe</padig:set>
         <padig:set string="Lancaster Public Library - Local History">papd_placl-lhist</padig:set>
         <padig:set string="Lancaster Public Library - Yearbooks">papd_placl-ybook</padig:set>
@@ -201,7 +210,12 @@
         <padig:set string="Meyersdale Public Library - Captain William (Will) Lewis Judy">papd_pmeye-cwlj</padig:set>
         <padig:set string="Meyersdale Public Library - From Dale City to Meyersdale">papd_pmeye-fdctm</padig:set>
         <padig:set string="Meyersdale Public Library - Garrett School Memorabilia">papd_pmeye-gsm</padig:set>
+        <padig:set string="Meyersdale Public Library - Maple Valley Park and Pool">papd_pmeye-mvpp</padig:set>
+        <padig:set string="Meyersdale Public Library - Meyersdale Area High School Yearbooks">papd_pmeye-mahsy</padig:set>
         <padig:set string="Meyersdale Public Library - Meyersdale Commercial Newspaper">papd_pmeye-mcn</padig:set>
+        <padig:set string="Meyersdale Public Library - Meyersdale Community Hospital">papd_pmeye-mch</padig:set>
+        <padig:set string="Meyersdale Public Library - Meyersdale Kelly Korps">papd_pmeye-mkk</padig:set>
+        <padig:set string="Meyersdale Public Library - Meyersdale Volunteer Fire Department History">papd_pmeye-mvfdh</padig:set>
         <padig:set string="Meyersdale Public Library - Old-Time Meyersdale Photographs">papd_pmeye-otmp</padig:set>
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
@@ -212,6 +226,8 @@
         <padig:set string="Meyersdale Public Library - Springs Historical Society - Miller Machine">papd_pmeye-mm</padig:set>
         <padig:set string="Meyersdale Public Library - Springs Historical Society - Wagner Collection">papd_pmeye-wc</padig:set>
         <padig:set string="Meyersdale Public Library - The History Behind the Meyersdale Public Library">papd_pmeye-hbtmpl</padig:set>
+        <padig:set string="Meyersdale Public Library - The Meyersdale Republican Newspaper">papd_pmeye-mrn</padig:set>
+        <padig:set string="Meyersdale Public Library - The Somerset County Times (Rockwood, Pa.) Newspaper">papd_pmeye-sctrpn</padig:set>
         <padig:set string="Meyersdale Public Library - William Henry Welfley Scrapbook Collection">papd_pmeye-whwsc</padig:set>
         <padig:set string="Milanof-Schock Public Library - Donegal High School Yearbooks">papd_pmisl-dhsy</padig:set>
         <padig:set string="Milanof-Schock Public Library - East Donegal Township High School Yearbooks">papd_pmisl-edthsy</padig:set>
@@ -273,6 +289,7 @@
         <padig:set string="Pennsylvania Highlands Community College - Cresson Sanatorium">papd_acacc-cs</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Dale Borough">papd_acacc-db</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Area Fire Department Collection">papd_acacc-jafd</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Johnstown Art League">papd_acacc-jal</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Johnstown Steel Industry Collection">papd_acacc-jsic</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Klahre Collection">papd_acacc-klahre</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Northern Cambria Collection">papd_acacc-noca</padig:set>
@@ -321,6 +338,7 @@
         <padig:set string="Scranton Public Library - Friends of the Scranton Public Library Poetry Series">papd_pscrl-fsplps</padig:set>
         <padig:set string="Scranton Public Library - From Lace Makers to Coal Miners: Life in the Lackawanna Valley 1866-1920">papd_pscrl-flmtcm</padig:set>
         <padig:set string="Scranton Public Library - History of the Scranton Public Library">papd_pscrl-hspl</padig:set>
+        <padig:set string="Scranton Public Library - Mid-Valley News">papd_pscrl-mvn</padig:set>
         <padig:set string="Scranton Public Library - Natural Disasters in NePA--Hurricane Diane">papd_pscrl-ndnepa</padig:set>
         <padig:set string="Scranton Public Library - Nay Aug Amusement Park--The Strohl Collection">papd_pscrl-naap</padig:set>
         <padig:set string="Scranton Public Library - Out of the Wilderness: The Industrialization and Development of the the Scranton Area 1850-1865">papd_pscrl-ootw</padig:set>
@@ -328,6 +346,7 @@
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
         <padig:set string="Sewickley Public Library - Historic Images and Documents">papd_psepl-hiad2</padig:set>
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
+        <padig:set string="Sewickley Township Public Library - Sewickley Area High School and Yough High School Yearbooks">papd_pswrc-sahsayhsy</padig:set>
         <padig:set string="Springside Chestnut Hill Academy - The Wissahickon Magazine Collection 1903-1931">papd_kspsl-wmc1903</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="State Library of Pennsylvania - Abraham Lincoln">papd_sstlp-linc</padig:set>
@@ -428,7 +447,7 @@
         <padig:set string="Wissahickon Valley Public Library - Ambler Gazette Newspaper">papd_wivp-gazett</padig:set>
         <padig:set string="Woodland Hills School District - Woodland Hills School District: Past and Present">papd_kwohh-whsdpap</padig:set>
 
-    <!-- POWER state archives collecton name lookup -->
+        <!-- POWER state archives collecton name lookup -->
         <padig:set string="2nd Geological Survey (PA) Accounts of Board Commissioners, 1875-1877">psa_gsabc</padig:set>
         <padig:set string="2nd Geological Survey (PA) County Geological Maps of the Board of Commissioners">psa_gscgmbc</padig:set>
         <padig:set string="2nd Geological Survey (PA) Diary of Charles Ashburner Board of Commissioners, 1876">psa_gsdcaabc</padig:set>
@@ -1008,5 +1027,5 @@
         <padig:set string="World War I Posters (PA)">psa_wwip</padig:set>
         <padig:set string="Writs of Habeas Corpus and Petitions, circa 1771-1863">psa_whcp1771</padig:set>
         <padig:set string="Writs of Habeas Corpus for Black Slaves and Indentured Servants, 1784-1787">psa_whcbsis1784</padig:set>
-  </xsl:param>
+    </xsl:param>
 </xsl:stylesheet>
