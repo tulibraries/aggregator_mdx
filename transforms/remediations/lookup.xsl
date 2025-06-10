@@ -756,6 +756,7 @@
         <padig:set string="George Hoenshel Fleming Sr. Family Papers">fleming</padig:set>
         <padig:set string="George Medrick Papers">medrick</padig:set>
         <padig:set string="Harold Rasmussen Scrapbooks, Badges, and Buttons">rasmussen</padig:set>
+        <padig:set string="Harriman Alaska Expedition Diary and Artifacts">harriman</padig:set>
         <padig:set string="Hayfield Estate Records, 1925-1945">hayfield</padig:set>
         <padig:set string="Historical Recipe Books">recipes</padig:set>
         <padig:set string="Howard Truman Curtiss Papers">curtiss</padig:set>
@@ -776,6 +777,7 @@
         <padig:set string="Philip Murray Papers">murray</padig:set>
         <padig:set string="Pinkerton's National Detective Agency"></padig:set>
         <padig:set string="Sarah Chamberlin Eccleston Diary and Journal, 1864-1916">chamberlin</padig:set>
+        <padig:set string="Selections from the Historical Print and Manuscripts Collection">manuscripts</padig:set>
         <padig:set string="T. R. Johns">trjohns</padig:set>
         <padig:set string="The Ogontz School for Young Ladies Yearbooks 1898-1950">ogontz</padig:set>
         <padig:set string="Thomas W. Benson Political Protest Collection">benson</padig:set>
