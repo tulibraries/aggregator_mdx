@@ -775,7 +775,7 @@
         <padig:set string="Penn State University Archives Oral History Collections">oralhistory</padig:set>
         <padig:set string="Pennsylvania Bridges Collection">pab</padig:set>
         <padig:set string="Philip Murray Papers">murray</padig:set>
-        <padig:set string="Pinkerton's National Detective Agency"></padig:set>
+        <padig:set string="Pinkerton's National Detective Agency">pnd</padig:set>
         <padig:set string="Sarah Chamberlin Eccleston Diary and Journal, 1864-1916">chamberlin</padig:set>
         <padig:set string="Selections from the Historical Print and Manuscripts Collection">manuscripts</padig:set>
         <padig:set string="T. R. Johns">trjohns</padig:set>
