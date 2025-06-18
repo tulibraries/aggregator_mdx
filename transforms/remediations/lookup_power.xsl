@@ -99,7 +99,7 @@
         <padig:set string="Chester County History Center - John Hill Brinton Reminiscences Collection">papd_scchc-jhbrc</padig:set>
         <padig:set string="Chester County History Center - Lewis White Williams Diary Collection">papd_scchc-lwwdc</padig:set>
         <padig:set string="Chester County History Center - Liberty Cornet Band Minutes and Membership Book">papd_scchc-lcbmamb</padig:set>
-        <padig:set string="Chester County History Center - Mary Eliza Brinton Hopkins Diary Collection">papd_scchc-mebhd</padig:set>
+        <padig:set string="Chester County History Center - Mary Eliza Brinton Hopkins Diary Collection">papd_scchc-mebhdc</padig:set>
         <padig:set string="Chester County History Center - Phebe Ann Sharpless Diary Collection">papd_scchc-pasdc</padig:set>
         <padig:set string="Chester County History Center - Rebecca Townsend Brown Diary Collection">papd_scchc-rtbdc</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
