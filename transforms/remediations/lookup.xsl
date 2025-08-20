@@ -464,11 +464,13 @@
         <!-- Lafayette -->
         <padig:set string="Aya">collection:AYA</padig:set>
         <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
+        <padig:set string="Commencement Programs">collection:Commencement+Programs</padig:set>
         <padig:set string="General Eisenhower at Lafayette: Founders' Day 1946">collection:General+Eisenhower+at+Lafayette%3A+Founders%27+Day+1946</padig:set>
         <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
         <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald+and+Rella+Warner+Japan+Slides</padig:set>
         <padig:set string="Gerald And Rella Warner Manchuria Negatives">collection:Gerald+and+Rella+Warner+Manchuria+Negatives</padig:set>
         <padig:set string="Gerald And Rella Warner Postcards">collection:Gerald+and+Rella+Warner+Postcards</padig:set>
+        <padig:set string="Hubbard Collection of Letters from the Marquis de Lafayette to George Washington">collection:Hubbard+Collection+of+Letters+from+the+Marquis+de+Lafayette+to+George+Washington</padig:set>
         <padig:set string="Lafayette Newspaper Archive">collection:Lafayette+Newspaper+archive</padig:set>
         <padig:set string="Lafayette Magazine Archive">collection:Lafayette+Magazine+archive</padig:set>
         <padig:set string="Marquis De Lafayette Prints Collection">collection:Marquis+de+Lafayette+Prints+Collection</padig:set>
