@@ -79,6 +79,29 @@
   </x:scenario>
 
   <!-- Type and Format (map/parse, normalize, and delimit) -->
+  <x:scenario label="dc:format  present">
+    <x:context>
+      <oai:record>
+        <metadata>
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dc:format>Newspaper</dc:format>
+          </oai_dc:dc>
+        </metadata>
+      </oai:record>
+    </x:context>
+    <x:expect label="dc:format values go through type processing; mapping non-DCMI type values to dcterms:format">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:format>Newspaper</dcterms:format>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
   <x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
     <x:scenario label="Delimiting, remediating, and parsing">
       <x:context>

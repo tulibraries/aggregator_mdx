@@ -21,6 +21,16 @@
 
     <xsl:include href="oai_base_crosswalk.xsl"/>
 
+    <!-- map format to type (values in dc:format reflect original format rather than digital)-->
+    <xsl:template match="dc:format" priority="1">
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:call-template name="type_template">
+                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+                <xsl:with-param name="delimiter" select="';'"/>
+            </xsl:call-template>
+        </xsl:if>    
+    </xsl:template>
+
     <!-- collection name -->
     <xsl:template match="oai:header/oai:setSpec">
         <xsl:call-template name="isPartOf"/>
