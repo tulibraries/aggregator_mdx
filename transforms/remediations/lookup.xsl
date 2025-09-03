@@ -15,8 +15,7 @@
     xmlns:oclc="http://purl.org/oclc/terms/"
     xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
     xmlns:schema="http://schema.org"
-    xmlns:svcs="http://rdfs.org/sioc/services"
-    version="2.0">
+    xmlns:svcs="http://rdfs.org/sioc/services" version="2.0">
 
     <xsl:include href="lookup_aps.xsl"/>
     <xsl:include href="lookup_power.xsl"/>
@@ -81,8 +80,8 @@
         <padig:url string="University of Pittsburgh" code="PITT">http://digital.library.pitt.edu/</padig:url>
         <padig:url string="University of Scranton" code="USCRANTON">http://digitalservices.scranton.edu/</padig:url>
         <padig:url string="Ursinus College" code="URSINUS">http://digitalcommons.ursinus.edu/</padig:url>
-        <padig:url string="Ursinus College" code="URSINUS">https://digitalcommons.ursinus.edu/</padig:url>      
-        <padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>  
+        <padig:url string="Ursinus College" code="URSINUS">https://digitalcommons.ursinus.edu/</padig:url>
+        <padig:url string="Widener University" code="WIDEN">http://digitalwolfgram.widener.edu/</padig:url>
     </xsl:param>
 
     <!-- lookup table for Intermediate Providers/OAI base URLs -->
@@ -143,7 +142,7 @@
 
     <!-- lookup table for collection name by setSpec -->
     <xsl:param name="setSpecList">
-        
+
         <!-- APS -->
         <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
         <padig:set string="Henry Howard Houston III">graphics_Mss.Ms.Coll.76.17</padig:set>
@@ -151,14 +150,14 @@
         <padig:set string="Titian Ramsay Peale Sketches">graphics_Mss.B.P.31.15d</padig:set>
         <padig:set string="William Parker Foulke">text_Mss.B.F826</padig:set>
         <padig:set string="Graphics Collection">islandora_graphics_collection</padig:set>
-        
+
         <!-- Bloomsburg -->
         <padig:set string="Bloomsburg University Map Collection">blmmap</padig:set>
         <padig:set string="Bloomsburg University Photographs Collection">blmphoto</padig:set>
         <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
         <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
         <padig:set string="Bloomsburg University World War I Student Files Collection">blmwwi</padig:set>
-        
+
         <!-- Bryn Mawr -->
         <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
         <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
@@ -169,7 +168,7 @@
         <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
         <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
         <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
-        
+
         <!-- Cabrini CDM-->
         <padig:set string="America's First Citizen Saint - The Saint Frances Cabrini Collection">p17305coll22</padig:set>
         <padig:set string="Personal Effects">p17305coll1</padig:set>
@@ -187,14 +186,14 @@
         <padig:set string="Saint Frances Cabrini Documents">p17305coll16</padig:set>
         <padig:set string="Saint Frances Cabrini Commemorative Items">p17305coll17</padig:set>
         <padig:set string="Sisters of Providence">p17305coll26</padig:set>
-        
+
         <!-- Curtis -->
         <padig:set string="de Pasquale collection">myfirst</padig:set>
         <padig:set string="Curtis program books">p16667coll1</padig:set>
         <padig:set string="Archives- Image Collection">p16667coll3</padig:set>
         <padig:set string="Collection of Samuel Barber Materials">p16667coll4</padig:set>
         <padig:set string="Eleanor Lipkin Papers">p16667coll5</padig:set>
-        
+
         <!-- Documenting Pitt -->
         <padig:set string="Pitt Administration">pitt_collection.159</padig:set>
         <padig:set string="Pitt Alumni">pitt_collection.2</padig:set>
@@ -212,7 +211,7 @@
         <padig:set string="University of Pittsburgh Greensburg">pitt_collection.14</padig:set>
         <padig:set string="University of Pittsburgh Johnstown">pitt_collection.192</padig:set>
         <padig:set string="University Times">pitt_collection.325</padig:set>
-        
+
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
         <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
@@ -232,7 +231,7 @@
         <padig:set string="Reynolds Family Papers Collection">scholars-square_sc--reynolds</padig:set>
         <padig:set string="Wohlsen Construction Company Marketing and Advertising Collection">scholars-square_sc--wohlsen-marketing</padig:set>
         <padig:set string="Wohlsen Construction Company Photograph Collection">scholars-square_sc--wohlsen-photos</padig:set>
-        
+
         <!-- Historic Pittsburgh -->
         <padig:set string="Aaronel deRoy Gruber Papers and Photographs">pitt_collection.440</padig:set>
         <padig:set string="Adolph M. Foerster Collection">pitt_collection.168</padig:set>
@@ -460,7 +459,7 @@
         <padig:set string="William Pitt Family Papers">pitt_collection.117</padig:set>
         <padig:set string="William V. Winans Jr. Photographs">pitt_collection.96</padig:set>
         <padig:set string="Woman's Christian Temperance Union, Wilkinsburg, Pa. Records">pitt_collection.205</padig:set>
-        
+
         <!-- Lafayette -->
         <padig:set string="Aya">collection:AYA</padig:set>
         <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
@@ -477,7 +476,7 @@
         <padig:set string="Marquis Magazine">collection:Marquis+Magazine</padig:set>
         <padig:set string="McKelvy House">collection:McKelvy+House</padig:set>
         <padig:set string="Pacific War Postcards">collection:Pacific+War+Postcards</padig:set>
-        
+
         <!-- LaSalle Bepress -->
         <padig:set string="La Salle Alumni Association Newsletter">publication:alumni_assoc_newsletter</padig:set>
         <padig:set string="La Salle College Alumni News">publication:alumni_news</padig:set>
@@ -508,16 +507,16 @@
         <padig:set string="La Salle Press Releases">publication:press_releases</padig:set>
         <padig:set string="La Salle Student Handbooks">publication:student_handbooks</padig:set>
         <padig:set string="Interviews">publication:vietnam_interviews</padig:set>
-        
+
         <!-- LaSalle CDM -->
         <padig:set string="Rick McCarty PTSD Drawings">p15860coll1</padig:set>
         <padig:set string="Nina Talbot, Veterans">p15860coll5</padig:set>
         <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
-        
+
         <!-- Lehigh -->
         <padig:set string="I Remain">letters</padig:set>
         <padig:set string="Postcards">postal</padig:set>
-        
+
         <!-- Library Company -->
         <!-- Includes setspecs used in variables.json, but also any other setspec that could be a nested collection -->
         <padig:set string="&quot;At the Instance&quot; Illustration Collection">Islandora_ATII1</padig:set>
@@ -722,12 +721,12 @@
         <padig:set string="World War One Collection">Islandora_WWI01</padig:set>
         <padig:set string="World War One Photographs and Ephemera">Islandora_WWIP2</padig:set>
         <padig:set string="World War One Posters">Islandora_WWIP1</padig:set>
-        
-        
+
+
         <!-- Millersville -->
         <padig:set string="Millersville University Photograph Collection">mvsphoto</padig:set>
         <padig:set string="Millersville University Postcard Collection">wingpost</padig:set>
-        
+
         <!-- PCOM -->
         <padig:set string="Classic Osteopathic Medical Works">publication:classic_med_works</padig:set>
         <padig:set string="Commencements">publication:commencements</padig:set>
@@ -737,7 +736,7 @@
         <padig:set string="Philadelphia Journal of Osteopathy">publication:phila_j_osteopathy</padig:set>
         <padig:set string="The Axone">publication:axone</padig:set>
         <padig:set string="Yearbooks">publication:yearbooks</padig:set>
-        
+
         <!-- Penn State -->
         <padig:set string="A Few Good Women">afgw</padig:set>
         <padig:set string="A. E. Bye Papers">aebye</padig:set>
@@ -795,8 +794,8 @@
         <padig:set string="Women's Suffrage Collection">suffrage</padig:set>
         <padig:set string="World War I Glass Plate Stereographs">ww1stereo</padig:set>
         <padig:set string="WPA Bituminous Coal Mine Maps">wpamaps</padig:set>
-        
-        <!-- Presbyterian Historical Society --> 
+
+        <!-- Presbyterian Historical Society -->
         <padig:set string="Baird Family Papers">islandora_rg316</padig:set>
         <padig:set string="Church Buildings">islandora_churchbuildings</padig:set>
         <padig:set string="Henry Harmon Spalding and Eliza Hart Spalding Papers">islandora_spalding</padig:set>
@@ -809,13 +808,13 @@
         <padig:set string="Religious News Service Photographs">islandora_rns</padig:set>
         <padig:set string="Relocation of Japanese-Americans during the Second World War">islandora_slides_b34</padig:set>
         <padig:set string="Tehran Community School">islandora_tehran_community_school</padig:set>
-        
+
         <!-- Slippery Rock -->
         <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
         <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
         <padig:set string="Slippery Rock University Postcard Collection">postcard</padig:set>
         <padig:set string="Slippery Rock University Yearbooks - The Saxigena (selected years)">yearbooks</padig:set>
-        
+
         <!-- State Library of Pennsylvania -->
         <padig:set string="Pennsylvania Bulletin">1-pennsylvania-bulletin</padig:set>
         <padig:set string="Family Trees and Records">10-family-trees-and-records</padig:set>
@@ -850,10 +849,7 @@
         <padig:set string="Department of Banking State Documents">148-department-of-banking-state</padig:set>
         <padig:set string="Board of Probation and Parole State Documents">149-board-of-probation-and</padig:set>
         <padig:set string="Board of Inspectors of the New Western Penitentiary State Documents">15-board-of-inspectors-of</padig:set>
-        <padig:set string="Superior Court Records and Briefs">151-superior-court-records-and</padig:set>
         <padig:set string="Pennsylvania Defense Council News">152-pennsylvania-defense-council-news</padig:set>
-        <padig:set string="Commonwealth Courth Records and Briefs">153-commonwealth-courth-records-and</padig:set>
-        <padig:set string="Supreme Court Records and Briefs">154-supreme-court-records-and</padig:set>
         <padig:set string="Alternative Central Newspaper">155-alternative-central-newspaper</padig:set>
         <padig:set string="Central Voice Newspaper">156-central-voice-newspaper</padig:set>
         <padig:set string="Central Voice Collection (All Titles)">157-central-voice-collection-all</padig:set>
@@ -960,11 +956,11 @@
         <padig:set string="Legislative Audit Advisory Commission State Documents">94-legislative-audit-advisory-commission</padig:set>
         <padig:set string="Legislative Budget and Finance Committee State Documents">95-legislative-budget-and-finance</padig:set>
         <padig:set string="Office of Administration State Documents">97-office-of-administration-state</padig:set>
-        
+
         <!-- Swarthaverford -->
         <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
         <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
-        
+
         <!-- TJU -->
         <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
         <padig:set string="A manual of military surgery, by S.D. Gross, MD, 1861">publication:milsurgusa</padig:set>
@@ -1000,7 +996,7 @@
         <padig:set string="Textile Printing Blocks">publication:textileprintingblocks</padig:set>
         <padig:set string="The Throat and the Voice, by J. Solis Cohen, M.D. 1879">publication:throat_and_voice</padig:set>
         <padig:set string="Thomas Jefferson University, Department of Medicine, Photo Album: 1959-1975">publication:tju_dmed_photo_album</padig:set>
-        
+
         <!-- University of Pittsburgh -->
         <padig:set string="19th Century Schoolbooks">pitt_collection.120</padig:set>
         <padig:set string="Abner Shimony Papers">pitt_collection.121</padig:set>
@@ -1094,7 +1090,7 @@
         <padig:set string="Wilfrid S. Sellars Papers">pitt_collection.142</padig:set>
         <padig:set string="William and James Scull Survey Ledgers">pitt_collection.259</padig:set>
         <padig:set string="Woman's Suffrage Movement in Pennsylvania Collection">pitt_collection.431</padig:set>
-        
+
         <!-- University of Scranton -->
         <padig:set string="Abe L. Plotkin Collection">p9000coll4</padig:set>
         <padig:set string="George F. Davis Penmanship Collection">p16214coll1</padig:set>
@@ -1114,7 +1110,7 @@
         <padig:set string="University of Scranton Student Scholarship">scholarship</padig:set>
         <padig:set string="University of Scranton Yearbooks">SCRYB03</padig:set>
         <padig:set string="Zaner-Bloser, Inc. / Sonya Bloser Monroe Penmanship Collection">zanerbloser</padig:set>
-        
+
         <!-- Ursinus -->
         <padig:set string="The Dutchman / The Pennsylvania Dutchman Magazine">publication:dutchmanmag</padig:set>
         <padig:set string="Pennsylvania Folklife Magazine">publication:pafolklifemag</padig:set>
@@ -1122,7 +1118,7 @@
         <padig:set string="Providence Independent Newspaper, 1875-1898">publication:providence</padig:set>
         <padig:set string="Yost History of Ursinus College">publication:yosthistory</padig:set>
         <padig:set string="Ursinus College Fraktur Collection">publication:ursinus_fraktur</padig:set>
-        
+
         <!-- Westchester -->
         <padig:set string="West Chester Doll Collection">wcudoll</padig:set>
         <padig:set string="West Chester University Anthony Wayne Letters">diaries</padig:set>
@@ -1140,7 +1136,7 @@
         <padig:set string="West Chester University Student Newspapers">wcnp01</padig:set>
         <padig:set string="West Chester University World War II Collection">p17189coll1</padig:set>
         <padig:set string="West Chester University WPA Collection">wpa</padig:set>
-        
+
         <!-- Widener -->
         <padig:set string="Alumni -- War Experiences">p16069coll17</padig:set>
         <padig:set string="Alumni Directories -- 1856-1991">p16069coll12</padig:set>
@@ -2162,507 +2158,507 @@
 
     <!-- lookup table for recommended Lexvo Languages terms/URIs -->
     <xsl:param name="lexvoLang">
-      <padig:lexlanguage string="aar" uri="http://lexvo.org/id/iso639-3/aar">aar</padig:lexlanguage>
-      <padig:lexlanguage string="abk" uri="http://lexvo.org/id/iso639-3/abk">abk</padig:lexlanguage>
-      <padig:lexlanguage string="ace" uri="http://lexvo.org/id/iso639-3/ace">ace</padig:lexlanguage>
-      <padig:lexlanguage string="ach" uri="http://lexvo.org/id/iso639-3/ach">ach</padig:lexlanguage>
-      <padig:lexlanguage string="ada" uri="http://lexvo.org/id/iso639-3/ada">ada</padig:lexlanguage>
-      <padig:lexlanguage string="ady" uri="http://lexvo.org/id/iso639-3/ady">ady</padig:lexlanguage>
-      <padig:lexlanguage string="afa" uri="http://lexvo.org/id/iso639-5/afa">afa</padig:lexlanguage>
-      <padig:lexlanguage string="afh" uri="http://lexvo.org/id/iso639-3/afh">afh</padig:lexlanguage>
-      <padig:lexlanguage string="afr" uri="http://lexvo.org/id/iso639-3/afr">afr</padig:lexlanguage>
-      <padig:lexlanguage string="ain" uri="http://lexvo.org/id/iso639-3/ain">ain</padig:lexlanguage>
-      <padig:lexlanguage string="aka" uri="http://lexvo.org/id/iso639-3/aka">aka</padig:lexlanguage>
-      <padig:lexlanguage string="akk" uri="http://lexvo.org/id/iso639-3/akk">akk</padig:lexlanguage>
-      <padig:lexlanguage string="alb" uri="http://lexvo.org/id/iso639-3/sqi">alb</padig:lexlanguage>
-      <padig:lexlanguage string="ale" uri="http://lexvo.org/id/iso639-3/ale">ale</padig:lexlanguage>
-      <padig:lexlanguage string="alg" uri="http://lexvo.org/id/iso639-5/alg">alg</padig:lexlanguage>
-      <padig:lexlanguage string="alt" uri="http://lexvo.org/id/iso639-3/alt">alt</padig:lexlanguage>
-      <padig:lexlanguage string="amh" uri="http://lexvo.org/id/iso639-3/amh">amh</padig:lexlanguage>
-      <padig:lexlanguage string="ang" uri="http://lexvo.org/id/iso639-3/ang">ang</padig:lexlanguage>
-      <padig:lexlanguage string="anp" uri="http://lexvo.org/id/iso639-3/anp">anp</padig:lexlanguage>
-      <padig:lexlanguage string="apa" uri="http://lexvo.org/id/iso639-5/apa">apa</padig:lexlanguage>
-      <padig:lexlanguage string="ara" uri="http://lexvo.org/id/iso639-3/ara">ara</padig:lexlanguage>
-      <padig:lexlanguage string="arc" uri="http://lexvo.org/id/iso639-3/arc">arc</padig:lexlanguage>
-      <padig:lexlanguage string="arg" uri="http://lexvo.org/id/iso639-3/arg">arg</padig:lexlanguage>
-      <padig:lexlanguage string="arm" uri="http://lexvo.org/id/iso639-3/hye">arm</padig:lexlanguage>
-      <padig:lexlanguage string="arn" uri="http://lexvo.org/id/iso639-3/arn">arn</padig:lexlanguage>
-      <padig:lexlanguage string="arp" uri="http://lexvo.org/id/iso639-3/arp">arp</padig:lexlanguage>
-      <padig:lexlanguage string="art" uri="http://lexvo.org/id/iso639-5/art">art</padig:lexlanguage>
-      <padig:lexlanguage string="arw" uri="http://lexvo.org/id/iso639-3/arw">arw</padig:lexlanguage>
-      <padig:lexlanguage string="asm" uri="http://lexvo.org/id/iso639-3/asm">asm</padig:lexlanguage>
-      <padig:lexlanguage string="ast" uri="http://lexvo.org/id/iso639-3/ast">ast</padig:lexlanguage>
-      <padig:lexlanguage string="ath" uri="http://lexvo.org/id/iso639-5/ath">ath</padig:lexlanguage>
-      <padig:lexlanguage string="aus" uri="http://lexvo.org/id/iso639-5/aus">aus</padig:lexlanguage>
-      <padig:lexlanguage string="ava" uri="http://lexvo.org/id/iso639-3/ava">ava</padig:lexlanguage>
-      <padig:lexlanguage string="ave" uri="http://lexvo.org/id/iso639-3/ave">ave</padig:lexlanguage>
-      <padig:lexlanguage string="awa" uri="http://lexvo.org/id/iso639-3/awa">awa</padig:lexlanguage>
-      <padig:lexlanguage string="aym" uri="http://lexvo.org/id/iso639-3/aym">aym</padig:lexlanguage>
-      <padig:lexlanguage string="aze" uri="http://lexvo.org/id/iso639-3/aze">aze</padig:lexlanguage>
-      <padig:lexlanguage string="bad" uri="http://lexvo.org/id/iso639-5/bad">bad</padig:lexlanguage>
-      <padig:lexlanguage string="bai" uri="http://lexvo.org/id/iso639-5/bai">bai</padig:lexlanguage>
-      <padig:lexlanguage string="bak" uri="http://lexvo.org/id/iso639-3/bak">bak</padig:lexlanguage>
-      <padig:lexlanguage string="bal" uri="http://lexvo.org/id/iso639-3/bal">bal</padig:lexlanguage>
-      <padig:lexlanguage string="bam" uri="http://lexvo.org/id/iso639-3/bam">bam</padig:lexlanguage>
-      <padig:lexlanguage string="ban" uri="http://lexvo.org/id/iso639-3/ban">ban</padig:lexlanguage>
-      <padig:lexlanguage string="baq" uri="http://lexvo.org/id/iso639-3/eus">baq</padig:lexlanguage>
-      <padig:lexlanguage string="bas" uri="http://lexvo.org/id/iso639-3/bas">bas</padig:lexlanguage>
-      <padig:lexlanguage string="bat" uri="http://lexvo.org/id/iso639-5/bat">bat</padig:lexlanguage>
-      <padig:lexlanguage string="bej" uri="http://lexvo.org/id/iso639-3/bej">bej</padig:lexlanguage>
-      <padig:lexlanguage string="bel" uri="http://lexvo.org/id/iso639-3/bel">bel</padig:lexlanguage>
-      <padig:lexlanguage string="bem" uri="http://lexvo.org/id/iso639-3/bem">bem</padig:lexlanguage>
-      <padig:lexlanguage string="ben" uri="http://lexvo.org/id/iso639-3/ben">ben</padig:lexlanguage>
-      <padig:lexlanguage string="ber" uri="http://lexvo.org/id/iso639-5/ber">ber</padig:lexlanguage>
-      <padig:lexlanguage string="bho" uri="http://lexvo.org/id/iso639-3/bho">bho</padig:lexlanguage>
-      <padig:lexlanguage string="bik" uri="http://lexvo.org/id/iso639-3/bik">bik</padig:lexlanguage>
-      <padig:lexlanguage string="bin" uri="http://lexvo.org/id/iso639-3/bin">bin</padig:lexlanguage>
-      <padig:lexlanguage string="bis" uri="http://lexvo.org/id/iso639-3/bis">bis</padig:lexlanguage>
-      <padig:lexlanguage string="bla" uri="http://lexvo.org/id/iso639-3/bla">bla</padig:lexlanguage>
-      <padig:lexlanguage string="bnt" uri="http://lexvo.org/id/iso639-5/bnt">bnt</padig:lexlanguage>
-      <padig:lexlanguage string="bod" uri="http://lexvo.org/id/iso639-3/bod">bod</padig:lexlanguage>
-      <padig:lexlanguage string="bos" uri="http://lexvo.org/id/iso639-3/bos">bos</padig:lexlanguage>
-      <padig:lexlanguage string="bra" uri="http://lexvo.org/id/iso639-3/bra">bra</padig:lexlanguage>
-      <padig:lexlanguage string="bre" uri="http://lexvo.org/id/iso639-3/bre">bre</padig:lexlanguage>
-      <padig:lexlanguage string="btk" uri="http://lexvo.org/id/iso639-5/btk">btk</padig:lexlanguage>
-      <padig:lexlanguage string="bua" uri="http://lexvo.org/id/iso639-3/bua">bua</padig:lexlanguage>
-      <padig:lexlanguage string="bug" uri="http://lexvo.org/id/iso639-3/bug">bug</padig:lexlanguage>
-      <padig:lexlanguage string="bul" uri="http://lexvo.org/id/iso639-3/bul">bul</padig:lexlanguage>
-      <padig:lexlanguage string="bur" uri="http://lexvo.org/id/iso639-3/mya">bur</padig:lexlanguage>
-      <padig:lexlanguage string="byn" uri="http://lexvo.org/id/iso639-3/byn">byn</padig:lexlanguage>
-      <padig:lexlanguage string="cad" uri="http://lexvo.org/id/iso639-3/cad">cad</padig:lexlanguage>
-      <padig:lexlanguage string="cai" uri="http://lexvo.org/id/iso639-5/cai">cai</padig:lexlanguage>
-      <padig:lexlanguage string="car" uri="http://lexvo.org/id/iso639-3/car">car</padig:lexlanguage>
-      <padig:lexlanguage string="cat" uri="http://lexvo.org/id/iso639-3/cat">cat</padig:lexlanguage>
-      <padig:lexlanguage string="cau" uri="http://lexvo.org/id/iso639-5/cau">cau</padig:lexlanguage>
-      <padig:lexlanguage string="ceb" uri="http://lexvo.org/id/iso639-3/ceb">ceb</padig:lexlanguage>
-      <padig:lexlanguage string="cel" uri="http://lexvo.org/id/iso639-5/cel">cel</padig:lexlanguage>
-      <padig:lexlanguage string="ces" uri="http://lexvo.org/id/iso639-3/ces">ces</padig:lexlanguage>
-      <padig:lexlanguage string="cha" uri="http://lexvo.org/id/iso639-3/cha">cha</padig:lexlanguage>
-      <padig:lexlanguage string="chb" uri="http://lexvo.org/id/iso639-3/chb">chb</padig:lexlanguage>
-      <padig:lexlanguage string="che" uri="http://lexvo.org/id/iso639-3/che">che</padig:lexlanguage>
-      <padig:lexlanguage string="chg" uri="http://lexvo.org/id/iso639-3/chg">chg</padig:lexlanguage>
-      <padig:lexlanguage string="chi" uri="http://lexvo.org/id/iso639-3/zho">chi</padig:lexlanguage>
-      <padig:lexlanguage string="chk" uri="http://lexvo.org/id/iso639-3/chk">chk</padig:lexlanguage>
-      <padig:lexlanguage string="chm" uri="http://lexvo.org/id/iso639-3/chm">chm</padig:lexlanguage>
-      <padig:lexlanguage string="chn" uri="http://lexvo.org/id/iso639-3/chn">chn</padig:lexlanguage>
-      <padig:lexlanguage string="cho" uri="http://lexvo.org/id/iso639-3/cho">cho</padig:lexlanguage>
-      <padig:lexlanguage string="chp" uri="http://lexvo.org/id/iso639-3/chp">chp</padig:lexlanguage>
-      <padig:lexlanguage string="chr" uri="http://lexvo.org/id/iso639-3/chr">chr</padig:lexlanguage>
-      <padig:lexlanguage string="chu" uri="http://lexvo.org/id/iso639-3/chu">chu</padig:lexlanguage>
-      <padig:lexlanguage string="chv" uri="http://lexvo.org/id/iso639-3/chv">chv</padig:lexlanguage>
-      <padig:lexlanguage string="chy" uri="http://lexvo.org/id/iso639-3/chy">chy</padig:lexlanguage>
-      <padig:lexlanguage string="cmc" uri="http://lexvo.org/id/iso639-5/cmc">cmc</padig:lexlanguage>
-      <padig:lexlanguage string="cop" uri="http://lexvo.org/id/iso639-3/cop">cop</padig:lexlanguage>
-      <padig:lexlanguage string="cor" uri="http://lexvo.org/id/iso639-3/cor">cor</padig:lexlanguage>
-      <padig:lexlanguage string="cos" uri="http://lexvo.org/id/iso639-3/cos">cos</padig:lexlanguage>
-      <padig:lexlanguage string="cpe" uri="http://lexvo.org/id/iso639-5/cpe">cpe</padig:lexlanguage>
-      <padig:lexlanguage string="cpf" uri="http://lexvo.org/id/iso639-5/cpf">cpf</padig:lexlanguage>
-      <padig:lexlanguage string="cpp" uri="http://lexvo.org/id/iso639-5/cpp">cpp</padig:lexlanguage>
-      <padig:lexlanguage string="cre" uri="http://lexvo.org/id/iso639-3/cre">cre</padig:lexlanguage>
-      <padig:lexlanguage string="crh" uri="http://lexvo.org/id/iso639-3/crh">crh</padig:lexlanguage>
-      <padig:lexlanguage string="crp" uri="http://lexvo.org/id/iso639-5/crp">crp</padig:lexlanguage>
-      <padig:lexlanguage string="csb" uri="http://lexvo.org/id/iso639-3/csb">csb</padig:lexlanguage>
-      <padig:lexlanguage string="cus" uri="http://lexvo.org/id/iso639-5/cus">cus</padig:lexlanguage>
-      <padig:lexlanguage string="cym" uri="http://lexvo.org/id/iso639-3/cym">cym</padig:lexlanguage>
-      <padig:lexlanguage string="cze" uri="http://lexvo.org/id/iso639-3/ces">cze</padig:lexlanguage>
-      <padig:lexlanguage string="dak" uri="http://lexvo.org/id/iso639-3/dak">dak</padig:lexlanguage>
-      <padig:lexlanguage string="dan" uri="http://lexvo.org/id/iso639-3/dan">dan</padig:lexlanguage>
-      <padig:lexlanguage string="dar" uri="http://lexvo.org/id/iso639-3/dar">dar</padig:lexlanguage>
-      <padig:lexlanguage string="day" uri="http://lexvo.org/id/iso639-5/day">day</padig:lexlanguage>
-      <padig:lexlanguage string="del" uri="http://lexvo.org/id/iso639-3/del">del</padig:lexlanguage>
-      <padig:lexlanguage string="den" uri="http://lexvo.org/id/iso639-3/den">den</padig:lexlanguage>
-      <padig:lexlanguage string="deu" uri="http://lexvo.org/id/iso639-3/deu">deu</padig:lexlanguage>
-      <padig:lexlanguage string="dgr" uri="http://lexvo.org/id/iso639-3/dgr">dgr</padig:lexlanguage>
-      <padig:lexlanguage string="din" uri="http://lexvo.org/id/iso639-3/din">din</padig:lexlanguage>
-      <padig:lexlanguage string="div" uri="http://lexvo.org/id/iso639-3/div">div</padig:lexlanguage>
-      <padig:lexlanguage string="doi" uri="http://lexvo.org/id/iso639-3/doi">doi</padig:lexlanguage>
-      <padig:lexlanguage string="dra" uri="http://lexvo.org/id/iso639-5/dra">dra</padig:lexlanguage>
-      <padig:lexlanguage string="dsb" uri="http://lexvo.org/id/iso639-3/dsb">dsb</padig:lexlanguage>
-      <padig:lexlanguage string="dua" uri="http://lexvo.org/id/iso639-3/dua">dua</padig:lexlanguage>
-      <padig:lexlanguage string="dum" uri="http://lexvo.org/id/iso639-3/dum">dum</padig:lexlanguage>
-      <padig:lexlanguage string="dut" uri="http://lexvo.org/id/iso639-3/nld">dut</padig:lexlanguage>
-      <padig:lexlanguage string="dyu" uri="http://lexvo.org/id/iso639-3/dyu">dyu</padig:lexlanguage>
-      <padig:lexlanguage string="dzo" uri="http://lexvo.org/id/iso639-3/dzo">dzo</padig:lexlanguage>
-      <padig:lexlanguage string="efi" uri="http://lexvo.org/id/iso639-3/efi">efi</padig:lexlanguage>
-      <padig:lexlanguage string="egy" uri="http://lexvo.org/id/iso639-3/egy">egy</padig:lexlanguage>
-      <padig:lexlanguage string="eka" uri="http://lexvo.org/id/iso639-3/eka">eka</padig:lexlanguage>
-      <padig:lexlanguage string="ell" uri="http://lexvo.org/id/iso639-3/ell">ell</padig:lexlanguage>
-      <padig:lexlanguage string="elx" uri="http://lexvo.org/id/iso639-3/elx">elx</padig:lexlanguage>
-      <padig:lexlanguage string="eng" uri="http://lexvo.org/id/iso639-3/eng">eng</padig:lexlanguage>
-      <padig:lexlanguage string="enm" uri="http://lexvo.org/id/iso639-3/enm">enm</padig:lexlanguage>
-      <padig:lexlanguage string="epo" uri="http://lexvo.org/id/iso639-3/epo">epo</padig:lexlanguage>
-      <padig:lexlanguage string="est" uri="http://lexvo.org/id/iso639-3/est">est</padig:lexlanguage>
-      <padig:lexlanguage string="eus" uri="http://lexvo.org/id/iso639-3/eus">eus</padig:lexlanguage>
-      <padig:lexlanguage string="ewe" uri="http://lexvo.org/id/iso639-3/ewe">ewe</padig:lexlanguage>
-      <padig:lexlanguage string="ewo" uri="http://lexvo.org/id/iso639-3/ewo">ewo</padig:lexlanguage>
-      <padig:lexlanguage string="fan" uri="http://lexvo.org/id/iso639-3/fan">fan</padig:lexlanguage>
-      <padig:lexlanguage string="fao" uri="http://lexvo.org/id/iso639-3/fao">fao</padig:lexlanguage>
-      <padig:lexlanguage string="fas" uri="http://lexvo.org/id/iso639-3/fas">fas</padig:lexlanguage>
-      <padig:lexlanguage string="fat" uri="http://lexvo.org/id/iso639-3/fat">fat</padig:lexlanguage>
-      <padig:lexlanguage string="fij" uri="http://lexvo.org/id/iso639-3/fij">fij</padig:lexlanguage>
-      <padig:lexlanguage string="fil" uri="http://lexvo.org/id/iso639-3/fil">fil</padig:lexlanguage>
-      <padig:lexlanguage string="fin" uri="http://lexvo.org/id/iso639-3/fin">fin</padig:lexlanguage>
-      <padig:lexlanguage string="fiu" uri="http://lexvo.org/id/iso639-5/fiu">fiu</padig:lexlanguage>
-      <padig:lexlanguage string="fon" uri="http://lexvo.org/id/iso639-3/fon">fon</padig:lexlanguage>
-      <padig:lexlanguage string="fra" uri="http://lexvo.org/id/iso639-3/fra">fra</padig:lexlanguage>
-      <padig:lexlanguage string="fre" uri="http://lexvo.org/id/iso639-3/fra">fre</padig:lexlanguage>
-      <padig:lexlanguage string="frm" uri="http://lexvo.org/id/iso639-3/frm">frm</padig:lexlanguage>
-      <padig:lexlanguage string="fro" uri="http://lexvo.org/id/iso639-3/fro">fro</padig:lexlanguage>
-      <padig:lexlanguage string="frr" uri="http://lexvo.org/id/iso639-3/frr">frr</padig:lexlanguage>
-      <padig:lexlanguage string="frs" uri="http://lexvo.org/id/iso639-3/frs">frs</padig:lexlanguage>
-      <padig:lexlanguage string="fry" uri="http://lexvo.org/id/iso639-3/fry">fry</padig:lexlanguage>
-      <padig:lexlanguage string="ful" uri="http://lexvo.org/id/iso639-3/ful">ful</padig:lexlanguage>
-      <padig:lexlanguage string="fur" uri="http://lexvo.org/id/iso639-3/fur">fur</padig:lexlanguage>
-      <padig:lexlanguage string="gaa" uri="http://lexvo.org/id/iso639-3/gaa">gaa</padig:lexlanguage>
-      <padig:lexlanguage string="gay" uri="http://lexvo.org/id/iso639-3/gay">gay</padig:lexlanguage>
-      <padig:lexlanguage string="gba" uri="http://lexvo.org/id/iso639-3/gba">gba</padig:lexlanguage>
-      <padig:lexlanguage string="gem" uri="http://lexvo.org/id/iso639-5/gem">gem</padig:lexlanguage>
-      <padig:lexlanguage string="geo" uri="http://lexvo.org/id/iso639-3/kat">geo</padig:lexlanguage>
-      <padig:lexlanguage string="ger" uri="http://lexvo.org/id/iso639-3/deu">ger</padig:lexlanguage>
-      <padig:lexlanguage string="gez" uri="http://lexvo.org/id/iso639-3/gez">gez</padig:lexlanguage>
-      <padig:lexlanguage string="gil" uri="http://lexvo.org/id/iso639-3/gil">gil</padig:lexlanguage>
-      <padig:lexlanguage string="gla" uri="http://lexvo.org/id/iso639-3/gla">gla</padig:lexlanguage>
-      <padig:lexlanguage string="gle" uri="http://lexvo.org/id/iso639-3/gle">gle</padig:lexlanguage>
-      <padig:lexlanguage string="glg" uri="http://lexvo.org/id/iso639-3/glg">glg</padig:lexlanguage>
-      <padig:lexlanguage string="glv" uri="http://lexvo.org/id/iso639-3/glv">glv</padig:lexlanguage>
-      <padig:lexlanguage string="gmh" uri="http://lexvo.org/id/iso639-3/gmh">gmh</padig:lexlanguage>
-      <padig:lexlanguage string="goh" uri="http://lexvo.org/id/iso639-3/goh">goh</padig:lexlanguage>
-      <padig:lexlanguage string="gon" uri="http://lexvo.org/id/iso639-3/gon">gon</padig:lexlanguage>
-      <padig:lexlanguage string="gor" uri="http://lexvo.org/id/iso639-3/gor">gor</padig:lexlanguage>
-      <padig:lexlanguage string="got" uri="http://lexvo.org/id/iso639-3/got">got</padig:lexlanguage>
-      <padig:lexlanguage string="grb" uri="http://lexvo.org/id/iso639-3/grb">grb</padig:lexlanguage>
-      <padig:lexlanguage string="grc" uri="http://lexvo.org/id/iso639-3/grc">grc</padig:lexlanguage>
-      <padig:lexlanguage string="gre" uri="http://lexvo.org/id/iso639-3/ell">gre</padig:lexlanguage>
-      <padig:lexlanguage string="grn" uri="http://lexvo.org/id/iso639-3/grn">grn</padig:lexlanguage>
-      <padig:lexlanguage string="gsw" uri="http://lexvo.org/id/iso639-3/gsw">gsw</padig:lexlanguage>
-      <padig:lexlanguage string="guj" uri="http://lexvo.org/id/iso639-3/guj">guj</padig:lexlanguage>
-      <padig:lexlanguage string="gwi" uri="http://lexvo.org/id/iso639-3/gwi">gwi</padig:lexlanguage>
-      <padig:lexlanguage string="hai" uri="http://lexvo.org/id/iso639-3/hai">hai</padig:lexlanguage>
-      <padig:lexlanguage string="hat" uri="http://lexvo.org/id/iso639-3/hat">hat</padig:lexlanguage>
-      <padig:lexlanguage string="hau" uri="http://lexvo.org/id/iso639-3/hau">hau</padig:lexlanguage>
-      <padig:lexlanguage string="haw" uri="http://lexvo.org/id/iso639-3/haw">haw</padig:lexlanguage>
-      <padig:lexlanguage string="heb" uri="http://lexvo.org/id/iso639-3/heb">heb</padig:lexlanguage>
-      <padig:lexlanguage string="her" uri="http://lexvo.org/id/iso639-3/her">her</padig:lexlanguage>
-      <padig:lexlanguage string="hil" uri="http://lexvo.org/id/iso639-3/hil">hil</padig:lexlanguage>
-      <padig:lexlanguage string="hin" uri="http://lexvo.org/id/iso639-3/hin">hin</padig:lexlanguage>
-      <padig:lexlanguage string="hit" uri="http://lexvo.org/id/iso639-3/hit">hit</padig:lexlanguage>
-      <padig:lexlanguage string="hmn" uri="http://lexvo.org/id/iso639-3/hmn">hmn</padig:lexlanguage>
-      <padig:lexlanguage string="hmo" uri="http://lexvo.org/id/iso639-3/hmo">hmo</padig:lexlanguage>
-      <padig:lexlanguage string="hrv" uri="http://lexvo.org/id/iso639-3/hrv">hrv</padig:lexlanguage>
-      <padig:lexlanguage string="hsb" uri="http://lexvo.org/id/iso639-3/hsb">hsb</padig:lexlanguage>
-      <padig:lexlanguage string="hun" uri="http://lexvo.org/id/iso639-3/hun">hun</padig:lexlanguage>
-      <padig:lexlanguage string="hup" uri="http://lexvo.org/id/iso639-3/hup">hup</padig:lexlanguage>
-      <padig:lexlanguage string="hye" uri="http://lexvo.org/id/iso639-3/hye">hye</padig:lexlanguage>
-      <padig:lexlanguage string="iba" uri="http://lexvo.org/id/iso639-3/iba">iba</padig:lexlanguage>
-      <padig:lexlanguage string="ibo" uri="http://lexvo.org/id/iso639-3/ibo">ibo</padig:lexlanguage>
-      <padig:lexlanguage string="ice" uri="http://lexvo.org/id/iso639-3/isl">ice</padig:lexlanguage>
-      <padig:lexlanguage string="ido" uri="http://lexvo.org/id/iso639-3/ido">ido</padig:lexlanguage>
-      <padig:lexlanguage string="iii" uri="http://lexvo.org/id/iso639-3/iii">iii</padig:lexlanguage>
-      <padig:lexlanguage string="ijo" uri="http://lexvo.org/id/iso639-5/ijo">ijo</padig:lexlanguage>
-      <padig:lexlanguage string="iku" uri="http://lexvo.org/id/iso639-3/iku">iku</padig:lexlanguage>
-      <padig:lexlanguage string="ile" uri="http://lexvo.org/id/iso639-3/ile">ile</padig:lexlanguage>
-      <padig:lexlanguage string="ilo" uri="http://lexvo.org/id/iso639-3/ilo">ilo</padig:lexlanguage>
-      <padig:lexlanguage string="ina" uri="http://lexvo.org/id/iso639-3/ina">ina</padig:lexlanguage>
-      <padig:lexlanguage string="inc" uri="http://lexvo.org/id/iso639-5/inc">inc</padig:lexlanguage>
-      <padig:lexlanguage string="ind" uri="http://lexvo.org/id/iso639-3/ind">ind</padig:lexlanguage>
-      <padig:lexlanguage string="ine" uri="http://lexvo.org/id/iso639-5/ine">ine</padig:lexlanguage>
-      <padig:lexlanguage string="inh" uri="http://lexvo.org/id/iso639-3/inh">inh</padig:lexlanguage>
-      <padig:lexlanguage string="ipk" uri="http://lexvo.org/id/iso639-3/ipk">ipk</padig:lexlanguage>
-      <padig:lexlanguage string="ira" uri="http://lexvo.org/id/iso639-5/ira">ira</padig:lexlanguage>
-      <padig:lexlanguage string="iro" uri="http://lexvo.org/id/iso639-5/iro">iro</padig:lexlanguage>
-      <padig:lexlanguage string="isl" uri="http://lexvo.org/id/iso639-3/isl">isl</padig:lexlanguage>
-      <padig:lexlanguage string="ita" uri="http://lexvo.org/id/iso639-3/ita">ita</padig:lexlanguage>
-      <padig:lexlanguage string="jav" uri="http://lexvo.org/id/iso639-3/jav">jav</padig:lexlanguage>
-      <padig:lexlanguage string="jbo" uri="http://lexvo.org/id/iso639-3/jbo">jbo</padig:lexlanguage>
-      <padig:lexlanguage string="jpn" uri="http://lexvo.org/id/iso639-3/jpn">jpn</padig:lexlanguage>
-      <padig:lexlanguage string="jpr" uri="http://lexvo.org/id/iso639-3/jpr">jpr</padig:lexlanguage>
-      <padig:lexlanguage string="jrb" uri="http://lexvo.org/id/iso639-3/jrb">jrb</padig:lexlanguage>
-      <padig:lexlanguage string="kaa" uri="http://lexvo.org/id/iso639-3/kaa">kaa</padig:lexlanguage>
-      <padig:lexlanguage string="kab" uri="http://lexvo.org/id/iso639-3/kab">kab</padig:lexlanguage>
-      <padig:lexlanguage string="kac" uri="http://lexvo.org/id/iso639-3/kac">kac</padig:lexlanguage>
-      <padig:lexlanguage string="kal" uri="http://lexvo.org/id/iso639-3/kal">kal</padig:lexlanguage>
-      <padig:lexlanguage string="kam" uri="http://lexvo.org/id/iso639-3/kam">kam</padig:lexlanguage>
-      <padig:lexlanguage string="kan" uri="http://lexvo.org/id/iso639-3/kan">kan</padig:lexlanguage>
-      <padig:lexlanguage string="kar" uri="http://lexvo.org/id/iso639-5/kar">kar</padig:lexlanguage>
-      <padig:lexlanguage string="kas" uri="http://lexvo.org/id/iso639-3/kas">kas</padig:lexlanguage>
-      <padig:lexlanguage string="kat" uri="http://lexvo.org/id/iso639-3/kat">kat</padig:lexlanguage>
-      <padig:lexlanguage string="kau" uri="http://lexvo.org/id/iso639-3/kau">kau</padig:lexlanguage>
-      <padig:lexlanguage string="kaw" uri="http://lexvo.org/id/iso639-3/kaw">kaw</padig:lexlanguage>
-      <padig:lexlanguage string="kaz" uri="http://lexvo.org/id/iso639-3/kaz">kaz</padig:lexlanguage>
-      <padig:lexlanguage string="kbd" uri="http://lexvo.org/id/iso639-3/kbd">kbd</padig:lexlanguage>
-      <padig:lexlanguage string="kha" uri="http://lexvo.org/id/iso639-3/kha">kha</padig:lexlanguage>
-      <padig:lexlanguage string="khi" uri="http://lexvo.org/id/iso639-5/khi">khi</padig:lexlanguage>
-      <padig:lexlanguage string="khm" uri="http://lexvo.org/id/iso639-3/khm">khm</padig:lexlanguage>
-      <padig:lexlanguage string="kho" uri="http://lexvo.org/id/iso639-3/kho">kho</padig:lexlanguage>
-      <padig:lexlanguage string="kik" uri="http://lexvo.org/id/iso639-3/kik">kik</padig:lexlanguage>
-      <padig:lexlanguage string="kin" uri="http://lexvo.org/id/iso639-3/kin">kin</padig:lexlanguage>
-      <padig:lexlanguage string="kir" uri="http://lexvo.org/id/iso639-3/kir">kir</padig:lexlanguage>
-      <padig:lexlanguage string="kmb" uri="http://lexvo.org/id/iso639-3/kmb">kmb</padig:lexlanguage>
-      <padig:lexlanguage string="kok" uri="http://lexvo.org/id/iso639-3/kok">kok</padig:lexlanguage>
-      <padig:lexlanguage string="kom" uri="http://lexvo.org/id/iso639-3/kom">kom</padig:lexlanguage>
-      <padig:lexlanguage string="kon" uri="http://lexvo.org/id/iso639-3/kon">kon</padig:lexlanguage>
-      <padig:lexlanguage string="kor" uri="http://lexvo.org/id/iso639-3/kor">kor</padig:lexlanguage>
-      <padig:lexlanguage string="kos" uri="http://lexvo.org/id/iso639-3/kos">kos</padig:lexlanguage>
-      <padig:lexlanguage string="kpe" uri="http://lexvo.org/id/iso639-3/kpe">kpe</padig:lexlanguage>
-      <padig:lexlanguage string="krc" uri="http://lexvo.org/id/iso639-3/krc">krc</padig:lexlanguage>
-      <padig:lexlanguage string="krl" uri="http://lexvo.org/id/iso639-3/krl">krl</padig:lexlanguage>
-      <padig:lexlanguage string="kro" uri="http://lexvo.org/id/iso639-5/kro">kro</padig:lexlanguage>
-      <padig:lexlanguage string="kru" uri="http://lexvo.org/id/iso639-3/kru">kru</padig:lexlanguage>
-      <padig:lexlanguage string="kua" uri="http://lexvo.org/id/iso639-3/kua">kua</padig:lexlanguage>
-      <padig:lexlanguage string="kum" uri="http://lexvo.org/id/iso639-3/kum">kum</padig:lexlanguage>
-      <padig:lexlanguage string="kur" uri="http://lexvo.org/id/iso639-3/kur">kur</padig:lexlanguage>
-      <padig:lexlanguage string="kut" uri="http://lexvo.org/id/iso639-3/kut">kut</padig:lexlanguage>
-      <padig:lexlanguage string="lad" uri="http://lexvo.org/id/iso639-3/lad">lad</padig:lexlanguage>
-      <padig:lexlanguage string="lah" uri="http://lexvo.org/id/iso639-3/lah">lah</padig:lexlanguage>
-      <padig:lexlanguage string="lam" uri="http://lexvo.org/id/iso639-3/lam">lam</padig:lexlanguage>
-      <padig:lexlanguage string="lao" uri="http://lexvo.org/id/iso639-3/lao">lao</padig:lexlanguage>
-      <padig:lexlanguage string="lat" uri="http://lexvo.org/id/iso639-3/lat">lat</padig:lexlanguage>
-      <padig:lexlanguage string="lav" uri="http://lexvo.org/id/iso639-3/lav">lav</padig:lexlanguage>
-      <padig:lexlanguage string="lez" uri="http://lexvo.org/id/iso639-3/lez">lez</padig:lexlanguage>
-      <padig:lexlanguage string="lim" uri="http://lexvo.org/id/iso639-3/lim">lim</padig:lexlanguage>
-      <padig:lexlanguage string="lin" uri="http://lexvo.org/id/iso639-3/lin">lin</padig:lexlanguage>
-      <padig:lexlanguage string="lit" uri="http://lexvo.org/id/iso639-3/lit">lit</padig:lexlanguage>
-      <padig:lexlanguage string="lol" uri="http://lexvo.org/id/iso639-3/lol">lol</padig:lexlanguage>
-      <padig:lexlanguage string="loz" uri="http://lexvo.org/id/iso639-3/loz">loz</padig:lexlanguage>
-      <padig:lexlanguage string="ltz" uri="http://lexvo.org/id/iso639-3/ltz">ltz</padig:lexlanguage>
-      <padig:lexlanguage string="lua" uri="http://lexvo.org/id/iso639-3/lua">lua</padig:lexlanguage>
-      <padig:lexlanguage string="lub" uri="http://lexvo.org/id/iso639-3/lub">lub</padig:lexlanguage>
-      <padig:lexlanguage string="lug" uri="http://lexvo.org/id/iso639-3/lug">lug</padig:lexlanguage>
-      <padig:lexlanguage string="lui" uri="http://lexvo.org/id/iso639-3/lui">lui</padig:lexlanguage>
-      <padig:lexlanguage string="lun" uri="http://lexvo.org/id/iso639-3/lun">lun</padig:lexlanguage>
-      <padig:lexlanguage string="luo" uri="http://lexvo.org/id/iso639-3/luo">luo</padig:lexlanguage>
-      <padig:lexlanguage string="lus" uri="http://lexvo.org/id/iso639-3/lus">lus</padig:lexlanguage>
-      <padig:lexlanguage string="mac" uri="http://lexvo.org/id/iso639-3/mkd">mac</padig:lexlanguage>
-      <padig:lexlanguage string="mad" uri="http://lexvo.org/id/iso639-3/mad">mad</padig:lexlanguage>
-      <padig:lexlanguage string="mag" uri="http://lexvo.org/id/iso639-3/mag">mag</padig:lexlanguage>
-      <padig:lexlanguage string="mah" uri="http://lexvo.org/id/iso639-3/mah">mah</padig:lexlanguage>
-      <padig:lexlanguage string="mai" uri="http://lexvo.org/id/iso639-3/mai">mai</padig:lexlanguage>
-      <padig:lexlanguage string="mak" uri="http://lexvo.org/id/iso639-3/mak">mak</padig:lexlanguage>
-      <padig:lexlanguage string="mal" uri="http://lexvo.org/id/iso639-3/mal">mal</padig:lexlanguage>
-      <padig:lexlanguage string="man" uri="http://lexvo.org/id/iso639-3/man">man</padig:lexlanguage>
-      <padig:lexlanguage string="mao" uri="http://lexvo.org/id/iso639-3/mri">mao</padig:lexlanguage>
-      <padig:lexlanguage string="map" uri="http://lexvo.org/id/iso639-5/map">map</padig:lexlanguage>
-      <padig:lexlanguage string="mar" uri="http://lexvo.org/id/iso639-3/mar">mar</padig:lexlanguage>
-      <padig:lexlanguage string="mas" uri="http://lexvo.org/id/iso639-3/mas">mas</padig:lexlanguage>
-      <padig:lexlanguage string="may" uri="http://lexvo.org/id/iso639-3/msa">may</padig:lexlanguage>
-      <padig:lexlanguage string="mdf" uri="http://lexvo.org/id/iso639-3/mdf">mdf</padig:lexlanguage>
-      <padig:lexlanguage string="mdr" uri="http://lexvo.org/id/iso639-3/mdr">mdr</padig:lexlanguage>
-      <padig:lexlanguage string="men" uri="http://lexvo.org/id/iso639-3/men">men</padig:lexlanguage>
-      <padig:lexlanguage string="mga" uri="http://lexvo.org/id/iso639-3/mga">mga</padig:lexlanguage>
-      <padig:lexlanguage string="mic" uri="http://lexvo.org/id/iso639-3/mic">mic</padig:lexlanguage>
-      <padig:lexlanguage string="min" uri="http://lexvo.org/id/iso639-3/min">min</padig:lexlanguage>
-      <padig:lexlanguage string="mis" uri="http://lexvo.org/id/iso639-3/mis">mis</padig:lexlanguage>
-      <padig:lexlanguage string="mkd" uri="http://lexvo.org/id/iso639-3/mkd">mkd</padig:lexlanguage>
-      <padig:lexlanguage string="mkh" uri="http://lexvo.org/id/iso639-5/mkh">mkh</padig:lexlanguage>
-      <padig:lexlanguage string="mlg" uri="http://lexvo.org/id/iso639-3/mlg">mlg</padig:lexlanguage>
-      <padig:lexlanguage string="mlt" uri="http://lexvo.org/id/iso639-3/mlt">mlt</padig:lexlanguage>
-      <padig:lexlanguage string="mnc" uri="http://lexvo.org/id/iso639-3/mnc">mnc</padig:lexlanguage>
-      <padig:lexlanguage string="mni" uri="http://lexvo.org/id/iso639-3/mni">mni</padig:lexlanguage>
-      <padig:lexlanguage string="mno" uri="http://lexvo.org/id/iso639-5/mno">mno</padig:lexlanguage>
-      <padig:lexlanguage string="moh" uri="http://lexvo.org/id/iso639-3/moh">moh</padig:lexlanguage>
-      <padig:lexlanguage string="mon" uri="http://lexvo.org/id/iso639-3/mon">mon</padig:lexlanguage>
-      <padig:lexlanguage string="mos" uri="http://lexvo.org/id/iso639-3/mos">mos</padig:lexlanguage>
-      <padig:lexlanguage string="mri" uri="http://lexvo.org/id/iso639-3/mri">mri</padig:lexlanguage>
-      <padig:lexlanguage string="msa" uri="http://lexvo.org/id/iso639-3/msa">msa</padig:lexlanguage>
-      <padig:lexlanguage string="mul" uri="http://lexvo.org/id/iso639-3/mul">mul</padig:lexlanguage>
-      <padig:lexlanguage string="mun" uri="http://lexvo.org/id/iso639-5/mun">mun</padig:lexlanguage>
-      <padig:lexlanguage string="mus" uri="http://lexvo.org/id/iso639-3/mus">mus</padig:lexlanguage>
-      <padig:lexlanguage string="mwl" uri="http://lexvo.org/id/iso639-3/mwl">mwl</padig:lexlanguage>
-      <padig:lexlanguage string="mwr" uri="http://lexvo.org/id/iso639-3/mwr">mwr</padig:lexlanguage>
-      <padig:lexlanguage string="mya" uri="http://lexvo.org/id/iso639-3/mya">mya</padig:lexlanguage>
-      <padig:lexlanguage string="myn" uri="http://lexvo.org/id/iso639-5/myn">myn</padig:lexlanguage>
-      <padig:lexlanguage string="myv" uri="http://lexvo.org/id/iso639-3/myv">myv</padig:lexlanguage>
-      <padig:lexlanguage string="nah" uri="http://lexvo.org/id/iso639-5/nah">nah</padig:lexlanguage>
-      <padig:lexlanguage string="nai" uri="http://lexvo.org/id/iso639-5/nai">nai</padig:lexlanguage>
-      <padig:lexlanguage string="nap" uri="http://lexvo.org/id/iso639-3/nap">nap</padig:lexlanguage>
-      <padig:lexlanguage string="nau" uri="http://lexvo.org/id/iso639-3/nau">nau</padig:lexlanguage>
-      <padig:lexlanguage string="nav" uri="http://lexvo.org/id/iso639-3/nav">nav</padig:lexlanguage>
-      <padig:lexlanguage string="nbl" uri="http://lexvo.org/id/iso639-3/nbl">nbl</padig:lexlanguage>
-      <padig:lexlanguage string="nde" uri="http://lexvo.org/id/iso639-3/nde">nde</padig:lexlanguage>
-      <padig:lexlanguage string="ndo" uri="http://lexvo.org/id/iso639-3/ndo">ndo</padig:lexlanguage>
-      <padig:lexlanguage string="nds" uri="http://lexvo.org/id/iso639-3/nds">nds</padig:lexlanguage>
-      <padig:lexlanguage string="nep" uri="http://lexvo.org/id/iso639-3/nep">nep</padig:lexlanguage>
-      <padig:lexlanguage string="new" uri="http://lexvo.org/id/iso639-3/new">new</padig:lexlanguage>
-      <padig:lexlanguage string="nia" uri="http://lexvo.org/id/iso639-3/nia">nia</padig:lexlanguage>
-      <padig:lexlanguage string="nic" uri="http://lexvo.org/id/iso639-5/nic">nic</padig:lexlanguage>
-      <padig:lexlanguage string="niu" uri="http://lexvo.org/id/iso639-3/niu">niu</padig:lexlanguage>
-      <padig:lexlanguage string="nld" uri="http://lexvo.org/id/iso639-3/nld">nld</padig:lexlanguage>
-      <padig:lexlanguage string="nno" uri="http://lexvo.org/id/iso639-3/nno">nno</padig:lexlanguage>
-      <padig:lexlanguage string="nob" uri="http://lexvo.org/id/iso639-3/nob">nob</padig:lexlanguage>
-      <padig:lexlanguage string="nog" uri="http://lexvo.org/id/iso639-3/nog">nog</padig:lexlanguage>
-      <padig:lexlanguage string="non" uri="http://lexvo.org/id/iso639-3/non">non</padig:lexlanguage>
-      <padig:lexlanguage string="nor" uri="http://lexvo.org/id/iso639-3/nor">nor</padig:lexlanguage>
-      <padig:lexlanguage string="nqo" uri="http://lexvo.org/id/iso639-3/nqo">nqo</padig:lexlanguage>
-      <padig:lexlanguage string="nso" uri="http://lexvo.org/id/iso639-3/nso">nso</padig:lexlanguage>
-      <padig:lexlanguage string="nub" uri="http://lexvo.org/id/iso639-5/nub">nub</padig:lexlanguage>
-      <padig:lexlanguage string="nwc" uri="http://lexvo.org/id/iso639-3/nwc">nwc</padig:lexlanguage>
-      <padig:lexlanguage string="nya" uri="http://lexvo.org/id/iso639-3/nya">nya</padig:lexlanguage>
-      <padig:lexlanguage string="nym" uri="http://lexvo.org/id/iso639-3/nym">nym</padig:lexlanguage>
-      <padig:lexlanguage string="nyn" uri="http://lexvo.org/id/iso639-3/nyn">nyn</padig:lexlanguage>
-      <padig:lexlanguage string="nyo" uri="http://lexvo.org/id/iso639-3/nyo">nyo</padig:lexlanguage>
-      <padig:lexlanguage string="nzi" uri="http://lexvo.org/id/iso639-3/nzi">nzi</padig:lexlanguage>
-      <padig:lexlanguage string="oci" uri="http://lexvo.org/id/iso639-3/oci">oci</padig:lexlanguage>
-      <padig:lexlanguage string="oji" uri="http://lexvo.org/id/iso639-3/oji">oji</padig:lexlanguage>
-      <padig:lexlanguage string="ori" uri="http://lexvo.org/id/iso639-3/ori">ori</padig:lexlanguage>
-      <padig:lexlanguage string="orm" uri="http://lexvo.org/id/iso639-3/orm">orm</padig:lexlanguage>
-      <padig:lexlanguage string="osa" uri="http://lexvo.org/id/iso639-3/osa">osa</padig:lexlanguage>
-      <padig:lexlanguage string="oss" uri="http://lexvo.org/id/iso639-3/oss">oss</padig:lexlanguage>
-      <padig:lexlanguage string="ota" uri="http://lexvo.org/id/iso639-3/ota">ota</padig:lexlanguage>
-      <padig:lexlanguage string="oto" uri="http://lexvo.org/id/iso639-5/oto">oto</padig:lexlanguage>
-      <padig:lexlanguage string="paa" uri="http://lexvo.org/id/iso639-5/paa">paa</padig:lexlanguage>
-      <padig:lexlanguage string="pag" uri="http://lexvo.org/id/iso639-3/pag">pag</padig:lexlanguage>
-      <padig:lexlanguage string="pal" uri="http://lexvo.org/id/iso639-3/pal">pal</padig:lexlanguage>
-      <padig:lexlanguage string="pam" uri="http://lexvo.org/id/iso639-3/pam">pam</padig:lexlanguage>
-      <padig:lexlanguage string="pan" uri="http://lexvo.org/id/iso639-3/pan">pan</padig:lexlanguage>
-      <padig:lexlanguage string="pap" uri="http://lexvo.org/id/iso639-3/pap">pap</padig:lexlanguage>
-      <padig:lexlanguage string="pau" uri="http://lexvo.org/id/iso639-3/pau">pau</padig:lexlanguage>
-      <padig:lexlanguage string="peo" uri="http://lexvo.org/id/iso639-3/peo">peo</padig:lexlanguage>
-      <padig:lexlanguage string="per" uri="http://lexvo.org/id/iso639-3/fas">per</padig:lexlanguage>
-      <padig:lexlanguage string="phi" uri="http://lexvo.org/id/iso639-5/phi">phi</padig:lexlanguage>
-      <padig:lexlanguage string="phn" uri="http://lexvo.org/id/iso639-3/phn">phn</padig:lexlanguage>
-      <padig:lexlanguage string="pli" uri="http://lexvo.org/id/iso639-3/pli">pli</padig:lexlanguage>
-      <padig:lexlanguage string="pol" uri="http://lexvo.org/id/iso639-3/pol">pol</padig:lexlanguage>
-      <padig:lexlanguage string="pon" uri="http://lexvo.org/id/iso639-3/pon">pon</padig:lexlanguage>
-      <padig:lexlanguage string="por" uri="http://lexvo.org/id/iso639-3/por">por</padig:lexlanguage>
-      <padig:lexlanguage string="pra" uri="http://lexvo.org/id/iso639-5/pra">pra</padig:lexlanguage>
-      <padig:lexlanguage string="pro" uri="http://lexvo.org/id/iso639-3/pro">pro</padig:lexlanguage>
-      <padig:lexlanguage string="pus" uri="http://lexvo.org/id/iso639-3/pus">pus</padig:lexlanguage>
-      <padig:lexlanguage string="que" uri="http://lexvo.org/id/iso639-3/que">que</padig:lexlanguage>
-      <padig:lexlanguage string="raj" uri="http://lexvo.org/id/iso639-3/raj">raj</padig:lexlanguage>
-      <padig:lexlanguage string="rap" uri="http://lexvo.org/id/iso639-3/rap">rap</padig:lexlanguage>
-      <padig:lexlanguage string="rar" uri="http://lexvo.org/id/iso639-3/rar">rar</padig:lexlanguage>
-      <padig:lexlanguage string="roa" uri="http://lexvo.org/id/iso639-5/roa">roa</padig:lexlanguage>
-      <padig:lexlanguage string="roh" uri="http://lexvo.org/id/iso639-3/roh">roh</padig:lexlanguage>
-      <padig:lexlanguage string="rom" uri="http://lexvo.org/id/iso639-3/rom">rom</padig:lexlanguage>
-      <padig:lexlanguage string="ron" uri="http://lexvo.org/id/iso639-3/ron">ron</padig:lexlanguage>
-      <padig:lexlanguage string="rum" uri="http://lexvo.org/id/iso639-3/ron">rum</padig:lexlanguage>
-      <padig:lexlanguage string="run" uri="http://lexvo.org/id/iso639-3/run">run</padig:lexlanguage>
-      <padig:lexlanguage string="rup" uri="http://lexvo.org/id/iso639-3/rup">rup</padig:lexlanguage>
-      <padig:lexlanguage string="rus" uri="http://lexvo.org/id/iso639-3/rus">rus</padig:lexlanguage>
-      <padig:lexlanguage string="sad" uri="http://lexvo.org/id/iso639-3/sad">sad</padig:lexlanguage>
-      <padig:lexlanguage string="sag" uri="http://lexvo.org/id/iso639-3/sag">sag</padig:lexlanguage>
-      <padig:lexlanguage string="sah" uri="http://lexvo.org/id/iso639-3/sah">sah</padig:lexlanguage>
-      <padig:lexlanguage string="sai" uri="http://lexvo.org/id/iso639-5/sai">sai</padig:lexlanguage>
-      <padig:lexlanguage string="sal" uri="http://lexvo.org/id/iso639-5/sal">sal</padig:lexlanguage>
-      <padig:lexlanguage string="sam" uri="http://lexvo.org/id/iso639-3/sam">sam</padig:lexlanguage>
-      <padig:lexlanguage string="san" uri="http://lexvo.org/id/iso639-3/san">san</padig:lexlanguage>
-      <padig:lexlanguage string="sas" uri="http://lexvo.org/id/iso639-3/sas">sas</padig:lexlanguage>
-      <padig:lexlanguage string="sat" uri="http://lexvo.org/id/iso639-3/sat">sat</padig:lexlanguage>
-      <padig:lexlanguage string="scn" uri="http://lexvo.org/id/iso639-3/scn">scn</padig:lexlanguage>
-      <padig:lexlanguage string="sco" uri="http://lexvo.org/id/iso639-3/sco">sco</padig:lexlanguage>
-      <padig:lexlanguage string="sel" uri="http://lexvo.org/id/iso639-3/sel">sel</padig:lexlanguage>
-      <padig:lexlanguage string="sem" uri="http://lexvo.org/id/iso639-5/sem">sem</padig:lexlanguage>
-      <padig:lexlanguage string="sga" uri="http://lexvo.org/id/iso639-3/sga">sga</padig:lexlanguage>
-      <padig:lexlanguage string="sgn" uri="http://lexvo.org/id/iso639-5/sgn">sgn</padig:lexlanguage>
-      <padig:lexlanguage string="shn" uri="http://lexvo.org/id/iso639-3/shn">shn</padig:lexlanguage>
-      <padig:lexlanguage string="sid" uri="http://lexvo.org/id/iso639-3/sid">sid</padig:lexlanguage>
-      <padig:lexlanguage string="sin" uri="http://lexvo.org/id/iso639-3/sin">sin</padig:lexlanguage>
-      <padig:lexlanguage string="sio" uri="http://lexvo.org/id/iso639-5/sio">sio</padig:lexlanguage>
-      <padig:lexlanguage string="sit" uri="http://lexvo.org/id/iso639-5/sit">sit</padig:lexlanguage>
-      <padig:lexlanguage string="sla" uri="http://lexvo.org/id/iso639-5/sla">sla</padig:lexlanguage>
-      <padig:lexlanguage string="slk" uri="http://lexvo.org/id/iso639-3/slk">slk</padig:lexlanguage>
-      <padig:lexlanguage string="slo" uri="http://lexvo.org/id/iso639-3/slk">slo</padig:lexlanguage>
-      <padig:lexlanguage string="slv" uri="http://lexvo.org/id/iso639-3/slv">slv</padig:lexlanguage>
-      <padig:lexlanguage string="sma" uri="http://lexvo.org/id/iso639-3/sma">sma</padig:lexlanguage>
-      <padig:lexlanguage string="sme" uri="http://lexvo.org/id/iso639-3/sme">sme</padig:lexlanguage>
-      <padig:lexlanguage string="smi" uri="http://lexvo.org/id/iso639-5/smi">smi</padig:lexlanguage>
-      <padig:lexlanguage string="smj" uri="http://lexvo.org/id/iso639-3/smj">smj</padig:lexlanguage>
-      <padig:lexlanguage string="smn" uri="http://lexvo.org/id/iso639-3/smn">smn</padig:lexlanguage>
-      <padig:lexlanguage string="smo" uri="http://lexvo.org/id/iso639-3/smo">smo</padig:lexlanguage>
-      <padig:lexlanguage string="sms" uri="http://lexvo.org/id/iso639-3/sms">sms</padig:lexlanguage>
-      <padig:lexlanguage string="sna" uri="http://lexvo.org/id/iso639-3/sna">sna</padig:lexlanguage>
-      <padig:lexlanguage string="snd" uri="http://lexvo.org/id/iso639-3/snd">snd</padig:lexlanguage>
-      <padig:lexlanguage string="snk" uri="http://lexvo.org/id/iso639-3/snk">snk</padig:lexlanguage>
-      <padig:lexlanguage string="sog" uri="http://lexvo.org/id/iso639-3/sog">sog</padig:lexlanguage>
-      <padig:lexlanguage string="som" uri="http://lexvo.org/id/iso639-3/som">som</padig:lexlanguage>
-      <padig:lexlanguage string="son" uri="http://lexvo.org/id/iso639-5/son">son</padig:lexlanguage>
-      <padig:lexlanguage string="sot" uri="http://lexvo.org/id/iso639-3/sot">sot</padig:lexlanguage>
-      <padig:lexlanguage string="spa" uri="http://lexvo.org/id/iso639-3/spa">spa</padig:lexlanguage>
-      <padig:lexlanguage string="sqi" uri="http://lexvo.org/id/iso639-3/sqi">sqi</padig:lexlanguage>
-      <padig:lexlanguage string="srd" uri="http://lexvo.org/id/iso639-3/srd">srd</padig:lexlanguage>
-      <padig:lexlanguage string="srn" uri="http://lexvo.org/id/iso639-3/srn">srn</padig:lexlanguage>
-      <padig:lexlanguage string="srp" uri="http://lexvo.org/id/iso639-3/srp">srp</padig:lexlanguage>
-      <padig:lexlanguage string="srr" uri="http://lexvo.org/id/iso639-3/srr">srr</padig:lexlanguage>
-      <padig:lexlanguage string="ssa" uri="http://lexvo.org/id/iso639-5/ssa">ssa</padig:lexlanguage>
-      <padig:lexlanguage string="ssw" uri="http://lexvo.org/id/iso639-3/ssw">ssw</padig:lexlanguage>
-      <padig:lexlanguage string="suk" uri="http://lexvo.org/id/iso639-3/suk">suk</padig:lexlanguage>
-      <padig:lexlanguage string="sun" uri="http://lexvo.org/id/iso639-3/sun">sun</padig:lexlanguage>
-      <padig:lexlanguage string="sus" uri="http://lexvo.org/id/iso639-3/sus">sus</padig:lexlanguage>
-      <padig:lexlanguage string="sux" uri="http://lexvo.org/id/iso639-3/sux">sux</padig:lexlanguage>
-      <padig:lexlanguage string="swa" uri="http://lexvo.org/id/iso639-3/swa">swa</padig:lexlanguage>
-      <padig:lexlanguage string="swe" uri="http://lexvo.org/id/iso639-3/swe">swe</padig:lexlanguage>
-      <padig:lexlanguage string="syc" uri="http://lexvo.org/id/iso639-3/syc">syc</padig:lexlanguage>
-      <padig:lexlanguage string="syr" uri="http://lexvo.org/id/iso639-3/syr">syr</padig:lexlanguage>
-      <padig:lexlanguage string="tah" uri="http://lexvo.org/id/iso639-3/tah">tah</padig:lexlanguage>
-      <padig:lexlanguage string="tai" uri="http://lexvo.org/id/iso639-5/tai">tai</padig:lexlanguage>
-      <padig:lexlanguage string="tam" uri="http://lexvo.org/id/iso639-3/tam">tam</padig:lexlanguage>
-      <padig:lexlanguage string="tat" uri="http://lexvo.org/id/iso639-3/tat">tat</padig:lexlanguage>
-      <padig:lexlanguage string="tel" uri="http://lexvo.org/id/iso639-3/tel">tel</padig:lexlanguage>
-      <padig:lexlanguage string="tem" uri="http://lexvo.org/id/iso639-3/tem">tem</padig:lexlanguage>
-      <padig:lexlanguage string="ter" uri="http://lexvo.org/id/iso639-3/ter">ter</padig:lexlanguage>
-      <padig:lexlanguage string="tet" uri="http://lexvo.org/id/iso639-3/tet">tet</padig:lexlanguage>
-      <padig:lexlanguage string="tgk" uri="http://lexvo.org/id/iso639-3/tgk">tgk</padig:lexlanguage>
-      <padig:lexlanguage string="tgl" uri="http://lexvo.org/id/iso639-3/tgl">tgl</padig:lexlanguage>
-      <padig:lexlanguage string="tha" uri="http://lexvo.org/id/iso639-3/tha">tha</padig:lexlanguage>
-      <padig:lexlanguage string="tib" uri="http://lexvo.org/id/iso639-3/bod">tib</padig:lexlanguage>
-      <padig:lexlanguage string="tig" uri="http://lexvo.org/id/iso639-3/tig">tig</padig:lexlanguage>
-      <padig:lexlanguage string="tir" uri="http://lexvo.org/id/iso639-3/tir">tir</padig:lexlanguage>
-      <padig:lexlanguage string="tiv" uri="http://lexvo.org/id/iso639-3/tiv">tiv</padig:lexlanguage>
-      <padig:lexlanguage string="tkl" uri="http://lexvo.org/id/iso639-3/tkl">tkl</padig:lexlanguage>
-      <padig:lexlanguage string="tlh" uri="http://lexvo.org/id/iso639-3/tlh">tlh</padig:lexlanguage>
-      <padig:lexlanguage string="tli" uri="http://lexvo.org/id/iso639-3/tli">tli</padig:lexlanguage>
-      <padig:lexlanguage string="tmh" uri="http://lexvo.org/id/iso639-3/tmh">tmh</padig:lexlanguage>
-      <padig:lexlanguage string="tog" uri="http://lexvo.org/id/iso639-3/tog">tog</padig:lexlanguage>
-      <padig:lexlanguage string="ton" uri="http://lexvo.org/id/iso639-3/ton">ton</padig:lexlanguage>
-      <padig:lexlanguage string="tpi" uri="http://lexvo.org/id/iso639-3/tpi">tpi</padig:lexlanguage>
-      <padig:lexlanguage string="tsi" uri="http://lexvo.org/id/iso639-3/tsi">tsi</padig:lexlanguage>
-      <padig:lexlanguage string="tsn" uri="http://lexvo.org/id/iso639-3/tsn">tsn</padig:lexlanguage>
-      <padig:lexlanguage string="tso" uri="http://lexvo.org/id/iso639-3/tso">tso</padig:lexlanguage>
-      <padig:lexlanguage string="tuk" uri="http://lexvo.org/id/iso639-3/tuk">tuk</padig:lexlanguage>
-      <padig:lexlanguage string="tum" uri="http://lexvo.org/id/iso639-3/tum">tum</padig:lexlanguage>
-      <padig:lexlanguage string="tup" uri="http://lexvo.org/id/iso639-5/tup">tup</padig:lexlanguage>
-      <padig:lexlanguage string="tur" uri="http://lexvo.org/id/iso639-3/tur">tur</padig:lexlanguage>
-      <padig:lexlanguage string="tut" uri="http://lexvo.org/id/iso639-5/tut">tut</padig:lexlanguage>
-      <padig:lexlanguage string="tvl" uri="http://lexvo.org/id/iso639-3/tvl">tvl</padig:lexlanguage>
-      <padig:lexlanguage string="twi" uri="http://lexvo.org/id/iso639-3/twi">twi</padig:lexlanguage>
-      <padig:lexlanguage string="tyv" uri="http://lexvo.org/id/iso639-3/tyv">tyv</padig:lexlanguage>
-      <padig:lexlanguage string="udm" uri="http://lexvo.org/id/iso639-3/udm">udm</padig:lexlanguage>
-      <padig:lexlanguage string="uga" uri="http://lexvo.org/id/iso639-3/uga">uga</padig:lexlanguage>
-      <padig:lexlanguage string="uig" uri="http://lexvo.org/id/iso639-3/uig">uig</padig:lexlanguage>
-      <padig:lexlanguage string="ukr" uri="http://lexvo.org/id/iso639-3/ukr">ukr</padig:lexlanguage>
-      <padig:lexlanguage string="umb" uri="http://lexvo.org/id/iso639-3/umb">umb</padig:lexlanguage>
-      <padig:lexlanguage string="und" uri="http://lexvo.org/id/iso639-3/und">und</padig:lexlanguage>
-      <padig:lexlanguage string="urd" uri="http://lexvo.org/id/iso639-3/urd">urd</padig:lexlanguage>
-      <padig:lexlanguage string="uzb" uri="http://lexvo.org/id/iso639-3/uzb">uzb</padig:lexlanguage>
-      <padig:lexlanguage string="vai" uri="http://lexvo.org/id/iso639-3/vai">vai</padig:lexlanguage>
-      <padig:lexlanguage string="ven" uri="http://lexvo.org/id/iso639-3/ven">ven</padig:lexlanguage>
-      <padig:lexlanguage string="vie" uri="http://lexvo.org/id/iso639-3/vie">vie</padig:lexlanguage>
-      <padig:lexlanguage string="vol" uri="http://lexvo.org/id/iso639-3/vol">vol</padig:lexlanguage>
-      <padig:lexlanguage string="vot" uri="http://lexvo.org/id/iso639-3/vot">vot</padig:lexlanguage>
-      <padig:lexlanguage string="wak" uri="http://lexvo.org/id/iso639-5/wak">wak</padig:lexlanguage>
-      <padig:lexlanguage string="wal" uri="http://lexvo.org/id/iso639-3/wal">wal</padig:lexlanguage>
-      <padig:lexlanguage string="war" uri="http://lexvo.org/id/iso639-3/war">war</padig:lexlanguage>
-      <padig:lexlanguage string="was" uri="http://lexvo.org/id/iso639-3/was">was</padig:lexlanguage>
-      <padig:lexlanguage string="wel" uri="http://lexvo.org/id/iso639-3/cym">wel</padig:lexlanguage>
-      <padig:lexlanguage string="wen" uri="http://lexvo.org/id/iso639-5/wen">wen</padig:lexlanguage>
-      <padig:lexlanguage string="wln" uri="http://lexvo.org/id/iso639-3/wln">wln</padig:lexlanguage>
-      <padig:lexlanguage string="wol" uri="http://lexvo.org/id/iso639-3/wol">wol</padig:lexlanguage>
-      <padig:lexlanguage string="xal" uri="http://lexvo.org/id/iso639-3/xal">xal</padig:lexlanguage>
-      <padig:lexlanguage string="xho" uri="http://lexvo.org/id/iso639-3/xho">xho</padig:lexlanguage>
-      <padig:lexlanguage string="yao" uri="http://lexvo.org/id/iso639-3/yao">yao</padig:lexlanguage>
-      <padig:lexlanguage string="yap" uri="http://lexvo.org/id/iso639-3/yap">yap</padig:lexlanguage>
-      <padig:lexlanguage string="yid" uri="http://lexvo.org/id/iso639-3/yid">yid</padig:lexlanguage>
-      <padig:lexlanguage string="yor" uri="http://lexvo.org/id/iso639-3/yor">yor</padig:lexlanguage>
-      <padig:lexlanguage string="ypk" uri="http://lexvo.org/id/iso639-5/ypk">ypk</padig:lexlanguage>
-      <padig:lexlanguage string="zap" uri="http://lexvo.org/id/iso639-3/zap">zap</padig:lexlanguage>
-      <padig:lexlanguage string="zbl" uri="http://lexvo.org/id/iso639-3/zbl">zbl</padig:lexlanguage>
-      <padig:lexlanguage string="zen" uri="http://lexvo.org/id/iso639-3/zen">zen</padig:lexlanguage>
-      <padig:lexlanguage string="zha" uri="http://lexvo.org/id/iso639-3/zha">zha</padig:lexlanguage>
-      <padig:lexlanguage string="zho" uri="http://lexvo.org/id/iso639-3/zho">zho</padig:lexlanguage>
-      <padig:lexlanguage string="znd" uri="http://lexvo.org/id/iso639-5/znd">znd</padig:lexlanguage>
-      <padig:lexlanguage string="zul" uri="http://lexvo.org/id/iso639-3/zul">zul</padig:lexlanguage>
-      <padig:lexlanguage string="zun" uri="http://lexvo.org/id/iso639-3/zun">zun</padig:lexlanguage>
-      <padig:lexlanguage string="zza" uri="http://lexvo.org/id/iso639-3/zza">zza</padig:lexlanguage>
+        <padig:lexlanguage string="aar" uri="http://lexvo.org/id/iso639-3/aar">aar</padig:lexlanguage>
+        <padig:lexlanguage string="abk" uri="http://lexvo.org/id/iso639-3/abk">abk</padig:lexlanguage>
+        <padig:lexlanguage string="ace" uri="http://lexvo.org/id/iso639-3/ace">ace</padig:lexlanguage>
+        <padig:lexlanguage string="ach" uri="http://lexvo.org/id/iso639-3/ach">ach</padig:lexlanguage>
+        <padig:lexlanguage string="ada" uri="http://lexvo.org/id/iso639-3/ada">ada</padig:lexlanguage>
+        <padig:lexlanguage string="ady" uri="http://lexvo.org/id/iso639-3/ady">ady</padig:lexlanguage>
+        <padig:lexlanguage string="afa" uri="http://lexvo.org/id/iso639-5/afa">afa</padig:lexlanguage>
+        <padig:lexlanguage string="afh" uri="http://lexvo.org/id/iso639-3/afh">afh</padig:lexlanguage>
+        <padig:lexlanguage string="afr" uri="http://lexvo.org/id/iso639-3/afr">afr</padig:lexlanguage>
+        <padig:lexlanguage string="ain" uri="http://lexvo.org/id/iso639-3/ain">ain</padig:lexlanguage>
+        <padig:lexlanguage string="aka" uri="http://lexvo.org/id/iso639-3/aka">aka</padig:lexlanguage>
+        <padig:lexlanguage string="akk" uri="http://lexvo.org/id/iso639-3/akk">akk</padig:lexlanguage>
+        <padig:lexlanguage string="alb" uri="http://lexvo.org/id/iso639-3/sqi">alb</padig:lexlanguage>
+        <padig:lexlanguage string="ale" uri="http://lexvo.org/id/iso639-3/ale">ale</padig:lexlanguage>
+        <padig:lexlanguage string="alg" uri="http://lexvo.org/id/iso639-5/alg">alg</padig:lexlanguage>
+        <padig:lexlanguage string="alt" uri="http://lexvo.org/id/iso639-3/alt">alt</padig:lexlanguage>
+        <padig:lexlanguage string="amh" uri="http://lexvo.org/id/iso639-3/amh">amh</padig:lexlanguage>
+        <padig:lexlanguage string="ang" uri="http://lexvo.org/id/iso639-3/ang">ang</padig:lexlanguage>
+        <padig:lexlanguage string="anp" uri="http://lexvo.org/id/iso639-3/anp">anp</padig:lexlanguage>
+        <padig:lexlanguage string="apa" uri="http://lexvo.org/id/iso639-5/apa">apa</padig:lexlanguage>
+        <padig:lexlanguage string="ara" uri="http://lexvo.org/id/iso639-3/ara">ara</padig:lexlanguage>
+        <padig:lexlanguage string="arc" uri="http://lexvo.org/id/iso639-3/arc">arc</padig:lexlanguage>
+        <padig:lexlanguage string="arg" uri="http://lexvo.org/id/iso639-3/arg">arg</padig:lexlanguage>
+        <padig:lexlanguage string="arm" uri="http://lexvo.org/id/iso639-3/hye">arm</padig:lexlanguage>
+        <padig:lexlanguage string="arn" uri="http://lexvo.org/id/iso639-3/arn">arn</padig:lexlanguage>
+        <padig:lexlanguage string="arp" uri="http://lexvo.org/id/iso639-3/arp">arp</padig:lexlanguage>
+        <padig:lexlanguage string="art" uri="http://lexvo.org/id/iso639-5/art">art</padig:lexlanguage>
+        <padig:lexlanguage string="arw" uri="http://lexvo.org/id/iso639-3/arw">arw</padig:lexlanguage>
+        <padig:lexlanguage string="asm" uri="http://lexvo.org/id/iso639-3/asm">asm</padig:lexlanguage>
+        <padig:lexlanguage string="ast" uri="http://lexvo.org/id/iso639-3/ast">ast</padig:lexlanguage>
+        <padig:lexlanguage string="ath" uri="http://lexvo.org/id/iso639-5/ath">ath</padig:lexlanguage>
+        <padig:lexlanguage string="aus" uri="http://lexvo.org/id/iso639-5/aus">aus</padig:lexlanguage>
+        <padig:lexlanguage string="ava" uri="http://lexvo.org/id/iso639-3/ava">ava</padig:lexlanguage>
+        <padig:lexlanguage string="ave" uri="http://lexvo.org/id/iso639-3/ave">ave</padig:lexlanguage>
+        <padig:lexlanguage string="awa" uri="http://lexvo.org/id/iso639-3/awa">awa</padig:lexlanguage>
+        <padig:lexlanguage string="aym" uri="http://lexvo.org/id/iso639-3/aym">aym</padig:lexlanguage>
+        <padig:lexlanguage string="aze" uri="http://lexvo.org/id/iso639-3/aze">aze</padig:lexlanguage>
+        <padig:lexlanguage string="bad" uri="http://lexvo.org/id/iso639-5/bad">bad</padig:lexlanguage>
+        <padig:lexlanguage string="bai" uri="http://lexvo.org/id/iso639-5/bai">bai</padig:lexlanguage>
+        <padig:lexlanguage string="bak" uri="http://lexvo.org/id/iso639-3/bak">bak</padig:lexlanguage>
+        <padig:lexlanguage string="bal" uri="http://lexvo.org/id/iso639-3/bal">bal</padig:lexlanguage>
+        <padig:lexlanguage string="bam" uri="http://lexvo.org/id/iso639-3/bam">bam</padig:lexlanguage>
+        <padig:lexlanguage string="ban" uri="http://lexvo.org/id/iso639-3/ban">ban</padig:lexlanguage>
+        <padig:lexlanguage string="baq" uri="http://lexvo.org/id/iso639-3/eus">baq</padig:lexlanguage>
+        <padig:lexlanguage string="bas" uri="http://lexvo.org/id/iso639-3/bas">bas</padig:lexlanguage>
+        <padig:lexlanguage string="bat" uri="http://lexvo.org/id/iso639-5/bat">bat</padig:lexlanguage>
+        <padig:lexlanguage string="bej" uri="http://lexvo.org/id/iso639-3/bej">bej</padig:lexlanguage>
+        <padig:lexlanguage string="bel" uri="http://lexvo.org/id/iso639-3/bel">bel</padig:lexlanguage>
+        <padig:lexlanguage string="bem" uri="http://lexvo.org/id/iso639-3/bem">bem</padig:lexlanguage>
+        <padig:lexlanguage string="ben" uri="http://lexvo.org/id/iso639-3/ben">ben</padig:lexlanguage>
+        <padig:lexlanguage string="ber" uri="http://lexvo.org/id/iso639-5/ber">ber</padig:lexlanguage>
+        <padig:lexlanguage string="bho" uri="http://lexvo.org/id/iso639-3/bho">bho</padig:lexlanguage>
+        <padig:lexlanguage string="bik" uri="http://lexvo.org/id/iso639-3/bik">bik</padig:lexlanguage>
+        <padig:lexlanguage string="bin" uri="http://lexvo.org/id/iso639-3/bin">bin</padig:lexlanguage>
+        <padig:lexlanguage string="bis" uri="http://lexvo.org/id/iso639-3/bis">bis</padig:lexlanguage>
+        <padig:lexlanguage string="bla" uri="http://lexvo.org/id/iso639-3/bla">bla</padig:lexlanguage>
+        <padig:lexlanguage string="bnt" uri="http://lexvo.org/id/iso639-5/bnt">bnt</padig:lexlanguage>
+        <padig:lexlanguage string="bod" uri="http://lexvo.org/id/iso639-3/bod">bod</padig:lexlanguage>
+        <padig:lexlanguage string="bos" uri="http://lexvo.org/id/iso639-3/bos">bos</padig:lexlanguage>
+        <padig:lexlanguage string="bra" uri="http://lexvo.org/id/iso639-3/bra">bra</padig:lexlanguage>
+        <padig:lexlanguage string="bre" uri="http://lexvo.org/id/iso639-3/bre">bre</padig:lexlanguage>
+        <padig:lexlanguage string="btk" uri="http://lexvo.org/id/iso639-5/btk">btk</padig:lexlanguage>
+        <padig:lexlanguage string="bua" uri="http://lexvo.org/id/iso639-3/bua">bua</padig:lexlanguage>
+        <padig:lexlanguage string="bug" uri="http://lexvo.org/id/iso639-3/bug">bug</padig:lexlanguage>
+        <padig:lexlanguage string="bul" uri="http://lexvo.org/id/iso639-3/bul">bul</padig:lexlanguage>
+        <padig:lexlanguage string="bur" uri="http://lexvo.org/id/iso639-3/mya">bur</padig:lexlanguage>
+        <padig:lexlanguage string="byn" uri="http://lexvo.org/id/iso639-3/byn">byn</padig:lexlanguage>
+        <padig:lexlanguage string="cad" uri="http://lexvo.org/id/iso639-3/cad">cad</padig:lexlanguage>
+        <padig:lexlanguage string="cai" uri="http://lexvo.org/id/iso639-5/cai">cai</padig:lexlanguage>
+        <padig:lexlanguage string="car" uri="http://lexvo.org/id/iso639-3/car">car</padig:lexlanguage>
+        <padig:lexlanguage string="cat" uri="http://lexvo.org/id/iso639-3/cat">cat</padig:lexlanguage>
+        <padig:lexlanguage string="cau" uri="http://lexvo.org/id/iso639-5/cau">cau</padig:lexlanguage>
+        <padig:lexlanguage string="ceb" uri="http://lexvo.org/id/iso639-3/ceb">ceb</padig:lexlanguage>
+        <padig:lexlanguage string="cel" uri="http://lexvo.org/id/iso639-5/cel">cel</padig:lexlanguage>
+        <padig:lexlanguage string="ces" uri="http://lexvo.org/id/iso639-3/ces">ces</padig:lexlanguage>
+        <padig:lexlanguage string="cha" uri="http://lexvo.org/id/iso639-3/cha">cha</padig:lexlanguage>
+        <padig:lexlanguage string="chb" uri="http://lexvo.org/id/iso639-3/chb">chb</padig:lexlanguage>
+        <padig:lexlanguage string="che" uri="http://lexvo.org/id/iso639-3/che">che</padig:lexlanguage>
+        <padig:lexlanguage string="chg" uri="http://lexvo.org/id/iso639-3/chg">chg</padig:lexlanguage>
+        <padig:lexlanguage string="chi" uri="http://lexvo.org/id/iso639-3/zho">chi</padig:lexlanguage>
+        <padig:lexlanguage string="chk" uri="http://lexvo.org/id/iso639-3/chk">chk</padig:lexlanguage>
+        <padig:lexlanguage string="chm" uri="http://lexvo.org/id/iso639-3/chm">chm</padig:lexlanguage>
+        <padig:lexlanguage string="chn" uri="http://lexvo.org/id/iso639-3/chn">chn</padig:lexlanguage>
+        <padig:lexlanguage string="cho" uri="http://lexvo.org/id/iso639-3/cho">cho</padig:lexlanguage>
+        <padig:lexlanguage string="chp" uri="http://lexvo.org/id/iso639-3/chp">chp</padig:lexlanguage>
+        <padig:lexlanguage string="chr" uri="http://lexvo.org/id/iso639-3/chr">chr</padig:lexlanguage>
+        <padig:lexlanguage string="chu" uri="http://lexvo.org/id/iso639-3/chu">chu</padig:lexlanguage>
+        <padig:lexlanguage string="chv" uri="http://lexvo.org/id/iso639-3/chv">chv</padig:lexlanguage>
+        <padig:lexlanguage string="chy" uri="http://lexvo.org/id/iso639-3/chy">chy</padig:lexlanguage>
+        <padig:lexlanguage string="cmc" uri="http://lexvo.org/id/iso639-5/cmc">cmc</padig:lexlanguage>
+        <padig:lexlanguage string="cop" uri="http://lexvo.org/id/iso639-3/cop">cop</padig:lexlanguage>
+        <padig:lexlanguage string="cor" uri="http://lexvo.org/id/iso639-3/cor">cor</padig:lexlanguage>
+        <padig:lexlanguage string="cos" uri="http://lexvo.org/id/iso639-3/cos">cos</padig:lexlanguage>
+        <padig:lexlanguage string="cpe" uri="http://lexvo.org/id/iso639-5/cpe">cpe</padig:lexlanguage>
+        <padig:lexlanguage string="cpf" uri="http://lexvo.org/id/iso639-5/cpf">cpf</padig:lexlanguage>
+        <padig:lexlanguage string="cpp" uri="http://lexvo.org/id/iso639-5/cpp">cpp</padig:lexlanguage>
+        <padig:lexlanguage string="cre" uri="http://lexvo.org/id/iso639-3/cre">cre</padig:lexlanguage>
+        <padig:lexlanguage string="crh" uri="http://lexvo.org/id/iso639-3/crh">crh</padig:lexlanguage>
+        <padig:lexlanguage string="crp" uri="http://lexvo.org/id/iso639-5/crp">crp</padig:lexlanguage>
+        <padig:lexlanguage string="csb" uri="http://lexvo.org/id/iso639-3/csb">csb</padig:lexlanguage>
+        <padig:lexlanguage string="cus" uri="http://lexvo.org/id/iso639-5/cus">cus</padig:lexlanguage>
+        <padig:lexlanguage string="cym" uri="http://lexvo.org/id/iso639-3/cym">cym</padig:lexlanguage>
+        <padig:lexlanguage string="cze" uri="http://lexvo.org/id/iso639-3/ces">cze</padig:lexlanguage>
+        <padig:lexlanguage string="dak" uri="http://lexvo.org/id/iso639-3/dak">dak</padig:lexlanguage>
+        <padig:lexlanguage string="dan" uri="http://lexvo.org/id/iso639-3/dan">dan</padig:lexlanguage>
+        <padig:lexlanguage string="dar" uri="http://lexvo.org/id/iso639-3/dar">dar</padig:lexlanguage>
+        <padig:lexlanguage string="day" uri="http://lexvo.org/id/iso639-5/day">day</padig:lexlanguage>
+        <padig:lexlanguage string="del" uri="http://lexvo.org/id/iso639-3/del">del</padig:lexlanguage>
+        <padig:lexlanguage string="den" uri="http://lexvo.org/id/iso639-3/den">den</padig:lexlanguage>
+        <padig:lexlanguage string="deu" uri="http://lexvo.org/id/iso639-3/deu">deu</padig:lexlanguage>
+        <padig:lexlanguage string="dgr" uri="http://lexvo.org/id/iso639-3/dgr">dgr</padig:lexlanguage>
+        <padig:lexlanguage string="din" uri="http://lexvo.org/id/iso639-3/din">din</padig:lexlanguage>
+        <padig:lexlanguage string="div" uri="http://lexvo.org/id/iso639-3/div">div</padig:lexlanguage>
+        <padig:lexlanguage string="doi" uri="http://lexvo.org/id/iso639-3/doi">doi</padig:lexlanguage>
+        <padig:lexlanguage string="dra" uri="http://lexvo.org/id/iso639-5/dra">dra</padig:lexlanguage>
+        <padig:lexlanguage string="dsb" uri="http://lexvo.org/id/iso639-3/dsb">dsb</padig:lexlanguage>
+        <padig:lexlanguage string="dua" uri="http://lexvo.org/id/iso639-3/dua">dua</padig:lexlanguage>
+        <padig:lexlanguage string="dum" uri="http://lexvo.org/id/iso639-3/dum">dum</padig:lexlanguage>
+        <padig:lexlanguage string="dut" uri="http://lexvo.org/id/iso639-3/nld">dut</padig:lexlanguage>
+        <padig:lexlanguage string="dyu" uri="http://lexvo.org/id/iso639-3/dyu">dyu</padig:lexlanguage>
+        <padig:lexlanguage string="dzo" uri="http://lexvo.org/id/iso639-3/dzo">dzo</padig:lexlanguage>
+        <padig:lexlanguage string="efi" uri="http://lexvo.org/id/iso639-3/efi">efi</padig:lexlanguage>
+        <padig:lexlanguage string="egy" uri="http://lexvo.org/id/iso639-3/egy">egy</padig:lexlanguage>
+        <padig:lexlanguage string="eka" uri="http://lexvo.org/id/iso639-3/eka">eka</padig:lexlanguage>
+        <padig:lexlanguage string="ell" uri="http://lexvo.org/id/iso639-3/ell">ell</padig:lexlanguage>
+        <padig:lexlanguage string="elx" uri="http://lexvo.org/id/iso639-3/elx">elx</padig:lexlanguage>
+        <padig:lexlanguage string="eng" uri="http://lexvo.org/id/iso639-3/eng">eng</padig:lexlanguage>
+        <padig:lexlanguage string="enm" uri="http://lexvo.org/id/iso639-3/enm">enm</padig:lexlanguage>
+        <padig:lexlanguage string="epo" uri="http://lexvo.org/id/iso639-3/epo">epo</padig:lexlanguage>
+        <padig:lexlanguage string="est" uri="http://lexvo.org/id/iso639-3/est">est</padig:lexlanguage>
+        <padig:lexlanguage string="eus" uri="http://lexvo.org/id/iso639-3/eus">eus</padig:lexlanguage>
+        <padig:lexlanguage string="ewe" uri="http://lexvo.org/id/iso639-3/ewe">ewe</padig:lexlanguage>
+        <padig:lexlanguage string="ewo" uri="http://lexvo.org/id/iso639-3/ewo">ewo</padig:lexlanguage>
+        <padig:lexlanguage string="fan" uri="http://lexvo.org/id/iso639-3/fan">fan</padig:lexlanguage>
+        <padig:lexlanguage string="fao" uri="http://lexvo.org/id/iso639-3/fao">fao</padig:lexlanguage>
+        <padig:lexlanguage string="fas" uri="http://lexvo.org/id/iso639-3/fas">fas</padig:lexlanguage>
+        <padig:lexlanguage string="fat" uri="http://lexvo.org/id/iso639-3/fat">fat</padig:lexlanguage>
+        <padig:lexlanguage string="fij" uri="http://lexvo.org/id/iso639-3/fij">fij</padig:lexlanguage>
+        <padig:lexlanguage string="fil" uri="http://lexvo.org/id/iso639-3/fil">fil</padig:lexlanguage>
+        <padig:lexlanguage string="fin" uri="http://lexvo.org/id/iso639-3/fin">fin</padig:lexlanguage>
+        <padig:lexlanguage string="fiu" uri="http://lexvo.org/id/iso639-5/fiu">fiu</padig:lexlanguage>
+        <padig:lexlanguage string="fon" uri="http://lexvo.org/id/iso639-3/fon">fon</padig:lexlanguage>
+        <padig:lexlanguage string="fra" uri="http://lexvo.org/id/iso639-3/fra">fra</padig:lexlanguage>
+        <padig:lexlanguage string="fre" uri="http://lexvo.org/id/iso639-3/fra">fre</padig:lexlanguage>
+        <padig:lexlanguage string="frm" uri="http://lexvo.org/id/iso639-3/frm">frm</padig:lexlanguage>
+        <padig:lexlanguage string="fro" uri="http://lexvo.org/id/iso639-3/fro">fro</padig:lexlanguage>
+        <padig:lexlanguage string="frr" uri="http://lexvo.org/id/iso639-3/frr">frr</padig:lexlanguage>
+        <padig:lexlanguage string="frs" uri="http://lexvo.org/id/iso639-3/frs">frs</padig:lexlanguage>
+        <padig:lexlanguage string="fry" uri="http://lexvo.org/id/iso639-3/fry">fry</padig:lexlanguage>
+        <padig:lexlanguage string="ful" uri="http://lexvo.org/id/iso639-3/ful">ful</padig:lexlanguage>
+        <padig:lexlanguage string="fur" uri="http://lexvo.org/id/iso639-3/fur">fur</padig:lexlanguage>
+        <padig:lexlanguage string="gaa" uri="http://lexvo.org/id/iso639-3/gaa">gaa</padig:lexlanguage>
+        <padig:lexlanguage string="gay" uri="http://lexvo.org/id/iso639-3/gay">gay</padig:lexlanguage>
+        <padig:lexlanguage string="gba" uri="http://lexvo.org/id/iso639-3/gba">gba</padig:lexlanguage>
+        <padig:lexlanguage string="gem" uri="http://lexvo.org/id/iso639-5/gem">gem</padig:lexlanguage>
+        <padig:lexlanguage string="geo" uri="http://lexvo.org/id/iso639-3/kat">geo</padig:lexlanguage>
+        <padig:lexlanguage string="ger" uri="http://lexvo.org/id/iso639-3/deu">ger</padig:lexlanguage>
+        <padig:lexlanguage string="gez" uri="http://lexvo.org/id/iso639-3/gez">gez</padig:lexlanguage>
+        <padig:lexlanguage string="gil" uri="http://lexvo.org/id/iso639-3/gil">gil</padig:lexlanguage>
+        <padig:lexlanguage string="gla" uri="http://lexvo.org/id/iso639-3/gla">gla</padig:lexlanguage>
+        <padig:lexlanguage string="gle" uri="http://lexvo.org/id/iso639-3/gle">gle</padig:lexlanguage>
+        <padig:lexlanguage string="glg" uri="http://lexvo.org/id/iso639-3/glg">glg</padig:lexlanguage>
+        <padig:lexlanguage string="glv" uri="http://lexvo.org/id/iso639-3/glv">glv</padig:lexlanguage>
+        <padig:lexlanguage string="gmh" uri="http://lexvo.org/id/iso639-3/gmh">gmh</padig:lexlanguage>
+        <padig:lexlanguage string="goh" uri="http://lexvo.org/id/iso639-3/goh">goh</padig:lexlanguage>
+        <padig:lexlanguage string="gon" uri="http://lexvo.org/id/iso639-3/gon">gon</padig:lexlanguage>
+        <padig:lexlanguage string="gor" uri="http://lexvo.org/id/iso639-3/gor">gor</padig:lexlanguage>
+        <padig:lexlanguage string="got" uri="http://lexvo.org/id/iso639-3/got">got</padig:lexlanguage>
+        <padig:lexlanguage string="grb" uri="http://lexvo.org/id/iso639-3/grb">grb</padig:lexlanguage>
+        <padig:lexlanguage string="grc" uri="http://lexvo.org/id/iso639-3/grc">grc</padig:lexlanguage>
+        <padig:lexlanguage string="gre" uri="http://lexvo.org/id/iso639-3/ell">gre</padig:lexlanguage>
+        <padig:lexlanguage string="grn" uri="http://lexvo.org/id/iso639-3/grn">grn</padig:lexlanguage>
+        <padig:lexlanguage string="gsw" uri="http://lexvo.org/id/iso639-3/gsw">gsw</padig:lexlanguage>
+        <padig:lexlanguage string="guj" uri="http://lexvo.org/id/iso639-3/guj">guj</padig:lexlanguage>
+        <padig:lexlanguage string="gwi" uri="http://lexvo.org/id/iso639-3/gwi">gwi</padig:lexlanguage>
+        <padig:lexlanguage string="hai" uri="http://lexvo.org/id/iso639-3/hai">hai</padig:lexlanguage>
+        <padig:lexlanguage string="hat" uri="http://lexvo.org/id/iso639-3/hat">hat</padig:lexlanguage>
+        <padig:lexlanguage string="hau" uri="http://lexvo.org/id/iso639-3/hau">hau</padig:lexlanguage>
+        <padig:lexlanguage string="haw" uri="http://lexvo.org/id/iso639-3/haw">haw</padig:lexlanguage>
+        <padig:lexlanguage string="heb" uri="http://lexvo.org/id/iso639-3/heb">heb</padig:lexlanguage>
+        <padig:lexlanguage string="her" uri="http://lexvo.org/id/iso639-3/her">her</padig:lexlanguage>
+        <padig:lexlanguage string="hil" uri="http://lexvo.org/id/iso639-3/hil">hil</padig:lexlanguage>
+        <padig:lexlanguage string="hin" uri="http://lexvo.org/id/iso639-3/hin">hin</padig:lexlanguage>
+        <padig:lexlanguage string="hit" uri="http://lexvo.org/id/iso639-3/hit">hit</padig:lexlanguage>
+        <padig:lexlanguage string="hmn" uri="http://lexvo.org/id/iso639-3/hmn">hmn</padig:lexlanguage>
+        <padig:lexlanguage string="hmo" uri="http://lexvo.org/id/iso639-3/hmo">hmo</padig:lexlanguage>
+        <padig:lexlanguage string="hrv" uri="http://lexvo.org/id/iso639-3/hrv">hrv</padig:lexlanguage>
+        <padig:lexlanguage string="hsb" uri="http://lexvo.org/id/iso639-3/hsb">hsb</padig:lexlanguage>
+        <padig:lexlanguage string="hun" uri="http://lexvo.org/id/iso639-3/hun">hun</padig:lexlanguage>
+        <padig:lexlanguage string="hup" uri="http://lexvo.org/id/iso639-3/hup">hup</padig:lexlanguage>
+        <padig:lexlanguage string="hye" uri="http://lexvo.org/id/iso639-3/hye">hye</padig:lexlanguage>
+        <padig:lexlanguage string="iba" uri="http://lexvo.org/id/iso639-3/iba">iba</padig:lexlanguage>
+        <padig:lexlanguage string="ibo" uri="http://lexvo.org/id/iso639-3/ibo">ibo</padig:lexlanguage>
+        <padig:lexlanguage string="ice" uri="http://lexvo.org/id/iso639-3/isl">ice</padig:lexlanguage>
+        <padig:lexlanguage string="ido" uri="http://lexvo.org/id/iso639-3/ido">ido</padig:lexlanguage>
+        <padig:lexlanguage string="iii" uri="http://lexvo.org/id/iso639-3/iii">iii</padig:lexlanguage>
+        <padig:lexlanguage string="ijo" uri="http://lexvo.org/id/iso639-5/ijo">ijo</padig:lexlanguage>
+        <padig:lexlanguage string="iku" uri="http://lexvo.org/id/iso639-3/iku">iku</padig:lexlanguage>
+        <padig:lexlanguage string="ile" uri="http://lexvo.org/id/iso639-3/ile">ile</padig:lexlanguage>
+        <padig:lexlanguage string="ilo" uri="http://lexvo.org/id/iso639-3/ilo">ilo</padig:lexlanguage>
+        <padig:lexlanguage string="ina" uri="http://lexvo.org/id/iso639-3/ina">ina</padig:lexlanguage>
+        <padig:lexlanguage string="inc" uri="http://lexvo.org/id/iso639-5/inc">inc</padig:lexlanguage>
+        <padig:lexlanguage string="ind" uri="http://lexvo.org/id/iso639-3/ind">ind</padig:lexlanguage>
+        <padig:lexlanguage string="ine" uri="http://lexvo.org/id/iso639-5/ine">ine</padig:lexlanguage>
+        <padig:lexlanguage string="inh" uri="http://lexvo.org/id/iso639-3/inh">inh</padig:lexlanguage>
+        <padig:lexlanguage string="ipk" uri="http://lexvo.org/id/iso639-3/ipk">ipk</padig:lexlanguage>
+        <padig:lexlanguage string="ira" uri="http://lexvo.org/id/iso639-5/ira">ira</padig:lexlanguage>
+        <padig:lexlanguage string="iro" uri="http://lexvo.org/id/iso639-5/iro">iro</padig:lexlanguage>
+        <padig:lexlanguage string="isl" uri="http://lexvo.org/id/iso639-3/isl">isl</padig:lexlanguage>
+        <padig:lexlanguage string="ita" uri="http://lexvo.org/id/iso639-3/ita">ita</padig:lexlanguage>
+        <padig:lexlanguage string="jav" uri="http://lexvo.org/id/iso639-3/jav">jav</padig:lexlanguage>
+        <padig:lexlanguage string="jbo" uri="http://lexvo.org/id/iso639-3/jbo">jbo</padig:lexlanguage>
+        <padig:lexlanguage string="jpn" uri="http://lexvo.org/id/iso639-3/jpn">jpn</padig:lexlanguage>
+        <padig:lexlanguage string="jpr" uri="http://lexvo.org/id/iso639-3/jpr">jpr</padig:lexlanguage>
+        <padig:lexlanguage string="jrb" uri="http://lexvo.org/id/iso639-3/jrb">jrb</padig:lexlanguage>
+        <padig:lexlanguage string="kaa" uri="http://lexvo.org/id/iso639-3/kaa">kaa</padig:lexlanguage>
+        <padig:lexlanguage string="kab" uri="http://lexvo.org/id/iso639-3/kab">kab</padig:lexlanguage>
+        <padig:lexlanguage string="kac" uri="http://lexvo.org/id/iso639-3/kac">kac</padig:lexlanguage>
+        <padig:lexlanguage string="kal" uri="http://lexvo.org/id/iso639-3/kal">kal</padig:lexlanguage>
+        <padig:lexlanguage string="kam" uri="http://lexvo.org/id/iso639-3/kam">kam</padig:lexlanguage>
+        <padig:lexlanguage string="kan" uri="http://lexvo.org/id/iso639-3/kan">kan</padig:lexlanguage>
+        <padig:lexlanguage string="kar" uri="http://lexvo.org/id/iso639-5/kar">kar</padig:lexlanguage>
+        <padig:lexlanguage string="kas" uri="http://lexvo.org/id/iso639-3/kas">kas</padig:lexlanguage>
+        <padig:lexlanguage string="kat" uri="http://lexvo.org/id/iso639-3/kat">kat</padig:lexlanguage>
+        <padig:lexlanguage string="kau" uri="http://lexvo.org/id/iso639-3/kau">kau</padig:lexlanguage>
+        <padig:lexlanguage string="kaw" uri="http://lexvo.org/id/iso639-3/kaw">kaw</padig:lexlanguage>
+        <padig:lexlanguage string="kaz" uri="http://lexvo.org/id/iso639-3/kaz">kaz</padig:lexlanguage>
+        <padig:lexlanguage string="kbd" uri="http://lexvo.org/id/iso639-3/kbd">kbd</padig:lexlanguage>
+        <padig:lexlanguage string="kha" uri="http://lexvo.org/id/iso639-3/kha">kha</padig:lexlanguage>
+        <padig:lexlanguage string="khi" uri="http://lexvo.org/id/iso639-5/khi">khi</padig:lexlanguage>
+        <padig:lexlanguage string="khm" uri="http://lexvo.org/id/iso639-3/khm">khm</padig:lexlanguage>
+        <padig:lexlanguage string="kho" uri="http://lexvo.org/id/iso639-3/kho">kho</padig:lexlanguage>
+        <padig:lexlanguage string="kik" uri="http://lexvo.org/id/iso639-3/kik">kik</padig:lexlanguage>
+        <padig:lexlanguage string="kin" uri="http://lexvo.org/id/iso639-3/kin">kin</padig:lexlanguage>
+        <padig:lexlanguage string="kir" uri="http://lexvo.org/id/iso639-3/kir">kir</padig:lexlanguage>
+        <padig:lexlanguage string="kmb" uri="http://lexvo.org/id/iso639-3/kmb">kmb</padig:lexlanguage>
+        <padig:lexlanguage string="kok" uri="http://lexvo.org/id/iso639-3/kok">kok</padig:lexlanguage>
+        <padig:lexlanguage string="kom" uri="http://lexvo.org/id/iso639-3/kom">kom</padig:lexlanguage>
+        <padig:lexlanguage string="kon" uri="http://lexvo.org/id/iso639-3/kon">kon</padig:lexlanguage>
+        <padig:lexlanguage string="kor" uri="http://lexvo.org/id/iso639-3/kor">kor</padig:lexlanguage>
+        <padig:lexlanguage string="kos" uri="http://lexvo.org/id/iso639-3/kos">kos</padig:lexlanguage>
+        <padig:lexlanguage string="kpe" uri="http://lexvo.org/id/iso639-3/kpe">kpe</padig:lexlanguage>
+        <padig:lexlanguage string="krc" uri="http://lexvo.org/id/iso639-3/krc">krc</padig:lexlanguage>
+        <padig:lexlanguage string="krl" uri="http://lexvo.org/id/iso639-3/krl">krl</padig:lexlanguage>
+        <padig:lexlanguage string="kro" uri="http://lexvo.org/id/iso639-5/kro">kro</padig:lexlanguage>
+        <padig:lexlanguage string="kru" uri="http://lexvo.org/id/iso639-3/kru">kru</padig:lexlanguage>
+        <padig:lexlanguage string="kua" uri="http://lexvo.org/id/iso639-3/kua">kua</padig:lexlanguage>
+        <padig:lexlanguage string="kum" uri="http://lexvo.org/id/iso639-3/kum">kum</padig:lexlanguage>
+        <padig:lexlanguage string="kur" uri="http://lexvo.org/id/iso639-3/kur">kur</padig:lexlanguage>
+        <padig:lexlanguage string="kut" uri="http://lexvo.org/id/iso639-3/kut">kut</padig:lexlanguage>
+        <padig:lexlanguage string="lad" uri="http://lexvo.org/id/iso639-3/lad">lad</padig:lexlanguage>
+        <padig:lexlanguage string="lah" uri="http://lexvo.org/id/iso639-3/lah">lah</padig:lexlanguage>
+        <padig:lexlanguage string="lam" uri="http://lexvo.org/id/iso639-3/lam">lam</padig:lexlanguage>
+        <padig:lexlanguage string="lao" uri="http://lexvo.org/id/iso639-3/lao">lao</padig:lexlanguage>
+        <padig:lexlanguage string="lat" uri="http://lexvo.org/id/iso639-3/lat">lat</padig:lexlanguage>
+        <padig:lexlanguage string="lav" uri="http://lexvo.org/id/iso639-3/lav">lav</padig:lexlanguage>
+        <padig:lexlanguage string="lez" uri="http://lexvo.org/id/iso639-3/lez">lez</padig:lexlanguage>
+        <padig:lexlanguage string="lim" uri="http://lexvo.org/id/iso639-3/lim">lim</padig:lexlanguage>
+        <padig:lexlanguage string="lin" uri="http://lexvo.org/id/iso639-3/lin">lin</padig:lexlanguage>
+        <padig:lexlanguage string="lit" uri="http://lexvo.org/id/iso639-3/lit">lit</padig:lexlanguage>
+        <padig:lexlanguage string="lol" uri="http://lexvo.org/id/iso639-3/lol">lol</padig:lexlanguage>
+        <padig:lexlanguage string="loz" uri="http://lexvo.org/id/iso639-3/loz">loz</padig:lexlanguage>
+        <padig:lexlanguage string="ltz" uri="http://lexvo.org/id/iso639-3/ltz">ltz</padig:lexlanguage>
+        <padig:lexlanguage string="lua" uri="http://lexvo.org/id/iso639-3/lua">lua</padig:lexlanguage>
+        <padig:lexlanguage string="lub" uri="http://lexvo.org/id/iso639-3/lub">lub</padig:lexlanguage>
+        <padig:lexlanguage string="lug" uri="http://lexvo.org/id/iso639-3/lug">lug</padig:lexlanguage>
+        <padig:lexlanguage string="lui" uri="http://lexvo.org/id/iso639-3/lui">lui</padig:lexlanguage>
+        <padig:lexlanguage string="lun" uri="http://lexvo.org/id/iso639-3/lun">lun</padig:lexlanguage>
+        <padig:lexlanguage string="luo" uri="http://lexvo.org/id/iso639-3/luo">luo</padig:lexlanguage>
+        <padig:lexlanguage string="lus" uri="http://lexvo.org/id/iso639-3/lus">lus</padig:lexlanguage>
+        <padig:lexlanguage string="mac" uri="http://lexvo.org/id/iso639-3/mkd">mac</padig:lexlanguage>
+        <padig:lexlanguage string="mad" uri="http://lexvo.org/id/iso639-3/mad">mad</padig:lexlanguage>
+        <padig:lexlanguage string="mag" uri="http://lexvo.org/id/iso639-3/mag">mag</padig:lexlanguage>
+        <padig:lexlanguage string="mah" uri="http://lexvo.org/id/iso639-3/mah">mah</padig:lexlanguage>
+        <padig:lexlanguage string="mai" uri="http://lexvo.org/id/iso639-3/mai">mai</padig:lexlanguage>
+        <padig:lexlanguage string="mak" uri="http://lexvo.org/id/iso639-3/mak">mak</padig:lexlanguage>
+        <padig:lexlanguage string="mal" uri="http://lexvo.org/id/iso639-3/mal">mal</padig:lexlanguage>
+        <padig:lexlanguage string="man" uri="http://lexvo.org/id/iso639-3/man">man</padig:lexlanguage>
+        <padig:lexlanguage string="mao" uri="http://lexvo.org/id/iso639-3/mri">mao</padig:lexlanguage>
+        <padig:lexlanguage string="map" uri="http://lexvo.org/id/iso639-5/map">map</padig:lexlanguage>
+        <padig:lexlanguage string="mar" uri="http://lexvo.org/id/iso639-3/mar">mar</padig:lexlanguage>
+        <padig:lexlanguage string="mas" uri="http://lexvo.org/id/iso639-3/mas">mas</padig:lexlanguage>
+        <padig:lexlanguage string="may" uri="http://lexvo.org/id/iso639-3/msa">may</padig:lexlanguage>
+        <padig:lexlanguage string="mdf" uri="http://lexvo.org/id/iso639-3/mdf">mdf</padig:lexlanguage>
+        <padig:lexlanguage string="mdr" uri="http://lexvo.org/id/iso639-3/mdr">mdr</padig:lexlanguage>
+        <padig:lexlanguage string="men" uri="http://lexvo.org/id/iso639-3/men">men</padig:lexlanguage>
+        <padig:lexlanguage string="mga" uri="http://lexvo.org/id/iso639-3/mga">mga</padig:lexlanguage>
+        <padig:lexlanguage string="mic" uri="http://lexvo.org/id/iso639-3/mic">mic</padig:lexlanguage>
+        <padig:lexlanguage string="min" uri="http://lexvo.org/id/iso639-3/min">min</padig:lexlanguage>
+        <padig:lexlanguage string="mis" uri="http://lexvo.org/id/iso639-3/mis">mis</padig:lexlanguage>
+        <padig:lexlanguage string="mkd" uri="http://lexvo.org/id/iso639-3/mkd">mkd</padig:lexlanguage>
+        <padig:lexlanguage string="mkh" uri="http://lexvo.org/id/iso639-5/mkh">mkh</padig:lexlanguage>
+        <padig:lexlanguage string="mlg" uri="http://lexvo.org/id/iso639-3/mlg">mlg</padig:lexlanguage>
+        <padig:lexlanguage string="mlt" uri="http://lexvo.org/id/iso639-3/mlt">mlt</padig:lexlanguage>
+        <padig:lexlanguage string="mnc" uri="http://lexvo.org/id/iso639-3/mnc">mnc</padig:lexlanguage>
+        <padig:lexlanguage string="mni" uri="http://lexvo.org/id/iso639-3/mni">mni</padig:lexlanguage>
+        <padig:lexlanguage string="mno" uri="http://lexvo.org/id/iso639-5/mno">mno</padig:lexlanguage>
+        <padig:lexlanguage string="moh" uri="http://lexvo.org/id/iso639-3/moh">moh</padig:lexlanguage>
+        <padig:lexlanguage string="mon" uri="http://lexvo.org/id/iso639-3/mon">mon</padig:lexlanguage>
+        <padig:lexlanguage string="mos" uri="http://lexvo.org/id/iso639-3/mos">mos</padig:lexlanguage>
+        <padig:lexlanguage string="mri" uri="http://lexvo.org/id/iso639-3/mri">mri</padig:lexlanguage>
+        <padig:lexlanguage string="msa" uri="http://lexvo.org/id/iso639-3/msa">msa</padig:lexlanguage>
+        <padig:lexlanguage string="mul" uri="http://lexvo.org/id/iso639-3/mul">mul</padig:lexlanguage>
+        <padig:lexlanguage string="mun" uri="http://lexvo.org/id/iso639-5/mun">mun</padig:lexlanguage>
+        <padig:lexlanguage string="mus" uri="http://lexvo.org/id/iso639-3/mus">mus</padig:lexlanguage>
+        <padig:lexlanguage string="mwl" uri="http://lexvo.org/id/iso639-3/mwl">mwl</padig:lexlanguage>
+        <padig:lexlanguage string="mwr" uri="http://lexvo.org/id/iso639-3/mwr">mwr</padig:lexlanguage>
+        <padig:lexlanguage string="mya" uri="http://lexvo.org/id/iso639-3/mya">mya</padig:lexlanguage>
+        <padig:lexlanguage string="myn" uri="http://lexvo.org/id/iso639-5/myn">myn</padig:lexlanguage>
+        <padig:lexlanguage string="myv" uri="http://lexvo.org/id/iso639-3/myv">myv</padig:lexlanguage>
+        <padig:lexlanguage string="nah" uri="http://lexvo.org/id/iso639-5/nah">nah</padig:lexlanguage>
+        <padig:lexlanguage string="nai" uri="http://lexvo.org/id/iso639-5/nai">nai</padig:lexlanguage>
+        <padig:lexlanguage string="nap" uri="http://lexvo.org/id/iso639-3/nap">nap</padig:lexlanguage>
+        <padig:lexlanguage string="nau" uri="http://lexvo.org/id/iso639-3/nau">nau</padig:lexlanguage>
+        <padig:lexlanguage string="nav" uri="http://lexvo.org/id/iso639-3/nav">nav</padig:lexlanguage>
+        <padig:lexlanguage string="nbl" uri="http://lexvo.org/id/iso639-3/nbl">nbl</padig:lexlanguage>
+        <padig:lexlanguage string="nde" uri="http://lexvo.org/id/iso639-3/nde">nde</padig:lexlanguage>
+        <padig:lexlanguage string="ndo" uri="http://lexvo.org/id/iso639-3/ndo">ndo</padig:lexlanguage>
+        <padig:lexlanguage string="nds" uri="http://lexvo.org/id/iso639-3/nds">nds</padig:lexlanguage>
+        <padig:lexlanguage string="nep" uri="http://lexvo.org/id/iso639-3/nep">nep</padig:lexlanguage>
+        <padig:lexlanguage string="new" uri="http://lexvo.org/id/iso639-3/new">new</padig:lexlanguage>
+        <padig:lexlanguage string="nia" uri="http://lexvo.org/id/iso639-3/nia">nia</padig:lexlanguage>
+        <padig:lexlanguage string="nic" uri="http://lexvo.org/id/iso639-5/nic">nic</padig:lexlanguage>
+        <padig:lexlanguage string="niu" uri="http://lexvo.org/id/iso639-3/niu">niu</padig:lexlanguage>
+        <padig:lexlanguage string="nld" uri="http://lexvo.org/id/iso639-3/nld">nld</padig:lexlanguage>
+        <padig:lexlanguage string="nno" uri="http://lexvo.org/id/iso639-3/nno">nno</padig:lexlanguage>
+        <padig:lexlanguage string="nob" uri="http://lexvo.org/id/iso639-3/nob">nob</padig:lexlanguage>
+        <padig:lexlanguage string="nog" uri="http://lexvo.org/id/iso639-3/nog">nog</padig:lexlanguage>
+        <padig:lexlanguage string="non" uri="http://lexvo.org/id/iso639-3/non">non</padig:lexlanguage>
+        <padig:lexlanguage string="nor" uri="http://lexvo.org/id/iso639-3/nor">nor</padig:lexlanguage>
+        <padig:lexlanguage string="nqo" uri="http://lexvo.org/id/iso639-3/nqo">nqo</padig:lexlanguage>
+        <padig:lexlanguage string="nso" uri="http://lexvo.org/id/iso639-3/nso">nso</padig:lexlanguage>
+        <padig:lexlanguage string="nub" uri="http://lexvo.org/id/iso639-5/nub">nub</padig:lexlanguage>
+        <padig:lexlanguage string="nwc" uri="http://lexvo.org/id/iso639-3/nwc">nwc</padig:lexlanguage>
+        <padig:lexlanguage string="nya" uri="http://lexvo.org/id/iso639-3/nya">nya</padig:lexlanguage>
+        <padig:lexlanguage string="nym" uri="http://lexvo.org/id/iso639-3/nym">nym</padig:lexlanguage>
+        <padig:lexlanguage string="nyn" uri="http://lexvo.org/id/iso639-3/nyn">nyn</padig:lexlanguage>
+        <padig:lexlanguage string="nyo" uri="http://lexvo.org/id/iso639-3/nyo">nyo</padig:lexlanguage>
+        <padig:lexlanguage string="nzi" uri="http://lexvo.org/id/iso639-3/nzi">nzi</padig:lexlanguage>
+        <padig:lexlanguage string="oci" uri="http://lexvo.org/id/iso639-3/oci">oci</padig:lexlanguage>
+        <padig:lexlanguage string="oji" uri="http://lexvo.org/id/iso639-3/oji">oji</padig:lexlanguage>
+        <padig:lexlanguage string="ori" uri="http://lexvo.org/id/iso639-3/ori">ori</padig:lexlanguage>
+        <padig:lexlanguage string="orm" uri="http://lexvo.org/id/iso639-3/orm">orm</padig:lexlanguage>
+        <padig:lexlanguage string="osa" uri="http://lexvo.org/id/iso639-3/osa">osa</padig:lexlanguage>
+        <padig:lexlanguage string="oss" uri="http://lexvo.org/id/iso639-3/oss">oss</padig:lexlanguage>
+        <padig:lexlanguage string="ota" uri="http://lexvo.org/id/iso639-3/ota">ota</padig:lexlanguage>
+        <padig:lexlanguage string="oto" uri="http://lexvo.org/id/iso639-5/oto">oto</padig:lexlanguage>
+        <padig:lexlanguage string="paa" uri="http://lexvo.org/id/iso639-5/paa">paa</padig:lexlanguage>
+        <padig:lexlanguage string="pag" uri="http://lexvo.org/id/iso639-3/pag">pag</padig:lexlanguage>
+        <padig:lexlanguage string="pal" uri="http://lexvo.org/id/iso639-3/pal">pal</padig:lexlanguage>
+        <padig:lexlanguage string="pam" uri="http://lexvo.org/id/iso639-3/pam">pam</padig:lexlanguage>
+        <padig:lexlanguage string="pan" uri="http://lexvo.org/id/iso639-3/pan">pan</padig:lexlanguage>
+        <padig:lexlanguage string="pap" uri="http://lexvo.org/id/iso639-3/pap">pap</padig:lexlanguage>
+        <padig:lexlanguage string="pau" uri="http://lexvo.org/id/iso639-3/pau">pau</padig:lexlanguage>
+        <padig:lexlanguage string="peo" uri="http://lexvo.org/id/iso639-3/peo">peo</padig:lexlanguage>
+        <padig:lexlanguage string="per" uri="http://lexvo.org/id/iso639-3/fas">per</padig:lexlanguage>
+        <padig:lexlanguage string="phi" uri="http://lexvo.org/id/iso639-5/phi">phi</padig:lexlanguage>
+        <padig:lexlanguage string="phn" uri="http://lexvo.org/id/iso639-3/phn">phn</padig:lexlanguage>
+        <padig:lexlanguage string="pli" uri="http://lexvo.org/id/iso639-3/pli">pli</padig:lexlanguage>
+        <padig:lexlanguage string="pol" uri="http://lexvo.org/id/iso639-3/pol">pol</padig:lexlanguage>
+        <padig:lexlanguage string="pon" uri="http://lexvo.org/id/iso639-3/pon">pon</padig:lexlanguage>
+        <padig:lexlanguage string="por" uri="http://lexvo.org/id/iso639-3/por">por</padig:lexlanguage>
+        <padig:lexlanguage string="pra" uri="http://lexvo.org/id/iso639-5/pra">pra</padig:lexlanguage>
+        <padig:lexlanguage string="pro" uri="http://lexvo.org/id/iso639-3/pro">pro</padig:lexlanguage>
+        <padig:lexlanguage string="pus" uri="http://lexvo.org/id/iso639-3/pus">pus</padig:lexlanguage>
+        <padig:lexlanguage string="que" uri="http://lexvo.org/id/iso639-3/que">que</padig:lexlanguage>
+        <padig:lexlanguage string="raj" uri="http://lexvo.org/id/iso639-3/raj">raj</padig:lexlanguage>
+        <padig:lexlanguage string="rap" uri="http://lexvo.org/id/iso639-3/rap">rap</padig:lexlanguage>
+        <padig:lexlanguage string="rar" uri="http://lexvo.org/id/iso639-3/rar">rar</padig:lexlanguage>
+        <padig:lexlanguage string="roa" uri="http://lexvo.org/id/iso639-5/roa">roa</padig:lexlanguage>
+        <padig:lexlanguage string="roh" uri="http://lexvo.org/id/iso639-3/roh">roh</padig:lexlanguage>
+        <padig:lexlanguage string="rom" uri="http://lexvo.org/id/iso639-3/rom">rom</padig:lexlanguage>
+        <padig:lexlanguage string="ron" uri="http://lexvo.org/id/iso639-3/ron">ron</padig:lexlanguage>
+        <padig:lexlanguage string="rum" uri="http://lexvo.org/id/iso639-3/ron">rum</padig:lexlanguage>
+        <padig:lexlanguage string="run" uri="http://lexvo.org/id/iso639-3/run">run</padig:lexlanguage>
+        <padig:lexlanguage string="rup" uri="http://lexvo.org/id/iso639-3/rup">rup</padig:lexlanguage>
+        <padig:lexlanguage string="rus" uri="http://lexvo.org/id/iso639-3/rus">rus</padig:lexlanguage>
+        <padig:lexlanguage string="sad" uri="http://lexvo.org/id/iso639-3/sad">sad</padig:lexlanguage>
+        <padig:lexlanguage string="sag" uri="http://lexvo.org/id/iso639-3/sag">sag</padig:lexlanguage>
+        <padig:lexlanguage string="sah" uri="http://lexvo.org/id/iso639-3/sah">sah</padig:lexlanguage>
+        <padig:lexlanguage string="sai" uri="http://lexvo.org/id/iso639-5/sai">sai</padig:lexlanguage>
+        <padig:lexlanguage string="sal" uri="http://lexvo.org/id/iso639-5/sal">sal</padig:lexlanguage>
+        <padig:lexlanguage string="sam" uri="http://lexvo.org/id/iso639-3/sam">sam</padig:lexlanguage>
+        <padig:lexlanguage string="san" uri="http://lexvo.org/id/iso639-3/san">san</padig:lexlanguage>
+        <padig:lexlanguage string="sas" uri="http://lexvo.org/id/iso639-3/sas">sas</padig:lexlanguage>
+        <padig:lexlanguage string="sat" uri="http://lexvo.org/id/iso639-3/sat">sat</padig:lexlanguage>
+        <padig:lexlanguage string="scn" uri="http://lexvo.org/id/iso639-3/scn">scn</padig:lexlanguage>
+        <padig:lexlanguage string="sco" uri="http://lexvo.org/id/iso639-3/sco">sco</padig:lexlanguage>
+        <padig:lexlanguage string="sel" uri="http://lexvo.org/id/iso639-3/sel">sel</padig:lexlanguage>
+        <padig:lexlanguage string="sem" uri="http://lexvo.org/id/iso639-5/sem">sem</padig:lexlanguage>
+        <padig:lexlanguage string="sga" uri="http://lexvo.org/id/iso639-3/sga">sga</padig:lexlanguage>
+        <padig:lexlanguage string="sgn" uri="http://lexvo.org/id/iso639-5/sgn">sgn</padig:lexlanguage>
+        <padig:lexlanguage string="shn" uri="http://lexvo.org/id/iso639-3/shn">shn</padig:lexlanguage>
+        <padig:lexlanguage string="sid" uri="http://lexvo.org/id/iso639-3/sid">sid</padig:lexlanguage>
+        <padig:lexlanguage string="sin" uri="http://lexvo.org/id/iso639-3/sin">sin</padig:lexlanguage>
+        <padig:lexlanguage string="sio" uri="http://lexvo.org/id/iso639-5/sio">sio</padig:lexlanguage>
+        <padig:lexlanguage string="sit" uri="http://lexvo.org/id/iso639-5/sit">sit</padig:lexlanguage>
+        <padig:lexlanguage string="sla" uri="http://lexvo.org/id/iso639-5/sla">sla</padig:lexlanguage>
+        <padig:lexlanguage string="slk" uri="http://lexvo.org/id/iso639-3/slk">slk</padig:lexlanguage>
+        <padig:lexlanguage string="slo" uri="http://lexvo.org/id/iso639-3/slk">slo</padig:lexlanguage>
+        <padig:lexlanguage string="slv" uri="http://lexvo.org/id/iso639-3/slv">slv</padig:lexlanguage>
+        <padig:lexlanguage string="sma" uri="http://lexvo.org/id/iso639-3/sma">sma</padig:lexlanguage>
+        <padig:lexlanguage string="sme" uri="http://lexvo.org/id/iso639-3/sme">sme</padig:lexlanguage>
+        <padig:lexlanguage string="smi" uri="http://lexvo.org/id/iso639-5/smi">smi</padig:lexlanguage>
+        <padig:lexlanguage string="smj" uri="http://lexvo.org/id/iso639-3/smj">smj</padig:lexlanguage>
+        <padig:lexlanguage string="smn" uri="http://lexvo.org/id/iso639-3/smn">smn</padig:lexlanguage>
+        <padig:lexlanguage string="smo" uri="http://lexvo.org/id/iso639-3/smo">smo</padig:lexlanguage>
+        <padig:lexlanguage string="sms" uri="http://lexvo.org/id/iso639-3/sms">sms</padig:lexlanguage>
+        <padig:lexlanguage string="sna" uri="http://lexvo.org/id/iso639-3/sna">sna</padig:lexlanguage>
+        <padig:lexlanguage string="snd" uri="http://lexvo.org/id/iso639-3/snd">snd</padig:lexlanguage>
+        <padig:lexlanguage string="snk" uri="http://lexvo.org/id/iso639-3/snk">snk</padig:lexlanguage>
+        <padig:lexlanguage string="sog" uri="http://lexvo.org/id/iso639-3/sog">sog</padig:lexlanguage>
+        <padig:lexlanguage string="som" uri="http://lexvo.org/id/iso639-3/som">som</padig:lexlanguage>
+        <padig:lexlanguage string="son" uri="http://lexvo.org/id/iso639-5/son">son</padig:lexlanguage>
+        <padig:lexlanguage string="sot" uri="http://lexvo.org/id/iso639-3/sot">sot</padig:lexlanguage>
+        <padig:lexlanguage string="spa" uri="http://lexvo.org/id/iso639-3/spa">spa</padig:lexlanguage>
+        <padig:lexlanguage string="sqi" uri="http://lexvo.org/id/iso639-3/sqi">sqi</padig:lexlanguage>
+        <padig:lexlanguage string="srd" uri="http://lexvo.org/id/iso639-3/srd">srd</padig:lexlanguage>
+        <padig:lexlanguage string="srn" uri="http://lexvo.org/id/iso639-3/srn">srn</padig:lexlanguage>
+        <padig:lexlanguage string="srp" uri="http://lexvo.org/id/iso639-3/srp">srp</padig:lexlanguage>
+        <padig:lexlanguage string="srr" uri="http://lexvo.org/id/iso639-3/srr">srr</padig:lexlanguage>
+        <padig:lexlanguage string="ssa" uri="http://lexvo.org/id/iso639-5/ssa">ssa</padig:lexlanguage>
+        <padig:lexlanguage string="ssw" uri="http://lexvo.org/id/iso639-3/ssw">ssw</padig:lexlanguage>
+        <padig:lexlanguage string="suk" uri="http://lexvo.org/id/iso639-3/suk">suk</padig:lexlanguage>
+        <padig:lexlanguage string="sun" uri="http://lexvo.org/id/iso639-3/sun">sun</padig:lexlanguage>
+        <padig:lexlanguage string="sus" uri="http://lexvo.org/id/iso639-3/sus">sus</padig:lexlanguage>
+        <padig:lexlanguage string="sux" uri="http://lexvo.org/id/iso639-3/sux">sux</padig:lexlanguage>
+        <padig:lexlanguage string="swa" uri="http://lexvo.org/id/iso639-3/swa">swa</padig:lexlanguage>
+        <padig:lexlanguage string="swe" uri="http://lexvo.org/id/iso639-3/swe">swe</padig:lexlanguage>
+        <padig:lexlanguage string="syc" uri="http://lexvo.org/id/iso639-3/syc">syc</padig:lexlanguage>
+        <padig:lexlanguage string="syr" uri="http://lexvo.org/id/iso639-3/syr">syr</padig:lexlanguage>
+        <padig:lexlanguage string="tah" uri="http://lexvo.org/id/iso639-3/tah">tah</padig:lexlanguage>
+        <padig:lexlanguage string="tai" uri="http://lexvo.org/id/iso639-5/tai">tai</padig:lexlanguage>
+        <padig:lexlanguage string="tam" uri="http://lexvo.org/id/iso639-3/tam">tam</padig:lexlanguage>
+        <padig:lexlanguage string="tat" uri="http://lexvo.org/id/iso639-3/tat">tat</padig:lexlanguage>
+        <padig:lexlanguage string="tel" uri="http://lexvo.org/id/iso639-3/tel">tel</padig:lexlanguage>
+        <padig:lexlanguage string="tem" uri="http://lexvo.org/id/iso639-3/tem">tem</padig:lexlanguage>
+        <padig:lexlanguage string="ter" uri="http://lexvo.org/id/iso639-3/ter">ter</padig:lexlanguage>
+        <padig:lexlanguage string="tet" uri="http://lexvo.org/id/iso639-3/tet">tet</padig:lexlanguage>
+        <padig:lexlanguage string="tgk" uri="http://lexvo.org/id/iso639-3/tgk">tgk</padig:lexlanguage>
+        <padig:lexlanguage string="tgl" uri="http://lexvo.org/id/iso639-3/tgl">tgl</padig:lexlanguage>
+        <padig:lexlanguage string="tha" uri="http://lexvo.org/id/iso639-3/tha">tha</padig:lexlanguage>
+        <padig:lexlanguage string="tib" uri="http://lexvo.org/id/iso639-3/bod">tib</padig:lexlanguage>
+        <padig:lexlanguage string="tig" uri="http://lexvo.org/id/iso639-3/tig">tig</padig:lexlanguage>
+        <padig:lexlanguage string="tir" uri="http://lexvo.org/id/iso639-3/tir">tir</padig:lexlanguage>
+        <padig:lexlanguage string="tiv" uri="http://lexvo.org/id/iso639-3/tiv">tiv</padig:lexlanguage>
+        <padig:lexlanguage string="tkl" uri="http://lexvo.org/id/iso639-3/tkl">tkl</padig:lexlanguage>
+        <padig:lexlanguage string="tlh" uri="http://lexvo.org/id/iso639-3/tlh">tlh</padig:lexlanguage>
+        <padig:lexlanguage string="tli" uri="http://lexvo.org/id/iso639-3/tli">tli</padig:lexlanguage>
+        <padig:lexlanguage string="tmh" uri="http://lexvo.org/id/iso639-3/tmh">tmh</padig:lexlanguage>
+        <padig:lexlanguage string="tog" uri="http://lexvo.org/id/iso639-3/tog">tog</padig:lexlanguage>
+        <padig:lexlanguage string="ton" uri="http://lexvo.org/id/iso639-3/ton">ton</padig:lexlanguage>
+        <padig:lexlanguage string="tpi" uri="http://lexvo.org/id/iso639-3/tpi">tpi</padig:lexlanguage>
+        <padig:lexlanguage string="tsi" uri="http://lexvo.org/id/iso639-3/tsi">tsi</padig:lexlanguage>
+        <padig:lexlanguage string="tsn" uri="http://lexvo.org/id/iso639-3/tsn">tsn</padig:lexlanguage>
+        <padig:lexlanguage string="tso" uri="http://lexvo.org/id/iso639-3/tso">tso</padig:lexlanguage>
+        <padig:lexlanguage string="tuk" uri="http://lexvo.org/id/iso639-3/tuk">tuk</padig:lexlanguage>
+        <padig:lexlanguage string="tum" uri="http://lexvo.org/id/iso639-3/tum">tum</padig:lexlanguage>
+        <padig:lexlanguage string="tup" uri="http://lexvo.org/id/iso639-5/tup">tup</padig:lexlanguage>
+        <padig:lexlanguage string="tur" uri="http://lexvo.org/id/iso639-3/tur">tur</padig:lexlanguage>
+        <padig:lexlanguage string="tut" uri="http://lexvo.org/id/iso639-5/tut">tut</padig:lexlanguage>
+        <padig:lexlanguage string="tvl" uri="http://lexvo.org/id/iso639-3/tvl">tvl</padig:lexlanguage>
+        <padig:lexlanguage string="twi" uri="http://lexvo.org/id/iso639-3/twi">twi</padig:lexlanguage>
+        <padig:lexlanguage string="tyv" uri="http://lexvo.org/id/iso639-3/tyv">tyv</padig:lexlanguage>
+        <padig:lexlanguage string="udm" uri="http://lexvo.org/id/iso639-3/udm">udm</padig:lexlanguage>
+        <padig:lexlanguage string="uga" uri="http://lexvo.org/id/iso639-3/uga">uga</padig:lexlanguage>
+        <padig:lexlanguage string="uig" uri="http://lexvo.org/id/iso639-3/uig">uig</padig:lexlanguage>
+        <padig:lexlanguage string="ukr" uri="http://lexvo.org/id/iso639-3/ukr">ukr</padig:lexlanguage>
+        <padig:lexlanguage string="umb" uri="http://lexvo.org/id/iso639-3/umb">umb</padig:lexlanguage>
+        <padig:lexlanguage string="und" uri="http://lexvo.org/id/iso639-3/und">und</padig:lexlanguage>
+        <padig:lexlanguage string="urd" uri="http://lexvo.org/id/iso639-3/urd">urd</padig:lexlanguage>
+        <padig:lexlanguage string="uzb" uri="http://lexvo.org/id/iso639-3/uzb">uzb</padig:lexlanguage>
+        <padig:lexlanguage string="vai" uri="http://lexvo.org/id/iso639-3/vai">vai</padig:lexlanguage>
+        <padig:lexlanguage string="ven" uri="http://lexvo.org/id/iso639-3/ven">ven</padig:lexlanguage>
+        <padig:lexlanguage string="vie" uri="http://lexvo.org/id/iso639-3/vie">vie</padig:lexlanguage>
+        <padig:lexlanguage string="vol" uri="http://lexvo.org/id/iso639-3/vol">vol</padig:lexlanguage>
+        <padig:lexlanguage string="vot" uri="http://lexvo.org/id/iso639-3/vot">vot</padig:lexlanguage>
+        <padig:lexlanguage string="wak" uri="http://lexvo.org/id/iso639-5/wak">wak</padig:lexlanguage>
+        <padig:lexlanguage string="wal" uri="http://lexvo.org/id/iso639-3/wal">wal</padig:lexlanguage>
+        <padig:lexlanguage string="war" uri="http://lexvo.org/id/iso639-3/war">war</padig:lexlanguage>
+        <padig:lexlanguage string="was" uri="http://lexvo.org/id/iso639-3/was">was</padig:lexlanguage>
+        <padig:lexlanguage string="wel" uri="http://lexvo.org/id/iso639-3/cym">wel</padig:lexlanguage>
+        <padig:lexlanguage string="wen" uri="http://lexvo.org/id/iso639-5/wen">wen</padig:lexlanguage>
+        <padig:lexlanguage string="wln" uri="http://lexvo.org/id/iso639-3/wln">wln</padig:lexlanguage>
+        <padig:lexlanguage string="wol" uri="http://lexvo.org/id/iso639-3/wol">wol</padig:lexlanguage>
+        <padig:lexlanguage string="xal" uri="http://lexvo.org/id/iso639-3/xal">xal</padig:lexlanguage>
+        <padig:lexlanguage string="xho" uri="http://lexvo.org/id/iso639-3/xho">xho</padig:lexlanguage>
+        <padig:lexlanguage string="yao" uri="http://lexvo.org/id/iso639-3/yao">yao</padig:lexlanguage>
+        <padig:lexlanguage string="yap" uri="http://lexvo.org/id/iso639-3/yap">yap</padig:lexlanguage>
+        <padig:lexlanguage string="yid" uri="http://lexvo.org/id/iso639-3/yid">yid</padig:lexlanguage>
+        <padig:lexlanguage string="yor" uri="http://lexvo.org/id/iso639-3/yor">yor</padig:lexlanguage>
+        <padig:lexlanguage string="ypk" uri="http://lexvo.org/id/iso639-5/ypk">ypk</padig:lexlanguage>
+        <padig:lexlanguage string="zap" uri="http://lexvo.org/id/iso639-3/zap">zap</padig:lexlanguage>
+        <padig:lexlanguage string="zbl" uri="http://lexvo.org/id/iso639-3/zbl">zbl</padig:lexlanguage>
+        <padig:lexlanguage string="zen" uri="http://lexvo.org/id/iso639-3/zen">zen</padig:lexlanguage>
+        <padig:lexlanguage string="zha" uri="http://lexvo.org/id/iso639-3/zha">zha</padig:lexlanguage>
+        <padig:lexlanguage string="zho" uri="http://lexvo.org/id/iso639-3/zho">zho</padig:lexlanguage>
+        <padig:lexlanguage string="znd" uri="http://lexvo.org/id/iso639-5/znd">znd</padig:lexlanguage>
+        <padig:lexlanguage string="zul" uri="http://lexvo.org/id/iso639-3/zul">zul</padig:lexlanguage>
+        <padig:lexlanguage string="zun" uri="http://lexvo.org/id/iso639-3/zun">zun</padig:lexlanguage>
+        <padig:lexlanguage string="zza" uri="http://lexvo.org/id/iso639-3/zza">zza</padig:lexlanguage>
     </xsl:param>
 
     <!-- lookup table for recommended DCMI Types terms/URIs -->
