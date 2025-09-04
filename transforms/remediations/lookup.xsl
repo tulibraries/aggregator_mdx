@@ -832,7 +832,7 @@
         <padig:set string="Board of the Eastern State Penitentiary State Documents">14-board-of-the-eastern</padig:set>
         <padig:set string="Central Voice Collection (All Titles)">157-central-voice-collection-all</padig:set>
         <padig:set string="Central Voice Newspaper">156-central-voice-newspaper</padig:set>
-        <padig:set string="Colonization Herald">209-colonization-herald</padig:set>
+        <padig:set string="Colonization Herald">209-colonization-herald-and-general</padig:set>
         <padig:set string="Commission of Soldiers' Orphan Schools State Documents">189-commission-of-soldiers-orphan</padig:set>
         <padig:set string="Commission on Crime and Delinquency State Documents">20-commission-on-crime-and</padig:set>
         <padig:set string="Commission on Sentencing State Documents">30-commission-on-sentencing-state</padig:set>
@@ -951,7 +951,7 @@
         <padig:set string="State Law Enforcement Citizen Advisory Commission State Documents">32-state-law-enforcement-citizen</padig:set>
         <padig:set string="State Quarantine Board State Documents">190-state-quarantine-board-state</padig:set>
         <padig:set string="Susquehanna River Basin Commission State Documents">126-susquehanna-river-basin-commission</padig:set>
-        <padig:set string="The Marietta Advocate and Farmers' and Mechanics' Intelligencer">210-the-marietta-advocate-and</padig:set>
+        <padig:set string="The Marietta Advocate and Farmers' and Mechanics' Intelligencer">210-marietta-advocate-and-farmers</padig:set>
         <padig:set string="Three Mile Island Collection">193-three-mile-island-collection</padig:set>
         <padig:set string="Treasury Department State Documents">82-treasury-department-state-documents</padig:set>
         <padig:set string="Watch on the Rhine">191-watch-on-the-rhine</padig:set>
