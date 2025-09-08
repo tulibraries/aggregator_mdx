@@ -91,7 +91,7 @@
         <padig:set string="Cheltenham Township Library System - Historic La Mott/ Cheltenham Township Community">papd_pglfl-hlmctc</padig:set>
         <padig:set string="Chester County History Center - Abigail Speakman Diary Collection">papd_scchc-asdc</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
-        <padig:set string="Chester County History Center -  A. D. Sharples Letterpress Book Collection">papd_scchc-adslbc</padig:set>
+        <padig:set string="Chester County History Center - A. D. Sharples Letterpress Book Collection">papd_scchc-adslbc</padig:set>
         <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
         <padig:set string="Chester County History Center - David Evans Collection">papd_scchc-dec</padig:set>
