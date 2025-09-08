@@ -140,6 +140,7 @@
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
         <padig:set string="Erie County Public Library - Erie Public Library Reports">papd_percp-eplr</padig:set>
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
+        <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="German Society of Pennsylvania - Deutsche Ansiedelungs-Gesellschaft zu Philadelphia (German Settlement Society of Philadelphia) records">papd_sgsop-daggssr</padig:set>
         <padig:set string="German Society of Pennsylvania - German Society Agentur">papd_sgsop-gsa</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
