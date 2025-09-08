@@ -33,6 +33,7 @@
     <!-- POWER photos and docs collecton name lookup -->
     <xsl:param name="powerSetSpecList">
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - Historic Trees of the Delaware Valley and Maryland Photographs">papd_adrex-htotdvamp</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Lucy Say Illustrations">papd_adrex-lsi</padig:set>
         <padig:set string="Albright College - Central Pennsylvania College Photos">papd_cpaphoto</padig:set>
         <padig:set string="Albright College - Evangelical Church Historic Lantern Slides">papd_churchslide</padig:set>
@@ -58,6 +59,7 @@
         <padig:set string="Bernville Area Community Library - Tulpehocken High School Yearbooks">papd_pbeac-thsy</padig:set>
         <padig:set string="Boyertown Area Senior High School - Boyertown School News">papd_kboyh-bsn</padig:set>
         <padig:set string="Braddock Carnegie Library Association - Braddock Area Year Books">papd_pbcal-bayb</padig:set>
+        <padig:set string="Byzantine Catholic Seminary Library - Eastern Christian Liturgical Music">papd_abyzc-eclm</padig:set>
         <padig:set string="Byzantine Catholic Seminary Library - Prostopinije (Slavic Plain Chant)">papd_abyzc-pspc</padig:set>
         <padig:set string="C. C. Mellor Memorial Library - History of Edgewood Schools">papd_pccmm-hoes</padig:set>
         <padig:set string="C. C. Mellor Memorial Library - The History of the Borough of Edgewood">papd_pccmm-ccmml</padig:set>
@@ -75,6 +77,7 @@
         <padig:set string="Carnegie Mellon University - Historic Images">papd_acamu-cmuhi</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Autobiography of Colonel Samuel Miles">papd_pcecl-aocsm</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - Centre County Greg Post No. 95 GAR Veteran Books">papd_pcecl-mhmgarp95b</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Centre County School Class Photographs">papd_pcecl-ccscp</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
@@ -88,15 +91,19 @@
         <padig:set string="Cheltenham Township Library System - Historic La Mott/ Cheltenham Township Community">papd_pglfl-hlmctc</padig:set>
         <padig:set string="Chester County History Center - Abigail Speakman Diary Collection">papd_scchc-asdc</padig:set>
         <padig:set string="Chester County History Center - Acoccidologists Travel Diary Collection">papd_scchc-atdc</padig:set>
+        <padig:set string="Chester County History Center -  A. D. Sharples Letterpress Book Collection">papd_scchc-adslbc</padig:set>
         <padig:set string="Chester County History Center - Charles J. Pennock Papers">papd_scchc-cjpp</padig:set>
         <padig:set string="Chester County History Center - Chester County Archives and Record Services - Chester County Board of Relief">papd_scchc-ccbof</padig:set>
         <padig:set string="Chester County History Center - David Evans Collection">papd_scchc-dec</padig:set>
+        <padig:set string="Chester County History Center - Edmund D. Cleaver Diary Collection">papd_scchc-edcdc</padig:set>
         <padig:set string="Chester County History Center - Elizabeth Broomell Passmore Diary Collection">papd_scchc-ebpdc</padig:set>
         <padig:set string="Chester County History Center - Ennion Cook Account Book Collection">papd_scchc-ecabc</padig:set>
         <padig:set string="Chester County History Center - Halliday Jackson Collection">papd_scchc-hjc</padig:set>
+        <padig:set string="Chester County History Center - Jacob M. March Diary Collection">papd_scchc-jmmdc</padig:set>
         <padig:set string="Chester County History Center - Jean Kane Foulke Papers">papd_scchc-jkfp</padig:set>
         <padig:set string="Chester County History Center - John Churchman Papers: Early Land Grants and Surveys in Chester County, Pa. (Nottingham Lots)">papd_scchc-jcpelgascc</padig:set>
         <padig:set string="Chester County History Center - John Hill Brinton Reminiscences Collection">papd_scchc-jhbrc</padig:set>
+        <padig:set string="Chester County History Center - John Townsend Diary Collection">papd_scchc-jtdc</padig:set>
         <padig:set string="Chester County History Center - Lewis White Williams Diary Collection">papd_scchc-lwwdc</padig:set>
         <padig:set string="Chester County History Center - Liberty Cornet Band Minutes and Membership Book">papd_scchc-lcbmamb</padig:set>
         <padig:set string="Chester County History Center - Mary Eliza Brinton Hopkins Diary Collection">papd_scchc-mebhdc</padig:set>
@@ -133,8 +140,6 @@
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
         <padig:set string="Erie County Public Library - Erie Public Library Reports">papd_percp-eplr</padig:set>
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
-        <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
-        <padig:set string="Geneva College - Postcards">papd_agene-pcard</padig:set>
         <padig:set string="German Society of Pennsylvania - Deutsche Ansiedelungs-Gesellschaft zu Philadelphia (German Settlement Society of Philadelphia) records">papd_sgsop-daggssr</padig:set>
         <padig:set string="German Society of Pennsylvania - German Society Agentur">papd_sgsop-gsa</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
@@ -179,6 +184,7 @@
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1891-1910">papd_nhclar02</padig:set>
         <padig:set string="LancasterHistory - New Holland Clarion Newspaper 1911-1950">papd_nhclarion</padig:set>
         <padig:set string="Laughlin Memorial Library - Ambridge Historic Newspaper Collection">papd_plamf-ahnc</padig:set>
+        <padig:set string="Ligonier Valley Library - Ligonier Valley Library Yearbook Collection">papd_plivl-lvlyc</padig:set>
         <padig:set string="Lock Haven University - 1877-2008">papd_alhupviscro</padig:set>
         <padig:set string="Lock Haven University - Wrestling Program">papd_alhupwrest</padig:set>
         <padig:set string="Lycoming College - Alumni Magazine of Lycoming College">papd_alycc-almag</padig:set>
@@ -219,6 +225,8 @@
         <padig:set string="Meyersdale Public Library - Old-Time Meyersdale Photographs">papd_pmeye-otmp</padig:set>
         <padig:set string="Meyersdale Public Library - Pennsylvania Maple Festival Memories">papd_pmeye-pmfm</padig:set>
         <padig:set string="Meyersdale Public Library - Photographs">papd_pmeye-photo</padig:set>
+        <padig:set string="Meyersdale Public Library - Railway Accidents">papd_pmeye-ra</padig:set>
+        <padig:set string="Meyersdale Public Library - Red and Black Student Paper">papd_pmeye-rabsp</padig:set>
         <padig:set string="Meyersdale Public Library - Rockwood Area Historical &amp; Genealogical Society - Casselman Village Area">papd_pmeye-cva</padig:set>
         <padig:set string="Meyersdale Public Library - Rockwood Area Historical &amp; Genealogical Society - Rockwood Borough History">papd_pmeye-rbh</padig:set>
         <padig:set string="Meyersdale Public Library - Rural African Americans of the Allegheny Mountains">papd_pmeye-raaotam</padig:set>
@@ -310,6 +318,7 @@
         <padig:set string="Pennsylvania School for the Deaf - Pennsylvania School for the Deaf Yearbooks">papd_kpsfd-psftdy</padig:set>
         <padig:set string="Peters Township Public Library - Historic Images and Documents Collection">papd_ppetl-hidc</padig:set>
         <padig:set string="Peters Township Public Library - Life in Peters Township: An Oral History Project">papd_ppetl-lipt</padig:set>
+        <padig:set string="Peters Township Public Library - Peters Township Chamber of Commerce business guides and community directories">papd_ppetl-ptcocbgacd</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township High School Yearbooks">papd_ppetl-pthsy</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township News 1958-1959">papd_ppetl-ptn1958</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township News Progress 1959-1970">papd_ppetl-ptnp1959</padig:set>
@@ -321,6 +330,8 @@
         <padig:set string="Reading Area Community College - Wes Fisher Piano Sheet Music Collection">papd_aracc-wfpsmc</padig:set>
         <padig:set string="Reading Public Library - Berks County Postcards">papd_prepl-brcpc</padig:set>
         <padig:set string="Reading Public Library - Berks County Yearbooks">papd_prepl-brcyb</padig:set>
+        <padig:set string="Ridley Park Public Library - Ridley Park High School Yearbooks">papd_pripp-rphsy</padig:set>
+        <padig:set string="Ridley Park Public Library - Ye Ridlyan">papd_pripp-yr</padig:set>
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
