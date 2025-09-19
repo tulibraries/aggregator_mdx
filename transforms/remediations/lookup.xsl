@@ -93,6 +93,7 @@
         <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">https://digitalarchives.powerlibrary.org/papd/</padig:url>
         <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">https://digitalarchives.powerlibrary.org/psa/</padig:url>
         <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
+        <padig:url string="Historic Pittsburgh" code="HP">https://historicpittsburgh.org/</padig:url>
         <padig:url string="Philadelphia Architects and Buildings" code="PAB">https://www.philadelphiabuildings.org/pab/</padig:url>
     </xsl:param>
 

@@ -117,15 +117,15 @@
     </x:scenario>
 
     <!-- isShownAt (map) -->
-    <x:scenario label="isShownAt processing">
-      <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP'"/>
+    <x:scenario label="isShownAt processing">      
+        <x:context href="../../fixtures/islandora_historicpitt.xml"/>
+        <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'https://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP'"/>  
     </x:scenario>
 
     <!-- Preview (map) -->
     <x:scenario label="preview processing">
       <x:context href="../../fixtures/islandora_historicpitt.xml"/>
-      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP/datastream/TN/view/Overbrook%20School.jpg'"/>
+      <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'https://historicpittsburgh.org/islandora/object/pitt%3A715.3420584.CP/datastream/TN/view/Overbrook%20School.jpg'"/>
     </x:scenario>
 
     <!-- isPartOf-->
