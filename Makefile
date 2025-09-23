@@ -26,7 +26,7 @@ test-xslt:
 		docker-compose run xspec "$$xspectest" ; \
 	done
 
-test-ci: test-login test-bash test-coverage
+test-ci: test-bash test-coverage
 
 test-login:
 	@docker login -u ${DOCKERHUB_USER} --password=$(DOCKERHUB_PASSWORD)
