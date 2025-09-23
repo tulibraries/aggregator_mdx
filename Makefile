@@ -34,11 +34,11 @@ test-login:
 test-bash:
 	@echo "CI/CD testing *.xspec with Docker & shell scripts"
 	docker build -t xspec -f .docker/test/Dockerfile .
-	bash .github/workflows/tests.sh
+	bash .github/tests.sh
 
 test-coverage:
 	@echo "Test Coverage being generated"
-	bash .github/workflows/coverage.sh
+	bash .github/coverage.sh
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
