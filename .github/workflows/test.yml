@@ -8,6 +8,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ['3.12']
 
     steps:
       - name: Checkout code
@@ -16,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
           cache: "pipenv"
 
       - name: Install pipenv + deps
@@ -24,13 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pipenv
           pipenv --python "$(which python)" install --dev
-
-#      # Non-interactive Docker login (Docker Hub example)
-#      - name: Log in to Docker Hub
-#        uses: docker/login-action@v3
-#        with:
-#          username: ${{ secrets.DOCKERHUB_USER }}
-#          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Run tests
         run: make test-ci
