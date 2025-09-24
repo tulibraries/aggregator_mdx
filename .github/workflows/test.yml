@@ -6,7 +6,11 @@ on:
   push:
     branches-ignore:
       - main
-    workflow_dispatch: {}
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -23,9 +27,15 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pipenv"
 
-      - name: Install pipenv + deps
+      - name: Install pipenv
         run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+
+      - name: Install dependencies
+        run: pipenv install --dev
 
       - name: Run tests
         run: make test-ci
