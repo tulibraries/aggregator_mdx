@@ -23,6 +23,8 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v5
+
+      - name: Install pipenv + deps
         run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
 
       - name: Run tests
