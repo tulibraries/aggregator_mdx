@@ -6,3 +6,5 @@ xspec
 # Ignore html files generated from testing in Oxygen
 *.html
 working/
+# Ignore vim swap files
+*.swp
