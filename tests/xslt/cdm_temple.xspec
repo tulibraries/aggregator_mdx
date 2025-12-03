@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
- <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:dpla="http://dp.la/about/map/"
-   xmlns:padig="http://padigital.org/ns"
-   xmlns:edm="http://www.europeana.eu/schemas/edm/"
-   xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
-   xmlns:oclcterms="http://purl.org/oclc/terms/"
-   xmlns:oai="http://www.openarchives.org/OAI/2.0/"
-   xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
-   xmlns:oclc="http://purl.org/oclc/terms/"
-   xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
-   xmlns:schema="http://schema.org"
-   xmlns:svcs="http://rdfs.org/sioc/services"
-   stylesheet="../../transforms/cdm_temple.xsl">
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dpla="http://dp.la/about/map/"
+  xmlns:padig="http://padigital.org/ns"
+  xmlns:edm="http://www.europeana.eu/schemas/edm/"
+  xmlns:oclcdc="http://worldcat.org/xmlschemas/oclcdc-1.0/"
+  xmlns:oclcterms="http://purl.org/oclc/terms/"
+  xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+  xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
+  xmlns:oclc="http://purl.org/oclc/terms/"
+  xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+  xmlns:schema="http://schema.org"
+  xmlns:svcs="http://rdfs.org/sioc/services" stylesheet="../../transforms/cdm_temple.xsl">
 
-<!-- isPartOf -->
-   <!-- additional check for semicolon in dcterms:isPartOf after OAI output change -->
-   
-   <x:scenario label="dcterms:isPartOf values are delimited and mapped">
+  <!-- isPartOf -->
+  <!-- additional check for semicolon in dcterms:isPartOf after OAI output change -->
+
+  <x:scenario label="dcterms:isPartOf values are delimited and mapped">
     <x:scenario label="isPartOf has values delimited by semicolon">
       <x:context>
         <oai:record>
           <metadata>
-            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <dcterms:isPartOf>SCRC Film and Video; Civil Rights in a Northern City; Desegregation of Girard College;</dcterms:isPartOf>
             </oai_qdc:qualifieddc>
           </metadata>
         </oai:record>
       </x:context>
       <x:expect label="type and format are mapped and delimited">
-        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <dcterms:isPartOf>SCRC Film and Video</dcterms:isPartOf>
           <dcterms:isPartOf>Civil Rights in a Northern City</dcterms:isPartOf>
           <dcterms:isPartOf>Desegregation of Girard College</dcterms:isPartOf>
@@ -46,7 +51,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>textual kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -58,7 +66,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>TEXTresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -70,7 +81,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>text</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -82,7 +96,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>TEXT</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -94,7 +111,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-text</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -109,7 +129,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>image of kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -121,7 +144,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>ImAgEresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -133,7 +159,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -145,7 +174,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>IMAGE</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -157,7 +189,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -172,7 +207,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>movingimagekittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -184,7 +222,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>moving imagekittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -196,7 +237,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>MOVING ImAgEresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -208,7 +252,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>moving image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -220,7 +267,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>MOVING IMAGE</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -232,7 +282,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-moving-image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -247,7 +300,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>sound of kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -259,7 +315,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>SoUnDresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -271,7 +330,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>sound</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -283,7 +345,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>SOUND</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -295,7 +360,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-sound</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -310,7 +378,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>physicalobjectkittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -322,7 +393,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>physical object kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -334,7 +408,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>PHYSical Objectresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -346,7 +423,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>physical object</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -358,7 +438,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>PHYSICAL OBJECT</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -370,7 +453,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-physical-object</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -385,7 +471,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>interactiveresourcepuppies</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -397,7 +486,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>interactive resource kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -409,7 +501,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>InterActive Resource resources</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -421,7 +516,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>interactive resource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -433,7 +531,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>INTERACTIVE RESOURCE</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -445,7 +546,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-interactive-resource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -457,20 +561,22 @@
     </x:scenario>
   </x:scenario>
 
-<!-- Title; add title[1] to xsl and then add test here -->
-   <x:scenario label="dc:title becomes space-normalized dcterms:title">
+  <!-- Title; add title[1] to xsl and then add test here -->
+  <x:scenario label="dc:title becomes space-normalized dcterms:title">
     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="dc:title becomes dcterms:title"
-       test="oai_dc:dc/dcterms:title = 'A citizen gives his opinion on a proposed disco hall.'" />
-   </x:scenario>
+    <x:expect label="dc:title becomes dcterms:title" test="oai_dc:dc/dcterms:title = 'A citizen gives his opinion on a proposed disco hall.'" />
+  </x:scenario>
 
-<!-- Alternate title (map and delimit) -->
-   <x:scenario label="alternative titles map and delimit">
+  <!-- Alternate title (map and delimit) -->
+  <x:scenario label="alternative titles map and delimit">
     <x:scenario label="title not first maps to alttitle">
       <x:context>
         <oai:record>
           <metadata>
-            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <dc:title>First title</dc:title>
               <dc:title>Alt title</dc:title>
             </oai_qdc:qualifieddc>
@@ -478,73 +584,85 @@
         </oai:record>
       </x:context>
       <x:expect label="title not first maps">
-        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <dcterms:title>First title</dcterms:title>
           <dcterms:alternative>Alt title</dcterms:alternative>
           <edm:provider>PA Digital</edm:provider>
         </oai_dc:dc>
       </x:expect>
-      </x:scenario>
-      <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
-        <x:context href="../../fixtures/cdm_generic.xml"/>
-        <x:expect label="alt title is mapped and delimited">
-          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
-            <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
-            <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
-            <dcterms:alternative>Here's another alt title</dcterms:alternative>
-            <dcterms:date>1978-07-25</dcterms:date>
-            <dcterms:creator>Schell, Albert F.</dcterms:creator>
-            <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
-            <dcterms:subject>Public Meetings</dcterms:subject>
-           <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
-           <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
-           <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-           <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
-           <dcterms:publisher>Evening Bulletin</dcterms:publisher>
-           <dcterms:temporal>20th century</dcterms:temporal>
-           <dcterms:language>English</dcterms:language>
-           <dcterms:language>french</dcterms:language>
-           <dcterms:language>Yiddish</dcterms:language>
-           <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
-           <dcterms:subject>DiLacqua, Peter</dcterms:subject>
-           <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
-           <schema:fileFormat>image/jp2</schema:fileFormat>
-           <dcterms:type>Still Image</dcterms:type>
-           <dcterms:format>Photographs</dcterms:format>
-           <dcterms:type>Image</dcterms:type>
-           <dcterms:type>Still Image</dcterms:type>
-           <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
-           <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-           <dcterms:rights>This is a textual rights statement</dcterms:rights>
-           <dcterms:source>The repository is SCRC</dcterms:source>
-           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <edm:dataProvider>Temple University</edm:dataProvider>
-           <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
-           <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-           <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-           <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-           <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+    </x:scenario>
+    <x:scenario label="dcterms:alternative maps to dcterms:alternative and delimits on semicolon">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="alt title is mapped and delimited">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
+          <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
+          <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
+          <dcterms:alternative>Here's another alt title</dcterms:alternative>
+          <dcterms:date>1978-07-25</dcterms:date>
+          <dcterms:creator>Schell, Albert F.</dcterms:creator>
+          <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
+          <dcterms:subject>Public Meetings</dcterms:subject>
+          <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
+          <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
+          <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+          <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
+          <dcterms:publisher>Evening Bulletin</dcterms:publisher>
+          <dcterms:temporal>20th century</dcterms:temporal>
+          <dcterms:language>English</dcterms:language>
+          <dcterms:language>french</dcterms:language>
+          <dcterms:language>Yiddish</dcterms:language>
+          <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
+          <dcterms:subject>DiLacqua, Peter</dcterms:subject>
+          <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
+          <schema:fileFormat>image/jp2</schema:fileFormat>
+          <dcterms:type>Still Image</dcterms:type>
+          <dcterms:format>Photographs</dcterms:format>
+          <dcterms:type>Image</dcterms:type>
+          <dcterms:type>Still Image</dcterms:type>
+          <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+          <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+          <dcterms:rights>This is a textual rights statement</dcterms:rights>
+          <dcterms:source>The repository is SCRC</dcterms:source>
+          <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+          <edm:dataProvider>Temple University</edm:dataProvider>
+          <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
+          <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+          <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+          <svcs:hasService>https://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+          <dcterms:isReferencedBy>https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
 
-<!-- Type and Format (map/parse, normalize, and delimit) -->
-<x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
+  <!-- Type and Format (map/parse, normalize, and delimit) -->
+  <x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
     <x:scenario label="Delimiting, remediating, and parsing">
       <x:context>
         <oai:record>
           <metadata>
-            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <dc:type>apples;oranges;images;texts;photographs;</dc:type>
             </oai_qdc:qualifieddc>
           </metadata>
         </oai:record>
       </x:context>
       <x:expect label="type and format are mapped and delimited">
-        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <dcterms:format>apples</dcterms:format>
           <dcterms:format>oranges</dcterms:format>
           <dcterms:type>Image</dcterms:type>
@@ -561,7 +679,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>textual kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -573,7 +694,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>TEXTresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -585,7 +709,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>text</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -597,7 +724,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>TEXT</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -609,7 +739,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-text</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -624,7 +757,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>image of kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -636,7 +772,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>ImAgEresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -648,7 +787,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -660,7 +802,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>IMAGE</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -672,7 +817,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -687,7 +835,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>movingimagekittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -699,7 +850,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>moving imagekittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -711,7 +865,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>MOVING ImAgEresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -723,7 +880,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>moving image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -735,7 +895,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>MOVING IMAGE</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -747,7 +910,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-moving-image</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -762,7 +928,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>sound of kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -774,7 +943,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>SoUnDresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -786,7 +958,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>sound</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -798,7 +973,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>SOUND</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -810,7 +988,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-sound</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -825,7 +1006,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>physicalobjectkittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -837,7 +1021,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>physical object kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -849,7 +1036,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>PHYSical Objectresource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -861,7 +1051,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>physical object</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -873,7 +1066,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>PHYSICAL OBJECT</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -885,7 +1081,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-physical-object</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -900,7 +1099,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>interactiveresourcepuppies</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -912,7 +1114,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>interactive resource kittens</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -924,7 +1129,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>InterActive Resource resources</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -936,7 +1144,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>interactive resource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -948,7 +1159,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>INTERACTIVE RESOURCE</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -960,7 +1174,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>hello-interactive-resource</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -969,12 +1186,15 @@
         <x:expect label="Output record dcterms:format is original value" test="oai_dc:dc/dcterms:format = 'hello-interactive-resource'" />
         <x:expect label="Output record dcterms:type does not exist" test="not(oai_dc:dc/dcterms:type)" />
       </x:scenario>
-      
+
       <x:scenario label="Supplemental Type Remediation: Administrative Records">
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Administrative Records</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -987,7 +1207,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Books</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1000,7 +1223,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Clippings</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1013,7 +1239,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Course Catalogs</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1026,7 +1255,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Correspondence</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1039,7 +1271,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Ephemera</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1052,7 +1287,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Financial Records</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1065,7 +1303,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Graphic Arts</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1078,7 +1319,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Manuscripts</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1091,7 +1335,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Maps</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1104,7 +1351,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Objects</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1117,7 +1367,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Pamphlets</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1130,7 +1383,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Periodicals</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1143,7 +1399,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Photographs</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1156,7 +1415,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Posters</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1169,7 +1431,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Publications</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1182,7 +1447,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Reports</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1195,7 +1463,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Sheet Music</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1208,7 +1479,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Slides</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1221,7 +1495,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Transcripts</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1234,7 +1511,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Video recordings</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1247,7 +1527,10 @@
         <x:context>
           <oai:record>
             <metadata>
-              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcterms="http://purl.org/dc/terms/"
+                xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dc:type>Yearbooks</dc:type>
               </oai_qdc:qualifieddc>
             </metadata>
@@ -1256,527 +1539,594 @@
         <x:expect label="Output record dcterms:type is 'Text'" test="oai_dc:dc/dcterms:type = 'Text'" />
         <x:expect label="Output record dcterms:format is 'Yearbooks'" test="oai_dc:dc/dcterms:format = 'Yearbooks'" />
       </x:scenario>
-      
+
     </x:scenario>
   </x:scenario>
 
-<!-- Creator (map and delimit) -->
+  <!-- Creator (map and delimit) -->
   <x:scenario label="dc:creator delimits, normalizes, and maps">
-   <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
+    <x:scenario label="dc:creator becomes space-normalized dcterms:creator">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dc:creator becomes dcterms:creator)" test="oai_dc:dc/dcterms:creator = 'Schell, Albert F.'" />
+    </x:scenario>
+    <x:scenario label="dc:creator becomes space-normalized dcterms:creator and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:creator>Smith, John;Smith, Karen</dc:creator>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="creator maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:creator>Smith, John</dcterms:creator>
+          <dcterms:creator>Smith, Karen</dcterms:creator>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+
+  <!-- File format (map and delimit) -->
+  <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
+    <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dc:format becomes schema:fileFormat)" test="oai_dc:dc/schema:fileFormat = 'image/jp2'" />
+    </x:scenario>
+    <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:format>Thing1;Thing2</dc:format>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="format maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <schema:fileFormat>Thing1</schema:fileFormat>
+          <schema:fileFormat>Thing2</schema:fileFormat>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+
+
+  <!-- Contributor (map and delimit) -->
+  <x:scenario label="dc:contributor delimits, normalizes, and maps">
+    <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dc:contributor becomes dcterms:contributor)" test="oai_dc:dc/dcterms:contributor = 'Smith, Jane J.'" />
+    </x:scenario>
+    <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:contributor>Smith, John;Smith, Karen</dc:contributor>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="contributor maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:contributor>Smith, John</dcterms:contributor>
+          <dcterms:contributor>Smith, Karen</dcterms:contributor>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+
+  <!-- Source (map and delimit) -->
+  <x:scenario label="dc:source delimits, normalizes, and maps">
+    <x:scenario label="dc:source becomes space-normalized dcterms:source">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dc:source becomes dcterms:source)" test="oai_dc:dc/dcterms:source = 'The repository is SCRC'" />
+    </x:scenario>
+    <x:scenario label="dc:source becomes space-normalized dcterms:source and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:source>Smith, John;Smith, Karen</dc:source>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="source maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:source>Smith, John</dcterms:source>
+          <dcterms:source>Smith, Karen</dcterms:source>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+
+  <!-- Publisher (map and delimit) -->
+  <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="dc:creator becomes dcterms:creator)"
-       test="oai_dc:dc/dcterms:creator = 'Schell, Albert F.'" />
-   </x:scenario>
-   <x:scenario label="dc:creator becomes space-normalized dcterms:creator and delimits">
-     <x:context>
-       <oai:record>
-         <metadata>
-           <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-             <dc:creator>Smith, John;Smith, Karen</dc:creator>
-           </oai_qdc:qualifieddc>
-         </metadata>
-       </oai:record>
-     </x:context>
-     <x:expect label="creator maps and delimits">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:creator>Smith, John</dcterms:creator>
-         <dcterms:creator>Smith, Karen</dcterms:creator>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
-   </x:scenario>
- </x:scenario>
+    <x:expect label="dc:publisher becomes dcterms:publisher)" test="oai_dc:dc/dcterms:publisher = 'Evening Bulletin'" />
+  </x:scenario>
 
-<!-- File format (map and delimit) -->
-   <x:scenario label="dc:format delimits, normalizes, and maps to schema:fileFormat">
-     <x:scenario label="dc:format becomes space-normalized schema:fileFormat">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:format becomes schema:fileFormat)"
-         test="oai_dc:dc/schema:fileFormat = 'image/jp2'" />
-     </x:scenario>
-     <x:scenario label="dc:format becomes space-normalized schema:fileFormat and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dc:format>Thing1;Thing2</dc:format>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="format maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <schema:fileFormat>Thing1</schema:fileFormat>
-           <schema:fileFormat>Thing2</schema:fileFormat>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Description (map) -->
+  <x:scenario label="dc:description becomes space-normalized dcterms:description">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="dc:description becomes dcterms:description" test="oai_dc:dc/dcterms:description = 'A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.'" />
+  </x:scenario>
 
+  <!-- Spatial (map and delimit) -->
+  <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="spatial is mapped and delimited">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
+        <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
+        <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
+        <dcterms:alternative>Here's another alt title</dcterms:alternative>
+        <dcterms:date>1978-07-25</dcterms:date>
+        <dcterms:creator>Schell, Albert F.</dcterms:creator>
+        <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
+        <dcterms:subject>Public Meetings</dcterms:subject>
+        <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+        <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
+        <dcterms:publisher>Evening Bulletin</dcterms:publisher>
+        <dcterms:temporal>20th century</dcterms:temporal>
+        <dcterms:language>English</dcterms:language>
+        <dcterms:language>french</dcterms:language>
+        <dcterms:language>Yiddish</dcterms:language>
+        <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
+        <dcterms:subject>DiLacqua, Peter</dcterms:subject>
+        <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
+        <schema:fileFormat>image/jp2</schema:fileFormat>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:format>Photographs</dcterms:format>
+        <dcterms:type>Image</dcterms:type>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+        <dcterms:rights>This is a textual rights statement</dcterms:rights>
+        <dcterms:source>The repository is SCRC</dcterms:source>
+        <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+        <edm:dataProvider>Temple University</edm:dataProvider>
+        <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
+        <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+        <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+        <svcs:hasService>https://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+        <dcterms:isReferencedBy>https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- Contributor (map and delimit) -->
-   <x:scenario label="dc:contributor delimits, normalizes, and maps">
-     <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:contributor becomes dcterms:contributor)"
-         test="oai_dc:dc/dcterms:contributor = 'Smith, Jane J.'" />
-     </x:scenario>
-     <x:scenario label="dc:contributor becomes space-normalized dcterms:contributor and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dc:contributor>Smith, John;Smith, Karen</dc:contributor>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="contributor maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:contributor>Smith, John</dcterms:contributor>
-           <dcterms:contributor>Smith, Karen</dcterms:contributor>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Temporal (map and delimit) -->
+  <x:scenario label="dcterms:temporal delimits, normalizes, and maps">
+    <x:scenario label="dcterms:temporal becomes space-normalized dcterms:temporal">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dcterms:temporal becomes dcterms:temporal)" test="oai_dc:dc/dcterms:temporal = '20th century'" />
+    </x:scenario>
+    <x:scenario label="dcterms:temporal becomes space-normalized dcterms:temporal and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:temporal>20th century;19th century</dcterms:temporal>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="temporal maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:temporal>20th century</dcterms:temporal>
+          <dcterms:temporal>19th century</dcterms:temporal>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
 
-<!-- Source (map and delimit) -->
-   <x:scenario label="dc:source delimits, normalizes, and maps">
-     <x:scenario label="dc:source becomes space-normalized dcterms:source">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:source becomes dcterms:source)"
-         test="oai_dc:dc/dcterms:source = 'The repository is SCRC'" />
-     </x:scenario>
-     <x:scenario label="dc:source becomes space-normalized dcterms:source and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dc:source>Smith, John;Smith, Karen</dc:source>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="source maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:source>Smith, John</dcterms:source>
-           <dcterms:source>Smith, Karen</dcterms:source>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Extent (map) -->
+  <x:scenario label="dcterms:extent becomes space-normalized dcterms:extent">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="dcterms:extent becomes dcterms:extent)" test="oai_dc:dc/dcterms:extent = '1 photograph, b&amp;w; 8 x 10 in.'" />
+  </x:scenario>
 
-<!-- Publisher (map and delimit) -->
-     <x:scenario label="dc:publisher becomes space-normalized dcterms:publisher">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:publisher becomes dcterms:publisher)"
-         test="oai_dc:dc/dcterms:publisher = 'Evening Bulletin'" />
-     </x:scenario>
+  <!-- Date (map and delimit) -->
+  <x:scenario label="dc:date delimits, normalizes, and maps">
+    <x:scenario label="dc:date becomes space-normalized dcterms:date">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dc:date becomes dcterms:date)" test="oai_dc:dc/dcterms:date = '1978-07-25'" />
+    </x:scenario>
+    <x:scenario label="dc:date becomes space-normalized dcterms:date and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:date>1978-07-25;1978-07-26</dc:date>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="date maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:date>1978-07-25</dcterms:date>
+          <dcterms:date>1978-07-26</dcterms:date>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
 
-<!-- Description (map) -->
-     <x:scenario label="dc:description becomes space-normalized dcterms:description">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:description becomes dcterms:description"
-         test="oai_dc:dc/dcterms:description = 'A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.'" />
-     </x:scenario>
+  <!-- Subject (map and delimit) -->
+  <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="subject is mapped and delimited">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
+        <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
+        <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
+        <dcterms:alternative>Here's another alt title</dcterms:alternative>
+        <dcterms:date>1978-07-25</dcterms:date>
+        <dcterms:creator>Schell, Albert F.</dcterms:creator>
+        <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
+        <dcterms:subject>Public Meetings</dcterms:subject>
+        <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+        <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
+        <dcterms:publisher>Evening Bulletin</dcterms:publisher>
+        <dcterms:temporal>20th century</dcterms:temporal>
+        <dcterms:language>English</dcterms:language>
+        <dcterms:language>french</dcterms:language>
+        <dcterms:language>Yiddish</dcterms:language>
+        <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
+        <dcterms:subject>DiLacqua, Peter</dcterms:subject>
+        <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
+        <schema:fileFormat>image/jp2</schema:fileFormat>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:format>Photographs</dcterms:format>
+        <dcterms:type>Image</dcterms:type>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+        <dcterms:rights>This is a textual rights statement</dcterms:rights>
+        <dcterms:source>The repository is SCRC</dcterms:source>
+        <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+        <edm:dataProvider>Temple University</edm:dataProvider>
+        <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
+        <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+        <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+        <svcs:hasService>https://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+        <dcterms:isReferencedBy>https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- Spatial (map and delimit) -->
-   <x:scenario label="dcterms:spatial maps to dcterms:spatial and delimits on semicolon">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="spatial is mapped and delimited">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
-         <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
-         <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
-         <dcterms:alternative>Here's another alt title</dcterms:alternative>
-         <dcterms:date>1978-07-25</dcterms:date>
-         <dcterms:creator>Schell, Albert F.</dcterms:creator>
-         <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
-         <dcterms:subject>Public Meetings</dcterms:subject>
-         <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
-         <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
-         <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-         <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
-         <dcterms:publisher>Evening Bulletin</dcterms:publisher>
-         <dcterms:temporal>20th century</dcterms:temporal>
-         <dcterms:language>English</dcterms:language>
-         <dcterms:language>french</dcterms:language>
-         <dcterms:language>Yiddish</dcterms:language>
-         <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
-         <dcterms:subject>DiLacqua, Peter</dcterms:subject>
-         <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
-         <schema:fileFormat>image/jp2</schema:fileFormat>
-         <dcterms:type>Still Image</dcterms:type>
-         <dcterms:format>Photographs</dcterms:format>
-         <dcterms:type>Image</dcterms:type>
-         <dcterms:type>Still Image</dcterms:type>
-         <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
-         <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-         <dcterms:rights>This is a textual rights statement</dcterms:rights>
-         <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <edm:dataProvider>Temple University</edm:dataProvider>
-         <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
-         <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-         <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-         <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-         <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
-   </x:scenario>
+  <!-- Language (map and delimit) -->
+  <x:scenario label="language becomes space-normalized dcterms:language">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="language normalizes, maps, and delimits">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
+        <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
+        <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
+        <dcterms:alternative>Here's another alt title</dcterms:alternative>
+        <dcterms:date>1978-07-25</dcterms:date>
+        <dcterms:creator>Schell, Albert F.</dcterms:creator>
+        <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
+        <dcterms:subject>Public Meetings</dcterms:subject>
+        <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+        <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
+        <dcterms:publisher>Evening Bulletin</dcterms:publisher>
+        <dcterms:temporal>20th century</dcterms:temporal>
+        <dcterms:language>English</dcterms:language>
+        <dcterms:language>french</dcterms:language>
+        <dcterms:language>Yiddish</dcterms:language>
+        <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
+        <dcterms:subject>DiLacqua, Peter</dcterms:subject>
+        <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
+        <schema:fileFormat>image/jp2</schema:fileFormat>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:format>Photographs</dcterms:format>
+        <dcterms:type>Image</dcterms:type>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+        <dcterms:rights>This is a textual rights statement</dcterms:rights>
+        <dcterms:source>The repository is SCRC</dcterms:source>
+        <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+        <edm:dataProvider>Temple University</edm:dataProvider>
+        <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
+        <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+        <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+        <svcs:hasService>https://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+        <dcterms:isReferencedBy>https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- Temporal (map and delimit) -->
-   <x:scenario label="dcterms:temporal delimits, normalizes, and maps">
-     <x:scenario label="dcterms:temporal becomes space-normalized dcterms:temporal">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dcterms:temporal becomes dcterms:temporal)"
-         test="oai_dc:dc/dcterms:temporal = '20th century'" />
-     </x:scenario>
-     <x:scenario label="dcterms:temporal becomes space-normalized dcterms:temporal and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dcterms:temporal>20th century;19th century</dcterms:temporal>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="temporal maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:temporal>20th century</dcterms:temporal>
-           <dcterms:temporal>19th century</dcterms:temporal>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Relation (map and delimit) -->
+  <x:scenario label="relation delimits, normalizes, and maps">
+    <x:scenario label="relation becomes space-normalized dcterms:relation">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="dc:relation becomes dcterms:relation)" test='oai_dc:dc/dcterms:relation = "Here&apos;s a link to the collection finding aid."' />
+    </x:scenario>
+    <x:scenario label="dc:relation becomes space-normalized dcterms:relation and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:relation>Thing 1; Thing 2;</dc:relation>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="relation maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
 
-<!-- Extent (map) -->
-   <x:scenario label="dcterms:extent becomes space-normalized dcterms:extent">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="dcterms:extent becomes dcterms:extent)"
-       test="oai_dc:dc/dcterms:extent = '1 photograph, b&amp;w; 8 x 10 in.'" />
-   </x:scenario>
+  <!-- isPartOf (map and don't delimit) -->
+  <x:scenario label="isPartOf delimits, normalizes, and maps">
+    <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
+      <x:context href="../../fixtures/cdm_generic.xml"/>
+      <x:expect label="isPartOf becomes dcterms:isPartOf)" test="oai_dc:dc/dcterms:isPartOf = 'George D. McDowell Philadelphia Evening Bulletin Photographs'" />
+    </x:scenario>
+    <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf and delimits">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:dcterms="http://purl.org/dc/terms/"
+              xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dcterms:isPartOf>Thing 1; Thing 2;</dcterms:isPartOf>
+            </oai_qdc:qualifieddc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="relation maps and delimits">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:isPartOf>Thing 1</dcterms:isPartOf>
+          <dcterms:isPartOf>Thing 2</dcterms:isPartOf>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
 
-<!-- Date (map and delimit) -->
-   <x:scenario label="dc:date delimits, normalizes, and maps">
-     <x:scenario label="dc:date becomes space-normalized dcterms:date">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:date becomes dcterms:date)"
-         test="oai_dc:dc/dcterms:date = '1978-07-25'" />
-     </x:scenario>
-     <x:scenario label="dc:date becomes space-normalized dcterms:date and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dc:date>1978-07-25;1978-07-26</dc:date>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="date maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:date>1978-07-25</dcterms:date>
-           <dcterms:date>1978-07-26</dcterms:date>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Replaced by (map and delimit) -->
+  <x:scenario label="isReplacedBy delimits, normalizes, and maps">
+    <x:context>
+      <oai:record>
+        <metadata>
+          <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:isReplacedBy>Thing 1; Thing 2;</dcterms:isReplacedBy>
+          </oai_qdc:qualifieddc>
+        </metadata>
+      </oai:record>
+    </x:context>
+    <x:expect label="isReplacedBy maps and delimits">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:isReplacedBy>Thing 1</dcterms:isReplacedBy>
+        <dcterms:isReplacedBy>Thing 2</dcterms:isReplacedBy>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- Subject (map and delimit) -->
-   <x:scenario label="dc:subject maps to dcterms:subject and delimits on semicolon">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="subject is mapped and delimited">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
-         <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
-         <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
-         <dcterms:alternative>Here's another alt title</dcterms:alternative>
-         <dcterms:date>1978-07-25</dcterms:date>
-         <dcterms:creator>Schell, Albert F.</dcterms:creator>
-         <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
-         <dcterms:subject>Public Meetings</dcterms:subject>
-         <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
-         <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
-         <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-         <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
-         <dcterms:publisher>Evening Bulletin</dcterms:publisher>
-         <dcterms:temporal>20th century</dcterms:temporal>
-         <dcterms:language>English</dcterms:language>
-         <dcterms:language>french</dcterms:language>
-         <dcterms:language>Yiddish</dcterms:language>
-         <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
-         <dcterms:subject>DiLacqua, Peter</dcterms:subject>
-         <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
-         <schema:fileFormat>image/jp2</schema:fileFormat>
-         <dcterms:type>Still Image</dcterms:type>
-         <dcterms:format>Photographs</dcterms:format>
-         <dcterms:type>Image</dcterms:type>
-         <dcterms:type>Still Image</dcterms:type>
-         <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
-         <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-         <dcterms:rights>This is a textual rights statement</dcterms:rights>
-         <dcterms:source>The repository is SCRC</dcterms:source>
-         <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-         <edm:dataProvider>Temple University</edm:dataProvider>
-         <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
-         <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-         <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-         <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-         <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
-   </x:scenario>
+  <!-- Replaces (map and delimit) -->
+  <x:scenario label="replaces delimits, normalizes, and maps">
+    <x:context>
+      <oai:record>
+        <metadata>
+          <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:replaces>Thing 1; Thing 2;</dcterms:replaces>
+          </oai_qdc:qualifieddc>
+        </metadata>
+      </oai:record>
+    </x:context>
+    <x:expect label="replaces maps and delimits">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:replaces>Thing 1</dcterms:replaces>
+        <dcterms:replaces>Thing 2</dcterms:replaces>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- Language (map and delimit) -->
-     <x:scenario label="language becomes space-normalized dcterms:language">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-        <x:expect label="language normalizes, maps, and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
-           <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
-           <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
-           <dcterms:alternative>Here's another alt title</dcterms:alternative>
-           <dcterms:date>1978-07-25</dcterms:date>
-           <dcterms:creator>Schell, Albert F.</dcterms:creator>
-           <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
-           <dcterms:subject>Public Meetings</dcterms:subject>
-           <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
-           <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
-           <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-           <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
-           <dcterms:publisher>Evening Bulletin</dcterms:publisher>
-           <dcterms:temporal>20th century</dcterms:temporal>
-           <dcterms:language>English</dcterms:language>
-           <dcterms:language>french</dcterms:language>
-           <dcterms:language>Yiddish</dcterms:language>
-           <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
-           <dcterms:subject>DiLacqua, Peter</dcterms:subject>
-           <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
-           <schema:fileFormat>image/jp2</schema:fileFormat>
-           <dcterms:type>Still Image</dcterms:type>
-           <dcterms:format>Photographs</dcterms:format>
-           <dcterms:type>Image</dcterms:type>
-           <dcterms:type>Still Image</dcterms:type>
-           <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
-           <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-           <dcterms:rights>This is a textual rights statement</dcterms:rights>
-           <dcterms:source>The repository is SCRC</dcterms:source>
-           <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-           <edm:dataProvider>Temple University</edm:dataProvider>
-           <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
-           <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-           <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-           <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-           <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
+  <!-- Rights and Rights URI (map/parse and delimit) -->
+  <x:scenario label="rights processing">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
+    <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This is a textual rights statement'"/>
+    <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
+    <x:expect label="textual rights does not map to edm:rights" test="not(oai_dc:dc/edm:rights = 'This is a textual rights statement')" />
+  </x:scenario>
 
-<!-- Relation (map and delimit) -->
-   <x:scenario label="relation delimits, normalizes, and maps">
-     <x:scenario label="relation becomes space-normalized dcterms:relation">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dc:relation becomes dcterms:relation)"
-         test='oai_dc:dc/dcterms:relation = "Here&apos;s a link to the collection finding aid."' />
-     </x:scenario>
-     <x:scenario label="dc:relation becomes space-normalized dcterms:relation and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dc:relation>Thing 1; Thing 2;</dc:relation>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="relation maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:relation>Thing 1; Thing 2;</dcterms:relation>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Rights Holder (map and delimit) -->
+  <x:scenario label="rights holder delimits, normalizes, and maps">
+    <x:context>
+      <oai:record>
+        <metadata>
+          <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <dcterms:rightsHolder>Thing 1; Thing 2;</dcterms:rightsHolder>
+          </oai_qdc:qualifieddc>
+        </metadata>
+      </oai:record>
+    </x:context>
+    <x:expect label="rightsHolder maps and delimits">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:rightsHolder>Thing 1</dcterms:rightsHolder>
+        <dcterms:rightsHolder>Thing 2</dcterms:rightsHolder>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- isPartOf (map and don't delimit) -->
-   <x:scenario label="isPartOf delimits, normalizes, and maps">
-     <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="isPartOf becomes dcterms:isPartOf)"
-         test="oai_dc:dc/dcterms:isPartOf = 'George D. McDowell Philadelphia Evening Bulletin Photographs'" />
-     </x:scenario>
-     <x:scenario label="isPartOf becomes space-normalized dcterms:isPartOf and delimits">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dcterms:isPartOf>Thing 1; Thing 2;</dcterms:isPartOf>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-       <x:expect label="relation maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-              <dcterms:isPartOf>Thing 1</dcterms:isPartOf>
-              <dcterms:isPartOf>Thing 2</dcterms:isPartOf>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-   </x:scenario>
+  <!-- Identifier (map) -->
+  <x:scenario label="dummy identifier generates and maps to dcterms:identifier">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="dummy identifier generates and becomes dcterms:identifier">
+      <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
+        <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
+        <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
+        <dcterms:alternative>Here's another alt title</dcterms:alternative>
+        <dcterms:date>1978-07-25</dcterms:date>
+        <dcterms:creator>Schell, Albert F.</dcterms:creator>
+        <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
+        <dcterms:subject>Public Meetings</dcterms:subject>
+        <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
+        <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
+        <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
+        <dcterms:publisher>Evening Bulletin</dcterms:publisher>
+        <dcterms:temporal>20th century</dcterms:temporal>
+        <dcterms:language>English</dcterms:language>
+        <dcterms:language>french</dcterms:language>
+        <dcterms:language>Yiddish</dcterms:language>
+        <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
+        <dcterms:subject>DiLacqua, Peter</dcterms:subject>
+        <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
+        <schema:fileFormat>image/jp2</schema:fileFormat>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:format>Photographs</dcterms:format>
+        <dcterms:type>Image</dcterms:type>
+        <dcterms:type>Still Image</dcterms:type>
+        <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
+        <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
+        <dcterms:rights>This is a textual rights statement</dcterms:rights>
+        <dcterms:source>The repository is SCRC</dcterms:source>
+        <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
+        <edm:dataProvider>Temple University</edm:dataProvider>
+        <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
+        <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
+        <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
+        <svcs:hasService>https://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
+        <dcterms:isReferencedBy>https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
+        <edm:provider>PA Digital</edm:provider>
+      </oai_dc:dc>
+    </x:expect>
+  </x:scenario>
 
-<!-- Replaced by (map and delimit) -->
-   <x:scenario label="isReplacedBy delimits, normalizes, and maps">
-       <x:context>
-         <oai:record>
-           <metadata>
-             <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-               <dcterms:isReplacedBy>Thing 1; Thing 2;</dcterms:isReplacedBy>
-             </oai_qdc:qualifieddc>
-           </metadata>
-         </oai:record>
-       </x:context>
-     <x:expect label="isReplacedBy maps and delimits">
-         <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-           <dcterms:isReplacedBy>Thing 1</dcterms:isReplacedBy>
-           <dcterms:isReplacedBy>Thing 2</dcterms:isReplacedBy>
-           <edm:provider>PA Digital</edm:provider>
-         </oai_dc:dc>
-       </x:expect>
-   </x:scenario>
+  <!-- Data Provider (generate and map) -->
+  <x:scenario label="data provider processing">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="lookup identifier URL and map to institution" test="oai_dc:dc/edm:dataProvider = 'Temple University'"/>
+  </x:scenario>
 
-<!-- Replaces (map and delimit) -->
-   <x:scenario label="replaces delimits, normalizes, and maps">
-     <x:context>
-       <oai:record>
-         <metadata>
-           <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-             <dcterms:replaces>Thing 1; Thing 2;</dcterms:replaces>
-           </oai_qdc:qualifieddc>
-         </metadata>
-       </oai:record>
-     </x:context>
-     <x:expect label="replaces maps and delimits">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:replaces>Thing 1</dcterms:replaces>
-         <dcterms:replaces>Thing 2</dcterms:replaces>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
-   </x:scenario>
+  <!-- isShownAt (map) -->
+  <x:scenario label="isShownAt processing">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0'"/>
+  </x:scenario>
 
-<!-- Rights and Rights URI (map/parse and delimit) -->
-   <x:scenario label="rights processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="rights URI is transformed to edm:rights" test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC/1.0/'"/>
-     <x:expect label="textual rights statment is transformed to dcterms:rights" test="oai_dc:dc/dcterms:rights = 'This is a textual rights statement'"/>
-     <x:expect label="rights uri does not map to rights" test="not(oai_dc:dc/dcterms:rights = 'http://rightsstatements.org/vocab/InC/1.0/')" />
-     <x:expect label="textual rights does not map to edm:rights" test="not(oai_dc:dc/edm:rights = 'This is a textual rights statement')" />
-   </x:scenario>
+  <!-- Preview (generate and map) -->
+  <x:scenario label="preview processing">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0'"/>
+  </x:scenario>
 
-<!-- Rights Holder (map and delimit) -->
-   <x:scenario label="rights holder delimits, normalizes, and maps">
-     <x:context>
-       <oai:record>
-         <metadata>
-           <oai_qdc:qualifieddc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-             <dcterms:rightsHolder>Thing 1; Thing 2;</dcterms:rightsHolder>
-           </oai_qdc:qualifieddc>
-         </metadata>
-       </oai:record>
-     </x:context>
-     <x:expect label="rightsHolder maps and delimits">
-       <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <dcterms:rightsHolder>Thing 1</dcterms:rightsHolder>
-         <dcterms:rightsHolder>Thing 2</dcterms:rightsHolder>
-         <edm:provider>PA Digital</edm:provider>
-       </oai_dc:dc>
-     </x:expect>
-   </x:scenario>
+  <!-- IIIF Base URL (generate and map) -->
+  <x:scenario label="IIIF base url processing">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="preview generates and maps; replaces http with https" test="oai_dc:dc/svcs:hasService = 'https://digital.library.temple.edu/digital/iiif/p15037coll3/0'"/>
+  </x:scenario>
 
-<!-- Identifier (map) -->
-     <x:scenario label="dummy identifier generates and maps to dcterms:identifier">
-       <x:context href="../../fixtures/cdm_generic.xml"/>
-       <x:expect label="dummy identifier generates and becomes dcterms:identifier">
-           <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-             <dcterms:isPartOf>de Pasquale collection</dcterms:isPartOf>
-             <dcterms:title>A citizen gives his opinion on a proposed disco hall.</dcterms:title>
-             <dcterms:alternative>A citizen gives an opinion</dcterms:alternative>
-             <dcterms:alternative>Here's another alt title</dcterms:alternative>
-             <dcterms:date>1978-07-25</dcterms:date>
-             <dcterms:creator>Schell, Albert F.</dcterms:creator>
-             <dcterms:contributor>Smith, Jane J.</dcterms:contributor>
-             <dcterms:subject>Public Meetings</dcterms:subject>
-             <dcterms:subject>6615 Rising Sun Avenue (Philadelphia, Pa.)</dcterms:subject>
-             <dcterms:subject>Abbey Stage Door Theater (Philadelphia, Pa.)</dcterms:subject>
-             <dcterms:spatial>Philadelphia (Pa.)</dcterms:spatial>
-             <dcterms:spatial>Northeast Philadelphia (Philadelphia, Pa.)</dcterms:spatial>
-             <dcterms:publisher>Evening Bulletin</dcterms:publisher>
-             <dcterms:temporal>20th century</dcterms:temporal>
-             <dcterms:language>English</dcterms:language>
-             <dcterms:language>french</dcterms:language>
-             <dcterms:language>Yiddish</dcterms:language>
-             <dcterms:relation>Here&apos;s a link to the collection finding aid.</dcterms:relation>
-             <dcterms:subject>DiLacqua, Peter</dcterms:subject>
-             <dcterms:description>A citizen stands up in a meeting, to voice his opposition to a proposed disco hall.</dcterms:description>
-             <schema:fileFormat>image/jp2</schema:fileFormat>
-             <dcterms:type>Still Image</dcterms:type>
-             <dcterms:format>Photographs</dcterms:format>
-             <dcterms:type>Image</dcterms:type>
-             <dcterms:type>Still Image</dcterms:type>
-             <dcterms:extent>1 photograph, b&amp;w; 8 x 10 in.</dcterms:extent>
-             <edm:rights>http://rightsstatements.org/vocab/InC/1.0/</edm:rights>
-             <dcterms:rights>This is a textual rights statement</dcterms:rights>
-             <dcterms:source>The repository is SCRC</dcterms:source>
-             <dcterms:isPartOf>George D. McDowell Philadelphia Evening Bulletin Photographs</dcterms:isPartOf>
-             <edm:dataProvider>Temple University</edm:dataProvider>
-             <dcterms:identifier>padig:TEMPLE-p15037coll3-0</dcterms:identifier>
-             <edm:isShownAt>http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0</edm:isShownAt>
-             <edm:preview>http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0</edm:preview>
-             <svcs:hasService>http://digital.library.temple.edu/digital/iiif/p15037coll3/0</svcs:hasService>
-             <dcterms:isReferencedBy>http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json</dcterms:isReferencedBy>
-             <edm:provider>PA Digital</edm:provider>
-           </oai_dc:dc>
-       </x:expect>
-     </x:scenario>
-
-<!-- Data Provider (generate and map) -->
-   <x:scenario label="data provider processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="lookup identifier URL and map to institution" test="oai_dc:dc/edm:dataProvider = 'Temple University'"/>
-   </x:scenario>
-
-<!-- isShownAt (map) -->
-   <x:scenario label="isShownAt processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="last identifier maps to edm:isShownAt" test="oai_dc:dc/edm:isShownAt = 'http://digital.library.temple.edu/cdm/ref/collection/p15037coll3/id/0'"/>
-   </x:scenario>
-
-<!-- Preview (generate and map) -->
-   <x:scenario label="preview processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/edm:preview = 'http://digital.library.temple.edu/utils/getthumbnail/collection/p15037coll3/id/0'"/>
-   </x:scenario>
-
-<!-- IIIF Base URL (generate and map) -->
-   <x:scenario label="IIIF base url processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/svcs:hasService = 'http://digital.library.temple.edu/digital/iiif/p15037coll3/0'"/>
-   </x:scenario>
-
-<!-- IIIF Manifest (generate and map) -->
-   <x:scenario label="IIIF manifest processing">
-     <x:context href="../../fixtures/cdm_generic.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'http://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json'"/>
-   </x:scenario>
- </x:description>
+  <!-- IIIF Manifest (generate and map) -->
+  <x:scenario label="IIIF manifest processing">
+    <x:context href="../../fixtures/cdm_generic.xml"/>
+    <x:expect label="preview generates and maps; replaces http with https" test="oai_dc:dc/dcterms:isReferencedBy = 'https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json'"/>
+  </x:scenario>
+</x:description>
