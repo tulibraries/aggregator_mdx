@@ -16,7 +16,6 @@
     xmlns:svcs="http://rdfs.org/sioc/services"
     version="2.0">
     
-    
     <!-- American Philosophical Society collecton name lookup -->
     <xsl:param name="apsSetSpecList">
         <padig:set string="Eastern State Penitentiary">text_Mss.365.P381p</padig:set>
