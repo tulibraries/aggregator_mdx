@@ -38,4 +38,4 @@ jobs:
         run: pipenv install --dev
 
       - name: Run tests
-        run: make test-ci
+        run: make test
