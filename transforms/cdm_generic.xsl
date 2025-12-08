@@ -35,8 +35,7 @@
             <xsl:call-template name="identifier"/>
             <xsl:call-template name="isShownAt"/>
             <xsl:call-template name="preview"/>
-            <xsl:call-template name="iiifBase"/>
-            <xsl:call-template name="iiifManifest"/>
+            <xsl:call-template name="iiif"/>
         </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

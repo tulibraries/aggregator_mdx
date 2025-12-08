@@ -1,0 +1,28 @@
+# Prevent overwriting /xspec inside container
+xspec/
+xspec/**
+
+# Prevent local Saxon jars from overwriting container-installed ones
+*.jar
+
+# Git metadata
+.git/
+.gitignore
+
+# Python environment files
+__pycache__/
+*.pyc
+
+# macOS junk
+.DS_Store
+
+# Docker build files (avoid recursive build context)
+.docker/
+docker-compose.yml
+Makefile
+
+# Allow only the source directories we truly need
+!tests/
+!transforms/
+!validations/
+
