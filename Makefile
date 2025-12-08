@@ -16,14 +16,14 @@ test-sch:
 	@echo "Testing schematron with Docker"
 	for xspectest in $(shell ls tests/schematron/*.xspec); do \
 		echo "$$xspectest" ; \
-		docker-compose run --rm xspec -s "$$xspectest" ; \
+		docker compose run --rm xspec -s "$$xspectest" ; \
 	done
 
 test-xslt:
 	@echo "Testing xslt with Docker"
 	for xspectest in $(shell ls tests/xslt/*.xspec); do \
 		echo "$$xspectest" ; \
-		docker-compose run --rm xspec "$$xspectest" ; \
+		docker compose run --rm xspec "$$xspectest" ; \
 	done
 
 test-ci: test-bash test-coverage
@@ -46,5 +46,4 @@ stop:
 
 down: stop
 	@echo "Killing xspec containers, networks, volumes"
-	@echo "docker compose rm -fv"
-	docker-compose down --remove-orphans --volumes
+	docker compose rm -fv
