@@ -49,4 +49,4 @@ jobs:
           sudo ln -sf /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
 
       - name: Run tests
-        run: make test
+        run: make test-ci
