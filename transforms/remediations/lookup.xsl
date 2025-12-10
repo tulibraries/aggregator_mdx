@@ -57,7 +57,7 @@
         <padig:url string="La Salle University" code="LASALLE">https://digitalcommons.lasalle.edu/</padig:url>
         <padig:url string="Lafayette College" code="LAFAYETTE">https://ldr.lafayette.edu/</padig:url>
         <padig:url string="Lafayette College" code="LAFAYETTE">http://hdl.handle.net/10385/</padig:url>
-        <padig:url string="Lehigh University" code="LEHIGH">http://cdm.lib.lehigh.edu/</padig:url>
+        <padig:url string="Lehigh University" code="LEHIGH">https://preserve.lehigh.edu/</padig:url>
         <padig:url string="The Library Company of Philadelphia" code="LIBCO">https://digital.librarycompany.org/</padig:url>
         <padig:url string="Media Historic Archives Commission" code="MHAC">https://www.mediahistoricarchives.org/</padig:url>
         <padig:url string="Moravian Historical Society" code="MORAVIAN">https://moravianhistoricalsociety.reclaim.hosting/oai</padig:url>
@@ -90,7 +90,6 @@
         <padig:url string="Lackawanna Valley Digital Archives" code="LVDA">http://content.lackawannadigitalarchives.org/</padig:url>
         <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">http://digitalcollections.powerlibrary.org/</padig:url>
         <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">https://digitalarchives.powerlibrary.org/papd/</padig:url>
-        <padig:url string="POWER Library as sponsor and HSLC as maintainer" code="POWER">https://digitalarchives.powerlibrary.org/psa/</padig:url>
         <padig:url string="Historic Pittsburgh" code="HP">http://historicpittsburgh.org/</padig:url>
         <padig:url string="Historic Pittsburgh" code="HP">https://historicpittsburgh.org/</padig:url>
         <padig:url string="Philadelphia Architects and Buildings" code="PAB">https://www.philadelphiabuildings.org/pab/</padig:url>
@@ -514,8 +513,8 @@
         <padig:set string="North Vietnamese Propaganda Posters">p15860coll7</padig:set>
 
         <!-- Lehigh -->
-        <padig:set string="I Remain">letters</padig:set>
-        <padig:set string="Postcards">postal</padig:set>
+        <padig:set string="I Remain">node:15</padig:set>
+        <padig:set string="Postcards">node:20</padig:set>
 
         <!-- Library Company -->
         <!-- Includes setspecs used in variables.json, but also any other setspec that could be a nested collection -->
@@ -1806,10 +1805,6 @@
         <padig:set string="Westmoreland County Associators">1529910</padig:set>
         <padig:set string="York County Associators">1529911</padig:set>
         <padig:set string="Minutes of the Court of Admiralty, 1780-1782, 1784-1786, 1788">1538597</padig:set>
-        <padig:set string="Collection Test PSA 1">1540619</padig:set>
-        <padig:set string="Collection Test PSA 2">1540661</padig:set>
-        <padig:set string="Collection Test PSA 3">1540662</padig:set>
-        <padig:set string="CollectionTest">1540663</padig:set>
         <padig:set string="State Board of Private Academic Schools">1540685</padig:set>
         <padig:set string="Minutes, 2018">1540686</padig:set>
         <padig:set string="Minute Books of the Board of Inspectors and Board of Trustees, 1829-1889">1540687</padig:set>
