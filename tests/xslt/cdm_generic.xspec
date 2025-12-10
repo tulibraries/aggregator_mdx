@@ -1202,9 +1202,4 @@
     <x:context href="../../fixtures/cdm_generic.xml"/>
     <x:expect label="preview generates and maps; replaces http with https" test="oai_dc:dc/dcterms:isReferencedBy = 'https://digital.library.temple.edu/iiif/info/p15037coll3/0/manifest.json'"/>
   </x:scenario>
-
-  <x:scenario label="Intentional failure to verify full-suite reporting">
-    <x:context href="../../fixtures/cdm_generic.xml"/>
-    <x:expect label="intentional failure" test="false()"/>
-  </x:scenario>
 </x:description>
