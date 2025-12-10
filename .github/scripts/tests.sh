@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+failures=0
+
 for xspectest in tests/xslt/*.xspec; do
     if ! docker run xspec "$xspectest" > .github/result.log 2>&1; then
         exit_code=$?
@@ -14,7 +16,7 @@ for xspectest in tests/xslt/*.xspec; do
         cat .github/result.log
         echo "----------"
         [ $exit_code -ne 0 ] && echo "docker exit code: $exit_code"
-        exit 1
+        failures=1
     else
         echo "OK: $xspectest"
     fi
@@ -33,8 +35,13 @@ for xspectest in tests/schematron/*.xspec; do
             cat .github/result.log
             echo "----------"
             [ $exit_code -ne 0 ] && echo "docker exit code: $exit_code"
-            exit 1
+            failures=1
         else
             echo "OK: $xspectest"
     fi
 done
+
+if [ "$failures" -ne 0 ]; then
+    echo "One or more XSpec tests failed."
+    exit 1
+fi
