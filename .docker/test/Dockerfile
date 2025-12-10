@@ -31,6 +31,9 @@ RUN rm -f /xspec/java/saxon*.jar
 ### set classpath used by xspec.sh
 ENV SAXON_CP="/saxon/saxon-he.jar:/saxon/xmlresolver.jar"
 
+### copy project files for testing
+COPY . /aggregator_mdx
+
 ### entrypoint
 WORKDIR /aggregator_mdx
 ENTRYPOINT ["/bin/bash", "/xspec/bin/xspec.sh"]

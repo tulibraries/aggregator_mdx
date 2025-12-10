@@ -1,27 +1,47 @@
 #!/bin/bash
+set -euo pipefail
 
-for xspectest in $(ls tests/xslt/*.xspec); do \
-docker run xspec "$xspectest" &> .github/result.log;
-    if grep -q ".*failed:\s[1-9]" .github/result.log || grep -q -E "\*+\sError\s(running|compiling)\sthe\stest\ssuite" .github/result.log;
-      then
-          echo "FAILED: $xspectest";
-          echo "---------- result.log";
-          cat .github/result.log;
-          echo "----------";
-          exit 1;
-      else echo "OK: $xspectest";
+failures=0
+
+for xspectest in tests/xslt/*.xspec; do
+    if ! docker run xspec "$xspectest" > .github/result.log 2>&1; then
+        exit_code=$?
+    else
+        exit_code=0
+    fi
+
+    if [ $exit_code -ne 0 ] || grep -Eq 'failed:[[:space:]]*[1-9]' .github/result.log || grep -Eq '\*+ Error (running|compiling) the test suite' .github/result.log; then
+        echo "FAILED: $xspectest"
+        echo "---------- result.log"
+        cat .github/result.log
+        echo "----------"
+        [ $exit_code -ne 0 ] && echo "docker exit code: $exit_code"
+        failures=1
+    else
+        echo "OK: $xspectest"
     fi
 done
 
-for xspectest in $(ls tests/schematron/*.xspec); do \
-docker run xspec -s "$xspectest" &> .github/result.log;
-    if grep -q ".*failed:\s[1-9]" .github/result.log || grep -q -E "\*+\sError\s(running|compiling)\sthe\stest\ssuite" .github/result.log;
-        then
-            echo "FAILED: $xspectest";
-            echo "---------- result.log";
-            cat .github/result.log;
-            echo "----------";
-            exit 1;
-        else echo "OK: $xspectest";
+for xspectest in tests/schematron/*.xspec; do
+    if ! docker run xspec -s "$xspectest" > .github/result.log 2>&1; then
+        exit_code=$?
+    else
+        exit_code=0
+    fi
+
+    if [ $exit_code -ne 0 ] || grep -Eq 'failed:[[:space:]]*[1-9]' .github/result.log || grep -Eq '\*+ Error (running|compiling) the test suite' .github/result.log; then
+            echo "FAILED: $xspectest"
+            echo "---------- result.log"
+            cat .github/result.log
+            echo "----------"
+            [ $exit_code -ne 0 ] && echo "docker exit code: $exit_code"
+            failures=1
+        else
+            echo "OK: $xspectest"
     fi
 done
+
+if [ "$failures" -ne 0 ]; then
+    echo "One or more XSpec tests failed."
+    exit 1
+fi
