@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
+<!-- This was replaced with a newer transform when they upgraded their Islandora -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -19,27 +20,38 @@
     <xsl:strip-space elements="*"/>
         
     <xsl:include href="oai_base_crosswalk.xsl"/>
+
+    <!-- collection name -->    
+    <xsl:template match="oai:header/oai:setSpec">
+        <xsl:call-template name="isPartOf"/>
+    </xsl:template>
     
     <!-- preview -->
     <xsl:template match="dc:identifier.thumbnail">
         <xsl:call-template name="preview"/>
     </xsl:template>
     
-    <!-- isShownAt, identifier, data provider -->
-    <xsl:template match="dc:identifier[position() = 1]">
+    <!-- isShownAt -->
+    <xsl:template match="dc:identifier[last()]">
+        <xsl:call-template name="isShownAt"/>
         <xsl:call-template name="identifier"/>
+        <xsl:call-template name="dataProvider"/>
     </xsl:template>
-    
-    <!-- map format to format rather than fileFormat -->
-    <xsl:template match="dc:format" priority="1">
-        <xsl:element name="dcterms:format">
-            <xsl:value-of select="normalize-space(.)"/>
-        </xsl:element>
-    </xsl:template>
-    
     
     <!-- templates -->
 
+    <!-- isPartOf -->
+    <xsl:template name="isPartOf">
+        <xsl:if test="normalize-space(lower-case(.))">
+            <xsl:variable name="setID" select="normalize-space(lower-case(.))"/>
+            <xsl:if test="$setID = $setSpecList/padig:set">
+                <xsl:element name="dcterms:isPartOf">
+                    <xsl:value-of select="$setSpecList/padig:set[. = $setID]/@string"/>
+                </xsl:element>
+            </xsl:if>
+        </xsl:if>
+    </xsl:template>
+    
     <!-- preview -->
     <xsl:template name="preview">
         <xsl:if test="normalize-space(.) != ''">
@@ -48,30 +60,33 @@
             </xsl:element>
         </xsl:if>
     </xsl:template>
-  
-    <!-- identifier -->
-    <xsl:template name="identifier">
-        <xsl:variable name="itemID" select="replace(replace(substring-after(.,'/islandora/'),'[^a-zA-Z0-9\-:_]','_'),'_3A','_')"/>
-        <xsl:variable name="baseURL" select="substring-before(.,'islandora/')"/>
-        
-        <xsl:if test="normalize-space(.) != ''">
-        <xsl:element name="dcterms:identifier">
-            <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
-        </xsl:element>
-            
+    
     <!-- isShownAt -->
+    <xsl:template name="isShownAt">
+        <xsl:if test="normalize-space(.) != ''">
             <xsl:element name="edm:isShownAt">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            
-    <!-- isPartOf -->
-            <xsl:element name="dcterms:isPartOf">
-                <xsl:value-of>Presbyterian Historical Society Digital Collections</xsl:value-of>
-            </xsl:element>
         </xsl:if>
+    </xsl:template>
+    
+    <!-- identifier -->
+    <xsl:template name="identifier">
+        <xsl:variable name="itemID" select="replace(replace(substring-after(.,'/object/'),'[^a-zA-Z0-9\-:_]','_'),'_3A','_')"/>
+        <xsl:variable name="baseURL" select="substring-before(.,'islandora/')"/>
+        
+        <xsl:if test="normalize-space(.) != ''">
+            <xsl:element name="dcterms:identifier">
+                <xsl:value-of>padig:</xsl:value-of><xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@code"/><xsl:value-of>-</xsl:value-of><xsl:value-of select="$itemID"/>
+            </xsl:element>      
+        </xsl:if>
+    </xsl:template>
     
     <!-- dataProvider -->
-        <xsl:if test="$baseURL = $oaiUrl/padig:url">
+    <xsl:template name="dataProvider">
+        <xsl:variable name="baseURL" select="substring-before(.,'islandora/')"/>
+        
+        <xsl:if test="normalize-space(.) != ''">
             <xsl:element name="edm:dataProvider">
                 <xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
             </xsl:element>

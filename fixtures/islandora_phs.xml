@@ -1,40 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<documents>
-  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://www.openarchives.org/OAI/2.0/">
     <header>
-      <identifier>oai:digital.history.pusa.org:islandora_2094</identifier>
-      <datestamp>2020-06-07T10:08:36Z</datestamp>
-      <setSpec>islandora_spalding</setSpec>
-      <setSpec>islandora_missions</setSpec>
-      <setSpec>islandora_domesticmissions</setSpec>
+        <identifier>oai:digital.history.pcusa.org:node-1244</identifier>
+        <datestamp>2025-07-20T21:14:57Z</datestamp>
+        <setSpec>oai_pmh:all_repository_items</setSpec>
     </header>
     <metadata>
-      <oai_dc:dc
-        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-        xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:type>Text</dc:type>
-        <dc:title>Letter from Eliza H. Spalding to Lorena Hart, April 4, 1834.</dc:title>
-        <dc:contributor>Spalding, Eliza Hart, 1807-1851. (author)</dc:contributor>
-        <dc:contributor>Spalding, Henry Harmon, 1803-1874. (author)</dc:contributor>
-        <dc:subject>Spalding, Henry Harmon, 1803-1874.</dc:subject>
-        <dc:subject>Spalding, Eliza Hart, 1807-1851.</dc:subject>
-        <dc:coverage>North and Central America--United States--New York--Oneida--Holland Patent</dc:coverage>
-        <dc:date>1834</dc:date>
-        <dc:type>manuscripts</dc:type>
-        <dc:type>correspondence</dc:type>
-        <dc:language>eng</dc:language>
-        <dc:relation>Henry Harmon Spalding and Eliza Hart Spalding Papers, 1833-ca. 1908.--http://www.history.pcusa.org/collections/research-tools/guides-archival-collections/rg-283</dc:relation>
-        <dc:coverage>Holland Patent (N.Y.)</dc:coverage>
-        <dc:subject>Hart, Lorena.</dc:subject>
-        <dc:subject>Drury, Clifford Merrill, 1897-1984.</dc:subject>
-        <dc:description>Letter from Mrs. H.H. Spalding, April 4, 1834 with a note from Mr. Spalding added March 31, 1834, while Mr. Spalding was a student in the Theological Seminary at Cincinnati. References are made to their life, finances, etc. Addressed to Miss Lorena Hart, Holland Patent. Eliza makes mention of studying Greek and Hebrew; of attending missionary meetings, etc. [Caption transcribed from Clifford M. Drury's notes.]</dc:description>
-        <dc:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</dc:rights>
-        <dc:identifier.thumbnail>https://digital.history.pcusa.org/islandora/object/islandora%3A2094/datastream/TN/view/Letter%20from%20Eliza%20H.%20Spalding%20to%20Lorena%20Hart%2C%20April%204%2C%201834..jpg</dc:identifier.thumbnail>
-        <dc:identifier>https://digital.history.pcusa.org/islandora/object/islandora%3A2094</dc:identifier>
-      </oai_dc:dc>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:identifier>https://digital.history.pcusa.org/islandora/1244</dc:identifier>
+            <dc:identifier>06_190thGA1978</dc:identifier>
+            <dc:title>The 190th General Assembly of the United Presbyterian Church, U.S.A.</dc:title>
+            <dc:date>1978</dc:date>
+            <dc:format>film cassette (U-matic, 29 minutes) : sound, color ; 19 mm</dc:format>
+            <dc:format>videocassettes</dc:format>
+            <dc:format>video recordings (physical artifacts)</dc:format>
+            <dc:type>Moving Image</dc:type>
+            <dc:rights>IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED; <a href="http://rightsstatements.org/vocab/InC-NC/1.0/">http://rightsstatements.org/vocab/InC-NC/1.0/</a></dc:rights>
+            <dc:subject>Ordination of gays--Presbyterians.</dc:subject>
+            <dc:subject>Ordination of lesbians--Presbyterians.</dc:subject>
+            <dc:subject>Homosexuality--Religious aspects--United Presbyterian Church in the U.S.A.</dc:subject>
+            <dc:subject>United Presbyterian Church in the U.S.A. General Assembly (190th : 1978 : San Diego, Calif.)</dc:subject>
+            <dc:subject>United Presbyterian Church in the U.S.A. Task Force to Study Homosexuality.</dc:subject>
+            <dc:subject>Davidson, Virginia West, 1916-2009.</dc:subject>
+            <dc:subject>Brawders, Sandra.</dc:subject>
+            <dc:subject>More Light Presbyterians--Archives.</dc:subject>
+            <dc:identifier.thumbnail>https://pcusa-prod-i2-drupal-data.s3.amazonaws.com/s3fs-public/2025-06/1244-Thumbnail%20Image.jpg?VersionId=AuOYbts.szFiWrP3YxBD6WO7LaWbTydk</dc:identifier.thumbnail>
+        </oai_dc:dc>
     </metadata>
-  </record>
-</documents>
+</record>
