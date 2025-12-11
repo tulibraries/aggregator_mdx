@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This was replaced with a newer fixture when they upgraded their Islandora -->
+<documents>
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+      <identifier>oai:digital.history.pusa.org:islandora_2094</identifier>
+      <datestamp>2020-06-07T10:08:36Z</datestamp>
+      <setSpec>islandora_spalding</setSpec>
+      <setSpec>islandora_missions</setSpec>
+      <setSpec>islandora_domesticmissions</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:type>Text</dc:type>
+        <dc:title>Letter from Eliza H. Spalding to Lorena Hart, April 4, 1834.</dc:title>
+        <dc:contributor>Spalding, Eliza Hart, 1807-1851. (author)</dc:contributor>
+        <dc:contributor>Spalding, Henry Harmon, 1803-1874. (author)</dc:contributor>
+        <dc:subject>Spalding, Henry Harmon, 1803-1874.</dc:subject>
+        <dc:subject>Spalding, Eliza Hart, 1807-1851.</dc:subject>
+        <dc:coverage>North and Central America--United States--New York--Oneida--Holland Patent</dc:coverage>
+        <dc:date>1834</dc:date>
+        <dc:type>manuscripts</dc:type>
+        <dc:type>correspondence</dc:type>
+        <dc:language>eng</dc:language>
+        <dc:relation>Henry Harmon Spalding and Eliza Hart Spalding Papers, 1833-ca. 1908.--http://www.history.pcusa.org/collections/research-tools/guides-archival-collections/rg-283</dc:relation>
+        <dc:coverage>Holland Patent (N.Y.)</dc:coverage>
+        <dc:subject>Hart, Lorena.</dc:subject>
+        <dc:subject>Drury, Clifford Merrill, 1897-1984.</dc:subject>
+        <dc:description>Letter from Mrs. H.H. Spalding, April 4, 1834 with a note from Mr. Spalding added March 31, 1834, while Mr. Spalding was a student in the Theological Seminary at Cincinnati. References are made to their life, finances, etc. Addressed to Miss Lorena Hart, Holland Patent. Eliza makes mention of studying Greek and Hebrew; of attending missionary meetings, etc. [Caption transcribed from Clifford M. Drury's notes.]</dc:description>
+        <dc:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</dc:rights>
+        <dc:identifier.thumbnail>https://digital.history.pcusa.org/islandora/object/islandora%3A2094/datastream/TN/view/Letter%20from%20Eliza%20H.%20Spalding%20to%20Lorena%20Hart%2C%20April%204%2C%201834..jpg</dc:identifier.thumbnail>
+        <dc:identifier>https://digital.history.pcusa.org/islandora/object/islandora%3A2094</dc:identifier>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</documents>
