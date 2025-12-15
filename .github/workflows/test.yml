@@ -37,11 +37,9 @@ jobs:
       - name: Install dependencies
         run: pipenv install --dev
 
-      - name: Ensure docker-compose is available
+      - name: Set up Docker Compose
         if: ${{ env.ACT != 'true' }}  # Skip when running under act
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker-compose
+        uses: docker/setup-compose-action@v1
 
       - name: Run tests
         run: make test-ci
