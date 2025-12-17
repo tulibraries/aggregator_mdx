@@ -23,7 +23,7 @@
   <!-- Title; add title[1] to xsl and then add test here -->
   <x:scenario label="dc:title becomes space-normalized dcterms:title">
     <x:context href="../../fixtures/cdm_generic.xml"/>
-    <x:expect label="dc:title becomes dcterms:title" test="oai_dc:dc/dcterms:title = 'A citizen gives his opinion on a proposed disco hall.'" />
+    <x:expect label="dc:title becomes dcterms:title" test="oai_dc:dc/dcterms:title = 'Incorrect title to trigger failure'" />
   </x:scenario>
 
   <!-- Alternate title (map and delimit) -->
