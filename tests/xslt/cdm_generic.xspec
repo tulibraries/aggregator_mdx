@@ -16,6 +16,8 @@
   xmlns:schema="http://schema.org"
   xmlns:svcs="http://rdfs.org/sioc/services" stylesheet="../../transforms/cdm_generic.xsl">
 
+  <x:expect label="intentional failure" test!="false()"/>
+
   <!--
   Testing Match Templates in qdcCDMingest.xsl
   -->
@@ -23,7 +25,7 @@
   <!-- Title; add title[1] to xsl and then add test here -->
   <x:scenario label="dc:title becomes space-normalized dcterms:title">
     <x:context href="../../fixtures/cdm_generic.xml"/>
-    <x:expect label="dc:title becomes dcterms:title" test="oai_dc:dc/dcterms:title = 'Incorrect title to trigger failure'" />
+    <x:expect label="dc:title becomes dcterms:title" test="oai_dc:dc/dcterms:title = 'A citizen gives his opinion on a proposed disco hall.'" />
   </x:scenario>
 
   <!-- Alternate title (map and delimit) -->

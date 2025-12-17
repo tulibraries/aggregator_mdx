@@ -69,6 +69,8 @@
      </x:scenario>
    </x:scenario>
 
+  <x:expect label="intentional failure" test!="false()"/>
+
 <!-- Type and Format (map/parse, normalize, and delimit) -->
 <x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
     <x:scenario label="Delimiting, remediating, and parsing">
