@@ -16,8 +16,8 @@ define run_xspec
 		echo "$$xspectest"; \
 		output=$$(docker compose run --rm xspec $(2) "$$xspectest"); \
 		exit_code=$$?; \
-		printf "%s\n" "$$output"; \
 		if [ $$exit_code -ne 0 ] || printf "%s\n" "$$output" | grep -Eq 'failed:[[:space:]]*[1-9]|\*+ Error (running|compiling) the test suite'; then \
+		    printf "%s\n" "$$output"; \
 			echo "FAILED: $$xspectest"; failures=1; \
 		else echo "OK: $$xspectest"; fi; \
 	done; \
