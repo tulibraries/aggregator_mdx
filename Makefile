@@ -13,13 +13,21 @@ define run_xspec
 	@failures=0; \
 	for xspectest in $(1); do \
 		[ -e "$$xspectest" ] || continue; \
-		echo "$$xspectest"; \
-		output=$$(docker compose run --rm xspec $(2) "$$xspectest"); \
-		exit_code=$$?; \
-		if [ $$exit_code -ne 0 ] || printf "%s\n" "$$output" | grep -Eq 'failed:[[:space:]]*[1-9]|\*+ Error (running|compiling) the test suite'; then \
-		    printf "%s\n" "$$output"; \
-			echo "FAILED: $$xspectest"; failures=1; \
-		else echo "OK: $$xspectest"; fi; \
+		if ! docker compose run --rm xspec $(2) "$$xspectest" > .github/result.log 2>&1; then \
+			exit_code=$$?; \
+		else \
+			exit_code=0; \
+		fi; \
+		if [ $$exit_code -ne 0 ] || grep -Eq 'failed:[[:space:]]*[1-9]' .github/result.log || grep -Eq '\*+ Error (running|compiling) the test suite' .github/result.log; then \
+			echo "FAILED: $$xspectest"; \
+			echo "---------- result.log"; \
+			cat .github/result.log; \
+			echo "----------"; \
+			[ $$exit_code -ne 0 ] && echo "docker exit code: $$exit_code"; \
+			failures=1; \
+		else \
+			echo "OK: $$xspectest"; \
+		fi; \
 	done; \
 	exit $$failures
 endef
