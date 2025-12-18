@@ -14,17 +14,25 @@ test: build test-sch test-xslt test-coverage
 
 test-sch:
 	@echo "Testing schematron with Docker"
+	@status=0; \
 	for xspectest in $(shell ls tests/schematron/*.xspec); do \
 		echo "$$xspectest" ; \
-		docker compose run --rm xspec -s "$$xspectest" ; \
-	done
+		if ! docker compose run --rm xspec -s "$$xspectest" ; then \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
 
 test-xslt:
 	@echo "Testing xslt with Docker"
+	@status=0; \
 	for xspectest in $(shell ls tests/xslt/*.xspec); do \
 		echo "$$xspectest" ; \
-		docker compose run --rm xspec "$$xspectest" ; \
-	done
+		if ! docker compose run --rm xspec "$$xspectest" ; then \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
 
 test-ci: test-bash test-coverage
 

@@ -16,8 +16,6 @@
   xmlns:schema="http://schema.org"
   xmlns:svcs="http://rdfs.org/sioc/services" stylesheet="../../transforms/cdm_generic.xsl">
 
-  <x:expect label="intentional failure" test!="false()"/>
-
   <!--
   Testing Match Templates in qdcCDMingest.xsl
   -->
