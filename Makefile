@@ -46,31 +46,7 @@ test-bash:
 
 test-coverage:
 	@echo "Test Coverage being generated"
-	@count_total=0; count_exists=0; \
-	for file in transforms/*.xsl; do \
-		count_total=$$((count_total + 1)); \
-		filename=$$(basename $$file); \
-		name=$$(echo "$$filename" | cut -f 1 -d '.'); \
-		if [ -f "tests/xslt/$$name.xspec" ]; then \
-			count_exists=$$((count_exists + 1)); \
-		fi; \
-	done; \
-	for file in validations/*.xsl; do \
-		count_total=$$((count_total + 1)); \
-		filename=$$(basename $$file); \
-		name=$$(echo "$$filename" | cut -f 1 -d '.'); \
-		if [ -f "tests/schematron/$$name.xspec" ]; then \
-			count_exists=$$((count_exists + 1)); \
-		fi; \
-	done; \
-	coverage=$$(awk -v count_exists=$$count_exists -v count_total=$$count_total 'BEGIN { if (count_total == 0) {print 0} else {print (count_exists / count_total) * 100} }'); \
-	if awk -v cov=$$coverage 'BEGIN { exit (cov < 31) ? 0 : 1 }'; then \
-		echo "Test coverage is too low:"; \
-		echo $$coverage; \
-		exit 1; \
-	fi; \
-	echo "Test coverage is good:"; \
-	echo $$coverage
+	bash .github/scripts/coverage.sh
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
