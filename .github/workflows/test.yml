@@ -37,5 +37,8 @@ jobs:
       - name: Install dependencies
         run: pipenv install --dev
 
+      - name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+
       - name: Run tests
-        run: make test-ci
+        run: make test
