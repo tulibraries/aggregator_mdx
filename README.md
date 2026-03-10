@@ -139,10 +139,23 @@ Alternatively, you can run individual unit tests from within Oxygen. See documen
 
 ## CI/CD
 
-[CircleCI](https://circleci.com/gh/tulibraries/aggregator_mdx) manages running CI/CD for this application. It does the following, using the same Docker images we use locally:
-- build the Docker image with the repository files from that commit copied over;
-- run a version of `make test` with a command to fail if `Error running the test suite` or `Error compiling the test suite` appears in the test output.
-- run a coverage check that for every `.sch` file in `validations/` and `.xsl` in `transforms/` has a test file `[same filename].xspec` in `tests/`. CI will fail if this coverage is less than 70%.
+GitHub Actions now runs automated testing for this repository.
+
+Current workflows:
+
+- `Test`
+  - triggers on pushes to branches other than `main`
+  - can also be run manually via `workflow_dispatch`
+  - runs on `ubuntu-latest`
+  - sets up Python `3.12`
+  - installs dependencies with `pipenv install --dev`
+  - sets up Docker Compose
+  - runs `make test`
+- `Workflow Failure Notify`
+  - triggers when the `Test` workflow completes with a failure
+  - calls the shared `tulibraries/.github` Slack notification workflow
+
+GitHub Actions now runs make test, which builds the Docker-based test environment, runs the Schematron and XSLT XSpec suites, and runs the coverage check in .github/scripts/coverage.sh to verify repository test coverage expectations.
 
 ## Deployment
 
