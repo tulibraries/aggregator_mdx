@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+        <identifier>oai:preserve.lehigh.edu:node-40985</identifier>
+        <datestamp>2025-04-02T19:27:34Z</datestamp>
+        <setSpec>node:15</setSpec>
+    </header>
+    <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:identifier>https://preserve.lehigh.edu/digital-special-collections/postcards/university-library-bethlehem-pa</dc:identifier>
+            <dc:identifier>LUPC LUPC0325</dc:identifier>
+            <dc:identifier>postcards_1735</dc:identifier>
+            <dc:title>University Library, Bethlehem, Pa.</dc:title>
+            <dc:coverage>Bethlehem (Pa.)</dc:coverage>
+            <dc:language>English</dc:language>
+            <dc:contributor>Mebane Greeting Card Co., Wilkes-Barre, Pa.</dc:contributor>
+            <dc:format>Picture postcards</dc:format>
+            <dc:publisher>Mebane Greeting Card Co., Wilkes-Barre, Pa.</dc:publisher>
+            <dc:type>Still Image</dc:type>
+            <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+            <dc:subject>Lehigh University</dc:subject>
+            <dc:subject>Linderman Library</dc:subject>
+        </oai_dc:dc>
+    </metadata>
+</record>

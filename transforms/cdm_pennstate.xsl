@@ -39,8 +39,8 @@
             <xsl:call-template name="isShownAt"/>
             <xsl:if test="not(../dcterms:audience[text() = 'true'])">
                 <xsl:call-template name="preview"/>
-                <xsl:call-template name="iiifBase"/>
-                <xsl:call-template name="iiifManifest"/>
+                <xsl:call-template name="iiif"/>
+                
             </xsl:if>
         </xsl:if>
     </xsl:template>

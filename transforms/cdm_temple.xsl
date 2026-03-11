@@ -43,8 +43,7 @@
             <xsl:call-template name="identifier"/>
             <xsl:call-template name="isShownAt"/>
             <xsl:call-template name="preview"/>
-            <xsl:call-template name="iiifBase"/>
-            <xsl:call-template name="iiifManifest"/>
+            <xsl:call-template name="iiif"/>
         </xsl:if>
     </xsl:template> 
     
@@ -110,25 +109,22 @@
     </xsl:template>
     
     <!-- iiifBase -->
-    <xsl:template name="iiifBase">
+    <xsl:template name="iiif">
         <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
+        <xsl:variable name="iiifbaseURL" select='substring-before(substring-after(., "http"),"cdm/ref/")'/>
         <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
         <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
         
         <xsl:element name="svcs:hasService">
-            <xsl:value-of select="$baseURL"/> <xsl:text>digital/iiif/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/>
+            <xsl:text>https</xsl:text><xsl:value-of select="$iiifbaseURL"/> <xsl:text>digital/iiif/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/>
         </xsl:element>
-    </xsl:template>
-    
+        
     <!-- iiifManifest -->
-    <xsl:template name="iiifManifest">
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
-        <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
         
         <xsl:element name="dcterms:isReferencedBy">
-            <xsl:value-of select="$baseURL"/> <xsl:text>iiif/info/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/><xsl:text>/manifest.json</xsl:text>
+            <xsl:text>https</xsl:text><xsl:value-of select="$iiifbaseURL"/> <xsl:text>iiif/info/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/><xsl:text>/manifest.json</xsl:text>
         </xsl:element>
+        
     </xsl:template>  
     
     <!-- Supplemental Type Template for Temple -->

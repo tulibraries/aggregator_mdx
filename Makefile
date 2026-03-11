@@ -2,29 +2,37 @@ DOCKERHUB_PASSWORD := $(subst ",\",$(DOCKERHUB_PASSWORD))
 
 build: down
 	@echo "Building xspec containers, networks, volumes"
-	docker-compose pull
-	docker-compose up --build -d
+	docker compose pull
+	docker compose up --build -d --remove-orphans
 
 saxon: build
 	@echo "Running saxon cli"
-	docker-compose run saxon -s:${s} -xsl:${xsl} -o:${o}
+	docker compose run saxon -s:${s} -xsl:${xsl} -o:${o}
 
 test: build test-sch test-xslt test-coverage
 	@echo "Testing xslt and schematron with Docker"
 
 test-sch:
 	@echo "Testing schematron with Docker"
+	@status=0; \
 	for xspectest in $(shell ls tests/schematron/*.xspec); do \
 		echo "$$xspectest" ; \
-		docker-compose run xspec -s "$$xspectest" ; \
-	done
+		if ! docker compose run --rm xspec -s "$$xspectest" ; then \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
 
 test-xslt:
 	@echo "Testing xslt with Docker"
+	@status=0; \
 	for xspectest in $(shell ls tests/xslt/*.xspec); do \
 		echo "$$xspectest" ; \
-		docker-compose run xspec "$$xspectest" ; \
-	done
+		if ! docker compose run --rm xspec "$$xspectest" ; then \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
 
 test-ci: test-bash test-coverage
 
@@ -42,8 +50,8 @@ test-coverage:
 
 stop:
 	@echo "Stopping xspec containers, networks, volumes"
-	docker-compose stop
+	docker compose stop
 
 down: stop
 	@echo "Killing xspec containers, networks, volumes"
-	docker-compose rm -fv
+	docker compose rm -fv

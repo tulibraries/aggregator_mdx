@@ -67,24 +67,19 @@
     </xsl:template>
     
     <!-- iiifBase -->
-    <xsl:template name="iiifBase">
+    <xsl:template name="iiif">
         <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
+        <xsl:variable name="iiifbaseURL" select='substring-before(substring-after(., "http"),"cdm/ref/")'/>
         <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
         <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
-        
-        <xsl:element name="svcs:hasService">
-            <xsl:value-of select="$baseURL"/> <xsl:text>digital/iiif/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/>
-        </xsl:element>
-    </xsl:template>
+    
+           <xsl:element name="svcs:hasService">
+               <xsl:text>https</xsl:text><xsl:value-of select="$iiifbaseURL"/> <xsl:text>digital/iiif/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/>
+           </xsl:element>
     
     <!-- iiifManifest -->
-    <xsl:template name="iiifManifest">
-        <xsl:variable name="baseURL" select='substring-before(.,"cdm/ref/")'/>
-        <xsl:variable name="itemID" select='substring-after(.,"/id/")'/>
-        <xsl:variable name="colID" select='substring-before(substring-after(.,"collection/"), "/id")'/>
-        
-        <xsl:element name="dcterms:isReferencedBy">
-            <xsl:value-of select="$baseURL"/> <xsl:text>iiif/info/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/><xsl:text>/manifest.json</xsl:text>
-        </xsl:element>
+            <xsl:element name="dcterms:isReferencedBy">
+                <xsl:text>https</xsl:text><xsl:value-of select="$iiifbaseURL"/> <xsl:text>iiif/info/</xsl:text><xsl:value-of select="$colID"/><xsl:text>/</xsl:text><xsl:value-of select="$itemID"/><xsl:text>/manifest.json</xsl:text>
+            </xsl:element>
     </xsl:template>  
 </xsl:stylesheet>

@@ -139,10 +139,24 @@ Alternatively, you can run individual unit tests from within Oxygen. See documen
 
 ## CI/CD
 
-[GitHub Actions](https://github.com/tulibraries/aggregator_mdx/actions/workflows/test.yml) manages CI for this application. The `Test` workflow runs on pushes to branches other than `main` (and on manual dispatch) and:
-- sets up Python with Pipenv and installs dev dependencies;
-- runs `make test-ci`, which builds the Docker test image and executes `.github/scripts/tests.sh` to run all XSpec suites, failing on any compilation or test errors;
-- runs the coverage script to confirm each `.xsl` in `transforms/` and `validations/` has a matching `.xspec` test in `tests/`, failing if coverage drops below 31%.
+[GitHub Actions](https://github.com/tulibraries/aggregator_mdx/actions/workflows/test.yml) runs automated testing for this repository.
+
+Current workflows:
+
+- `Test`
+  - triggers on pushes to branches other than `main`
+  - can also be run manually via `workflow_dispatch`
+  - runs on `ubuntu-latest`
+  - sets up Python `3.12`
+  - installs dependencies with `pipenv install --dev`
+  - sets up Docker Compose
+  - runs `make test`
+- `Workflow Failure Notify`
+  - triggers when the `Test` workflow completes with a failure
+  - calls the shared `tulibraries/.github` Slack notification workflow
+
+GitHub Actions now runs make test, which builds the Docker-based test environment, runs the Schematron and XSLT XSpec suites, and runs the coverage check in .github/scripts/coverage.sh to verify repository test coverage expectations.
+
 
 ## Deployment
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.openarchives.org/OAI/2.0/">
+    <header>
+        <identifier>oai:1133298</identifier>
+        <datestamp>2025-09-11T22:25:32Z</datestamp>
+        <setSpec>32</setSpec>
+    </header>
+    <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:title>Bradford County, Athens, Pa., Streets, Maple Street, 0001A</dc:title>
+            <dc:date>1908-10-26 00:00:00</dc:date>
+            <dc:rights>Commercial use of this image requires permission and may be subject to a fee. &lt;a href="http://www.pastatearchives.com" target="_blank"&gt;Contact Pennsylvania State Archives&lt;/a&gt;</dc:rights>
+            <dc:language>English</dc:language>
+            <dc:relation>MG 213, Postcard Collection, Series 1, County File, ca. 1880-present</dc:relation>
+            <dc:contributor>Pennsylvania State Archives (Provider)</dc:contributor>
+            <dc:contributor>Commissioner of State Police</dc:contributor>
+            <dc:creator>Postcard Collection</dc:creator>
+            <dc:coverage>United States, Pennsylvania, Bradford County</dc:coverage>
+            <dc:publisher>William Erk</dc:publisher>
+            <dc:description>postcard, 5 1/2 in. x 3 1/2 in.; This collection of approximately 29,000 postcards from the 1880s to the 1970s includes images from across the U.S. and all 67 Pennsylvania counties and highlights cities, towns, buildings, local businesses and industries, parks, and scenic and street views. Additional images include business and industry advertising, highways, states, and foreign countries.</dc:description>
+            <dc:identifier>m213_0001_Box009_PostcardCollectionBradfordCounty_0001A.JPG</dc:identifier>
+            <dc:type>image</dc:type>
+            <dc:type>Non-Government Records</dc:type>
+            <dc:format>image/jpeg</dc:format>
+            <dc:format>postcard</dc:format>
+            <dc:subject>Cities and towns</dc:subject>
+            <dc:subject>postcards</dc:subject>
+            <dc:subject>Streets</dc:subject>
+        </oai_dc:dc>
+    </metadata>
+</record>
