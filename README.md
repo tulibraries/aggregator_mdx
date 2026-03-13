@@ -139,7 +139,7 @@ Alternatively, you can run individual unit tests from within Oxygen. See documen
 
 ## CI/CD
 
-GitHub Actions now runs automated testing for this repository.
+[GitHub Actions](https://github.com/tulibraries/aggregator_mdx/actions/workflows/test.yml) runs automated testing for this repository.
 
 Current workflows:
 
@@ -156,6 +156,7 @@ Current workflows:
   - calls the shared `tulibraries/.github` Slack notification workflow
 
 GitHub Actions now runs make test, which builds the Docker-based test environment, runs the Schematron and XSLT XSpec suites, and runs the coverage check in .github/scripts/coverage.sh to verify repository test coverage expectations.
+
 
 ## Deployment
 
