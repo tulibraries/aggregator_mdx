@@ -32,9 +32,13 @@
 
     <!-- POWER photos and docs collecton name lookup -->
     <xsl:param name="powerSetSpecList">
+        <padig:set string="Abington Senior High School - Abingtonian school newspaper">papd_kabsh-ashasn</padig:set>
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - Album of Alexander Marshal Insect Watercolors">papd_adrex-aoamiw</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Historic Trees of the Delaware Valley and Maryland Photographs">papd_adrex-htotdvamp</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - Joseph Leidy Teaching Diagrams">papd_adrex-jltd</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Lucy Say Illustrations">papd_adrex-lsi</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - Richard H. Kern and Edward Meyer Kern Illustrations of the American Southwest">papd_adrex-rhkemkias</padig:set>
         <padig:set string="Albright College - Central Pennsylvania College Photos">papd_cpaphoto</padig:set>
         <padig:set string="Albright College - Evangelical Church Historic Lantern Slides">papd_churchslide</padig:set>
         <padig:set string="Albright College - Myerstown Photos">papd_myrsphoto</padig:set>
@@ -79,6 +83,7 @@
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Centre County Greg Post No. 95 GAR Veteran Books">papd_pcecl-mhmgarp95b</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Centre County School Class Photographs">papd_pcecl-ccscp</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - David Lewis, Counterfeiter and Robber">papd_pcecl-dlcar</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
@@ -111,7 +116,9 @@
         <padig:set string="Chester County History Center - Rebecca Townsend Brown Diary Collection">papd_scchc-rtbdc</padig:set>
         <padig:set string="Chester County History Center - Sheeder Family Account Books and Diaries">papd_scchc-sfabad</padig:set>
         <padig:set string="Chester County History Center - Timothy Kirk Memorandum Book Collection">papd_scchc-tkmbc</padig:set>
+        <padig:set string="Chester County History Center - Thomas S. Bell Diary Collection">papd_scchc-tsbdc</padig:set>
         <padig:set string="Chester County History Center - Walter Finney Diary Collection">papd_scchc-wfdc</padig:set>
+        <padig:set string="Chester County History Center - William Darlington Diary Collection">papd_scchc-wddc</padig:set>
         <padig:set string="Chester County History Center - William Darlington Letterpress Copybook">papd_scchc-wdlc</padig:set>
         <padig:set string="Chester County History Center - William H. Brown Diary Collection">papd_scchc-whbdc</padig:set>
         <padig:set string="Chester County History Center - William Riley Blakeslee Diary Collection">papd_scchc-wrbdc</padig:set>
@@ -130,6 +137,7 @@
         <padig:set string="DeSales University - St. Francis de Sales">papd_adesu-sfdes</padig:set>
         <padig:set string="Elizabethtown College - Anna V. Blough Missionary Letters and Diaries from China">papd_aeliz-lttrs</padig:set>
         <padig:set string="Elizabethtown College - Church of the Brethren Photographs">papd_aeliz-cbpc</padig:set>
+        <padig:set string="Elizabethtown College - Dennis L. Hughes Photographs of the Amish">papd_aeliz-dlhpota</padig:set>
         <padig:set string="Elizabethtown College - Historic Images">papd_aeliz-hi</padig:set>
         <padig:set string="Elizabethtown College - Peace Pamphlets">papd_aeliz-pp</padig:set>
         <padig:set string="Elizabethtown College - Teachers for West Africa Program Images">papd_aeliz-tfwapi</padig:set>
@@ -140,8 +148,11 @@
         <padig:set string="Erie County Public Library - Erie Gazette 1820-1864">papd_percp-egaz</padig:set>
         <padig:set string="Erie County Public Library - Erie Public Library Reports">papd_percp-eplr</padig:set>
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
+        <padig:set string="Free Library of Philadelphia - Joseph E. Coleman Northwest Regional Library - Germantown Community Archives">papd_0002p-jecnrlgca</padig:set>
+        <padig:set string="Free Library of Philadelphia - Joseph E. Coleman Northwest Regional Library - Tieshka Smith Photography Collection">papd_0002p-tspc</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="German Society of Pennsylvania - Deutsche Ansiedelungs-Gesellschaft zu Philadelphia (German Settlement Society of Philadelphia) records">papd_sgsop-daggssr</padig:set>
+        <padig:set string="German Society of Pennsylvania - Die Freie Presse">papd_sgsop-dfp</padig:set>
         <padig:set string="German Society of Pennsylvania - German Society Agentur">papd_sgsop-gsa</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Keppele Records">papd_sgsop-hkr</padig:set>
         <padig:set string="German Society of Pennsylvania - Henry Melchior Muhlenberg Papers, 1771-1786">papd_sgsop-hmmp1771</padig:set>
@@ -171,6 +182,7 @@
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc_266_2_1</padig:set>
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc_266</padig:set>
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc</padig:set>
+        <padig:set string="Kittanning Public Library - Daughters of the American Revolution">papd_pkifl-dar</padig:set>
         <padig:set string="Kittanning Public Library - Kittanning's Natural Disasters">papd_kkifl-knd</padig:set>
         <padig:set string="Knoxville Public Library - Knoxville Pennsylvania 1880-1920">papd_pkvpl-knpe</padig:set>
         <padig:set string="Lancaster Public Library - Local History">papd_placl-lhist</padig:set>
@@ -206,6 +218,7 @@
         <padig:set string="Martinsburg Community Library - George Liebegott Genealogy Index">papd_pmbcl-li</padig:set>
         <padig:set string="Matthews Public Library - Fredericksburg, Pennsylvania Historic Images">papd_plecl-fphi</padig:set>
         <padig:set string="McBride Memorial Library - Berwick High School Yearbooks">papd_pbrpl-bhsyb</padig:set>
+        <padig:set string="Mechanicsburg Area Senior High School - Mechanicsburg Area Senior High School Yearbooks">papd_kmesh-mashsy</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Millgrove Schoolhouse">papd_pmeln-ms</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Day at the 1939 New York World's Fair">papd_pmeln-nd1939nywf</padig:set>
@@ -266,7 +279,9 @@
         <padig:set string="New Castle Public Library - Shenango Area High School Yearbooks">papd_pncpl-sahsy</padig:set>
         <padig:set string="New Castle Public Library - Union Township High School Yearbooks">papd_pncpl-uthsyb</padig:set>
         <padig:set string="New Castle Public Library - Wilmington Area High School Yearbooks">papd_pncpl-wahsy</padig:set>
+        <padig:set string="New Cumberland Public Library - America250 - Bicentennial Collection">papd_pnecp-a250bc</padig:set>
         <padig:set string="New Cumberland Public Library - Around Town">papd_pnecp-at</padig:set>
+        <padig:set string="New Cumberland Public Library – Audiovisual">papd_pnecp-ncpla</padig:set>
         <padig:set string="New Cumberland Public Library - Churches of New Cumberland">papd_pnecp-conc</padig:set>
         <padig:set string="New Cumberland Public Library - Groups and Organizations of New Cumberland">papd_pnecp-gaoonc</padig:set>
         <padig:set string="New Cumberland Public Library - Local News">papd_pnecp-ln</padig:set>
@@ -284,6 +299,7 @@
         <padig:set string="Pennsylvania College of Technology - Williamsport Technical Institute">papd_willtech</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Historical Photographs">papd_spgsl-photo</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Hurricane Agnes Flood Photographs">papd_spgsl-hafp</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - African American Heritage Collection">papd_acacc-aahc</padig:set>        
         <padig:set string="Pennsylvania Highlands Community College - American Association of University Women - Johnstown Branch">papd_acacc-aauwjb</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Bailey Collection">papd_acacc-bailey</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Beaverdale Collection">papd_acacc-bdale</padig:set>
@@ -292,7 +308,8 @@
         <padig:set string="Pennsylvania Highlands Community College - Cambria City Church Project">papd_acacc-cccp</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Civil War 150">papd_acacc-cw</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Co. Immigration Declarations">papd_acacc-ccip</padig:set>
-        <padig:set string="Pennsylvania Highlands Community College - Cambria County Education Collection">papd_acacc-ccec</padig:set>
+        <padig:set string="Pennsylvania Highlands Community College - Cambria County Education Collection">papd_acacc-ccec</padig:set>        
+        <padig:set string="Pennsylvania Highlands Community College - Cambria County Veterans">papd_acacc-ccwmvm</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cambria Memory Project">papd_acacc-memor</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Conemaugh School of Nursing">papd_acacc-cson</padig:set>
         <padig:set string="Pennsylvania Highlands Community College - Cresson Sanatorium">papd_acacc-cs</padig:set>
@@ -323,6 +340,7 @@
         <padig:set string="Peters Township Public Library - Peters Township High School Yearbooks">papd_ppetl-pthsy</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township News 1958-1959">papd_ppetl-ptn1958</padig:set>
         <padig:set string="Peters Township Public Library - Peters Township News Progress 1959-1970">papd_ppetl-ptnp1959</padig:set>
+        <padig:set string="Peters Township Public Library - Preview: A Newsletter for Peters Township, 1983-2009">papd_ppetl-pnfpt1983</padig:set>
         <padig:set string="Peters Township Public Library - The Commerce News 1955-1958">papd_ppetl-tcn1955</padig:set>
         <padig:set string="Pottsville Free Public Library - Schuylkill County History">papd_ppofp-sch</padig:set>
         <padig:set string="Pottsville Free Public Library - Schuylkill County Photographs">papd_ppofp-scp</padig:set>
@@ -355,10 +373,14 @@
         <padig:set string="Scranton Public Library - Nay Aug Amusement Park--The Strohl Collection">papd_pscrl-naap</padig:set>
         <padig:set string="Scranton Public Library - Out of the Wilderness: The Industrialization and Development of the the Scranton Area 1850-1865">papd_pscrl-ootw</padig:set>
         <padig:set string="Scranton Public Library - Scranton Christmas Windows">papd_pscrl-scw</padig:set>
+        <padig:set string="Scranton Public Library - The Metro">papd_pscrl-tm</padig:set>
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
+        <padig:set string="Scranton Public Library - World War II Photos">papd_pscrl-ww2p</padig:set>
         <padig:set string="Sewickley Public Library - Historic Images and Documents">papd_psepl-hiad2</padig:set>
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
         <padig:set string="Sewickley Township Public Library - Sewickley Area High School and Yough High School Yearbooks">papd_pswrc-sahsayhsy</padig:set>
+        <padig:set string="Somerset County Library - Conemaugh Township High School Yearbooks">papd_psocl-cthsy</padig:set>
+        <padig:set string="Somerset County Library - Somerset High School Yearbooks">papd_psocl-shsy</padig:set>
         <padig:set string="Springside Chestnut Hill Academy - The Wissahickon Magazine Collection 1903-1931">papd_kspsl-wmc1903</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="Summerville Public Library - Summerville Story Project">papd_psupl-sp</padig:set>
@@ -379,9 +401,11 @@
         <padig:set string="Ulysses Library Association - Phil Bennett Collection">papd_pulpl-pbc</padig:set>
         <padig:set string="Ulysses Library Association - Ulysses History">papd_pulpl-uh</padig:set>
         <padig:set string="Uniontown Public Library - Fayette County Iron Works Records">papd_punpl-fciwr</padig:set>
+        <padig:set string="Uniontown Public Library - Old Home Week August 26 to 31, 1912 Uniontown Pennsylvania Official Program">papd_punpl-ohw1912</padig:set>
         <padig:set string="Uniontown Public Library - Photos of Fayette County, PA">papd_punpl-pofcp</padig:set>
         <padig:set string="Unionville High School - Unionville High School Scrapbooks">papd_kuvhs-uhss</padig:set>
-        <padig:set string="Unionville High School - Unionville High School Yearbooks">papd_kuvhs-uhsy</padig:set>
+        <padig:set string="Unionville High School - Unionville High School Yearbooks">papd_kuvhs-uhsy</padig:set>        
+        <padig:set string="Unionville High School - Unionville Post">papd_kuvhs-up</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Anne E. Sanford Missionary Collection">papd_aulsp-ihoraes</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: the Lutheran Deaconess Movement in the United States">papd_aulsp-ihorldm</padig:set>
         <padig:set string="United Lutheran Seminary Philadelphia - In Her Own Right: Women's Missionary Societies of the Lutheran Church">papd_aulsp-ihorwmslc</padig:set>
