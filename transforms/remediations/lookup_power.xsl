@@ -83,7 +83,7 @@
         <padig:set string="Centre County Library and Historical Museum - Bellefonte Governors' Papers">papd_pcecl-bgp</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Centre County Greg Post No. 95 GAR Veteran Books">papd_pcecl-mhmgarp95b</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Centre County School Class Photographs">papd_pcecl-ccscp</padig:set>
-        <padig:set string="Centre County Library &amp; Historical Museum - David Lewis, Counterfeiter and Robber">papd_pcecl-dlcar</padig:set>
+        <padig:set string="Centre County Library and Historical Museum - David Lewis, Counterfeiter and Robber">papd_pcecl-dlcar</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn Photo Album">papd_pcecl-jblpa</padig:set>
         <padig:set string="Centre County Library and Historical Museum - John Blair Linn's Trip to the Gettysburg Battlefield">papd_pcecl-jbltttgb</padig:set>
         <padig:set string="Centre County Library and Historical Museum - Keller Letters">papd_pcecl-kl</padig:set>
