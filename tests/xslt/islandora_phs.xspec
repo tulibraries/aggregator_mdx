@@ -56,6 +56,33 @@
         <x:expect label="hard coded hub name" test="oai_dc:dc/edm:provider = 'PA Digital'"/>
     </x:scenario>
 
+    <!-- Rights and rights URI -->
+    <x:scenario label="rights URI embedded in plain text maps to edm:rights, text maps to dcterms:rights">
+      <x:context href="../../fixtures/islandora_phs.xml"/>
+      <x:expect label="URI maps to edm:rights"
+        test="oai_dc:dc/edm:rights = 'http://rightsstatements.org/vocab/InC-NC/1.0/'"/>
+      <x:expect label="remaining text maps to dcterms:rights"
+        test="oai_dc:dc/dcterms:rights = 'IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED'"/>
+    </x:scenario>
+    
+    <x:scenario label="rights text only with no URI maps to dcterms:rights">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:rights>All rights reserved; contact repository for reuse</dc:rights>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="text maps to dcterms:rights"
+        test="oai_dc:dc/dcterms:rights = 'All rights reserved; contact repository for reuse'"/>
+      <x:expect label="no edm:rights"
+        test="not(oai_dc:dc/edm:rights)"/>
+    </x:scenario>
+
 <!-- Generic crosswalk checks -->
     <!-- Title -->
     <x:scenario label="dc:title processing">

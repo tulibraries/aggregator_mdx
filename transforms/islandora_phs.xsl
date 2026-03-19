@@ -37,6 +37,36 @@
         </xsl:element>
     </xsl:template>
     
+    <!-- Rights and Rights URI -->
+    <xsl:template match="dc:rights" priority="1">
+        <xsl:variable name="rights" select="replace(replace(replace(replace(normalize-space(.),'&amp;amp;','&amp;'),'&lt;p&gt;',''),'&lt;/p&gt;',''),'&lt;[^&gt;]+&gt;','')"/>
+        
+        <xsl:if test="normalize-space($rights)!=''">
+            <xsl:variable name="rightsURI">
+                <xsl:analyze-string select="$rights"
+                    regex="https?://rightsstatements\.org/vocab/[^\s]+|https?://creativecommons\.org/[^\s]+">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="."/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:variable>
+            <xsl:variable name="rightsText"
+                select="normalize-space(replace(replace($rights,
+                'https?://rightsstatements\.org/vocab/[^\s]+|https?://creativecommons\.org/[^\s]+',''),
+                '(^[\s;,]+|[\s;,]+$)',''))"/>
+            
+            <xsl:if test="normalize-space($rightsURI)!=''">
+                <xsl:element name="edm:rights">
+                    <xsl:value-of select="normalize-space($rightsURI)"/>
+                </xsl:element>
+            </xsl:if>
+            <xsl:if test="$rightsText!=''">
+                <xsl:element name="dcterms:rights">
+                    <xsl:value-of select="$rightsText"/>
+                </xsl:element>
+            </xsl:if>
+        </xsl:if>
+    </xsl:template>
     
     <!-- templates -->
 
