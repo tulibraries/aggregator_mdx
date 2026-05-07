@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    xmlns:mods="http://www.loc.gov/mods/v3"
+    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:padig="http://padigital.org/ns"
+    stylesheet="../../transforms/alma_drexelcom.xsl">
+    
+    <!-- Title -->
+    <x:scenario label="mods:titleInfo maps to dcterms:title">
+        
+        <x:scenario label="simple title maps from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="title value is correct"
+                test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother'"/>
+        </x:scenario>
+        
+        <x:scenario label="title with nonSort prepends nonSort value">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:titleInfo>
+                                <mods:nonSort>The</mods:nonSort>
+                                <mods:title>Mary Bruins to dear Mother</mods:title>
+                            </mods:titleInfo>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="nonSort is prepended with space to title"
+                test="oai_dc:dc/dcterms:title = 'The Mary Bruins to dear Mother'"/>
+        </x:scenario>
+        
+        <x:scenario label="title with subTitle appends subtitle with colon">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:titleInfo>
+                                <mods:title>Mary Bruins to dear Mother</mods:title>
+                                <mods:subTitle>a subtitle</mods:subTitle>
+                            </mods:titleInfo>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="subtitle is appended with colon and space"
+                test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother: a subtitle'"/>
+        </x:scenario>
+        
+        <x:scenario label="title with partNumber appends part number">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:titleInfo>
+                                <mods:title>Mary Bruins to dear Mother</mods:title>
+                                <mods:partNumber>Part 1</mods:partNumber>
+                            </mods:titleInfo>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="partNumber is appended with period and space"
+                test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother. Part 1'"/>
+        </x:scenario>
+        
+        <x:scenario label="title with partName appends part name">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:titleInfo>
+                                <mods:title>Mary Bruins to dear Mother</mods:title>
+                                <mods:partName>Introduction</mods:partName>
+                            </mods:titleInfo>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="partName is appended with period and space"
+                test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother. Introduction'"/>
+        </x:scenario>
+    </x:scenario>
+    
+    <!-- Creator/Contributor -->
+    <x:scenario label="mods:name maps to dcterms:creator or dcterms:contributor">
+        
+        <x:scenario label="author by roleTerm text maps to dcterms:creator from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="creator value is correct"
+                test="oai_dc:dc/dcterms:creator = 'Allison, Mary Bruins, 1903-'"/>
+        </x:scenario>
+        
+        <x:scenario label="roleTerm code 'cre' maps to dcterms:creator">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:name>
+                                <mods:namePart type="family">Smith</mods:namePart>
+                                <mods:namePart type="given">Elliott</mods:namePart>
+                                <mods:role>
+                                    <mods:roleTerm type="code">cre</mods:roleTerm>
+                                </mods:role>
+                            </mods:name>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to dcterms:creator"
+                test="oai_dc:dc/dcterms:creator = 'Smith, Elliott'"/>
+        </x:scenario>
+        
+        <x:scenario label="roleTerm code 'aut' maps to dcterms:creator">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:name>
+                                <mods:namePart type="family">Smith</mods:namePart>
+                                <mods:namePart type="given">Elliott</mods:namePart>
+                                <mods:role>
+                                    <mods:roleTerm type="code">aut</mods:roleTerm>
+                                </mods:role>
+                            </mods:name>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to dcterms:creator"
+                test="oai_dc:dc/dcterms:creator = 'Smith, Elliott'"/>
+        </x:scenario>
+        
+        <x:scenario label="non-author role maps to dcterms:contributor">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:name>
+                                <mods:namePart type="family">Gordon</mods:namePart>
+                                <mods:namePart type="given">Kim</mods:namePart>
+                                <mods:role>
+                                    <mods:roleTerm type="text">Editor</mods:roleTerm>
+                                </mods:role>
+                            </mods:name>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to dcterms:contributor"
+                test="oai_dc:dc/dcterms:contributor = 'Gordon, Kim'"/>
+            <x:expect label="does not map to dcterms:creator"
+                test="not(oai_dc:dc/dcterms:creator)"/>
+        </x:scenario>
+        
+        <x:scenario label="untyped namePart maps as corporate name">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:name>
+                                <mods:namePart>Lollapalooza</mods:namePart>
+                                <mods:role>
+                                    <mods:roleTerm type="text">Creator</mods:roleTerm>
+                                </mods:role>
+                            </mods:name>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="untyped namePart maps to dcterms:creator"
+                test="oai_dc:dc/dcterms:creator = 'Lollapalooza'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Subject -->
+    <x:scenario label="mods:subject children map to various fields">
+        
+        <x:scenario label="mods:topic maps to dcterms:subject from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="first topic maps correctly"
+                test="oai_dc:dc/dcterms:subject = 'Women in missionary work'"/>
+            <x:expect label="second topic maps correctly"
+                test="oai_dc:dc/dcterms:subject = 'Missionary Work and Public Health'"/>
+        </x:scenario>
+        
+        <x:scenario label="mods:subject/mods:genre maps to dcterms:format from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="genre maps to dcterms:format"
+                test="oai_dc:dc/dcterms:format = 'correspondence'"/>
+        </x:scenario>
+        
+        <x:scenario label="multiple mods:topic values join with double dash">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:subject>
+                                <mods:topic>Grunge music</mods:topic>
+                                <mods:topic>Philadelphia</mods:topic>
+                            </mods:subject>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="topics are joined with double dash"
+                test="oai_dc:dc/dcterms:subject = 'Grunge music--Philadelphia'"/>
+        </x:scenario>
+        
+        <x:scenario label="mods:geographic maps to dcterms:spatial">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:subject>
+                                <mods:geographic>Philadelphia</mods:geographic>
+                            </mods:subject>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="geographic maps to dcterms:spatial"
+                test="oai_dc:dc/dcterms:spatial = 'Philadelphia'"/>
+        </x:scenario>
+        
+        <x:scenario label="mods:temporal maps to dcterms:subject">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:subject>
+                                <mods:temporal>1990s</mods:temporal>
+                            </mods:subject>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="temporal maps to dcterms:subject"
+                test="oai_dc:dc/dcterms:subject = '1990s'"/>
+        </x:scenario>
+        
+        <x:scenario label="mods:subject/mods:titleInfo maps to dcterms:subject">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:subject>
+                                <mods:titleInfo>
+                                    <mods:title>Everybody Loves Our Town: An Oral History of Grunge</mods:title>
+                                </mods:titleInfo>
+                            </mods:subject>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="titleInfo maps to dcterms:subject"
+                test="oai_dc:dc/dcterms:subject = 'Everybody Loves Our Town: An Oral History of Grunge'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Description -->
+    <x:scenario label="mods:abstract maps to dcterms:description">
+        
+        <x:scenario label="abstract maps from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="abstract value is correct"
+                test='oai_dc:dc/dcterms:description = "Letter from Mary B. Allison, medical missionary in Kuwait. Allison graduated from Woman&apos;s Medical College of Pennsylvania in 1932."'/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Date -->
+    <x:scenario label="mods:dateCreated maps to dcterms:date">
+        
+        <x:scenario label="single date maps from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="date value is correct"
+                test="oai_dc:dc/dcterms:date = '1936-07-19'"/>
+        </x:scenario>
+        
+        <x:scenario label="start and end date maps as range to dcterms:date">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:originInfo>
+                                <mods:dateCreated point="start">1985</mods:dateCreated>
+                                <mods:dateCreated point="end">1995</mods:dateCreated>
+                            </mods:originInfo>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="date range is joined with hyphen"
+                test="oai_dc:dc/dcterms:date = '1985-1995'"/>
+        </x:scenario>
+        
+        <x:scenario label="empty date does not map">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:originInfo>
+                                <mods:dateCreated></mods:dateCreated>
+                            </mods:originInfo>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="no dcterms:date in output"
+                test="not(oai_dc:dc/dcterms:date)"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Format -->
+    <x:scenario label="mods:genre maps to dcterms:format">
+        
+        <x:scenario label="genre maps to dcterms:format">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:genre>photographs</mods:genre>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="genre maps to dcterms:format"
+                test="oai_dc:dc/dcterms:format = 'photographs'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Type -->
+    <x:scenario label="mods:typeOfResource maps to dcterms:type">
+        
+        <x:scenario label="unmatched typeOfResource in fixture does not produce dcterms:type">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="mixed material produces no dcterms:type"
+                test="not(oai_dc:dc/dcterms:type)"/>
+        </x:scenario>
+        
+        <x:scenario label="still image maps to StillImage">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:typeOfResource>still image</mods:typeOfResource>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to StillImage"
+                test="oai_dc:dc/dcterms:type = 'StillImage'"/>
+        </x:scenario>
+        
+        <x:scenario label="text maps to Text">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:typeOfResource>text</mods:typeOfResource>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to Text"
+                test="oai_dc:dc/dcterms:type = 'Text'"/>
+        </x:scenario>
+        
+        <x:scenario label="moving image maps to MovingImage">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:typeOfResource>moving image</mods:typeOfResource>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to MovingImage"
+                test="oai_dc:dc/dcterms:type = 'MovingImage'"/>
+        </x:scenario>
+        
+        <x:scenario label="sound recording maps to Sound">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:typeOfResource>sound recording</mods:typeOfResource>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="maps to Sound"
+                test="oai_dc:dc/dcterms:type = 'Sound'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Extent -->
+    <x:scenario label="mods:physicalDescription maps to dcterms:extent">
+        
+        <x:scenario label="extent maps from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="first extent maps correctly"
+                test="oai_dc:dc/dcterms:extent = '13X21 cm'"/>
+            <x:expect label="second extent maps correctly"
+                test="oai_dc:dc/dcterms:extent = '7 pages'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Language -->
+    <x:scenario label="mods:language maps to dcterms:language">
+        
+        <x:scenario label="languageTerm text maps to dcterms:language">
+            <x:context>
+                <record>
+                    <metadata>
+                        <mods:mods>
+                            <mods:language>
+                                <mods:languageTerm type="code">eng</mods:languageTerm>
+                                <mods:languageTerm type="text">English</mods:languageTerm>
+                            </mods:language>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="text languageTerm maps correctly"
+                test="oai_dc:dc/dcterms:language = 'English'"/>
+            <x:expect label="code languageTerm does not map"
+                test="not(oai_dc:dc/dcterms:language = 'eng')"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Relation -->
+    <x:scenario label="mods:relatedItem maps to dcterms:relation or dcterms:isPartOf">
+        
+        <x:scenario label="relatedItem host without displayLabel maps to dcterms:relation from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="relation value is correct"
+                test="oai_dc:dc/dcterms:relation = 'Mary Bruins Allison, M.D. papers'"/>
+        </x:scenario>
+        
+        <x:scenario label="relatedItem host with displayLabel maps to dcterms:isPartOf from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="isPartOf value is correct"
+                test="oai_dc:dc/dcterms:isPartOf = 'Mary Bruins Allison papers, 1934-1956'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Rights -->
+    <x:scenario label="mods:accessCondition maps to dcterms:rights">
+        
+        <x:scenario label="accessCondition maps from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="rights value is correct"
+                test="oai_dc:dc/dcterms:rights = 'Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Additionally, the reproduction of some materials may be restricted by privacy and publicity rights, licensing or trademarks. Responsibility for any use rests exclusively with the user. Please contact us at CoM_Archives@drexel.edu or 215-991-8340.'"/>
+        </x:scenario>
+        
+    </x:scenario>
+    
+    <!-- Aggregation fields -->
+    <x:scenario label="mods:location maps to aggregation fields">
+        
+        <x:scenario label="discovery URL is generated with MMS ID and maps to edm:isShownAt from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="isShownAt is Primo permalink with MMS ID"
+                test="oai_dc:dc/edm:isShownAt = 'https://drexel.primo.exlibrisgroup.com/permalink/01DRXU_INST/ajqfok/alma991014993574204721'"/>
+        </x:scenario>
+        
+        <x:scenario label="thumbnail URL is generated with MMS ID and maps to edm:preview from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="preview URL is correct"
+                test="oai_dc:dc/edm:preview = 'https://drexel.primo.exlibrisgroup.com/view/delivery/thumbnail/01DRXU_INST/991014993574204721'"/>
+        </x:scenario>
+        
+        <x:scenario label="IIIF manifest URL is generated with record ID from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="isReferencedBy URL is correct"
+                test="oai_dc:dc/dcterms:isReferencedBy = 'https://drexel.alma.exlibrisgroup.com/view/iiif/presentation/01DRXU_INST/12340650630004721/manifest'"/>
+        </x:scenario>
+        
+        <x:scenario label="raw object URLs are filtered out">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="only one edm:isShownAt is produced"
+                test="count(oai_dc:dc/edm:isShownAt) = 1"/>
+        </x:scenario>
+        
+        <x:scenario label="relative URLs are filtered out">
+            <x:context>
+                <record>
+                    <header>
+                        <identifier>oai:alma.01DRXU_INST:991014993574204721</identifier>
+                    </header>
+                    <metadata>
+                        <mods:mods>
+                            <mods:location>
+                                <mods:url>lca_1581_OBJ_1.tiff</mods:url>
+                            </mods:location>
+                        </mods:mods>
+                    </metadata>
+                </record>
+            </x:context>
+            <x:expect label="relative URLs do not map"
+                test="not(oai_dc:dc/edm:isShownAt)"/>
+        </x:scenario>
+        
+        <x:scenario label="isPartOf is generated from relatedItem with displayLabel from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="isPartOf value is correct"
+                test="oai_dc:dc/dcterms:isPartOf = 'Mary Bruins Allison papers, 1934-1956'"/>
+        </x:scenario>
+        
+        <x:scenario label="edm:provider is PA Digital">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="provider value is correct"
+                test="oai_dc:dc/edm:provider = 'PA Digital'"/>
+        </x:scenario>
+        
+    </x:scenario>
+</x:description>
