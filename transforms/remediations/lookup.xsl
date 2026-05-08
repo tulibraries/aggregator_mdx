@@ -212,9 +212,6 @@
         <padig:set string="University of Pittsburgh Johnstown">pitt_collection.192</padig:set>
         <padig:set string="University Times">pitt_collection.325</padig:set>
 
-        <!-- Drexel College of Med Legacy Center -->
-        
-
         <!-- Franklin and Marshall -->
         <padig:set string="Alumni Magazine Collection">scholars-square_hist--alumni-mag-collection</padig:set>
         <padig:set string="Archives Film Collection">scholars-square_hist--film</padig:set>
