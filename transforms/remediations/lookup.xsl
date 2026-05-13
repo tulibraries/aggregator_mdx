@@ -47,6 +47,7 @@
         <padig:url string="Curtis Institute of Music" code="CURTIS">http://cdm16667.contentdm.oclc.org/</padig:url>
         <padig:url string="Documenting Pitt" code="DOCPITT">https://documenting.pitt.edu/</padig:url>
         <padig:url string="Documenting Pitt" code="DOCPITT">http://documenting.pitt.edu/</padig:url>
+        <padig:url string="Drexel College of Medicine Legacy Center Archives" code="DCMLCA">https://drexel.alma.exlibrisgroup.com/</padig:url>
         <padig:url string="Franklin and Marshall College" code="FANDM">https://digital.fandm.edu/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">http://www.cppdigitallibrary.org/</padig:url>
         <padig:url string="Historical Medical Library of The College of Physicians of Philadelphia" code="CPP">https://www.cppdigitallibrary.org/</padig:url>
@@ -463,6 +464,7 @@
         <padig:set string="Aya">collection:AYA</padig:set>
         <padig:set string="College Archives Image Collection">collection:College+Archives+Image+Collection</padig:set>
         <padig:set string="Commencement Programs">collection:Commencement+Programs</padig:set>
+        <padig:set string="Dīvān-i Jāmī">collection:D%C4%ABv%C4%81n-i+J%C4%81m%C4%AB</padig:set>
         <padig:set string="General Eisenhower at Lafayette: Founders' Day 1946">collection:General+Eisenhower+at+Lafayette%3A+Founders%27+Day+1946</padig:set>
         <padig:set string="Gerald And Rella Warner Dutch East Indies Negatives">collection:Gerald+and+Rella+Warner+Dutch+East+Indies+Negatives</padig:set>
         <padig:set string="Gerald And Rella Warner Japan Slides">collection:Gerald+and+Rella+Warner+Japan+Slides</padig:set>
