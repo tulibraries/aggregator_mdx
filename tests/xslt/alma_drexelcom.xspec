@@ -8,6 +8,26 @@
     xmlns:padig="http://padigital.org/ns"
     stylesheet="../../transforms/alma_drexelcom.xsl">
     
+    
+    <!-- Match root oai:collection in source metadata -->
+    <x:scenario label="oai:collection wrapper is traversed">
+        <x:context>
+            <oai:collection>
+                <oai:record>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:titleInfo>
+                                <mods:title>In Bloom</mods:title>
+                            </mods:titleInfo>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </oai:collection>
+        </x:context>
+        <x:expect label="record inside wrapper is transformed"
+            test="oai_dc:dc/dcterms:title = 'In Bloom'"/>
+    </x:scenario>
+    
     <!-- Title -->
     <x:scenario label="mods:titleInfo maps to dcterms:title">
         
@@ -19,16 +39,16 @@
         
         <x:scenario label="title with nonSort prepends nonSort value">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:titleInfo>
                                 <mods:nonSort>The</mods:nonSort>
                                 <mods:title>Mary Bruins to dear Mother</mods:title>
                             </mods:titleInfo>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="nonSort is prepended with space to title"
                 test="oai_dc:dc/dcterms:title = 'The Mary Bruins to dear Mother'"/>
@@ -36,16 +56,16 @@
         
         <x:scenario label="title with subTitle appends subtitle with colon">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:titleInfo>
                                 <mods:title>Mary Bruins to dear Mother</mods:title>
                                 <mods:subTitle>a subtitle</mods:subTitle>
                             </mods:titleInfo>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="subtitle is appended with colon and space"
                 test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother: a subtitle'"/>
@@ -53,16 +73,16 @@
         
         <x:scenario label="title with partNumber appends part number">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:titleInfo>
                                 <mods:title>Mary Bruins to dear Mother</mods:title>
                                 <mods:partNumber>Part 1</mods:partNumber>
                             </mods:titleInfo>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="partNumber is appended with period and space"
                 test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother. Part 1'"/>
@@ -70,16 +90,16 @@
         
         <x:scenario label="title with partName appends part name">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:titleInfo>
                                 <mods:title>Mary Bruins to dear Mother</mods:title>
                                 <mods:partName>Introduction</mods:partName>
                             </mods:titleInfo>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="partName is appended with period and space"
                 test="oai_dc:dc/dcterms:title = 'Mary Bruins to dear Mother. Introduction'"/>
@@ -97,8 +117,8 @@
         
         <x:scenario label="roleTerm code 'cre' maps to dcterms:creator">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:name>
                                 <mods:namePart type="family">Smith</mods:namePart>
@@ -108,8 +128,8 @@
                                 </mods:role>
                             </mods:name>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to dcterms:creator"
                 test="oai_dc:dc/dcterms:creator = 'Smith, Elliott'"/>
@@ -117,8 +137,8 @@
         
         <x:scenario label="roleTerm code 'aut' maps to dcterms:creator">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:name>
                                 <mods:namePart type="family">Smith</mods:namePart>
@@ -128,8 +148,8 @@
                                 </mods:role>
                             </mods:name>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to dcterms:creator"
                 test="oai_dc:dc/dcterms:creator = 'Smith, Elliott'"/>
@@ -137,8 +157,8 @@
         
         <x:scenario label="non-author role maps to dcterms:contributor">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:name>
                                 <mods:namePart type="family">Gordon</mods:namePart>
@@ -148,8 +168,8 @@
                                 </mods:role>
                             </mods:name>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to dcterms:contributor"
                 test="oai_dc:dc/dcterms:contributor = 'Gordon, Kim'"/>
@@ -159,8 +179,8 @@
         
         <x:scenario label="untyped namePart maps as corporate name">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:name>
                                 <mods:namePart>Lollapalooza</mods:namePart>
@@ -169,8 +189,8 @@
                                 </mods:role>
                             </mods:name>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="untyped namePart maps to dcterms:creator"
                 test="oai_dc:dc/dcterms:creator = 'Lollapalooza'"/>
@@ -197,16 +217,16 @@
         
         <x:scenario label="multiple mods:topic values join with double dash">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:subject>
                                 <mods:topic>Grunge music</mods:topic>
                                 <mods:topic>Philadelphia</mods:topic>
                             </mods:subject>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="topics are joined with double dash"
                 test="oai_dc:dc/dcterms:subject = 'Grunge music--Philadelphia'"/>
@@ -214,15 +234,15 @@
         
         <x:scenario label="mods:geographic maps to dcterms:spatial">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:subject>
                                 <mods:geographic>Philadelphia</mods:geographic>
                             </mods:subject>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="geographic maps to dcterms:spatial"
                 test="oai_dc:dc/dcterms:spatial = 'Philadelphia'"/>
@@ -230,15 +250,15 @@
         
         <x:scenario label="mods:temporal maps to dcterms:subject">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:subject>
                                 <mods:temporal>1990s</mods:temporal>
                             </mods:subject>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="temporal maps to dcterms:subject"
                 test="oai_dc:dc/dcterms:subject = '1990s'"/>
@@ -246,8 +266,8 @@
         
         <x:scenario label="mods:subject/mods:titleInfo maps to dcterms:subject">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:subject>
                                 <mods:titleInfo>
@@ -255,8 +275,8 @@
                                 </mods:titleInfo>
                             </mods:subject>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="titleInfo maps to dcterms:subject"
                 test="oai_dc:dc/dcterms:subject = 'Everybody Loves Our Town: An Oral History of Grunge'"/>
@@ -286,16 +306,16 @@
         
         <x:scenario label="start and end date maps as range to dcterms:date">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:originInfo>
                                 <mods:dateCreated point="start">1985</mods:dateCreated>
                                 <mods:dateCreated point="end">1995</mods:dateCreated>
                             </mods:originInfo>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="date range is joined with hyphen"
                 test="oai_dc:dc/dcterms:date = '1985-1995'"/>
@@ -303,15 +323,15 @@
         
         <x:scenario label="empty date does not map">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:originInfo>
                                 <mods:dateCreated></mods:dateCreated>
                             </mods:originInfo>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="no dcterms:date in output"
                 test="not(oai_dc:dc/dcterms:date)"/>
@@ -324,13 +344,13 @@
         
         <x:scenario label="genre maps to dcterms:format">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:genre>photographs</mods:genre>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="genre maps to dcterms:format"
                 test="oai_dc:dc/dcterms:format = 'photographs'"/>
@@ -349,13 +369,13 @@
         
         <x:scenario label="still image maps to StillImage">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:typeOfResource>still image</mods:typeOfResource>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to StillImage"
                 test="oai_dc:dc/dcterms:type = 'StillImage'"/>
@@ -363,13 +383,13 @@
         
         <x:scenario label="text maps to Text">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:typeOfResource>text</mods:typeOfResource>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to Text"
                 test="oai_dc:dc/dcterms:type = 'Text'"/>
@@ -377,13 +397,13 @@
         
         <x:scenario label="moving image maps to MovingImage">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:typeOfResource>moving image</mods:typeOfResource>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to MovingImage"
                 test="oai_dc:dc/dcterms:type = 'MovingImage'"/>
@@ -391,13 +411,13 @@
         
         <x:scenario label="sound recording maps to Sound">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:typeOfResource>sound recording</mods:typeOfResource>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="maps to Sound"
                 test="oai_dc:dc/dcterms:type = 'Sound'"/>
@@ -423,16 +443,16 @@
         
         <x:scenario label="languageTerm text maps to dcterms:language">
             <x:context>
-                <record>
-                    <metadata>
+                <oai:record>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:language>
                                 <mods:languageTerm type="code">eng</mods:languageTerm>
                                 <mods:languageTerm type="text">English</mods:languageTerm>
                             </mods:language>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="text languageTerm maps correctly"
                 test="oai_dc:dc/dcterms:language = 'English'"/>
@@ -473,6 +493,18 @@
     <!-- Aggregation fields -->
     <x:scenario label="mods:location maps to aggregation fields">
         
+        <x:scenario label="PA Dig identifier is generated from lookup and MMS ID and maps to dcterms:identifier from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="identifier is correct"
+                test="oai_dc:dc/dcterms:identifier = 'padig:DCMLCA-991014993574204721'"/>
+        </x:scenario>
+        
+        <x:scenario label="data provider name is generated from lookup and maps to edm:dataProvider from fixture">
+            <x:context href="../../fixtures/alma_drexelcom.xml"/>
+            <x:expect label="data provider name is correct"
+                test="oai_dc:dc/edm:dataProvider = 'Drexel College of Medicine Legacy Center Archives'"/>
+        </x:scenario>
+        
         <x:scenario label="discovery URL is generated with MMS ID and maps to edm:isShownAt from fixture">
             <x:context href="../../fixtures/alma_drexelcom.xml"/>
             <x:expect label="isShownAt is Primo permalink with MMS ID"
@@ -499,18 +531,18 @@
         
         <x:scenario label="relative URLs are filtered out">
             <x:context>
-                <record>
-                    <header>
+                <oai:record>
+                    <oai:header>
                         <identifier>oai:alma.01DRXU_INST:991014993574204721</identifier>
-                    </header>
-                    <metadata>
+                    </oai:header>
+                    <oai:metadata>
                         <mods:mods>
                             <mods:location>
                                 <mods:url>lca_1581_OBJ_1.tiff</mods:url>
                             </mods:location>
                         </mods:mods>
-                    </metadata>
-                </record>
+                    </oai:metadata>
+                </oai:record>
             </x:context>
             <x:expect label="relative URLs do not map"
                 test="not(oai_dc:dc/edm:isShownAt)"/>
