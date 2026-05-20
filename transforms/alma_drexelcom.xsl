@@ -4,6 +4,7 @@
 	xmlns:mods="http://www.loc.gov/mods/v3" exclude-result-prefixes="mods"
 	xmlns:padig="http://padigital.org/ns"
 	xmlns:edm="http://www.europeana.eu/schemas/edm/"
+	xmlns:oai="http://www.openarchives.org/OAI/2.0/"
 	xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'
 	version="2.0">
 	<xsl:output omit-xml-declaration="no" method="xml" encoding="UTF-8" indent="yes"/>
@@ -12,7 +13,7 @@
 	<!-- PA Digital-ized version of LC's crosswalk: https://www.loc.gov/standards/mods/v3/MODS3-8_DC_XSLT2-0.xsl -->
 	<xsl:include href="remediations/lookup.xsl"/>
 	
-	<xsl:template match="record | metadata">
+	<xsl:template match="oai:collection | oai:record | oai:metadata">
 		<xsl:apply-templates/>
 	</xsl:template>
 	
@@ -20,7 +21,7 @@
 	<xsl:template match="*"/>
 	
 	<!-- make the record -->
-	<xsl:template match="//record/metadata/mods:mods">
+	<xsl:template match="//oai:record/oai:metadata/mods:mods">
 		<oai_dc:dc>
 			<xsl:apply-templates/>
 			<edm:provider>PA Digital</edm:provider>
@@ -32,7 +33,7 @@
 	<xsl:template match="mods:location">
 		
 		<!-- grab mmsID and digital collection name from elsewhere -->
-		<xsl:variable name="mmsID"    select="tokenize(ancestor::record/header/identifier, ':')[last()]"/>
+		<xsl:variable name="mmsID"    select="tokenize(ancestor::oai:record/oai:header/oai:identifier, ':')[last()]"/>
 		<xsl:variable name="isPartOf" select="../mods:relatedItem[@type='host' and @displayLabel!='']//mods:titleInfo/mods:title"/>
 		
 		<xsl:for-each select="mods:url[not(@access) and starts-with(., 'http')]">
