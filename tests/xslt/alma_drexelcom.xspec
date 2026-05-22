@@ -554,6 +554,35 @@
                 test="oai_dc:dc/dcterms:isPartOf = 'Mary Bruins Allison papers, 1934-1956'"/>
         </x:scenario>
         
+        <x:scenario label="isPartOf is generated from multiple relatedItem/displayLabel values and joined with semicolon">
+            <x:context>
+                <oai:record>
+                    <oai:header>
+                        <oai:identifier>oai:alma.01DRXU_INST:991014993574204721</oai:identifier>
+                    </oai:header>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:location>
+                                <mods:url>https://drexel.alma.exlibrisgroup.com/discovery/delivery/01DRXU_INST:01DRXU/12340650630004721</mods:url>
+                            </mods:location>
+                            <mods:relatedItem type="host" displayLabel="Rock Papers">
+                                <mods:titleInfo>
+                                    <mods:title>Rock Papers</mods:title>
+                                </mods:titleInfo>
+                            </mods:relatedItem>
+                            <mods:relatedItem type="host" displayLabel="Scissors">
+                                <mods:titleInfo>
+                                    <mods:title>Scissors</mods:title>
+                                </mods:titleInfo>
+                            </mods:relatedItem>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="isPartOf values are joined with semicolon"
+                test="oai_dc:dc/dcterms:isPartOf = 'Rock Papers ; Scissors'"/>
+        </x:scenario>
+        
         <x:scenario label="edm:provider is PA Digital">
             <x:context href="../../fixtures/alma_drexelcom.xml"/>
             <x:expect label="provider value is correct"
