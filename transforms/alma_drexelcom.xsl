@@ -51,9 +51,9 @@
 			</edm:preview>
 			
 			<!-- digital collection name -->
-			<xsl:if test="normalize-space($isPartOf) != ''">
+			<xsl:if test="$isPartOf != ''">
 				<dcterms:isPartOf>
-					<xsl:value-of select="$isPartOf"/>
+					<xsl:value-of select="string-join($isPartOf, ' ; ')"/>
 				</dcterms:isPartOf>
 			</xsl:if>
 			
