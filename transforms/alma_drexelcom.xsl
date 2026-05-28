@@ -21,21 +21,26 @@
 	<xsl:template match="*"/>
 	
 	<!-- make the record -->
+	<!-- map isPartOf, provider -->
 	<xsl:template match="//oai:record/oai:metadata/mods:mods">
 		<oai_dc:dc>
 			<xsl:apply-templates/>
+			<xsl:for-each select="distinct-values(mods:relatedItem[@type='host' and normalize-space(@displayLabel)!='']//mods:titleInfo/mods:title)">
+				<dcterms:isPartOf>
+					<xsl:value-of select="."/>
+				</dcterms:isPartOf>
+			</xsl:for-each>
 			<edm:provider>PA Digital</edm:provider>
 		</oai_dc:dc>
 	</xsl:template>
 	
-	<!-- put stuff in the record -->
-	<!-- aggregation fields: isShownAt, preview, isPartOf, iiif manifest, identifier, dataProvider -->
+	<!-- aggregation fields: isShownAt, preview, iiif manifest, identifier, dataProvider -->
 	<xsl:template match="mods:location">
 		
-		<!-- grab mmsID and digital collection name from elsewhere -->
+		<!-- grab mmsID from header-->
 		<xsl:variable name="mmsID"    select="tokenize(ancestor::oai:record/oai:header/oai:identifier, ':')[last()]"/>
-		<xsl:variable name="isPartOf" select="../mods:relatedItem[@type='host' and @displayLabel!='']//mods:titleInfo/mods:title"/>
 		
+		<!-- grab baseURL and recordID (note: recordID is different from mmsID) -->
 		<xsl:for-each select="mods:url[not(@access) and starts-with(., 'http')]">
 			<xsl:variable name="baseURL"  select="substring-before(., 'discovery/')"/>
 			<xsl:variable name="recordID"  select="tokenize(., '/')[last()]"/>
@@ -49,13 +54,6 @@
 			<edm:preview>
 				<xsl:value-of select="concat('https://drexel.primo.exlibrisgroup.com/view/delivery/thumbnail/01DRXU_INST/', $mmsID)"/>
 			</edm:preview>
-			
-			<!-- digital collection name -->
-			<xsl:if test="$isPartOf != ''">
-				<dcterms:isPartOf>
-					<xsl:value-of select="string-join($isPartOf, ' ; ')"/>
-				</dcterms:isPartOf>
-			</xsl:if>
 			
 			<!-- IIIF manifest -->
 			<dcterms:isReferencedBy>
@@ -71,16 +69,18 @@
 			<edm:dataProvider>
 				<xsl:value-of select="$oaiUrl/padig:url[. = $baseURL]/@string"/>
 			</edm:dataProvider>
-		</xsl:for-each>
+		</xsl:for-each>		
 	</xsl:template>
 	
 	<!-- mapped fields -->
+	<!-- title -->
 	<xsl:template match="mods:titleInfo">
 		<dcterms:title>
 			<xsl:call-template name="titleString"/>
 		</dcterms:title>
 	</xsl:template>
 	
+	<!-- creator/contributor -->
 	<xsl:template match="mods:name">
 		<xsl:choose>
 			<xsl:when test="mods:role/mods:roleTerm[@type='code']='cre' or
@@ -99,6 +99,7 @@
 		</xsl:choose>
 	</xsl:template>
 	
+	<!-- subject, format, spatial -->
 	<xsl:template match="mods:subject">
 		<xsl:if test="mods:topic | mods:occupation | mods:name">
 			<dcterms:subject>
@@ -141,12 +142,14 @@
 		</xsl:if>
 	</xsl:template>
 
+	<!-- description -->
 	<xsl:template match="mods:abstract">
 		<dcterms:description>
 			<xsl:value-of select="."/>
 		</dcterms:description>
 	</xsl:template>
 
+	<!-- publisher -->
 	<xsl:template match="mods:originInfo">
 		<!-- if dates with start and end exist in dates  -->
 		<xsl:apply-templates select="*[@point='start']"/>
@@ -163,6 +166,7 @@
 		</xsl:for-each>
 	</xsl:template>
 	
+	<!-- date -->
 	<xsl:template match="mods:dateCreated">
 		<xsl:if test="normalize-space(.) != ''">
 			<dcterms:date>
@@ -184,13 +188,14 @@
 		</xsl:if>
 	</xsl:template>
 	
+	<!-- format pt. 2 -->
 	<xsl:template match="mods:genre">
 		<dcterms:format>
 			<xsl:value-of select="."/>
 		</dcterms:format>
 	</xsl:template>
 
-	<!-- DCMI type matching -->
+	<!-- type with DCMI matching -->
 	<xsl:template match="mods:typeOfResource">
 		<xsl:if test="@collection='yes'">
 			<dcterms:type>Collection</dcterms:type>
@@ -230,6 +235,7 @@
 		</xsl:if>
 	</xsl:template>
 
+	<!-- extent -->
 	<xsl:template match="mods:physicalDescription">
 		<xsl:for-each select="mods:extent">
 			<dcterms:extent>
@@ -238,19 +244,37 @@
 		</xsl:for-each>
 	</xsl:template>
 
+	<!-- language -->
+	<!-- map 'code' value if no type='text' -->
 	<xsl:template match="mods:language">
-		<dcterms:language>
-			<xsl:value-of select="mods:languageTerm[@type='text']"/>
-		</dcterms:language>
+		<xsl:choose>
+			<xsl:when test="mods:languageTerm[@type='text']">
+				<xsl:if test="normalize-space(mods:languageTerm[@type='text']) != ''">
+					<dcterms:language>
+						<xsl:value-of select="mods:languageTerm[@type='text']"/>
+					</dcterms:language>
+				</xsl:if>
+			</xsl:when>
+			<xsl:when test="mods:languageTerm[@type='code']">
+				<xsl:if test="normalize-space(mods:languageTerm[@type='code']) != ''">
+					<dcterms:language>
+						<xsl:value-of select="mods:languageTerm[@type='code']"/>
+					</dcterms:language>
+				</xsl:if>
+			</xsl:when>
+			<xsl:otherwise/>
+		</xsl:choose>
 	</xsl:template>
 
-	<!-- map related collection only to relation -->
+	<!-- relation -->
+	<!-- map related collection name only -->
 	<xsl:template match="mods:relatedItem[@type='host' and not(normalize-space(@displayLabel))]">
 		<dcterms:relation>
 			<xsl:value-of select="mods:titleInfo/mods:title"/>
 		</dcterms:relation>
 	</xsl:template>
 
+	<!-- rights (no URIs in metadata) -->
 	<xsl:template match="mods:accessCondition">
 		<dcterms:rights>
 			<xsl:value-of select="."/>
