@@ -249,18 +249,22 @@
 	<xsl:template match="mods:language">
 		<xsl:choose>
 			<xsl:when test="mods:languageTerm[@type='text']">
-				<xsl:if test="normalize-space(mods:languageTerm[@type='text']) != ''">
-					<dcterms:language>
-						<xsl:value-of select="mods:languageTerm[@type='text']"/>
-					</dcterms:language>
-				</xsl:if>
+				<xsl:for-each select="mods:languageTerm[@type='text']">
+					<xsl:if test="normalize-space(.) != ''">
+						<dcterms:language>
+							<xsl:value-of select="."/>
+						</dcterms:language>
+					</xsl:if>
+				</xsl:for-each>
 			</xsl:when>
 			<xsl:when test="mods:languageTerm[@type='code']">
-				<xsl:if test="normalize-space(mods:languageTerm[@type='code']) != ''">
-					<dcterms:language>
-						<xsl:value-of select="mods:languageTerm[@type='code']"/>
-					</dcterms:language>
-				</xsl:if>
+				<xsl:for-each select="mods:languageTerm[@type='code']">
+					<xsl:if test="normalize-space(.) != ''">
+						<dcterms:language>
+							<xsl:value-of select="."/>
+						</dcterms:language>
+					</xsl:if>
+				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise/>
 		</xsl:choose>
