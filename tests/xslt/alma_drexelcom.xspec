@@ -456,8 +456,56 @@
             </x:context>
             <x:expect label="text languageTerm maps correctly"
                 test="oai_dc:dc/dcterms:language = 'English'"/>
-            <x:expect label="code languageTerm does not map"
+            <x:expect label="code languageTerm does not map when text is present"
                 test="not(oai_dc:dc/dcterms:language = 'eng')"/>
+        </x:scenario>
+        
+        <x:scenario label="languageTerm code maps to dcterms:language if no languageTerm text present">
+            <x:context>
+                <oai:record>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:language>
+                                <mods:languageTerm type="code">eng</mods:languageTerm>
+                            </mods:language>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="code languageTerm maps correctly"
+                test="oai_dc:dc/dcterms:language = 'eng'"/>
+        </x:scenario>
+        
+        <x:scenario label="empty text languageTerm does not map">
+            <x:context>
+                <oai:record>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:language>
+                                <mods:languageTerm type="text"/>
+                            </mods:language>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="no language element mapped"
+                test="not(oai_dc:dc/dcterms:language)"/>
+        </x:scenario>
+        
+        <x:scenario label="empty code languageTerm does not map">
+            <x:context>
+                <oai:record>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:language>
+                                <mods:languageTerm type="code"/>
+                            </mods:language>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="no language element mapped"
+                test="not(oai_dc:dc/dcterms:language)"/>
         </x:scenario>
         
     </x:scenario>
@@ -471,10 +519,52 @@
                 test="oai_dc:dc/dcterms:relation = 'Mary Bruins Allison, M.D. papers'"/>
         </x:scenario>
         
+    <!-- isPartOf -->
         <x:scenario label="relatedItem host with displayLabel maps to dcterms:isPartOf from fixture">
             <x:context href="../../fixtures/alma_drexelcom.xml"/>
             <x:expect label="isPartOf value is correct"
                 test="oai_dc:dc/dcterms:isPartOf = 'Mary Bruins Allison papers, 1934-1956'"/>
+        </x:scenario>
+        
+        <x:scenario label="isPartOf is generated from multiple relatedItem/displayLabel values, dedupes, and maps to individual fields">
+            <x:context>
+                <oai:record>
+                    <oai:header>
+                        <oai:identifier>oai:alma.01DRXU_INST:991014993574204721</oai:identifier>
+                    </oai:header>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:location>
+                                <mods:url>https://drexel.alma.exlibrisgroup.com/discovery/delivery/01DRXU_INST:01DRXU/12340650630004721</mods:url>
+                            </mods:location>
+                            <mods:relatedItem type="host" displayLabel="In Her Own Right_ Women asserting their civil rights, 1820-1920">
+                                <mods:titleInfo>
+                                    <mods:title>In Her Own Right_ Women asserting their civil rights, 1820-1920</mods:title>
+                                </mods:titleInfo>
+                                <mods:identifier type="uri">alma:01DRXU_INST/81340139740004721</mods:identifier>
+                            </mods:relatedItem>
+                            <mods:relatedItem type="host" displayLabel="Laura Heath Hills scrapbook">
+                                <mods:titleInfo>
+                                    <mods:title>Laura Heath Hills scrapbook</mods:title>
+                                </mods:titleInfo>
+                                <mods:identifier type="uri">alma:01DRXU_INST/81340139540004721</mods:identifier>
+                            </mods:relatedItem>
+                            <mods:relatedItem type="host" displayLabel="Laura Heath Hills scrapbook">
+                                <mods:titleInfo>
+                                    <mods:title>Laura Heath Hills scrapbook</mods:title>
+                                </mods:titleInfo>
+                                <mods:identifier type="uri">alma:01DRXU_INST/81551040550004721</mods:identifier>
+                            </mods:relatedItem>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="isPartOf maps to individual elements and dedups"
+                test="oai_dc:dc/dcterms:isPartOf[1] = 'In Her Own Right_ Women asserting their civil rights, 1820-1920'"/>
+            <x:expect label="Laura Heath Hills scrapbook appears only once"
+                test="oai_dc:dc/dcterms:isPartOf[2] = 'Laura Heath Hills scrapbook'"/>
+            <x:expect label="second isPartOf value is not duplicated"
+                test="count(oai_dc:dc/dcterms:isPartOf) = 2"/>
         </x:scenario>
         
     </x:scenario>
@@ -533,7 +623,7 @@
             <x:context>
                 <oai:record>
                     <oai:header>
-                        <identifier>oai:alma.01DRXU_INST:991014993574204721</identifier>
+                        <oai:identifier>oai:alma.01DRXU_INST:991014993574204721</oai:identifier>
                     </oai:header>
                     <oai:metadata>
                         <mods:mods>
@@ -546,41 +636,6 @@
             </x:context>
             <x:expect label="relative URLs do not map"
                 test="not(oai_dc:dc/edm:isShownAt)"/>
-        </x:scenario>
-        
-        <x:scenario label="isPartOf is generated from relatedItem with displayLabel from fixture">
-            <x:context href="../../fixtures/alma_drexelcom.xml"/>
-            <x:expect label="isPartOf value is correct"
-                test="oai_dc:dc/dcterms:isPartOf = 'Mary Bruins Allison papers, 1934-1956'"/>
-        </x:scenario>
-        
-        <x:scenario label="isPartOf is generated from multiple relatedItem/displayLabel values and joined with semicolon">
-            <x:context>
-                <oai:record>
-                    <oai:header>
-                        <oai:identifier>oai:alma.01DRXU_INST:991014993574204721</oai:identifier>
-                    </oai:header>
-                    <oai:metadata>
-                        <mods:mods>
-                            <mods:location>
-                                <mods:url>https://drexel.alma.exlibrisgroup.com/discovery/delivery/01DRXU_INST:01DRXU/12340650630004721</mods:url>
-                            </mods:location>
-                            <mods:relatedItem type="host" displayLabel="Rock Papers">
-                                <mods:titleInfo>
-                                    <mods:title>Rock Papers</mods:title>
-                                </mods:titleInfo>
-                            </mods:relatedItem>
-                            <mods:relatedItem type="host" displayLabel="Scissors">
-                                <mods:titleInfo>
-                                    <mods:title>Scissors</mods:title>
-                                </mods:titleInfo>
-                            </mods:relatedItem>
-                        </mods:mods>
-                    </oai:metadata>
-                </oai:record>
-            </x:context>
-            <x:expect label="isPartOf values are joined with semicolon"
-                test="oai_dc:dc/dcterms:isPartOf = 'Rock Papers ; Scissors'"/>
         </x:scenario>
         
         <x:scenario label="edm:provider is PA Digital">
