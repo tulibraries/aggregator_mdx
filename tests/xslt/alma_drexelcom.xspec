@@ -508,6 +508,48 @@
                 test="not(oai_dc:dc/dcterms:language)"/>
         </x:scenario>
         
+        <x:scenario label="multiple text languageTerm values each map to dcterms:language">
+            <x:context>
+                <oai:record>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:language>
+                                <mods:languageTerm type="text">English</mods:languageTerm>
+                                <mods:languageTerm type="text">Spanish</mods:languageTerm>
+                            </mods:language>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="first language maps correctly"
+                test="oai_dc:dc/dcterms:language[1] = 'English'"/>
+            <x:expect label="second language maps correctly"
+                test="oai_dc:dc/dcterms:language[2] = 'Spanish'"/>
+            <x:expect label="two language elements produced"
+                test="count(oai_dc:dc/dcterms:language) = 2"/>
+        </x:scenario>
+        
+        <x:scenario label="multiple code languageTerm values each map to dcterms:language">
+            <x:context>
+                <oai:record>
+                    <oai:metadata>
+                        <mods:mods>
+                            <mods:language>
+                                <mods:languageTerm type="code">eng</mods:languageTerm>
+                                <mods:languageTerm type="code">spa</mods:languageTerm>
+                            </mods:language>
+                        </mods:mods>
+                    </oai:metadata>
+                </oai:record>
+            </x:context>
+            <x:expect label="first code maps correctly"
+                test="oai_dc:dc/dcterms:language[1] = 'eng'"/>
+            <x:expect label="second code maps correctly"
+                test="oai_dc:dc/dcterms:language[2] = 'spa'"/>
+            <x:expect label="two language elements produced"
+                test="count(oai_dc:dc/dcterms:language) = 2"/>
+        </x:scenario>
+        
     </x:scenario>
     
     <!-- Relation -->
