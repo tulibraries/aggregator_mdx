@@ -15,12 +15,15 @@
             <dc:coverage>Bethlehem (Pa.)</dc:coverage>
             <dc:language>English</dc:language>
             <dc:contributor>Mebane Greeting Card Co., Wilkes-Barre, Pa.</dc:contributor>
+            <dc:format>5 1/2"" x 3 1/2""</dc:format>
             <dc:format>Picture postcards</dc:format>
+            <dc:format>moving image</dc:format>
             <dc:publisher>Mebane Greeting Card Co., Wilkes-Barre, Pa.</dc:publisher>
             <dc:type>Still Image</dc:type>
             <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
             <dc:subject>Lehigh University</dc:subject>
             <dc:subject>Linderman Library</dc:subject>
+            <dc:identifier.thumbnail>https://preserve.lehigh.edu/sites/default/files/derivatives/thumbnail/40985.png</dc:identifier.thumbnail>
         </oai_dc:dc>
     </metadata>
 </record>

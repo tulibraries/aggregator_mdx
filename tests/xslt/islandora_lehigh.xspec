@@ -78,11 +78,63 @@
     </x:scenario>
   </x:scenario>
 
-  <!-- Type and Format (map/parse, normalize, and delimit) -->
-  <x:scenario label="dc:format present">
-    <x:context href="../../fixtures/islandora_lehigh.xml"/>
-    <x:expect label="dc:format becomes dcterms:format" test="oai_dc:dc/dcterms:title = 'University Library, Bethlehem, Pa.'" />
+  <!-- Type, Format, Extent (map/parse, normalize, and delimit) -->
+  <x:scenario label="dc:format maps to dcterms:type, dcterms:format, or dcterms:extent">
+    
+    <x:scenario label="from fixture, all mapped elements map correctly">
+      <x:context href="../../fixtures/islandora_lehigh.xml"/>
+      <x:expect label="DCMI type value maps to dcterms:type" test="oai_dc:dc/dcterms:type = 'Moving Image'"/>
+      <x:expect label="Allowed format terms maps to dcterms:format" test="oai_dc:dc/dcterms:format = 'Picture postcards'"/>
+      <x:expect label="Values not DCMI type or format term map to dcterms:extent" test="oai_dc:dc/dcterms:extent = '5 1/2&quot;&quot; x 3 1/2&quot;&quot;'"/>
+    </x:scenario>
+    
+    <x:scenario label="Allowed format terms map to dcterms:format">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:format>postcard</dc:format>
+              <dc:format>postcards</dc:format>
+              <dc:format>Stereograph</dc:format>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="all three map to dcterms:format"
+        test="count(oai_dc:dc/dcterms:format) = 3
+        and oai_dc:dc/dcterms:format[1] = 'postcard'
+        and oai_dc:dc/dcterms:format[2] = 'postcards'
+        and oai_dc:dc/dcterms:format[3] = 'Stereograph'"/>
+    </x:scenario>
+    
+    <x:scenario label="semicolon-delimited values are split and mapped individually">
+      <x:context>
+        <oai:record>
+          <metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <dc:format>Picture postcards;5 1/2" x 3 1/2";still image</dc:format>
+            </oai_dc:dc>
+          </metadata>
+        </oai:record>
+      </x:context>
+      <x:expect label="Allowed format term maps to dcterms:format, DCMI type value maps to dcterms:type, all other values map to dcterms:extent">
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <dcterms:format>Picture postcards</dcterms:format>
+          <dcterms:extent>5 1/2" x 3 1/2"</dcterms:extent>
+          <dcterms:type>Still Image</dcterms:type>
+          <edm:provider>PA Digital</edm:provider>
+        </oai_dc:dc>
+      </x:expect>
+    </x:scenario>
   </x:scenario>
+  
   <x:scenario label="dc:type values are matched, remediated, and delimited for known strings">
     <x:scenario label="Delimiting, remediating, and parsing">
       <x:context>
@@ -996,4 +1048,12 @@
     <x:context href="../../fixtures/islandora_lehigh.xml"/>
     <x:expect label="first identifier creates dataProvider, isShownAt, and identifier" test="oai_dc:dc/edm:dataProvider = 'Lehigh University' and oai_dc:dc/dcterms:identifier = 'padig:LEHIGH-postcards_university-library-bethlehem-pa' and oai_dc:dc/edm:isShownAt = 'https://preserve.lehigh.edu/digital-special-collections/postcards/university-library-bethlehem-pa'"/>
   </x:scenario>
+  
+  <!-- thumbnail map -->
+  <x:scenario label="dc:identifier.thumbnail maps to edm:preview">
+    <x:context href="../../fixtures/islandora_lehigh.xml"/>
+    <x:expect label="thumbnail URL becomes edm:preview"
+      test="oai_dc:dc/edm:preview = 'https://preserve.lehigh.edu/sites/default/files/derivatives/thumbnail/40985.png'"/>
+  </x:scenario>
+  
 </x:description>
