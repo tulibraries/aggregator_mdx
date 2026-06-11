@@ -25,29 +25,90 @@
         <xsl:call-template name="isPartOf"/>
     </xsl:template>
     
-    <!-- preview 
+    <!-- preview -->
     <xsl:template match="dc:identifier.thumbnail">
         <xsl:call-template name="preview"/>
     </xsl:template>
-    -->
     
     <!-- isShownAt -->
     <xsl:template match="dc:identifier[position() = 1]">
         <xsl:call-template name="identifier"/>
     </xsl:template>
     
-    <!-- map format to type (values in dc:format reflect original format rather than digital) -->
+    <!-- format mapping: DCMI terms to dcterms:type, formatTerms to dcterms:format, otherwise to dcterms:extent -->
+    
+    <xsl:variable name="formatTerms" select="('Picture postcards', 'postcard', 'postcards', 'Stereograph')"/>
+    
     <xsl:template match="dc:format" priority="1">
-        <xsl:if test="normalize-space(.)!=''">
-            <xsl:call-template name="type_template">
-                <xsl:with-param name="strings" select="replace(normalize-space(.),'&amp;amp;','&amp;')"/>
+    
+        <xsl:if test="normalize-space(.) != ''">
+            <xsl:call-template name="format">
+                <xsl:with-param name="strings" select="normalize-space(replace(., '&amp;amp;', '&amp;'))"/>
                 <xsl:with-param name="delimiter" select="';'"/>
             </xsl:call-template>
-        </xsl:if>    
+        </xsl:if>
     </xsl:template>
     
     <!-- templates -->
 
+    <!-- format -->
+    <xsl:template name='format'>
+        <xsl:param name="strings"/>
+        <xsl:param name="delimiter"/>
+    
+        <xsl:variable name="formatValue">
+            <xsl:choose>
+                <xsl:when test="contains($strings, $delimiter)">
+                    <xsl:value-of select="normalize-space(substring-before($strings, $delimiter))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="normalize-space($strings)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        
+        <xsl:if test="$formatValue != ''">
+            <xsl:choose>
+                <xsl:when test="matches($formatValue, '(^text.*$)', 'i')">
+                    <dcterms:type>Text</dcterms:type>
+                </xsl:when>
+                <xsl:when test="matches($formatValue, '(^image.*$)', 'i')">
+                    <dcterms:type>Image</dcterms:type>
+                </xsl:when>
+                <xsl:when test="matches($formatValue, '^(movingimage.*$|moving\simage.*$)', 'i')">
+                    <dcterms:type>Moving Image</dcterms:type>
+                </xsl:when>
+                <xsl:when test="matches($formatValue, '^(sound.*$)', 'i')">
+                    <dcterms:type>Sound</dcterms:type>
+                </xsl:when>
+                <xsl:when test="matches($formatValue, '^(physicalobject.*$|physical\sobject.*$)', 'i')">
+                    <dcterms:type>Physical Object</dcterms:type>
+                </xsl:when>
+                <xsl:when test="matches($formatValue, '^(interactiveresource.*$|interactive\sresource.*$)', 'i')">
+                    <dcterms:type>Interactive Resource</dcterms:type>
+                </xsl:when>
+                <xsl:when test="matches($formatValue, '^(stillimage.*$|still\simage.*$)', 'i')">
+                    <dcterms:type>Still Image</dcterms:type>
+                </xsl:when>
+                <xsl:when test="$formatValue = $formatTerms">
+                    <dcterms:format><xsl:value-of select = "$formatValue"/></dcterms:format>
+                </xsl:when>
+                <xsl:otherwise>
+                    <dcterms:extent><xsl:value-of select="$formatValue"/></dcterms:extent>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:if>
+        
+        <!-- recurse on remaining format values -->
+        <xsl:if test="contains($strings, $delimiter)">
+            <xsl:call-template name="format">
+                <xsl:with-param name="strings" select="normalize-space(substring-after($strings, $delimiter))"/>
+                <xsl:with-param name="delimiter" select="$delimiter"/>
+            </xsl:call-template>
+        </xsl:if>
+        
+    </xsl:template>
+    
     <!-- isPartOf -->
     <xsl:template name="isPartOf">
         <xsl:if test="normalize-space(lower-case(.))">
