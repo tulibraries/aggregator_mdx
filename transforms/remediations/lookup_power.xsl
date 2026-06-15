@@ -35,6 +35,8 @@
         <padig:set string="Abington Senior High School - Abingtonian school newspaper">papd_kabsh-ashasn</padig:set>
         <padig:set string="Abington Township Public Library - Abington High School Yearbooks">papd_paflp-ahsyc</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Album of Alexander Marshal Insect Watercolors">papd_adrex-aoamiw</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - American Entomological Society Correspondence">papd_adrex-aesc</padig:set>
+        <padig:set string="Academy of Natural Sciences of Drexel University - Benjamin Waterhouse Hawkins Album">papd_adrex-bwha</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Historic Trees of the Delaware Valley and Maryland Photographs">papd_adrex-htotdvamp</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Joseph Leidy Teaching Diagrams">papd_adrex-jltd</padig:set>
         <padig:set string="Academy of Natural Sciences of Drexel University - Lucy Say Illustrations">papd_adrex-lsi</padig:set>
@@ -52,6 +54,7 @@
         <padig:set string="Altoona Area Public Library - Blair County Oral Histories">papd_palap-bcoh</padig:set>
         <padig:set string="Altoona Area Public Library - History Photographs">papd_palap-hp</padig:set>
         <padig:set string="Altoona Area Public Library - The Great Flood of 1977">papd_palap-gf1977</padig:set>
+        <padig:set string="Andrew Carnegie Free Library &amp; Music Hall - Carnegie Union newspaper, 1888-1941">papd_pacfl-cun</padig:set>
         <padig:set string="Battle of Homestead Foundation - Charles McCollester Collection">papd_sbhfa-cmc</padig:set>
         <padig:set string="Battle of Homestead Foundation - Mark Fallon Collection">papd_sbhfa-mfc</padig:set>
         <padig:set string="Battle of Homestead Foundation - Mike Stout Collection">papd_sbhfa-msc</padig:set>
@@ -61,6 +64,7 @@
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Newspaper Clippings Aliquippa Area">papd_pbfja-sncaa</padig:set>
         <padig:set string="Benjamin Franklin Jones Memorial Library - Selected Photographs Aliquippa Area">papd_pbfja-spaa</padig:set>
         <padig:set string="Bernville Area Community Library - Tulpehocken High School Yearbooks">papd_pbeac-thsy</padig:set>
+        <padig:set string="Bishop McDevitt High School - Bishop McDevitt High School Yearbooks">papd_kbmch-bmhsy</padig:set>
         <padig:set string="Boyertown Area Senior High School - Boyertown School News">papd_kboyh-bsn</padig:set>
         <padig:set string="Braddock Carnegie Library Association - Braddock Area Year Books">papd_pbcal-bayb</padig:set>
         <padig:set string="Byzantine Catholic Seminary Library - Eastern Christian Liturgical Music">papd_abyzc-eclm</padig:set>
@@ -125,8 +129,10 @@
         <padig:set string="Chester County History Center - William W. Heed Diary Collection">papd_scchc-wwhdc</padig:set>
         <padig:set string="Chester County History Center - Women's Suffrage and Civil Rights Collection">papd_scchc-wsacrc</padig:set>
         <padig:set string="Chester County Library &amp; District - Northern Chester County Historic Photographs">papd_pcccl-ncchp</padig:set>
+        <padig:set string="Citizens Library - Italian Heritage Collection - Washington, PA">papd_pcili-ihcwpa</padig:set>
         <padig:set string="Clarion Free Library - Mary Hamilton Holiday Cards">papd_pclfl-mhhc</padig:set>
         <padig:set string="Clarion Free Library - World War I">papd_pclfl-wwi</padig:set>
+        <padig:set string="Clearfield County Public Library - Curwensville High School Echos">papd_pclcp-chse</padig:set>
         <padig:set string="College of Physicians of Philadelphia - Colonial Formularies">papd_cppmss</padig:set>
         <padig:set string="Conshohocken Free Library - Conshohocken Town Council Minutes">papd_pcofl-mtc1</padig:set>
         <padig:set string="Conshohocken Free Library - The Recorder Newspaper 1879-1964">papd_pcofl-creco</padig:set>
@@ -184,7 +190,7 @@
         <padig:set string="Kiski School - Digital Archive">papd_kthks-tksc</padig:set>
         <padig:set string="Kittanning Public Library - Daughters of the American Revolution">papd_pkifl-dar</padig:set>
         <padig:set string="Kittanning Public Library - Kittanning's Natural Disasters">papd_kkifl-knd</padig:set>
-        <padig:set string="Knoxville Public Library - Knoxville Pennsylvania 1880-1920">papd_pkvpl-knpe</padig:set>
+        <padig:set string="Knoxville Public Library - Knoxville Pennsylvania 1880-1920">papd_pkvpl-knpe</padig:set>
         <padig:set string="Lancaster Public Library - Local History">papd_placl-lhist</padig:set>
         <padig:set string="Lancaster Public Library - Yearbooks">papd_placl-ybook</padig:set>
         <padig:set string="LancasterHistory - City Directories 1843-1900">papd_slchs-cd01</padig:set>
@@ -200,6 +206,7 @@
         <padig:set string="Ligonier Valley Library - Ligonier Valley Library Yearbook Collection">papd_plivl-lvlyc</padig:set>
         <padig:set string="Lock Haven University - 1877-2008">papd_alhupviscro</padig:set>
         <padig:set string="Lock Haven University - Wrestling Program">papd_alhupwrest</padig:set>
+        <padig:set string="Lower Merion Library System - Ardmore Library - Ardmore Community Archives">papd_parfl-alaca</padig:set>
         <padig:set string="Lycoming College - Alumni Magazine of Lycoming College">papd_alycc-almag</padig:set>
         <padig:set string="Lycoming College - Historical Documents">papd_aalyc-hdocs2</padig:set>
         <padig:set string="Lycoming College - Lycoming College Campus - Past and Present">papd_lyc-5</padig:set>
@@ -221,8 +228,11 @@
         <padig:set string="Mechanicsburg Area Senior High School - Mechanicsburg Area Senior High School Yearbooks">papd_kmesh-mashsy</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Millgrove Schoolhouse">papd_pmeln-ms</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Bicentennial 1940">papd_pmeln-mlnnb</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Day at the 1939 New York World's Fair">papd_pmeln-nd1939nywf</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Hall">papd_pmeln-mlnnh</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - The 1976 Bicentennial in Nazareth, PA">papd_pmeln-mlnusbi</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - The N.H.S. Chronicle">papd_pmeln-nhsc</padig:set>
         <padig:set string="Mengle Memorial Library - The Punxsutawney Spirit Newspaper">papd_pmeml-psprt</padig:set>
         <padig:set string="Meyersdale Public Library - 1998 Southern Somerset County Tornadoes Oral Histories">papd_pmeye-1998ssctoh</padig:set>
@@ -281,7 +291,7 @@
         <padig:set string="New Castle Public Library - Wilmington Area High School Yearbooks">papd_pncpl-wahsy</padig:set>
         <padig:set string="New Cumberland Public Library - America250 - Bicentennial Collection">papd_pnecp-a250bc</padig:set>
         <padig:set string="New Cumberland Public Library - Around Town">papd_pnecp-at</padig:set>
-        <padig:set string="New Cumberland Public Library – Audiovisual">papd_pnecp-ncpla</padig:set>
+        <padig:set string="New Cumberland Public Library - Audiovisual">papd_pnecp-ncpla</padig:set>
         <padig:set string="New Cumberland Public Library - Churches of New Cumberland">papd_pnecp-conc</padig:set>
         <padig:set string="New Cumberland Public Library - Groups and Organizations of New Cumberland">papd_pnecp-gaoonc</padig:set>
         <padig:set string="New Cumberland Public Library - Local News">papd_pnecp-ln</padig:set>
@@ -295,6 +305,7 @@
         <padig:set string="New Cumberland Public Library - William D. Bailey 1863 Civil War Diary">papd_pnecp-wdb1862</padig:set>
         <padig:set string="Old Economy Village - Archives">papd_solev-arch</padig:set>
         <padig:set string="Osterhout Free Library - Wilkes-Barre Sunday Independent Newspaper 1915-1958">papd_wbsunind</padig:set>
+        <padig:set string="Oxford Area High School - Yearbooks">papd_koxah-oahsy</padig:set>
         <padig:set string="Pennsylvania College of Technology - Williamsport Area Community College - 1960s">papd_apact-wacc1960</padig:set>
         <padig:set string="Pennsylvania College of Technology - Williamsport Technical Institute">papd_willtech</padig:set>
         <padig:set string="Pennsylvania Geological Survey - Historical Photographs">papd_spgsl-photo</padig:set>
@@ -354,13 +365,16 @@
         <padig:set string="Saint Francis University - Student Newspapers 1927-2006">papd_astfr-ysnmc</padig:set>
         <padig:set string="Saint Francis University Yearbooks 1942-2016">papd_astfr-yearbks</padig:set>
         <padig:set string="Saint Joseph's University - Beltran Kropp Papers">papd_astju-bkp</padig:set>
+        <padig:set string="Saint Joseph's University - Marvin Samson Museum for the History of Pharmacy - Philadelphia College of Pharmacy Alumni Certificates">papd_astju-pcopac</padig:set>
         <padig:set string="Saint Joseph's University - Marvin Samson Museum for the History of Pharmacy - Philadelphia College of Pharmacy History">papd_astju-mschppcph</padig:set>
-        <padig:set string="Saint Joseph's University - Marvin Samson Museum for the History of Pharmacy – Philadelphiana">papd_astju-msmfthopp</padig:set>
+        <padig:set string="Saint Joseph's University - Marvin Samson Museum for the History of Pharmacy - Philadelphiana">papd_astju-msmfthopp</padig:set>
+        <padig:set string="Saint Joseph's University - Saint Joseph's University Yearbooks - PA College of Health Sciences">papd_astju-sjuy</padig:set>
         <padig:set string="Saint Joseph's University - The Hawk">papd_astju-hawk1931</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Amos A. Yeakel Civil War Diary">papd_sslhc-aaycwd</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Rosina Heydrich's Midwifery Manual and Ledger, 1770-1819">papd_sslch-sdsa</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - Schwenkfelder Library &amp; Heritage Center Cased Images Collection">papd_sslhc-slhccic</padig:set>
         <padig:set string="Schwenkfelder Library &amp; Heritage Center - The Christopher Saur, Jr. Diary and Account Book">papd_sslhc-csjdab</padig:set>
+        <padig:set string="Scranton Public Library - Borough of Dunmore, Pennsylvania: Vital Records">papd_pscrl-dvr</padig:set>
         <padig:set string="Scranton Public Library - Celebrating Our Towns: Lackawanna Co. Centennial Books and Community Histories">papd_pscrl-cot</padig:set>
         <padig:set string="Scranton Public Library - Century Club of Scranton">papd_pscrl-ccos</padig:set>
         <padig:set string="Scranton Public Library - Community and Church Cookbooks from Northeastern PA">papd_pscrl-cccfnepa</padig:set>
@@ -373,6 +387,8 @@
         <padig:set string="Scranton Public Library - Nay Aug Amusement Park--The Strohl Collection">papd_pscrl-naap</padig:set>
         <padig:set string="Scranton Public Library - Out of the Wilderness: The Industrialization and Development of the the Scranton Area 1850-1865">papd_pscrl-ootw</padig:set>
         <padig:set string="Scranton Public Library - Scranton Christmas Windows">papd_pscrl-scw</padig:set>
+        <padig:set string="Scranton Public Library - The Abington Journal">papd_pscrl-taj</padig:set>
+        <padig:set string="Scranton Public Library - The Cricket: A 20 Page Illustrated Paper">papd_pscrl-tcri</padig:set>
         <padig:set string="Scranton Public Library - The Metro">papd_pscrl-tm</padig:set>
         <padig:set string="Scranton Public Library - The Story of the Community Medical Center">papd_pscrl-socmc</padig:set>
         <padig:set string="Scranton Public Library - World War II Photos">papd_pscrl-ww2p</padig:set>
@@ -380,7 +396,9 @@
         <padig:set string="Sewickley Public Library - The Sewickley Herald Newspaper 1903-">papd_psepl-sh</padig:set>
         <padig:set string="Sewickley Township Public Library - Sewickley Area High School and Yough High School Yearbooks">papd_pswrc-sahsayhsy</padig:set>
         <padig:set string="Somerset County Library - Conemaugh Township High School Yearbooks">papd_psocl-cthsy</padig:set>
+        <padig:set string="Somerset County Library - Portage Area High School Yearbooks">papd_psocl-pahsy</padig:set>
         <padig:set string="Somerset County Library - Somerset High School Yearbooks">papd_psocl-shsy</padig:set>
+        <padig:set string="Somerset County Library - Somerset Junior High School Yearbooks">papd_psocl-sjhsy</padig:set>
         <padig:set string="Springside Chestnut Hill Academy - The Wissahickon Magazine Collection 1903-1931">papd_kspsl-wmc1903</padig:set>
         <padig:set string="St. Marys Public Library - The St. Marys Daily Press">papd_pstmp-smdp</padig:set>
         <padig:set string="Summerville Public Library - Summerville Story Project">papd_psupl-sp</padig:set>
