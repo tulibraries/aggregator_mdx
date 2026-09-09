@@ -744,8 +744,8 @@
          <dpla:intermediateProvider>Keystone Library Network</dpla:intermediateProvider>
          <edm:isShownAt>http://cdm17189.contentdm.oclc.org/cdm/ref/collection/blmmap/id/0</edm:isShownAt>
          <edm:preview>http://cdm17189.contentdm.oclc.org/utils/getthumbnail/collection/blmmap/id/0</edm:preview>
-         <svcs:hasService>http://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0</svcs:hasService>
-         <dcterms:isReferencedBy>http://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json</dcterms:isReferencedBy>
+         <svcs:hasService>https://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0</svcs:hasService>
+         <dcterms:isReferencedBy>https://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json</dcterms:isReferencedBy>
          <edm:provider>PA Digital</edm:provider>
        </oai_dc:dc>
      </x:expect>
@@ -906,8 +906,8 @@
            <dpla:intermediateProvider>Keystone Library Network</dpla:intermediateProvider>
            <edm:isShownAt>http://cdm17189.contentdm.oclc.org/cdm/ref/collection/blmmap/id/0</edm:isShownAt>
            <edm:preview>http://cdm17189.contentdm.oclc.org/utils/getthumbnail/collection/blmmap/id/0</edm:preview>
-           <svcs:hasService>http://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0</svcs:hasService>
-           <dcterms:isReferencedBy>http://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json</dcterms:isReferencedBy>
+           <svcs:hasService>https://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0</svcs:hasService>
+           <dcterms:isReferencedBy>https://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json</dcterms:isReferencedBy>
            <edm:provider>PA Digital</edm:provider>
          </oai_dc:dc>
        </x:expect>
@@ -940,12 +940,12 @@
 <!-- IIIF Base URL (generate and map) -->
    <x:scenario label="IIIF base url processing">
      <x:context href="../../fixtures/cdm_kln.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/svcs:hasService = 'http://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0'"/>
+     <x:expect label="preview generates and maps" test="oai_dc:dc/svcs:hasService = 'https://cdm17189.contentdm.oclc.org/digital/iiif/blmmap/0'"/>
    </x:scenario>
 
 <!-- IIIF Manifest (generate and map) -->
    <x:scenario label="IIIF manifest processing">
      <x:context href="../../fixtures/cdm_kln.xml"/>
-     <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'http://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json'"/>
+     <x:expect label="preview generates and maps" test="oai_dc:dc/dcterms:isReferencedBy = 'https://cdm17189.contentdm.oclc.org/iiif/info/blmmap/0/manifest.json'"/>
    </x:scenario>
  </x:description>
