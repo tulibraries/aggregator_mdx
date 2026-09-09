@@ -42,7 +42,6 @@
     <!-- lookup table for Contributing Institutions/OAI base URLs -->
     <xsl:param name="oaiUrl">
         <padig:url string="American Philosophical Society" code="APS">https://diglib.amphilsoc.org/</padig:url>
-        <padig:url string="Cabrini University" code="CABRINI">http://cdm17305.contentdm.oclc.org/</padig:url>
         <padig:url string="Catholic Historical Research Center of the Archdiocese of Philadelphia" code="CHRC">https://omeka.chrc-phila.org/</padig:url>
         <padig:url string="Curtis Institute of Music" code="CURTIS">http://cdm16667.contentdm.oclc.org/</padig:url>
         <padig:url string="Documenting Pitt" code="DOCPITT">https://documenting.pitt.edu/</padig:url>
@@ -127,17 +126,6 @@
         <padig:cont string="West Chester University" code="WESTCH">wpa</padig:cont>
         <padig:cont string="Millersville University" code="WESTCH">mvsphoto</padig:cont>
         <padig:cont string="Millersville University" code="WESTCH">wingpost</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">almaclarke</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_collnew</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_photoarc</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_postcard</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_scrpbks</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_yrbks</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">castle</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">BMC_AdvertisingCards</padig:cont>
-        <padig:cont string="Bryn Mawr College" code="BRYNMAWR">Mellink</padig:cont>
-        <padig:cont string="Friends Historical Library of Swarthmore College" code="SWATHAVERFORD">SC_Truman</padig:cont>
-        <padig:cont string="Haverford College Quaker and Special Collections and Friends Historical Library of Swarthmore College" code="SWATHAVERFORD">SC_Broad</padig:cont>
     </xsl:param>
 
     <!-- lookup table for collection name by setSpec -->
@@ -157,35 +145,6 @@
         <padig:set string="Bloomsburg University Postcard Collection">blmpost</padig:set>
         <padig:set string="Bloomsburg University Town Council Minutes Collection">CHSminutes</padig:set>
         <padig:set string="Bloomsburg University World War I Student Files Collection">blmwwi</padig:set>
-
-        <!-- Bryn Mawr -->
-        <padig:set string="Bryn Mawr College Photographs">BMC_photoarc</padig:set>
-        <padig:set string="Machteld J. Mellink Collection of Archaeological Site Photography">Mellink</padig:set>
-        <padig:set string="Bryn Mawr College News">BMC_collnew</padig:set>
-        <padig:set string="Castle Collection of Natural History Illustrations">castle</padig:set>
-        <padig:set string="Early Advertising Collection">BMC_AdvertisingCards</padig:set>
-        <padig:set string="Bryn Mawr College Postcards">BMC_postcard</padig:set>
-        <padig:set string="Bryn Mawr College Yearbooks">BMC_yrbks</padig:set>
-        <padig:set string="Bryn Mawr College Scrapbook and Photo Album Collection">BMC_scrpbks</padig:set>
-        <padig:set string="Alma A. Clarke Papers">almaclarke</padig:set>
-
-        <!-- Cabrini CDM-->
-        <padig:set string="America's First Citizen Saint - The Saint Frances Cabrini Collection">p17305coll22</padig:set>
-        <padig:set string="Personal Effects">p17305coll1</padig:set>
-        <padig:set string="Relics">p17305coll2</padig:set>
-        <padig:set string="Travels">p17305coll5</padig:set>
-        <padig:set string="Popes and Prelates">p17305coll6</padig:set>
-        <padig:set string="Beatification and Canonization Documents">p17305coll7</padig:set>
-        <padig:set string="Beatification and Canonization Photographs">p17305coll8</padig:set>
-        <padig:set string="Beatification and Canonization Subjects of Miracles">p17305coll9</padig:set>
-        <padig:set string="Mother Cabrini Letters">p17305coll10</padig:set>
-        <padig:set string="Photographs">p17305coll11</padig:set>
-        <padig:set string="International Missions">p17305coll3</padig:set>
-        <padig:set string="New Orleans Louisiana Missions">p17305coll13</padig:set>
-        <padig:set string="Memorie">p17305coll15</padig:set>
-        <padig:set string="Saint Frances Cabrini Documents">p17305coll16</padig:set>
-        <padig:set string="Saint Frances Cabrini Commemorative Items">p17305coll17</padig:set>
-        <padig:set string="Sisters of Providence">p17305coll26</padig:set>
 
         <!-- Curtis -->
         <padig:set string="de Pasquale collection">myfirst</padig:set>
@@ -957,10 +916,6 @@
         <padig:set string="Treasury Department State Documents">82-treasury-department-state-documents</padig:set>
         <padig:set string="Watch on the Rhine">191-watch-on-the-rhine</padig:set>
         <padig:set string="We the People Magazine">204-we-the-people-magazine</padig:set>
-
-        <!-- Swarthaverford -->
-        <padig:set string="Truman-Underhill Photograph Collection">SC_Truman</padig:set>
-        <padig:set string="Quaker Broadsides Collection">SC_Broad</padig:set>
 
         <!-- TJU -->
         <padig:set string="A manual of military surgery, [Confederate States Army], 1863">publication:milsurgcsa</padig:set>
