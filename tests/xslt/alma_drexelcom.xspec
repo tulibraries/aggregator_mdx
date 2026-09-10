@@ -629,6 +629,8 @@
             <x:context href="../../fixtures/alma_drexelcom.xml"/>
             <x:expect label="identifier is correct"
                 test="oai_dc:dc/dcterms:identifier = 'padig:DCMLCA-991014993574204721'"/>
+            <x:expect label="only one identifier is generated"
+                test="count(oai_dc:dc/dcterms:identifier) = 1"/>
         </x:scenario>
         
         <x:scenario label="data provider name is generated from lookup and maps to edm:dataProvider from fixture">
@@ -653,6 +655,8 @@
             <x:context href="../../fixtures/alma_drexelcom.xml"/>
             <x:expect label="isReferencedBy URL is correct"
                 test="oai_dc:dc/dcterms:isReferencedBy = 'https://drexel.alma.exlibrisgroup.com/view/iiif/presentation/01DRXU_INST/12340650630004721/manifest'"/>
+            <x:expect label="only one IIIF manifest url is generated"
+                test="count(oai_dc:dc/dcterms:isReferencedBy) = 1"/>
         </x:scenario>
         
         <x:scenario label="raw object URLs are filtered out">

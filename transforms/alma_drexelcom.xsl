@@ -35,13 +35,15 @@
 	</xsl:template>
 	
 	<!-- aggregation fields: isShownAt, preview, iiif manifest, identifier, dataProvider -->
-	<xsl:template match="mods:location">
+	<!-- match on first instance only -->
+	<xsl:template match="mods:location[mods:url[not(@access) and starts-with(., 'http')]]
+		[generate-id() = generate-id((../mods:location[mods:url[not(@access) and starts-with(., 'http')]])[1])]">
 		
 		<!-- grab mmsID from header-->
 		<xsl:variable name="mmsID"    select="tokenize(ancestor::oai:record/oai:header/oai:identifier, ':')[last()]"/>
 		
 		<!-- grab baseURL and recordID (note: recordID is different from mmsID) -->
-		<xsl:for-each select="mods:url[not(@access) and starts-with(., 'http')]">
+		<xsl:for-each select="mods:url[not(@access) and starts-with(., 'http')][1]">
 			<xsl:variable name="baseURL"  select="substring-before(., 'discovery/')"/>
 			<xsl:variable name="recordID"  select="tokenize(., '/')[last()]"/>
 			
