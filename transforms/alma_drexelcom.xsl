@@ -36,14 +36,14 @@
 	
 	<!-- aggregation fields: isShownAt, preview, iiif manifest, identifier, dataProvider -->
 	<!-- match on first instance only -->
-	<xsl:template match="mods:location[mods:url[not(@access) and starts-with(., 'http')]]
-		[generate-id() = generate-id((../mods:location[mods:url[not(@access) and starts-with(., 'http')]])[1])]">
+	<xsl:template match="mods:location[mods:url[not(@access) and contains(., '/discovery/')]]
+		[generate-id() = generate-id((../mods:location[mods:url[not(@access) and contains(., '/discovery/')]])[1])]">
 		
 		<!-- grab mmsID from header-->
 		<xsl:variable name="mmsID"    select="tokenize(ancestor::oai:record/oai:header/oai:identifier, ':')[last()]"/>
 		
 		<!-- grab baseURL and recordID (note: recordID is different from mmsID) -->
-		<xsl:for-each select="mods:url[not(@access) and starts-with(., 'http')][1]">
+		<xsl:for-each select="mods:url[not(@access) and contains(., '/discovery/')][1]">
 			<xsl:variable name="baseURL"  select="substring-before(., 'discovery/')"/>
 			<xsl:variable name="recordID"  select="tokenize(., '/')[last()]"/>
 			
@@ -76,7 +76,7 @@
 	
 	<!-- mapped fields -->
 	<!-- title -->
-	<xsl:template match="mods:titleInfo">
+	<xsl:template match="mods:titleInfo[normalize-space(mods:title) != '']">
 		<dcterms:title>
 			<xsl:call-template name="titleString"/>
 		</dcterms:title>
@@ -103,9 +103,9 @@
 	
 	<!-- subject, format, spatial -->
 	<xsl:template match="mods:subject">
-		<xsl:if test="mods:topic | mods:occupation | mods:name">
+		<xsl:if test="mods:topic[normalize-space(.) != ''] | mods:occupation[normalize-space(.) != ''] | mods:name">
 			<dcterms:subject>
-				<xsl:for-each select="mods:topic | mods:occupation">
+				<xsl:for-each select="mods:topic[normalize-space(.) != ''] | mods:occupation[normalize-space(.) != '']">
 					<xsl:value-of select="."/>
 					<xsl:if test="position() != last()">--</xsl:if>
 				</xsl:for-each>
@@ -114,29 +114,29 @@
 				</xsl:for-each>
 			</dcterms:subject>
 		</xsl:if>
-		<xsl:for-each select="mods:genre">
+		<xsl:for-each select="mods:genre[normalize-space(.) != '']">
 			<dcterms:format>
 				<xsl:value-of select="."/>
 			</dcterms:format>
 		</xsl:for-each>
-		<xsl:for-each select="mods:titleInfo">
+		<xsl:for-each select="mods:titleInfo[normalize-space(mods:title) != '']">
 			<dcterms:subject>
 				<xsl:call-template name="titleString"/>
 			</dcterms:subject>
 		</xsl:for-each>
-		<xsl:for-each select="mods:geographic">
+		<xsl:for-each select="mods:geographic[normalize-space(.) != '']">
 			<dcterms:spatial>
 				<xsl:value-of select="."/>
 			</dcterms:spatial>
 		</xsl:for-each>
-		<xsl:for-each select="mods:cartographics/*">
+		<xsl:for-each select="mods:cartographics/*[normalize-space(.) != '']">
 			<dcterms:spatial>
 				<xsl:value-of select="."/>
 			</dcterms:spatial>
 		</xsl:for-each>
-		<xsl:if test="mods:temporal">
+		<xsl:if test="mods:temporal[normalize-space(.) != '']">
 			<dcterms:subject>
-				<xsl:for-each select="mods:temporal">
+				<xsl:for-each select="mods:temporal[normalize-space(.) != '']">
 					<xsl:value-of select="."/>
 					<xsl:if test="position() != last()">-</xsl:if>
 				</xsl:for-each>
@@ -145,7 +145,7 @@
 	</xsl:template>
 
 	<!-- description -->
-	<xsl:template match="mods:abstract">
+	<xsl:template match="mods:abstract[normalize-space(.) != '']">
 		<dcterms:description>
 			<xsl:value-of select="."/>
 		</dcterms:description>
@@ -156,12 +156,12 @@
 		<!-- if dates with start and end exist in dates  -->
 		<xsl:apply-templates select="*[@point='start']"/>
 		<xsl:apply-templates select="*[not(@point)]"/>
-		<xsl:for-each select="mods:publisher">
+		<xsl:for-each select="mods:publisher[normalize-space(.) != '']">
 			<dcterms:publisher>
 				<xsl:value-of select="."/>
 			</dcterms:publisher>
 		</xsl:for-each>
-		<xsl:for-each select="mods:agent">
+		<xsl:for-each select="mods:agent[normalize-space(.) != '']">
 			<dcterms:publisher>
 				<xsl:value-of select="."/>
 			</dcterms:publisher>
@@ -191,7 +191,7 @@
 	</xsl:template>
 	
 	<!-- format pt. 2 -->
-	<xsl:template match="mods:genre">
+	<xsl:template match="mods:genre[normalize-space(.) != '']">
 		<dcterms:format>
 			<xsl:value-of select="."/>
 		</dcterms:format>
@@ -239,7 +239,7 @@
 
 	<!-- extent -->
 	<xsl:template match="mods:physicalDescription">
-		<xsl:for-each select="mods:extent">
+		<xsl:for-each select="mods:extent[normalize-space(.) != '']">
 			<dcterms:extent>
 				<xsl:value-of select="."/>
 			</dcterms:extent>
@@ -274,14 +274,14 @@
 
 	<!-- relation -->
 	<!-- map related collection name only -->
-	<xsl:template match="mods:relatedItem[@type='host' and not(normalize-space(@displayLabel))]">
+	<xsl:template match="mods:relatedItem[@type='host' and not(normalize-space(@displayLabel)) and normalize-space(mods:titleInfo/mods:title) != '']">
 		<dcterms:relation>
 			<xsl:value-of select="mods:titleInfo/mods:title"/>
 		</dcterms:relation>
 	</xsl:template>
 
 	<!-- rights (no URIs in metadata) -->
-	<xsl:template match="mods:accessCondition">
+	<xsl:template match="mods:accessCondition[normalize-space(.) != '']">
 		<dcterms:rights>
 			<xsl:value-of select="."/>
 		</dcterms:rights>
