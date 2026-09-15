@@ -156,6 +156,7 @@
         <padig:set string="Erie County Public Library - Grand Army of the Republic: Personal War Sketches of the Members of Strong Vincent Post No. 67">papd_percp-ecplgar</padig:set>
         <padig:set string="Free Library of Philadelphia - Joseph E. Coleman Northwest Regional Library - Germantown Community Archives">papd_0002p-jecnrlgca</padig:set>
         <padig:set string="Free Library of Philadelphia - Joseph E. Coleman Northwest Regional Library - Tieshka Smith Photography Collection">papd_0002p-tspc</padig:set>
+        <padig:set string="Free Library of Philadelphia - South Philadelphia Library - Point Breeze Neighborhood History">papd_0007p-splpb</padig:set>
         <padig:set string="Friends Central School - Early Photographs">papd_kfces-photo</padig:set>
         <padig:set string="German Society of Pennsylvania - Deutsche Ansiedelungs-Gesellschaft zu Philadelphia (German Settlement Society of Philadelphia) records">papd_sgsop-daggssr</padig:set>
         <padig:set string="German Society of Pennsylvania - Die Freie Presse">papd_sgsop-dfp</padig:set>
@@ -226,11 +227,13 @@
         <padig:set string="Matthews Public Library - Fredericksburg, Pennsylvania Historic Images">papd_plecl-fphi</padig:set>
         <padig:set string="McBride Memorial Library - Berwick High School Yearbooks">papd_pbrpl-bhsyb</padig:set>
         <padig:set string="Mechanicsburg Area Senior High School - Mechanicsburg Area Senior High School Yearbooks">papd_kmesh-mashsy</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - Gracedale Nursing Home">papd_pmeln-gnh</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Millgrove Schoolhouse">papd_pmeln-ms</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Area World War II Scrapbook">papd_nazwwii</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Bicentennial 1940">papd_pmeln-mlnnb</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Day at the 1939 New York World's Fair">papd_pmeln-nd1939nywf</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Hall">papd_pmeln-mlnnh</padig:set>
+        <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Heritage, Inc. Files and Photographs">papd_pmeln-nhifp</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - Nazareth Item Newspaper 1891-1975">papd_naz_item</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - The 1976 Bicentennial in Nazareth, PA">papd_pmeln-mlnusbi</padig:set>
         <padig:set string="Memorial Library of Nazareth and Vicinity - The N.H.S. Chronicle">papd_pmeln-nhsc</padig:set>
@@ -358,6 +361,7 @@
         <padig:set string="Reading Area Community College - Reading Area Community College - Yearbook Collection">papd_aracc-ybc</padig:set>
         <padig:set string="Reading Area Community College - The Schuylkill Navigation System">papd_aracc-sns</padig:set>
         <padig:set string="Reading Area Community College - Wes Fisher Piano Sheet Music Collection">papd_aracc-wfpsmc</padig:set>
+        <padig:set string="Reading Area Community College - The Yocum Family and Yocum Brothers Company Archive">papd_aracc-yfybca</padig:set>
         <padig:set string="Reading Public Library - Berks County Postcards">papd_prepl-brcpc</padig:set>
         <padig:set string="Reading Public Library - Berks County Yearbooks">papd_prepl-brcyb</padig:set>
         <padig:set string="Ridley Park Public Library - Ridley Park High School Yearbooks">papd_pripp-rphsy</padig:set>
