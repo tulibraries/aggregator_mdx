@@ -770,6 +770,7 @@
         <padig:set string="Tehran Community School">islandora_tehran_community_school</padig:set>
 
         <!-- Slippery Rock -->
+        <padig:set string="Slippery Rock University The Alternator">alternator</padig:set>
         <padig:set string="Slippery Rock University Audio Collection">audio</padig:set>
         <padig:set string="Slippery Rock University Rock Research Expo">p17189coll5</padig:set>
         <padig:set string="Slippery Rock University Photograph Collection">photograph</padig:set>
